@@ -1,0 +1,8 @@
+......................................                                   [100%]
+============================= slowest 5 durations ==============================
+11.42s call     tests/scoring/test_qualification.py::test_exhaustive_3375_triples
+4.05s call     tests/scoring/test_qualification.py::test_10000_fixed_seed_properties
+0.67s call     tests/scoring/test_qualification.py::test_500_preselected_development_parity
+0.13s call     tests/scoring/test_qualification.py::test_unicode_151_normalization_conformance
+0.03s call     tests/scoring/test_qualification.py::test_metamorphic_relations
+38 passed in 16.33s

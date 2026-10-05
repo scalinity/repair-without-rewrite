@@ -4,7 +4,7 @@ import random
 import pytest
 from src.scoring.oracle import enumerate_triple, dense_triple, pair_oracle
 from src.scoring.triple import score_tokens, lattice, source_masks, Limits, serialize
-from src.scoring.records import prepare_source, score_output, Output, aggregate
+from src.scoring.records import prepare_source, score_output, Output, aggregate, equal_domain_aggregate
 from src.scoring.text import lexical, normalize_tokens, strict_text, _nfc_with_origins, TABLE_ROOT
 import unicodedata2 as ud
 
@@ -138,6 +138,7 @@ def test_surface_scanner_and_origins():
     assert lexical('Straße')==('strasse',)
     assert lexical('\ufeff\x00😀\u0301')==('\ufeff','\x00','😀','\u0301')
     assert lexical('ε')==('ε',)
+    assert lexical('<|bos|>')==('<','|','bos','|','>')
     assert lexical('a a')==('a','a')
     normalized,tokens=normalize_tokens('cafe\u0301 Straße')
     assert normalized=='café strasse'
@@ -147,6 +148,28 @@ def test_surface_scanner_and_origins():
     assert not record['raw_byte_exact'] and record['lexical_exact']
     assert lexical('a\r\nb')==lexical('a\nb')
     with pytest.raises(UnicodeError):strict_text('\ud800')
+
+
+def test_equal_domain_primary_is_not_pooled_and_zero_is_not_dropped():
+    ls=[score_output(prepare_source('a b c d','a b c wrong'),Output('a b c wrong'))]
+    slue=[score_output(prepare_source('x','wrong'),Output('other'))]
+    primary=equal_domain_aggregate({'LibriSpeech_PC':ls,'SLUE_VoxCeleb':slue})
+    assert primary['wer']==.625 and aggregate(ls+slue)['wer']==.4
+    assert primary['rational_endpoints']['wer']==(5,8)
+    empty=[score_output(prepare_source('','inserted'),Output('new'))]
+    assert equal_domain_aggregate({'LibriSpeech_PC':ls,'SLUE_VoxCeleb':empty})['wer'] is None
+    correct=[score_output(prepare_source('x','x'),Output('x'))]
+    assert equal_domain_aggregate({'LibriSpeech_PC':ls,'SLUE_VoxCeleb':correct})['completed_repair_rate'] is None
+    with pytest.raises(ValueError):equal_domain_aggregate({'LibriSpeech_PC':ls})
+
+
+def test_full_preflight_seals_lattice_and_raw_offset_provenance():
+    prepared=prepare_source('a','a')
+    prepared.rs_lattice['edges'][(0,0)]=()
+    with pytest.raises(ValueError,match='preflight'):score_output(prepared,Output('a'))
+    prepared=prepare_source('a','a')
+    prepared.offsets['reference'][0]['raw_byte_span']=(0,100)
+    with pytest.raises(ValueError,match='preflight'):score_output(prepared,Output('a'))
 
 
 def test_unicode_151_normalization_conformance():

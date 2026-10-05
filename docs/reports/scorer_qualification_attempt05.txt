@@ -1,0 +1,8 @@
+........................................................                 [100%]
+============================= slowest 5 durations ==============================
+12.23s call     tests/scoring/test_qualification.py::test_exhaustive_3375_triples
+4.40s call     tests/scoring/test_qualification.py::test_10000_fixed_seed_properties
+0.71s call     tests/scoring/test_qualification.py::test_500_preselected_development_parity
+0.20s call     tests/scoring/test_independent_review.py::test_independent_343_conditional_source_events_and_fixed_subset_extrema
+0.14s call     tests/scoring/test_qualification.py::test_unicode_151_normalization_conformance
+56 passed in 17.77s

@@ -112,6 +112,20 @@ def _fallback(eS,eO,reason,states,moves):
             'joint_states':states,'joint_moves':moves,'joint_edges':None}
 
 
+def _known_totals_on_fallback(r,s,o,base,result):
+    # Resource limits can remove local correspondence evidence, never a proved
+    # identity/perfect-reference total. These conditions are candidate-independent
+    # identities of the normalized triple, not an approximate alignment rescue.
+    eS,eO=base['eS'],base['eO']
+    if o==s:
+        result.update(repair=(0,0),introduced=(0,0),h=0,status='closed_form_point')
+    elif o==r:
+        result.update(repair=(eS,eS),introduced=(0,0),h=eS,status='closed_form_point')
+    elif s==r:
+        result.update(repair=(0,0),introduced=(eO,eO),h=eO,status='closed_form_point')
+    return base|result
+
+
 def score_tokens(reference, source, output, limits=Limits(), prepared_lattice=_UNSET):
     r,s,o=tuple(reference),tuple(source),tuple(output)
     if any(v is None for seq in (r,s,o) for v in seq):
@@ -123,19 +137,10 @@ def score_tokens(reference, source, output, limits=Limits(), prepared_lattice=_U
     base={'eS':eS,'eO':eO,'eSO':distance(s,o),'source_masks':masks,
           'reference_words':len(r),'source_words':len(s),'output_words':len(o)}
     if rs is None or ro is None:
-        # Only total-count closed forms are claimed. Local data stays unavailable.
-        if o==s or o==r or s==r:
-            repair=0 if o==s or s==r else eS
-            introduced=0 if o==s or o==r else eO
-            result=_fallback(eS,eO,'pair_lattice_cap_local_unavailable',0,0)
-            result.update(repair=(repair,repair),introduced=(introduced,introduced),
-                          status='closed_form_point')
-        else:
-            result=_fallback(eS,eO,'pair_lattice_cap',0,0)
-        return base|result
+        return _known_totals_on_fallback(r,s,o,base,_fallback(eS,eO,'pair_lattice_cap',0,0))
     start=(0,0,0); final=(len(r),len(s),len(o))
     if limits.joint_states<1:
-        return base|_fallback(eS,eO,'joint_state_cap',0,0)
+        return _known_totals_on_fallback(r,s,o,base,_fallback(eS,eO,'joint_state_cap',0,0))
     forward={start:0}; adjacency={}; heap=[(0,*start)]; moves=0
     ordered=[]
     while heap:
@@ -143,7 +148,7 @@ def score_tokens(reference, source, output, limits=Limits(), prepared_lattice=_U
         u=(i,j,k);ordered.append(u);out=[]
         for a,b,c in MOVES:
             if moves==limits.joint_moves:
-                return base|_fallback(eS,eO,'joint_move_cap',len(forward),moves)
+                return _known_totals_on_fallback(r,s,o,base,_fallback(eS,eO,'joint_move_cap',len(forward),moves))
             moves+=1
             v=(i+a,j+b,k+c)
             if v[0]>len(r) or v[1]>len(s) or v[2]>len(o):
@@ -163,7 +168,7 @@ def score_tokens(reference, source, output, limits=Limits(), prepared_lattice=_U
                          (not a and b and len(masks['source'][j])==1 and masks['source'][j][0][0]=='gap'))))
             if v not in forward:
                 if len(forward)==limits.joint_states:
-                    return base|_fallback(eS,eO,'joint_state_cap',len(forward),moves)
+                    return _known_totals_on_fallback(r,s,o,base,_fallback(eS,eO,'joint_state_cap',len(forward),moves))
                 forward[v]=forward[u]+cost
                 heapq.heappush(heap,(sum(v),*v))
             else:
