@@ -1,0 +1,42 @@
+{
+  "attempt_id": "final-validation-attempt01",
+  "start_head": "f24712ed3b33e2396efbf4de89cf7409051ace4a",
+  "exit_code": 0,
+  "test_count": 259,
+  "elapsed_seconds": 21.587324332998833,
+  "stdout_sha256": "dfa5cb22c39a11d4e019e5b13d8b481a6486523caec3aeabe6bee1e6a4f10498",
+  "pre_run_sha256": "28e16eab7cc2c6fb25d766caa3c1f1872fa380a631b66c4a909d09eeaad893a6",
+  "end_utc": "2026-10-05T20:27:21.531184+00:00",
+  "new_reader_tests": 0,
+  "unchanged_source_hashes_compared_with_baseline": true,
+  "scope": "unchanged integrated numerical suite plus final reader-contract evidence assertions; not new reader/BENCH qualification",
+  "MLX_ENABLE_TF32": "0",
+  "baseline_tests": 259,
+  "baseline_plus_final_invocation_seconds": 43.27982879098272,
+  "baseline_source_hashes_equal_final": true,
+  "documents_checked": [
+    "PAIRED_MIXED_READER_QUALIFICATION.md",
+    "PAIRED_COMPLETE_UPDATE_BENCH.md",
+    "PAIRED_READER_FAIRNESS_AUDIT.md",
+    "BC_10M_PROBE_ADMISSION_DECISION_V2.md",
+    "PAIRED_READER_BENCH_SESSION_REPORT.md"
+  ],
+  "admission_questions": 30,
+  "admission_terminal_disposition": "FRONTIER_MODEL_REVIEW_REQUIRED",
+  "resolved_local_links_checked_excluding_pending_receipts": 32,
+  "public_inventory_metadata_only_rows": 1024,
+  "public_inventory_train_groups": 48,
+  "new_reader_presentations": 0,
+  "new_registered_BC_BENCH_or_training_updates": 0,
+  "new_reader_property_tests": 0,
+  "new_recipe_slots_consumed": 0,
+  "evidence_assertions_passed": true,
+  "report_hashes_at_validation": {
+    "docs/reports/PAIRED_MIXED_READER_QUALIFICATION.md": "fc5ecafcab7392dac64a9bdbf2c1169c6290454da21aed3e90e492d8fbc2b236",
+    "docs/reports/PAIRED_COMPLETE_UPDATE_BENCH.md": "a38d2c77a6ed177a5c7d87bdd72bbbcd31daadfec879972bfe748ccdfeb2299e",
+    "docs/reports/PAIRED_READER_FAIRNESS_AUDIT.md": "a9f6de9bb750be1afd8917732855a20450975ba6890b9b7aab72dab794d49e7f",
+    "docs/reports/BC_10M_PROBE_ADMISSION_DECISION_V2.md": "d5d79aa6d55d3b2b548008cf78a8f50720cb714c21fa4ca3d6bfede174bf990a",
+    "docs/reports/PAIRED_READER_BENCH_SESSION_REPORT.md": "30cb6937d898f722006249aada7fbdd27c1953f35b85e307956ed97fd1074143"
+  },
+  "recorded_utc": "2026-10-05T20:29:36.671610+00:00"
+}

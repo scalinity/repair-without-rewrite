@@ -1,0 +1,35 @@
+# Paired reader/BENCH continuation — 2026-10-05
+
+**FRONTIER_MODEL_REVIEW_REQUIRED.** The repaired foundation was verified. The supplied reader design leaves consequential construction, reuse/accounting and pilot-schedule choices unbound. Under the owner's explicit escalation rule, the mixed-reader/BENCH line stopped before choosing those treatments. All six seed 42 10M slots remain untouched. No architecture/objective change or final result was produced.
+
+## Credential warning resolved first
+
+The unrelated credential warning was identified before research work. The provider, process/configuration fields, local persistence and rotation location were reported privately to the owner. No credential value, fingerprint, suffix, session log or credential configuration is included in public evidence. Exact-value in-memory checks found no occurrence in the checked repository history, working tree or ignored research text evidence. The remote's advertised main matched that checked history; inaccessible unreachable objects/caches/forks are not attested. No compromised credential is required or used for this work, and no credential/configuration modification or API spending occurred.
+
+## State, validation and retained evidence
+
+Starting local/remote main:`f24712ed3b33e2396efbf4de89cf7409051ace4a`; clean status and expected ancestry verified before changes. Baseline: **259 passed in 21.33 s** with `MLX_ENABLE_TF32=0` (invocation wall 21.692504 s). All required prior reports, accepted findings, amendments, registry and relevant canonical reader/curriculum/precision/BENCH/checkpoint/Part V sections were inspected.
+
+The [integrity receipt](../../experiments/manifests/paired_reader_bench/prior-artifact-integrity.attempt02.json) verifies 41 prior foundation artifact hashes and all seven supplied immutable input hashes. The first integrity-check invocation resolved stored repository-relative paths from the wrong directory and stopped before writing a receipt; the separate corrected audit records this failure and zero byte changes/mismatches. No earlier receipt was amended.
+
+[Current preflight](../../experiments/manifests/paired_reader_bench/admitted-pool-preflight.attempt01.json) verifies 52,000 TRAIN/CAL text rows/354 groups and the exact tokenizer/pair/source-role/code hashes. The CPU-only actual pair audit rejoined 1,120 records with no hash/role/render/context failure .1,024 TRAIN pairs/48 groups are admitted; 96 CAL pairs/5 groups remain excluded from fitting. [Payload-free TRAIN inventory](../../experiments/manifests/paired_reader_bench/admitted-natural-train-inventory.attempt01.jsonl) records native B/C mechanics and explicitly does not schedule presentations. MODEL-0 V6 PASS at 10,002,432 inputs, narrowed Parakeet, nonidentity scorer and documented ByT5 REPAIR_REQUIRED remain supported by intact artifacts. No previous investigation/training was restarted.
+
+No model, tokenizer, generator, scorer, training source, protected role manifest or old report was modified. New scientific-reader tests were not fabricated against unresolved semantics. Final integrated validation reproduced **259 passed in 21.25 seconds** with the same precision environment (21.587324 seconds invocation wall); source hashes exactly match the baseline. Baseline plus final numerical-suite invocation wall is43.279829 seconds, separate from CPU review and metadata-audit costs. The [validation receipt](../../experiments/manifests/paired_reader_bench/final-validation.attempt01.json) records this result and document/metadata assertions. The pre-push [publication safety receipt](../../experiments/manifests/paired_reader_bench/publication-safety.attempt01.json) records the scoped scan; passing the existing suite is not a new reader/BENCH PASS.
+
+## Independent review and exact stop
+
+Three independent reviewers cover all four requested domains: [reader/scientific exposure](../reviews/PAIRED_READER_CONTRACT_INDEPENDENT_REVIEW.md), [canonical/native accounting](../reviews/PAIRED_ACCOUNTING_INDEPENDENT_REVIEW.md), and [resume/cursor plus BENCH arithmetic](../reviews/PAIRED_RESUME_BENCH_INDEPENDENT_REVIEW.md). They inspect source/configs/manifests/raw artifacts, reproduce counts/arithmetic, and distinguish absent new ledgers from old scoped evidence. Independent review runs are CPU-only and add no competing accelerator workload; they can overlap root’s existing numerical correctness suite.
+
+The [reader report](PAIRED_MIXED_READER_QUALIFICATION.md) provides exact canonical/registry evidence and a concrete frontier-review request: bind identity/minimal/rule source formation; empirical text-corruption profile/clean rendering; group/family weighting/reuse/repetition/support/replacement/order/tolerance; exact accounting controls; 10M phase/LR/evaluation mapping. The 30/20/10/40 shares alone do not supply those choices. Existing natural group sizes 6–61 and per-pool native counts show that different samplers/serializers change effective exposure. No arbitrary “looks balanced” acceptance rule was used.
+
+Registered 32,768-anchor updates and whole-example overshoot are recovered; memory-safe microbatching and C global denominators are routine work. They cannot qualify a population whose scientific treatment has not been fixed. No smaller update target was adopted, no 32k failure was claimed, and the old 184–238 anchor zero-LR thermal rates were not extrapolated into 10M cost. [BENCH report](PAIRED_COMPLETE_UPDATE_BENCH.md) marks each new warmup/timed/thermal/memory/resume/cost item unmeasured and gives the future serialized cost formula with 25% reserve. [Fairness audit](PAIRED_READER_FAIRNESS_AUDIT.md) refuses a vacuous equality claim over zero presentations.
+
+## Deliverables and boundary
+
+All five requested reports are provided. [V2 admission](BC_10M_PROBE_ADMISSION_DECISION_V2.md) answers all 30 questions and ends in one permitted disposition. Public evidence contains hashes/counts/stable permitted IDs, with raw pair/target/calibration/model/checkpoint payloads kept ignored. Scoped evidence publication is authorized by this continuation; named staging, no history rewrite, no Git-identity changes and a pre-push safety scan apply.
+
+New registered-reader/exact-model BENCH or training updates: **zero**. Existing numerical-suite execution is separately charged by its measured baseline and final-validation wall times. Registered mixed presentations: **zero**. Six 10M recipe slots consumed: **zero**. Final seeds/runs/sealed candidate inference/protocol freeze/cloud or API spending/production LocalFlow changes/human annotation/listening/SLUE bypass: **none**. ByT5 and SLUE remain at their documented dispositions and do not independently veto this bounded step.
+
+Next action is owner-obtained frontier review and explicit authorization of the small reader/pilot binding packet. Faithful implementation and chosen complete-update qualification remain outstanding afterward. This report makes no one-month, final-paper or model superiority claim.
+
+FRONTIER_MODEL_REVIEW_REQUIRED

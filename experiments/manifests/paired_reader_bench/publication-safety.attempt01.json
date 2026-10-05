@@ -1,0 +1,141 @@
+{
+  "audit_id": "paired-reader-publication-safety-attempt04",
+  "checked_utc": "2026-10-05T20:34:22.340663+00:00",
+  "starting_head": "f24712ed3b33e2396efbf4de89cf7409051ace4a",
+  "scope": "fresh full reachable-history scan plus entire nonignored working tree and final candidate evidence before scoped commits; exact credential compared in memory only",
+  "history_blobs_scanned": 378,
+  "nonignored_working_files_scanned": 359,
+  "new_candidate_files": [
+    "docs/reports/BC_10M_PROBE_ADMISSION_DECISION_V2.md",
+    "docs/reports/PAIRED_COMPLETE_UPDATE_BENCH.md",
+    "docs/reports/PAIRED_MIXED_READER_QUALIFICATION.md",
+    "docs/reports/PAIRED_READER_BENCH_SESSION_REPORT.md",
+    "docs/reports/PAIRED_READER_FAIRNESS_AUDIT.md",
+    "docs/reviews/PAIRED_ACCOUNTING_INDEPENDENT_REVIEW.md",
+    "docs/reviews/PAIRED_READER_CONTRACT_INDEPENDENT_REVIEW.md",
+    "docs/reviews/PAIRED_RESUME_BENCH_INDEPENDENT_REVIEW.md",
+    "experiments/manifests/paired_reader_bench/admitted-natural-train-inventory.attempt01.jsonl",
+    "experiments/manifests/paired_reader_bench/admitted-pool-preflight.attempt01.json",
+    "experiments/manifests/paired_reader_bench/final-validation.attempt01.json",
+    "experiments/manifests/paired_reader_bench/prior-artifact-integrity.attempt02.json"
+  ],
+  "exact_exposed_credential_occurrences": 0,
+  "credential_value_fingerprint_length_and_suffix_emitted_or_persisted": false,
+  "pattern_findings": [
+    {
+      "scope": "full_reachable_history_blob",
+      "identity": "c3fe2274ea8d4aa206e6f1aead15f5949084b6fa",
+      "line": 9,
+      "type": "private_network_literal",
+      "classification": "real_public_dependency_version_not_network_address",
+      "basis": "exact public nvidia-curand-cu12 version; explicitly a functional dependency value in lock/publication source; not redacted",
+      "value_omitted": true
+    },
+    {
+      "scope": "full_reachable_history_blob",
+      "identity": "11f0b486946f749e7e55032f50e0402a587a4519",
+      "line": 320,
+      "type": "private_network_literal",
+      "classification": "real_public_dependency_version_not_network_address",
+      "basis": "exact public nvidia-curand-cu12 version; explicitly a functional dependency value in lock/publication source; not redacted",
+      "value_omitted": true
+    },
+    {
+      "scope": "full_reachable_history_blob",
+      "identity": "11f0b486946f749e7e55032f50e0402a587a4519",
+      "line": 323,
+      "type": "private_network_literal",
+      "classification": "real_public_dependency_version_not_network_address",
+      "basis": "exact public nvidia-curand-cu12 version; explicitly a functional dependency value in lock/publication source; not redacted",
+      "value_omitted": true
+    },
+    {
+      "scope": "full_reachable_history_blob",
+      "identity": "403f80dad2e80613d6fa77fc8d4929af65bb283b",
+      "line": 9,
+      "type": "private_network_literal",
+      "classification": "real_public_dependency_version_not_network_address",
+      "basis": "exact public nvidia-curand-cu12 version; explicitly a functional dependency value in lock/publication source; not redacted",
+      "value_omitted": true
+    },
+    {
+      "scope": "full_reachable_history_blob",
+      "identity": "4a8cd2999dbb60e606516444f4899ed1d564fe4d",
+      "line": 9,
+      "type": "private_network_literal",
+      "classification": "real_public_dependency_version_not_network_address",
+      "basis": "exact public nvidia-curand-cu12 version; explicitly a functional dependency value in lock/publication source; not redacted",
+      "value_omitted": true
+    },
+    {
+      "scope": "nonignored_working_or_candidate_file",
+      "identity": "docs/reports/PUBLICATION_REPORT.md",
+      "line": 9,
+      "type": "private_network_literal",
+      "classification": "real_public_dependency_version_not_network_address",
+      "basis": "exact public nvidia-curand-cu12 version; explicitly a functional dependency value in lock/publication source; not redacted",
+      "value_omitted": true
+    },
+    {
+      "scope": "nonignored_working_or_candidate_file",
+      "identity": "uv.lock",
+      "line": 320,
+      "type": "private_network_literal",
+      "classification": "real_public_dependency_version_not_network_address",
+      "basis": "exact public nvidia-curand-cu12 version; explicitly a functional dependency value in lock/publication source; not redacted",
+      "value_omitted": true
+    },
+    {
+      "scope": "nonignored_working_or_candidate_file",
+      "identity": "uv.lock",
+      "line": 323,
+      "type": "private_network_literal",
+      "classification": "real_public_dependency_version_not_network_address",
+      "basis": "exact public nvidia-curand-cu12 version; explicitly a functional dependency value in lock/publication source; not redacted",
+      "value_omitted": true
+    }
+  ],
+  "unclassified_or_real_secret_private_identifier_hits": 0,
+  "agent_runtime_files_in_publication": false,
+  "raw_pair_transcript_audio_model_assets_in_new_candidates": false,
+  "candidate_hashes_excluding_this_receipt": {
+    "docs/reports/BC_10M_PROBE_ADMISSION_DECISION_V2.md": "d5d79aa6d55d3b2b548008cf78a8f50720cb714c21fa4ca3d6bfede174bf990a",
+    "docs/reports/PAIRED_COMPLETE_UPDATE_BENCH.md": "a38d2c77a6ed177a5c7d87bdd72bbbcd31daadfec879972bfe748ccdfeb2299e",
+    "docs/reports/PAIRED_MIXED_READER_QUALIFICATION.md": "fc5ecafcab7392dac64a9bdbf2c1169c6290454da21aed3e90e492d8fbc2b236",
+    "docs/reports/PAIRED_READER_BENCH_SESSION_REPORT.md": "30cb6937d898f722006249aada7fbdd27c1953f35b85e307956ed97fd1074143",
+    "docs/reports/PAIRED_READER_FAIRNESS_AUDIT.md": "a9f6de9bb750be1afd8917732855a20450975ba6890b9b7aab72dab794d49e7f",
+    "docs/reviews/PAIRED_ACCOUNTING_INDEPENDENT_REVIEW.md": "3b59b6f969d478cdaba90927621dd3c6ec549fa3b01f6c3b6ff3a63e3ce5335a",
+    "docs/reviews/PAIRED_READER_CONTRACT_INDEPENDENT_REVIEW.md": "621f9001bcfea6c409d3cb82ea0d535db0af1607ea371cc02640e38e9e53f7dd",
+    "docs/reviews/PAIRED_RESUME_BENCH_INDEPENDENT_REVIEW.md": "cbab4cff66b5839828a392753bb123baaacfc5bd8873078181f556c4e8a02562",
+    "experiments/manifests/paired_reader_bench/admitted-natural-train-inventory.attempt01.jsonl": "f0e4f37f330c728c833884897f69f53a60708437c2ab5ea839978c892bd31afd",
+    "experiments/manifests/paired_reader_bench/admitted-pool-preflight.attempt01.json": "f20259f6788beb95b1851f7d1ba4ab83bd6041dc51f3b0b695f9540c8c2bc7fd",
+    "experiments/manifests/paired_reader_bench/final-validation.attempt01.json": "7bd7773937cc76399ab3cf5556638809b304932bdf2ab15dacfbd0bca370af24",
+    "experiments/manifests/paired_reader_bench/prior-artifact-integrity.attempt02.json": "6b9a2b03181e32fdb7be62a96106aa29f8848916f9f1f7faa0174ea2b247ac28"
+  },
+  "redactions": {
+    "owner_attachment_identifier_label": "real nonfunctional local attachment identifier in one new review; exact original review preserved ignored; only that full literal label replaced; no pattern redaction"
+  },
+  "earlier_audit_attempts": [
+    {
+      "attempt": 1,
+      "status": "REVIEW_REQUIRED",
+      "reason": "short context left six known dependency-version patterns unclassified; preserved original receipt"
+    },
+    {
+      "attempt": 2,
+      "status": "failed_before_receipt",
+      "reason": "publication report describes a functional dependency version without package name; no bytes changed"
+    },
+    {
+      "attempt": 3,
+      "status": "failed_before_receipt",
+      "reason": "reviewer completed additive final clarification after the first candidate snapshot; stale candidate identity check stopped publication"
+    },
+    {
+      "attempt": 4,
+      "status": "fresh_full_scan",
+      "reason": "all latest candidate bytes rescanned; exact public dependency-version provenance classified; file identity checked before/after scan"
+    }
+  ],
+  "status": "PASS"
+}
