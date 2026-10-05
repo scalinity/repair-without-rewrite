@@ -1,0 +1,87 @@
+[
+  {
+    "teacher_targets": [
+      98,
+      97,
+      258
+    ],
+    "teacher_predictions": [
+      98,
+      97,
+      258
+    ],
+    "token_cross_entropy": [
+      3.910064697265625e-05,
+      2.47955322265625e-05,
+      2.09808349609375e-05
+    ],
+    "greedy_cache_vs_full_max_abs": 1.9073486328125e-06,
+    "first_logits_source_perturbation_max_abs": 13.224793434143066,
+    "source": "aa",
+    "reference": "ba",
+    "encoder_source_perturbation_max_abs": 2.2071666717529297
+  },
+  {
+    "teacher_targets": [
+      97,
+      98,
+      258
+    ],
+    "teacher_predictions": [
+      97,
+      98,
+      258
+    ],
+    "token_cross_entropy": [
+      1.52587890625e-05,
+      3.4332275390625e-05,
+      1.52587890625e-05
+    ],
+    "greedy_cache_vs_full_max_abs": 1.9073486328125e-06,
+    "first_logits_source_perturbation_max_abs": 13.670024871826172,
+    "source": "ab",
+    "reference": "ab",
+    "encoder_source_perturbation_max_abs": 2.5383760929107666
+  },
+  {
+    "teacher_targets": [
+      98,
+      258
+    ],
+    "teacher_predictions": [
+      98,
+      258
+    ],
+    "token_cross_entropy": [
+      4.00543212890625e-05,
+      1.52587890625e-05
+    ],
+    "greedy_cache_vs_full_max_abs": 9.5367431640625e-07,
+    "first_logits_source_perturbation_max_abs": 0.15889990329742432,
+    "source": "bb",
+    "reference": "b",
+    "encoder_source_perturbation_max_abs": 0.4787594676017761
+  },
+  {
+    "teacher_targets": [
+      97,
+      97,
+      258
+    ],
+    "teacher_predictions": [
+      97,
+      97,
+      258
+    ],
+    "token_cross_entropy": [
+      2.6702880859375e-05,
+      1.52587890625e-05,
+      1.71661376953125e-05
+    ],
+    "greedy_cache_vs_full_max_abs": 1.9073486328125e-06,
+    "first_logits_source_perturbation_max_abs": 15.687016487121582,
+    "source": "ba",
+    "reference": "aa",
+    "encoder_source_perturbation_max_abs": 4.8709716796875
+  }
+]

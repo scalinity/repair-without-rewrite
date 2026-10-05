@@ -1,0 +1,211 @@
+[
+  {
+    "teacher_target_prediction_pairs": {
+      "action": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "start": [
+        [
+          0,
+          0
+        ]
+      ],
+      "end": [
+        [
+          1,
+          1
+        ]
+      ],
+      "vocabulary": [
+        [
+          98,
+          15363
+        ],
+        [
+          267,
+          16291
+        ]
+      ]
+    },
+    "component_sums": {
+      "action": 2.943570852279663,
+      "start": 1.071248173713684,
+      "end": 1.057847261428833,
+      "vocabulary": 19.43096160888672
+    },
+    "component_denominators": {
+      "action": 2,
+      "start": 1,
+      "end": 1,
+      "vocabulary": 2
+    },
+    "component_mean_ce": {
+      "action": 1.4717854261398315,
+      "start": 1.071248173713684,
+      "end": 1.057847261428833,
+      "vocabulary": 9.71548080444336
+    },
+    "teacher_feedback_cache_vs_full_max_abs": 1.9185245037078857e-06,
+    "first_action_logits_source_perturbation_max_abs": 0.8935351371765137,
+    "source": "aa",
+    "reference": "ba",
+    "encoder_source_perturbation_max_abs": 3.1086337566375732
+  },
+  {
+    "teacher_target_prediction_pairs": {
+      "action": [
+        [
+          1,
+          0
+        ]
+      ],
+      "start": [],
+      "end": [],
+      "vocabulary": []
+    },
+    "component_sums": {
+      "action": 2.3260209560394287,
+      "start": 0.0,
+      "end": 0.0,
+      "vocabulary": 0.0
+    },
+    "component_denominators": {
+      "action": 1,
+      "start": 0,
+      "end": 0,
+      "vocabulary": 0
+    },
+    "component_mean_ce": {
+      "action": 2.3260209560394287,
+      "start": 0.0,
+      "end": 0.0,
+      "vocabulary": 0.0
+    },
+    "teacher_feedback_cache_vs_full_max_abs": 0.0,
+    "first_action_logits_source_perturbation_max_abs": 1.094820261001587,
+    "source": "ab",
+    "reference": "ab",
+    "encoder_source_perturbation_max_abs": 2.9270315170288086
+  },
+  {
+    "teacher_target_prediction_pairs": {
+      "action": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "start": [
+        [
+          0,
+          2
+        ]
+      ],
+      "end": [
+        [
+          1,
+          2
+        ]
+      ],
+      "vocabulary": [
+        [
+          267,
+          12338
+        ]
+      ]
+    },
+    "component_sums": {
+      "action": 2.269840955734253,
+      "start": 1.2127341032028198,
+      "end": 1.075737714767456,
+      "vocabulary": 9.461586952209473
+    },
+    "component_denominators": {
+      "action": 2,
+      "start": 1,
+      "end": 1,
+      "vocabulary": 1
+    },
+    "component_mean_ce": {
+      "action": 1.1349204778671265,
+      "start": 1.2127341032028198,
+      "end": 1.075737714767456,
+      "vocabulary": 9.461586952209473
+    },
+    "teacher_feedback_cache_vs_full_max_abs": 2.2649765014648438e-06,
+    "first_action_logits_source_perturbation_max_abs": 0.7535927891731262,
+    "source": "bb",
+    "reference": "b",
+    "encoder_source_perturbation_max_abs": 3.1690404415130615
+  },
+  {
+    "teacher_target_prediction_pairs": {
+      "action": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "start": [
+        [
+          0,
+          0
+        ]
+      ],
+      "end": [
+        [
+          1,
+          2
+        ]
+      ],
+      "vocabulary": [
+        [
+          97,
+          8403
+        ],
+        [
+          267,
+          9824
+        ]
+      ]
+    },
+    "component_sums": {
+      "action": 3.0639939308166504,
+      "start": 1.0674395561218262,
+      "end": 1.0782105922698975,
+      "vocabulary": 19.500059127807617
+    },
+    "component_denominators": {
+      "action": 2,
+      "start": 1,
+      "end": 1,
+      "vocabulary": 2
+    },
+    "component_mean_ce": {
+      "action": 1.5319969654083252,
+      "start": 1.0674395561218262,
+      "end": 1.0782105922698975,
+      "vocabulary": 9.750029563903809
+    },
+    "teacher_feedback_cache_vs_full_max_abs": 2.2649765014648438e-06,
+    "first_action_logits_source_perturbation_max_abs": 0.7127034068107605,
+    "source": "ba",
+    "reference": "aa",
+    "encoder_source_perturbation_max_abs": 2.9665122032165527
+  }
+]

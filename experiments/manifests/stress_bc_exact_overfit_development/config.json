@@ -1,0 +1,70 @@
+{
+  "classification": "BOUNDED_EXACT_GEOMETRY_CORRECTNESS_NOT_10M",
+  "pairs": [
+    [
+      "aa",
+      "ba"
+    ],
+    [
+      "ab",
+      "ab"
+    ],
+    [
+      "bb",
+      "b"
+    ],
+    [
+      "ba",
+      "aa"
+    ]
+  ],
+  "updates_per_arm": 80,
+  "seed": 42,
+  "learning_rate": 0.003,
+  "working_dtype": "float32",
+  "microbatches_per_update": 4,
+  "B_valid_targets_per_update": 11,
+  "C_component_denominators": {
+    "action": 7,
+    "start": 3,
+    "end": 3,
+    "vocabulary": 5
+  },
+  "C_decoder_call_cap": 24,
+  "C_max_edits_per_call": 4,
+  "actual_source_positions_per_update": 16,
+  "C_event_positions_per_update": 15,
+  "B100_config": {
+    "vocab_size": 16384,
+    "width": 768,
+    "encoder_layers": 8,
+    "decoder_layers": 4,
+    "q_heads": 12,
+    "kv_heads": 4,
+    "ffn_width": 2048,
+    "max_context": 1024
+  },
+  "TF32": "0",
+  "code_commit": "6b29d49fe795b44e2aadfd8a1ddc7942e6e2a48f",
+  "dirty_state": [
+    "?? benchmarks/model0_correctness.py",
+    "?? benchmarks/native_calibration.py",
+    "?? configs/",
+    "?? docs/reports/STRESS_GENERATOR_FOUNDATION.md",
+    "?? docs/reports/raw/",
+    "?? experiments/manifests/stress_bc_exact_overfit_development/",
+    "?? experiments/manifests/stress_foundation_20261005T051039Z/",
+    "?? experiments/manifests/stress_foundation_20261005T051948Z/",
+    "?? src/generation/",
+    "?? src/models/",
+    "?? tests/data/test_generator.py",
+    "?? tests/models/"
+  ],
+  "hashes": {
+    "src/models/core.py": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+    "src/models/training.py": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5",
+    "src/models/bc.py": "67afd49e9505b2e5378650e5d62dd44a42f9a05cd24eddd61b89a420cac74621",
+    "src/models/edits.py": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+    "/local/research/repair-without-rewrite/experiments/manifests/stress_bc_exact_overfit_development/run.py": "e76a75c4a3b0b79838fde3a541467072be1dc2b16d6a7c5183ff4c8585cd877e"
+  }
+}

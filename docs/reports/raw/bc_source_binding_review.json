@@ -1,0 +1,34 @@
+{
+  "finding_id": "BC-R01",
+  "priority": "P2",
+  "origin": "independent model_core review",
+  "original_reproducer": {
+    "source": "a",
+    "source_ids": [
+      308,
+      259,
+      98
+    ],
+    "encoder_positions": [
+      1,
+      2
+    ],
+    "byte_offsets": [
+      0,
+      1
+    ],
+    "legal": [
+      true,
+      true
+    ],
+    "forced_action": "END",
+    "reported_before_fix": "completed output a despite encoding b"
+  },
+  "fix": "validate all source bytes/token offsets/legal UTF8 flags and trusted framing before encode",
+  "current_code_sha256": "20f973e4d18814e49a1a67437cd1f83e18b5b8da800acac50b29b01bd076f7b3",
+  "pure_test": "docs/reports/raw/bc_source_binding_pure_attempt03.txt",
+  "pure_test_sha256": "fc8337687c0ae13fd9a14afb0499f1f0383fc4b1bf7a1bfe34f552f7f28adce7",
+  "MLX_array_or_forward_work_in_pure_test": false,
+  "combined_numeric_retest_status": "pending BENCH accelerator release",
+  "prior_overfit_input_bindings": "legitimate; raw artifacts retained"
+}

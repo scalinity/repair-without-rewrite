@@ -1,0 +1,100 @@
+{
+  "classification": "FINAL_CODE_MECHANICS_AND_EXACT_TINY_MEMORIZATION_GATE_NOT_USEFUL_LEARNING",
+  "sealed_utc": "2026-10-05T05:50:03.083835+00:00",
+  "code_commit": "b252ce004ef807a97cdd37da45fec8987d4165c6",
+  "dirty_state": [
+    " M docs/reviews/GENERATOR_INDEPENDENT_REVIEW.md",
+    " M tests/data/test_generator_independent_review.py",
+    "?? benchmarks/bc_native_samples.py",
+    "?? configs/stress_development.json",
+    "?? docs/reports/BC_10M_DEVELOPMENT_PROBES.md",
+    "?? docs/reports/BC_CORRECTNESS_REPORT.md",
+    "?? docs/reports/STRESS_GENERATOR_FOUNDATION.md",
+    "?? docs/reports/raw/bc_final_input_binding_receipt.json",
+    "?? docs/reports/raw/bc_mechanics_attempt01.json",
+    "?? docs/reports/raw/bc_mechanics_attempt01.txt",
+    "?? docs/reports/raw/bc_mechanics_final_attempt01.txt",
+    "?? docs/reports/raw/bc_prior_input_binding_validation.json",
+    "?? docs/reports/raw/bc_source_binding_pure_attempt01.txt",
+    "?? docs/reports/raw/bc_source_binding_pure_attempt02.txt",
+    "?? docs/reports/raw/bc_source_binding_pure_attempt03.txt",
+    "?? docs/reports/raw/bc_source_binding_review.json",
+    "?? docs/reports/raw/native_calibration_attempt01.txt",
+    "?? docs/reports/raw/public_audio_acquisition_attempt01.txt",
+    "?? docs/reports/raw/stress_bundle_split_green.txt",
+    "?? docs/reports/raw/stress_bundle_split_red.txt",
+    "?? docs/reports/raw/stress_cpu_final_attempt01.txt",
+    "?? experiments/manifests/asr_tts_probe/",
+    "?? experiments/manifests/public_audio_development/",
+    "?? experiments/manifests/stress_bc_exact_overfit_attempt02/",
+    "?? experiments/manifests/stress_bc_exact_overfit_development/",
+    "?? experiments/manifests/stress_foundation_20261005T051039Z/",
+    "?? experiments/manifests/stress_foundation_20261005T051948Z/",
+    "?? experiments/manifests/stress_split_repair_20261005T054436Z/",
+    "?? experiments/native-calibration-attempt01/",
+    "?? src/generation/",
+    "?? src/models/bc.py",
+    "?? src/models/edits.py",
+    "?? tests/data/test_generator.py",
+    "?? tests/models/test_bc.py",
+    "?? tests/models/test_edits.py"
+  ],
+  "mechanical_pass": true,
+  "same_pair_exact_overfit_pass": true,
+  "code_hashes": {
+    "src/models/bc.py": "d58022e956b3adbd8d6a1c635ef9a7774efbd83aa5f8d8d65643c8f2d53be067",
+    "src/models/edits.py": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+    "src/models/core.py": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+    "src/models/training.py": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5"
+  },
+  "test_receipt": {
+    "path": "docs/reports/raw/bc_mechanics_final_attempt01.txt",
+    "sha256": "0d57c87c708b5a1bea27082187a9443defd993ca4de3b8b0fed0c01273272520",
+    "exit_code": 0,
+    "test_count": 7,
+    "seconds": 0.15,
+    "environment": {
+      "MLX_ENABLE_TF32": "0"
+    },
+    "test_code_sha256": "93abbbd25d0958fd3b2ef8cc6a45905840f1a1844fc916a1ada6779c9e3d2edb",
+    "numerical_fixture": "width16 encoder1 decoder1 vocab320; exact default inventory also checked"
+  },
+  "exact_parameter_counts": {
+    "B100": 100686336,
+    "C101": 101081859
+  },
+  "matched_overfit": {
+    "path": "experiments/manifests/stress_bc_exact_overfit_attempt02",
+    "results_sha256": "962887925defd408dce294ef2f1b852781eaff52aa9581da94944a8bd3570773",
+    "input_identity_sha256": "36cd6eb500e03b38b5b0e398afb25796422538bf885d8789cb99c9099e0c46bf",
+    "pair_sha256": "26dd7b856656f364587da8c81b2b21cd263fcc81d5f245fae9249eaf30c39227",
+    "models": {
+      "B100": {
+        "completed_exact": 4,
+        "required": 4,
+        "updates": 160,
+        "initial_weight_sha256": "e2513aeab2cda671aae19feb5df15b5dd2463ebf4875a9001c4142fefffa7958",
+        "final_weight_sha256": "c9b93bc6a05c7322468ff32f626057630a17c51b377997eeb6fdefe199d6990d",
+        "final_loss": 2.401525307504926e-05
+      },
+      "C101": {
+        "completed_exact": 4,
+        "required": 4,
+        "updates": 160,
+        "initial_weight_sha256": "c3eac5492cc4b8bcf069b4e8a9f633a3ead863a014802a4e92dcd0690648a4eb",
+        "final_weight_sha256": "06d78167a3c03e8e6586a3500b183409a0c0f5887c3b85805568ad32c692c514",
+        "final_loss": 1.7847333538156818e-05
+      }
+    },
+    "qualified_code_precedes_validation_only_binding_fix": true,
+    "post_binding_fix_training_rerun_claimed": false,
+    "preserved_failed_attempt": "experiments/manifests/stress_bc_exact_overfit_development"
+  },
+  "source_binding_receipt": {
+    "path": "docs/reports/raw/bc_final_input_binding_receipt.json",
+    "sha256": "ce880c8ebfbfea05e325e84ac7a6612f00675cbfb673defaa3be4bcda99d7ab7"
+  },
+  "useful_heldout_learning": "PENDING",
+  "pre_10M_admission": "BLOCKED",
+  "final_10M_or_campaign_authorized": false
+}

@@ -1,0 +1,38 @@
+{
+  "classification": "BOUNDED_BC_MECHANICAL_CORRECTNESS",
+  "tests": 6,
+  "passed": 6,
+  "seconds": 0.52,
+  "working_dtype": "float32",
+  "MLX_ENABLE_TF32": "0",
+  "B100_unique_parameters": 100686336,
+  "C101_unique_parameters": 101081859,
+  "config_scope": "exact geometry inventory; reduced16-wide numerical fixture",
+  "hashes": {
+    "docs/reports/raw/bc_mechanics_attempt01.txt": "00a8614270ba8472fd66ad756931ce6c941c964e72fa1dd797d89853abcf36dd",
+    "src/models/bc.py": "67afd49e9505b2e5378650e5d62dd44a42f9a05cd24eddd61b89a420cac74621",
+    "src/models/edits.py": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+    "src/models/core.py": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+    "src/models/training.py": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5",
+    "tests/models/test_bc.py": "c05ae0d02c034ca60743ffa228c917e7d4c2fd78015af9273be87b32d07ca2ea"
+  },
+  "code_commit": "6b29d49fe795b44e2aadfd8a1ddc7942e6e2a48f",
+  "dirty_state": [
+    " M pyproject.toml",
+    " M src/scoring/triple.py",
+    " M uv.lock",
+    "?? benchmarks/model0_correctness.py",
+    "?? benchmarks/native_calibration.py",
+    "?? configs/",
+    "?? docs/reports/BC_CORRECTNESS_REPORT.md",
+    "?? docs/reports/STRESS_GENERATOR_FOUNDATION.md",
+    "?? docs/reports/raw/",
+    "?? experiments/manifests/stress_bc_exact_overfit_development/",
+    "?? experiments/manifests/stress_foundation_20261005T051039Z/",
+    "?? experiments/manifests/stress_foundation_20261005T051948Z/",
+    "?? src/generation/",
+    "?? src/models/",
+    "?? tests/data/test_generator.py",
+    "?? tests/models/"
+  ]
+}

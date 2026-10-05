@@ -1,0 +1,9 @@
+{
+  "current_code_sha256": "d58022e956b3adbd8d6a1c635ef9a7774efbd83aa5f8d8d65643c8f2d53be067",
+  "original_pair_file_sha256": "26dd7b856656f364587da8c81b2b21cd263fcc81d5f245fae9249eaf30c39227",
+  "prior_inputs_valid_under_repaired_binding": 4,
+  "validation_receipt": "docs/reports/raw/bc_prior_input_binding_validation.json",
+  "combined_mock_and_numerical_receipt": "docs/reports/raw/bc_mechanics_final_attempt01.txt",
+  "MLX_training_rerun_after_validation_only_fix": false,
+  "validation_only_fix_does_not_change_neural_math": true
+}

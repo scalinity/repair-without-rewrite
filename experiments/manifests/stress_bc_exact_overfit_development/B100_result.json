@@ -1,0 +1,1209 @@
+{
+  "model": "B100",
+  "initial_weight_sha256": "e2513aeab2cda671aae19feb5df15b5dd2463ebf4875a9001c4142fefffa7958",
+  "final_weight_sha256": "ac06ebd7feb96770f7f7543a2a0db1e1389d9bffafd70478d1f4eb8f3da0f8b6",
+  "parameter_count": 100686336,
+  "inventory": [
+    {
+      "name": "embedding",
+      "shape": [
+        16384,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 12582912
+    },
+    {
+      "name": "encoder.0.attention_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "encoder.0.attention.q.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.0.attention.k.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.0.attention.v.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.0.attention.o.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.0.ffn_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "encoder.0.ffn.gate.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.0.ffn.up.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.0.ffn.down.weight",
+      "shape": [
+        768,
+        2048
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.1.attention_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "encoder.1.attention.q.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.1.attention.k.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.1.attention.v.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.1.attention.o.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.1.ffn_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "encoder.1.ffn.gate.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.1.ffn.up.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.1.ffn.down.weight",
+      "shape": [
+        768,
+        2048
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.2.attention_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "encoder.2.attention.q.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.2.attention.k.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.2.attention.v.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.2.attention.o.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.2.ffn_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "encoder.2.ffn.gate.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.2.ffn.up.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.2.ffn.down.weight",
+      "shape": [
+        768,
+        2048
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.3.attention_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "encoder.3.attention.q.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.3.attention.k.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.3.attention.v.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.3.attention.o.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.3.ffn_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "encoder.3.ffn.gate.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.3.ffn.up.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.3.ffn.down.weight",
+      "shape": [
+        768,
+        2048
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.4.attention_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "encoder.4.attention.q.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.4.attention.k.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.4.attention.v.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.4.attention.o.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.4.ffn_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "encoder.4.ffn.gate.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.4.ffn.up.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.4.ffn.down.weight",
+      "shape": [
+        768,
+        2048
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.5.attention_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "encoder.5.attention.q.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.5.attention.k.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.5.attention.v.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.5.attention.o.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.5.ffn_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "encoder.5.ffn.gate.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.5.ffn.up.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.5.ffn.down.weight",
+      "shape": [
+        768,
+        2048
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.6.attention_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "encoder.6.attention.q.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.6.attention.k.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.6.attention.v.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.6.attention.o.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.6.ffn_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "encoder.6.ffn.gate.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.6.ffn.up.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.6.ffn.down.weight",
+      "shape": [
+        768,
+        2048
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.7.attention_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "encoder.7.attention.q.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.7.attention.k.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.7.attention.v.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.7.attention.o.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder.7.ffn_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "encoder.7.ffn.gate.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.7.ffn.up.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "encoder.7.ffn.down.weight",
+      "shape": [
+        768,
+        2048
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "decoder.0.attention_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "decoder.0.attention.q.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "decoder.0.attention.k.weight",
+      "shape": [
+        256,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 196608
+    },
+    {
+      "name": "decoder.0.attention.v.weight",
+      "shape": [
+        256,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 196608
+    },
+    {
+      "name": "decoder.0.attention.o.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "decoder.0.ffn_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "decoder.0.ffn.gate.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "decoder.0.ffn.up.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "decoder.0.ffn.down.weight",
+      "shape": [
+        768,
+        2048
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "decoder.0.cross_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "decoder.0.cross_attention.q.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "decoder.0.cross_attention.k.weight",
+      "shape": [
+        256,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 196608
+    },
+    {
+      "name": "decoder.0.cross_attention.v.weight",
+      "shape": [
+        256,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 196608
+    },
+    {
+      "name": "decoder.0.cross_attention.o.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "decoder.1.attention_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "decoder.1.attention.q.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "decoder.1.attention.k.weight",
+      "shape": [
+        256,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 196608
+    },
+    {
+      "name": "decoder.1.attention.v.weight",
+      "shape": [
+        256,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 196608
+    },
+    {
+      "name": "decoder.1.attention.o.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "decoder.1.ffn_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "decoder.1.ffn.gate.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "decoder.1.ffn.up.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "decoder.1.ffn.down.weight",
+      "shape": [
+        768,
+        2048
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "decoder.1.cross_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "decoder.1.cross_attention.q.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "decoder.1.cross_attention.k.weight",
+      "shape": [
+        256,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 196608
+    },
+    {
+      "name": "decoder.1.cross_attention.v.weight",
+      "shape": [
+        256,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 196608
+    },
+    {
+      "name": "decoder.1.cross_attention.o.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "decoder.2.attention_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "decoder.2.attention.q.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "decoder.2.attention.k.weight",
+      "shape": [
+        256,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 196608
+    },
+    {
+      "name": "decoder.2.attention.v.weight",
+      "shape": [
+        256,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 196608
+    },
+    {
+      "name": "decoder.2.attention.o.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "decoder.2.ffn_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "decoder.2.ffn.gate.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "decoder.2.ffn.up.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "decoder.2.ffn.down.weight",
+      "shape": [
+        768,
+        2048
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "decoder.2.cross_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "decoder.2.cross_attention.q.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "decoder.2.cross_attention.k.weight",
+      "shape": [
+        256,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 196608
+    },
+    {
+      "name": "decoder.2.cross_attention.v.weight",
+      "shape": [
+        256,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 196608
+    },
+    {
+      "name": "decoder.2.cross_attention.o.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "decoder.3.attention_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "decoder.3.attention.q.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "decoder.3.attention.k.weight",
+      "shape": [
+        256,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 196608
+    },
+    {
+      "name": "decoder.3.attention.v.weight",
+      "shape": [
+        256,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 196608
+    },
+    {
+      "name": "decoder.3.attention.o.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "decoder.3.ffn_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "decoder.3.ffn.gate.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "decoder.3.ffn.up.weight",
+      "shape": [
+        2048,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "decoder.3.ffn.down.weight",
+      "shape": [
+        768,
+        2048
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 1572864
+    },
+    {
+      "name": "decoder.3.cross_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "decoder.3.cross_attention.q.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "decoder.3.cross_attention.k.weight",
+      "shape": [
+        256,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 196608
+    },
+    {
+      "name": "decoder.3.cross_attention.v.weight",
+      "shape": [
+        256,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 196608
+    },
+    {
+      "name": "decoder.3.cross_attention.o.weight",
+      "shape": [
+        768,
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 589824
+    },
+    {
+      "name": "encoder_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    },
+    {
+      "name": "decoder_norm.weight",
+      "shape": [
+        768
+      ],
+      "dtype": "mlx.core.float32",
+      "count": 768
+    }
+  ],
+  "initial_loss": 9.562005758285522,
+  "final_loss": 0.7252510190010071,
+  "updates": 80,
+  "training_seconds": 13.034260042011738,
+  "predictions": [
+    {
+      "source": "aa",
+      "reference": "ba",
+      "output": "aaaaaaaa",
+      "status": "capped",
+      "completed_exact": false
+    },
+    {
+      "source": "ab",
+      "reference": "ab",
+      "output": "aaaaaaaa",
+      "status": "capped",
+      "completed_exact": false
+    },
+    {
+      "source": "bb",
+      "reference": "b",
+      "output": "aaaaaaaa",
+      "status": "capped",
+      "completed_exact": false
+    },
+    {
+      "source": "ba",
+      "reference": "aa",
+      "output": "aaaaaaaa",
+      "status": "capped",
+      "completed_exact": false
+    }
+  ],
+  "completed_exact": 0,
+  "optimizer_policy": {
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "epsilon": 1e-08,
+    "weight_decay": 0.1,
+    "clip_norm": 1.0
+  },
+  "master_dtypes": [
+    "mlx.core.float32"
+  ],
+  "moment_dtypes": [
+    "mlx.core.float32"
+  ],
+  "accumulator_dtypes": [
+    "mlx.core.float32"
+  ],
+  "maximum_peak_bytes": 2551784908
+}
