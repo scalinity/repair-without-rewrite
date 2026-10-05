@@ -1,0 +1,44 @@
+{
+  "base_public_head": "928fd0305206ad6d6130d0667d1b206baa521a64",
+  "credential_or_private_identifier_hits": 0,
+  "file_hashes": {
+    "benchmarks/empirical_corruption_profile.py": "ddde92f2b9899dbf6bc23106b002164b8ea1d8524122501b9fae847ecae742ef",
+    "docs/reports/BC_10M_PROBE_ADMISSION_DECISION_V3.md": "4f55ca8ca4edace14704ecf22d96c27078308a8dc41d637c26c15c76a89b939e",
+    "docs/reports/BC_10M_PROBE_COST_PROJECTION.md": "05cc6c5a7a3b7c8263b465fda60b93cfaad21c2c56d9416b2fe9831ab48f62d4",
+    "docs/reports/EMPIRICAL_CORRUPTION_PROFILE_QUALIFICATION.md": "8547ada6346308dd02be7e42284879891aafe5888e38826beaf640b73133f1fd",
+    "docs/reports/FRONTIER_READER_IMPLEMENTATION_SESSION_REPORT.md": "ffc4a01e0969e26cb1230014e5641844a2b32f936ac26c4d8df5a346b7287053",
+    "docs/reports/PAIRED_COMPLETE_UPDATE_BENCH_V2.md": "6d76311f6b08401fcf719e7c63452f7834421db190488e8d02a27073fd4fd8f9",
+    "docs/reports/PAIRED_MIXED_READER_QUALIFICATION_V2.md": "38f53af9350f5b8d42cc257c59d37fe35c24a149a90a1957ac6f583534f027e5",
+    "docs/reports/PAIRED_READER_FAIRNESS_AUDIT_V2.md": "1dec7d68075ec49518df01d7cf986e5e94987d6036125d703efdab0426bb762d",
+    "docs/reviews/EMPIRICAL_CORRUPTION_PROFILE_INDEPENDENT_REVIEW.md": "f8b1e966ff60a62e76e58d8b173cc0699c8c30bafb85b1bbbb6ea60e869a2755",
+    "docs/reviews/FRONTIER_READER_CURRICULUM_DECISION_V1.md": "7089ef96c847623b01c3d3d54f179e3e2477b8239bdad9cc4a79998d6418043b",
+    "docs/reviews/PROSPECTIVE_AMENDMENTS.md": "211f6b6c2770dd82274d1a943985da4a3b511913f95e8b0a74624f377888e16b",
+    "experiments/manifests/frontier_reader/baseline-validation.attempt01.json": "dd450824e5aa780e4814b27b1f2341a7367cf1e94423e52e91a8147f5f52c55a",
+    "experiments/manifests/frontier_reader/empirical-profile-measurement.attempt01.json": "04c393164363ca333c580cfd9ce5b6601cfba135ecd0790d605c5c6ab372462c",
+    "experiments/manifests/frontier_reader/empirical-profile-preflight.public.attempt01.json": "01c467e6d78549a42bc3fa13d5ba66488b7af2d817b5b61d81e5727016c4ddec",
+    "experiments/manifests/frontier_reader/empirical-profile-table.attempt01.json": "5df3800d7a29e370abdce36bd489989482d5d878765612b5a14a4b2cab1fc310",
+    "experiments/manifests/frontier_reader/final-validation.attempt01.json": "258fb52e1dc1474236ddb3fb8c77b615c976154532284a0e43a41c785984573e",
+    "experiments/manifests/frontier_reader/independent-validation.attempt01.json": "737e638262832a4e6851d7114294629358fec16f5a7220d0a3b650e7c717e78c",
+    "experiments/manifests/frontier_reader/raw-surface-descriptive-audit.attempt01.json": "2a74adb1ae1eb5745a7dc4e939b8d705e202668842bd365b27252c8844b34f15",
+    "src/data/empirical_corruption.py": "df4caf02e33aa529e4018f73b1bd72d916f81df475063029790ade83485ec2f3",
+    "tests/data/test_empirical_corruption.py": "5e55a4044c32e846d1623d414590ab3162c4022e5df27a414c92a56a12781378"
+  },
+  "final_tested_sources_unchanged": true,
+  "forbidden_asset_or_agent_paths": 0,
+  "formatting_check": "implementation/evidence passes; original decision Markdown hardbreak whitespace retained verbatim as explicitly required",
+  "introduced_commits_scanned": [
+    "da8dc181385bd9b070a5fa4eff3be285f422f083",
+    "bd882ceea205c2f9e0547fa49337e94e1b042fad"
+  ],
+  "introduced_file_snapshots_scanned": 12,
+  "known_original_private_hit": {
+    "action": "exact original preserved outside Git; separately identified public derivative uses repository-relative key",
+    "classification": "real nonfunctional local absolute code path, not a credential or synthetic fixture",
+    "original_receipt_sha256": "030dc548bea3be773590f75c7b385bf82cc0e390b5e1f106d65c8781ea266195"
+  },
+  "missing_local_markdown_targets": 0,
+  "raw_assets_and_private_alignment_evidence": "ignored and excluded",
+  "reviewed_implementation_head": "da8dc181385bd9b070a5fa4eff3be285f422f083",
+  "scope": "all additive current files and each newly introduced commit snapshot; previously public unchanged history not rewritten or rescanned",
+  "status": "PASS_SCOPED_ADDITIVE_PUBLICATION_AUDIT"
+}

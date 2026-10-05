@@ -1,0 +1,19 @@
+{
+  "actual_paired_consumption_rows": 0,
+  "checker_sha256": "6822a082a40842dbadef741a31b79c97121d035b50a0e6a795434c3023cbb55c",
+  "empirical_table_sha256": "5df3800d7a29e370abdce36bd489989482d5d878765612b5a14a4b2cab1fc310",
+  "failed_attempt": "reviewer-only byte serialization assertion after per-record/object equality; preserved displayed combined output and first checker; no standalone initial stdout/stderr existed",
+  "fairness": "NOT_QUALIFIED",
+  "groups": 48,
+  "independent_checker_estimation_seconds": 9.663388374989154,
+  "method": "separate optimal-predecessor edit-set intersection and backward optimal-edge union; no estimator/model imports",
+  "private_review_receipt_sha256": "c5263f10e5fb670a3a33c2fd6b514b4594e2354bb1e0584ed31fef44123dff86",
+  "records": 1024,
+  "reports": {
+    "docs/reports/PAIRED_READER_FAIRNESS_AUDIT_V2.md": "1dec7d68075ec49518df01d7cf986e5e94987d6036125d703efdab0426bb762d",
+    "docs/reviews/EMPIRICAL_CORRUPTION_PROFILE_INDEPENDENT_REVIEW.md": "f8b1e966ff60a62e76e58d8b173cc0699c8c30bafb85b1bbbb6ea60e869a2755"
+  },
+  "scientific_disposition": "FRONTIER_MODEL_REVIEW_REQUIRED",
+  "status": "INDEPENDENT_PROFILE_REPRODUCED_READER_FAIRNESS_NOT_QUALIFIED",
+  "successful_stdout_sha256": "bcb939b5eb2cfe81080cb03d7bbc869e54313d92b9276966af9ac778ac2e7ff3"
+}
