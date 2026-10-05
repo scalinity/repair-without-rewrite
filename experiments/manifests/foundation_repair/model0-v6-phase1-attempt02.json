@@ -1,0 +1,112 @@
+{
+  "source_attempt": "model0-v6-phase1-attempt02",
+  "ignored_summary_sha256": "8c5cf106bfde12d91354bd21ff3ce6fa98d0cc6b28fe13b4e21a8b7b56f28c06",
+  "summary": {
+    "processed_tokens": 5001216,
+    "updates": 1221,
+    "initial": {
+      "ce": 9.764476873935797,
+      "valid_labels": 19968
+    },
+    "final": {
+      "ce": 6.278499505458734,
+      "valid_labels": 19968
+    },
+    "evaluations": [
+      {
+        "processed_tokens": 0,
+        "metric": {
+          "ce": 9.764476873935797,
+          "valid_labels": 19968
+        }
+      },
+      {
+        "processed_tokens": 1024000,
+        "metric": {
+          "ce": 7.320863577035757,
+          "valid_labels": 19968
+        }
+      },
+      {
+        "processed_tokens": 2048000,
+        "metric": {
+          "ce": 6.89197501158103,
+          "valid_labels": 19968
+        }
+      },
+      {
+        "processed_tokens": 3072000,
+        "metric": {
+          "ce": 6.60679196088742,
+          "valid_labels": 19968
+        }
+      },
+      {
+        "processed_tokens": 4096000,
+        "metric": {
+          "ce": 6.403979766063201,
+          "valid_labels": 19968
+        }
+      },
+      {
+        "processed_tokens": 5001216,
+        "metric": {
+          "ce": 6.278499505458734,
+          "valid_labels": 19968
+        }
+      }
+    ],
+    "initial_weights": "e0275c484f477899fe10f2da41e1ab9adb080ca327780d86b33980d40b09d835",
+    "final_weights": "9ab987890761533c3317c381592da05cbaa08de26411057dab32c30d73230268",
+    "model_config": {
+      "vocab_size": 16384,
+      "width": 256,
+      "num_layers": 6,
+      "q_heads": 4,
+      "kv_heads": 2,
+      "ffn_width": 704,
+      "max_context": 1024
+    },
+    "dtype_inventory": {
+      "master": [
+        "mlx.core.float32"
+      ],
+      "moment_m": [
+        "mlx.core.float32"
+      ],
+      "moment_v": [
+        "mlx.core.float32"
+      ],
+      "accumulator": [
+        "mlx.core.float32"
+      ],
+      "working": "mlx.core.bfloat16"
+    },
+    "optimizer": {
+      "beta1": 0.9,
+      "beta2": 0.95,
+      "epsilon": 1e-08,
+      "weight_decay": 0.1,
+      "clip_norm": 1.0
+    },
+    "schedule": {
+      "planned_tokens": 10000000,
+      "peak_lr": 0.0003,
+      "warmup_fraction": 0.02,
+      "floor_fraction": 0.1
+    },
+    "resume": null,
+    "checkpoint_seconds": 0.1883282920025522,
+    "training_and_evaluation_wall_seconds": 76.92976841700147,
+    "peak_mlx_bytes": 2093510896,
+    "peak_rss_bytes": 730873856,
+    "final_thermal": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded\n",
+    "status": "PARTIAL_CONTINUE"
+  },
+  "public_scope": "payload-free measured counts; original complete provenance and payloads remain ignored",
+  "artifact_hashes": {
+    "provenance.json": "3357cd3e847e28291e6e01c6b633610e1d76d6c8b7e28785a5185a391b8b149e",
+    "initial_identity.json": "3e0762d663f912ec807c71df7b6c3569640c108eeaed46312addf4e1be544792",
+    "steps.jsonl": "3d91debb9542df4d9e98ebed5416bec93bf33fab64c758f587c6f2a046b64bbd"
+  }
+}

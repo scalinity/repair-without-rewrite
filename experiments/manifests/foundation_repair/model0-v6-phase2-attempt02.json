@@ -1,0 +1,128 @@
+{
+  "source_attempt": "model0-v6-phase2-attempt02",
+  "ignored_summary_sha256": "d6180d4ea6e28af441b76b1c5f35d328df1318abd7f8571c9b6ab587761d37b7",
+  "summary": {
+    "processed_tokens": 10002432,
+    "updates": 2442,
+    "initial": {
+      "ce": 9.764476873935797,
+      "valid_labels": 19968
+    },
+    "final": {
+      "ce": 6.022597875350561,
+      "valid_labels": 19968
+    },
+    "evaluations": [
+      {
+        "processed_tokens": 5001216,
+        "metric": {
+          "ce": 6.278499505458734,
+          "valid_labels": 19968
+        }
+      },
+      {
+        "processed_tokens": 5120000,
+        "metric": {
+          "ce": 6.25101549197466,
+          "valid_labels": 19968
+        }
+      },
+      {
+        "processed_tokens": 6144000,
+        "metric": {
+          "ce": 6.1633662688426485,
+          "valid_labels": 19968
+        }
+      },
+      {
+        "processed_tokens": 7168000,
+        "metric": {
+          "ce": 6.09016369550656,
+          "valid_labels": 19968
+        }
+      },
+      {
+        "processed_tokens": 8192000,
+        "metric": {
+          "ce": 6.049778864933894,
+          "valid_labels": 19968
+        }
+      },
+      {
+        "processed_tokens": 9216000,
+        "metric": {
+          "ce": 6.0315627073630305,
+          "valid_labels": 19968
+        }
+      },
+      {
+        "processed_tokens": 10002432,
+        "metric": {
+          "ce": 6.022597875350561,
+          "valid_labels": 19968
+        }
+      }
+    ],
+    "initial_weights": "e0275c484f477899fe10f2da41e1ab9adb080ca327780d86b33980d40b09d835",
+    "final_weights": "9641c9068135ff7a7b6141e6009fbca5b8ab845a79365285fa49e3b484e265a4",
+    "model_config": {
+      "vocab_size": 16384,
+      "width": 256,
+      "num_layers": 6,
+      "q_heads": 4,
+      "kv_heads": 2,
+      "ffn_width": 704,
+      "max_context": 1024
+    },
+    "dtype_inventory": {
+      "master": [
+        "mlx.core.float32"
+      ],
+      "moment_m": [
+        "mlx.core.float32"
+      ],
+      "moment_v": [
+        "mlx.core.float32"
+      ],
+      "accumulator": [
+        "mlx.core.float32"
+      ],
+      "working": "mlx.core.bfloat16"
+    },
+    "optimizer": {
+      "beta1": 0.9,
+      "beta2": 0.95,
+      "epsilon": 1e-08,
+      "weight_decay": 0.1,
+      "clip_norm": 1.0
+    },
+    "schedule": {
+      "planned_tokens": 10000000,
+      "peak_lr": 0.0003,
+      "warmup_fraction": 0.02,
+      "floor_fraction": 0.1
+    },
+    "resume": {
+      "checkpoint": "exports/foundation-repair/model0-v6-phase1-attempt02/checkpoint",
+      "restored_tokens": 5001216,
+      "restored_step": 1221,
+      "restored_weights": "9ab987890761533c3317c381592da05cbaa08de26411057dab32c30d73230268",
+      "heldout": {
+        "ce": 6.278499505458734,
+        "valid_labels": 19968
+      }
+    },
+    "checkpoint_seconds": 0.1908554169931449,
+    "training_and_evaluation_wall_seconds": 77.80563479100238,
+    "peak_mlx_bytes": 2093510896,
+    "peak_rss_bytes": 775831552,
+    "final_thermal": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded\n",
+    "status": "PASS"
+  },
+  "public_scope": "payload-free measured counts; original complete provenance and payloads remain ignored",
+  "artifact_hashes": {
+    "provenance.json": "f939f1401693275ac1c09bb7cd3989051d73b451e4892aa015963bdf736c6606",
+    "initial_identity.json": "3e0762d663f912ec807c71df7b6c3569640c108eeaed46312addf4e1be544792",
+    "steps.jsonl": "fd4cc52ae82555754f57d935595e550229fa90cf928b3b74a03d48a8e553acdb"
+  }
+}
