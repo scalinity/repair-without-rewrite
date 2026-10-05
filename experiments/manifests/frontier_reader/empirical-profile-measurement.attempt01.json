@@ -1,0 +1,66 @@
+{
+  "alignment_audit_sha256": "a6e05d10011e58fc3568a48c4d40eb70bf54affb4d29752fe380fb9a56629d94",
+  "ambiguity_omitted_unit_mass": 759,
+  "ambiguous_optimal_edit_edges": 1924,
+  "consensus_occurrences": 2330,
+  "distance_distribution": {
+    "0": 182,
+    "1": 218,
+    "2": 163,
+    "3": 141,
+    "4": 103,
+    "5": 68,
+    "6": 41,
+    "7": 29,
+    "8": 18,
+    "9": 15,
+    "10": 8,
+    "11": 13,
+    "12": 3,
+    "13": 4,
+    "14": 6,
+    "15": 1,
+    "17": 3,
+    "18": 3,
+    "19": 1,
+    "20": 1,
+    "23": 2,
+    "42": 1
+  },
+  "effects": {
+    "case": 525,
+    "other": 168,
+    "punctuation": 1372,
+    "whitespace_boundary": 48
+  },
+  "empirical_table_sha256": "5df3800d7a29e370abdce36bd489989482d5d878765612b5a14a4b2cab1fc310",
+  "estimation_seconds": 24.30060724998475,
+  "excluded_calibration_records": 96,
+  "groups": 48,
+  "input_train_hashes_sha256": "96ad9bee197bb1710175c426dda396f8cfa5abdf3d2d9de91b07fd3421f99240",
+  "operations": {
+    "deletion": 879,
+    "insertion": 296,
+    "substitution": 938
+  },
+  "possible_optimal_edit_edges": 4254,
+  "raw_unit_edit_mass": 3089,
+  "records": 1024,
+  "records_with_ambiguous_edits": 229,
+  "records_with_multiple_optimal_paths": 229,
+  "retained_occurrences": 2113,
+  "severity_P0": {
+    "0": 182,
+    "1": 842
+  },
+  "severity_P1_P2": {
+    "0": 182,
+    "1": 218,
+    "2": 624
+  },
+  "status": "PROFILE_ESTIMATED_READER_ADMISSION_PENDING",
+  "support_rejected_consensus_occurrences": 217,
+  "supported_cooccurrence_entries": 85,
+  "supported_entries": 67,
+  "unsupported_entries": 398
+}

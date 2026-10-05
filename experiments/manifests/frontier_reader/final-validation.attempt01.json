@@ -1,0 +1,19 @@
+{
+  "MLX_ENABLE_TF32": "0",
+  "dirty_status": "?? benchmarks/empirical_corruption_profile.py\n?? experiments/manifests/frontier_reader/\n?? src/data/empirical_corruption.py\n?? tests/data/test_empirical_corruption.py\n",
+  "exit_code": 0,
+  "file_hashes": {
+    "benchmarks/empirical_corruption_profile.py": "ddde92f2b9899dbf6bc23106b002164b8ea1d8524122501b9fae847ecae742ef",
+    "configs/tokenizer_development/tokenizer.json": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+    "docs/design-inputs/EXTRACTED_CANONICAL_SOURCE.md": "94746ef2c223f9f461d5dc92378961813e8f9377fe89fd5166dd9d6097ced746",
+    "docs/design-inputs/LocalFlow_Publication_Experiment_Registry_v2.txt": "596932dd91e0b108936c3a7a80245f4f44df5cfeac4f13d6fda8cfb30412cfe0",
+    "src/data/empirical_corruption.py": "df4caf02e33aa529e4018f73b1bd72d916f81df475063029790ade83485ec2f3",
+    "tests/data/test_empirical_corruption.py": "5e55a4044c32e846d1623d414590ab3162c4022e5df27a414c92a56a12781378"
+  },
+  "head": "bd882ceea205c2f9e0547fa49337e94e1b042fad",
+  "invocation_wall_seconds": 23.932327374990564,
+  "pytest_summary": "275 passed in 23.43s",
+  "scope": "integrated correctness suite, no registered reader/BENCH/10M recipe updates",
+  "status": "PASS",
+  "stdout_sha256": "90b093c51ed37d08b73915e2d77a5cb64207a0642b55fdf90edf83cb3bb6509a"
+}

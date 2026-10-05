@@ -1,0 +1,29 @@
+{
+  "aggregate_source_wer": 0.02290613321609145,
+  "code_hashes": {
+    "src/scoring/oracle.py": "c8cc04e5c21ebfc20912c498f95887ca88fae32b79cafe96b493796dea3f7609",
+    "src/scoring/text.py": "4db62c3238c830ec25faf979beb656dcc7b882f0843b318d973934b4f340111d"
+  },
+  "groups": 48,
+  "lexical_distance_distribution": {
+    "0": 690,
+    "1": 211,
+    "2": 84,
+    "3": 25,
+    "4": 8,
+    "5": 5,
+    "10": 1
+  },
+  "lexical_edit_units": 521,
+  "lexical_equal": 690,
+  "pair_sha256": "ce4a170a086afee430085c4e6f665e8af58b8c68091afc27f10ee403c81951d8",
+  "policy": "existing lexical_eval_v1",
+  "policy_hash": "e1dc5baa5f5098a7e0f39d3b3e3d612439886715dac5924e2be6b8cd1eed39b0",
+  "raw_byte_identical": 182,
+  "raw_different": 842,
+  "raw_different_but_lexical_equal": 508,
+  "records": 1024,
+  "reference_lexical_units": 22745,
+  "seconds": 0.6726640000124462,
+  "status": "DESCRIPTIVE_ONLY_NO_TABLE_FILTER_OR_TREATMENT_CHANGE"
+}

@@ -1,0 +1,35 @@
+{
+  "alignment_version": "raw-codepoint-all-optimal-edge-consensus-v1",
+  "code_hashes": {
+    "benchmarks/empirical_corruption_profile.py": "0889518d4992982dee3d14af6dfc5197079e55d951610e18d58894d5b4a8222c",
+    "src/data/development_reader.py": "24f61cb4a8245831b112fd2a25aa26e332e1cea6526d1e6ddd69f25d7a2ad3f5",
+    "src/data/empirical_corruption.py": "df4caf02e33aa529e4018f73b1bd72d916f81df475063029790ade83485ec2f3",
+    "tests/data/test_empirical_corruption.py": "5e55a4044c32e846d1623d414590ab3162c4022e5df27a414c92a56a12781378"
+  },
+  "decision_sha256": "7089ef96c847623b01c3d3d54f179e3e2477b8239bdad9cc4a79998d6418043b",
+  "dirty_status": "?? benchmarks/empirical_corruption_profile.py\n?? src/data/empirical_corruption.py\n?? tests/data/test_empirical_corruption.py\n",
+  "head": "bd882ceea205c2f9e0547fa49337e94e1b042fad",
+  "model_initialization": "NONE: no neural execution",
+  "normalization": "NONE",
+  "pair_file_sha256": "ce4a170a086afee430085c4e6f665e8af58b8c68091afc27f10ee403c81951d8",
+  "profile": "PENDING_MEASUREMENT",
+  "public_export": {
+    "original_sha256": "030dc548bea3be773590f75c7b385bf82cc0e390b5e1f106d65c8781ea266195",
+    "preservation": "exact original retained outside Git",
+    "redaction": "one real local absolute code path replaced by its repository-relative identity; values and measurement hashes unchanged"
+  },
+  "reader": "NOT_IMPLEMENTED",
+  "renderer": "NOT_IMPLEMENTED",
+  "roles_sha256": "56c5889d952c83120267ea92b4aaf8bcec63dff61a34e83ce531c9be97b3eb98",
+  "runtime": {
+    "MLX_ENABLE_TF32": "0",
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "python": "3.12.15",
+    "unicode": "15.1.0"
+  },
+  "seed": "NONE: exhaustive deterministic TRAIN estimation",
+  "status": "COMPLETED_CPU_PROFILE_MEASUREMENT",
+  "summary_sha256": "04c393164363ca333c580cfd9ce5b6601cfba135ecd0790d605c5c6ab372462c",
+  "supply_sha256": "d0b1de70c2d2a7c7bbc7ad711a4d771fa91a22ef399651b0482aaeeee7616842",
+  "tokenizer_sha256": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca"
+}

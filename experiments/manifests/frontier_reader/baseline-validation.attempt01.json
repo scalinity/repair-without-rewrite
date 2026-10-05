@@ -1,0 +1,13 @@
+{
+  "command": "MLX_ENABLE_TF32=0 .venv/bin/python -m pytest -q",
+  "expected_ancestor_check": "PASS",
+  "initial_tree_clean": true,
+  "invocation_wall_seconds": "NOT_MEASURED",
+  "passed": 259,
+  "pytest_reported_seconds": 23.56,
+  "remote_main_at_continuation": "928fd0305206ad6d6130d0667d1b206baa521a64",
+  "scope": "existing integrated numerical correctness tests; no registered mixed-reader/BENCH/10M recipe update",
+  "status": "PASS",
+  "stdout_sha256": "8a138945186441a6968909f9f952e8dd8cf8f55bcd88b3a0164ad62f1cf4fc5c",
+  "tested_head": "928fd0305206ad6d6130d0667d1b206baa521a64"
+}
