@@ -1,0 +1,18 @@
+{
+  "base_head": "c81d08f95566d1e797f14a6217286e5dfcf33ab5",
+  "history_blobs_scanned": 317,
+  "working_files_scanned": 337,
+  "history_hits": [],
+  "working_hits": [],
+  "no_literals_printed": true,
+  "no_redaction_performed": true,
+  "purpose": "existing-public-repository evidence-safety review",
+  "classifications": {
+    "credential_hits": 0,
+    "private_identifier_hits": 0,
+    "real_values_to_redact": 0,
+    "synthetic_matches": 0,
+    "pattern_construct_matches": 0
+  },
+  "limitations": "Prefix and private-location patterns plus named-path review; not a proof of all possible secret encodings. Ignored payloads/checkpoints/runtime records are excluded from publication."
+}

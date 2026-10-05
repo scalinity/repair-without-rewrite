@@ -7,14 +7,16 @@
 ![PyTorch 2.8.0](https://img.shields.io/badge/PyTorch-2.8.0-EE4C2C?logo=pytorch&logoColor=white)
 ![Transformers 4.55.4](https://img.shields.io/badge/Transformers-4.55.4-yellow)
 ![Unicode 15.1](https://img.shields.io/badge/Unicode-15.1-blue)
-![Tests](https://img.shields.io/badge/Foundation_tests-180_passed-brightgreen)
+![Tests](https://img.shields.io/badge/Foundation_tests-259_passed-brightgreen)
 ![Status](https://img.shields.io/badge/Status-Foundation_repair_required-orange)
 
 **Repair Without Rewrite** is a local research codebase investigating a specific question in automatic speech recognition: when a transcript needs correction, should a model generate the entire transcript again or produce a compact program of edits? The planned comparison pairs two randomly initialized Transformers with a shared encoder–decoder backbone, closely matched parameter counts, common source information, and matched training exposure. It measures repaired reference errors, errors introduced by correction, and the cost of producing a complete output. A deterministic renderer copies the compact model's untouched source spans byte for byte; whether the model chooses the right spans is an empirical question.
 
 The repository implements the mathematical, data, and evaluation foundations needed to make that comparison auditable. It is separate from the LocalFlow application and contains **bounded development evidence, not completed paper results**.
 
-> **Current disposition: `FOUNDATION_REPAIR_REQUIRED`.** The integrated suite passed **180 tests in 18.64 seconds**. Exact B100/C101 models passed a four-pair memorization rehearsal, but held-out correction and the planned 10M-exposure probes have not run. The full training tokenizer, source qualification, credible pretrained adaptation, and representative sustained benchmarks remain incomplete. No final training or protocol freeze has occurred. See the [foundation decision](docs/reports/FOUNDATION_GO_NO_GO.md) for the evidence and next dependencies.
+> **Current disposition: `FOUNDATION_REPAIR_REQUIRED`.** The continuation repaired and bounded Parakeet, completed LS-PC leakage closure, trained the DEVELOPMENT tokenizer, passed real-shard MODEL-0 V6, and measured natural B/C calibration and nonidentity scorer behavior. ByT5 produces valid outputs but still lacks useful lexical corrections. The paired mixed-data reader and chosen full-update benchmark regime remain unqualified; all six 10M recipes remain unstarted. No final training, sealed candidate inference or protocol freeze occurred. See the [repair session](docs/reports/FOUNDATION_REPAIR_SESSION_REPORT.md) and [twenty-answer admission decision](docs/reports/BC_10M_PROBE_ADMISSION_DECISION.md).
+
+The remaining overview preserves the initial bounded-foundation snapshot at `c81d08f`; current repair measurements and their precise limits are in the linked continuation reports. Historical failed attempts remain evidence.
 
 ## Table of Contents
 
@@ -44,9 +46,9 @@ B100 and C101 share an eight-layer encoder, four-layer decoder, width 768, SwiGL
 
 | Model | Trainable parameters | Output | Current evidence |
 |---|---:|---|---|
-| MODEL-0 | 8,621,312 | Causal token sequence | V0–V5, V7 and V8 passed; real-shard V6 not run |
-| B100 | 100,686,336 | Complete restored transcript | Mechanical checks and 4/4 exact toy outputs |
-| C101 | 101,081,859 | Ordered source-relative edits, then rendering | Mechanical checks and 4/4 exact toy outputs |
+| MODEL-0 | 8,621,312 | Causal token sequence | V0–V8 qualified in bounded DEVELOPMENT; real-shard V6 passed at 10,002,432 native inputs |
+| B100 | 100,686,336 | Complete restored transcript | Mechanical/toy checks and natural calibration; useful held-out correction unqualified |
+| C101 | 101,081,859 | Ordered source-relative edits, then rendering | Mechanical/toy checks and natural calibration; six 10M recipes unstarted |
 
 The exact models first failed the tiny output criterion despite lower training loss: B produced capped repetitions, while C damaged an identity example. A lower-learning-rate, longer rehearsal reached 4/4 exact outputs for both. These are two-byte memorization fixtures, with no held-out examples; the change in update count also prevents attributing the repair to learning rate alone. [Model foundation](docs/reports/MODEL0_CORRECTNESS_REPORT.md) · [B/C evidence](docs/reports/BC_CORRECTNESS_REPORT.md)
 

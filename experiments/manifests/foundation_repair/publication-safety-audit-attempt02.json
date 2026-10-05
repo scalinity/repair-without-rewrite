@@ -1,0 +1,147 @@
+{
+  "base_head": "c81d08f95566d1e797f14a6217286e5dfcf33ab5",
+  "history_blobs_scanned": 317,
+  "working_files_scanned": 345,
+  "patterns": [
+    "credential_prefix",
+    "private_key",
+    "private_user_path",
+    "session_url",
+    "internal_hostname",
+    "private_ipv4"
+  ],
+  "history_hits": [
+    {
+      "origin": "history:c3fe2274ea8d4aa206e6f1aead15f5949084b6fa:docs/reports/PUBLICATION_REPORT.md",
+      "pattern": "private_ipv4",
+      "literal_sha256": "666e29a1a4bd50c30217fe9ca005517a36a41905202f3f059153e158c08248b5",
+      "byte_offset": 1399
+    },
+    {
+      "origin": "history:11f0b486946f749e7e55032f50e0402a587a4519:uv.lock",
+      "pattern": "private_ipv4",
+      "literal_sha256": "666e29a1a4bd50c30217fe9ca005517a36a41905202f3f059153e158c08248b5",
+      "byte_offset": 38152
+    },
+    {
+      "origin": "history:11f0b486946f749e7e55032f50e0402a587a4519:uv.lock",
+      "pattern": "private_ipv4",
+      "literal_sha256": "666e29a1a4bd50c30217fe9ca005517a36a41905202f3f059153e158c08248b5",
+      "byte_offset": 38363
+    },
+    {
+      "origin": "history:403f80dad2e80613d6fa77fc8d4929af65bb283b:docs/reports/PUBLICATION_REPORT.md",
+      "pattern": "private_ipv4",
+      "literal_sha256": "666e29a1a4bd50c30217fe9ca005517a36a41905202f3f059153e158c08248b5",
+      "byte_offset": 1461
+    },
+    {
+      "origin": "history:4a8cd2999dbb60e606516444f4899ed1d564fe4d:docs/reports/PUBLICATION_REPORT.md",
+      "pattern": "private_ipv4",
+      "literal_sha256": "666e29a1a4bd50c30217fe9ca005517a36a41905202f3f059153e158c08248b5",
+      "byte_offset": 1458
+    }
+  ],
+  "working_hits": [
+    {
+      "origin": "working:docs/reports/PUBLICATION_REPORT.md",
+      "pattern": "private_ipv4",
+      "literal_sha256": "666e29a1a4bd50c30217fe9ca005517a36a41905202f3f059153e158c08248b5",
+      "byte_offset": 1399
+    },
+    {
+      "origin": "working:uv.lock",
+      "pattern": "private_ipv4",
+      "literal_sha256": "666e29a1a4bd50c30217fe9ca005517a36a41905202f3f059153e158c08248b5",
+      "byte_offset": 38152
+    },
+    {
+      "origin": "working:uv.lock",
+      "pattern": "private_ipv4",
+      "literal_sha256": "666e29a1a4bd50c30217fe9ca005517a36a41905202f3f059153e158c08248b5",
+      "byte_offset": 38363
+    }
+  ],
+  "no_literals_printed": true,
+  "no_redaction_performed": true,
+  "purpose": "existing-public-repository full-history and nonignored working-tree safety scan",
+  "scope_limit": "prefix, named-path and identifier-pattern review; not a guarantee against every possible secret encoding",
+  "classified_hits": [
+    {
+      "origin": "history:c3fe2274ea8d4aa206e6f1aead15f5949084b6fa:docs/reports/PUBLICATION_REPORT.md",
+      "pattern": "private_ipv4",
+      "literal_sha256": "666e29a1a4bd50c30217fe9ca005517a36a41905202f3f059153e158c08248b5",
+      "byte_offset": 1399,
+      "classification": "real_value",
+      "kind": "functional public nvidia-curand-cu12 package version; not a network address",
+      "decision": "retain unchanged; no credential or personal identifier"
+    },
+    {
+      "origin": "history:11f0b486946f749e7e55032f50e0402a587a4519:uv.lock",
+      "pattern": "private_ipv4",
+      "literal_sha256": "666e29a1a4bd50c30217fe9ca005517a36a41905202f3f059153e158c08248b5",
+      "byte_offset": 38152,
+      "classification": "real_value",
+      "kind": "functional public nvidia-curand-cu12 package version; not a network address",
+      "decision": "retain unchanged; no credential or personal identifier"
+    },
+    {
+      "origin": "history:11f0b486946f749e7e55032f50e0402a587a4519:uv.lock",
+      "pattern": "private_ipv4",
+      "literal_sha256": "666e29a1a4bd50c30217fe9ca005517a36a41905202f3f059153e158c08248b5",
+      "byte_offset": 38363,
+      "classification": "real_value",
+      "kind": "functional public nvidia-curand-cu12 package version; not a network address",
+      "decision": "retain unchanged; no credential or personal identifier"
+    },
+    {
+      "origin": "history:403f80dad2e80613d6fa77fc8d4929af65bb283b:docs/reports/PUBLICATION_REPORT.md",
+      "pattern": "private_ipv4",
+      "literal_sha256": "666e29a1a4bd50c30217fe9ca005517a36a41905202f3f059153e158c08248b5",
+      "byte_offset": 1461,
+      "classification": "real_value",
+      "kind": "functional public nvidia-curand-cu12 package version; not a network address",
+      "decision": "retain unchanged; no credential or personal identifier"
+    },
+    {
+      "origin": "history:4a8cd2999dbb60e606516444f4899ed1d564fe4d:docs/reports/PUBLICATION_REPORT.md",
+      "pattern": "private_ipv4",
+      "literal_sha256": "666e29a1a4bd50c30217fe9ca005517a36a41905202f3f059153e158c08248b5",
+      "byte_offset": 1458,
+      "classification": "real_value",
+      "kind": "functional public nvidia-curand-cu12 package version; not a network address",
+      "decision": "retain unchanged; no credential or personal identifier"
+    },
+    {
+      "origin": "working:docs/reports/PUBLICATION_REPORT.md",
+      "pattern": "private_ipv4",
+      "literal_sha256": "666e29a1a4bd50c30217fe9ca005517a36a41905202f3f059153e158c08248b5",
+      "byte_offset": 1399,
+      "classification": "real_value",
+      "kind": "functional public nvidia-curand-cu12 package version; not a network address",
+      "decision": "retain unchanged; no credential or personal identifier"
+    },
+    {
+      "origin": "working:uv.lock",
+      "pattern": "private_ipv4",
+      "literal_sha256": "666e29a1a4bd50c30217fe9ca005517a36a41905202f3f059153e158c08248b5",
+      "byte_offset": 38152,
+      "classification": "real_value",
+      "kind": "functional public nvidia-curand-cu12 package version; not a network address",
+      "decision": "retain unchanged; no credential or personal identifier"
+    },
+    {
+      "origin": "working:uv.lock",
+      "pattern": "private_ipv4",
+      "literal_sha256": "666e29a1a4bd50c30217fe9ca005517a36a41905202f3f059153e158c08248b5",
+      "byte_offset": 38363,
+      "classification": "real_value",
+      "kind": "functional public nvidia-curand-cu12 package version; not a network address",
+      "decision": "retain unchanged; no credential or personal identifier"
+    }
+  ],
+  "credentials_or_nonfunctional_personal_identifiers_found": 0,
+  "synthetic_fixture_hits": 0,
+  "pattern_construction_hits": 0,
+  "functional_real_version_hits": 8
+}

@@ -1,0 +1,112 @@
+{
+  "base_head": "c81d08f95566d1e797f14a6217286e5dfcf33ab5",
+  "command": "MLX_ENABLE_TF32=0 .venv/bin/python -m pytest -q",
+  "passed": 259,
+  "failed": 0,
+  "skipped": 0,
+  "elapsed_seconds": 22.01,
+  "original_baseline_passed": 180,
+  "stdout_sha256": "9abd982f55c95a896e3ee58852f25ab756077793bfa4913f7868c86b6f4a4bd0",
+  "runtime": {
+    "python": "3.12.15",
+    "mlx": "0.32.3",
+    "pytest": "8.4.2",
+    "TF32": "0"
+  },
+  "immutable_input_checks": [
+    {
+      "path": "docs/reviews/Independent_Pre_Implementation_Review_v1_2_Accepted_Findings.md",
+      "sha256": "b408e93a11e395099c57edf76ba507c487ba2671c057e1ff2fae6f13c0e8d00a",
+      "unchanged": true
+    },
+    {
+      "path": "docs/design-inputs/KICKOFF_PROMPT.txt",
+      "sha256": "91848265ed36ae02e07524a20e82f5d3e4e0836aa0dcc574437a48edb163d2f5",
+      "unchanged": true
+    },
+    {
+      "path": "docs/design-inputs/LocalFlow_From_Scratch_Master_Spec_v1_2.html",
+      "sha256": "fd7132adbf3796424db29a6a06c2ff470e425f2b42f43f3203a4ff7f4de5c329",
+      "unchanged": true
+    },
+    {
+      "path": "docs/design-inputs/LocalFlow_From_Scratch_Master_Spec_v1_2.pdf",
+      "sha256": "d84309ca0b9e69e2dd7f85398bd80af8efa58ade885e3c30ff2ec08f50aab48e",
+      "unchanged": true
+    },
+    {
+      "path": "docs/design-inputs/LocalFlow_Publication_Experiment_Registry_v2.txt",
+      "sha256": "596932dd91e0b108936c3a7a80245f4f44df5cfeac4f13d6fda8cfb30412cfe0",
+      "unchanged": true
+    },
+    {
+      "path": "docs/design-inputs/PACKAGE_README.md",
+      "sha256": "9ec70b0e2b9f9ea1139545370c49b75178dd9278dbc31e95c6ac071c6af6045d",
+      "unchanged": true
+    },
+    {
+      "path": "docs/design-inputs/BUNDLE_SHA256SUMS",
+      "sha256": "8b1f98bb7e8debd01c062992efa8c6e422a2c23e4e458ff0b0d07dd0b11bcbd1",
+      "unchanged": true
+    }
+  ],
+  "code_test_hashes": {
+    "src/data/comparator_interfaces.py": "78e83d0ccb3299e3d9573ed1effa56ae8ce37df3488beb49f61223e358c477f7",
+    "src/data/contracts.py": "27ca802ac523f2fcfc1147bc68387d54798de990db96b96c89f61247f9b32d4b",
+    "src/data/development_reader.py": "24f61cb4a8245831b112fd2a25aa26e332e1cea6526d1e6ddd69f25d7a2ad3f5",
+    "src/data/parakeet_source.py": "ff13c8d6a16f6fc553536e025da6f7b63ce10a56f873e3efb02c5f3112000b30",
+    "src/data/public_inventory.py": "34a99a91043e7f5c5ef0077421593c1cfa47de403fe1f7817b17d4affd82032c",
+    "src/data/training_supply.py": "4ca2ba076cf0476cff382420f4b7b2b7c0b868a6412afa6ace70719f2c617c36",
+    "src/generation/__init__.py": "79a601b75f5839d8d730e9dd9d77f62dd01eea384daa8e0257ed25635e9a8e12",
+    "src/generation/stress.py": "0d83fdc4a2a54720d7269041d2698582cea9fc8b14a75605e5c547af14ca28ec",
+    "src/inference/byt5_probe.py": "91a0f36a4b8384e16ea72dacdae22beab0751895dc7bec47530695e876673acd",
+    "src/inference/qwen_probe.py": "58e9f906a1b9d04da866419cabad39c08b2a55201c4ca6c21ead23897b7e8545",
+    "src/models/bc.py": "d58022e956b3adbd8d6a1c635ef9a7774efbd83aa5f8d8d65643c8f2d53be067",
+    "src/models/core.py": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+    "src/models/edits.py": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+    "src/models/tokenizer.py": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+    "src/models/tokenizer_training.py": "dc19057f15512d884a594f6a4c6b8152fba0c92df907df496a7978d577fe7805",
+    "src/models/training.py": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5",
+    "src/scoring/oracle.py": "c8cc04e5c21ebfc20912c498f95887ca88fae32b79cafe96b493796dea3f7609",
+    "src/scoring/records.py": "7b031fa76c408b22ff2c1435236b6d38338bfddef5c83b2fd347c4660624108e",
+    "src/scoring/text.py": "4db62c3238c830ec25faf979beb656dcc7b882f0843b318d973934b4f340111d",
+    "src/scoring/triple.py": "1709603f910e46c85eb9b18dbb574cf988dd0d7aab701d3be1ff0e62144a00e1",
+    "benchmarks/asr_tts_native_probe.py": "a9d89a6451efdc0214d80c1f4f908b5c99a4a8ecd7af1941927f349ee2b3a7c0",
+    "benchmarks/bc_native_samples.py": "8f13fe206f107b10a776bfd519a903117f723b27fea031e8e757ab5cd59df230",
+    "benchmarks/bc_real_calibration.py": "ac159325e27c0f832ded1a56b60612332d6c2c453ead1a7c1430ffebc9cac411",
+    "benchmarks/bench_resume_audit.py": "cd79d3b7dac46053f24659188e9076772cd02d7f899f1879eae902af04019b67",
+    "benchmarks/byt5_development_adaptation.py": "ff9e771f2724f53a692421c1f9b8b11cac65b8ae1f1ced85e026b8c4e0ea3f99",
+    "benchmarks/development_asr_pairs.py": "c69c836fe578256d98e825b3bd616d7e6b2daeb86883fdf9939892eacbbb7091",
+    "benchmarks/development_tokenizer.py": "037d2382d2d76857a55cb079faa5b74f7b56d8fe6a1dada85040596272613161",
+    "benchmarks/kokoro_stft_parity.py": "b83d3efd0ed2c5ac1514929ee2aa000e7a561967d775241a3375b411719e868e",
+    "benchmarks/model0_correctness.py": "c697ad01839c77cafbc84df7a2cbb31db62f8d49bc9087e10205f66a47fd8beb",
+    "benchmarks/model0_real_shard.py": "2dc727f38386a66828c7b597851549610a1b243c04acd217480a4ec09b88965b",
+    "benchmarks/native_calibration.py": "379fba6df9690c8578e5cbce6526b5365b9dfbc65a2b147286a8953b36e69386",
+    "benchmarks/natural_output_scoring.py": "68acd56b71741e309dfcbeef505900fedf47722fa21b72ae544ac8a0c098c4de",
+    "benchmarks/parakeet_reference_audit.py": "23da1361ce48f83d6662a0a637df7e8a213fcdcb379718fd3691ab8b6c9ded97",
+    "benchmarks/parakeet_repair.py": "6f6f89a3ce36ad52b0ee72584193b094bb2d666df4d4a1b9edbdb3e227ae5438",
+    "benchmarks/public_dev_source_score.py": "2c2e206d40b61da50dcfd84ec41ec22a21f3688c79b03eb2c892368b296427fe",
+    "benchmarks/scorer_profile.py": "220224d5e4b1d3f0f743c2a56b50f94aac7a089a4dbb9cd299888d134b83a5f2",
+    "tests/data/test_byt5_probe.py": "78eec02c039b99e2b97fbb3477f7476aa1e0a9c82015283e08a715c8b74a03fe",
+    "tests/data/test_contracts.py": "fd7dbdfafd9401513bca73580ca8369a65ea6d5ec3a322f4b04af30f95bd5dbe",
+    "tests/data/test_development_adaptation.py": "324db8292b3ba226e6fa54af8ee214e16c4b7582b059af9d89d259982ddcd205",
+    "tests/data/test_development_reader.py": "5691d184cd250e8bb908140d61e346185a94a97a9a8e9fcd2d9f82312e6159d3",
+    "tests/data/test_generator.py": "938adba83f9daa5dce729faab5113866e6a71a280825c9d5792cb77835671970",
+    "tests/data/test_generator_independent_review.py": "5edc9f9001dde55103058a760e6857274654f85feb74c8ac6bd59aa0e0abfadf",
+    "tests/data/test_natural_scoring_panel.py": "b79ad50110d887f3f6041e1cbf11b8881c79ab33200479f906ac72b23527d32f",
+    "tests/data/test_parakeet_source.py": "58cb72adf11bf70837436c8f3e95abc3b12b1d13ae2dd07577a53fbc10fc5330",
+    "tests/data/test_qwen_probe.py": "d4722eb56c446a1b8c16bf84ed56ade98dbfef26d6994c8483c883c43e43eb38",
+    "tests/data/test_real_calibration.py": "f6e97d2b6e2b1cadfe96e2160593203640e2f7be55631c4810ebcf51a38655af",
+    "tests/data/test_training_supply.py": "ed932fe1ac82ec59d6edbda3f39a37b2a6969357b604717bddc3520e627641d1",
+    "tests/models/test_bc.py": "93abbbd25d0958fd3b2ef8cc6a45905840f1a1844fc916a1ada6779c9e3d2edb",
+    "tests/models/test_core.py": "a3dff89eb9ca5b4206565e49d70c127bc4cafff1874ee3ba7a471d4706940005",
+    "tests/models/test_edits.py": "a3ba46604cc815ae73f0aa9553cdeb7a01e67cd79397679d7e2911b55e2ddb47",
+    "tests/models/test_tokenizer.py": "1eaca6f5c6f54475b0e2725a6ba5466fc54b05fba79d17bda0ba64850b52e639",
+    "tests/models/test_tokenizer_training.py": "4644a88b6ca3d2298e2de6597df0bfa0bf74ab91141e7d280d037e80162b76eb",
+    "tests/models/test_training.py": "84423e33a138ea71428bd5221fb6f949a5d712a4171fd4b65653428c2c123495",
+    "tests/scoring/test_fixtures.py": "e608be09466a74e0ad01df2d5e59888feaa8aaa2cb1649be886577f78c035450",
+    "tests/scoring/test_independent_review.py": "747e6b33780eba68029bde5ac53436dcd7e0e82a02fb2c0983fd9f5699844ae7",
+    "tests/scoring/test_qualification.py": "1211996e192847616799fc2e046fcb8b4b2665889db0f18d99cfd6c31f513935"
+  },
+  "no_build_or_compiler_command": true
+}
