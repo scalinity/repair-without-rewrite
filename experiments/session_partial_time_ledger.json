@@ -1,0 +1,98 @@
+{
+  "classification": "KNOWN_PARTIAL_NEURAL_OPERATION_WALL_LEDGER_NOT_DEVICE_ACTIVE_CLOCK",
+  "rows": [
+    {
+      "operation": "MODEL1 geometry complete process",
+      "seconds": 1236.265677,
+      "evidence": "experiments/native-calibration-attempt01/summary.json + provenance.json",
+      "scope": "neural process interval includes IO/setup; not accelerator active time"
+    },
+    {
+      "operation": "MODEL1 fresh-process resume audit",
+      "seconds": 13.735415,
+      "evidence": "experiments/native-resume-audit-attempt01/summary.json + provenance.json",
+      "scope": "serialized two-child operation wall interval"
+    },
+    {
+      "operation": "stress_bc_exact_overfit_development",
+      "seconds": 28.058477,
+      "evidence": "experiments/manifests/stress_bc_exact_overfit_development/results.json",
+      "scope": "complete bounded paired rehearsal process; includes failed original"
+    },
+    {
+      "operation": "stress_bc_exact_overfit_attempt02",
+      "seconds": 55.744886,
+      "evidence": "experiments/manifests/stress_bc_exact_overfit_attempt02/results.json",
+      "scope": "complete bounded paired rehearsal process; includes failed original"
+    },
+    {
+      "operation": "B/C native samples",
+      "seconds": 24.318051,
+      "evidence": "experiments/manifests/stress_bc_native_samples_attempt01/summary.json",
+      "scope": "all six recipes plus random decode calls"
+    },
+    {
+      "operation": "byt5 native probe",
+      "seconds": 15.091969013214111,
+      "evidence": "experiments/manifests/public_byt5_probe_attempt01.json",
+      "scope": "complete recorded operation includes unsuccessful decoding"
+    },
+    {
+      "operation": "qwen native probe",
+      "seconds": 12.129595041275024,
+      "evidence": "experiments/manifests/public_qwen_probe_attempt01.json",
+      "scope": "complete recorded operation includes unsuccessful decoding"
+    },
+    {
+      "operation": "kokoro-native-attempt01",
+      "seconds": 25.554521416997886,
+      "evidence": "experiments/kokoro-native-attempt01/summary.json",
+      "scope": "complete operation wall includes setup; CPU/MPS/Metal paths separate"
+    },
+    {
+      "operation": "kokoro-original-cpu-attempt01",
+      "seconds": 3.558657375004259,
+      "evidence": "experiments/kokoro-original-cpu-attempt01/summary.json",
+      "scope": "complete operation wall includes setup; CPU/MPS/Metal paths separate"
+    },
+    {
+      "operation": "parakeet-book-closed-attempt01",
+      "seconds": 8.579619208001532,
+      "evidence": "experiments/parakeet-book-closed-attempt01/summary.json",
+      "scope": "complete operation wall includes setup; CPU/MPS/Metal paths separate"
+    },
+    {
+      "operation": "MODEL0 v4_seed42",
+      "seconds": 1.54164429201046,
+      "evidence": "docs/reports/raw/model0/v4_seed42.json",
+      "scope": "bounded training/evaluation timer; other model0 checks unclocked here"
+    },
+    {
+      "operation": "MODEL0 v5_seed42",
+      "seconds": 4.018221666003228,
+      "evidence": "docs/reports/raw/model0/v5_seed42.json",
+      "scope": "bounded training/evaluation timer; other model0 checks unclocked here"
+    },
+    {
+      "operation": "MODEL0 v8_seed43",
+      "seconds": 0.7926510830002371,
+      "evidence": "docs/reports/raw/model0/v8_seed43.json",
+      "scope": "bounded training/evaluation timer; other model0 checks unclocked here"
+    }
+  ],
+  "sum_known_operation_seconds": 1429.389385095507,
+  "sum_known_operation_hours": 0.39705260697097416,
+  "not_complete_total": true,
+  "device_active_seconds": null,
+  "human_active_seconds": null,
+  "remaining_human_hours": null,
+  "excluded_unmeasured": "installation,assetacquisition,code/review,unclockedtinychecks; no double counting nested update/adaptation/call timers",
+  "other_recorded_costs": {
+    "dual_policy_source_scorer_seconds": 128.26098975000787,
+    "synthetic_scorer_seconds": 3.7031432499934454,
+    "final_integrated_tests_seconds": 18.64,
+    "public_audio_acquisition_initial_seconds": 125.125,
+    "public_audio_acquisition_book_closed_seconds": 84.1011746669974
+  },
+  "concurrency": "neural workloads serialized; CPUtests/network/coding may overlap; do not add allwallintervals into researcherhours"
+}
