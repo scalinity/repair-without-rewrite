@@ -1,0 +1,12 @@
+{
+  "command": ".venv/bin/python -m pytest tests/data/test_contracts.py -q",
+  "files_sha256": {
+    "src/data/comparator_interfaces.py": "78e83d0ccb3299e3d9573ed1effa56ae8ce37df3488beb49f61223e358c477f7",
+    "src/data/contracts.py": "27ca802ac523f2fcfc1147bc68387d54798de990db96b96c89f61247f9b32d4b",
+    "src/data/public_inventory.py": "ee7a2fdf65149d3896b92830a3696ae7962ac44160ff17083eec820881f764a1",
+    "tests/data/test_contracts.py": "488e4845e537f5526ed37d1fe5003cab656b5aafbca121b5492fd5b0d427f9e5"
+  },
+  "outcome": "20 passed in 0.02s",
+  "recorded_at_utc": "2026-10-05T05:16:29Z",
+  "scope": "deterministic source-role/F03/native-byte interface fixtures; not source population or adapted model qualification"
+}
