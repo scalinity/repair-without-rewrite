@@ -1,5 +1,7 @@
 # Native resource calibration — bounded foundation
 
+The initial sections preserve the historical `c81d08f` handoff. The [foundation-repair extension](#foundation-repair-real-tokenizer-natural-bc-calibration-2026-10-05) below contains the new real-tokenizer, natural-shape, sustained B/C measurements and their limits.
+
 **Scoped geometry measurements completed; full representative BENCH-00 and campaign schedule remain unqualified.** No measured token rate here is substituted for a paper-canonical exposure rate.
 
 ## Hardware and runtime identity
@@ -81,3 +83,92 @@ CALCULATION: A 25% reserve means multiplying a qualified measured cost ledger by
 The prerequisite-aware queue is: approved public field/access and connected grouping → permitted training supply/tokenizer → V6 and representative native reader/length/32k-update calibration → paired B/C 10M recipes and credible ByT5 adaptation → actual DEV inference/scorer/cluster precision → final H1 scope and cost ledger with reserve → owner review and a separately authorized freeze/final campaign. Source access, missing training supply and useful learning block the queue now; independent static writing/code work can overlap, neural jobs remain serialized. Remaining active researcher time is unmeasured, and agent wall time cannot substitute for human active hours.
 
 INFERENCE: The selected 100M geometries fit their measured native allocations and execute full updates on this M5 Pro. That is useful feasibility evidence. It does not establish useful repair, full BENCH-00, adequate precision, B/C speed superiority, a one-month campaign, H2 affordability or publication readiness.
+
+
+## Foundation repair: real-tokenizer natural B/C calibration, 2026-10-05
+
+**The requested representative short-natural-recording calibration is complete. The registered mixed-reader/full-update BENCH-00 regime remains unqualified.** Earlier measurements above remain historical evidence from the c81d08f bounded-foundation handoff; none is replaced, hidden or promoted into a natural campaign rate.
+
+Both exact owned architectures use the trained DEVELOPMENT 16,384-entry byte BPE and the repaired frozen Parakeet source identity. The full eligible TRAIN pool is1,024 natural pairs from 48 known source groups, within single mono 16 kHzPCM16 2–12-second construction. The prospective preselection uses density thirds and source-length quantiles .15/.40/.65/.90:12 TRAIN requests / 11 groups for fitting/timing, plus12 source-disjoint CAL requests / 5 groups for decoding only. All 314TRAIN groups are disjoint from those CAL groups. Both arms use the same24 complete requests twice; no candidate output or failure redraw selects them. The original12 TRAINselection and the expanded decode attempt are separately preserved.
+
+Payload-free measured receipts: [B100](../../experiments/manifests/foundation_repair/b100-real-calibration-attempt01.json), [C101](../../experiments/manifests/foundation_repair/c101-real-calibration-attempt01.json). Full source/target/candidate payloads, pre-run provenance, hashes, update/decode ledgers and warning samples remain ignored. The [independent review](../reviews/BC_REAL_CALIBRATION_INDEPENDENT_REVIEW.md) independently reconstructs the actual distributions, every queue/count/denominator and output transport.
+
+### Actual distribution and update work
+
+| Quantity across 1,024 eligible TRAIN pairs | Min | Median | p95 | Max |
+|---|---:|---:|---:|---:|
+| source_bpe | 3 | 25.0 | 40.0 | 46 |
+| target_bpe | 4 | 25.0 | 40.0 | 50 |
+| K | 0 | 2.0 | 5.0 | 10 |
+| R | 0 | 2.0 | 9.0 | 31 |
+| c_positions | 1 | 9.0 | 25.0 | 52 |
+| density | 0.0 | 0.07407407407407407 | 0.25 | 0.5 |
+| anchors | 11 | 53.0 | 83.0 | 103 |
+
+K counts source-relative edits; R counts replacement BPE tokens; C teacher positions=1+R+3K. Canonical clean anchors=2×target_BPE+3, distinct from source/decoder/loss positions. TRAIN length maxima are46source/50target tokens; this is not a qualified longer-input, technical-mixture or full paper distribution.
+
+| Per four-request update | Low density | Median density | High density |
+|---|---:|---:|---:|
+| Canonical clean anchors | 214 | 238 | 184 |
+| Native source including controls | 112 | 121 | 98 |
+| Padded source | 188 | 196 | 184 |
+| B decoder positions / valid labels | 105 | 117 | 90 |
+| B padded decoder | 148 | 160 | 136 |
+| C decoder positions / padded positions | 19 | 45 | 68 |
+| C valid loss decisions | 22 | 54 | 82 |
+| C action / start / end / vocabulary denominators | 7 / 3 / 3 / 9 | 13 / 9 / 9 / 23 | 18 / 14 / 14 / 36 |
+
+B batches four padded requests; C individually encodes/decodes all four inside a single queued objective. C component losses use global queued-update denominators once, followed by already-normalized gradient accumulation. B uses global valid shifted target/EOS labels, excluding PAD. Source padding to queued maximum plus 8 is masked; source pointer/byte binding is checked. The measured cost includes these implementation/batching differences, not an isolated edit-representation FLOP ablation.
+
+### Sustained complete update measurements
+
+Each arm performs300 bounded TRAIN fixture-fit updates at LR 3e-4, then five full warmups and at least 100 timed updates within a 20-minute segment at LR 0. Forward, loss, all gradients, FP32 accumulation/global clipping, AdamW moments/parameters and cleared accumulators are materialized/synchronized. Working casts are BF16; master/moments/accumulation/loss-sensitive arithmetic are FP32. Both use the explicit MLX reference attention backend, not fused native attention; seed 42, MLX 0.32.3, TF32 disabled. This is full compute on frozen post-fit weights with changing optimizer state, not20 minutes of useful nonzero-LR learning. No concurrent accelerator workload ran.
+
+| Measurement | B100 | C101 |
+|---|---:|---:|
+| Timed updates | 9,689 | 4,810 |
+| Sustained wall seconds | 1,200.096938 | 1,200.199809 |
+| Mean update seconds | 0.123314 | 0.239348 |
+| Median update seconds | 0.122868 | 0.240982 |
+| p95 update seconds | 0.128952 | 0.272097 |
+| Canonical clean anchors / sustained wall second | 1,711.563 | 849.602 |
+| Native source positions / sustained wall second | 890.769 | 442.169 |
+| Native decoder positions / sustained wall second | 839.635 | 176.357 |
+| Peak MLX allocation bytes | 2,954,780,473 | 3,352,386,426 |
+| Peak process RSS bytes | 557,989,888 | 571,654,144 |
+
+| Arm / density | Mean seconds/update | First 100 same-density mean | Last 100 same-density mean |
+|---|---:|---:|---:|
+| B100 / low | 0.123095 | 0.127275 | 0.120956 |
+| B100 / median | 0.123790 | 0.128152 | 0.121596 |
+| B100 / high | 0.123058 | 0.127754 | 0.120650 |
+| C101 / low | 0.208531 | 0.206864 | 0.205918 |
+| C101 / median | 0.241960 | 0.240352 | 0.239195 |
+| C101 / high | 0.267537 | 0.265568 | 0.264850 |
+
+The per-update timer excludes host label/framing preparation and ledger writes; sustained wall rates include them and periodic system queries. Like-for-like density windows provide the stability comparison. All losses and preclip norms are finite; within each density they remain constant in the zero-LR segment. Periodic/final `pmset` reports no recorded thermal/performance warning and no recorded CPU power status. Temperature, fans, continuous power/utilization and whole-machine pressure were not measured. MLX allocation and RSS are overlapping views and are not added. There are no saved calibration model/moment arrays for an independent final-array-byte audit; final parameter hashes and optimizer materialization are runtime/source evidence.
+
+### Equivalent complete restoration requests
+
+Calls include source validation/encoding, cached greedy decisions, final synchronization and strict byte decoding or C pointer/program validation and rendering. They exclude host prebuilt source framing and initial input tensor construction. Neither cross-K/V nor source encodings are reused across requests or repeats. Both have a 256 generated/event-position cap; C also has the existing 64-edit cap. Every incomplete/invalid/abstained call remains in timing/outcome accounting.
+
+| Role / density; 8 calls per cell | B total seconds / positions | C total seconds / positions | B complete / exact | C complete / exact |
+|---|---:|---:|---:|---:|
+| train / low | 0.922530 / 210 | 0.209764 / 38 | 8 / 8 | 8 / 8 |
+| train / median | 1.029377 / 234 | 0.423193 / 90 | 8 / 8 | 8 / 8 |
+| train / high | 0.796751 / 180 | 0.612964 / 136 | 8 / 8 | 8 / 8 |
+| calibration / low | 0.967845 / 222 | 0.265871 / 48 | 8 / 0 | 8 / 0 |
+| calibration / median | 1.010102 / 232 | 0.250207 / 48 | 8 / 0 | 8 / 0 |
+| calibration / high | 0.948474 / 212 | 0.248434 / 48 | 8 / 0 | 8 / 0 |
+
+B100: **48/48 complete**, 24/48 exact targets, all-call wall total **5.675078 seconds**; complete-call rate **8.458/second** over this two-repeat panel. Repeated outputs identical: True.
+
+C101: **48/48 complete**, 24/48 exact targets, all-call wall total **2.010432 seconds**; complete-call rate **23.875/second** over this two-repeat panel. Repeated outputs identical: True.
+
+On fitted TRAIN requests, both arms produce the same correct targets, and the total measured B/C complete-call time ratio is **2.206×**: **4.398× / 2.432× / 1.300×** in low/median/high density. This demonstrates a cost advantage on these exact fitted outputs after pointer/renderer overhead. On held-out CAL, output quality and produced lengths differ; fast wrong/identity/invalid output is not a quality-matched cost advantage. These are density-stratified requests and repeated calls in one session, not an H2 latency result or evidence of broad useful correction. No component-only ablation isolates pointer/renderer cost. C stores complete rendered programs and runtime decoder positions, but not generated replacement token IDs; independent rendering/structural checks therefore do not verify the exact native generation segmentation.
+
+The [natural scorer report](NATURAL_NONIDENTITY_SCORER_QUALIFICATION.md) separates fitted memorization from held-out repairs/damage and independently verified aggregate/local ambiguity. No repeated call is counted as a new source case.
+
+### Remaining registered regime and forecast limits
+
+This completes the continuation's disclosed representative narrowed natural-shape/thermal/decode measurement. It does not complete registry BENCH-00 at the selected paired mixed-data accumulation regime: the present 184–238 anchors/update and twelve cycling TRAIN fixtures do not qualify nominal 32,768-anchor updates, the 30/20/10/40 reader, exposure-order/repetition/support policy, longer contexts or chosen-regime checkpoint/resume. A smaller matched regime could be prospectively justified and measured; no such replacement is silently inferred here. Canonical 150M/three-seed ETA, one-month feasibility and a 25% reserve ledger therefore remain undefined. The [admission decision](BC_10M_PROBE_ADMISSION_DECISION.md) keeps the six 10M slots unstarted.

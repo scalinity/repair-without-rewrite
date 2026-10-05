@@ -1,0 +1,236 @@
+{
+  "source_attempt": "b100-real-calibration-attempt01",
+  "ignored_summary_sha256": "36c3bb34669baadfb729ae8e18421578e2fdb81d6c10e6be7f22db670001b378",
+  "summary": {
+    "arm": "B100",
+    "scope": "REAL_TRAIN_SHAPE_CALIBRATION_NOT_10M_RECIPE",
+    "timed_updates": 9689,
+    "sustained_wall_seconds": 1200.0969381670002,
+    "timed_update_seconds": 1194.7913371231698,
+    "mean_update_seconds": 0.12331420550347505,
+    "p50_update_seconds": 0.12286795899854042,
+    "p95_update_seconds": 0.12895151659613474,
+    "canonical_anchors_per_wall_second": 1711.5634034841346,
+    "native_source_per_wall_second": 890.7688754149971,
+    "native_decoder_per_wall_second": 839.6346727948912,
+    "first_100_mean_update_seconds": 0.1288460004294757,
+    "last_100_mean_update_seconds": 0.12111881617936887,
+    "peak_mlx_bytes": 2954780473,
+    "total_presentations": {
+      "anchors": 2118730,
+      "native_source": 1102673,
+      "padded_source": 1892196,
+      "native_decoder": 1039377,
+      "valid_loss_decisions": 1039377
+    },
+    "peak_process_rss_bytes": 557989888,
+    "complete_decode_calls": 48,
+    "decode_calls": 48,
+    "decode_total_seconds": 5.6750779960275395,
+    "exact_target_calls": 24,
+    "final_weights": "2e3cb6ae34c9f80e3eef846585b5a5b91b8db669bf3ea3b36aa82dc4932bc72e",
+    "final_thermal": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded\n",
+    "no_10M_recipe_slot_consumed": true,
+    "full_32k_anchor_campaign_calibration": false
+  },
+  "public_scope": "payload-free measured counts; original complete provenance and payloads remain ignored",
+  "artifact_hashes": {
+    "decodes.jsonl": "f21ec359406ed1d5d7bf6ca445f9fb69b8f06645f16405cbfcf4498591457af9",
+    "derived_analysis.json": "b26864829f91ab585c089697595b0a51154e7c749382b67e026b1c8ea31d9901",
+    "initial_identity.json": "f3af7d67cd900b82ae78e92b9648e71ef2cd653065acbc814af039e944520943",
+    "provenance.json": "8062e751a42745954cab56d9ea5e7fcc026e02f828f505f7ae5fe74efa1b30a6",
+    "thermal.json": "01277a3ec46cccfda75888529e23f7e9a4e49b2ca51996ae575d592b7070714a",
+    "updates.jsonl": "f717bcfc41e4d8f7269102d9bcd14d769536fbbd01fd4c2080df69be3de17900"
+  },
+  "derived_analysis": {
+    "arm": "B100",
+    "bucket_updates": {
+      "low": {
+        "updates": 3230,
+        "mean_seconds": 0.12309483603384484,
+        "p50_seconds": 0.12262635450315429,
+        "first_100_mean": 0.12727498579930396,
+        "last_100_mean": 0.12095575706014643,
+        "per_update": {
+          "anchors": 214,
+          "native_source": 112,
+          "padded_source": 188,
+          "native_decoder": 105,
+          "padded_decoder": 148,
+          "valid_loss_decisions": 105
+        }
+      },
+      "median": {
+        "updates": 3229,
+        "mean_seconds": 0.12379010494339882,
+        "p50_seconds": 0.12329950000275858,
+        "first_100_mean": 0.1281524804494984,
+        "last_100_mean": 0.12159585709960083,
+        "per_update": {
+          "anchors": 238,
+          "native_source": 121,
+          "padded_source": 196,
+          "native_decoder": 117,
+          "padded_decoder": 160,
+          "valid_loss_decisions": 117
+        }
+      },
+      "high": {
+        "updates": 3230,
+        "mean_seconds": 0.1230578228704694,
+        "p50_seconds": 0.12265412500710227,
+        "first_100_mean": 0.12775412708957445,
+        "last_100_mean": 0.1206499054201413,
+        "per_update": {
+          "anchors": 184,
+          "native_source": 98,
+          "padded_source": 184,
+          "native_decoder": 90,
+          "padded_decoder": 136,
+          "valid_loss_decisions": 90
+        }
+      }
+    },
+    "decode_by_role_bucket": {
+      "train_low": {
+        "calls": 8,
+        "complete": 8,
+        "exact": 8,
+        "seconds": 0.9225295810028911,
+        "positions": 210,
+        "mean_seconds": 0.11531619762536138,
+        "statuses": {
+          "completed": 8
+        }
+      },
+      "train_median": {
+        "calls": 8,
+        "complete": 8,
+        "exact": 8,
+        "seconds": 1.0293767920084065,
+        "positions": 234,
+        "mean_seconds": 0.1286720990010508,
+        "statuses": {
+          "completed": 8
+        }
+      },
+      "train_high": {
+        "calls": 8,
+        "complete": 8,
+        "exact": 8,
+        "seconds": 0.7967507079883944,
+        "positions": 180,
+        "mean_seconds": 0.0995938384985493,
+        "statuses": {
+          "completed": 8
+        }
+      },
+      "calibration_low": {
+        "calls": 8,
+        "complete": 8,
+        "exact": 0,
+        "seconds": 0.9678453320084373,
+        "positions": 222,
+        "mean_seconds": 0.12098066650105466,
+        "statuses": {
+          "completed": 8
+        }
+      },
+      "calibration_median": {
+        "calls": 8,
+        "complete": 8,
+        "exact": 0,
+        "seconds": 1.010101832987857,
+        "positions": 232,
+        "mean_seconds": 0.12626272912348213,
+        "statuses": {
+          "completed": 8
+        }
+      },
+      "calibration_high": {
+        "calls": 8,
+        "complete": 8,
+        "exact": 0,
+        "seconds": 0.9484737500315532,
+        "positions": 212,
+        "mean_seconds": 0.11855921875394415,
+        "statuses": {
+          "completed": 8
+        }
+      }
+    },
+    "scorer_first_repeat_by_role": {
+      "train": {
+        "cases": 12,
+        "aggregate": {
+          "reference_words": 278,
+          "source_errors": 10,
+          "output_errors": 0,
+          "invalid_or_incomplete": 0,
+          "repair": [
+            10,
+            10
+          ],
+          "introduced": [
+            0,
+            0
+          ],
+          "completed_repair": [
+            10,
+            10
+          ],
+          "wer": 0.0,
+          "introduced_rate": [
+            0.0,
+            0.0
+          ],
+          "completed_repair_rate": [
+            1.0,
+            1.0
+          ]
+        },
+        "lexical_nonidentity": 5,
+        "byte_nonidentity": 11,
+        "local_ambiguous_cases": 0
+      },
+      "calibration": {
+        "cases": 12,
+        "aggregate": {
+          "reference_words": 258,
+          "source_errors": 2,
+          "output_errors": 280,
+          "invalid_or_incomplete": 0,
+          "repair": [
+            0,
+            0
+          ],
+          "introduced": [
+            278,
+            278
+          ],
+          "completed_repair": [
+            0,
+            0
+          ],
+          "wer": 1.0852713178294573,
+          "introduced_rate": [
+            1.0775193798449612,
+            1.0775193798449612
+          ],
+          "completed_repair_rate": [
+            0.0,
+            0.0
+          ]
+        },
+        "lexical_nonidentity": 12,
+        "byte_nonidentity": 12,
+        "local_ambiguous_cases": 12
+      }
+    },
+    "repeats_have_identical_outputs": true,
+    "fit_loss_first_last": [
+      9.854180335998535,
+      2.9797023671562783e-05
+    ]
+  }
+}

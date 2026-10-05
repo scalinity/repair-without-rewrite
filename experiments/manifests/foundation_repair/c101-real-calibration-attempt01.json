@@ -1,0 +1,254 @@
+{
+  "source_attempt": "c101-real-calibration-attempt01",
+  "ignored_summary_sha256": "12111c93f483b726da0acc06f3ad42a6907ec7f4adeef997d02e53f03c8235d5",
+  "summary": {
+    "arm": "C101",
+    "scope": "REAL_TRAIN_SHAPE_CALIBRATION_NOT_10M_RECIPE",
+    "timed_updates": 4810,
+    "sustained_wall_seconds": 1200.1998091249989,
+    "timed_update_seconds": 1151.266074678133,
+    "mean_update_seconds": 0.23934845627404014,
+    "p50_update_seconds": 0.24098187500203494,
+    "p95_update_seconds": 0.27209694779958227,
+    "canonical_anchors_per_wall_second": 849.601868161771,
+    "native_source_per_wall_second": 442.16887551990055,
+    "native_decoder_per_wall_second": 176.357301834861,
+    "first_100_mean_update_seconds": 0.23636378835028155,
+    "last_100_mean_update_seconds": 0.23685334954119752,
+    "peak_mlx_bytes": 3352386426,
+    "total_presentations": {
+      "anchors": 1084380,
+      "native_source": 564355,
+      "padded_source": 968440,
+      "native_decoder": 225060,
+      "valid_loss_decisions": 269390
+    },
+    "peak_process_rss_bytes": 571654144,
+    "complete_decode_calls": 48,
+    "decode_calls": 48,
+    "decode_total_seconds": 2.0104321291000815,
+    "exact_target_calls": 24,
+    "final_weights": "f83cd9fc61f9980be5227ebceb3dd4ba30d12b5bee427cd3ca0c68076c68388e",
+    "final_thermal": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded\n",
+    "no_10M_recipe_slot_consumed": true,
+    "full_32k_anchor_campaign_calibration": false
+  },
+  "public_scope": "payload-free measured counts; original complete provenance and payloads remain ignored",
+  "artifact_hashes": {
+    "decodes.jsonl": "0cd7f1101d01b9577a10d5b0f1e53835ddb632f04ec83ff68f4ce922b895c2e0",
+    "derived_analysis.json": "8d888f7c71c818dc65c7c074b41e9970af6c9e5b7f1d8b7ed182702997ac8990",
+    "initial_identity.json": "5c2bcecca45d219992133b9ae1599117209b5b3b6f1d7c087ab17e6ba02bb3ea",
+    "provenance.json": "3e74351da3ef5435ff1145d641207711d94d97ec45c2d5983c6a9cf212e28257",
+    "thermal.json": "c2d2ac9bb47fe0de4675aa1c8e8d4b2a59db06a2a2ca1031329811c668507cff",
+    "updates.jsonl": "df80525b663e6efe03344c616ebd7d02f4d1540db0d920310bfd2bd205689c25"
+  },
+  "derived_analysis": {
+    "arm": "C101",
+    "bucket_updates": {
+      "low": {
+        "updates": 1603,
+        "mean_seconds": 0.20853061527724218,
+        "p50_seconds": 0.20754320800187998,
+        "first_100_mean": 0.20686423082996044,
+        "last_100_mean": 0.2059182437401614,
+        "per_update": {
+          "anchors": 214,
+          "native_source": 112,
+          "padded_source": 188,
+          "native_decoder": 19,
+          "padded_decoder": 19,
+          "valid_loss_decisions": 22,
+          "components": {
+            "action": 7,
+            "start": 3,
+            "end": 3,
+            "vocabulary": 9
+          }
+        }
+      },
+      "median": {
+        "updates": 1603,
+        "mean_seconds": 0.24196033450683416,
+        "p50_seconds": 0.2409750420047203,
+        "first_100_mean": 0.24035248748943558,
+        "last_100_mean": 0.2391947570402408,
+        "per_update": {
+          "anchors": 238,
+          "native_source": 121,
+          "padded_source": 196,
+          "native_decoder": 45,
+          "padded_decoder": 45,
+          "valid_loss_decisions": 54,
+          "components": {
+            "action": 13,
+            "start": 9,
+            "end": 9,
+            "vocabulary": 23
+          }
+        }
+      },
+      "high": {
+        "updates": 1604,
+        "mean_seconds": 0.2675368342732286,
+        "p50_seconds": 0.26654195850278484,
+        "first_100_mean": 0.2655676162302552,
+        "last_100_mean": 0.2648503166505543,
+        "per_update": {
+          "anchors": 184,
+          "native_source": 98,
+          "padded_source": 184,
+          "native_decoder": 68,
+          "padded_decoder": 68,
+          "valid_loss_decisions": 82,
+          "components": {
+            "action": 18,
+            "start": 14,
+            "end": 14,
+            "vocabulary": 36
+          }
+        }
+      }
+    },
+    "decode_by_role_bucket": {
+      "train_low": {
+        "calls": 8,
+        "complete": 8,
+        "exact": 8,
+        "seconds": 0.20976387501286808,
+        "positions": 38,
+        "mean_seconds": 0.02622048437660851,
+        "statuses": {
+          "completed": 8
+        }
+      },
+      "train_median": {
+        "calls": 8,
+        "complete": 8,
+        "exact": 8,
+        "seconds": 0.4231928350054659,
+        "positions": 90,
+        "mean_seconds": 0.05289910437568324,
+        "statuses": {
+          "completed": 8
+        }
+      },
+      "train_high": {
+        "calls": 8,
+        "complete": 8,
+        "exact": 8,
+        "seconds": 0.6129635840188712,
+        "positions": 136,
+        "mean_seconds": 0.0766204480023589,
+        "statuses": {
+          "completed": 8
+        }
+      },
+      "calibration_low": {
+        "calls": 8,
+        "complete": 8,
+        "exact": 0,
+        "seconds": 0.2658714169956511,
+        "positions": 48,
+        "mean_seconds": 0.033233927124456386,
+        "statuses": {
+          "completed": 8
+        }
+      },
+      "calibration_median": {
+        "calls": 8,
+        "complete": 8,
+        "exact": 0,
+        "seconds": 0.25020654301624745,
+        "positions": 48,
+        "mean_seconds": 0.03127581787703093,
+        "statuses": {
+          "completed": 8
+        }
+      },
+      "calibration_high": {
+        "calls": 8,
+        "complete": 8,
+        "exact": 0,
+        "seconds": 0.2484338750509778,
+        "positions": 48,
+        "mean_seconds": 0.031054234381372225,
+        "statuses": {
+          "completed": 8
+        }
+      }
+    },
+    "scorer_first_repeat_by_role": {
+      "train": {
+        "cases": 12,
+        "aggregate": {
+          "reference_words": 278,
+          "source_errors": 10,
+          "output_errors": 0,
+          "invalid_or_incomplete": 0,
+          "repair": [
+            10,
+            10
+          ],
+          "introduced": [
+            0,
+            0
+          ],
+          "completed_repair": [
+            10,
+            10
+          ],
+          "wer": 0.0,
+          "introduced_rate": [
+            0.0,
+            0.0
+          ],
+          "completed_repair_rate": [
+            1.0,
+            1.0
+          ]
+        },
+        "lexical_nonidentity": 5,
+        "byte_nonidentity": 11,
+        "local_ambiguous_cases": 0
+      },
+      "calibration": {
+        "cases": 12,
+        "aggregate": {
+          "reference_words": 258,
+          "source_errors": 2,
+          "output_errors": 91,
+          "invalid_or_incomplete": 0,
+          "repair": [
+            0,
+            0
+          ],
+          "introduced": [
+            89,
+            89
+          ],
+          "completed_repair": [
+            0,
+            0
+          ],
+          "wer": 0.35271317829457366,
+          "introduced_rate": [
+            0.3449612403100775,
+            0.3449612403100775
+          ],
+          "completed_repair_rate": [
+            0.0,
+            0.0
+          ]
+        },
+        "lexical_nonidentity": 12,
+        "byte_nonidentity": 12,
+        "local_ambiguous_cases": 10
+      }
+    },
+    "repeats_have_identical_outputs": true,
+    "fit_loss_first_last": [
+      17.68178939819336,
+      2.1067877241875976e-05
+    ]
+  }
+}
