@@ -1,0 +1,159 @@
+{
+  "False": {
+    "category_lengths": {
+      "${i}.00": {
+        "mean_tokens": 7.8336,
+        "n": 625
+      },
+      "--count={i}": {
+        "mean_tokens": 11.8592,
+        "n": 625
+      },
+      "-0.{i} percent": {
+        "mean_tokens": 14.6656,
+        "n": 625
+      },
+      "/command {i}": {
+        "mean_tokens": 12.8736,
+        "n": 625
+      },
+      "/tmp/file_{i}.txt": {
+        "mean_tokens": 17.824,
+        "n": 625
+      },
+      "C:\\Temp\\file_{i}.txt": {
+        "mean_tokens": 20.864,
+        "n": 625
+      },
+      "CamelCase{i}": {
+        "mean_tokens": 12.8672,
+        "n": 625
+      },
+      "Homo sapiens {i}": {
+        "mean_tokens": 15.8704,
+        "n": 625
+      },
+      "Plain development prose {i}.": {
+        "mean_tokens": 27.8192,
+        "n": 625
+      },
+      "a7b{i} <BOS> restore_reference": {
+        "mean_tokens": 29.6736,
+        "n": 625
+      },
+      "e\u0301 \u00e9 \r\n\t {i}": {
+        "mean_tokens": 14.8736,
+        "n": 625
+      },
+      "https://example.invalid/{i}": {
+        "mean_tokens": 26.8704,
+        "n": 625
+      },
+      "kebab-case-{i}": {
+        "mean_tokens": 14.8704,
+        "n": 625
+      },
+      "snake_case_{i}": {
+        "mean_tokens": 14.8304,
+        "n": 625
+      },
+      "v3.12.{i}": {
+        "mean_tokens": 8.8672,
+        "n": 625
+      },
+      "\ud83d\ude42\ud83d\udc69\u200d\ud83d\udd2c {i}": {
+        "mean_tokens": 16.8736,
+        "n": 625
+      }
+    },
+    "elapsed_seconds": 0.025886999996146187,
+    "learned_merges": 16,
+    "over_1024": 0,
+    "roundtrips": 10000,
+    "tokens_p50": 15.0,
+    "tokens_p95": 29.0,
+    "tokens_per_utf8_byte": 0.9680545172235321,
+    "unintended_reserved_ids": 0,
+    "vocab_size": 336
+  },
+  "True": {
+    "category_lengths": {
+      "${i}.00": {
+        "mean_tokens": 7.8912,
+        "n": 625
+      },
+      "--count={i}": {
+        "mean_tokens": 11.8864,
+        "n": 625
+      },
+      "-0.{i} percent": {
+        "mean_tokens": 14.8912,
+        "n": 625
+      },
+      "/command {i}": {
+        "mean_tokens": 12.8912,
+        "n": 625
+      },
+      "/tmp/file_{i}.txt": {
+        "mean_tokens": 17.8896,
+        "n": 625
+      },
+      "C:\\Temp\\file_{i}.txt": {
+        "mean_tokens": 20.8896,
+        "n": 625
+      },
+      "CamelCase{i}": {
+        "mean_tokens": 12.8864,
+        "n": 625
+      },
+      "Homo sapiens {i}": {
+        "mean_tokens": 15.888,
+        "n": 625
+      },
+      "Plain development prose {i}.": {
+        "mean_tokens": 27.8864,
+        "n": 625
+      },
+      "a7b{i} <BOS> restore_reference": {
+        "mean_tokens": 29.8912,
+        "n": 625
+      },
+      "e\u0301 \u00e9 \r\n\t {i}": {
+        "mean_tokens": 14.8912,
+        "n": 625
+      },
+      "https://example.invalid/{i}": {
+        "mean_tokens": 26.888,
+        "n": 625
+      },
+      "kebab-case-{i}": {
+        "mean_tokens": 14.888,
+        "n": 625
+      },
+      "snake_case_{i}": {
+        "mean_tokens": 14.888,
+        "n": 625
+      },
+      "v3.12.{i}": {
+        "mean_tokens": 9.8864,
+        "n": 625
+      },
+      "\ud83d\ude42\ud83d\udc69\u200d\ud83d\udd2c {i}": {
+        "mean_tokens": 16.8912,
+        "n": 625
+      }
+    },
+    "elapsed_seconds": 0.026135833002626896,
+    "learned_merges": 16,
+    "over_1024": 0,
+    "roundtrips": 10000,
+    "tokens_p50": 15.0,
+    "tokens_p95": 30.0,
+    "tokens_per_utf8_byte": 0.974840416355167,
+    "unintended_reserved_ids": 0,
+    "vocab_size": 336
+  },
+  "data_sha256": "9991df3ab7f545759c26b1277a2a5572bc928109b23d247ab4b138edd84afa77",
+  "final_16k_tokenizer_status": "NOT_TRAINED; final corpus/merges not qualified",
+  "status": "PASS_DEVELOPMENT_INTERFACE_ONLY"
+}

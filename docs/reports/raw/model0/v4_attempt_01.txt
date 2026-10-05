@@ -1,0 +1,27 @@
+mx.metal.device_info is deprecated and will be removed in a future version. Use mx.device_info instead.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/local/research/repair-without-rewrite/benchmarks/model0_correctness.py", line 265, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/local/research/repair-without-rewrite/benchmarks/model0_correctness.py", line 243, in main
+    exact_geometry_checks()
+  File "/local/research/repair-without-rewrite/benchmarks/model0_correctness.py", line 134, in exact_geometry_checks
+    np.testing.assert_allclose(a, b, atol=atol, rtol=rtol)
+  File "/local/research/repair-without-rewrite/.venv/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 1715, in assert_allclose
+    assert_array_compare(compare, actual, desired, err_msg=str(err_msg),
+  File "/local/research/repair-without-rewrite/.venv/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 921, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=0.02, atol=0.02
+
+Mismatched elements: 35 / 4194304 (0.000834%)
+Max absolute difference among violations: 0.06250226
+Max relative difference among violations: 1.
+ ACTUAL: array([[-2.298355e-04,  4.615784e-04,  8.392334e-05, ..., -1.468658e-04,
+        -2.708435e-04,  1.220703e-04],
+       [-1.617603e+00,  3.157124e+00,  2.281178e+00, ..., -6.656551e-02,...
+ DESIRED: array([[-2.288818e-04,  4.634857e-04,  8.153915e-05, ..., -1.468658e-04,
+        -2.727509e-04,  1.230240e-04],
+       [-1.594166e+00,  3.172749e+00,  2.265552e+00, ..., -4.508114e-02,...

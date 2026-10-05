@@ -1,0 +1,23 @@
+{
+  "MLX_ENABLE_TF32": "0",
+  "artifact_hashes": {
+    "benchmarks/model0_correctness.py": "c697ad01839c77cafbc84df7a2cbb31db62f8d49bc9087e10205f66a47fd8beb",
+    "configs/model0.json": "282143f18ab3861d732e5089551ceea69cde6cc56636586e25bd8d060a964944",
+    "src/models/core.py": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+    "src/models/tokenizer.py": "b1dbb553ef9a6c796ed7fcf7c2894f0a30db84decbd3c98d706bed72056727fe",
+    "src/models/training.py": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5"
+  },
+  "default_device": "Device(gpu, 0)",
+  "metal_device_info": {
+    "architecture": "applegpu_g17s",
+    "device_name": "Apple M5 Pro",
+    "max_buffer_length": 30150672384,
+    "max_recommended_working_set_size": 40200896512,
+    "memory_size": 51539607552,
+    "resource_limit": 499000
+  },
+  "mlx": "0.32.3",
+  "python": "3.12.15",
+  "stage": "remaining",
+  "utc": "2026-10-05T05:18:08.857707+00:00"
+}

@@ -1,0 +1,9 @@
+# Root Transformer integration review
+
+FACT: Root inspected core.py, training.py, tokenizer.py, the independent NumPy whole-decoder implementation, finite-difference tests, scalar AdamW checks, accumulation tests, complete resume-state serialization/readback, exact MODEL0 gate summaries and preserved failures before committing. This is a static integration review supported by independent mathematical tests; it is not a second MLX training run or native performance measurement.
+
+No new concrete core defect was found. The implementation owns one tied embedding leaf; pre-RMSNorm and adjacent-pair RoPE preserve the specified arrangement; native GQA was compared with explicit repeat and NumPy masks. Cross-attention has independent projections and no RoPE. Working casts are differentiable from FP32 master leaves; loss sums enter one FP32 accumulator and normalize once per update; norm clipping precedes bias-corrected decoupled AdamW. Norm/bias leaves do not decay. Saved state covers parameters, moments, accumulation, token schedule, data cursor/order, explicit MLX key, Python/NumPy/augmentation RNG and checksummed readback.
+
+MEASURED RESULT: The implementer's recorded exact MODEL0 V0–V5/V7–V8 checks pass; V6 real-shard convergence is NOT_RUN. See MODEL0_CORRECTNESS_REPORT.md and raw/model0/gate_evidence.json. FP32 matmul qualification requires MLX_ENABLE_TF32=0; preserved failures explain the requirement. The BF16 gradient check now uses canonical mean CE rather than a seven-label sum at unchanged tolerances; this clarification is recorded, not hidden.
+
+Limits: full 16,384-token BPE has not been trained. Periodic synthetic memorization is deliberately easy and proves loop mechanics, not useful ASR restoration. No H1 development recipe is qualified from this test. Independent review of B/C-owned renderer/event/binding code is recorded separately by the core worker.

@@ -1,0 +1,577 @@
+....F.F.FFFFFFF....FFFFF............                                     [100%]
+=================================== FAILURES ===================================
+_____ test_native_gqa_independent_numpy_and_gradient_parity[False-dtype0] ______
+
+dtype = mlx.core.float32, causal = False
+
+    @pytest.mark.parametrize("dtype", [mx.float32, mx.bfloat16])
+    @pytest.mark.parametrize("causal", [False, True])
+    def test_native_gqa_independent_numpy_and_gradient_parity(dtype, causal):
+        rng = np.random.default_rng(42)
+        q, k, v = [mx.array(rng.normal(0, .3, s).astype(np.float32)).astype(dtype)
+                   for s in ((2, 4, 3, 8), (2, 2, 3, 8), (2, 2, 3, 8))]
+        valid = mx.array([[True, True, False], [True, True, True]])
+        mask = attention_mask(3, 3, causal=causal, valid=valid)
+        # NumPy oracle owns head repeat, matrix multiplication, masking and softmax.
+        qn, kn, vn = array(q), np.repeat(array(k), 2, axis=1), np.repeat(array(v), 2, axis=1)
+        scores = qn@kn.swapaxes(-1, -2)/np.sqrt(8)
+        scores = np.where(np.asarray(mask), scores, -np.inf)
+        exp = np.exp(scores-np.max(scores, -1, keepdims=True))
+        expected = (exp/exp.sum(-1, keepdims=True))@vn
+        native, reference = attention_native(q, k, v, mask), attention_reference(q, k, v, mask)
+        atol, rtol = (1e-5, 1e-4) if dtype == mx.float32 else (.02, .02)
+>       np.testing.assert_allclose(array(native), expected, atol=atol, rtol=rtol)
+E       AssertionError: 
+E       Not equal to tolerance rtol=0.0001, atol=1e-05
+E       
+E       Mismatched elements: 183 / 192 (95.3%)
+E       Max absolute difference among violations: 0.0006412
+E       Max relative difference among violations: 0.02528522
+E        ACTUAL: array([[[[ 0.011251, -0.076173, -0.328514,  0.075243,  0.48427 ,
+E                 -0.595815,  0.113997, -0.031965],
+E                [ 0.004726, -0.073177, -0.311749,  0.073279,  0.481318,...
+E        DESIRED: array([[[[ 0.011263, -0.076189, -0.328652,  0.075272,  0.484476,
+E                 -0.596308,  0.114051, -0.031981],
+E                [ 0.004797, -0.073238, -0.312109,  0.073343,  0.481663,...
+
+tests/models/test_core.py:94: AssertionError
+______ test_native_gqa_independent_numpy_and_gradient_parity[True-dtype0] ______
+
+dtype = mlx.core.float32, causal = True
+
+    @pytest.mark.parametrize("dtype", [mx.float32, mx.bfloat16])
+    @pytest.mark.parametrize("causal", [False, True])
+    def test_native_gqa_independent_numpy_and_gradient_parity(dtype, causal):
+        rng = np.random.default_rng(42)
+        q, k, v = [mx.array(rng.normal(0, .3, s).astype(np.float32)).astype(dtype)
+                   for s in ((2, 4, 3, 8), (2, 2, 3, 8), (2, 2, 3, 8))]
+        valid = mx.array([[True, True, False], [True, True, True]])
+        mask = attention_mask(3, 3, causal=causal, valid=valid)
+        # NumPy oracle owns head repeat, matrix multiplication, masking and softmax.
+        qn, kn, vn = array(q), np.repeat(array(k), 2, axis=1), np.repeat(array(v), 2, axis=1)
+        scores = qn@kn.swapaxes(-1, -2)/np.sqrt(8)
+        scores = np.where(np.asarray(mask), scores, -np.inf)
+        exp = np.exp(scores-np.max(scores, -1, keepdims=True))
+        expected = (exp/exp.sum(-1, keepdims=True))@vn
+        native, reference = attention_native(q, k, v, mask), attention_reference(q, k, v, mask)
+        atol, rtol = (1e-5, 1e-4) if dtype == mx.float32 else (.02, .02)
+>       np.testing.assert_allclose(array(native), expected, atol=atol, rtol=rtol)
+E       AssertionError: 
+E       Not equal to tolerance rtol=0.0001, atol=1e-05
+E       
+E       Mismatched elements: 160 / 192 (83.3%)
+E       Max absolute difference among violations: 0.0006412
+E       Max relative difference among violations: 0.02264308
+E        ACTUAL: array([[[[-0.087646, -0.031036, -0.075562,  0.045746,  0.441406,
+E                 -0.769531, -0.071045,  0.052948],
+E                [ 0.004726, -0.073177, -0.311749,  0.073279,  0.481318,...
+E        DESIRED: array([[[[-0.087651, -0.031046, -0.075593,  0.045769,  0.441448,
+E                 -0.769998, -0.071055,  0.052954],
+E                [ 0.004797, -0.073238, -0.312109,  0.073343,  0.481663,...
+
+tests/models/test_core.py:94: AssertionError
+__________ test_causal_no_future_leakage_and_cache_chunks[reference] ___________
+
+backend = 'reference'
+
+    @pytest.mark.parametrize("backend", ["reference", "native"])
+    def test_causal_no_future_leakage_and_cache_chunks(backend):
+        model = DecoderLM(tiny())
+        ids = mx.array([[1, 4, 2, 3, 7, 9, 10, 11]])
+        changed = mx.array([[1, 4, 2, 3, 18, 19, 20, 21]])
+        full = model(ids, backend=backend)
+        np.testing.assert_array_equal(array(full[:, :4]), array(model(changed, backend=backend)[:, :4]))
+        for chunks in ([1]*8, [3, 1, 4]):
+            outputs, caches, cursor = [], None, 0
+            for length in chunks:
+                result, caches = model(ids[:, cursor:cursor+length], backend=backend,
+                                       caches=caches, return_cache=True)
+                outputs.append(result)
+                cursor += length
+>           np.testing.assert_allclose(array(mx.concatenate(outputs, axis=1)), array(full), atol=1e-5, rtol=1e-4)
+E           AssertionError: 
+E           Not equal to tolerance rtol=0.0001, atol=1e-05
+E           
+E           Mismatched elements: 210 / 256 (82%)
+E           Max absolute difference among violations: 0.00026175
+E           Max relative difference among violations: 0.0979168
+E            ACTUAL: array([[[ 6.321019e-02,  2.905297e-01,  2.734064e-02, -1.926269e-02,
+E                    -2.034463e-01,  5.315086e-02, -1.110958e-01, -8.380646e-02,
+E                     6.278865e-02, -1.703566e-01, -2.875375e-02, -3.190685e-02,...
+E            DESIRED: array([[[ 6.314410e-02,  2.903609e-01,  2.724306e-02, -1.919762e-02,
+E                    -2.033076e-01,  5.315735e-02, -1.109976e-01, -8.375102e-02,
+E                     6.271209e-02, -1.702703e-01, -2.875510e-02, -3.187875e-02,...
+
+tests/models/test_core.py:118: AssertionError
+____________ test_causal_no_future_leakage_and_cache_chunks[native] ____________
+
+backend = 'native'
+
+    @pytest.mark.parametrize("backend", ["reference", "native"])
+    def test_causal_no_future_leakage_and_cache_chunks(backend):
+        model = DecoderLM(tiny())
+        ids = mx.array([[1, 4, 2, 3, 7, 9, 10, 11]])
+        changed = mx.array([[1, 4, 2, 3, 18, 19, 20, 21]])
+        full = model(ids, backend=backend)
+        np.testing.assert_array_equal(array(full[:, :4]), array(model(changed, backend=backend)[:, :4]))
+        for chunks in ([1]*8, [3, 1, 4]):
+            outputs, caches, cursor = [], None, 0
+            for length in chunks:
+                result, caches = model(ids[:, cursor:cursor+length], backend=backend,
+                                       caches=caches, return_cache=True)
+                outputs.append(result)
+                cursor += length
+>           np.testing.assert_allclose(array(mx.concatenate(outputs, axis=1)), array(full), atol=1e-5, rtol=1e-4)
+E           AssertionError: 
+E           Not equal to tolerance rtol=0.0001, atol=1e-05
+E           
+E           Mismatched elements: 210 / 256 (82%)
+E           Max absolute difference among violations: 0.00026175
+E           Max relative difference among violations: 0.0979168
+E            ACTUAL: array([[[ 6.321019e-02,  2.905297e-01,  2.734064e-02, -1.926269e-02,
+E                    -2.034463e-01,  5.315086e-02, -1.110958e-01, -8.380646e-02,
+E                     6.278865e-02, -1.703566e-01, -2.875375e-02, -3.190685e-02,...
+E            DESIRED: array([[[ 6.314410e-02,  2.903609e-01,  2.724306e-02, -1.919762e-02,
+E                    -2.033076e-01,  5.315735e-02, -1.109976e-01, -8.375102e-02,
+E                     6.271209e-02, -1.702703e-01, -2.875510e-02, -3.187875e-02,...
+
+tests/models/test_core.py:118: AssertionError
+______________ test_encoder_bidirectional_and_cross_padding_cache ______________
+
+    def test_encoder_bidirectional_and_cross_padding_cache():
+        model = EncoderDecoder(EncoderDecoderConfig(32, 16, 1, 1, 4, 2, 24, 64))
+        valid = mx.array([[True, True, False]])
+        ids = mx.array([[1, 2, 3]])
+        changed_padding = mx.array([[1, 2, 29]])
+        encoded = model.encode(ids, valid)
+        changed_encoded = model.encode(changed_padding, valid)
+        np.testing.assert_array_equal(array(encoded[:, :2]), array(changed_encoded[:, :2]))
+        assert not np.allclose(array(encoded[:, 0]), array(model.encode(mx.array([[1, 9, 3]]), valid)[:, 0]), atol=1e-6)
+        decoder_ids = mx.array([[4, 5, 6, 7, 8]])
+        hidden, _ = model.decode(decoder_ids, encoded, valid)
+        hidden_padded, _ = model.decode(decoder_ids, changed_encoded, valid)
+        np.testing.assert_array_equal(array(hidden), array(hidden_padded))
+        first, caches = model.decode(decoder_ids[:, :1], encoded, valid)
+        later, new_caches = model.decode(decoder_ids[:, 1:], encoded, valid, caches=caches)
+        assert new_caches[0]["cross"][0] is caches[0]["cross"][0]
+>       np.testing.assert_allclose(array(mx.concatenate((first, later), axis=1)), array(hidden), atol=1e-5, rtol=1e-4)
+E       AssertionError: 
+E       Not equal to tolerance rtol=0.0001, atol=1e-05
+E       
+E       Mismatched elements: 20 / 80 (25%)
+E       Max absolute difference among violations: 0.00044437
+E       Max relative difference among violations: 0.00446275
+E        ACTUAL: array([[[-0.171284, -0.873629, -1.530105, -1.311991,  1.430064,
+E                -0.796708,  1.104412,  0.843383, -0.127175, -0.100019,
+E                -1.384977, -0.32913 , -0.706486, -0.125626, -1.857399,...
+E        DESIRED: array([[[-0.171218, -0.873748, -1.530255, -1.312347,  1.43034 ,
+E                -0.796399,  1.104035,  0.843331, -0.126996, -0.099574,
+E                -1.38482 , -0.329331, -0.706446, -0.125274, -1.857442,...
+
+tests/models/test_core.py:137: AssertionError
+________________ test_linear_swiglu_and_residual_scalar_oracle _________________
+
+    def test_linear_swiglu_and_residual_scalar_oracle():
+        rng = MLXRNG(42)
+        swiglu = SwiGLU(2, 3, rng)
+        swiglu.gate.weight = mx.array([[.1, .2], [-.3, .4], [.5, -.6]])
+        swiglu.up.weight = mx.array([[.7, .8], [.9, -.1], [.2, -.3]])
+        swiglu.down.weight = mx.array([[.2, .4, .6], [.1, -.3, -.5]])
+        x = np.array([[1., 2.], [3., 4.]], dtype=np.float32)
+        gate, up = x@array(swiglu.gate.weight).T, x@array(swiglu.up.weight).T
+        expected = ((gate/(1+np.exp(-gate)))*up)@array(swiglu.down.weight).T
+>       np.testing.assert_allclose(array(swiglu(mx.array(x))), expected, atol=1e-6)
+E       AssertionError: 
+E       Not equal to tolerance rtol=1e-07, atol=1e-06
+E       
+E       Mismatched elements: 4 / 4 (100%)
+E       Max absolute difference among violations: 0.00139403
+E       Max relative difference among violations: 0.00409114
+E        ACTUAL: array([[ 0.285711, -0.04013 ],
+E              [ 1.397375,  0.036773]], dtype=float32)
+E        DESIRED: array([[ 0.286054, -0.040229],
+E              [ 1.398769,  0.036623]], dtype=float32)
+
+tests/models/test_core.py:151: AssertionError
+_____________________ test_loss_shift_padding_and_uniform ______________________
+
+    def test_loss_shift_padding_and_uniform():
+        logits = mx.zeros((1, 3, 8))
+        targets, valid = mx.array([[1, 2, 3]]), mx.array([[True, False, True]])
+>       assert float(masked_cross_entropy(logits, targets, valid).item()) == pytest.approx(2*math.log(8))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/models/test_core.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = array([[[0, 0, 0, ..., 0, 0, 0],
+        [0, 0, 0, ..., 0, 0, 0],
+        [0, 0, 0, ..., 0, 0, 0]]], dtype=float32)
+targets = array([[1, 2, 3]], dtype=int32)
+valid = array([[True, False, True]], dtype=bool)
+
+    def masked_cross_entropy(logits, targets, valid):
+        """Return FP32 loss sum; caller owns whole-update denominator and shifting."""
+        if targets.shape != logits.shape[:-1] or valid.shape != targets.shape:
+            raise ValueError("loss shape mismatch")
+        z = logits.astype(mx.float32)
+        selected = mx.take_along_axis(z, targets[..., None], axis=-1)[..., 0]
+>       return mx.sum(mx.where(valid, mx.logsumexp(z, axis=-1)-selected, 0), dtype=mx.float32)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: sum(): incompatible function arguments. The following argument types are supported:
+E           1. sum(a: array, /, axis: None | int | Sequence[int] = None, keepdims: bool = False, *, stream: StreamOrDevice = None) -> array
+E       
+E       Invoked with types: mlx.core.array, kwargs = { dtype: mlx.core.Dtype }
+
+src/models/core.py:336: TypeError
+__________ test_repeatable_forward_fp32_bf16_and_all_gradients_finite __________
+
+    def test_repeatable_forward_fp32_bf16_and_all_gradients_finite():
+        model, ids = DecoderLM(tiny()), mx.array([[1, 2, 3, 4], [4, 3, 2, 1]])
+        for dtype in (mx.float32, mx.bfloat16):
+            one, two = model(ids, dtype=dtype), model(ids, dtype=dtype)
+            np.testing.assert_array_equal(array(one), array(two))
+>           loss, grads = nn.value_and_grad(model, lambda m: causal_loss(m, ids, dtype=dtype))(model)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/models/test_core.py:179: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.12/site-packages/mlx/nn/utils.py:35: in wrapped_value_grad_fn
+    value, grad = value_grad_fn(model.trainable_parameters(), *args, **kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/mlx/nn/utils.py:29: in inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+tests/models/test_core.py:179: in <lambda>
+    loss, grads = nn.value_and_grad(model, lambda m: causal_loss(m, ids, dtype=dtype))(model)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/models/core.py:344: in causal_loss
+    return masked_cross_entropy(logits, ids[:, 1:], valid)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = array([[[0.0631441, 0.290361, 0.0272431, ..., 0.00973723, 0.0331433, 0.0230238],
+        [0.0724759, -0.0105359, 0.318...143939, -0.0176469],
+        [0.0668443, -0.0262152, 0.315623, ..., -0.0422441, 0.0410538, -0.108905]]], dtype=float32)
+targets = array([[2, 3, 4],
+       [3, 2, 1]], dtype=int32)
+valid = array([[True, True, True],
+       [True, True, True]], dtype=bool)
+
+    def masked_cross_entropy(logits, targets, valid):
+        """Return FP32 loss sum; caller owns whole-update denominator and shifting."""
+        if targets.shape != logits.shape[:-1] or valid.shape != targets.shape:
+            raise ValueError("loss shape mismatch")
+        z = logits.astype(mx.float32)
+        selected = mx.take_along_axis(z, targets[..., None], axis=-1)[..., 0]
+>       return mx.sum(mx.where(valid, mx.logsumexp(z, axis=-1)-selected, 0), dtype=mx.float32)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: sum(): incompatible function arguments. The following argument types are supported:
+E           1. sum(a: array, /, axis: None | int | Sequence[int] = None, keepdims: bool = False, *, stream: StreamOrDevice = None) -> array
+E       
+E       Invoked with types: mlx.core.array, kwargs = { dtype: mlx.core.Dtype }
+
+src/models/core.py:336: TypeError
+__________ test_finite_difference_independent_linear_and_model_leaves __________
+
+    def test_finite_difference_independent_linear_and_model_leaves():
+        # Scalar loss with well-conditioned nonzero gradients; independent central differences.
+        layer = Linear(2, 2, MLXRNG(42))
+        layer.weight = mx.array([[.2, -.4], [.5, .3]])
+        x = mx.array([[.7, -.8], [.2, .6]])
+        fn = lambda m: mx.sum(m(x)**2)
+        _, grads = nn.value_and_grad(layer, fn)(layer)
+        analytic = array(grads["weight"])
+        initial = array(layer.weight)
+        for index in np.ndindex(initial.shape):
+            losses = []
+            for sign in (-1, 1):
+                value = initial.copy()
+                value[index] += sign*.001
+                layer.weight = mx.array(value)
+                losses.append(fn(layer).item())
+            numerical = (losses[1]-losses[0])/.002
+>           assert abs(numerical-analytic[index])/abs(analytic[index]) < 1e-3
+E           assert (np.float32(0.01320076) / np.float32(0.56347084)) < 0.001
+E            +  where np.float32(0.01320076) = abs((0.5502700805664062 - np.float32(0.56347084)))
+E            +  and   np.float32(0.56347084) = abs(np.float32(0.56347084))
+
+tests/models/test_core.py:203: AssertionError
+________________ test_uneven_accumulation_and_tied_update_once _________________
+
+    def test_uneven_accumulation_and_tied_update_once():
+        ids = mx.array([[1, 2, 3, 4], [2, 3, 4, 5], [4, 5, 6, 7]])
+        valid = mx.array([[True, True, True], [True, False, False], [True, True, False]])
+        full = Trainer(tiny_model(), TokenSchedule(10000))
+        split = Trainer(tiny_model(), TokenSchedule(10000))
+>       full.accumulate(ids, valid)
+
+tests/models/test_training.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/models/training.py:143: in accumulate
+    loss, gradients = self._loss_and_grad(self.model, ids, valid)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/mlx/nn/utils.py:35: in wrapped_value_grad_fn
+    value, grad = value_grad_fn(model.trainable_parameters(), *args, **kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/mlx/nn/utils.py:29: in inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+src/models/training.py:136: in <lambda>
+    causal_loss(model, ids, valid, dtype=self.dtype, backend=self.backend))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/models/core.py:344: in causal_loss
+    return masked_cross_entropy(logits, ids[:, 1:], valid)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = array([[[0.0241596, 0.13682, 0.0713656, ..., -0.0214376, 0.0399651, 0.0726922],
+        [-0.00701947, 0.061831, 0.1707...0973, -0.0455618],
+        [0.0172727, -0.105821, -0.0687383, ..., 0.0503594, 0.00491584, -0.0735314]]], dtype=float32)
+targets = array([[2, 3, 4],
+       [3, 4, 5],
+       [5, 6, 7]], dtype=int32)
+valid = array([[True, True, True],
+       [True, False, False],
+       [True, True, False]], dtype=bool)
+
+    def masked_cross_entropy(logits, targets, valid):
+        """Return FP32 loss sum; caller owns whole-update denominator and shifting."""
+        if targets.shape != logits.shape[:-1] or valid.shape != targets.shape:
+            raise ValueError("loss shape mismatch")
+        z = logits.astype(mx.float32)
+        selected = mx.take_along_axis(z, targets[..., None], axis=-1)[..., 0]
+>       return mx.sum(mx.where(valid, mx.logsumexp(z, axis=-1)-selected, 0), dtype=mx.float32)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: sum(): incompatible function arguments. The following argument types are supported:
+E           1. sum(a: array, /, axis: None | int | Sequence[int] = None, keepdims: bool = False, *, stream: StreamOrDevice = None) -> array
+E       
+E       Invoked with types: mlx.core.array, kwargs = { dtype: mlx.core.Dtype }
+
+src/models/core.py:336: TypeError
+__________________ test_bf16_work_fp32_master_gradient_state ___________________
+
+    def test_bf16_work_fp32_master_gradient_state():
+        trainer = Trainer(tiny_model(), TokenSchedule(10000), dtype=mx.bfloat16, backend="native")
+>       trainer.accumulate(mx.array([[1, 2, 3, 4]]))
+
+tests/models/test_training.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/models/training.py:143: in accumulate
+    loss, gradients = self._loss_and_grad(self.model, ids, valid)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/mlx/nn/utils.py:35: in wrapped_value_grad_fn
+    value, grad = value_grad_fn(model.trainable_parameters(), *args, **kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/mlx/nn/utils.py:29: in inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+src/models/training.py:136: in <lambda>
+    causal_loss(model, ids, valid, dtype=self.dtype, backend=self.backend))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/models/core.py:344: in causal_loss
+    return masked_cross_entropy(logits, ids[:, 1:], valid)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = array([[[0.0241699, 0.136719, 0.0712891, ..., -0.0212402, 0.0397949, 0.0727539],
+        [-0.00723267, 0.0617676, 0.17...59375, -0.0130615],
+        [0.0349121, 0.0505371, -0.0761719, ..., 0.0395508, -0.0310059, 0.117188]]], dtype=bfloat16)
+targets = array([[2, 3, 4]], dtype=int32)
+valid = array([[True, True, True]], dtype=bool)
+
+    def masked_cross_entropy(logits, targets, valid):
+        """Return FP32 loss sum; caller owns whole-update denominator and shifting."""
+        if targets.shape != logits.shape[:-1] or valid.shape != targets.shape:
+            raise ValueError("loss shape mismatch")
+        z = logits.astype(mx.float32)
+        selected = mx.take_along_axis(z, targets[..., None], axis=-1)[..., 0]
+>       return mx.sum(mx.where(valid, mx.logsumexp(z, axis=-1)-selected, 0), dtype=mx.float32)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: sum(): incompatible function arguments. The following argument types are supported:
+E           1. sum(a: array, /, axis: None | int | Sequence[int] = None, keepdims: bool = False, *, stream: StreamOrDevice = None) -> array
+E       
+E       Invoked with types: mlx.core.array, kwargs = { dtype: mlx.core.Dtype }
+
+src/models/core.py:336: TypeError
+__ test_checkpoint_twenty_updates_mid_accumulation_rng_and_identities[False] ___
+
+tmp_path = PosixPath('/private/var/folders/_q/nsgwvvj51zlcw71s_yzz0s100000gn/T/pytest-of-danny/pytest-1/test_checkpoint_twenty_updates0')
+mid_accumulation = False
+
+    @pytest.mark.parametrize("mid_accumulation", [False, True])
+    def test_checkpoint_twenty_updates_mid_accumulation_rng_and_identities(tmp_path, mid_accumulation):
+        ids = mx.array([[1, 2, 3, 4], [4, 5, 6, 7]])
+        options = {"identities": {"model": "tiny_dev", "tokenizer": "fixture_v1", "dataset": "fixture_v1"}}
+        control = Trainer(tiny_model(), TokenSchedule(10000), **options)
+        for _ in range(3):
+>           train_one(control, ids)
+
+tests/models/test_training.py:103: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/models/test_training.py:19: in train_one
+    trainer.accumulate(ids)
+src/models/training.py:143: in accumulate
+    loss, gradients = self._loss_and_grad(self.model, ids, valid)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/mlx/nn/utils.py:35: in wrapped_value_grad_fn
+    value, grad = value_grad_fn(model.trainable_parameters(), *args, **kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/mlx/nn/utils.py:29: in inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+src/models/training.py:136: in <lambda>
+    causal_loss(model, ids, valid, dtype=self.dtype, backend=self.backend))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/models/core.py:344: in causal_loss
+    return masked_cross_entropy(logits, ids[:, 1:], valid)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = array([[[0.0241596, 0.13682, 0.0713656, ..., -0.0214376, 0.0399651, 0.0726922],
+        [-0.00701947, 0.061831, 0.1707...0973, -0.0455618],
+        [0.0172727, -0.105821, -0.0687383, ..., 0.0503594, 0.00491584, -0.0735314]]], dtype=float32)
+targets = array([[2, 3, 4],
+       [5, 6, 7]], dtype=int32)
+valid = array([[True, True, True],
+       [True, True, True]], dtype=bool)
+
+    def masked_cross_entropy(logits, targets, valid):
+        """Return FP32 loss sum; caller owns whole-update denominator and shifting."""
+        if targets.shape != logits.shape[:-1] or valid.shape != targets.shape:
+            raise ValueError("loss shape mismatch")
+        z = logits.astype(mx.float32)
+        selected = mx.take_along_axis(z, targets[..., None], axis=-1)[..., 0]
+>       return mx.sum(mx.where(valid, mx.logsumexp(z, axis=-1)-selected, 0), dtype=mx.float32)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: sum(): incompatible function arguments. The following argument types are supported:
+E           1. sum(a: array, /, axis: None | int | Sequence[int] = None, keepdims: bool = False, *, stream: StreamOrDevice = None) -> array
+E       
+E       Invoked with types: mlx.core.array, kwargs = { dtype: mlx.core.Dtype }
+
+src/models/core.py:336: TypeError
+___ test_checkpoint_twenty_updates_mid_accumulation_rng_and_identities[True] ___
+
+tmp_path = PosixPath('/private/var/folders/_q/nsgwvvj51zlcw71s_yzz0s100000gn/T/pytest-of-danny/pytest-1/test_checkpoint_twenty_updates1')
+mid_accumulation = True
+
+    @pytest.mark.parametrize("mid_accumulation", [False, True])
+    def test_checkpoint_twenty_updates_mid_accumulation_rng_and_identities(tmp_path, mid_accumulation):
+        ids = mx.array([[1, 2, 3, 4], [4, 5, 6, 7]])
+        options = {"identities": {"model": "tiny_dev", "tokenizer": "fixture_v1", "dataset": "fixture_v1"}}
+        control = Trainer(tiny_model(), TokenSchedule(10000), **options)
+        for _ in range(3):
+>           train_one(control, ids)
+
+tests/models/test_training.py:103: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/models/test_training.py:19: in train_one
+    trainer.accumulate(ids)
+src/models/training.py:143: in accumulate
+    loss, gradients = self._loss_and_grad(self.model, ids, valid)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/mlx/nn/utils.py:35: in wrapped_value_grad_fn
+    value, grad = value_grad_fn(model.trainable_parameters(), *args, **kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/mlx/nn/utils.py:29: in inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+src/models/training.py:136: in <lambda>
+    causal_loss(model, ids, valid, dtype=self.dtype, backend=self.backend))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/models/core.py:344: in causal_loss
+    return masked_cross_entropy(logits, ids[:, 1:], valid)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = array([[[0.0241596, 0.13682, 0.0713656, ..., -0.0214376, 0.0399651, 0.0726922],
+        [-0.00701947, 0.061831, 0.1707...0973, -0.0455618],
+        [0.0172727, -0.105821, -0.0687383, ..., 0.0503594, 0.00491584, -0.0735314]]], dtype=float32)
+targets = array([[2, 3, 4],
+       [5, 6, 7]], dtype=int32)
+valid = array([[True, True, True],
+       [True, True, True]], dtype=bool)
+
+    def masked_cross_entropy(logits, targets, valid):
+        """Return FP32 loss sum; caller owns whole-update denominator and shifting."""
+        if targets.shape != logits.shape[:-1] or valid.shape != targets.shape:
+            raise ValueError("loss shape mismatch")
+        z = logits.astype(mx.float32)
+        selected = mx.take_along_axis(z, targets[..., None], axis=-1)[..., 0]
+>       return mx.sum(mx.where(valid, mx.logsumexp(z, axis=-1)-selected, 0), dtype=mx.float32)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: sum(): incompatible function arguments. The following argument types are supported:
+E           1. sum(a: array, /, axis: None | int | Sequence[int] = None, keepdims: bool = False, *, stream: StreamOrDevice = None) -> array
+E       
+E       Invoked with types: mlx.core.array, kwargs = { dtype: mlx.core.Dtype }
+
+src/models/core.py:336: TypeError
+___________________ test_reproducibility_same_seed_and_data ____________________
+
+    def test_reproducibility_same_seed_and_data():
+        ids = mx.array([[1, 2, 3, 4], [4, 5, 6, 7]])
+        trajectories = []
+        for _ in range(2):
+            trainer = Trainer(tiny_model(), TokenSchedule(10000))
+>           trajectories.append([train_one(trainer, ids) for _ in range(4)])
+                                 ^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/models/test_training.py:143: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/models/test_training.py:19: in train_one
+    trainer.accumulate(ids)
+src/models/training.py:143: in accumulate
+    loss, gradients = self._loss_and_grad(self.model, ids, valid)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/mlx/nn/utils.py:35: in wrapped_value_grad_fn
+    value, grad = value_grad_fn(model.trainable_parameters(), *args, **kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/mlx/nn/utils.py:29: in inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+src/models/training.py:136: in <lambda>
+    causal_loss(model, ids, valid, dtype=self.dtype, backend=self.backend))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/models/core.py:344: in causal_loss
+    return masked_cross_entropy(logits, ids[:, 1:], valid)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = array([[[0.0241596, 0.13682, 0.0713656, ..., -0.0214376, 0.0399651, 0.0726922],
+        [-0.00701947, 0.061831, 0.1707...0973, -0.0455618],
+        [0.0172727, -0.105821, -0.0687383, ..., 0.0503594, 0.00491584, -0.0735314]]], dtype=float32)
+targets = array([[2, 3, 4],
+       [5, 6, 7]], dtype=int32)
+valid = array([[True, True, True],
+       [True, True, True]], dtype=bool)
+
+    def masked_cross_entropy(logits, targets, valid):
+        """Return FP32 loss sum; caller owns whole-update denominator and shifting."""
+        if targets.shape != logits.shape[:-1] or valid.shape != targets.shape:
+            raise ValueError("loss shape mismatch")
+        z = logits.astype(mx.float32)
+        selected = mx.take_along_axis(z, targets[..., None], axis=-1)[..., 0]
+>       return mx.sum(mx.where(valid, mx.logsumexp(z, axis=-1)-selected, 0), dtype=mx.float32)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: sum(): incompatible function arguments. The following argument types are supported:
+E           1. sum(a: array, /, axis: None | int | Sequence[int] = None, keepdims: bool = False, *, stream: StreamOrDevice = None) -> array
+E       
+E       Invoked with types: mlx.core.array, kwargs = { dtype: mlx.core.Dtype }
+
+src/models/core.py:336: TypeError
+=========================== short test summary info ============================
+FAILED tests/models/test_core.py::test_native_gqa_independent_numpy_and_gradient_parity[False-dtype0]
+FAILED tests/models/test_core.py::test_native_gqa_independent_numpy_and_gradient_parity[True-dtype0]
+FAILED tests/models/test_core.py::test_causal_no_future_leakage_and_cache_chunks[reference]
+FAILED tests/models/test_core.py::test_causal_no_future_leakage_and_cache_chunks[native]
+FAILED tests/models/test_core.py::test_encoder_bidirectional_and_cross_padding_cache
+FAILED tests/models/test_core.py::test_linear_swiglu_and_residual_scalar_oracle
+FAILED tests/models/test_core.py::test_loss_shift_padding_and_uniform - TypeE...
+FAILED tests/models/test_core.py::test_repeatable_forward_fp32_bf16_and_all_gradients_finite
+FAILED tests/models/test_core.py::test_finite_difference_independent_linear_and_model_leaves
+FAILED tests/models/test_training.py::test_uneven_accumulation_and_tied_update_once
+FAILED tests/models/test_training.py::test_bf16_work_fp32_master_gradient_state
+FAILED tests/models/test_training.py::test_checkpoint_twenty_updates_mid_accumulation_rng_and_identities[False]
+FAILED tests/models/test_training.py::test_checkpoint_twenty_updates_mid_accumulation_rng_and_identities[True]
+FAILED tests/models/test_training.py::test_reproducibility_same_seed_and_data
+14 failed, 22 passed in 5.37s

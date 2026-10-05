@@ -1,0 +1,463 @@
+{
+  "checkpoint_bytes": 138056061,
+  "checkpoint_manifest": {
+    "arrays.npz": "d6c0c9e2502efac23041b9f274b64adcd40eb2598f5a5d391c47b78cd3e584d6",
+    "metadata.json": "13c20d15bef92d8ee0d884218052f563b8cf6a4316701777f858c6ad375fb85a"
+  },
+  "control": [
+    {
+      "gradient_norm": 9.785414695739746,
+      "loss": 7.0921533978174605,
+      "lr": 0.0019199999999999998,
+      "microbatches": 1,
+      "processed_tokens": 1280,
+      "step": 5,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 10.663129806518555,
+      "loss": 5.673069545200893,
+      "lr": 0.002304,
+      "microbatches": 1,
+      "processed_tokens": 1536,
+      "step": 6,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 6.054998874664307,
+      "loss": 4.803063286675347,
+      "lr": 0.0026880000000000003,
+      "microbatches": 1,
+      "processed_tokens": 1792,
+      "step": 7,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 6.269880294799805,
+      "loss": 4.199065677703373,
+      "lr": 0.0029999984017903235,
+      "microbatches": 1,
+      "processed_tokens": 2048,
+      "step": 8,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 18.222196578979492,
+      "loss": 3.4053533644903276,
+      "lr": 0.00299993589452878,
+      "microbatches": 1,
+      "processed_tokens": 2304,
+      "step": 9,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 4.48394775390625,
+      "loss": 2.339845203218006,
+      "lr": 0.0029997824717042285,
+      "microbatches": 1,
+      "processed_tokens": 2560,
+      "step": 10,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 3.3323724269866943,
+      "loss": 1.5485362703838046,
+      "lr": 0.0029995381436493996,
+      "microbatches": 1,
+      "processed_tokens": 2816,
+      "step": 11,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 4.135020732879639,
+      "loss": 0.9887638394794767,
+      "lr": 0.0029992029268193126,
+      "microbatches": 1,
+      "processed_tokens": 3072,
+      "step": 12,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 1.8212544918060303,
+      "loss": 0.5324422442723834,
+      "lr": 0.0029987768437901717,
+      "microbatches": 1,
+      "processed_tokens": 3328,
+      "step": 13,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 1.347821593284607,
+      "loss": 0.26832889375232516,
+      "lr": 0.0029982599232578405,
+      "microbatches": 1,
+      "processed_tokens": 3584,
+      "step": 14,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 1.8727494478225708,
+      "loss": 0.16616966610863096,
+      "lr": 0.0029976522000359153,
+      "microbatches": 1,
+      "processed_tokens": 3840,
+      "step": 15,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 0.8422344923019409,
+      "loss": 0.07552599528479198,
+      "lr": 0.0029969537150533756,
+      "microbatches": 1,
+      "processed_tokens": 4096,
+      "step": 16,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 12.88082218170166,
+      "loss": 0.4236986069452195,
+      "lr": 0.002996164515351829,
+      "microbatches": 1,
+      "processed_tokens": 4352,
+      "step": 17,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 0.08569078147411346,
+      "loss": 0.01993440824841696,
+      "lr": 0.002995284654082344,
+      "microbatches": 1,
+      "processed_tokens": 4608,
+      "step": 18,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 0.049664877355098724,
+      "loss": 0.011780360388377356,
+      "lr": 0.00299431419050187,
+      "microbatches": 1,
+      "processed_tokens": 4864,
+      "step": 19,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 0.031944986432790756,
+      "loss": 0.007430799423702179,
+      "lr": 0.002993253189969246,
+      "microbatches": 1,
+      "processed_tokens": 5120,
+      "step": 20,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 0.033797524869441986,
+      "loss": 0.005135169104924278,
+      "lr": 0.0029921017239407997,
+      "microbatches": 1,
+      "processed_tokens": 5376,
+      "step": 21,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 0.05883219093084335,
+      "loss": 0.003800691120208256,
+      "lr": 0.0029908598699655326,
+      "microbatches": 1,
+      "processed_tokens": 5632,
+      "step": 22,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 0.012951964512467384,
+      "loss": 0.002471522679404607,
+      "lr": 0.002989527711679901,
+      "microbatches": 1,
+      "processed_tokens": 5888,
+      "step": 23,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 0.019368421286344528,
+      "loss": 0.001924473141867017,
+      "lr": 0.00298810533880218,
+      "microbatches": 1,
+      "processed_tokens": 6144,
+      "step": 24,
+      "valid_targets": 252
+    }
+  ],
+  "exact_parameter_and_loss_match": true,
+  "final_hash": "932b9d5a1839b44ef10e4454aa61e184d6f0904830542012b8778669abd0e80a",
+  "geometry": "exact_MODEL0",
+  "load_seconds": 0.11290104201179929,
+  "processed_tokens_attempted_total": 13312,
+  "resumed": [
+    {
+      "gradient_norm": 9.785414695739746,
+      "loss": 7.0921533978174605,
+      "lr": 0.0019199999999999998,
+      "microbatches": 1,
+      "processed_tokens": 1280,
+      "step": 5,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 10.663129806518555,
+      "loss": 5.673069545200893,
+      "lr": 0.002304,
+      "microbatches": 1,
+      "processed_tokens": 1536,
+      "step": 6,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 6.054998874664307,
+      "loss": 4.803063286675347,
+      "lr": 0.0026880000000000003,
+      "microbatches": 1,
+      "processed_tokens": 1792,
+      "step": 7,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 6.269880294799805,
+      "loss": 4.199065677703373,
+      "lr": 0.0029999984017903235,
+      "microbatches": 1,
+      "processed_tokens": 2048,
+      "step": 8,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 18.222196578979492,
+      "loss": 3.4053533644903276,
+      "lr": 0.00299993589452878,
+      "microbatches": 1,
+      "processed_tokens": 2304,
+      "step": 9,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 4.48394775390625,
+      "loss": 2.339845203218006,
+      "lr": 0.0029997824717042285,
+      "microbatches": 1,
+      "processed_tokens": 2560,
+      "step": 10,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 3.3323724269866943,
+      "loss": 1.5485362703838046,
+      "lr": 0.0029995381436493996,
+      "microbatches": 1,
+      "processed_tokens": 2816,
+      "step": 11,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 4.135020732879639,
+      "loss": 0.9887638394794767,
+      "lr": 0.0029992029268193126,
+      "microbatches": 1,
+      "processed_tokens": 3072,
+      "step": 12,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 1.8212544918060303,
+      "loss": 0.5324422442723834,
+      "lr": 0.0029987768437901717,
+      "microbatches": 1,
+      "processed_tokens": 3328,
+      "step": 13,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 1.347821593284607,
+      "loss": 0.26832889375232516,
+      "lr": 0.0029982599232578405,
+      "microbatches": 1,
+      "processed_tokens": 3584,
+      "step": 14,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 1.8727494478225708,
+      "loss": 0.16616966610863096,
+      "lr": 0.0029976522000359153,
+      "microbatches": 1,
+      "processed_tokens": 3840,
+      "step": 15,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 0.8422344923019409,
+      "loss": 0.07552599528479198,
+      "lr": 0.0029969537150533756,
+      "microbatches": 1,
+      "processed_tokens": 4096,
+      "step": 16,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 12.88082218170166,
+      "loss": 0.4236986069452195,
+      "lr": 0.002996164515351829,
+      "microbatches": 1,
+      "processed_tokens": 4352,
+      "step": 17,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 0.08569078147411346,
+      "loss": 0.01993440824841696,
+      "lr": 0.002995284654082344,
+      "microbatches": 1,
+      "processed_tokens": 4608,
+      "step": 18,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 0.049664877355098724,
+      "loss": 0.011780360388377356,
+      "lr": 0.00299431419050187,
+      "microbatches": 1,
+      "processed_tokens": 4864,
+      "step": 19,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 0.031944986432790756,
+      "loss": 0.007430799423702179,
+      "lr": 0.002993253189969246,
+      "microbatches": 1,
+      "processed_tokens": 5120,
+      "step": 20,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 0.033797524869441986,
+      "loss": 0.005135169104924278,
+      "lr": 0.0029921017239407997,
+      "microbatches": 1,
+      "processed_tokens": 5376,
+      "step": 21,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 0.05883219093084335,
+      "loss": 0.003800691120208256,
+      "lr": 0.0029908598699655326,
+      "microbatches": 1,
+      "processed_tokens": 5632,
+      "step": 22,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 0.012951964512467384,
+      "loss": 0.002471522679404607,
+      "lr": 0.002989527711679901,
+      "microbatches": 1,
+      "processed_tokens": 5888,
+      "step": 23,
+      "valid_targets": 252
+    },
+    {
+      "gradient_norm": 0.019368421286344528,
+      "loss": 0.001924473141867017,
+      "lr": 0.00298810533880218,
+      "microbatches": 1,
+      "processed_tokens": 6144,
+      "step": 24,
+      "valid_targets": 252
+    }
+  ],
+  "resumed_updates": 20,
+  "same_seed_repeats": [
+    {
+      "final_hash": "4a051de0a62ba0e84191f0e6403b4924f0119938641cdf03f9610b77aa7cd16a",
+      "updates": [
+        {
+          "gradient_norm": 18.184242248535156,
+          "loss": 9.751149011036706,
+          "lr": 0.000384,
+          "microbatches": 1,
+          "processed_tokens": 256,
+          "step": 1,
+          "valid_targets": 252
+        },
+        {
+          "gradient_norm": 9.150816917419434,
+          "loss": 8.725828140500992,
+          "lr": 0.000768,
+          "microbatches": 1,
+          "processed_tokens": 512,
+          "step": 2,
+          "valid_targets": 252
+        },
+        {
+          "gradient_norm": 5.557862281799316,
+          "loss": 8.128931439112103,
+          "lr": 0.001152,
+          "microbatches": 1,
+          "processed_tokens": 768,
+          "step": 3,
+          "valid_targets": 252
+        },
+        {
+          "gradient_norm": 43.52709197998047,
+          "loss": 10.35010734437004,
+          "lr": 0.001536,
+          "microbatches": 1,
+          "processed_tokens": 1024,
+          "step": 4,
+          "valid_targets": 252
+        }
+      ]
+    },
+    {
+      "final_hash": "4a051de0a62ba0e84191f0e6403b4924f0119938641cdf03f9610b77aa7cd16a",
+      "updates": [
+        {
+          "gradient_norm": 18.184242248535156,
+          "loss": 9.751149011036706,
+          "lr": 0.000384,
+          "microbatches": 1,
+          "processed_tokens": 256,
+          "step": 1,
+          "valid_targets": 252
+        },
+        {
+          "gradient_norm": 9.150816917419434,
+          "loss": 8.725828140500992,
+          "lr": 0.000768,
+          "microbatches": 1,
+          "processed_tokens": 512,
+          "step": 2,
+          "valid_targets": 252
+        },
+        {
+          "gradient_norm": 5.557862281799316,
+          "loss": 8.128931439112103,
+          "lr": 0.001152,
+          "microbatches": 1,
+          "processed_tokens": 768,
+          "step": 3,
+          "valid_targets": 252
+        },
+        {
+          "gradient_norm": 43.52709197998047,
+          "loss": 10.35010734437004,
+          "lr": 0.001536,
+          "microbatches": 1,
+          "processed_tokens": 1024,
+          "step": 4,
+          "valid_targets": 252
+        }
+      ]
+    }
+  ],
+  "save_seconds": 0.17593137499352451,
+  "status": "PASS"
+}

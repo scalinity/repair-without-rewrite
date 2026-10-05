@@ -1,0 +1,46 @@
+..............F.....................                                     [100%]
+=================================== FAILURES ===================================
+__________ test_finite_difference_independent_linear_and_model_leaves __________
+
+    def test_finite_difference_independent_linear_and_model_leaves():
+        # Scalar loss with well-conditioned nonzero gradients; independent central differences.
+        layer = Linear(2, 2, MLXRNG(42))
+        layer.weight = mx.array([[.2, -.4], [.5, .3]])
+        x = mx.array([[.7, -.8], [.2, .6]])
+        fn = lambda m: mx.sum(m(x)**2)
+        _, grads = nn.value_and_grad(layer, fn)(layer)
+        analytic = array(grads["weight"])
+        initial = array(layer.weight)
+        for index in np.ndindex(initial.shape):
+            losses = []
+            for sign in (-1, 1):
+                value = initial.copy()
+                value[index] += sign*.001
+                layer.weight = mx.array(value)
+                losses.append(fn(layer).item())
+            numerical = (losses[1]-losses[0])/.002
+            assert abs(numerical-analytic[index])/abs(analytic[index]) < 1e-3
+        model, ids = DecoderLM(ModelConfig(8, 4, 1, 2, 1, 6, 16)), mx.array([[1, 2, 3, 4]])
+        _, grads = nn.value_and_grad(model, lambda m: causal_loss(m, ids))(model)
+        # Embedding + residual-down leaves: pick the largest derivative to avoid ill conditioning.
+        for path in ("embedding", "layers.0.ffn.down.weight"):
+            leaves = dict(tree_flatten(model.parameters()))
+            original, analytic = array(leaves[path]), array(dict(tree_flatten(grads))[path])
+            index = np.unravel_index(np.argmax(np.abs(analytic)), analytic.shape)
+            losses = []
+            for sign in (-1, 1):
+                value = original.copy()
+                value[index] += sign*.001
+                from mlx.utils import tree_unflatten
+                model.update(tree_unflatten([(path, mx.array(value))]))
+                losses.append(causal_loss(model, ids).item())
+            numerical = (losses[1]-losses[0])/.002
+>           assert abs(numerical-analytic[index])/abs(analytic[index]) < 1e-3
+E           assert (np.float32(0.00014127744) / np.float32(0.006534443)) < 0.001
+E            +  where np.float32(0.00014127744) = abs((-0.00667572021484375 - np.float32(-0.006534443)))
+E            +  and   np.float32(0.006534443) = abs(np.float32(-0.006534443))
+
+tests/models/test_core.py:219: AssertionError
+=========================== short test summary info ============================
+FAILED tests/models/test_core.py::test_finite_difference_independent_linear_and_model_leaves
+1 failed, 35 passed in 1.61s

@@ -1,0 +1,65 @@
+{
+  "config": {
+    "ffn_width": 704,
+    "kv_heads": 2,
+    "max_context": 1024,
+    "num_layers": 6,
+    "q_heads": 4,
+    "vocab_size": 16384,
+    "width": 256
+  },
+  "continuations": null,
+  "data_sha256": "b9fda66ead29ab10bcb4a544f8bc9385638923a8c91b7b368ebbefb702e8a505",
+  "data_shape": [
+    4,
+    64
+  ],
+  "dtype_inventory": {
+    "accumulator": [
+      "mlx.core.float32"
+    ],
+    "master": [
+      "mlx.core.float32"
+    ],
+    "moment_m": [
+      "mlx.core.float32"
+    ],
+    "moment_v": [
+      "mlx.core.float32"
+    ],
+    "working": "mlx.core.bfloat16"
+  },
+  "elapsed_seconds": 1.54164429201046,
+  "final": {
+    "ce": 0.008716893382370472,
+    "teacher_accuracy": 1.0
+  },
+  "final_hash": "90abd1760eb144a3e8bd415e3e125eaf5695c06edcd10a914377fd20de6b5887",
+  "initial": {
+    "ce": 9.751412391662598,
+    "teacher_accuracy": 0.0
+  },
+  "initial_hash": "e0275c484f477899fe10f2da41e1ab9adb080ca327780d86b33980d40b09d835",
+  "maximum_updates": 2000,
+  "optimizer": {
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "clip_norm": 1.0,
+    "epsilon": 1e-08,
+    "weight_decay": 0.0
+  },
+  "parameters": 8621312,
+  "processed_tokens": 7680,
+  "schedule": {
+    "floor_fraction": 0.1,
+    "peak_lr": 0.003,
+    "planned_tokens": 512000,
+    "warmup_fraction": 0.02
+  },
+  "seed": 42,
+  "status": "PASS",
+  "timing_scope": "correctness_only; other CPU tasks may overlap; not BENCH-00",
+  "unique_fixture_tokens": 256,
+  "updates": 30,
+  "valid_targets_per_update": 252
+}

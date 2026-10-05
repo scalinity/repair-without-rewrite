@@ -6,6 +6,8 @@ dependencies = [
   "mlx==0.32.3",
   "numpy==2.2.6",
   "pytest==8.4.2",
+  "torch==2.8.0",
+  "transformers==4.55.4",
   "unicodedata2==15.1.0",
 ]
 
