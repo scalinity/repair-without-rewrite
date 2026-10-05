@@ -1,0 +1,10 @@
+........................................................................ [ 40%]
+........................................................................ [ 80%]
+....................................                                     [100%]
+============================= slowest 5 durations ==============================
+11.66s call     tests/scoring/test_qualification.py::test_exhaustive_3375_triples
+4.43s call     tests/scoring/test_qualification.py::test_10000_fixed_seed_properties
+0.71s call     tests/scoring/test_qualification.py::test_500_preselected_development_parity
+0.44s call     tests/data/test_generator.py::test_all_eight_categories_three_views_deterministic
+0.34s call     tests/data/test_byt5_probe.py::test_probe_bos_attention_and_supervised_eos_with_variable_targets
+180 passed in 19.42s

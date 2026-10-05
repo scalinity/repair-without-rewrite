@@ -36,8 +36,11 @@ The original private development ancestry is listed below. Any publication-only 
 | 6d52a2d | Complete book/project closure and exact DEV ASR joins |
 | 6d4e4a5 | Dual-reference development source-count audit |
 | 6f51470 | Failed export preserved; qualified serialization repair |
+| 7ea0f3d | Speech numerical failures, actual source scoring and final integration |
+| 5519fe5 | Foundation reports, repair admission and publication preparation |
+| 5e0df28 | Astra README with two-pass accuracy and voice review |
 
-Final evidence/report and Astra README commits follow this list and are enumerated in the publication receipt. No failed evidence was removed and no live-checkout history rewrite was used.
+Publication-only audit/outcome commits follow this list and are enumerated in the publication receipt. No failed evidence was removed and no live-checkout history rewrite was used.
 
 ## C. Produced artifacts
 

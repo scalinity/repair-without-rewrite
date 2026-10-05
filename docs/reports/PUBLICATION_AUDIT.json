@@ -1,0 +1,187 @@
+{
+  "status": "PASS_PREPUBLICATION_PRIVACY_AND_IMMUTABLE_INPUT_CHECKS",
+  "original_tip": "5e0df28f5ba9c3bcfc5fb457a520406d56b32fb3",
+  "sanitized_tip_before_receipt_commit": "5fee5991b8a1644104b73f6dd415ed242e9d2548",
+  "canonical_inputs": [
+    {
+      "path": "docs/reviews/Independent_Pre_Implementation_Review_v1_2_Accepted_Findings.md",
+      "sha256": "b408e93a11e395099c57edf76ba507c487ba2671c057e1ff2fae6f13c0e8d00a",
+      "expected": "b408e93a11e395099c57edf76ba507c487ba2671c057e1ff2fae6f13c0e8d00a",
+      "unchanged": true
+    },
+    {
+      "path": "docs/design-inputs/KICKOFF_PROMPT.txt",
+      "sha256": "91848265ed36ae02e07524a20e82f5d3e4e0836aa0dcc574437a48edb163d2f5",
+      "expected": "91848265ed36ae02e07524a20e82f5d3e4e0836aa0dcc574437a48edb163d2f5",
+      "unchanged": true
+    },
+    {
+      "path": "docs/design-inputs/LocalFlow_From_Scratch_Master_Spec_v1_2.html",
+      "sha256": "fd7132adbf3796424db29a6a06c2ff470e425f2b42f43f3203a4ff7f4de5c329",
+      "expected": "fd7132adbf3796424db29a6a06c2ff470e425f2b42f43f3203a4ff7f4de5c329",
+      "unchanged": true
+    },
+    {
+      "path": "docs/design-inputs/LocalFlow_From_Scratch_Master_Spec_v1_2.pdf",
+      "sha256": "d84309ca0b9e69e2dd7f85398bd80af8efa58ade885e3c30ff2ec08f50aab48e",
+      "expected": "d84309ca0b9e69e2dd7f85398bd80af8efa58ade885e3c30ff2ec08f50aab48e",
+      "unchanged": true
+    },
+    {
+      "path": "docs/design-inputs/LocalFlow_Publication_Experiment_Registry_v2.txt",
+      "sha256": "596932dd91e0b108936c3a7a80245f4f44df5cfeac4f13d6fda8cfb30412cfe0",
+      "expected": "596932dd91e0b108936c3a7a80245f4f44df5cfeac4f13d6fda8cfb30412cfe0",
+      "unchanged": true
+    },
+    {
+      "path": "docs/design-inputs/PACKAGE_README.md",
+      "sha256": "9ec70b0e2b9f9ea1139545370c49b75178dd9278dbc31e95c6ac071c6af6045d",
+      "expected": "9ec70b0e2b9f9ea1139545370c49b75178dd9278dbc31e95c6ac071c6af6045d",
+      "unchanged": true
+    },
+    {
+      "path": "docs/design-inputs/BUNDLE_SHA256SUMS",
+      "sha256": "8b1f98bb7e8debd01c062992efa8c6e422a2c23e4e458ff0b0d07dd0b11bcbd1",
+      "expected": "8b1f98bb7e8debd01c062992efa8c6e422a2c23e4e458ff0b0d07dd0b11bcbd1",
+      "unchanged": true
+    }
+  ],
+  "changed_tip_files": [
+    {
+      "path": "docs/design-inputs/INPUT_INVENTORY.json",
+      "original_sha256": "9ec468b18d63565c38d6e228ef87bcb1ff1e1f79f870ba27356cb3b614114df7",
+      "public_sha256": "788e78d973d42173894a1173e5ca9411258a76f35d0ec93b9711fe11a36cdcfe",
+      "change": "classified exact-literal local-provenance redaction only"
+    },
+    {
+      "path": "docs/reports/BOUNDED_FOUNDATION_SESSION_REPORT.md",
+      "original_sha256": "45f10fa5c1822fd5a56ad0994ed5d9b1afc30e34241e6c0da3403547780d50a7",
+      "public_sha256": "c51fac5525784528652019d4249261463d86815f5f74784c897401153adf959e",
+      "change": "classified exact-literal local-provenance redaction only"
+    },
+    {
+      "path": "docs/reports/ENVIRONMENT_INITIAL.json",
+      "original_sha256": "9dfa65f459a2c9e67c1e17fa95e17e2cb88224c5bf72651aa0af8e1964710241",
+      "public_sha256": "ec61e64042a7fb9c5fcb6ce1244937747532f8120b3a33afbc9cceb293bae840",
+      "change": "classified exact-literal local-provenance redaction only"
+    },
+    {
+      "path": "docs/reports/raw/asr_source_barrier_attempt01.txt",
+      "original_sha256": "e1276a1c08d4926e067d1e658e629367516f8f379be7a06cd283bdbbb9e21020",
+      "public_sha256": "ad291f24f5fee5604e4b302dcb78b57c588b1cfb7f0a3d68b5b82ba2cfd89cc8",
+      "change": "classified exact-literal local-provenance redaction only"
+    },
+    {
+      "path": "docs/reports/raw/kokoro_native_attempt01.txt",
+      "original_sha256": "da027fd63a5eeadfe1c76b57699708e4f7ee7421b048e36846ee79019c8421d0",
+      "public_sha256": "6df7dbeb561b64c04ea246986632e9ecdd9a772859541d898bccaa16d4261b49",
+      "change": "classified exact-literal local-provenance redaction only"
+    },
+    {
+      "path": "docs/reports/raw/kokoro_original_cpu_attempt01.txt",
+      "original_sha256": "0f9a9e60251179db517a9ad6dcbf17667d4031cb28f7eef885d8e091c55734d9",
+      "public_sha256": "6a52d95d6f69711e92213137a21284aec008de1386c57660840357065d564a79",
+      "change": "classified exact-literal local-provenance redaction only"
+    },
+    {
+      "path": "docs/reports/raw/model0/v4_attempt_01.txt",
+      "original_sha256": "20b1700d0f571d345e7d8f78d7ad4a2bec726c74013dbe0bac173f68fb6c7ab8",
+      "public_sha256": "c43965a350e1121e650847693fe2a29601394bd0329f5f1bd76fa44f1e86be18",
+      "change": "classified exact-literal local-provenance redaction only"
+    },
+    {
+      "path": "docs/reports/raw/parakeet_static_quality_audit_attempt01.txt",
+      "original_sha256": "1768428d2fcf86231097769cd95141d07a47e77b1baad1825f6b14133c67982a",
+      "public_sha256": "1d39aa0c477082312468fcd6c901d4bb16808517c3efbe619b82acc47d177ede",
+      "change": "classified exact-literal local-provenance redaction only"
+    },
+    {
+      "path": "docs/reports/raw/public_dev_source_score_attempt01.txt",
+      "original_sha256": "24115bba33f73dda100ccc4dc61ea09fc701db41257a9858e5b64d38adac3da7",
+      "public_sha256": "e8cb86ce382cb7ec7be0ee5a8ca0e4e39bb47777caf2e66a08d79e287ff9a797",
+      "change": "classified exact-literal local-provenance redaction only"
+    },
+    {
+      "path": "experiments/kokoro-native-attempt01/provenance.json",
+      "original_sha256": "fd0042f5be7be8f4e261965bc2ba4bff2a2d2e06ea4a9c71512497ceda38dfc4",
+      "public_sha256": "19a4086998739332cefb97206b4e9303799390870d5c27fc438f80f1f9b1d750",
+      "change": "classified exact-literal local-provenance redaction only"
+    },
+    {
+      "path": "experiments/kokoro-original-cpu-attempt01/provenance.json",
+      "original_sha256": "31fdd5c3a1eb4555ba2861c535bc2082dd5b9a3d2244d4a84e34e4e4f7362cea",
+      "public_sha256": "caae5315f199355ca5959184420dead7b3c52e3917f14debc8493b25e6dc869f",
+      "change": "classified exact-literal local-provenance redaction only"
+    },
+    {
+      "path": "experiments/manifests/asr_tts_probe/asr_book_closed_config.json",
+      "original_sha256": "5e574a5e33bc09d56201702e55a9e6f0f1e7fd11bf1e42669885ee71ead0c8ba",
+      "public_sha256": "ee53bcfee1d998d7fcad281c21db2f318b3f0d0cb642de722164a68bfc5d86f6",
+      "change": "classified exact-literal local-provenance redaction only"
+    },
+    {
+      "path": "experiments/manifests/asr_tts_probe/config.json",
+      "original_sha256": "96f902c5f5b4eb1b03706b5ea6bda4246aa0ec27bfd466a0c8a02b91ce9b3667",
+      "public_sha256": "f634be821908f5dd742864030992be7840d7fa8c34b476204240ad3817e1f5ea",
+      "change": "classified exact-literal local-provenance redaction only"
+    },
+    {
+      "path": "experiments/manifests/asr_tts_probe/kokoro_original_cpu_config.json",
+      "original_sha256": "59fde6ec7909bf03a5998631fd18c66e4b5d313ec9205b9ed3efd04a98d879a7",
+      "public_sha256": "5741aa249b98fb46046f039a6f85e96f3ea7b7d1f00c6074c890883cb1fedbdb",
+      "change": "classified exact-literal local-provenance redaction only"
+    },
+    {
+      "path": "experiments/manifests/stress_bc_exact_overfit_attempt02/config.json",
+      "original_sha256": "8029cf1c6146826e831f1e71671350d83a44119a19a8608a1773aec4541b82ce",
+      "public_sha256": "358dd197e135ceba0c06230e4207f4d4621d0e170473255b166cd7a1648c59b8",
+      "change": "classified exact-literal local-provenance redaction only"
+    },
+    {
+      "path": "experiments/manifests/stress_bc_exact_overfit_development/config.json",
+      "original_sha256": "c801693965edcb6bb0ca933c090910e07db7d501edbd7e8dc17070ee19cc099e",
+      "public_sha256": "7867e2231b45ca9a473fa655f755989336811be7fa1054c95481576af316aa55",
+      "change": "classified exact-literal local-provenance redaction only"
+    },
+    {
+      "path": "experiments/native-calibration-attempt01/provenance.json",
+      "original_sha256": "406fe81176e10973eb6f9a664527c2d32c6ef3fa29fe11e1ff26c0caacb66314",
+      "public_sha256": "f48081c2536acd6dbf26617b3eb968eb79719565e5fae6edb403434f4d80baa2",
+      "change": "classified exact-literal local-provenance redaction only"
+    },
+    {
+      "path": "experiments/native-resume-audit-attempt01/audit_start_checkpoint.json",
+      "original_sha256": "f26261d3cfd348ebb37b352268dbdf2ef343d46820bc0e5bda9b37b6398942e5",
+      "public_sha256": "f99f61c3df47eb5c1ae33fd870654334dd036dfef8bc2b98a2dea84580caaf3b",
+      "change": "classified exact-literal local-provenance redaction only"
+    },
+    {
+      "path": "experiments/native-resume-audit-attempt01/provenance.json",
+      "original_sha256": "ba052b6557ddffa53eb4922dcda69c4b2f6dc7e47a1b68a6b92292c0fcbec211",
+      "public_sha256": "b2b5677fc1bdee4a58ae24c411075bfdefff72e1ac0ed302750673cfb90c8e29",
+      "change": "classified exact-literal local-provenance redaction only"
+    },
+    {
+      "path": "experiments/parakeet-book-closed-attempt01/provenance.json",
+      "original_sha256": "96c09fbbfc815f297112c544fa5529dbd9ae333d2f8238e0e6a2379be8e94ffe",
+      "public_sha256": "0dece989f620ca82e85b17033c03a9c0c97ccabd0356bc0b352bd8f7add3c174",
+      "change": "classified exact-literal local-provenance redaction only"
+    },
+    {
+      "path": "experiments/parakeet-book-closed-attempt01/static_quality_audit.json",
+      "original_sha256": "67078100e3fa17d047e07e308254744e780062a8e333b5abccfa90360d5e1ce1",
+      "public_sha256": "228242bb72c4daa68cd4a96aa4d763fe992101e28f3f581a19a4afc08aaf8216",
+      "change": "classified exact-literal local-provenance redaction only"
+    }
+  ],
+  "forbidden_tracked_paths": [],
+  "unique_reachable_text_blobs_checked_for_personal_identifiers": 308,
+  "public_clone_tests": "180passed19.42s; exactpinnedexistingresearchruntime, freshcheckoutwithoutdownloadedassets",
+  "original_git_identity_unchanged": true,
+  "public_citations_verified": [
+    "scalinity/LocalFlow public",
+    "scalinity/MindFriend public"
+  ],
+  "binary_review": "canonical251pagePDFmetadata has no owner-specific identifiers; nativeTokenManifestNPY is synthetic fixedrandomintegers",
+  "credentials": "allscannerhitsclassifiednoncredentials; scannerrawflagcounts are notzero"
+}

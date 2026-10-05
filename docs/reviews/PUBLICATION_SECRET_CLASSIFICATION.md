@@ -18,3 +18,7 @@ The 970 hash findings comprise:
 The reviewed population spans **9 files, 4 recorded commits and 970 distinct finding fingerprints**. Nine finding blobs and seven additional verification-source blobs were preserved verbatim before classification. Each finding has its own classification and evidence in the private receipt.
 
 No source value was redacted, no Git history or index was changed, no network request was made, and no global rule or pattern allowlist was created by this review. These classifications apply to the exact supplied initial findings; they do not establish clearance for unrelated credentials or personal identifiers, later findings, or the complete publication candidate. The separate full-tree/full-history publication audit remains authoritative for those checks.
+
+## Root follow-up: completed candidate
+
+The completed 21-commit candidate adds one generic-pattern match on the session report's sentence describing fixed token blocks, timing and memory. Root inspected the exact line: it is nonsecret measured numerical metadata, without a credential. Its original is preserved privately. Total history classification is therefore 971 noncredential metadata/text constructions, zero real credentials, zero credential-shaped fixture values, zero unclassified. The current-tree's 969 matches correspond to those verified records/lines. This follow-up does not change the independent review's original 970-hit scope.

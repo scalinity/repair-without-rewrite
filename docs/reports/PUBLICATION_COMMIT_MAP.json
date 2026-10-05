@@ -1,0 +1,89 @@
+{
+  "scope": "21original development commits before publication-only receipt commits",
+  "commits": [
+    {
+      "original_commit": "179843909b61bb2e375995e2b520f8ee9536b309",
+      "public_commit": "8cd1dd6b1ae45fa173bb840fa8c5b42e0795a439"
+    },
+    {
+      "original_commit": "35f856f0f2ea8699a012dc039a7fc531e2452d2e",
+      "public_commit": "509c2351a037d0d988eadacafef5b80d9b2d4ffe"
+    },
+    {
+      "original_commit": "4300b7ef248a9588ba492c36729d1e5e9888e75c",
+      "public_commit": "b7d172090271881732e9f6be7bbfe9606575359c"
+    },
+    {
+      "original_commit": "52b65ec8633d1a89ab157bae0b8f135a142ca485",
+      "public_commit": "0d2f1a69de5b79831bfadcf2bcca4d9c72e52818"
+    },
+    {
+      "original_commit": "5519fe551978171e760aaaf67701a226c699ba0e",
+      "public_commit": "5310ce55775f345651a711d607d3403510522a1c"
+    },
+    {
+      "original_commit": "5e0df28f5ba9c3bcfc5fb457a520406d56b32fb3",
+      "public_commit": "5fee5991b8a1644104b73f6dd415ed242e9d2548"
+    },
+    {
+      "original_commit": "67ae871b36c6d4b795328c1044ec249a23afd4de",
+      "public_commit": "9217cb1d0a25ec77585a84ffabab9f0b45c0cf46"
+    },
+    {
+      "original_commit": "6b29d49fe795b44e2aadfd8a1ddc7942e6e2a48f",
+      "public_commit": "158fb18335b131429c4767712d333f27b91e4610"
+    },
+    {
+      "original_commit": "6d4e4a580efbbca6e553dc123aa869c0b564b4e4",
+      "public_commit": "88736155560980af9ec3faff17888f9ce50e144b"
+    },
+    {
+      "original_commit": "6d52a2d141d36087f9b670020e6143797884d3da",
+      "public_commit": "6dec9baa221b473ada3bd30d108b2209d4a04039"
+    },
+    {
+      "original_commit": "6f51470f30420ef7caa04ba0eb46f56f04c4ce73",
+      "public_commit": "e740fcca0a5dcf34c3b2b6a2b75377917c21fab0"
+    },
+    {
+      "original_commit": "706e3fa0380274be62b01567713a09af7b76cf03",
+      "public_commit": "e25c6676adeea48dedae3d7d2bdf0e48d583c55d"
+    },
+    {
+      "original_commit": "7ea0f3dfb7aa3bc9fef8a3a4ed0cd4e00c807fcf",
+      "public_commit": "5a15569a31c4a01af8b47a8156a23226b28024ee"
+    },
+    {
+      "original_commit": "8615df435b6c8beda6dbb8deee1192cfc16e4803",
+      "public_commit": "2cc663aa07559d4d81e09afebc5513087d841a19"
+    },
+    {
+      "original_commit": "8df82ed374e24ceea473c3b13d6ceca23c84c647",
+      "public_commit": "9cd20f76d8f75b6c0100bbea1b110e9d810f1034"
+    },
+    {
+      "original_commit": "8f7c1a4b9a24cea8a26e7a98d1e11ab50f4feec3",
+      "public_commit": "39455cbfd5d330629ffc41d9bfdbfa3c30ff2b3c"
+    },
+    {
+      "original_commit": "984294f56b8be6b93a812c727a24d89f3b515f77",
+      "public_commit": "7badeaaebc518bf6683412811bd9234a3f937666"
+    },
+    {
+      "original_commit": "9c110a41482acf19347222c535bc6c03101335e9",
+      "public_commit": "3fb5ac921f1c5c05e44bcca07f2d08a6b2abc1da"
+    },
+    {
+      "original_commit": "9dbef2b8673721a1face6a7c7a87a520fdfb140d",
+      "public_commit": "c0e1fd91ee9a4b5cea664fe608076389eb798b43"
+    },
+    {
+      "original_commit": "a9f07fb1795650d7d35ccdcad8e48ab91127cd56",
+      "public_commit": "3bd8218aa157e586aecdab243e9ce43bf93da0b6"
+    },
+    {
+      "original_commit": "b252ce004ef807a97cdd37da45fec8987d4165c6",
+      "public_commit": "91456c051103a9781404bb5e5571aa3d47407aa3"
+    }
+  ]
+}
