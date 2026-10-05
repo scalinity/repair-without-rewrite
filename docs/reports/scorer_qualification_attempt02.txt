@@ -1,0 +1,11 @@
+......................................                                   [100%]
+============================= slowest 8 durations ==============================
+11.63s call     tests/scoring/test_qualification.py::test_exhaustive_3375_triples
+4.13s call     tests/scoring/test_qualification.py::test_10000_fixed_seed_properties
+0.70s call     tests/scoring/test_qualification.py::test_500_preselected_development_parity
+0.14s call     tests/scoring/test_qualification.py::test_unicode_151_normalization_conformance
+0.03s call     tests/scoring/test_qualification.py::test_metamorphic_relations
+0.01s call     tests/scoring/test_qualification.py::test_exhaustive_225_pair_lattices_and_masks
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+38 passed in 16.68s

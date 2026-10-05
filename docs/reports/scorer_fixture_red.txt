@@ -1,0 +1,447 @@
+FFFFFFFFFFFFFFFFFFFFF                                                    [100%]
+=================================== FAILURES ===================================
+____________________________ test_fixture[identity] ____________________________
+
+name = 'identity', r = 'red blue', s = 'red blue', o = 'red blue'
+repair = (0, 0), introduced = (0, 0)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = ('red', 'blue'), source = ('red', 'blue'), output = ('red', 'blue')
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+_____________________________ test_fixture[repair] _____________________________
+
+name = 'repair', r = 'red blue', s = 'red green', o = 'red blue'
+repair = (1, 1), introduced = (0, 0)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = ('red', 'blue'), source = ('red', 'green'), output = ('red', 'blue')
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+_____________________________ test_fixture[damage] _____________________________
+
+name = 'damage', r = 'red blue', s = 'red blue', o = 'red green'
+repair = (0, 0), introduced = (1, 1)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = ('red', 'blue'), source = ('red', 'blue'), output = ('red', 'green')
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+_____________________ test_fixture[wrong_different_wrong] ______________________
+
+name = 'wrong_different_wrong', r = 'red blue', s = 'red green', o = 'red black'
+repair = (0, 0), introduced = (0, 0)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = ('red', 'blue'), source = ('red', 'green')
+output = ('red', 'black')
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+___________________________ test_fixture[collateral] ___________________________
+
+name = 'collateral', r = 'a b c d', s = 'a x c d', o = 'a b y d'
+repair = (1, 1), introduced = (1, 1)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = ('a', 'b', 'c', 'd'), source = ('a', 'x', 'c', 'd')
+output = ('a', 'b', 'y', 'd')
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+________________________ test_fixture[repair_deletion] _________________________
+
+name = 'repair_deletion', r = 'a b', s = 'a', o = 'a b', repair = (1, 1)
+introduced = (0, 0)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = ('a', 'b'), source = ('a',), output = ('a', 'b')
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+__________________________ test_fixture[new_deletion] __________________________
+
+name = 'new_deletion', r = 'a b', s = 'a b', o = 'a', repair = (0, 0)
+introduced = (1, 1)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = ('a', 'b'), source = ('a', 'b'), output = ('a',)
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+________________________ test_fixture[repair_insertion] ________________________
+
+name = 'repair_insertion', r = 'a b', s = 'a x b', o = 'a b', repair = (1, 1)
+introduced = (0, 0)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = ('a', 'b'), source = ('a', 'x', 'b'), output = ('a', 'b')
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+_________________________ test_fixture[new_insertion] __________________________
+
+name = 'new_insertion', r = 'a b', s = 'a b', o = 'a x b', repair = (0, 0)
+introduced = (1, 1)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = ('a', 'b'), source = ('a', 'b'), output = ('a', 'x', 'b')
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+_______________________ test_fixture[repeated_identity] ________________________
+
+name = 'repeated_identity', r = 'a a', s = 'a', o = 'a', repair = (0, 0)
+introduced = (0, 0)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = ('a', 'a'), source = ('a',), output = ('a',)
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+________________________ test_fixture[repeated_repair] _________________________
+
+name = 'repeated_repair', r = 'a a', s = 'a', o = 'a a', repair = (1, 1)
+introduced = (0, 0)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = ('a', 'a'), source = ('a',), output = ('a', 'a')
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+________________________ test_fixture[leading_trailing] ________________________
+
+name = 'leading_trailing', r = 'a b', s = 'a b', o = 'z a b q q'
+repair = (0, 0), introduced = (3, 3)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = ('a', 'b'), source = ('a', 'b'), output = ('z', 'a', 'b', 'q', 'q')
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+____________________________ test_fixture[gap_tie] _____________________________
+
+name = 'gap_tie', r = 'START END', s = 'START a b END', o = 'START b c END'
+repair = (0, 1), introduced = (0, 1)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = ('START', 'END'), source = ('START', 'a', 'b', 'END')
+output = ('START', 'b', 'c', 'END')
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+____________________________ test_fixture[reorder] _____________________________
+
+name = 'reorder', r = 'a b', s = 'a b', o = 'b a', repair = (0, 0)
+introduced = (2, 2)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = ('a', 'b'), source = ('a', 'b'), output = ('b', 'a')
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+__________________________ test_fixture[valid_empty] ___________________________
+
+name = 'valid_empty', r = 'a b', s = 'a b', o = '', repair = (0, 0)
+introduced = (2, 2)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = ('a', 'b'), source = ('a', 'b'), output = ()
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+________________________ test_fixture[empty_reference] _________________________
+
+name = 'empty_reference', r = '', s = '', o = 'x y', repair = (0, 0)
+introduced = (2, 2)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = (), source = (), output = ('x', 'y')
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+__________________________ test_fixture[missing_raw] ___________________________
+
+name = 'missing_raw', r = 'a', s = 'a x', o = '', repair = (1, 1)
+introduced = (1, 1)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = ('a',), source = ('a', 'x'), output = ()
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+___________________________ test_fixture[capped_raw] ___________________________
+
+name = 'capped_raw', r = 'a b', s = 'a x', o = 'a b', repair = (1, 1)
+introduced = (0, 0)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = ('a', 'b'), source = ('a', 'x'), output = ('a', 'b')
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+______________________ test_fixture[noncoexisting_optima] ______________________
+
+name = 'noncoexisting_optima', r = 'a b c', s = 'b c a', o = 'c a b'
+repair = (2, 2), introduced = (2, 2)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = ('a', 'b', 'c'), source = ('b', 'c', 'a'), output = ('c', 'a', 'b')
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+___________________________ test_fixture[all_empty] ____________________________
+
+name = 'all_empty', r = '', s = '', o = '', repair = (0, 0), introduced = (0, 0)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = (), source = (), output = ()
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+__________________________ test_fixture[source_only] ___________________________
+
+name = 'source_only', r = '', s = 'a b', o = '', repair = (2, 2)
+introduced = (0, 0)
+
+    @pytest.mark.parametrize('name,r,s,o,repair,introduced',FIXTURES,ids=[f[0] for f in FIXTURES])
+    def test_fixture(name,r,s,o,repair,introduced):
+>       actual=score_tokens(tuple(r.split()),tuple(s.split()),tuple(o.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scoring/test_fixtures.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reference = (), source = ('a', 'b'), output = ()
+
+    def score_tokens(reference, source, output):
+>       raise NotImplementedError('reference_triple_v1 is not yet implemented')
+E       NotImplementedError: reference_triple_v1 is not yet implemented
+
+src/scoring/triple.py:2: NotImplementedError
+=========================== short test summary info ============================
+FAILED tests/scoring/test_fixtures.py::test_fixture[identity] - NotImplemente...
+FAILED tests/scoring/test_fixtures.py::test_fixture[repair] - NotImplementedE...
+FAILED tests/scoring/test_fixtures.py::test_fixture[damage] - NotImplementedE...
+FAILED tests/scoring/test_fixtures.py::test_fixture[wrong_different_wrong] - ...
+FAILED tests/scoring/test_fixtures.py::test_fixture[collateral] - NotImplemen...
+FAILED tests/scoring/test_fixtures.py::test_fixture[repair_deletion] - NotImp...
+FAILED tests/scoring/test_fixtures.py::test_fixture[new_deletion] - NotImplem...
+FAILED tests/scoring/test_fixtures.py::test_fixture[repair_insertion] - NotIm...
+FAILED tests/scoring/test_fixtures.py::test_fixture[new_insertion] - NotImple...
+FAILED tests/scoring/test_fixtures.py::test_fixture[repeated_identity] - NotI...
+FAILED tests/scoring/test_fixtures.py::test_fixture[repeated_repair] - NotImp...
+FAILED tests/scoring/test_fixtures.py::test_fixture[leading_trailing] - NotIm...
+FAILED tests/scoring/test_fixtures.py::test_fixture[gap_tie] - NotImplemented...
+FAILED tests/scoring/test_fixtures.py::test_fixture[reorder] - NotImplemented...
+FAILED tests/scoring/test_fixtures.py::test_fixture[valid_empty] - NotImpleme...
+FAILED tests/scoring/test_fixtures.py::test_fixture[empty_reference] - NotImp...
+FAILED tests/scoring/test_fixtures.py::test_fixture[missing_raw] - NotImpleme...
+FAILED tests/scoring/test_fixtures.py::test_fixture[capped_raw] - NotImplemen...
+FAILED tests/scoring/test_fixtures.py::test_fixture[noncoexisting_optima] - N...
+FAILED tests/scoring/test_fixtures.py::test_fixture[all_empty] - NotImplement...
+FAILED tests/scoring/test_fixtures.py::test_fixture[source_only] - NotImpleme...
+21 failed in 0.03s

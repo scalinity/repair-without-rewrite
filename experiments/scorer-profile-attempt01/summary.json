@@ -1,0 +1,28 @@
+{
+  "cap_cases": 0,
+  "cases": 502,
+  "cases_per_second": 135.56051335602223,
+  "commit": "67ae871b36c6d4b795328c1044ec249a23afd4de",
+  "configuration": {
+    "joint_moves": 1750000,
+    "joint_states": 250000,
+    "pair_cells": 4000000
+  },
+  "count_ambiguous_cases": 1,
+  "cpu_interference": "parallel coding/correctness possible; not exclusive native campaign",
+  "dirty": " M docs/design-inputs/INPUT_INVENTORY.json\n M docs/design-inputs/SHA256SUMS\n?? benchmarks/\n?? configs/\n?? docs/design-inputs/BUNDLE_SHA256SUMS\n?? docs/design-inputs/unicode-15.1.0/\n?? docs/reports/raw/\n?? docs/reports/scorer_fixture_green.txt\n?? docs/reports/scorer_fixture_red.txt\n?? docs/reports/scorer_qualification_attempt01.txt\n?? docs/reports/scorer_qualification_attempt02.txt\n?? experiments/manifests/\n?? src/data/\n?? src/generation/\n?? src/models/\n?? src/scoring/\n?? tests/\n",
+  "elapsed_seconds": 3.7031432499934454,
+  "finished_utc": "2026-10-05T05:11:36.583478+00:00",
+  "local_ambiguous_cases": 27,
+  "manifest_sha256": "ba851b894bff402aa9a4539244584e6a2adcb61ee7cf4cb953924c7d6c89f68a",
+  "max_examined_moves": 167783,
+  "max_joint_edges": 91520,
+  "max_joint_states": 23969,
+  "max_repair_bound_width": 1,
+  "per_case_sha256": "8f11fa380a28fd24c30faa44714ae742eeabadc43f3f47fbd8670973d2a908cf",
+  "population": "synthetic development only",
+  "process_peak_rss_bytes_macos": 97222656,
+  "python_traced_peak_bytes": 39117567,
+  "seed": 20261004,
+  "started_utc": "2026-10-05T05:11:32.878113+00:00"
+}

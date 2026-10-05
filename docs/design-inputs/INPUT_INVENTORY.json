@@ -42,7 +42,7 @@
       "name": "SHA256SUMS",
       "sha256": "8b1f98bb7e8debd01c062992efa8c6e422a2c23e4e458ff0b0d07dd0b11bcbd1",
       "bytes": 635,
-      "relative_copy": "docs/design-inputs/SHA256SUMS"
+      "relative_copy": "docs/design-inputs/BUNDLE_SHA256SUMS"
     }
   ]
 }
