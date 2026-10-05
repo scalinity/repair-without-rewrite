@@ -1,0 +1,198 @@
+{
+  "actual_cases": 12,
+  "audio_manifest": {
+    "bytes": 15015,
+    "path": "experiments/manifests/public_audio_development/manifest.book_closed.attempt03.json",
+    "sha256": "63b130e821d68af89db2b25b864217afb5e70aa921b3d9cc5b31e76693663159"
+  },
+  "cases": [
+    {
+      "audio_sha256": "d4fb00ef61d919935a255ba696b534a59180ba42927d563158578331db5cb939",
+      "chapter_metadata_sha256": "2e9db25c250a143b031ca003180acfce84b364e31fbc79250e306303e6f25306",
+      "families": {
+        "book": "340",
+        "chapter": "43358",
+        "chapter_metadata_component": "b75819f97e66927377ffa32e10ba6738c69c4bc1c55610fe69968ddf6a2e2a1e",
+        "project": "4618",
+        "speaker": "5536"
+      },
+      "id": "5536-43358-0006",
+      "official_split": "dev-clean",
+      "role": "hpo_development",
+      "source_group_id": "5a91d5a57328d6a41d63a67601712b7bdb0f0c63dadeac014bd1a851d70931cb"
+    },
+    {
+      "audio_sha256": "79fc42f643effde9893d92bec63d268ebc77a7bfbfb9e65c654879c3b1777ecf",
+      "chapter_metadata_sha256": "2e9db25c250a143b031ca003180acfce84b364e31fbc79250e306303e6f25306",
+      "families": {
+        "book": "2710",
+        "chapter": "274162",
+        "chapter_metadata_component": "b2dcdec03eb5f590b77e5357072c78eedb1ec4e686e775f07f0d41a00ea88755",
+        "project": "7451",
+        "speaker": "8288"
+      },
+      "id": "8288-274162-0010",
+      "official_split": "dev-other",
+      "role": "hpo_development",
+      "source_group_id": "d66414b2527c94d6ce1346af326bd70573e5220ca08d7ea636a31bf42321c67b"
+    },
+    {
+      "audio_sha256": "5f6b33591c6866d3b6134415ae2040e6015f6d23d15a5aba1c0aeb9dbd1510b4",
+      "chapter_metadata_sha256": "2e9db25c250a143b031ca003180acfce84b364e31fbc79250e306303e6f25306",
+      "families": {
+        "book": "3424",
+        "chapter": "4944",
+        "chapter_metadata_component": "dde4c10cc2fb88ef542667b01dae03c4f421658feae7306cf96b2888990825af",
+        "project": "2528",
+        "speaker": "3752"
+      },
+      "id": "3752-4944-0048",
+      "official_split": "dev-clean",
+      "role": "hpo_development",
+      "source_group_id": "bb483a41d8bfd4cc3f720c296ac2eaac55e10a5425353188bcfe06fca32899fd"
+    },
+    {
+      "audio_sha256": "a0fe4974c180483fde39d60452c0bc487993bc3c9282f09cd9a2d5b477eb4681",
+      "chapter_metadata_sha256": "2e9db25c250a143b031ca003180acfce84b364e31fbc79250e306303e6f25306",
+      "families": {
+        "book": "24869",
+        "chapter": "112381",
+        "chapter_metadata_component": "adbfca0346e5fe71c83ad6ea567f0b307c7178d7064c48ce8d70a3c23b8871a0",
+        "project": "7336",
+        "speaker": "4572"
+      },
+      "id": "4572-112381-0006",
+      "official_split": "dev-other",
+      "role": "hpo_development",
+      "source_group_id": "a4467178ffd759fd65a0be61cac5c18ac241e10caa46cf709d116368855ef7af"
+    },
+    {
+      "audio_sha256": "adfbf6e714aafdb23e00d482f37daca2d5b7fec3e13698ec0b8ca7269bcc7783",
+      "chapter_metadata_sha256": "2e9db25c250a143b031ca003180acfce84b364e31fbc79250e306303e6f25306",
+      "families": {
+        "book": "1857",
+        "chapter": "166546",
+        "chapter_metadata_component": "377cb1cd7c00c782650858bd026e880a4aa5e229eda3c87608f9032ee77a0c1d",
+        "project": "2510",
+        "speaker": "3081"
+      },
+      "id": "3081-166546-0007",
+      "official_split": "dev-clean",
+      "role": "hpo_development",
+      "source_group_id": "a5e18e6d413ee814060d3fab8bd2a375538efde1fc4a5717d0149ea9ca006783"
+    },
+    {
+      "audio_sha256": "fa7f85e7ff7d1166c3e877b17f93058cadfd9147d8aab997fde0e82a6e23f25b",
+      "chapter_metadata_sha256": "2e9db25c250a143b031ca003180acfce84b364e31fbc79250e306303e6f25306",
+      "families": {
+        "book": "42259",
+        "chapter": "118436",
+        "chapter_metadata_component": "fef0c4548c61b575984e9eab17b542207a7f7ac203eed0a090041cd73180f54c",
+        "project": "7692",
+        "speaker": "251"
+      },
+      "id": "251-118436-0004",
+      "official_split": "dev-clean",
+      "role": "hpo_development",
+      "source_group_id": "661dc98f8125ddb3af198aab9b7423c965ec886a74d4f4a4afbd6f3a09f8b9e9"
+    },
+    {
+      "audio_sha256": "4791b38f6a7e9b24617254677d31a8b45201a942a8e1193f3e6bfbfbf48e690a",
+      "chapter_metadata_sha256": "2e9db25c250a143b031ca003180acfce84b364e31fbc79250e306303e6f25306",
+      "families": {
+        "book": "11954",
+        "chapter": "38591",
+        "chapter_metadata_component": "c3001e311ec3175c2ba5867e76f0f2ef6b99e2aafcc039295efa36f3a83cc900",
+        "project": "4458",
+        "speaker": "6599"
+      },
+      "id": "6599-38591-0009",
+      "official_split": "dev-other",
+      "role": "hpo_development",
+      "source_group_id": "237c1fb4572ce58eb0051ce7e764beb8f0bcccf79cd1dbb3a6b8242b44c033af"
+    },
+    {
+      "audio_sha256": "22ae23cb7d7437d9916911660709a0a2baaf9180562d88f471ceb0ac102b6c2f",
+      "chapter_metadata_sha256": "2e9db25c250a143b031ca003180acfce84b364e31fbc79250e306303e6f25306",
+      "families": {
+        "book": "326",
+        "chapter": "15664",
+        "chapter_metadata_component": "5082c9c6a25aec728919ab4eb64e5094010995134248d97151f5300e1b68518c",
+        "project": "3592",
+        "speaker": "3000"
+      },
+      "id": "3000-15664-0005",
+      "official_split": "dev-clean",
+      "role": "hpo_development",
+      "source_group_id": "54c2d68d78f9636648a6d5012107b6a2b573ccbb9fd3c10ca7c39f983421d30e"
+    },
+    {
+      "audio_sha256": "bf0e2da263369dfcb512f721ecdc88ac8faad31241cc28bc49f3201a207d4654",
+      "chapter_metadata_sha256": "2e9db25c250a143b031ca003180acfce84b364e31fbc79250e306303e6f25306",
+      "families": {
+        "book": "6107",
+        "chapter": "288047",
+        "chapter_metadata_component": "658888f28dadb6edf7aeb0b77756d06e83b0af1fac4546d9e5577325fb137ff2",
+        "project": "76",
+        "speaker": "116"
+      },
+      "id": "116-288047-0021",
+      "official_split": "dev-other",
+      "role": "hpo_development",
+      "source_group_id": "1765d7c6d8eef3baa516512f1030da7fddef57e61d29ac23fc9c5f39bdc81f6c"
+    },
+    {
+      "audio_sha256": "a40e8b9faa4b522be836f7ba49771341bbda56dbc3c79efa8d92fb1ee447d15c",
+      "chapter_metadata_sha256": "2e9db25c250a143b031ca003180acfce84b364e31fbc79250e306303e6f25306",
+      "families": {
+        "book": "753",
+        "chapter": "88291",
+        "chapter_metadata_component": "a6234b4862baa92625e422551cb7e7b004b77908a650ba9066bbbd9f279c1a7f",
+        "project": "6328",
+        "speaker": "6841"
+      },
+      "id": "6841-88291-0010",
+      "official_split": "dev-other",
+      "role": "hpo_development",
+      "source_group_id": "adff3eaf3e52c026f80a3fb9554414bb085782453a84f3abfd277c5d31a06dea"
+    },
+    {
+      "audio_sha256": "06cddff7085ab132acc0d1474371398409e5ae752b3666215482526f4d2e3f09",
+      "chapter_metadata_sha256": "2e9db25c250a143b031ca003180acfce84b364e31fbc79250e306303e6f25306",
+      "families": {
+        "book": "10314",
+        "chapter": "304647",
+        "chapter_metadata_component": "3d1bb6589b5acde5725e270331bb450aa1aa6561e6fee7c1884c87e18ab48f80",
+        "project": "8629",
+        "speaker": "8842"
+      },
+      "id": "8842-304647-0004",
+      "official_split": "dev-clean",
+      "role": "hpo_development",
+      "source_group_id": "a83c754de7ac9dbe72eeebf03575a72d1a1df590836ceb6c2760914e88fb7736"
+    },
+    {
+      "audio_sha256": "0f3f475e92f8dcb85dc373f5e4494de5a190cc58c9bdcfd4238fd95e5a3289b0",
+      "chapter_metadata_sha256": "2e9db25c250a143b031ca003180acfce84b364e31fbc79250e306303e6f25306",
+      "families": {
+        "book": "13202",
+        "chapter": "64038",
+        "chapter_metadata_component": "f2f32f6d4fbdaa64a810bca100e1aad1ee0e58eab58f2a5a5b1d04c8c5806589",
+        "project": "5405",
+        "speaker": "5694"
+      },
+      "id": "5694-64038-0014",
+      "official_split": "dev-clean",
+      "role": "hpo_development",
+      "source_group_id": "ede2c32ced35d4cf437d88c2006d85d4ef7aa607e614224f32666f88d287cd61"
+    }
+  ],
+  "role_manifest": {
+    "bytes": 15332827,
+    "path": "experiments/manifests/public_lspc_roles.development.attempt02.jsonl",
+    "sha256": "d579d1c6d2e3b0bb2dcc48613ac0c448414ceb998ae6a098c9cabe21fa4fa159"
+  },
+  "scope": "join to independently qualified role/closure manifest; no new role assignment",
+  "status": "PASS_BOOK_PROJECT_DEVELOPMENT_CLOSURE",
+  "target_quota": 20
+}

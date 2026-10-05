@@ -1,0 +1,134 @@
+{
+  "ASR_hypotheses_consumed": 0,
+  "captured_utc": "2026-10-05T05:56:35.673997+00:00",
+  "chapter_metadata_sha256": "2e9db25c250a143b031ca003180acfce84b364e31fbc79250e306303e6f25306",
+  "checks": [
+    {
+      "book_id": "5140",
+      "book_overlaps_final": false,
+      "id": "3536-8226-0014",
+      "project_id": "2935"
+    },
+    {
+      "book_id": "12587",
+      "book_overlaps_final": false,
+      "id": "5895-34615-0006",
+      "project_id": "4314"
+    },
+    {
+      "book_id": "1627",
+      "book_overlaps_final": false,
+      "id": "8297-275155-0011",
+      "project_id": "7493"
+    },
+    {
+      "book_id": "39159",
+      "book_overlaps_final": true,
+      "id": "5338-284437-0021",
+      "project_id": "7879"
+    },
+    {
+      "book_id": "135",
+      "book_overlaps_final": true,
+      "id": "174-168635-0019",
+      "project_id": "2614"
+    },
+    {
+      "book_id": "5267",
+      "book_overlaps_final": false,
+      "id": "2277-149897-0006",
+      "project_id": "1676"
+    },
+    {
+      "book_id": "10136",
+      "book_overlaps_final": true,
+      "id": "1919-142785-0038",
+      "project_id": "1319"
+    },
+    {
+      "book_id": "3424",
+      "book_overlaps_final": false,
+      "id": "3752-4944-0048",
+      "project_id": "2528"
+    },
+    {
+      "book_id": "42259",
+      "book_overlaps_final": false,
+      "id": "251-118436-0004",
+      "project_id": "7692"
+    },
+    {
+      "book_id": "1906",
+      "book_overlaps_final": false,
+      "id": "2412-153947-0007",
+      "project_id": "1874"
+    },
+    {
+      "book_id": "2981",
+      "book_overlaps_final": true,
+      "id": "3170-137482-0034",
+      "project_id": "1037"
+    },
+    {
+      "book_id": "10136",
+      "book_overlaps_final": true,
+      "id": "2078-142845-0009",
+      "project_id": "1319"
+    },
+    {
+      "book_id": "8201",
+      "book_overlaps_final": false,
+      "id": "6295-64301-0001",
+      "project_id": "5410"
+    },
+    {
+      "book_id": "19810",
+      "book_overlaps_final": false,
+      "id": "1988-147956-0022",
+      "project_id": "1592"
+    },
+    {
+      "book_id": "2083",
+      "book_overlaps_final": false,
+      "id": "2803-154328-0009",
+      "project_id": "1893"
+    },
+    {
+      "book_id": "12170",
+      "book_overlaps_final": false,
+      "id": "6241-66616-0002",
+      "project_id": "5500"
+    },
+    {
+      "book_id": "6308",
+      "book_overlaps_final": false,
+      "id": "2902-9008-0007",
+      "project_id": "3044"
+    },
+    {
+      "book_id": "20087",
+      "book_overlaps_final": false,
+      "id": "6313-76958-0022",
+      "project_id": "5898"
+    },
+    {
+      "book_id": "10314",
+      "book_overlaps_final": false,
+      "id": "8842-304647-0004",
+      "project_id": "8629"
+    },
+    {
+      "book_id": "11582",
+      "book_overlaps_final": false,
+      "id": "6319-57405-0007",
+      "project_id": "5170"
+    }
+  ],
+  "final_distinct_book_ids": 97,
+  "known_final_book_overlap_cases": 5,
+  "old_manifest_sha256": "8172181d641fede297373c93ff9cf4f03098650723690c98740d6f7e3c0198a0",
+  "old_roles_sha256": "fb5cd642d59d23c86a4bf1bb86e47cf07a6e748c5433749423c392bec375e32d",
+  "required_action": "known book/project connected closure and fresh DEV selection before inference",
+  "selected": 20,
+  "status": "REJECT_OLD_DEV_SELECTION_BEFORE_ASR"
+}

@@ -121,3 +121,91 @@ def test_inventory_preserves_field_uncertainty_without_audio_claim(tmp_path):
     assert manifest[0]["reference_policy"] == "PROVISIONAL_NOT_FROZEN"
     assert manifest[0]["reference_raw_sha256"] != manifest[0]["reference_sha256"]
     assert manifest[0]["families"] == {"speaker": "7", "chapter": "9", "book": None}
+
+
+def test_official_parent_metadata_closes_through_an_unselected_training_chapter(tmp_path):
+    import io
+    import json
+    import tarfile
+    from src.data.public_inventory import inventory_lspc
+
+    metadata = tmp_path / "CHAPTERS.TXT"
+    metadata.write_text("; official format fixture\n"
+        "9 | 7 | 1 | dev-clean | 10 | 100 | title | title\n"
+        "10 | 7 | 1 | train-clean-100 | 20 | 200 | title | title\n"
+        "11 | 8 | 1 | test-clean | 20 | 200 | title | title\n")
+    archive = tmp_path / "synthetic.tar.gz"
+    with tarfile.open(archive, "w:gz") as tar:
+        payloads = [("LICENSE.txt", b"fixture")]
+        for split, speaker, chapter in [("dev-clean", "7", "9"), ("test-clean", "8", "11")]:
+            payloads.append((split + ".json", (json.dumps({
+                "audio_filepath": f"{split}/{speaker}/{chapter}/{speaker}-{chapter}-1.flac",
+                "text": "brief", "text_raw": "BRIEF", "duration": 1.}) + "\n").encode()))
+        for name, data in payloads:
+            member = tarfile.TarInfo(name); member.size = len(data)
+            tar.addfile(member, io.BytesIO(data))
+    summary, manifest = inventory_lspc(archive, metadata)
+    assert summary["chapter_metadata"]["chapters"] == 3
+    assert summary["chapter_metadata"]["known_parent_components"] == 1
+    assert {r["id"]: r["role"] for r in manifest} == {
+        "7-9-1": "excluded_overlap", "8-11-1": "sealed_final"}
+    assert manifest[0]["families"]["book"] != manifest[1]["families"]["book"]
+    assert manifest[0]["families"]["chapter_metadata_component"] == manifest[1]["families"]["chapter_metadata_component"]
+    metadata.write_text(metadata.read_text().replace("9 | 7", "9 | 99"))
+    with pytest.raises(ValueError, match="reader/split"):
+        inventory_lspc(archive, metadata)
+
+
+@pytest.mark.parametrize("line", ["1 | 2 | 1 | dev-clean | 3 | 4 | a | b\n" * 2,
+    "1 | 2 | 1 | dev-clean | 3 | unknown | a | b\n"])
+def test_official_chapter_duplicate_or_malformed_identity_is_not_guessed(tmp_path, line):
+    from src.data.public_inventory import chapter_families
+    path = tmp_path / "CHAPTERS.TXT"; path.write_text(line)
+    with pytest.raises(ValueError): chapter_families(path)
+
+
+def test_actual_attempt02_book_project_closure_excludes_all_known_final_relatives():
+    import json
+    from pathlib import Path
+    from src.data.contracts import sha256_bytes
+
+    root = Path(__file__).resolve().parents[2]
+    initial = root / "experiments/manifests/public_lspc_roles.development.jsonl"
+    assert sha256_bytes(initial.read_bytes()) == "fb5cd642d59d23c86a4bf1bb86e47cf07a6e748c5433749423c392bec375e32d"
+    path = root / "experiments/manifests/public_lspc_roles.development.attempt02.jsonl"
+    rows = [json.loads(line) for line in path.read_text().splitlines()]
+    assert len(rows) == 10842
+    final = [r for r in rows if r["role"] == "sealed_final"]
+    dev = [r for r in rows if r["role"] == "hpo_development"]
+    assert len(final) == 5273 and len(dev) == 898
+    for key in ("speaker", "chapter", "book", "project", "chapter_metadata_component"):
+        assert {r["families"][key] for r in dev}.isdisjoint({r["families"][key] for r in final})
+        assert all(r["families"][key] is not None for r in rows)
+    assert len({r["families"]["book"] for r in final}) == 97
+    assert len({r["source_group_id"] for r in dev}) == 12
+    assert all("reference" not in r and "text" not in r for r in rows)
+
+
+def test_training_parent_bounds_are_not_training_roles_or_audio_qualification(tmp_path):
+    import io
+    import json
+    import tarfile
+    from src.data.public_inventory import training_parent_bounds
+
+    metadata = tmp_path / "CHAPTERS.TXT"
+    metadata.write_text("1 | 7 | 1 | train-clean-100 | 10 | 100 | a | b\n"
+        "2 | 8 | 1 | train-clean-100 | 20 | 200 | a | b\n"
+        "3 | 9 | 1 | test-clean | 20 | 200 | a | b\n")
+    # No references or model outputs are needed for parent-only inventory.
+    payload = "".join(json.dumps({"audio_filepath": f"train-clean-100/{s}/{c}/{s}-{c}-1.flac"})
+        + "\n" for s, c in [(7, 1), (8, 2)]).encode()
+    archive = tmp_path / "metadata.tar.gz"
+    with tarfile.open(archive, "w:gz") as tar:
+        member = tarfile.TarInfo("train-clean-100.json"); member.size = len(payload)
+        tar.addfile(member, io.BytesIO(payload))
+    result = training_parent_bounds(archive, metadata)
+    assert result["training_rows"] == 2
+    assert result["rows_by_parent_status"] == {"known_final_parent_overlap": 1,
+        "potential_supply_pending_full_text_and_audio_qualification": 1}
+    assert result["audio_qualified_cases"] == 0
+    assert result["status"] == "METADATA_BOUNDS_ONLY_NO_TRAINING_ROLE_ASSIGNED_OR_CORPUS_SELECTED"

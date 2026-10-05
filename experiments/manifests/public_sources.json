@@ -394,5 +394,18 @@
   },
   "scope": "bounded text/metadata/code acquisition; no weights/audio/access grants",
   "slue_status": "AUTO_GATED_ACCESS_PENDING",
+  "subsequent_chapter_metadata_acquisition": {
+    "chapter_metadata": {
+      "chapters": 5831,
+      "known_parent_components": 392,
+      "rule": "official_chapter_parent_closure_v1; full released chapter/speaker/project/book graph",
+      "sha256": "2e9db25c250a143b031ca003180acfce84b364e31fbc79250e306303e6f25306",
+      "uses_audio_or_reference_payload": false
+    },
+    "chapter_metadata_archive_member": "LibriSpeech/CHAPTERS.TXT",
+    "chapter_metadata_parent_archive_acquired_utc": "2026-10-05T05:45:50Z",
+    "chapter_metadata_parent_archive_sha256": "76f87d090650617fca0cac8f88b9416e0ebf80350acb97b343a85fa903728ab3",
+    "chapter_metadata_parent_archive_url": "https://www.openslr.org/resources/12/dev-clean.tar.gz"
+  },
   "upstream_pretraining_contamination": "UNKNOWN"
 }

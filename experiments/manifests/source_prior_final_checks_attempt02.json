@@ -1,0 +1,19 @@
+{
+  "command": ".venv/bin/python -m pytest tests/data/test_contracts.py tests/data/test_byt5_probe.py tests/data/test_qwen_probe.py tests/data/test_generator_independent_review.py tests/scoring/test_independent_review.py -q",
+  "dirty": " M docs/reports/COMPARATOR_AND_PRIOR_WORK_QUALIFICATION.md\n M docs/reports/PUBLIC_SOURCE_QUALIFICATION.md\n M experiments/manifests/public_comparator_development.json\n M experiments/manifests/public_sources.json\n M src/data/public_inventory.py\n M tests/data/test_contracts.py\n?? docs/reports/BC_10M_DEVELOPMENT_PROBES.md\n?? docs/reports/BENCH00_NATIVE_CALIBRATION.md\n?? docs/reports/raw/kokoro_native_attempt01.txt\n?? docs/reports/raw/kokoro_original_cpu_attempt01.txt\n?? docs/reports/raw/kokoro_stft_cpu_domain_attempt02.txt\n?? docs/reports/raw/kokoro_stft_parity_attempt01.txt\n?? docs/reports/raw/public_audio_acquisition_attempt01.txt\n?? docs/reports/raw/public_audio_book_closed_attempt03.txt\n?? docs/reports/raw/public_audio_inventory_attempt02.txt\n?? docs/reports/raw/public_source_contract_tests_attempt02.txt\n?? docs/reports/raw/public_source_grouping_attempt02.txt\n?? docs/reports/raw/source_prior_final_checks_attempt02.txt\n?? experiments/kokoro-native-attempt01/\n?? experiments/kokoro-original-cpu-attempt01/\n?? experiments/manifests/public_audio_development/\n?? experiments/manifests/public_lspc_grouping_attempt02.json\n?? experiments/manifests/public_lspc_inventory.attempt02.json\n?? experiments/manifests/public_lspc_roles.development.attempt02.jsonl\n?? experiments/manifests/public_lspc_training_metadata_bounds.attempt02.json\n",
+  "exit_code": 0,
+  "files_sha256": {
+    "docs/reports/raw/source_prior_final_checks_attempt02.txt": "edde487c3e6fa2f24bd616864e0b6ce744241f8e9cadfad3fb6f8552a35f3912",
+    "experiments/manifests/public_lspc_training_metadata_bounds.attempt02.json": "37b8eff0efb664234e7c259d6bfac60ba798497f1f692fb9bbd882a074373515",
+    "src/data/public_inventory.py": "34a99a91043e7f5c5ef0077421593c1cfa47de403fe1f7817b17d4affd82032c",
+    "tests/data/test_byt5_probe.py": "78eec02c039b99e2b97fbb3477f7476aa1e0a9c82015283e08a715c8b74a03fe",
+    "tests/data/test_contracts.py": "fd7dbdfafd9401513bca73580ca8369a65ea6d5ec3a322f4b04af30f95bd5dbe",
+    "tests/data/test_generator_independent_review.py": "5edc9f9001dde55103058a760e6857274654f85feb74c8ac6bd59aa0e0abfadf",
+    "tests/data/test_qwen_probe.py": "d4722eb56c446a1b8c16bf84ed56ade98dbfef26d6994c8483c883c43e43eb38",
+    "tests/scoring/test_independent_review.py": "747e6b33780eba68029bde5ac53436dcd7e0e82a02fb2c0983fd9f5699844ae7"
+  },
+  "head": "8615df435b6c8beda6dbb8deee1192cfc16e4803",
+  "native_model_execution_during_tests": false,
+  "recorded_at_utc": "2026-10-05T06:09:08.647474+00:00",
+  "stdout": "...........................................................              [100%]\n59 passed in 0.78s\n"
+}

@@ -6,7 +6,7 @@
     "credible_comparator": "NOT_ESTABLISHED",
     "eos_supervised": true,
     "exposure_accounting": "project-tokenizer canonical target exposures plus separately reported native byte work",
-    "imported_weight_lineage": "mC4 pretrained; no weights acquired",
+    "imported_weight_lineage": "mC4 pretrained; official pinned weights verified and native path probed",
     "label_padding": -100,
     "license": "Apache-2.0",
     "literal_control_strings": "encode their UTF-8 bytes; no automatic special-token recognition in transcript text",
@@ -105,7 +105,7 @@
       "top_k": null,
       "top_p": null
     },
-    "dev_requests": 0,
+    "dev_requests": 2,
     "forbidden_information": [
       "audio",
       "confidence",
@@ -117,21 +117,31 @@
       "raw one-best text"
     ],
     "license": "Apache-2.0",
-    "measured_admitted_context": null,
+    "measured_admitted_context": {
+      "not_general_context_capacity": true,
+      "synthetic_native_input_tokens": [
+        84,
+        84
+      ]
+    },
     "model_family": "Qwen3ForCausalLM; non-thinking instruction variant",
+    "native_execution_elapsed_seconds": 12.129595041275024,
+    "native_probe_attempt": "public_qwen_probe_attempt01.json",
     "native_probe_config_sha256": "b238b055b7555ca67ff18cd91183ed4b49e610b236e21f645356e712d3d06235",
-    "native_probe_status": "PREPARED_WAITING_ROOT_SLOT",
-    "output_capacity": null,
-    "output_capacity_status": "PENDING_DEV_LENGTH_POLICY; overflow/failure must remain accounted",
+    "native_probe_sha256": "e0a8fb697dd71776a1b7ff46f1099ac785906b9ab1cec3293a0095edd81078fa",
+    "native_probe_status": "NATIVE_BF16_GREEDY_PATH_EXECUTED_SYNTHETIC_ONLY",
+    "output_capacity": 64,
+    "output_capacity_status": "CONFIGURED_CAP64; 17_TOKEN_COMPLETE_OUTPUTS_OBSERVED_SYNTHETIC_ONLY",
     "paper_precision": "BF16",
     "pretraining_overlap": "UNKNOWN",
     "prompt_candidate_system": "Restore this raw ASR transcript with the smallest necessary corrections. Preserve the speaker's content, names, numbers, units, literal uncertainty, disfluencies, repetition, and self-corrections. Do not infer missing facts. Return only the restored transcript with no explanation or markup.",
     "prompt_candidate_user": "raw one-best transcript only, supplied verbatim as user message",
-    "prompt_status": "CANDIDATE_NOT_NATIVE_TESTED_NOT_FROZEN",
+    "prompt_status": "CANDIDATE_NATIVE_PATH_TESTED_SYNTHETIC_ONLY_NOT_FROZEN",
     "repository": "Qwen/Qwen3-4B-Instruct-2507",
     "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
-    "runtime": "Prepared torch2.8.0 / transformers4.55.4 BF16 eager",
-    "runtime_conversion_status": "PENDING_PARITY",
+    "runtime": "torch2.8.0 / transformers4.55.4 BF16 eager MPS",
+    "runtime_conversion_status": "OFFICIAL_BF16_SAFE_WEIGHTS_NO_QUANTIZATION; CROSS_BACKEND_PARITY_NOT_MEASURED",
+    "task_adequacy": "NOT_ESTABLISHED",
     "weight_acquisition": {
       "assets": [
         {
@@ -304,9 +314,9 @@
     "transformers": true
   },
   "final_inference_count": 0,
-  "native_comparator_device_seconds": 15.091969013214111,
+  "native_comparator_device_seconds": 27.221564054489136,
   "native_comparator_device_seconds_policy": "conservative exclusive wall reservation; not measured GPU kernel seconds",
-  "recorded_at_utc": "2026-10-05T05:16:29Z",
-  "status": "DEVELOPMENT_METADATA_ONLY_NOT_FROZEN",
+  "recorded_at_utc": "2026-10-05T06:05:02.991507+00:00",
+  "status": "NATIVE_DEVELOPMENT_PATHS_PROBED_SYNTHETIC_ONLY_NOT_FROZEN",
   "weights_downloaded_bytes": 9243609927
 }

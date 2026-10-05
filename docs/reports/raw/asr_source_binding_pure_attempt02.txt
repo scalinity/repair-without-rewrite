@@ -1,0 +1,1 @@
+Pure synthetic contract fixtures: valid metadata/hash join passed; final-role and stale-reference cases rejected. Zero model/MLX/Torch imports or inference.

@@ -37,6 +37,64 @@ def rss_peak():
     return {"process_peak_rss_bytes": value if sys.platform == "darwin" else value * 1024}
 
 
+def validate_asr_source_barrier(config):
+    """Pure metadata/hash join before any model import, load or audio inference."""
+    spec = config["parakeet"]
+    if spec.get("source_barrier_status") != "PASS_BOOK_PROJECT_DEVELOPMENT_CLOSURE":
+        raise ValueError("ASR source barrier has not passed book/project development closure")
+    role_asset = spec["source_role_manifest"]
+    if sha(role_asset["path"]) != role_asset["sha256"]:
+        raise ValueError("changed source role manifest")
+    role_rows = [json.loads(line) for line in Path(role_asset["path"]).read_text().splitlines()]
+    role_map = {row["id"]: row for row in role_rows}
+    if len(role_map) != len(role_rows):
+        raise ValueError("duplicate source role IDs")
+    audio_asset = config["public_audio_manifest"]
+    if sha(audio_asset["path"]) != audio_asset["sha256"]:
+        raise ValueError("changed development audio manifest")
+    audio = json.loads(Path(audio_asset["path"]).read_text())
+    if audio.get("role_manifest_sha256") not in (None, role_asset["sha256"]):
+        raise ValueError("development selection used a different source role manifest")
+    cases = audio["cases"]
+    if not 2 <= len(cases) <= 20 or len(cases) != spec["development_cases"]:
+        raise ValueError("declared development quota mismatch")
+    checked = []
+    for case in cases:
+        identifier = Path(case["audio_filepath"]).stem
+        row = role_map.get(identifier)
+        if row is None or row["role"] != "hpo_development" or row["corpus"] != "LibriSpeech-PC":
+            raise ValueError("selected audio is not role-qualified HPO development: " + identifier)
+        families = row["families"]
+        if (case.get("source_group_id", row["source_group_id"]) != row["source_group_id"]
+                or case.get("role", row["role"]) != row["role"]
+                or case.get("families", families) != families):
+            raise ValueError("selected source role/group/family declaration mismatch: " + identifier)
+        if any(not families.get(key) for key in ("speaker", "chapter", "book", "project", "chapter_metadata_component")):
+            raise ValueError("incomplete source family identity: " + identifier)
+        if (case["audio_filepath"] != row["upstream_audio_filepath"]
+                or row["official_split"] not in ("dev-clean", "dev-other")
+                or case["audio_filepath"].split("/")[0] != row["official_split"]
+                or str(case["speaker"]) != families["speaker"]
+                or str(case["chapter"]) != families["chapter"]):
+            raise ValueError("selected audio/source family metadata mismatch: " + identifier)
+        for text_key, hash_key in (("text", "reference_sha256"), ("text_raw", "reference_raw_sha256")):
+            if hashlib.sha256(case[text_key].encode()).hexdigest() != row[hash_key]:
+                raise ValueError("selected reference identity mismatch: " + identifier)
+        if sha(case["audio_relative_path"]) != case["audio_sha256"]:
+            raise ValueError("changed qualified development audio: " + identifier)
+        checked.append({"id": identifier, "role": row["role"], "official_split": row["official_split"],
+                        "source_group_id": row["source_group_id"], "families": families,
+                        "chapter_metadata_sha256": row["chapter_metadata_sha256"],
+                        "audio_sha256": case["audio_sha256"]})
+    if len({row["source_group_id"] for row in checked}) != len(checked):
+        raise ValueError("selected development recordings do not represent distinct source groups")
+    if len({row["families"]["speaker"] for row in checked}) != len(checked):
+        raise ValueError("selected development speakers are not distinct")
+    return {"status": "PASS_BOOK_PROJECT_DEVELOPMENT_CLOSURE", "role_manifest": role_asset,
+            "audio_manifest": audio_asset, "actual_cases": len(checked), "target_quota": 20,
+            "scope": "join to independently qualified role/closure manifest; no new role assignment", "cases": checked}
+
+
 def parakeet(config, out):
     then = time.perf_counter()
     import mlx.core as mx
@@ -54,8 +112,6 @@ def parakeet(config, out):
     cases = audio_manifest["cases"]
     if not 2 <= len(cases) <= 20 or len(cases) != spec["development_cases"] or len({case["speaker"] for case in cases}) != len(cases):
         raise ValueError("exact preselected 2–20-speaker development panel required")
-    if audio_manifest["classification"] != "PUBLIC_DEVELOPMENT_AUDIO_ONLY_NOT_SEALED":
-        raise ValueError("unqualified audio population")
     then = time.perf_counter()
     model = from_pretrained(spec["snapshot"], dtype=mx.bfloat16)
     mx.eval(model.parameters())
@@ -207,6 +263,7 @@ def main():
     config = json.loads(Path(args.manifest).read_text())
     if args.arm == "parakeet" and config["parakeet"].get("source_barrier_status") != "PASS_BOOK_PROJECT_DEVELOPMENT_CLOSURE":
         raise ValueError("ASR source barrier has not passed book/project development closure")
+    source_barrier = validate_asr_source_barrier(config) if args.arm == "parakeet" else None
     input_assets = config[args.arm]["assets"]
     if args.arm == "parakeet":
         input_assets = input_assets + [config["public_audio_manifest"]]
@@ -216,6 +273,8 @@ def main():
     verification_seconds = time.perf_counter() - process_start
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=False)
+    if source_barrier is not None:
+        write_json(out / "source_barrier.json", source_barrier)
     os.environ["HF_HUB_OFFLINE"] = "1"
     os.environ["TRANSFORMERS_OFFLINE"] = "1"
     os.environ["PYTORCH_ENABLE_MPS_FALLBACK"] = "0"

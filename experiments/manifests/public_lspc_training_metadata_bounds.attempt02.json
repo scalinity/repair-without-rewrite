@@ -1,0 +1,67 @@
+{
+  "archive_sha256": "96d4eae2222b29b66437a21959252419bcd4762e5042e71e023790171054d1c0",
+  "audio_qualified_cases": 0,
+  "chapter_metadata": {
+    "chapters": 5831,
+    "known_parent_components": 392,
+    "rule": "official_chapter_parent_closure_v1; full released chapter/speaker/project/book graph",
+    "sha256": "2e9db25c250a143b031ca003180acfce84b364e31fbc79250e306303e6f25306",
+    "uses_audio_or_reference_payload": false
+  },
+  "distinct_identities_by_parent_status": {
+    "known_development_parent_overlap": {
+      "book": 7,
+      "chapter": 26,
+      "metadata_component": 5,
+      "project": 7,
+      "speaker": 10
+    },
+    "known_final_parent_overlap": {
+      "book": 957,
+      "chapter": 4347,
+      "metadata_component": 9,
+      "project": 1056,
+      "speaker": 1841
+    },
+    "potential_supply_pending_full_text_and_audio_qualification": {
+      "book": 476,
+      "chapter": 1078,
+      "metadata_component": 358,
+      "project": 485,
+      "speaker": 480
+    }
+  },
+  "model_or_candidate_outputs_used": false,
+  "pending": [
+    "full training-source literal/near-reference sweep",
+    "audio decoding/admission",
+    "raw one-best ASR hypotheses and source-error counts",
+    "reference policy and freeze",
+    "contamination qualification",
+    "any new development training/calibration assignment"
+  ],
+  "per_split": {
+    "train-clean-100": {
+      "known_development_parent_overlap": 448,
+      "known_final_parent_overlap": 19769,
+      "potential_supply_pending_full_text_and_audio_qualification": 5824
+    },
+    "train-clean-360": {
+      "known_development_parent_overlap": 103,
+      "known_final_parent_overlap": 71739,
+      "potential_supply_pending_full_text_and_audio_qualification": 23562
+    },
+    "train-other-500": {
+      "known_development_parent_overlap": 677,
+      "known_final_parent_overlap": 110906,
+      "potential_supply_pending_full_text_and_audio_qualification": 23096
+    }
+  },
+  "rows_by_parent_status": {
+    "known_development_parent_overlap": 1228,
+    "known_final_parent_overlap": 202414,
+    "potential_supply_pending_full_text_and_audio_qualification": 52482
+  },
+  "status": "METADATA_BOUNDS_ONLY_NO_TRAINING_ROLE_ASSIGNED_OR_CORPUS_SELECTED",
+  "training_rows": 256124
+}
