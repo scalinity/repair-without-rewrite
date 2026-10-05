@@ -1,0 +1,16 @@
+[
+  {
+    "bytes": 73630478,
+    "filename": "torch-2.8.0-cp312-none-macosx_11_0_arm64.whl",
+    "sha256": "619c2869db3ada2c0105487ba21b5008defcc472d23f8b80ed91ac4a380283b0",
+    "url": "https://files.pythonhosted.org/packages/be/66/5c9a321b325aaecb92d4d1855421e3a055abd77903b7dab6575ca07796db/torch-2.8.0-cp312-none-macosx_11_0_arm64.whl",
+    "wheel_metadata": "Wheel-Version: 1.0\nGenerator: setuptools (78.1.1)\nRoot-Is-Purelib: false\nTag: cp312-cp312-macosx_14_0_arm64\n\n"
+  },
+  {
+    "bytes": 12806118,
+    "filename": "en_core_web_sm-3.8.0-py3-none-any.whl",
+    "sha256": "1932429db727d4bff3deed6b34cfc05df17794f4a52eeb26cf8928f7c1a0fb85",
+    "url": "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl",
+    "wheel_metadata": "Wheel-Version: 1.0\nGenerator: setuptools (75.1.0)\nRoot-Is-Purelib: true\nTag: py3-none-any\n\n"
+  }
+]

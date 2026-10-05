@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/local/research/repair-without-rewrite/benchmarks/asr_tts_native_probe.py", line 243, in <module>
+    main()
+  File "/local/research/repair-without-rewrite/benchmarks/asr_tts_native_probe.py", line 202, in main
+    raise ValueError("ASR source barrier has not passed book/project development closure")
+ValueError: ASR source barrier has not passed book/project development closure

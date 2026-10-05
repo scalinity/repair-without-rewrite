@@ -1,0 +1,120 @@
+{
+  "created_utc": "2026-10-05T05:49:59.197768+00:00",
+  "kokoro": {
+    "assets": [
+      {
+        "bytes": 6348,
+        "path": "exports/kokoro-82m-pinned/README.md",
+        "sha256": "91dcabced89db6f109b8786642f50402d3ee87450e8189589b6f85520e7f4d78"
+      },
+      {
+        "bytes": 2351,
+        "path": "exports/kokoro-82m-pinned/config.json",
+        "sha256": "5abb01e2403b072bf03d04fde160443e209d7a0dad49a423be15196b9b43c17f"
+      },
+      {
+        "bytes": 327212226,
+        "path": "exports/kokoro-82m-pinned/kokoro-v1_0.pth",
+        "sha256": "496dba118d1a58f5f3db2efc88dbdc216e0483fc89fe6e47ee1f2c53f18ad1e4"
+      },
+      {
+        "bytes": 523425,
+        "path": "exports/kokoro-82m-pinned/voices/af_heart.pt",
+        "sha256": "0ab5709b8ffab19bfd849cd11d98f75b60af7733253ad0d67b12382a102cb4ff"
+      }
+    ],
+    "audio_sample_rate": 24000,
+    "device": "mps",
+    "disable_complex": true,
+    "dtype": "float32",
+    "implementation_path": "official kokoro.KModel real-valued CustomSTFT, disable_complex=True, PyTorch MPS FP32; no MPS CPU fallback",
+    "intended_texts": [
+      "The quick brown fox jumps over the lazy dog.",
+      "Please save the report in the project folder."
+    ],
+    "interpretation": "intended target and timing only; generated waveform not certified by human or independent acoustic truth",
+    "lang_code": "a",
+    "model_license": "Apache-2.0",
+    "repository": "hexgrad/Kokoro-82M",
+    "revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+    "runtime": "kokoro==0.9.4",
+    "runtime_license": "Apache-2.0",
+    "speed": 1.0,
+    "voice": "af_heart"
+  },
+  "parakeet": {
+    "assets": [
+      {
+        "bytes": 1519,
+        "path": "exports/parakeet-ed2b7e8c15f9aaa0b5772e2efb986255eaef7e15/.gitattributes",
+        "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+      },
+      {
+        "bytes": 1081,
+        "path": "exports/parakeet-ed2b7e8c15f9aaa0b5772e2efb986255eaef7e15/README.md",
+        "sha256": "724e3ba46903986ff6caeb8fddb7495c06b5a7a8d908f11e43cc0a7e136b5e23"
+      },
+      {
+        "bytes": 244093,
+        "path": "exports/parakeet-ed2b7e8c15f9aaa0b5772e2efb986255eaef7e15/config.json",
+        "sha256": "f320f1292511f34ec47f513755fe20fd01dbfc09a925d42730e66059a6e1ef4c"
+      },
+      {
+        "bytes": 2508288736,
+        "path": "exports/parakeet-ed2b7e8c15f9aaa0b5772e2efb986255eaef7e15/model.safetensors",
+        "sha256": "05e01c7f396c298cf7d23f61da7b504adeab698f0aaeafd9c82d198625464592"
+      },
+      {
+        "bytes": 360916,
+        "path": "exports/parakeet-ed2b7e8c15f9aaa0b5772e2efb986255eaef7e15/tokenizer.model",
+        "sha256": "eacec2b0a77f336d4a2ca4a25a7047575d3c2b74de47e997f4c205126ed3135e"
+      },
+      {
+        "bytes": 101024,
+        "path": "exports/parakeet-ed2b7e8c15f9aaa0b5772e2efb986255eaef7e15/tokenizer.vocab",
+        "sha256": "41130ff456706304a1adec782ccc9e003c4d417e8e324353d281be958cac4e17"
+      },
+      {
+        "bytes": 46772,
+        "path": "exports/parakeet-ed2b7e8c15f9aaa0b5772e2efb986255eaef7e15/vocab.txt",
+        "sha256": "3cde1409fd78783a79b29ed4d32da57c746993856f7c8263bcb905d2e5839db7"
+      }
+    ],
+    "chunking": "disabled for all selected 2\u201312s clips",
+    "decoding": "greedy",
+    "development_cases": 20,
+    "dtype": "bfloat16",
+    "microprobe_case_indices": [
+      0,
+      1
+    ],
+    "model_license": "CC-BY-4.0",
+    "repository": "mlx-community/parakeet-tdt-0.6b-v3",
+    "revision": "ed2b7e8c15f9aaa0b5772e2efb986255eaef7e15",
+    "runtime": "parakeet-mlx==0.5.2",
+    "runtime_license": "Apache-2.0",
+    "snapshot": "exports/parakeet-ed2b7e8c15f9aaa0b5772e2efb986255eaef7e15",
+    "source_barrier_status": "BLOCKED_PENDING_BOOK_PROJECT_RESELECTION"
+  },
+  "public_audio_manifest": {
+    "bytes": 15281,
+    "path": "experiments/manifests/public_audio_development/manifest.json",
+    "sha256": "f2747966a0b8f2a4681e87d52b75a00ad179dac8bd235a571bd77bad8015390d"
+  },
+  "schema": "asr_tts_bounded_development_v1",
+  "scope": [
+    "2 Parakeet microprobe calls then 20 preselected public DEVELOPMENT clips",
+    "2 Kokoro intended-text generation calls, first/second timing separate",
+    "no private audio, no listening, no sealed/final data",
+    "no natural-study qualification or campaign extrapolation",
+    "Initial public panel withdrawn before all model calls: 5/20 share newly resolved books with final-role metadata; use only a separately approved book/project-closed DEV manifest."
+  ],
+  "seed": 42,
+  "sources": {
+    "kokoro_model": "https://huggingface.co/hexgrad/Kokoro-82M/tree/f3ff3571791e39611d31c381e3a41a3af07b4987",
+    "kokoro_runtime": "https://github.com/hexgrad/kokoro",
+    "parakeet_model": "https://huggingface.co/mlx-community/parakeet-tdt-0.6b-v3/tree/ed2b7e8c15f9aaa0b5772e2efb986255eaef7e15",
+    "parakeet_runtime": "https://github.com/senstella/parakeet-mlx",
+    "spacy_model": "https://github.com/explosion/spacy-models/releases/tag/en_core_web_sm-3.8.0"
+  }
+}
