@@ -1,0 +1,159 @@
+{
+  "source_attempt": "natural-scorer-attempt01",
+  "ignored_summary_sha256": "9486c042f213bc08d9749b66d11fe52da1bd680d3c65689f257798be5e3ceb76",
+  "summary": {
+    "panels": {
+      "0": {
+        "cases": 24,
+        "byte_nonidentity": 24,
+        "lexical_nonidentity": 24,
+        "complete": 0,
+        "aggregate_pooled": {
+          "reference_words": 416,
+          "source_errors": 20,
+          "output_errors": 416,
+          "invalid_or_incomplete": 24,
+          "repair": [
+            1,
+            1
+          ],
+          "introduced": [
+            397,
+            397
+          ],
+          "completed_repair": [
+            0,
+            0
+          ],
+          "wer": 1.0,
+          "introduced_rate": [
+            0.9543269230769231,
+            0.9543269230769231
+          ],
+          "completed_repair_rate": [
+            0.0,
+            0.0
+          ]
+        },
+        "status_counts": {
+          "exact_point": 24
+        },
+        "point_totals": 24,
+        "caps": 0,
+        "repair_total_width": 0,
+        "introduced_total_width": 0,
+        "local_ambiguous_cases": 0,
+        "seconds": 0.13343891596014146,
+        "max_states": 34,
+        "max_edges": 33
+      },
+      "200": {
+        "cases": 24,
+        "byte_nonidentity": 13,
+        "lexical_nonidentity": 1,
+        "complete": 24,
+        "aggregate_pooled": {
+          "reference_words": 416,
+          "source_errors": 20,
+          "output_errors": 21,
+          "invalid_or_incomplete": 0,
+          "repair": [
+            0,
+            0
+          ],
+          "introduced": [
+            1,
+            1
+          ],
+          "completed_repair": [
+            0,
+            0
+          ],
+          "wer": 0.05048076923076923,
+          "introduced_rate": [
+            0.002403846153846154,
+            0.002403846153846154
+          ],
+          "completed_repair_rate": [
+            0.0,
+            0.0
+          ]
+        },
+        "status_counts": {
+          "exact_point": 24
+        },
+        "point_totals": 24,
+        "caps": 0,
+        "repair_total_width": 0,
+        "introduced_total_width": 0,
+        "local_ambiguous_cases": 0,
+        "seconds": 0.35492583199811634,
+        "max_states": 34,
+        "max_edges": 33
+      },
+      "600": {
+        "cases": 24,
+        "byte_nonidentity": 5,
+        "lexical_nonidentity": 0,
+        "complete": 24,
+        "aggregate_pooled": {
+          "reference_words": 416,
+          "source_errors": 20,
+          "output_errors": 20,
+          "invalid_or_incomplete": 0,
+          "repair": [
+            0,
+            0
+          ],
+          "introduced": [
+            0,
+            0
+          ],
+          "completed_repair": [
+            0,
+            0
+          ],
+          "wer": 0.04807692307692308,
+          "introduced_rate": [
+            0.0,
+            0.0
+          ],
+          "completed_repair_rate": [
+            0.0,
+            0.0
+          ]
+        },
+        "status_counts": {
+          "exact_point": 24
+        },
+        "point_totals": 24,
+        "caps": 0,
+        "repair_total_width": 0,
+        "introduced_total_width": 0,
+        "local_ambiguous_cases": 0,
+        "seconds": 0.3569483750470681,
+        "max_states": 34,
+        "max_edges": 33
+      }
+    },
+    "preflight_seconds": 0.17305154200585093,
+    "total_seconds": 1.1476750420115422,
+    "python_traced_peak_bytes": 2418279,
+    "process_rss_bytes": 31850496,
+    "records_sha256": "c1fff3dffcb966c841c6ad31873e2b26c9d56edbd4003ec5081dd8a20c5a23bf",
+    "independent_cases": 24,
+    "repeated_panels_are_not_new_cases": true,
+    "H1_precision": "not established from small LS-only panel; SLUE unavailable"
+  },
+  "public_scope": "payload-free measured counts; original complete provenance and payloads remain ignored",
+  "historical_label_correction": {
+    "independent_cases_means_distinct_requests": 24,
+    "known_source_components": 17,
+    "no_statistical_independence_claim": true
+  },
+  "artifact_hashes": {
+    "provenance.json": "a5c92f949828059e2ebad8baad593a8c2531f4d2afcd6b63a7786d3c9d218a8b",
+    "records.jsonl": "c1fff3dffcb966c841c6ad31873e2b26c9d56edbd4003ec5081dd8a20c5a23bf",
+    "source_preflights.json": "4c8a27723f501280cfd2423ea5fd0dc4d4b4db9136c9f8237f996eaf2d3b4258"
+  }
+}

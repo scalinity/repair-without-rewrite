@@ -1,0 +1,111 @@
+{
+  "source_attempt": "natural-scorer-b100-attempt01",
+  "ignored_summary_sha256": "65048d8462374763e065601160bafd265b39b28077acab509ee7a02fdf44cd5e",
+  "summary": {
+    "panels": {
+      "300": {
+        "cases": 24,
+        "byte_nonidentity": 23,
+        "lexical_nonidentity": 17,
+        "complete": 24,
+        "aggregate_pooled": {
+          "reference_words": 536,
+          "source_errors": 12,
+          "output_errors": 280,
+          "invalid_or_incomplete": 0,
+          "repair": [
+            10,
+            10
+          ],
+          "introduced": [
+            278,
+            278
+          ],
+          "completed_repair": [
+            10,
+            10
+          ],
+          "wer": 0.5223880597014925,
+          "introduced_rate": [
+            0.5186567164179104,
+            0.5186567164179104
+          ],
+          "completed_repair_rate": [
+            0.8333333333333334,
+            0.8333333333333334
+          ]
+        },
+        "status_counts": {
+          "exact_point": 24
+        },
+        "point_totals": 24,
+        "caps": 0,
+        "repair_total_width": 0,
+        "introduced_total_width": 0,
+        "local_ambiguous_cases": 12,
+        "seconds": 0.6284234990162076,
+        "max_states": 112,
+        "max_edges": 192
+      },
+      "301": {
+        "cases": 24,
+        "byte_nonidentity": 23,
+        "lexical_nonidentity": 17,
+        "complete": 24,
+        "aggregate_pooled": {
+          "reference_words": 536,
+          "source_errors": 12,
+          "output_errors": 280,
+          "invalid_or_incomplete": 0,
+          "repair": [
+            10,
+            10
+          ],
+          "introduced": [
+            278,
+            278
+          ],
+          "completed_repair": [
+            10,
+            10
+          ],
+          "wer": 0.5223880597014925,
+          "introduced_rate": [
+            0.5186567164179104,
+            0.5186567164179104
+          ],
+          "completed_repair_rate": [
+            0.8333333333333334,
+            0.8333333333333334
+          ]
+        },
+        "status_counts": {
+          "exact_point": 24
+        },
+        "point_totals": 24,
+        "caps": 0,
+        "repair_total_width": 0,
+        "introduced_total_width": 0,
+        "local_ambiguous_cases": 12,
+        "seconds": 0.6284146659600083,
+        "max_states": 112,
+        "max_edges": 192
+      }
+    },
+    "preflight_seconds": 0.2456562080042204,
+    "total_seconds": 1.64420575000986,
+    "python_traced_peak_bytes": 2718322,
+    "process_rss_bytes": 32473088,
+    "records_sha256": "6aa5e734874d839ddc39ed3108812e7934d1df061c61e6c8aef07cf4e5e7fd11",
+    "distinct_requests": 24,
+    "source_components": 16,
+    "repeated_panels_are_not_new_cases": true,
+    "H1_precision": "not established from small LS-only panel; SLUE unavailable"
+  },
+  "public_scope": "payload-free measured counts; original complete provenance and payloads remain ignored",
+  "artifact_hashes": {
+    "provenance.json": "4c47a7334956564aa432704cc73cd46323e20b51e4fdef5d0aa7d6a25cfbce90",
+    "records.jsonl": "6aa5e734874d839ddc39ed3108812e7934d1df061c61e6c8aef07cf4e5e7fd11",
+    "source_preflights.json": "0e615a04a6d2fd3fb3b9f59ec349fc8fde8fb1bdda1d9558768f52ef9d77817b"
+  }
+}

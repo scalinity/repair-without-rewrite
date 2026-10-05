@@ -1,0 +1,155 @@
+{
+  "source_attempt": "natural-scorer-attempt02",
+  "ignored_summary_sha256": "c701fc3b903ef99c51c4ee1745a851982b4f9e5139e9508c5434a282e9f34344",
+  "summary": {
+    "panels": {
+      "0": {
+        "cases": 24,
+        "byte_nonidentity": 24,
+        "lexical_nonidentity": 24,
+        "complete": 0,
+        "aggregate_pooled": {
+          "reference_words": 416,
+          "source_errors": 20,
+          "output_errors": 416,
+          "invalid_or_incomplete": 24,
+          "repair": [
+            1,
+            1
+          ],
+          "introduced": [
+            397,
+            397
+          ],
+          "completed_repair": [
+            0,
+            0
+          ],
+          "wer": 1.0,
+          "introduced_rate": [
+            0.9543269230769231,
+            0.9543269230769231
+          ],
+          "completed_repair_rate": [
+            0.0,
+            0.0
+          ]
+        },
+        "status_counts": {
+          "exact_point": 24
+        },
+        "point_totals": 24,
+        "caps": 0,
+        "repair_total_width": 0,
+        "introduced_total_width": 0,
+        "local_ambiguous_cases": 0,
+        "seconds": 0.1322123739955714,
+        "max_states": 34,
+        "max_edges": 33
+      },
+      "200": {
+        "cases": 24,
+        "byte_nonidentity": 15,
+        "lexical_nonidentity": 8,
+        "complete": 24,
+        "aggregate_pooled": {
+          "reference_words": 416,
+          "source_errors": 20,
+          "output_errors": 30,
+          "invalid_or_incomplete": 0,
+          "repair": [
+            0,
+            0
+          ],
+          "introduced": [
+            10,
+            10
+          ],
+          "completed_repair": [
+            0,
+            0
+          ],
+          "wer": 0.07211538461538461,
+          "introduced_rate": [
+            0.02403846153846154,
+            0.02403846153846154
+          ],
+          "completed_repair_rate": [
+            0.0,
+            0.0
+          ]
+        },
+        "status_counts": {
+          "exact_point": 24
+        },
+        "point_totals": 24,
+        "caps": 0,
+        "repair_total_width": 0,
+        "introduced_total_width": 0,
+        "local_ambiguous_cases": 0,
+        "seconds": 0.3530680390394991,
+        "max_states": 34,
+        "max_edges": 33
+      },
+      "600": {
+        "cases": 24,
+        "byte_nonidentity": 8,
+        "lexical_nonidentity": 2,
+        "complete": 24,
+        "aggregate_pooled": {
+          "reference_words": 416,
+          "source_errors": 20,
+          "output_errors": 22,
+          "invalid_or_incomplete": 0,
+          "repair": [
+            0,
+            0
+          ],
+          "introduced": [
+            2,
+            2
+          ],
+          "completed_repair": [
+            0,
+            0
+          ],
+          "wer": 0.052884615384615384,
+          "introduced_rate": [
+            0.004807692307692308,
+            0.004807692307692308
+          ],
+          "completed_repair_rate": [
+            0.0,
+            0.0
+          ]
+        },
+        "status_counts": {
+          "exact_point": 24
+        },
+        "point_totals": 24,
+        "caps": 0,
+        "repair_total_width": 0,
+        "introduced_total_width": 0,
+        "local_ambiguous_cases": 0,
+        "seconds": 0.3595364590146346,
+        "max_states": 34,
+        "max_edges": 33
+      }
+    },
+    "preflight_seconds": 0.17161525000119582,
+    "total_seconds": 1.1528919999982463,
+    "python_traced_peak_bytes": 2417216,
+    "process_rss_bytes": 31899648,
+    "records_sha256": "2f8377bb5ba6f4bd5625811fb1b02876e66a9d2f39ce6a9dbdd3f61d6b43ef5d",
+    "distinct_requests": 24,
+    "source_components": 17,
+    "repeated_panels_are_not_new_cases": true,
+    "H1_precision": "not established from small LS-only panel; SLUE unavailable"
+  },
+  "public_scope": "payload-free measured counts; original complete provenance and payloads remain ignored",
+  "artifact_hashes": {
+    "provenance.json": "f671f3c4430ead2145cf83fcdfc9f60914d99ce8e9bece59d41b50bd9b1847ec",
+    "records.jsonl": "2f8377bb5ba6f4bd5625811fb1b02876e66a9d2f39ce6a9dbdd3f61d6b43ef5d",
+    "source_preflights.json": "4c8a27723f501280cfd2423ea5fd0dc4d4b4db9136c9f8237f996eaf2d3b4258"
+  }
+}
