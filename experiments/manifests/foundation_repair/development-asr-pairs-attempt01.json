@@ -1,0 +1,18 @@
+{
+  "source_attempt": "development-asr-pairs-attempt01",
+  "ignored_summary_sha256": "e9a03878ebeaf8d634eb2f40f7f1535045c3d6f55c665a057da89b9d04fdf566",
+  "summary": {
+    "selected": 1120,
+    "failed": 0,
+    "seconds": 156.58611687499797,
+    "pairs_sha256": "ce4a170a086afee430085c4e6f665e8af58b8c68091afc27f10ee403c81951d8",
+    "peak_mlx_bytes": 2308669986,
+    "runtime": "parakeet-mlx-0.5.2-frame-bound-v1-single-fp32-wave-bf16-weights"
+  },
+  "public_scope": "payload-free measured counts; original complete provenance and payloads remain ignored",
+  "artifact_hashes": {
+    "provenance.json": "6babe46a69bb8068032350d040161fdc936a8f9af008d259ed117373a4966f2f",
+    "pairs.jsonl": "ce4a170a086afee430085c4e6f665e8af58b8c68091afc27f10ee403c81951d8",
+    "selection.json": "505f1eeb71ffad659504a4db7e4addd49668887b49b491a8458cca19b05ee23f"
+  }
+}
