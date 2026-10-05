@@ -1,0 +1,351 @@
+{
+  "checked_utc": "2026-10-05T20:17:24.300595+00:00",
+  "foundation_artifacts_checked": 41,
+  "immutable_inputs_checked": 7,
+  "mismatch_count": 0,
+  "foundation_artifacts": [
+    {
+      "receipt": "experiments/manifests/foundation_repair/b100-real-calibration-attempt01.json",
+      "artifact": "exports/foundation-repair/b100-real-calibration-attempt01/decodes.jsonl",
+      "expected_sha256": "f21ec359406ed1d5d7bf6ca445f9fb69b8f06645f16405cbfcf4498591457af9",
+      "actual_sha256": "f21ec359406ed1d5d7bf6ca445f9fb69b8f06645f16405cbfcf4498591457af9",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/b100-real-calibration-attempt01.json",
+      "artifact": "exports/foundation-repair/b100-real-calibration-attempt01/derived_analysis.json",
+      "expected_sha256": "b26864829f91ab585c089697595b0a51154e7c749382b67e026b1c8ea31d9901",
+      "actual_sha256": "b26864829f91ab585c089697595b0a51154e7c749382b67e026b1c8ea31d9901",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/b100-real-calibration-attempt01.json",
+      "artifact": "exports/foundation-repair/b100-real-calibration-attempt01/initial_identity.json",
+      "expected_sha256": "f3af7d67cd900b82ae78e92b9648e71ef2cd653065acbc814af039e944520943",
+      "actual_sha256": "f3af7d67cd900b82ae78e92b9648e71ef2cd653065acbc814af039e944520943",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/b100-real-calibration-attempt01.json",
+      "artifact": "exports/foundation-repair/b100-real-calibration-attempt01/provenance.json",
+      "expected_sha256": "8062e751a42745954cab56d9ea5e7fcc026e02f828f505f7ae5fe74efa1b30a6",
+      "actual_sha256": "8062e751a42745954cab56d9ea5e7fcc026e02f828f505f7ae5fe74efa1b30a6",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/b100-real-calibration-attempt01.json",
+      "artifact": "exports/foundation-repair/b100-real-calibration-attempt01/thermal.json",
+      "expected_sha256": "01277a3ec46cccfda75888529e23f7e9a4e49b2ca51996ae575d592b7070714a",
+      "actual_sha256": "01277a3ec46cccfda75888529e23f7e9a4e49b2ca51996ae575d592b7070714a",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/b100-real-calibration-attempt01.json",
+      "artifact": "exports/foundation-repair/b100-real-calibration-attempt01/updates.jsonl",
+      "expected_sha256": "f717bcfc41e4d8f7269102d9bcd14d769536fbbd01fd4c2080df69be3de17900",
+      "actual_sha256": "f717bcfc41e4d8f7269102d9bcd14d769536fbbd01fd4c2080df69be3de17900",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/byt5-natural-adaptation-attempt01.json",
+      "artifact": "exports/foundation-repair/byt5-natural-adaptation-attempt01/provenance.json",
+      "expected_sha256": "16c872e22792beae058b96b444602f86be4d05989bb55baa916a3cbe4c5566f8",
+      "actual_sha256": "16c872e22792beae058b96b444602f86be4d05989bb55baa916a3cbe4c5566f8",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/byt5-natural-adaptation-attempt01.json",
+      "artifact": "exports/foundation-repair/byt5-natural-adaptation-attempt01/initial_identity.json",
+      "expected_sha256": "6ecc1d8336ed3fd930c5601b1229f96dff1b9d9e584839550037569083c7011d",
+      "actual_sha256": "6ecc1d8336ed3fd930c5601b1229f96dff1b9d9e584839550037569083c7011d",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/byt5-natural-adaptation-attempt01.json",
+      "artifact": "exports/foundation-repair/byt5-natural-adaptation-attempt01/steps.jsonl",
+      "expected_sha256": "dd4b674946c39d41e39dc141208455aee226b98a9ffb4ef86230be164490fd3f",
+      "actual_sha256": "dd4b674946c39d41e39dc141208455aee226b98a9ffb4ef86230be164490fd3f",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/byt5-natural-adaptation-attempt01.json",
+      "artifact": "exports/foundation-repair/byt5-natural-adaptation-attempt01/outputs.jsonl",
+      "expected_sha256": "86d151695d818107feaeb4aab33533632123d15cb09eff3b3e348347df9b7161",
+      "actual_sha256": "86d151695d818107feaeb4aab33533632123d15cb09eff3b3e348347df9b7161",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/byt5-natural-adaptation-attempt02.json",
+      "artifact": "exports/foundation-repair/byt5-natural-adaptation-attempt02/provenance.json",
+      "expected_sha256": "cf83d1bff5fcb7b9508386d6d9f6879fa67d3c23e615446d4b09eef2c2773cc1",
+      "actual_sha256": "cf83d1bff5fcb7b9508386d6d9f6879fa67d3c23e615446d4b09eef2c2773cc1",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/byt5-natural-adaptation-attempt02.json",
+      "artifact": "exports/foundation-repair/byt5-natural-adaptation-attempt02/initial_identity.json",
+      "expected_sha256": "6ecc1d8336ed3fd930c5601b1229f96dff1b9d9e584839550037569083c7011d",
+      "actual_sha256": "6ecc1d8336ed3fd930c5601b1229f96dff1b9d9e584839550037569083c7011d",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/byt5-natural-adaptation-attempt02.json",
+      "artifact": "exports/foundation-repair/byt5-natural-adaptation-attempt02/steps.jsonl",
+      "expected_sha256": "f3b8695922a98c1c986d727197fbaccdf46e455fae8576229347736f7bf8be29",
+      "actual_sha256": "f3b8695922a98c1c986d727197fbaccdf46e455fae8576229347736f7bf8be29",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/byt5-natural-adaptation-attempt02.json",
+      "artifact": "exports/foundation-repair/byt5-natural-adaptation-attempt02/outputs.jsonl",
+      "expected_sha256": "06eefe36d128c491ca2f1a81fae6323b7223147a097184df45c11d09a7a7e2c4",
+      "actual_sha256": "06eefe36d128c491ca2f1a81fae6323b7223147a097184df45c11d09a7a7e2c4",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/c101-real-calibration-attempt01.json",
+      "artifact": "exports/foundation-repair/c101-real-calibration-attempt01/decodes.jsonl",
+      "expected_sha256": "0cd7f1101d01b9577a10d5b0f1e53835ddb632f04ec83ff68f4ce922b895c2e0",
+      "actual_sha256": "0cd7f1101d01b9577a10d5b0f1e53835ddb632f04ec83ff68f4ce922b895c2e0",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/c101-real-calibration-attempt01.json",
+      "artifact": "exports/foundation-repair/c101-real-calibration-attempt01/derived_analysis.json",
+      "expected_sha256": "8d888f7c71c818dc65c7c074b41e9970af6c9e5b7f1d8b7ed182702997ac8990",
+      "actual_sha256": "8d888f7c71c818dc65c7c074b41e9970af6c9e5b7f1d8b7ed182702997ac8990",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/c101-real-calibration-attempt01.json",
+      "artifact": "exports/foundation-repair/c101-real-calibration-attempt01/initial_identity.json",
+      "expected_sha256": "5c2bcecca45d219992133b9ae1599117209b5b3b6f1d7c087ab17e6ba02bb3ea",
+      "actual_sha256": "5c2bcecca45d219992133b9ae1599117209b5b3b6f1d7c087ab17e6ba02bb3ea",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/c101-real-calibration-attempt01.json",
+      "artifact": "exports/foundation-repair/c101-real-calibration-attempt01/provenance.json",
+      "expected_sha256": "3e74351da3ef5435ff1145d641207711d94d97ec45c2d5983c6a9cf212e28257",
+      "actual_sha256": "3e74351da3ef5435ff1145d641207711d94d97ec45c2d5983c6a9cf212e28257",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/c101-real-calibration-attempt01.json",
+      "artifact": "exports/foundation-repair/c101-real-calibration-attempt01/thermal.json",
+      "expected_sha256": "c2d2ac9bb47fe0de4675aa1c8e8d4b2a59db06a2a2ca1031329811c668507cff",
+      "actual_sha256": "c2d2ac9bb47fe0de4675aa1c8e8d4b2a59db06a2a2ca1031329811c668507cff",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/c101-real-calibration-attempt01.json",
+      "artifact": "exports/foundation-repair/c101-real-calibration-attempt01/updates.jsonl",
+      "expected_sha256": "df80525b663e6efe03344c616ebd7d02f4d1540db0d920310bfd2bd205689c25",
+      "actual_sha256": "df80525b663e6efe03344c616ebd7d02f4d1540db0d920310bfd2bd205689c25",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/development-asr-pairs-attempt01.json",
+      "artifact": "exports/foundation-repair/development-asr-pairs-attempt01/provenance.json",
+      "expected_sha256": "6babe46a69bb8068032350d040161fdc936a8f9af008d259ed117373a4966f2f",
+      "actual_sha256": "6babe46a69bb8068032350d040161fdc936a8f9af008d259ed117373a4966f2f",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/development-asr-pairs-attempt01.json",
+      "artifact": "exports/foundation-repair/development-asr-pairs-attempt01/pairs.jsonl",
+      "expected_sha256": "ce4a170a086afee430085c4e6f665e8af58b8c68091afc27f10ee403c81951d8",
+      "actual_sha256": "ce4a170a086afee430085c4e6f665e8af58b8c68091afc27f10ee403c81951d8",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/development-asr-pairs-attempt01.json",
+      "artifact": "exports/foundation-repair/development-asr-pairs-attempt01/selection.json",
+      "expected_sha256": "505f1eeb71ffad659504a4db7e4addd49668887b49b491a8458cca19b05ee23f",
+      "actual_sha256": "505f1eeb71ffad659504a4db7e4addd49668887b49b491a8458cca19b05ee23f",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/model0-v6-phase1-attempt02.json",
+      "artifact": "exports/foundation-repair/model0-v6-phase1-attempt02/provenance.json",
+      "expected_sha256": "3357cd3e847e28291e6e01c6b633610e1d76d6c8b7e28785a5185a391b8b149e",
+      "actual_sha256": "3357cd3e847e28291e6e01c6b633610e1d76d6c8b7e28785a5185a391b8b149e",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/model0-v6-phase1-attempt02.json",
+      "artifact": "exports/foundation-repair/model0-v6-phase1-attempt02/initial_identity.json",
+      "expected_sha256": "3e0762d663f912ec807c71df7b6c3569640c108eeaed46312addf4e1be544792",
+      "actual_sha256": "3e0762d663f912ec807c71df7b6c3569640c108eeaed46312addf4e1be544792",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/model0-v6-phase1-attempt02.json",
+      "artifact": "exports/foundation-repair/model0-v6-phase1-attempt02/steps.jsonl",
+      "expected_sha256": "3d91debb9542df4d9e98ebed5416bec93bf33fab64c758f587c6f2a046b64bbd",
+      "actual_sha256": "3d91debb9542df4d9e98ebed5416bec93bf33fab64c758f587c6f2a046b64bbd",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/model0-v6-phase2-attempt02.json",
+      "artifact": "exports/foundation-repair/model0-v6-phase2-attempt02/provenance.json",
+      "expected_sha256": "f939f1401693275ac1c09bb7cd3989051d73b451e4892aa015963bdf736c6606",
+      "actual_sha256": "f939f1401693275ac1c09bb7cd3989051d73b451e4892aa015963bdf736c6606",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/model0-v6-phase2-attempt02.json",
+      "artifact": "exports/foundation-repair/model0-v6-phase2-attempt02/initial_identity.json",
+      "expected_sha256": "3e0762d663f912ec807c71df7b6c3569640c108eeaed46312addf4e1be544792",
+      "actual_sha256": "3e0762d663f912ec807c71df7b6c3569640c108eeaed46312addf4e1be544792",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/model0-v6-phase2-attempt02.json",
+      "artifact": "exports/foundation-repair/model0-v6-phase2-attempt02/steps.jsonl",
+      "expected_sha256": "fd4cc52ae82555754f57d935595e550229fa90cf928b3b74a03d48a8e553acdb",
+      "actual_sha256": "fd4cc52ae82555754f57d935595e550229fa90cf928b3b74a03d48a8e553acdb",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/natural-scorer-attempt01.json",
+      "artifact": "exports/foundation-repair/natural-scorer-attempt01/provenance.json",
+      "expected_sha256": "a5c92f949828059e2ebad8baad593a8c2531f4d2afcd6b63a7786d3c9d218a8b",
+      "actual_sha256": "a5c92f949828059e2ebad8baad593a8c2531f4d2afcd6b63a7786d3c9d218a8b",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/natural-scorer-attempt01.json",
+      "artifact": "exports/foundation-repair/natural-scorer-attempt01/records.jsonl",
+      "expected_sha256": "c1fff3dffcb966c841c6ad31873e2b26c9d56edbd4003ec5081dd8a20c5a23bf",
+      "actual_sha256": "c1fff3dffcb966c841c6ad31873e2b26c9d56edbd4003ec5081dd8a20c5a23bf",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/natural-scorer-attempt01.json",
+      "artifact": "exports/foundation-repair/natural-scorer-attempt01/source_preflights.json",
+      "expected_sha256": "4c8a27723f501280cfd2423ea5fd0dc4d4b4db9136c9f8237f996eaf2d3b4258",
+      "actual_sha256": "4c8a27723f501280cfd2423ea5fd0dc4d4b4db9136c9f8237f996eaf2d3b4258",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/natural-scorer-attempt02.json",
+      "artifact": "exports/foundation-repair/natural-scorer-attempt02/provenance.json",
+      "expected_sha256": "f671f3c4430ead2145cf83fcdfc9f60914d99ce8e9bece59d41b50bd9b1847ec",
+      "actual_sha256": "f671f3c4430ead2145cf83fcdfc9f60914d99ce8e9bece59d41b50bd9b1847ec",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/natural-scorer-attempt02.json",
+      "artifact": "exports/foundation-repair/natural-scorer-attempt02/records.jsonl",
+      "expected_sha256": "2f8377bb5ba6f4bd5625811fb1b02876e66a9d2f39ce6a9dbdd3f61d6b43ef5d",
+      "actual_sha256": "2f8377bb5ba6f4bd5625811fb1b02876e66a9d2f39ce6a9dbdd3f61d6b43ef5d",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/natural-scorer-attempt02.json",
+      "artifact": "exports/foundation-repair/natural-scorer-attempt02/source_preflights.json",
+      "expected_sha256": "4c8a27723f501280cfd2423ea5fd0dc4d4b4db9136c9f8237f996eaf2d3b4258",
+      "actual_sha256": "4c8a27723f501280cfd2423ea5fd0dc4d4b4db9136c9f8237f996eaf2d3b4258",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/natural-scorer-b100-attempt01.json",
+      "artifact": "exports/foundation-repair/natural-scorer-b100-attempt01/provenance.json",
+      "expected_sha256": "4c47a7334956564aa432704cc73cd46323e20b51e4fdef5d0aa7d6a25cfbce90",
+      "actual_sha256": "4c47a7334956564aa432704cc73cd46323e20b51e4fdef5d0aa7d6a25cfbce90",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/natural-scorer-b100-attempt01.json",
+      "artifact": "exports/foundation-repair/natural-scorer-b100-attempt01/records.jsonl",
+      "expected_sha256": "6aa5e734874d839ddc39ed3108812e7934d1df061c61e6c8aef07cf4e5e7fd11",
+      "actual_sha256": "6aa5e734874d839ddc39ed3108812e7934d1df061c61e6c8aef07cf4e5e7fd11",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/natural-scorer-b100-attempt01.json",
+      "artifact": "exports/foundation-repair/natural-scorer-b100-attempt01/source_preflights.json",
+      "expected_sha256": "0e615a04a6d2fd3fb3b9f59ec349fc8fde8fb1bdda1d9558768f52ef9d77817b",
+      "actual_sha256": "0e615a04a6d2fd3fb3b9f59ec349fc8fde8fb1bdda1d9558768f52ef9d77817b",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/natural-scorer-c101-attempt01.json",
+      "artifact": "exports/foundation-repair/natural-scorer-c101-attempt01/provenance.json",
+      "expected_sha256": "70714d7c6c2ee4029fe1585feaab524c543eb01ac2750106b0a9803b4f29cead",
+      "actual_sha256": "70714d7c6c2ee4029fe1585feaab524c543eb01ac2750106b0a9803b4f29cead",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/natural-scorer-c101-attempt01.json",
+      "artifact": "exports/foundation-repair/natural-scorer-c101-attempt01/records.jsonl",
+      "expected_sha256": "08dfbe1e400d3d558feaf7fd320eb8f5ed5c1ad4cd1a91271cd850ba05c9ee73",
+      "actual_sha256": "08dfbe1e400d3d558feaf7fd320eb8f5ed5c1ad4cd1a91271cd850ba05c9ee73",
+      "matches": true
+    },
+    {
+      "receipt": "experiments/manifests/foundation_repair/natural-scorer-c101-attempt01.json",
+      "artifact": "exports/foundation-repair/natural-scorer-c101-attempt01/source_preflights.json",
+      "expected_sha256": "0e615a04a6d2fd3fb3b9f59ec349fc8fde8fb1bdda1d9558768f52ef9d77817b",
+      "actual_sha256": "0e615a04a6d2fd3fb3b9f59ec349fc8fde8fb1bdda1d9558768f52ef9d77817b",
+      "matches": true
+    }
+  ],
+  "immutable_inputs": [
+    {
+      "path": "docs/reviews/Independent_Pre_Implementation_Review_v1_2_Accepted_Findings.md",
+      "expected_sha256": "b408e93a11e395099c57edf76ba507c487ba2671c057e1ff2fae6f13c0e8d00a",
+      "actual_sha256": "b408e93a11e395099c57edf76ba507c487ba2671c057e1ff2fae6f13c0e8d00a",
+      "matches": true
+    },
+    {
+      "path": "docs/design-inputs/KICKOFF_PROMPT.txt",
+      "expected_sha256": "91848265ed36ae02e07524a20e82f5d3e4e0836aa0dcc574437a48edb163d2f5",
+      "actual_sha256": "91848265ed36ae02e07524a20e82f5d3e4e0836aa0dcc574437a48edb163d2f5",
+      "matches": true
+    },
+    {
+      "path": "docs/design-inputs/LocalFlow_From_Scratch_Master_Spec_v1_2.html",
+      "expected_sha256": "fd7132adbf3796424db29a6a06c2ff470e425f2b42f43f3203a4ff7f4de5c329",
+      "actual_sha256": "fd7132adbf3796424db29a6a06c2ff470e425f2b42f43f3203a4ff7f4de5c329",
+      "matches": true
+    },
+    {
+      "path": "docs/design-inputs/LocalFlow_From_Scratch_Master_Spec_v1_2.pdf",
+      "expected_sha256": "d84309ca0b9e69e2dd7f85398bd80af8efa58ade885e3c30ff2ec08f50aab48e",
+      "actual_sha256": "d84309ca0b9e69e2dd7f85398bd80af8efa58ade885e3c30ff2ec08f50aab48e",
+      "matches": true
+    },
+    {
+      "path": "docs/design-inputs/LocalFlow_Publication_Experiment_Registry_v2.txt",
+      "expected_sha256": "596932dd91e0b108936c3a7a80245f4f44df5cfeac4f13d6fda8cfb30412cfe0",
+      "actual_sha256": "596932dd91e0b108936c3a7a80245f4f44df5cfeac4f13d6fda8cfb30412cfe0",
+      "matches": true
+    },
+    {
+      "path": "docs/design-inputs/PACKAGE_README.md",
+      "expected_sha256": "9ec70b0e2b9f9ea1139545370c49b75178dd9278dbc31e95c6ac071c6af6045d",
+      "actual_sha256": "9ec70b0e2b9f9ea1139545370c49b75178dd9278dbc31e95c6ac071c6af6045d",
+      "matches": true
+    },
+    {
+      "path": "docs/design-inputs/BUNDLE_SHA256SUMS",
+      "expected_sha256": "8b1f98bb7e8debd01c062992efa8c6e422a2c23e4e458ff0b0d07dd0b11bcbd1",
+      "actual_sha256": "8b1f98bb7e8debd01c062992efa8c6e422a2c23e4e458ff0b0d07dd0b11bcbd1",
+      "matches": true
+    }
+  ],
+  "audit_attempts": [
+    {
+      "attempt": 1,
+      "status": "failed_before_receipt",
+      "reason": "SHA256SUMS paths were mistakenly resolved from its directory instead of repository root; no source bytes changed"
+    },
+    {
+      "attempt": 2,
+      "status": "completed",
+      "resolution": "used repository-relative paths exactly as stored"
+    }
+  ]
+}

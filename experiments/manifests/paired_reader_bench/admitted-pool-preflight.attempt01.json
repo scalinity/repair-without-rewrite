@@ -1,0 +1,123 @@
+{
+  "attempt_id": "admitted-pool-audit-attempt01",
+  "start_head": "f24712ed3b33e2396efbf4de89cf7409051ace4a",
+  "role_inventory": {
+    "calibration": {
+      "rows": 6271,
+      "groups": 40
+    },
+    "hpo_development": {
+      "rows": 898,
+      "groups": 12
+    },
+    "train": {
+      "rows": 45729,
+      "groups": 314
+    }
+  },
+  "admitted_pair_inventory": {
+    "train": {
+      "rows": 1024,
+      "groups": 48,
+      "group_rows_min": 6,
+      "group_rows_max": 61,
+      "unique_source_hashes": 1024,
+      "unique_target_hashes": 1024,
+      "byte_identity": 182,
+      "source_bpe_total": 24456,
+      "target_bpe_total": 24846,
+      "C_decoder_total": 10079,
+      "native_source_total": 27528,
+      "B_target_EOS_total": 25870,
+      "C_components_total": {
+        "action": 3011,
+        "start": 1987,
+        "end": 1987,
+        "vocabulary": 5081
+      },
+      "prior_natural_calibration_charge_total_NOT_registered_serializer": 52764,
+      "common_1024_envelope_rejections": 0
+    },
+    "calibration": {
+      "rows": 96,
+      "groups": 5,
+      "group_rows_min": 13,
+      "group_rows_max": 28,
+      "unique_source_hashes": 96,
+      "unique_target_hashes": 96,
+      "byte_identity": 19,
+      "source_bpe_total": 2318,
+      "target_bpe_total": 2377,
+      "C_decoder_total": 969,
+      "native_source_total": 2606,
+      "B_target_EOS_total": 2473,
+      "C_components_total": {
+        "action": 288,
+        "start": 192,
+        "end": 192,
+        "vocabulary": 489
+      },
+      "prior_natural_calibration_charge_total_NOT_registered_serializer": 5042,
+      "common_1024_envelope_rejections": 0
+    }
+  },
+  "bad_role_or_hash_or_render_count": 0,
+  "train_calibration_group_intersections": 0,
+  "input_hashes": {
+    "docs/design-inputs/EXTRACTED_CANONICAL_SOURCE.md": "94746ef2c223f9f461d5dc92378961813e8f9377fe89fd5166dd9d6097ced746",
+    "docs/design-inputs/LocalFlow_Publication_Experiment_Registry_v2.txt": "596932dd91e0b108936c3a7a80245f4f44df5cfeac4f13d6fda8cfb30412cfe0",
+    "docs/reviews/PROSPECTIVE_AMENDMENTS.md": "74c4d40bd47badda6d09948a37183217fc567edcab738963b5cdf876a6bbdf22",
+    "src/data/development_reader.py": "24f61cb4a8245831b112fd2a25aa26e332e1cea6526d1e6ddd69f25d7a2ad3f5",
+    "src/generation/stress.py": "0d83fdc4a2a54720d7269041d2698582cea9fc8b14a75605e5c547af14ca28ec",
+    "src/models/tokenizer.py": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+    "src/models/edits.py": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+    "configs/stress_development.json": "13e43073d75972ae14985934fde02eb38e9481674dc67bd983bfd3ed0b12c24c",
+    "configs/tokenizer_development/tokenizer.json": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+    "configs/tokenizer_development/special_tokens.json": "db75b2bec29e695e7843ac530fbe2dec4a5be128c713fe3186ea2e4d6efa03e2",
+    "experiments/manifests/public_lspc_training_roles.development.jsonl": "56c5889d952c83120267ea92b4aaf8bcec63dff61a34e83ce531c9be97b3eb98",
+    "experiments/manifests/public_lspc_training_supply_qualification.json": "d0b1de70c2d2a7c7bbc7ad711a4d771fa91a22ef399651b0482aaeeee7616842",
+    "exports/foundation-repair/development-asr-pairs-attempt01/pairs.jsonl": "ce4a170a086afee430085c4e6f665e8af58b8c68091afc27f10ee403c81951d8"
+  },
+  "inventory_sha256": "0f09c51308928db215aed1aa7a50e6da52affba915d9025ea9a7e3e14633ed8b",
+  "pre_run_sha256": "247273aecd723b3a56c65278479ab589dc05848d8a2b7fef05586f3b186e42bc",
+  "elapsed_seconds": 3.4038645830005407,
+  "registered_mixed_presentations_generated": 0,
+  "new_optimizer_updates": 0,
+  "reader_qualified": false,
+  "status": "FRONTIER_MODEL_REVIEW_REQUIRED",
+  "end_utc": "2026-10-05T20:15:21.071125+00:00",
+  "public_scope": "Payload-free current-admission and native-label inventory only; NOT a mixed reader, scheduling dry run, paired consumption ledger or BENCH result. No calibration record is included in the public train inventory.",
+  "public_train_inventory_path": "experiments/manifests/paired_reader_bench/admitted-natural-train-inventory.attempt01.jsonl",
+  "public_train_inventory_sha256": "f0e4f37f330c728c833884897f69f53a60708437c2ab5ea839978c892bd31afd",
+  "baseline": {
+    "exit_code": 0,
+    "elapsed_seconds": 21.692504457983887,
+    "test_count": 259,
+    "stdout_sha256": "221dfb9cb68b4293a167fb93b2b0d4cc64c3faea004e76329d7616e7a42a7786",
+    "pre_run_sha256": "d7d90579f35312366f0224c204eac58fcdfad098626238d152ce0d126614f906",
+    "end_utc": "2026-10-05T20:12:30.658347+00:00"
+  },
+  "state_verification": {
+    "local_head": "f24712ed3b33e2396efbf4de89cf7409051ace4a",
+    "remote_main_at_start": "f24712ed3b33e2396efbf4de89cf7409051ace4a",
+    "expected_ancestor_verified": true,
+    "working_tree_clean_before_changes": true
+  },
+  "missing_scientific_bindings": [
+    "identity/minimal/rule channel formation and allocation",
+    "training-derived empirical text-corruption profile and severity",
+    "source/group/family sampling, reuse, replacement/exhaustion, support/repetition gates",
+    "exact trusted accounting BOS/EOS/delimiter serialization",
+    "10M pilot phase/LR mapping and declared development decode cadence"
+  ],
+  "new_reader_regression_tests": 0,
+  "new_BC_recipe_slots_consumed": 0,
+  "final_or_sealed_candidate_inference": false,
+  "paper_protocol_v2_frozen": false,
+  "new_chosen_complete_update_regime": null,
+  "new_throughput_or_10M_cost_projection": null,
+  "prior_natural_calibration_charge_is_unqualified_for_registered_reader": true,
+  "reproduction_note": "Read pinned pairs and public roles, join unique stable IDs, assert role/group and source/target hashes; tokenize with pinned ByteBPE; canonical_labels then events and strict render; sum native positions/components without scheduling presentations. Three independent reviews reproduce distinct parts.",
+  "new_BC_BENCH_or_training_updates": 0,
+  "numerical_correctness_tests_executed_separately": true
+}
