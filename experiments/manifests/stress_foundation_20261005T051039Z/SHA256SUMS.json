@@ -1,0 +1,8 @@
+{
+  "model_inputs.jsonl": "3d5fbc9c00c1c5436495ff19dde45107aa543421bdfa92cfbdfeb1bd9b4ccbaf",
+  "tests.txt": "5dad698d308b41c174a9d16fcb44bdde0ca73d79833de8d72e45157671724636",
+  "latents.jsonl": "913c537928dff58524cf7257089d32e2a3a0240f2961fd752010edc0f616ff03",
+  "grammar_catalog.json": "cefcffbb1521cadfef19e9d787b2a0c7c6e3b7ad000b6e0a4e371f9a1e883350",
+  "measurement.json": "b4c3725656a9c34c48ac96c057c682b9de95cf559baa83d919a8fa282e48eb93",
+  "rejections.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+}

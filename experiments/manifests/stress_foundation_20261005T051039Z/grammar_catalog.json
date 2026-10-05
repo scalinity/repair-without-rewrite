@@ -1,0 +1,1154 @@
+[
+  {
+    "family_id": "train/signs_numerical/cell0",
+    "partition": "train",
+    "category": "signs_numerical",
+    "cell": 0,
+    "field_type": "signed_decimal",
+    "scaffold": [
+      "Exercise signs_numerical: Primary signed decimal: ",
+      "; Backup signed decimal: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/signs_numerical/cell1",
+    "partition": "train",
+    "category": "signs_numerical",
+    "cell": 1,
+    "field_type": "signed_decimal",
+    "scaffold": [
+      "Exercise signs_numerical record. Left signed decimal: ",
+      "; Right signed decimal: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/signs_numerical/cell2",
+    "partition": "train",
+    "category": "signs_numerical",
+    "cell": 2,
+    "field_type": "signed_decimal",
+    "scaffold": [
+      "Exercise signs_numerical context with two bound fields. Earlier signed decimal: ",
+      "; Later signed decimal: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/signs_numerical/cell3",
+    "partition": "train",
+    "category": "signs_numerical",
+    "cell": 3,
+    "field_type": "signed_decimal",
+    "scaffold": [
+      "Exercise signs_numerical context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input signed decimal: ",
+      "; Output signed decimal: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/negation/cell0",
+    "partition": "train",
+    "category": "negation",
+    "cell": 0,
+    "field_type": "negation",
+    "scaffold": [
+      "Exercise negation: Primary negation: ",
+      "; Backup negation: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/negation/cell1",
+    "partition": "train",
+    "category": "negation",
+    "cell": 1,
+    "field_type": "negation",
+    "scaffold": [
+      "Exercise negation record. Left negation: ",
+      "; Right negation: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/negation/cell2",
+    "partition": "train",
+    "category": "negation",
+    "cell": 2,
+    "field_type": "negation",
+    "scaffold": [
+      "Exercise negation context with two bound fields. Earlier negation: ",
+      "; Later negation: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/negation/cell3",
+    "partition": "train",
+    "category": "negation",
+    "cell": 3,
+    "field_type": "negation",
+    "scaffold": [
+      "Exercise negation context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input negation: ",
+      "; Output negation: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/versions/cell0",
+    "partition": "train",
+    "category": "versions",
+    "cell": 0,
+    "field_type": "version",
+    "scaffold": [
+      "Exercise versions: Primary version: ",
+      "; Backup version: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/versions/cell1",
+    "partition": "train",
+    "category": "versions",
+    "cell": 1,
+    "field_type": "version",
+    "scaffold": [
+      "Exercise versions record. Left version: ",
+      "; Right version: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/versions/cell2",
+    "partition": "train",
+    "category": "versions",
+    "cell": 2,
+    "field_type": "version",
+    "scaffold": [
+      "Exercise versions context with two bound fields. Earlier version: ",
+      "; Later version: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/versions/cell3",
+    "partition": "train",
+    "category": "versions",
+    "cell": 3,
+    "field_type": "version",
+    "scaffold": [
+      "Exercise versions context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input version: ",
+      "; Output version: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/paths/cell0",
+    "partition": "train",
+    "category": "paths",
+    "cell": 0,
+    "field_type": "path",
+    "scaffold": [
+      "Exercise paths: Primary path: ",
+      "; Backup path: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/paths/cell1",
+    "partition": "train",
+    "category": "paths",
+    "cell": 1,
+    "field_type": "path",
+    "scaffold": [
+      "Exercise paths record. Left path: ",
+      "; Right path: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/paths/cell2",
+    "partition": "train",
+    "category": "paths",
+    "cell": 2,
+    "field_type": "path",
+    "scaffold": [
+      "Exercise paths context with two bound fields. Earlier path: ",
+      "; Later path: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/paths/cell3",
+    "partition": "train",
+    "category": "paths",
+    "cell": 3,
+    "field_type": "path",
+    "scaffold": [
+      "Exercise paths context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input path: ",
+      "; Output path: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/identifiers/cell0",
+    "partition": "train",
+    "category": "identifiers",
+    "cell": 0,
+    "field_type": "identifier",
+    "scaffold": [
+      "Exercise identifiers: Primary identifier: ",
+      "; Backup identifier: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/identifiers/cell1",
+    "partition": "train",
+    "category": "identifiers",
+    "cell": 1,
+    "field_type": "identifier",
+    "scaffold": [
+      "Exercise identifiers record. Left identifier: ",
+      "; Right identifier: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/identifiers/cell2",
+    "partition": "train",
+    "category": "identifiers",
+    "cell": 2,
+    "field_type": "identifier",
+    "scaffold": [
+      "Exercise identifiers context with two bound fields. Earlier identifier: ",
+      "; Later identifier: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/identifiers/cell3",
+    "partition": "train",
+    "category": "identifiers",
+    "cell": 3,
+    "field_type": "identifier",
+    "scaffold": [
+      "Exercise identifiers context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input identifier: ",
+      "; Output identifier: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/units_quantities/cell0",
+    "partition": "train",
+    "category": "units_quantities",
+    "cell": 0,
+    "field_type": "quantity",
+    "scaffold": [
+      "Exercise units_quantities: Primary quantity: ",
+      "; Backup quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/units_quantities/cell1",
+    "partition": "train",
+    "category": "units_quantities",
+    "cell": 1,
+    "field_type": "quantity",
+    "scaffold": [
+      "Exercise units_quantities record. Left quantity: ",
+      "; Right quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/units_quantities/cell2",
+    "partition": "train",
+    "category": "units_quantities",
+    "cell": 2,
+    "field_type": "quantity",
+    "scaffold": [
+      "Exercise units_quantities context with two bound fields. Earlier quantity: ",
+      "; Later quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/units_quantities/cell3",
+    "partition": "train",
+    "category": "units_quantities",
+    "cell": 3,
+    "field_type": "quantity",
+    "scaffold": [
+      "Exercise units_quantities context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input quantity: ",
+      "; Output quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/repeated_literals/cell0",
+    "partition": "train",
+    "category": "repeated_literals",
+    "cell": 0,
+    "field_type": "integer",
+    "scaffold": [
+      "Exercise repeated_literals: Primary integer: ",
+      "; Backup integer: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/repeated_literals/cell1",
+    "partition": "train",
+    "category": "repeated_literals",
+    "cell": 1,
+    "field_type": "integer",
+    "scaffold": [
+      "Exercise repeated_literals record. Left integer: ",
+      "; Right integer: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/repeated_literals/cell2",
+    "partition": "train",
+    "category": "repeated_literals",
+    "cell": 2,
+    "field_type": "integer",
+    "scaffold": [
+      "Exercise repeated_literals context with two bound fields. Earlier integer: ",
+      "; Later integer: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/repeated_literals/cell3",
+    "partition": "train",
+    "category": "repeated_literals",
+    "cell": 3,
+    "field_type": "integer",
+    "scaffold": [
+      "Exercise repeated_literals context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input integer: ",
+      "; Output integer: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/multiple_bindings/cell0",
+    "partition": "train",
+    "category": "multiple_bindings",
+    "cell": 0,
+    "field_type": "quantity",
+    "scaffold": [
+      "Exercise multiple_bindings: Primary quantity: ",
+      "; Backup quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/multiple_bindings/cell1",
+    "partition": "train",
+    "category": "multiple_bindings",
+    "cell": 1,
+    "field_type": "quantity",
+    "scaffold": [
+      "Exercise multiple_bindings record. Left quantity: ",
+      "; Right quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/multiple_bindings/cell2",
+    "partition": "train",
+    "category": "multiple_bindings",
+    "cell": 2,
+    "field_type": "quantity",
+    "scaffold": [
+      "Exercise multiple_bindings context with two bound fields. Earlier quantity: ",
+      "; Later quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "train/multiple_bindings/cell3",
+    "partition": "train",
+    "category": "multiple_bindings",
+    "cell": 3,
+    "field_type": "quantity",
+    "scaffold": [
+      "Exercise multiple_bindings context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input quantity: ",
+      "; Output quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/signs_numerical/cell0",
+    "partition": "dev",
+    "category": "signs_numerical",
+    "cell": 0,
+    "field_type": "signed_decimal",
+    "scaffold": [
+      "Calibration signs_numerical: Primary signed decimal: ",
+      "; Backup signed decimal: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/signs_numerical/cell1",
+    "partition": "dev",
+    "category": "signs_numerical",
+    "cell": 1,
+    "field_type": "signed_decimal",
+    "scaffold": [
+      "Calibration signs_numerical record. Left signed decimal: ",
+      "; Right signed decimal: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/signs_numerical/cell2",
+    "partition": "dev",
+    "category": "signs_numerical",
+    "cell": 2,
+    "field_type": "signed_decimal",
+    "scaffold": [
+      "Calibration signs_numerical context with two bound fields. Earlier signed decimal: ",
+      "; Later signed decimal: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/signs_numerical/cell3",
+    "partition": "dev",
+    "category": "signs_numerical",
+    "cell": 3,
+    "field_type": "signed_decimal",
+    "scaffold": [
+      "Calibration signs_numerical context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input signed decimal: ",
+      "; Output signed decimal: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/negation/cell0",
+    "partition": "dev",
+    "category": "negation",
+    "cell": 0,
+    "field_type": "negation",
+    "scaffold": [
+      "Calibration negation: Primary negation: ",
+      "; Backup negation: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/negation/cell1",
+    "partition": "dev",
+    "category": "negation",
+    "cell": 1,
+    "field_type": "negation",
+    "scaffold": [
+      "Calibration negation record. Left negation: ",
+      "; Right negation: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/negation/cell2",
+    "partition": "dev",
+    "category": "negation",
+    "cell": 2,
+    "field_type": "negation",
+    "scaffold": [
+      "Calibration negation context with two bound fields. Earlier negation: ",
+      "; Later negation: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/negation/cell3",
+    "partition": "dev",
+    "category": "negation",
+    "cell": 3,
+    "field_type": "negation",
+    "scaffold": [
+      "Calibration negation context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input negation: ",
+      "; Output negation: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/versions/cell0",
+    "partition": "dev",
+    "category": "versions",
+    "cell": 0,
+    "field_type": "version",
+    "scaffold": [
+      "Calibration versions: Primary version: ",
+      "; Backup version: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/versions/cell1",
+    "partition": "dev",
+    "category": "versions",
+    "cell": 1,
+    "field_type": "version",
+    "scaffold": [
+      "Calibration versions record. Left version: ",
+      "; Right version: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/versions/cell2",
+    "partition": "dev",
+    "category": "versions",
+    "cell": 2,
+    "field_type": "version",
+    "scaffold": [
+      "Calibration versions context with two bound fields. Earlier version: ",
+      "; Later version: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/versions/cell3",
+    "partition": "dev",
+    "category": "versions",
+    "cell": 3,
+    "field_type": "version",
+    "scaffold": [
+      "Calibration versions context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input version: ",
+      "; Output version: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/paths/cell0",
+    "partition": "dev",
+    "category": "paths",
+    "cell": 0,
+    "field_type": "path",
+    "scaffold": [
+      "Calibration paths: Primary path: ",
+      "; Backup path: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/paths/cell1",
+    "partition": "dev",
+    "category": "paths",
+    "cell": 1,
+    "field_type": "path",
+    "scaffold": [
+      "Calibration paths record. Left path: ",
+      "; Right path: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/paths/cell2",
+    "partition": "dev",
+    "category": "paths",
+    "cell": 2,
+    "field_type": "path",
+    "scaffold": [
+      "Calibration paths context with two bound fields. Earlier path: ",
+      "; Later path: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/paths/cell3",
+    "partition": "dev",
+    "category": "paths",
+    "cell": 3,
+    "field_type": "path",
+    "scaffold": [
+      "Calibration paths context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input path: ",
+      "; Output path: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/identifiers/cell0",
+    "partition": "dev",
+    "category": "identifiers",
+    "cell": 0,
+    "field_type": "identifier",
+    "scaffold": [
+      "Calibration identifiers: Primary identifier: ",
+      "; Backup identifier: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/identifiers/cell1",
+    "partition": "dev",
+    "category": "identifiers",
+    "cell": 1,
+    "field_type": "identifier",
+    "scaffold": [
+      "Calibration identifiers record. Left identifier: ",
+      "; Right identifier: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/identifiers/cell2",
+    "partition": "dev",
+    "category": "identifiers",
+    "cell": 2,
+    "field_type": "identifier",
+    "scaffold": [
+      "Calibration identifiers context with two bound fields. Earlier identifier: ",
+      "; Later identifier: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/identifiers/cell3",
+    "partition": "dev",
+    "category": "identifiers",
+    "cell": 3,
+    "field_type": "identifier",
+    "scaffold": [
+      "Calibration identifiers context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input identifier: ",
+      "; Output identifier: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/units_quantities/cell0",
+    "partition": "dev",
+    "category": "units_quantities",
+    "cell": 0,
+    "field_type": "quantity",
+    "scaffold": [
+      "Calibration units_quantities: Primary quantity: ",
+      "; Backup quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/units_quantities/cell1",
+    "partition": "dev",
+    "category": "units_quantities",
+    "cell": 1,
+    "field_type": "quantity",
+    "scaffold": [
+      "Calibration units_quantities record. Left quantity: ",
+      "; Right quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/units_quantities/cell2",
+    "partition": "dev",
+    "category": "units_quantities",
+    "cell": 2,
+    "field_type": "quantity",
+    "scaffold": [
+      "Calibration units_quantities context with two bound fields. Earlier quantity: ",
+      "; Later quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/units_quantities/cell3",
+    "partition": "dev",
+    "category": "units_quantities",
+    "cell": 3,
+    "field_type": "quantity",
+    "scaffold": [
+      "Calibration units_quantities context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input quantity: ",
+      "; Output quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/repeated_literals/cell0",
+    "partition": "dev",
+    "category": "repeated_literals",
+    "cell": 0,
+    "field_type": "integer",
+    "scaffold": [
+      "Calibration repeated_literals: Primary integer: ",
+      "; Backup integer: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/repeated_literals/cell1",
+    "partition": "dev",
+    "category": "repeated_literals",
+    "cell": 1,
+    "field_type": "integer",
+    "scaffold": [
+      "Calibration repeated_literals record. Left integer: ",
+      "; Right integer: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/repeated_literals/cell2",
+    "partition": "dev",
+    "category": "repeated_literals",
+    "cell": 2,
+    "field_type": "integer",
+    "scaffold": [
+      "Calibration repeated_literals context with two bound fields. Earlier integer: ",
+      "; Later integer: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/repeated_literals/cell3",
+    "partition": "dev",
+    "category": "repeated_literals",
+    "cell": 3,
+    "field_type": "integer",
+    "scaffold": [
+      "Calibration repeated_literals context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input integer: ",
+      "; Output integer: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/multiple_bindings/cell0",
+    "partition": "dev",
+    "category": "multiple_bindings",
+    "cell": 0,
+    "field_type": "quantity",
+    "scaffold": [
+      "Calibration multiple_bindings: Primary quantity: ",
+      "; Backup quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/multiple_bindings/cell1",
+    "partition": "dev",
+    "category": "multiple_bindings",
+    "cell": 1,
+    "field_type": "quantity",
+    "scaffold": [
+      "Calibration multiple_bindings record. Left quantity: ",
+      "; Right quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/multiple_bindings/cell2",
+    "partition": "dev",
+    "category": "multiple_bindings",
+    "cell": 2,
+    "field_type": "quantity",
+    "scaffold": [
+      "Calibration multiple_bindings context with two bound fields. Earlier quantity: ",
+      "; Later quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "dev/multiple_bindings/cell3",
+    "partition": "dev",
+    "category": "multiple_bindings",
+    "cell": 3,
+    "field_type": "quantity",
+    "scaffold": [
+      "Calibration multiple_bindings context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input quantity: ",
+      "; Output quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/signs_numerical/cell0",
+    "partition": "test",
+    "category": "signs_numerical",
+    "cell": 0,
+    "field_type": "signed_decimal",
+    "scaffold": [
+      "Reserved signs_numerical: Primary signed decimal: ",
+      "; Backup signed decimal: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/signs_numerical/cell1",
+    "partition": "test",
+    "category": "signs_numerical",
+    "cell": 1,
+    "field_type": "signed_decimal",
+    "scaffold": [
+      "Reserved signs_numerical record. Left signed decimal: ",
+      "; Right signed decimal: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/signs_numerical/cell2",
+    "partition": "test",
+    "category": "signs_numerical",
+    "cell": 2,
+    "field_type": "signed_decimal",
+    "scaffold": [
+      "Reserved signs_numerical context with two bound fields. Earlier signed decimal: ",
+      "; Later signed decimal: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/signs_numerical/cell3",
+    "partition": "test",
+    "category": "signs_numerical",
+    "cell": 3,
+    "field_type": "signed_decimal",
+    "scaffold": [
+      "Reserved signs_numerical context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input signed decimal: ",
+      "; Output signed decimal: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/negation/cell0",
+    "partition": "test",
+    "category": "negation",
+    "cell": 0,
+    "field_type": "negation",
+    "scaffold": [
+      "Reserved negation: Primary negation: ",
+      "; Backup negation: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/negation/cell1",
+    "partition": "test",
+    "category": "negation",
+    "cell": 1,
+    "field_type": "negation",
+    "scaffold": [
+      "Reserved negation record. Left negation: ",
+      "; Right negation: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/negation/cell2",
+    "partition": "test",
+    "category": "negation",
+    "cell": 2,
+    "field_type": "negation",
+    "scaffold": [
+      "Reserved negation context with two bound fields. Earlier negation: ",
+      "; Later negation: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/negation/cell3",
+    "partition": "test",
+    "category": "negation",
+    "cell": 3,
+    "field_type": "negation",
+    "scaffold": [
+      "Reserved negation context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input negation: ",
+      "; Output negation: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/versions/cell0",
+    "partition": "test",
+    "category": "versions",
+    "cell": 0,
+    "field_type": "version",
+    "scaffold": [
+      "Reserved versions: Primary version: ",
+      "; Backup version: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/versions/cell1",
+    "partition": "test",
+    "category": "versions",
+    "cell": 1,
+    "field_type": "version",
+    "scaffold": [
+      "Reserved versions record. Left version: ",
+      "; Right version: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/versions/cell2",
+    "partition": "test",
+    "category": "versions",
+    "cell": 2,
+    "field_type": "version",
+    "scaffold": [
+      "Reserved versions context with two bound fields. Earlier version: ",
+      "; Later version: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/versions/cell3",
+    "partition": "test",
+    "category": "versions",
+    "cell": 3,
+    "field_type": "version",
+    "scaffold": [
+      "Reserved versions context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input version: ",
+      "; Output version: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/paths/cell0",
+    "partition": "test",
+    "category": "paths",
+    "cell": 0,
+    "field_type": "path",
+    "scaffold": [
+      "Reserved paths: Primary path: ",
+      "; Backup path: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/paths/cell1",
+    "partition": "test",
+    "category": "paths",
+    "cell": 1,
+    "field_type": "path",
+    "scaffold": [
+      "Reserved paths record. Left path: ",
+      "; Right path: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/paths/cell2",
+    "partition": "test",
+    "category": "paths",
+    "cell": 2,
+    "field_type": "path",
+    "scaffold": [
+      "Reserved paths context with two bound fields. Earlier path: ",
+      "; Later path: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/paths/cell3",
+    "partition": "test",
+    "category": "paths",
+    "cell": 3,
+    "field_type": "path",
+    "scaffold": [
+      "Reserved paths context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input path: ",
+      "; Output path: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/identifiers/cell0",
+    "partition": "test",
+    "category": "identifiers",
+    "cell": 0,
+    "field_type": "identifier",
+    "scaffold": [
+      "Reserved identifiers: Primary identifier: ",
+      "; Backup identifier: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/identifiers/cell1",
+    "partition": "test",
+    "category": "identifiers",
+    "cell": 1,
+    "field_type": "identifier",
+    "scaffold": [
+      "Reserved identifiers record. Left identifier: ",
+      "; Right identifier: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/identifiers/cell2",
+    "partition": "test",
+    "category": "identifiers",
+    "cell": 2,
+    "field_type": "identifier",
+    "scaffold": [
+      "Reserved identifiers context with two bound fields. Earlier identifier: ",
+      "; Later identifier: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/identifiers/cell3",
+    "partition": "test",
+    "category": "identifiers",
+    "cell": 3,
+    "field_type": "identifier",
+    "scaffold": [
+      "Reserved identifiers context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input identifier: ",
+      "; Output identifier: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/units_quantities/cell0",
+    "partition": "test",
+    "category": "units_quantities",
+    "cell": 0,
+    "field_type": "quantity",
+    "scaffold": [
+      "Reserved units_quantities: Primary quantity: ",
+      "; Backup quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/units_quantities/cell1",
+    "partition": "test",
+    "category": "units_quantities",
+    "cell": 1,
+    "field_type": "quantity",
+    "scaffold": [
+      "Reserved units_quantities record. Left quantity: ",
+      "; Right quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/units_quantities/cell2",
+    "partition": "test",
+    "category": "units_quantities",
+    "cell": 2,
+    "field_type": "quantity",
+    "scaffold": [
+      "Reserved units_quantities context with two bound fields. Earlier quantity: ",
+      "; Later quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/units_quantities/cell3",
+    "partition": "test",
+    "category": "units_quantities",
+    "cell": 3,
+    "field_type": "quantity",
+    "scaffold": [
+      "Reserved units_quantities context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input quantity: ",
+      "; Output quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/repeated_literals/cell0",
+    "partition": "test",
+    "category": "repeated_literals",
+    "cell": 0,
+    "field_type": "integer",
+    "scaffold": [
+      "Reserved repeated_literals: Primary integer: ",
+      "; Backup integer: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/repeated_literals/cell1",
+    "partition": "test",
+    "category": "repeated_literals",
+    "cell": 1,
+    "field_type": "integer",
+    "scaffold": [
+      "Reserved repeated_literals record. Left integer: ",
+      "; Right integer: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/repeated_literals/cell2",
+    "partition": "test",
+    "category": "repeated_literals",
+    "cell": 2,
+    "field_type": "integer",
+    "scaffold": [
+      "Reserved repeated_literals context with two bound fields. Earlier integer: ",
+      "; Later integer: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/repeated_literals/cell3",
+    "partition": "test",
+    "category": "repeated_literals",
+    "cell": 3,
+    "field_type": "integer",
+    "scaffold": [
+      "Reserved repeated_literals context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input integer: ",
+      "; Output integer: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/multiple_bindings/cell0",
+    "partition": "test",
+    "category": "multiple_bindings",
+    "cell": 0,
+    "field_type": "quantity",
+    "scaffold": [
+      "Reserved multiple_bindings: Primary quantity: ",
+      "; Backup quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/multiple_bindings/cell1",
+    "partition": "test",
+    "category": "multiple_bindings",
+    "cell": 1,
+    "field_type": "quantity",
+    "scaffold": [
+      "Reserved multiple_bindings record. Left quantity: ",
+      "; Right quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/multiple_bindings/cell2",
+    "partition": "test",
+    "category": "multiple_bindings",
+    "cell": 2,
+    "field_type": "quantity",
+    "scaffold": [
+      "Reserved multiple_bindings context with two bound fields. Earlier quantity: ",
+      "; Later quantity: ",
+      "."
+    ]
+  },
+  {
+    "family_id": "test/multiple_bindings/cell3",
+    "partition": "test",
+    "category": "multiple_bindings",
+    "cell": 3,
+    "field_type": "quantity",
+    "scaffold": [
+      "Reserved multiple_bindings context. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Stable scaffold. Input quantity: ",
+      "; Output quantity: ",
+      "."
+    ]
+  }
+]

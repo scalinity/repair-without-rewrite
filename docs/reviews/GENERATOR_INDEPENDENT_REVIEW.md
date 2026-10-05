@@ -30,15 +30,15 @@ Near-duplicate thresholds, complete template-family pack assignment and the fina
 
 ## Evidence limits
 
-[test_generator_independent_review.py](../../tests/data/test_generator_independent_review.py) contains the independent fixtures. The development export and its original hashes are under `experiments/manifests/stress_foundation_20261005T051039Z/`. The public inverse baseline's perfect development conformance is a construction diagnostic; it cannot establish that neural restoration is necessary or that useful natural learning occurred. No model, human annotation, listening, TTS or recognizer was used by this review.
+[test_generator_independent_review.py](../../tests/data/test_generator_independent_review.py) contains the independent fixtures. The current independently checked model/latent export is under `experiments/manifests/stress_split_repair_20261005T054436Z/`; that fresh artifact reports 288 cases, 96 base groups, 267 distinct sources, 89 distinct references and zero typed-bundle collisions in its 96-row training-split audit. Earlier flawed-split exports remain retained under their original identities. The public inverse baseline's perfect development conformance is a construction diagnostic; it cannot establish that neural restoration is necessary or that useful natural learning occurred. No model, human annotation, listening, TTS or recognizer was used by this review.
 
 Reviewed SHA256 snapshot:
 
 ```json
 {
   "src/generation/stress.py": "0d83fdc4a2a54720d7269041d2698582cea9fc8b14a75605e5c547af14ca28ec",
-  "tests/data/test_generator_independent_review.py": "39f0c714c7bf04bdc3f4490233d2b4be16adceb264587aae971b451ea817c0b7",
-  "experiments/manifests/stress_foundation_20261005T051039Z/model_inputs.jsonl": "3d5fbc9c00c1c5436495ff19dde45107aa543421bdfa92cfbdfeb1bd9b4ccbaf",
-  "experiments/manifests/stress_foundation_20261005T051039Z/latents.jsonl": "913c537928dff58524cf7257089d32e2a3a0240f2961fd752010edc0f616ff03"
+  "tests/data/test_generator_independent_review.py": "5edc9f9001dde55103058a760e6857274654f85feb74c8ac6bd59aa0e0abfadf",
+  "experiments/manifests/stress_split_repair_20261005T054436Z/model_inputs.jsonl": "d83b4afb54c7685ce43e2219bdf27893e09aed7347d61b2055f57fa8c566b8cd",
+  "experiments/manifests/stress_split_repair_20261005T054436Z/latents.jsonl": "fc8dad695c28f2f1be326546e1e528d5bdff7f548c23aea6ee7d74957c701cb1"
 }
 ```

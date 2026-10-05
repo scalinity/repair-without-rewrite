@@ -1,0 +1,8 @@
+{
+  "model_inputs.jsonl": "d83b4afb54c7685ce43e2219bdf27893e09aed7347d61b2055f57fa8c566b8cd",
+  "tests.txt": "4d6ce749d0514d00a07f5e0b16f3e95b445f9af5c8971061201ca4587ddd4d84",
+  "config.json": "0addd1391bd161270c5adf35dd5d3758e32f9f4b2c7915b2d5eb26fb15bd8697",
+  "latents.jsonl": "fc8dad695c28f2f1be326546e1e528d5bdff7f548c23aea6ee7d74957c701cb1",
+  "measurement.json": "e9a78437869a97bb7d55cf889456fbbc6363ba38a5c6f6d259250008e4455f15",
+  "split_audit_train_fixtures.jsonl": "f5bed5a71ac0c9ec39c83a1a6fd8a7c588bb869be5ddee5a942788435cecfbe2"
+}

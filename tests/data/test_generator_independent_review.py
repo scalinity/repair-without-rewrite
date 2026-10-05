@@ -48,7 +48,7 @@ def test_polarity_erasure_is_not_hidden_target_restoration():
 
 
 def test_model_input_export_contains_no_latent_answer_or_corruption_fields():
-    folder=Path('experiments/manifests/stress_foundation_20261005T051039Z')
+    folder=Path('experiments/manifests/stress_split_repair_20261005T054436Z')
     inputs=[json.loads(line) for line in (folder/'model_inputs.jsonl').read_text().splitlines()]
     latents={r['case_id']:r for r in map(json.loads,(folder/'latents.jsonl').read_text().splitlines())}
     assert len(inputs)==288 and len(latents)==288

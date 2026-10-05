@@ -1,0 +1,17 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+__________ test_complete_typed_latent_bundle_cannot_cross_partitions ___________
+
+    def test_complete_typed_latent_bundle_cannot_cross_partitions():
+        left = generate_group("negation",0,0,partition="dev")[0]
+        right = copy.deepcopy(left)
+        right.update(partition="train",template_family_id="train/other-pack",base_group_id="train/other-group",
+                     source_sha256="different-source",reference_sha256="different-reference",lexical_family_ids=["trainstem"])
+>       with pytest.raises(ValueError,match="typed_bundle"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/data/test_generator.py:176: Failed
+=========================== short test summary info ============================
+FAILED tests/data/test_generator.py::test_complete_typed_latent_bundle_cannot_cross_partitions
+1 failed, 10 deselected in 0.03s

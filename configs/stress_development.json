@@ -1,0 +1,16 @@
+{
+  "status": "DEVELOPMENT_NOT_FROZEN",
+  "protocol_id": "paper_protocol_v2_DEVELOPMENT_NOT_FROZEN",
+  "categories": ["signs_numerical", "negation", "versions", "paths", "identifiers", "units_quantities", "repeated_literals", "multiple_bindings"],
+  "template_cells_per_category": 4,
+  "groups_per_cell": 3,
+  "views_per_group": 3,
+  "development_cases": 288,
+  "maximum_proposals_per_slot": 50,
+  "source_only_inverse_state_cap": 500,
+  "final_test_generation": false,
+  "final_2400_panel_frozen": false,
+  "vocabulary_provenance": "Owned synthetic stems and elementary digits, units and punctuation; no external literal list",
+  "split_policy": "Disjoint family packs and lexical stems assigned before values; all latent views stay together",
+  "near_duplicate_policy": "Shared constructor and semantic families disclosed; exact source/reference/latent cross-partition collisions rejected"
+}
