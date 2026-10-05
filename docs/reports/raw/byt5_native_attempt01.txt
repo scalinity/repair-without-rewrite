@@ -1,0 +1,1 @@
+{"status": "NATIVE_PATH_EXECUTED_SYNTHETIC_ONLY", "elapsed_seconds": 15.091969013214111, "peak_process_rss_bytes": 2713403392}

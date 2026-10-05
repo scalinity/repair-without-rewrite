@@ -1,8 +1,8 @@
 {
   "ByT5": {
-    "adaptation_recipes_attempted": 0,
-    "adaptation_status": "PENDING_GATED_NATIVE_BACKEND_AND_CHECKPOINT_ACQUISITION",
-    "capacity_status": "PENDING_NATIVE_MEASUREMENT; no silent truncation",
+    "adaptation_recipes_attempted": 1,
+    "adaptation_status": "10_FULL_NATIVE_UPDATES_EXECUTED_SYNTHETIC_ONLY; DECODED_VALID_COMPLETIONS_0_OF_4",
+    "capacity_status": "25_EOS_INCLUSIVE_NATIVE_BYTES_TESTED; BROADER_NATIVE_CONTEXT_PENDING",
     "credible_comparator": "NOT_ESTABLISHED",
     "eos_supervised": true,
     "exposure_accounting": "project-tokenizer canonical target exposures plus separately reported native byte work",
@@ -23,13 +23,15 @@
       "unk_id": 2,
       "vocab_size": 384
     },
-    "native_model_parity": "PENDING",
+    "native_model_parity": "PASS_AT_DECLARED_SHORT_NATIVE_LENGTHS",
+    "native_probe_attempt": "public_byt5_probe_attempt01.json",
+    "native_probe_sha256": "dc2988494f73b5c1298ba7585b096b2405c5db5a1245d8504ee891e3c4445f61",
     "native_runtime_proposal": {
       "acquisition_status": "VERIFIED_OFFICIAL_LFS_SHA256",
       "attention": "eager",
       "local_files_only": true,
       "probe_config_sha256": "c3602df495964aa6a8a9f173c4aecee077a1104ed1cf7fa9913888d72ce27b0b",
-      "probe_status": "PREPARED_WAITING_ROOT_SLOT",
+      "probe_status": "NATIVE_PATH_EXECUTED_SYNTHETIC_ONLY",
       "remote_code": false,
       "torch": "2.8.0",
       "transformers": "4.55.4",
@@ -302,7 +304,8 @@
     "transformers": true
   },
   "final_inference_count": 0,
-  "native_comparator_device_seconds": 0,
+  "native_comparator_device_seconds": 15.091969013214111,
+  "native_comparator_device_seconds_policy": "conservative exclusive wall reservation; not measured GPU kernel seconds",
   "recorded_at_utc": "2026-10-05T05:16:29Z",
   "status": "DEVELOPMENT_METADATA_ONLY_NOT_FROZEN",
   "weights_downloaded_bytes": 9243609927

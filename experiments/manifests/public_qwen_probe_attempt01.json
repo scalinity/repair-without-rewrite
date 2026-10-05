@@ -1,0 +1,165 @@
+{
+  "assets_sha256": {
+    "LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "config.json": "5beea1a4a34c62782bfb2f911c606741a3bab8f92d80a118fa053c28af12e8ba",
+    "generation_config.json": "835fffe355c9438e7a25be099b3fccaa98350b83451f9fd2d99512e74f1ade48",
+    "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+    "model-00001-of-00003.safetensors": "75311d91bb08cf0b882913da464a1e722a31fb44db35208663487efb7a3d8ed6",
+    "model-00002-of-00003.safetensors": "0b48adbb1f60e901153d91907ba11ce63bd4b8b584482e730f48808d055dfba1",
+    "model-00003-of-00003.safetensors": "7dd39ccca5e4de123c74c14af44c9bf2eb75df33b4614382af0134528e060d5d",
+    "model.safetensors.index.json": "d6c42883a895dfef5b0080ed2116a1bcd764f558406b98923d675978a1abf29c",
+    "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "tokenizer_config.json": "a62ff0a2472a0fa1b8eaabcb57c59b58afa42a22831dc141400b6e0cf2b65ce3",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "code_sha256": "58e9f906a1b9d04da866419cabad39c08b2a55201c4ca6c21ead23897b7e8545",
+  "cold_load_and_transfer_seconds": 1.6921859169960953,
+  "config": {
+    "assets_sha256": {
+      "LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "config.json": "5beea1a4a34c62782bfb2f911c606741a3bab8f92d80a118fa053c28af12e8ba",
+      "generation_config.json": "835fffe355c9438e7a25be099b3fccaa98350b83451f9fd2d99512e74f1ade48",
+      "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "model-00001-of-00003.safetensors": "75311d91bb08cf0b882913da464a1e722a31fb44db35208663487efb7a3d8ed6",
+      "model-00002-of-00003.safetensors": "0b48adbb1f60e901153d91907ba11ce63bd4b8b584482e730f48808d055dfba1",
+      "model-00003-of-00003.safetensors": "7dd39ccca5e4de123c74c14af44c9bf2eb75df33b4614382af0134528e060d5d",
+      "model.safetensors.index.json": "d6c42883a895dfef5b0080ed2116a1bcd764f558406b98923d675978a1abf29c",
+      "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "tokenizer_config.json": "a62ff0a2472a0fa1b8eaabcb57c59b58afa42a22831dc141400b6e0cf2b65ce3",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    "data_path": "experiments/manifests/public_qwen_probe_data.json",
+    "data_sha256": "14dfc085cf2863c0a64626fba97bc71509439cfe41950e368dc6130cdf00469f",
+    "development_seed": 120101,
+    "device": "mps",
+    "do_sample": false,
+    "eos_token_ids": [
+      151645,
+      151643
+    ],
+    "input_token_cap": 512,
+    "max_new_tokens": 64,
+    "num_beams": 1,
+    "precision": "BF16",
+    "prompt_status": "DEVELOPMENT_CANDIDATE_NOT_FROZEN",
+    "repository": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "runtime": "torch2.8.0 / transformers4.55.4; eager attention; no CPU fallback",
+    "scope": "SYNTHETIC_DEVELOPMENT_PATH_ONLY",
+    "system_prompt": "Restore this raw ASR transcript with the smallest necessary corrections. Preserve the speaker's content, names, numbers, units, literal uncertainty, disfluencies, repetition, and self-corrections. Do not infer missing facts. Return only the restored transcript with no explanation or markup."
+  },
+  "config_sha256": "b238b055b7555ca67ff18cd91183ed4b49e610b236e21f645356e712d3d06235",
+  "data_sha256": "14dfc085cf2863c0a64626fba97bc71509439cfe41950e368dc6130cdf00469f",
+  "decoding": [
+    {
+      "complete_valid": true,
+      "eO": 1,
+      "eS": 1,
+      "failure_reason": null,
+      "generated_ids": [
+        32,
+        28,
+        17,
+        22,
+        26,
+        10146,
+        362,
+        28,
+        17,
+        21,
+        26,
+        425,
+        28,
+        16,
+        23,
+        13,
+        151645
+      ],
+      "id": "synthetic_hpo_development_01",
+      "introduced": [
+        0,
+        0
+      ],
+      "mps_allocated_bytes": 8044937984,
+      "mps_driver_allocated_bytes": 8381333504,
+      "native_input_tokens": 84,
+      "native_new_tokens": 17,
+      "ordinal": 0,
+      "process_peak_rss_bytes": 444973056,
+      "repair": [
+        0,
+        0
+      ],
+      "request_seconds": 4.496130624989746,
+      "request_timing_scope": "materialized native generate; load/tokenization separately retained",
+      "status": "complete",
+      "text": "A=27; verify A=26; B=18."
+    },
+    {
+      "complete_valid": true,
+      "eO": 1,
+      "eS": 1,
+      "failure_reason": null,
+      "generated_ids": [
+        32,
+        28,
+        20,
+        20,
+        26,
+        10146,
+        362,
+        28,
+        20,
+        19,
+        26,
+        425,
+        28,
+        17,
+        24,
+        13,
+        151645
+      ],
+      "id": "synthetic_hpo_development_02",
+      "introduced": [
+        0,
+        0
+      ],
+      "mps_allocated_bytes": 8044937984,
+      "mps_driver_allocated_bytes": 8389722112,
+      "native_input_tokens": 84,
+      "native_new_tokens": 17,
+      "ordinal": 1,
+      "process_peak_rss_bytes": 444973056,
+      "repair": [
+        0,
+        0
+      ],
+      "request_seconds": 1.220317083003465,
+      "request_timing_scope": "materialized native generate; load/tokenization separately retained",
+      "status": "complete",
+      "text": "A=55; verify A=54; B=29."
+    }
+  ],
+  "elapsed_seconds": 12.129595041275024,
+  "machine": "arm64",
+  "model_config_max_positions": 262144,
+  "parameter_dtype_counts": {
+    "torch.bfloat16": 4022468096
+  },
+  "parameters": 4022468096,
+  "peak_process_rss_bytes": 444973056,
+  "platform": "macOS-27.2-arm64-arm-64bit",
+  "prompt_frozen": false,
+  "repository_head": "35f856f0f2ea8699a012dc039a7fc531e2452d2e",
+  "repository_status": " M docs/reports/BC_CORRECTNESS_REPORT.md\n M docs/reports/COMPARATOR_AND_PRIOR_WORK_QUALIFICATION.md\n M docs/reports/PUBLIC_SOURCE_QUALIFICATION.md\n M docs/reports/STRESS_GENERATOR_FOUNDATION.md\n M docs/reviews/BENCH_INDEPENDENT_REVIEW.md\n M experiments/manifests/public_comparator_development.json\n?? benchmarks/asr_tts_native_probe.py\n?? docs/reports/BC_10M_DEVELOPMENT_PROBES.md\n?? docs/reports/raw/bc_native_samples_attempt01.json\n?? docs/reports/raw/bc_native_samples_attempt01.txt\n?? docs/reports/raw/byt5_native_attempt01.txt\n?? docs/reports/raw/native_calibration_attempt01.txt\n?? docs/reports/raw/native_resume_audit_attempt01.txt\n?? docs/reports/raw/public_audio_acquisition_attempt01.txt\n?? docs/reports/raw/public_audio_inventory_attempt02.txt\n?? docs/reports/raw/qwen_native_attempt01.txt\n?? docs/reports/raw/stress_independent_final_attempt01.txt\n?? docs/reports/raw/stress_independent_final_receipt.json\n?? experiments/manifests/asr_tts_probe/\n?? experiments/manifests/public_audio_development/\n?? experiments/manifests/public_byt5_probe_attempt01.json\n?? experiments/manifests/stress_bc_native_samples_attempt01/\n?? experiments/native-calibration-attempt01/\n?? experiments/native-resume-audit-attempt01/\n",
+  "scope": "SYNTHETIC_DEVELOPMENT_PATH_ONLY",
+  "start_unix_seconds": 1791179805.405807,
+  "status": "NATIVE_BF16_GREEDY_PATH_EXECUTED_SYNTHETIC_ONLY",
+  "task_adequacy": "NOT_ESTABLISHED",
+  "versions": {
+    "safetensors": "0.8.0",
+    "tokenizers": "0.21.4",
+    "torch": "2.8.0",
+    "transformers": "4.55.4"
+  }
+}
