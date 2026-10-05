@@ -1,0 +1,37 @@
+{
+  "captured_utc": "2026-10-05T04:59:15.407570+00:00",
+  "research_initial_commit": null,
+  "research_initial_dirty": "new uncommitted scaffold",
+  "python": "3.12.15 (main, Sep 30 2026, 22:04:19) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "python_executable": "/local/research/repair-without-rewrite/.venv/bin/python",
+  "platform": "macOS-27.2-arm64-arm-64bit",
+  "os": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2\nBuildVersion:\t\t26B5091g\n",
+  "hardware": {
+    "machine_name": "MacBook Pro",
+    "machine_model": "Mac17,8",
+    "model_number": "MGEC4LL/A",
+    "chip_type": "Apple M5 Pro",
+    "number_processors": "proc 18:6:12:0",
+    "physical_memory": "48 GB"
+  },
+  "gpu": {
+    "sppci_model": "Apple M5 Pro",
+    "sppci_cores": "20",
+    "spdisplays_mtlgpufamilysupport": "spdisplays_metal4"
+  },
+  "power": "Battery Power:\n Sleep On Power Button 1\n powermode            0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             1\n hibernatefile        /var/vm/sleepimage\n displaysleep         0\n womp                 0\n networkoversleep     0\n sleep                1\n lessbright           0\n tcpkeepalive         1\n disksleep            10\nAC Power:\n Sleep On Power Button 1\n powermode            0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             1\n hibernatefile        /var/vm/sleepimage\n displaysleep         0\n womp                 0\n networkoversleep     0\n sleep                0\n tcpkeepalive         1\n disksleep            10\n",
+  "power_source": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=REDACTED_BATTERY_IDENTIFIER)\t80%; AC attached; not charging present: true\n",
+  "thermal": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded\n",
+  "mlx": "0.32.3",
+  "mlx_package_commit": "not exposed by wheel; pinned wheel identity in uv.lock",
+  "metal_available": true,
+  "lock_sha256": "0588833586a988d03b6e14fdc0cdb79b59df031d46650b4c648dc9a5c1dbe822",
+  "production_read_only": {
+    "root": "/local/production/LocalFlow",
+    "HEAD": "77d2368025a7fb057e447d711b94a3c230d7b308",
+    "status_porcelain": "",
+    "writes_performed": false
+  },
+  "thermal_temperature_c": null,
+  "temperature_unavailable_reason": "no sensor temperature exposed by pmset; no privileged tooling used"
+}

@@ -1,0 +1,994 @@
+LOCALFLOW FROM-SCRATCH TRANSFORMER RESEARCH
+BOUNDED FOUNDATION IMPLEMENTATION KICKOFF
+
+You are the primary implementation/research agent for the LocalFlow From-Scratch Transformer program.
+
+This is an IMPLEMENTATION KICKOFF, not another specification-writing exercise.
+
+The project has passed an independent GPT-6 Pro pre-implementation review with the decision:
+
+AUTHORIZE BOUNDED FOUNDATION ONLY
+
+There were NO BLOCKER findings.
+
+You are authorized to begin the bounded foundation and development-qualification work described below. You are NOT authorized to launch the final confirmatory campaign, freeze paper_protocol_v2, train the final 150M-exposure seeds, modify production LocalFlow, spend cloud resources, or claim publication results.
+
+Read every supplied project file before making consequential design changes.
+
+SUPPLIED AUTHORITATIVE MATERIALS
+
+1. LocalFlow_From_Scratch_Master_Spec_v1_2.pdf
+   - Canonical v1.2 specification.
+   - Treat its mathematical/model/scorer contracts as authoritative unless an accepted independent-review finding below requires a prospective pre-freeze amendment.
+
+2. LocalFlow_From_Scratch_Master_Spec_v1_2.html
+   - Searchable equivalent of the canonical specification.
+   - Use for navigation/search; the PDF remains the canonical rendered specification.
+
+3. LocalFlow_Publication_Experiment_Registry_v2.txt
+   - Draft paper_protocol_v2 and experiment/result schemas.
+   - NOT frozen. All MEASURED_RESULT fields are empty by design.
+
+4. Independent_Pre_Implementation_Review_v1_2_Accepted_Findings.md
+   - Accepted external review disposition and findings.
+   - No blocker exists.
+   - F01/F02/F03 must be resolved before PUB-GATE 3, not before bounded foundation work.
+
+5. KICKOFF_PROMPT.txt
+   - This instruction set.
+
+6. PACKAGE_README.md
+   - Bundle inventory and provenance.
+
+==================================================
+0. PRIMARY MISSION
+==================================================
+
+Turn the prospective research design into a small, independently testable, measured foundation.
+
+The bounded-foundation phase must answer, with artifacts rather than prose:
+
+A. Can we implement the declared automatic scorer correctly and independently verify it?
+
+B. Can we implement the Transformer mathematical core correctly in MLX and prove the critical contracts on MODEL-0?
+
+C. Can B100 and C101-specific mechanics be implemented correctly enough for controlled development probes?
+
+D. What does the M5 Pro actually sustain under complete-update training, inference, scorer, TTS/ASR, and comparator workloads?
+
+E. Can B100/C101 learn useful reference-restoration behavior at a short development budget, rather than merely reduce loss or copy the source?
+
+F. Can ByT5-small serve as a credible adapted pretrained comparator under a realistic native budget?
+
+G. Are the public source/reference contracts, automatic scoring coverage, source-error denominators, cluster structure, and alignment bounds good enough to support a later frozen H1 experiment?
+
+H. Does a focused H1 campaign fit the owner’s strict one-month objective after measured timings replace estimates?
+
+Do not answer any of these by assumption.
+
+Measure them.
+
+==================================================
+1. NON-NEGOTIABLE AUTHORIZATION BOUNDARY
+==================================================
+
+AUTHORIZED NOW:
+
+- Create an isolated sibling research workspace/repository.
+- Copy the supplied specification/review materials into that workspace as immutable design inputs.
+- Compute and record SHA-256 hashes for all supplied design inputs.
+- Implement the independent scorer oracle, scorer fixtures, and reference_triple_v1 development implementation.
+- Implement MODEL-0 and shared Transformer primitives.
+- Implement B100/C101-specific components required for correctness qualification.
+- Build tests, property checks, metamorphic checks, exhaustive small-state checks, and independent parity tools.
+- Run correctness, tiny-overfit, resume, and bounded convergence tests.
+- Run BENCH-00 and bounded native microbenchmarks.
+- Qualify public-source access, revisions, rights, grouping, and reference policies.
+- Create development-only manifests and deterministic data tooling.
+- Build a development version of the exact technical generator/stress machinery.
+- Run bounded B100/C101 development probes after correctness and BENCH gates pass.
+- Run bounded ByT5/Qwen/ConstDecoder compatibility and development checks within the limits below.
+- Produce measurement-backed GO / NO-GO / AMEND recommendations for PUB-GATE 3.
+
+NOT AUTHORIZED NOW:
+
+- No final 150M-exposure B100/C101 runs using final seeds 1729, 2718, or 31415.
+- No final A100 campaign.
+- No B100-acoustic final campaign.
+- No H2 confirmatory campaign.
+- No final sealed-test inference.
+- No final paper result population scoring.
+- No protocol freeze.
+- No public claim that PUB-GATE 1-7 passed.
+- No 203M/316M/510M product campaign.
+- No LocalFlow production integration or modification.
+- No product replacement or shadow rollout.
+- No cloud spending or cloud training.
+- No human annotation queue, human adjudication, repetitive labeling, or mandatory listening.
+- No use of owner-private LocalFlow review queues as paper gold.
+- No speculative v1.3 rewrite merely because development fields are still pending.
+
+If a task would cross that boundary, stop that task and record it as a future authorization dependency. Continue other authorized work when possible.
+
+==================================================
+2. ACCEPTED INDEPENDENT REVIEW FINDINGS
+==================================================
+
+The independent review found no blocker and authorized bounded foundation.
+
+Treat these findings as accepted:
+
+F01 — MAJOR — nearest prior work / scientific positioning
+
+The novelty audit omitted:
+Hao Zhang, Felix Stahlberg, and Shankar Kumar,
+“Predicting Compact Phrasal Rewrites with Large Language Models for ASR Post Editing,” ICASSP 2025.
+
+Before PUB-GATE 3:
+- independently verify and add this work to the nearest-work record;
+- position the future paper as a controlled extension into the compact scratch regime;
+- do NOT claim the first full-vs-compact ASR representation comparison;
+- center the prospective extra information on:
+  * repaired versus introduced reference-error units,
+  * useful repair under common presented-source exposure,
+  * whether lower generation volume translates to lower complete native cost,
+  * explicit ambiguity/failure accounting.
+
+Do NOT add an expensive reproduction arm merely because this prior work exists unless later evidence shows it is necessary.
+
+F02 — MAJOR — mandatory scope is too broad for the strict one-month goal
+
+The independent reviewer recommends an H1-focused paper path.
+
+For planning during bounded foundation, use this as the PROVISIONAL preferred scope:
+
+CORE:
+- B100-text: three final seeds eventually, but not now.
+- C101-text: three final seeds eventually, but not now.
+- RAW and DET.
+- Credibly adapted ByT5-small.
+- One frozen task-matched Qwen3-4B paper configuration.
+- Full natural primary population if qualified.
+- B/C-only Whisper transfer if measured cost fits.
+- Compact exact stress panel, not the full broad cross-product.
+- Common B/C guard analysis from cached bare outputs.
+- Native cost/latency/memory accounting.
+
+MOVE TO STRETCH FOR A STRICT MONTH:
+- H2 / B100-acoustic confirmatory campaign.
+- A100 final paper arm.
+- Broad 25-category all-model stress roster.
+- Whisper transfer for every comparator.
+- Extra prompts, quantization sweeps, intermediate sealed checkpoints, larger models, product integration.
+
+The independent review proposed a 2,400-case core stress panel:
+8 categories × 4 template cells × 25 latent groups × 3 views = 2,400 cases.
+
+Priority categories:
+- signs / numerical values,
+- negation,
+- software versions,
+- paths,
+- programming identifiers,
+- units and quantities,
+- repeated literals,
+- multiple bindings.
+
+Preserve:
+- clean-preservation view,
+- uniquely recoverable repair view,
+- mixed repair + preservation view.
+
+This is a provisional planning direction, not a frozen final protocol. Development measurements must determine the final PUB-GATE 3 scope.
+
+Critically:
+H1 text-data readiness must NOT depend on acoustic common-support qualification if H2 is moved to stretch.
+
+F03 — MINOR — empty-reference contract inconsistency
+
+The canonical specification allows legitimate empty references under its empty-reference accounting rules.
+The current registry says the primary reference must be nonempty.
+
+Before source-manifest / PUB-GATE 3 freeze:
+- reconcile the working registry to the canonical rule;
+- distinguish a legitimate empty reference from a missing/null/sentinel value;
+- preserve source-insertion repair and output-insertion accounting where appropriate.
+
+Do not overwrite the supplied canonical files.
+Record this as a prospective amendment in the research workspace.
+
+==================================================
+3. WORKSPACE AND PROVENANCE
+==================================================
+
+Create an isolated sibling research workspace separate from production LocalFlow.
+
+Preferred repository name:
+LocalFlowResearch
+
+Discover the actual current LocalFlow repository path rather than assuming it. If the known local repository is available, use it READ-ONLY for pinned historical interface/reference checks only.
+
+Do not modify production LocalFlow.
+
+Inside the research workspace, create a clear structure consistent with v1.2, including at least:
+
+docs/
+docs/design-inputs/
+docs/reviews/
+docs/reports/
+src/
+src/models/
+src/scoring/
+src/data/
+src/generation/
+src/inference/
+configs/
+experiments/
+experiments/protocol/
+experiments/manifests/
+benchmarks/
+tests/
+tests/scoring/
+tests/models/
+tests/data/
+checkpoints/
+exports/
+paper/
+lessons/
+
+Initialize git locally if no research repository exists.
+
+Do not create or publish a remote repository unless the owner has separately authorized that action.
+
+Copy the supplied source materials into docs/design-inputs/ and docs/reviews/ without modifying them.
+
+Generate:
+
+docs/design-inputs/SHA256SUMS
+docs/reviews/ACCEPTED_REVIEW_FINDINGS.md
+docs/reviews/PROSPECTIVE_AMENDMENTS.md
+
+PROSPECTIVE_AMENDMENTS.md should record F01-F03 and explicitly state:
+- not frozen,
+- no final results have been seen,
+- no final training has started,
+- amendment integration will occur before PUB-GATE 3.
+
+Record:
+- current git commit,
+- dirty state,
+- Python version,
+- macOS version,
+- MLX version,
+- hardware model,
+- GPU/core configuration if discoverable,
+- unified memory,
+- power mode / relevant system state,
+- dependency lock.
+
+Never fabricate unavailable hardware fields.
+
+==================================================
+4. PHASE A — INDEPENDENT SCORER ORACLE FIRST
+==================================================
+
+Implement scorer correctness BEFORE relying on it for model decisions.
+
+Keep the tiny independent oracle structurally separate from the optimized scorer implementation.
+
+The oracle and production scorer must not merely call the same core traceback routine.
+
+Start with finite obvious fixtures covering at least:
+
+1. R=S=O identity.
+2. Source wrong → output exactly correct.
+3. Source correct → output substitution error.
+4. Source insertion correctly deleted.
+5. New output insertion.
+6. Source deletion repaired by output insertion.
+7. Wrong → different wrong.
+8. Leading insertion.
+9. Trailing insertion.
+10. Repeated-token alignment ambiguity.
+11. Multiple optimal R/S alignments.
+12. Multiple optimal R/O alignments.
+13. Compatible triple paths whose S/O projection is not an unrestricted pairwise optimum.
+14. Empty R/S/O combinations.
+15. Legitimate empty reference.
+16. Missing/invalid output.
+17. Completed empty output.
+18. Capped/truncated valid prefix.
+19. Unicode NFC/case-fold policy fixtures.
+20. Apostrophe/hyphen scanner policy fixtures.
+
+Required invariant for raw counts where defined:
+
+repair - introduced = d(R,S) - d(R,O)
+
+Implement:
+- exact Levenshtein distance oracle;
+- R/S and R/O optimal path/lattice construction;
+- compatible triple-path development scorer;
+- all conditional-optimum tie handling;
+- repair/introduced minima and maxima;
+- ambiguity/coverage status;
+- invalid-output mapping;
+- fixed source-defined denominators.
+
+Then add:
+
+A. Exhaustive tiny enumeration
+- all R/S/O triples over alphabet {a,b}
+- lengths 0 through 3
+- expected count: 3,375 triples
+- verify distance, compatibility, extrema, invariants, deterministic serialization.
+
+B. Property-based testing
+- initial 10,000 trials
+- fixed seed from v1.2 unless an implementation reason requires a prospective recorded change.
+
+C. Metamorphic testing
+At minimum:
+- corpus duplication leaves ratios unchanged;
+- case order leaves results unchanged;
+- identity output cannot create raw repair/introduction;
+- replacing a uniquely correct source token with a wrong token increases introduced error as expected;
+- repairing a uniquely wrong source token to reference increases repair;
+- equivalent serialization round trips;
+- candidate output cannot alter source-defined eligibility.
+
+D. Independent parity
+- independent program structure;
+- standard edit-distance library only validates ordinary distance unless it actually matches the joint objective;
+- prepare the 500-development-triple parity harness, but do not consume sealed final data.
+
+E. Computational qualification
+Measure:
+- scorer throughput,
+- peak joint states,
+- edge counts,
+- cap frequency,
+- ambiguity rate,
+- bound widths,
+- memory.
+
+No manual ambiguity rescue is allowed.
+
+Deliverable:
+docs/reports/SCORER_FOUNDATION_REPORT.md
+
+It must contain:
+- PASS/FAIL per required contract,
+- hashes,
+- exact test counts,
+- discrepancies,
+- unresolved issues,
+- measured runtime,
+- whether reference_triple_v1 is ready for development-only use.
+
+Do not call PUB-GATE 2 passed merely because unit tests pass. Source/reference and population qualification still remain.
+
+==================================================
+5. PHASE B — MODEL-0 AND SHARED TRANSFORMER CORE
+==================================================
+
+Implement the transparent MLX mathematical core from the canonical v1.2 specification.
+
+Own the arrangement and data flow rather than hiding the model behind a pretrained-model library.
+
+Required shared components include:
+
+- reversible byte-BPE interfaces needed by the model contract;
+- embedding lookup and tied logits;
+- RMSNorm;
+- RoPE using the specified adjacent-coordinate convention;
+- Q/K/V projections;
+- GQA and MHA;
+- causal attention;
+- bidirectional encoder attention;
+- cross-attention;
+- SwiGLU;
+- residual blocks;
+- final norm;
+- masked cross-entropy;
+- gradient accumulation;
+- global norm clipping;
+- explicit AdamW policy;
+- FP32 master parameters;
+- FP32 optimizer moments;
+- FP32 gradient accumulation;
+- BF16 working computation;
+- token-based LR schedule;
+- KV cache;
+- deterministic greedy decoding;
+- complete checkpoint/resume state.
+
+MODEL-0 exact target:
+8,621,312 trainable parameters.
+
+The implementation must enumerate trainable leaves and match the analytic parameter total exactly.
+
+Required correctness ladder before meaningful training:
+
+V0 — shape and dtype contracts.
+V1 — attention/mask correctness, including no future leakage.
+V2 — deterministic forward parity on tiny explicit tensors.
+V3 — finite gradients + numerical finite-difference checks where feasible.
+V4 — tiny-batch overfit.
+V5 — tiny-corpus memorization.
+V6 — short convergence.
+V7 — checkpoint/resume equivalence.
+V8 — reproducibility under frozen seed/data order.
+
+At minimum, V0-V4 must pass before BENCH-00.
+Pass the remaining bounded correctness gates before relying on training behavior.
+
+Specific tests must include:
+
+- future token perturbation does not alter earlier causal outputs;
+- GQA native path matches explicit KV repetition on tiny tensors;
+- RoPE zero-position and norm preservation;
+- cached one-token and multi-token generation match full forward;
+- uneven microbatch accumulation matches one equivalent batch within declared tolerance;
+- tied embedding updated once;
+- AdamW scalar reference checks;
+- scheduler resumes at identical token count;
+- checkpoint saves model, optimizer, RNG, data cursor, LR position, accumulation state;
+- interrupted versus uninterrupted trajectory agreement.
+
+Do not optimize away transparent reference paths until parity exists.
+
+Deliverable:
+docs/reports/MODEL0_CORRECTNESS_REPORT.md
+
+==================================================
+6. PHASE C — B100 / C101 CORRECTNESS QUALIFICATION
+==================================================
+
+Before any 10M development probe, qualify the additional model contracts.
+
+B100:
+- 8-layer MHA encoder;
+- 4-layer GQA decoder;
+- width 768;
+- 12 query / 4 decoder KV heads;
+- SwiGLU 2048;
+- exact parameter count 100,686,336;
+- bidirectional source encoder;
+- causal decoder;
+- cross-attention with valid source masking;
+- no hidden information advantage.
+
+C101:
+- exact B100 backbone;
+- start/end boundary pointer heads;
+- EDIT / END / ABSTAIN action classifier;
+- exact parameter count 101,081,859;
+- deterministic byte-copy renderer;
+- exact event sequence;
+- whole-update component normalization.
+
+Verify the C event contract:
+
+T_decoder = 1 + R + 3K
+T_vocab = R + K
+n_start = n_end = K
+n_action = K + 1
+
+Test:
+- identity case;
+- insertion;
+- deletion;
+- replacement;
+- multiple ordered edits;
+- repeated literal occurrence identity;
+- illegal overlap;
+- illegal UTF-8 boundary;
+- missing terminal state;
+- ABSTAIN;
+- context overflow fixture;
+- deterministic rendering;
+- canonical edit-label generation;
+- merge/expand behavior at BPE boundaries;
+- component denominators including zero-component cases;
+- single FP32 accumulator with no accidental extra division.
+
+Renderer invariant:
+untouched gaps must be copied byte-for-byte from the exact source whose hash was validated.
+
+This is a mechanical invariant only; do not claim semantic safety from it.
+
+Run tiny overfit/convergence tests for B and C on the SAME small development examples.
+
+Deliverable:
+docs/reports/BC_CORRECTNESS_REPORT.md
+
+==================================================
+7. PHASE D — BENCH-00 AND NATIVE RESOURCE CALIBRATION
+==================================================
+
+Run BENCH-00 only after required correctness gates pass.
+
+The purpose is to replace assumed performance with measured M5 Pro performance.
+
+Record exact:
+- hardware SKU / GPU bin if discoverable;
+- 48 GB unified memory;
+- OS build;
+- MLX version/commit;
+- Python/runtime;
+- power mode;
+- thermal starting condition;
+- model config;
+- context/length distribution;
+- masks;
+- working/master dtypes;
+- microbatch;
+- accumulation;
+- optimizer;
+- compile/materialization behavior.
+
+MODEL-1/A100 geometry benchmark:
+- exact 100,685,568-parameter configuration;
+- random weights;
+- representative real training path;
+- five complete warmup optimizer updates;
+- 100 complete timed optimizer updates;
+- materialize forward, loss, backward, accumulation, clipping, optimizer state, updated parameters;
+- at least one sustained 20-minute thermal segment;
+- checkpoint/save/resume;
+- compare 20 resumed updates against uninterrupted control.
+
+Also run bounded B100 and C101 complete-update timing samples sufficient to estimate relative training cost, including C event-density sensitivity.
+
+Measure:
+- tokens / canonical anchors per second;
+- optimizer updates/sec;
+- wall time/update;
+- peak memory;
+- thermal change;
+- compilation overhead;
+- checkpoint cost;
+- load time;
+- resume cost;
+- context-length sensitivity;
+- C pointer/event overhead.
+
+MLX rule:
+Begin from the inspected stable/reference path in the spec.
+Any newer or alternative backend path must first pass forward/gradient parity under the REAL masks.
+
+Never remove valid masks to obtain a faster timing number.
+Never time only lazy graph construction.
+
+Also collect bounded timing samples for:
+- ByT5 decode/adaptation path;
+- Qwen paper-control inference path;
+- Parakeet ASR;
+- TTS if needed for later stretch planning;
+- scorer runtime.
+
+Do not run the final 426k-output roster.
+
+Deliverable:
+docs/reports/BENCH00_NATIVE_CALIBRATION.md
+
+This report must replace the 1/4/8 TFLOP sensitivity assumptions with measured projections for:
+- B100 focused final campaign,
+- C101 focused final campaign,
+- ByT5 comparator work,
+- natural inference,
+- compact stress inference,
+- B/C-only Whisper transfer,
+- CPU scorer/bootstrap work.
+
+Include a prerequisite-aware calendar, not only total-hour arithmetic.
+
+==================================================
+8. PHASE E — PUBLIC SOURCE / DATA CONTRACT QUALIFICATION
+==================================================
+
+No new labels.
+No manual listening queue.
+No final candidate inference.
+
+Qualify the existing public data needed for a future H1 campaign.
+
+Primary prospective natural populations:
+- LibriSpeech-PC;
+- SLUE-VoxCeleb.
+
+Tasks:
+
+1. Verify authoritative source URLs/IDs, revisions, licenses, access conditions, and redistribution boundaries.
+2. Record actual case counts and stable IDs.
+3. Define cluster/group identities as specified.
+4. Verify the lexical/reference policies.
+5. Reconcile the legitimate-empty-reference rule under accepted finding F03.
+6. Create development / HPO / calibration / sealed-final role manifests.
+7. Ensure grouping before augmentation.
+8. Detect source/document/book/speaker/video overlap and near duplicates according to a frozen development rule.
+9. Create hashes without using final outcomes for tuning.
+10. Ensure final references never enter training/corruption calibration/prompt tuning.
+11. Check the educational/tokenizer corpus for known final-source overlap before eventual tokenizer/data freeze.
+12. Preserve unknown pretrained-comparator contamination as UNKNOWN rather than claiming absence.
+
+You may create a small development-only Parakeet hypothesis set needed to qualify:
+- source-error counts,
+- scorer ambiguity,
+- alignment widths,
+- B/C learnability,
+- reference-policy behavior.
+
+Do NOT run final candidate models on sealed test material.
+
+Deliverable:
+docs/reports/PUBLIC_SOURCE_QUALIFICATION.md
+
+==================================================
+9. PHASE F — FOCUSED TECHNICAL GENERATOR DEVELOPMENT
+==================================================
+
+Implement the generator/parser infrastructure needed to prove the exact-ground-truth approach works.
+
+For the bounded foundation, prioritize the independent-review core categories:
+
+1. signs / numerical values,
+2. negation,
+3. software versions,
+4. paths,
+5. programming identifiers,
+6. units and quantities,
+7. repeated literals,
+8. multiple bindings.
+
+Support all three views:
+
+- clean_preservation,
+- uniquely_recoverable_repair,
+- mixed_repair_preservation.
+
+The latent record must preserve:
+- template ID,
+- field name/type,
+- occurrence ID,
+- canonical value,
+- surface rendering,
+- allowed finite forms,
+- source/reference spans,
+- expected preserve/repair behavior,
+- corruption operator,
+- generation seed,
+- binding/order/multiplicity,
+- source-visible recoverability witness.
+
+Important:
+Knowing the latent target does NOT establish that a repair is inferable.
+
+Confirmatory repair fixtures must have a unique source-supported inverse under the public generator/corruption rules without exposing:
+- hidden target,
+- field mask,
+- offsets,
+- case-specific template identity,
+- actual corruption path.
+
+Implement:
+- exact structural parser;
+- inverse-rule baseline;
+- conformance tests;
+- split/group leakage controls;
+- deterministic panel selection.
+
+Do not yet declare the final 2,400-case panel frozen.
+
+Generate enough development data to qualify construction, parsing, exact scoring, and runtime.
+
+Deliverable:
+docs/reports/STRESS_GENERATOR_FOUNDATION.md
+
+==================================================
+10. PHASE G — BOUNDED COMPARATOR FEASIBILITY
+==================================================
+
+Do not spend the month proving every historical baseline.
+
+ByT5-small:
+- mandatory prospective pretrained comparator;
+- verify official weight/revision identity;
+- native byte interface;
+- context capacity;
+- adaptation path;
+- loss masking;
+- decoding;
+- MLX/PyTorch/backend feasibility as appropriate;
+- run bounded development adaptation sufficient to determine whether a credible final comparator is feasible;
+- do not call three weak seeds a credible comparator merely because they completed.
+
+Qwen3-4B paper control:
+- verify exact task-matched paper checkpoint/runtime;
+- freeze a development prompt candidate and greedy decoding behavior using DEV only;
+- no final test inference.
+
+ConstDecoder:
+- perform at most the review-authorized compatibility gate:
+  * approximately 2 active hours initial scan;
+  * only if viable, up to 6 additional active hours and ~2 device hours for integration probing;
+- record a concrete blocker if official assets/task compatibility make reproduction unsuitable;
+- do not expand into an open-ended port.
+
+Direct predecessor:
+Independently verify:
+Zhang, Stahlberg, Kumar, “Predicting Compact Phrasal Rewrites with Large Language Models for ASR Post Editing,” ICASSP 2025.
+
+Record:
+- output representations compared,
+- deterministic expansion mechanism,
+- input/model regime,
+- metrics,
+- output length/runtime evidence,
+- exact overlap with B/C,
+- exact remaining distinction.
+
+Do not implement a PaLM/USM reproduction unless later separately justified.
+
+Deliverable:
+docs/reports/COMPARATOR_AND_PRIOR_WORK_QUALIFICATION.md
+
+==================================================
+11. PHASE H — B100 / C101 DEVELOPMENT PROBES
+==================================================
+
+Only begin after:
+- scorer ready for development use,
+- MODEL-0/shared math qualified,
+- B/C correctness qualified,
+- BENCH-00 establishes a feasible native regime,
+- development data contract is valid.
+
+Preferred focused probe roster:
+
+B100-text:
+- development seed 42 only;
+- 10M canonical exposures per recipe;
+- peak LR candidates:
+  * 1e-4
+  * 3e-4
+  * 6e-4
+
+C101-text:
+- same development seed 42;
+- same three 10M exposure slots;
+- same LR candidates unless a prospective, documented correctness reason forces an amendment;
+- initial C component weights remain 1.0 unless a substitute consumes one of the three declared recipe slots.
+
+Do NOT run A100 or B100-acoustic probes in this initial focused path unless the measured evidence later justifies spending stretch budget.
+
+For every probe record:
+- initial weight hash;
+- exact config;
+- data manifest;
+- canonical exposure;
+- native input/encoder/decoder/action/replacement tokens;
+- updates;
+- padding;
+- valid losses/denominators;
+- throughput;
+- memory;
+- loss curves;
+- development WER;
+- development repair/introduced-error estimates/bounds;
+- no-op/copy-collapse behavior;
+- output failure rate;
+- generated/event burden;
+- inference latency.
+
+The probe goal is NOT to declare a winner.
+
+It is to determine:
+- Does B learn useful correction?
+- Does C learn useful correction?
+- Does either collapse to identity?
+- Does either aggressively rewrite?
+- Is 10M enough to discriminate obviously bad learning-rate recipes?
+- Are the 50M/100M/150M learning curves likely to be scientifically interpretable?
+- Is the 150M final endpoint still defensible?
+- Are C’s event/renderer costs manageable?
+
+If the models are clearly not learning, diagnose implementation/data/optimization before spending final compute.
+
+Deliverable:
+docs/reports/BC_10M_DEVELOPMENT_PROBES.md
+
+==================================================
+12. PUB-GATE 3 READINESS REPORT — NO FREEZE YET
+==================================================
+
+At the end of this kickoff phase, produce:
+
+docs/reports/FOUNDATION_GO_NO_GO.md
+
+It must answer with measured evidence:
+
+1. Did scorer correctness qualification pass for development use?
+2. What fraction of development cases has exact joint scoring versus bounds/caps?
+3. Are ambiguity widths small enough to make H1 potentially resolvable?
+4. Did MODEL-0 pass the correctness ladder?
+5. Did B/C-specific contracts pass?
+6. What are sustained B/C complete-update rates?
+7. What is peak memory?
+8. What are B/C decode rates on representative lengths?
+9. Do B and C show useful held-out correction at 10M?
+10. Is one or both collapsing to identity?
+11. Are the three LR candidates informative?
+12. Is 150M exposure plausibly adequate, or does the finite-budget question need prospective amendment?
+13. Is ByT5 adaptation credible?
+14. What happened to ConstDecoder?
+15. Are LibriSpeech-PC and SLUE source/reference policies usable as planned?
+16. What are actual development source-error denominators and cluster counts?
+17. What are scorer computational costs?
+18. Does the focused H1 campaign fit <=30 calendar days from the actual measured state?
+19. What is the estimated device-hour budget with 25% reserve?
+20. What is the estimated ACTIVE researcher time remaining?
+21. Should H2 remain stretch?
+22. Should A100 remain stretch?
+23. Is the 2,400-case focused stress panel adequate after measured generator/scorer behavior?
+24. Is B/C-only Whisper transfer affordable?
+25. What exactly remains to resolve F01/F02/F03 before freeze?
+
+End with exactly one development disposition:
+
+- READY_TO_PREPARE_PUB_GATE_3_FREEZE
+- AMEND_BEFORE_FREEZE
+- FOUNDATION_REPAIR_REQUIRED
+- PAPER_PATH_NOT_CURRENTLY_JUSTIFIED
+
+Do NOT freeze paper_protocol_v2 automatically.
+
+Do NOT start final runs automatically.
+
+A future owner authorization will follow the report.
+
+==================================================
+13. GIT / EVIDENCE DISCIPLINE
+==================================================
+
+Use small, reviewable commits.
+
+At minimum create checkpoints for:
+- design/provenance scaffold,
+- scorer oracle + fixtures,
+- MODEL-0 correctness,
+- B/C correctness,
+- BENCH-00,
+- public source qualification,
+- generator foundation,
+- comparator qualification,
+- development probes,
+- final bounded-foundation report.
+
+Before every expensive run:
+- working tree clean or dirty state explicitly captured;
+- config hashed;
+- data manifest hashed;
+- code commit recorded;
+- seed recorded;
+- output directory unique/content-addressed;
+- resume path verified.
+
+Never rewrite or delete failed-run evidence merely because a later run succeeds.
+
+Do not amend history to hide failures.
+
+No result should exist only in a chat message.
+
+Every measured claim in the session report must point to an on-disk artifact.
+
+==================================================
+14. AGENT USE AND REVIEW
+==================================================
+
+You may use coding/research subagents extensively.
+
+Prefer independent review for high-risk mathematical pieces:
+
+- one implementation agent,
+- separate scorer/oracle reviewer,
+- separate Transformer math reviewer,
+- separate B/C renderer/event reviewer,
+- separate BENCH/evidence reviewer.
+
+Do not let an independent reviewer simply reuse the same implementation code path it is meant to validate.
+
+Agents may write essentially all code.
+
+Human manual typing is not a quality criterion.
+
+The quality criterion is:
+- explicit contracts,
+- independent checks,
+- reproducible evidence,
+- and the ability to explain the resulting system.
+
+No human annotation or listening queue may be introduced as a workaround.
+
+==================================================
+15. STOP CONDITIONS
+==================================================
+
+Stop the affected line of work and report rather than silently weakening rigor if:
+
+- the scorer cannot satisfy its mathematical invariants;
+- ambiguity/caps make the intended H1 estimand practically unidentified;
+- public source/reference contracts do not support the intended lexical task;
+- B/C cannot learn useful correction after implementation/data/optimization defects are reasonably ruled out;
+- ByT5 cannot be adapted credibly under a reasonable disclosed budget;
+- the M5 Pro cannot complete a focused campaign in a feasible schedule;
+- a material nearest-work result collapses the intended empirical distinction;
+- a required library/runtime dependency is unavailable;
+- a change would require new human annotation;
+- a task would cross the authorization boundary.
+
+Do not compensate by:
+- dropping weak examples after seeing outputs,
+- widening margins after results,
+- choosing the best test checkpoint,
+- replacing failed final seeds,
+- adding hidden pretrained weights to scratch models,
+- using final references in training,
+- crediting fallback to the student,
+- or changing the scientific question after seeing confirmatory results.
+
+==================================================
+16. SESSION REPORT
+==================================================
+
+When this bounded kickoff session ends, provide one comprehensive report containing:
+
+A. Exact workspace path and git status.
+B. Commits created, oldest to newest.
+C. Files/artifacts produced.
+D. Scorer status and tests.
+E. MODEL-0 status and tests.
+F. B/C correctness status.
+G. BENCH-00 measurements.
+H. Public-source qualification.
+I. Generator status.
+J. Comparator status.
+K. B/C development-probe results if reached.
+L. Actual active/device time spent.
+M. Accepted-review findings status:
+   - F01
+   - F02
+   - F03
+N. Risks/blockers discovered.
+O. Exact PUB-GATE 3 readiness disposition.
+P. Explicit statement that no final confirmatory run or LocalFlow production modification occurred.
+
+Do not summarize a planned action as if it occurred.
+
+Use:
+FACT
+MEASURED RESULT
+CALCULATION
+INFERENCE
+PROPOSED NEXT ACTION
+
+as distinct labels where useful.
+
+==================================================
+17. FIRST ACTION NOW
+==================================================
+
+Begin now with exactly this sequence:
+
+1. Inspect and hash every supplied design input.
+2. Create the isolated research scaffold.
+3. Record the independent-review authorization boundary and F01/F02/F03 as prospective pre-freeze amendments.
+4. Implement the tiny independent Levenshtein/scorer fixture oracle.
+5. Make the fixture suite fail for the unimplemented scorer, then pass as the scorer is implemented.
+6. In parallel, begin MODEL-0 mathematical-core implementation and V0-V4 correctness tests.
+7. Do not start any large training job until those correctness contracts are evidenced.
+
+Do not ask for another master specification.
+
+We are now executing the bounded research foundation.

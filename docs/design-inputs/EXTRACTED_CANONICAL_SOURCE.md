@@ -1,0 +1,6229 @@
+# LocalFlow From-Scratch Transformer
+## Solo-researcher master specification v1.2
+
+**Version:** 1.2 | **Prepared:** October 4, 2026 | **Owner:** Daniel Escalante
+
+**Status:** Full canonical replacement specification and draft `paper_protocol_v2`. No model/scorer/generator implementation, training, final benchmark construction, repository creation or modification, LocalFlow change, cloud spending or R-M1 execution was performed for this revision. Document-authoring, rendering and illustrative specification fixtures are not experiment execution.
+
+**Repository evidence:** `scalinity/LocalFlow`, immutable commit `77d2368025a7fb057e447d711b94a3c230d7b308`. The existing pinned audit is retained; it is not a claim about freshly inspected current main.
+
+**Evidence vocabulary:** FACT; CALCULATION; ENGINEERING PROPOSAL; RESEARCH HYPOTHESIS; PAPER CLAIM CANDIDATE; PRE-REGISTERED DECISION. All protocol freezes, software qualifications and empirical gates remain future/pending. **MEASURED RESULT: no entries.** Published prior results and historical repository diagnostics remain cited external facts.
+
+## Part I - Solo-researcher remediation verdict
+
+### I.1 The thesis survives, with a precise boundary
+
+**Verdict: yes, a scientifically defensible no-new-human-annotation MVP is possible.** The research object becomes a deterministic comparison of released reference, raw ASR source and model output. The main question is how output representation changes **reference-error repair, introduced word errors and inference cost** at matched scale and downstream training exposure. This is a narrower question than whether a model preserves every part of the speaker's meaning, and it is useful on its own.
+
+The researcher does not need to recruit annotators, secure a second human rater, find an adjudicator, listen to final audio, manually mark critical spans, or review all-seed automatic decisions. Existing released human references supply the natural target policy. Exact generated fields supply the formal technical target policy. A versioned scorer, exhaustive small-sequence oracle, property/metamorphic tests, independent implementation parity and explicit ambiguity bounds establish software correctness. The project remains primarily model building, evaluation engineering, controlled execution, analysis and writing.
+
+This is not a semantic truth oracle. An automatic scorer can correctly compute disagreement with a reference that is imperfect or permits only one written form. It can identify a repaired reference error without knowing whether the source text contained enough information to infer the missing fact. That limitation narrows the manuscript rather than creating a hidden listening or adjudication queue.
+
+### I.2 What the paper can contribute
+
+The strongest prospective contribution is **controlled representation evidence**, centered on B100 versus C101 with a shared backbone, closely matched parameters, the same canonical exposure, three final seeds, and a common guard applied to cached proposals. A100 provides the causal-family contrast. B100-acoustic tests a fixed data-channel replacement. Adapted ByT5-small and task-matched Qwen prevent a scratch-only comparison from becoming self-contained evidence of practical value. Resource measurements and unchanged-model Whisper transfer support the same study.
+
+The former human-annotated FTR resource claim is retired. Automatic source/reference/output transitions are established territory: I-measure uses three-way alignment; M2 and ERRANT provide correction evaluation/edit extraction; GLEU and CLEME address related reference-based evaluation; CLEME2.0 explicitly separates successful, wrong, missed and excessive corrections. Programmatic behavioral tests and exact verifiable tasks also have substantial precedent. [M1-M6, T1-T3] The scorer and stress generator are transparent methods and releasable artifacts. They do not become novel because this specification gives them version IDs.
+
+Removing the annotation contribution increases the burden on the empirical result: it must reveal a controlled, useful distinction from close ASR correction and editing work. It does not automatically lower the work below a serious arXiv-manuscript threshold. A careful negative tradeoff or pretrained-dominance result can still be informative. Peer-reviewed acceptance depends on the completed evidence, the importance of the observed distinction, baseline adequacy and the limits acknowledged; it is not guaranteed by a complete protocol.
+
+### I.3 The replacement evidence system
+
+| Evidence layer | Deterministic input and rule | What it supports | What it does not support |
+|---|---|---|---|
+| Natural lexical outcome | Existing reference and output; frozen word/character policy | WER, CER, exact match and reference disagreement | Every permissible paraphrase or intended meaning |
+| Reference-error transitions | Joint reference/source/output optimal-path analysis with all conditional ties retained | Repair and introduced-error counts/bounds, joint usefulness/preservation comparison | True acoustic word provenance or a new general semantic metric |
+| Natural literal subset | Source/reference-only extraction and unambiguous occurrence identity | Exact eligible value/form retention, repair, corruption and coverage | All names, all roles, all meaning changes or the whole natural population |
+| Programmatic technical suite | Immutable template, typed fields, occurrence IDs, finite forms and exact parser | Clean preservation, controlled repair and mixed collateral damage within the declared grammar | Natural prevalence or repair of unknowable hidden values |
+| Acoustic treatment | Exact written/spoken lineage plus frozen automatic acceptance | Effect of the accepted intended-target TTS→ASR generation policy | Human-certified pronunciation fidelity for arbitrary technical text |
+| Optional model-based semantic analysis | Blinded frozen judge prompts and model identities | Exploratory model verdicts and disagreement | Human labels, primary gold, or ambiguity adjudication |
+
+The primary transition algorithm keeps R/S and R/O projections minimum-edit, then minimizes induced S/O edit cost among compatible triples. It retains every conditional-optimum tie. This defines an operational decomposition; it does not assert that the selected alignment family contains the true correspondence. Fine-grained ambiguous regions have unavailable point labels and reported coverage. Their examples remain in ordinary lexical metrics and conservative aggregate transition bounds. Computational limits also produce bounds, not favorable exclusions.
+
+The raw repair/introduced counts satisfy `repair − introduced = d(R,S) − d(R,O)`. Failed or truncated decodes cannot earn completed-repair credit, even if their emitted prefix happens to remove some source error. The introduced-error count includes new insertions anywhere, so its denominator is all reference words. Repair uses original source errors. All natural primary metrics average the two corpus ratios equally. The fixed joint H1/H2 gates prevent copying everything or changing everything from exploiting one endpoint in isolation.
+
+### I.4 Scale without an annotation queue
+
+The proposed natural population expands to the full released LibriSpeech-PC test sets (5,273 rows) and all released SLUE-VoxCeleb test transcripts (3,553 rows), nominally **8,826 cases and about 17.95 audio hours** before automatic structural exclusions. Each receives Parakeet and Whisper hypotheses. The SLUE official ASR-compatible 3,426-row subset remains a separate secondary view. Existing references are reused directly; extraction/ambiguity counts and any structural exclusions are automatic and auditable. [D1-D2, D18-D19]
+
+Earnings22 moves out of the MVP because its access, audio rights and segmentation create avoidable operational dependencies. HyPoradise, HypR and RED-ACE are reassessed for usable existing hypotheses/references and labels; RED-ACE is a strong optional historical-source diagnostic, not a replacement for the fixed two-recognizer experiment. [D3-D10, D23-D25]
+
+The stress specification generates **30,000 exact cases**, organized as 10,000 latent groups with clean, repair and mixed views across 25 categories. The required model-evaluated panel is **9,000 cases**: 3,000 groups chosen by a frozen balanced hash rule before outputs. All sixteen model instances use that panel. Full-pool model inference is a pre-freeze-budgeted stretch option. Knowing the generated target does not make a corrupted identifier recoverable: confirmatory repair cases require a visible unique-recovery witness, while underidentified alternatives remain separate diagnostics. Natural and synthetic evidence never share one frequency denominator.
+
+### I.5 Labor and the month target
+
+The old labor-intensive evidence plan is not compressed into “spot checks.” Its annotation work is removed from the MVP. The retained optional author inspection has no quota and, if used for development debugging, is capped at 25 cases per scorer version. It cannot create final labels or change a headline claim. AI judging is disabled by default and separately budgeted if later useful.
+
+**CALCULATION / PLANNING SCENARIO.** Part VI targets **110–150 active researcher hours**, approximately 3.7–5 hours/day averaged over thirty days, with concentrated early implementation and later analysis/writing. Annotation labor is zero. Active work includes directing/reviewing coding agents, implementing the mathematical/scoring contracts, source administration, experiment operations, debugging, statistics and manuscript decisions. It does not imply agents eliminate human technical responsibility.
+
+The accelerator is the other bottleneck. The twelve scratch runs plus probes require approximately `1.176 × 10^18` modeled FLOPs. A provisional ByT5 allowance brings the illustrative total to `2.176 × 10^18`; at an assumed sustained 4 TFLOP/s this is about 151.1 accelerator hours. That allowance is not proof ByT5 can be adequately adapted within it. The planned natural-plus-9k-stress inference roster contains 426,432 bare outputs. At an assumed weighted 0.5 seconds/output it adds 59.2 hours. BENCH/correctness, TTS/training ASR, public ASR and runtime/guard work produce a favorable device envelope of about **350.4 hours including 25% reserve**. A separate provisional 16-hour CPU scoring/statistics allowance, also with reserve, adds 20 serialized hours, for **370.4 total critical-path hours** when overlap is not demonstrated.
+
+The availability scenario contains 22 device-work days, provisionally days 4–25 including pre-freeze BENCH/HPO, with protocol readiness by day 7–8 and the last days reserved for analysis/writing. At 16 execution-hours/day its capacity is 352 hours, so this 370.4-hour scenario does not fit. At 20 hours/day the extended capacity is 440 hours and it fits conditionally; the actual dependency queue must also finish in time. Faster measured training/decoding or validated CPU overlap can change the conclusion; the plan does not assume them. The same Mac cannot deliver independent training, TTS, ASR and decoding rates simultaneously. Slower ByT5/Qwen decoding, unsupported attention backward, large scorer lattices, low acoustic yield or repeated training faults can break the target. The pre-freeze timing gate must include those costs. If it fails, extend the schedule or amend scope before final results; never drop a weak seed or comparator after outcomes.
+
+### I.6 Publication risks and disposition
+
+The remaining material risks are reference-policy mismatch, underidentified natural repair, alignment-dependent decomposition, low literal coverage, generator artifacts, imperfect automatic TTS screening, only two natural domains and one transfer recognizer, pretrained contamination, short-budget undertraining, comparator adaptation quality, and insufficient cluster-aware precision. The full specification addresses each with a scoped estimand, deterministic test, explicit bound, control or pre-freeze stop rule. None is resolved by inventing labels or assuming a favorable outcome.
+
+Proceed to independent design review of this specification. If authorized afterward, the first implementation task is an isolated research scaffold with a tiny scorer-contract fixture/oracle suite alongside MODEL-0 correctness work. The project should earn larger compute through measured development gates. No implementation, final data construction or training starts as part of this deliverable.
+
+## Part II - Full canonical master specification v1.2
+
+The forty numbered sections below are the complete canonical replacement for v1.1. They retain the valid mathematical, architecture, training, tokenizer, BENCH, comparator, reproducibility, educational and conditional product contracts. Parts III–VII contain the complete registry, normative scorer, exact stress-suite design, execution plan and prospective manuscript. The change log appears only in Part VIII after the full deliverable. All planned quantities remain plans; no experimental result is populated.
+
+
+## 1. Executive recommendation
+
+**ENGINEERING PROPOSAL. Proceed with a solo, automatically evaluated empirical study of reference-conditional ASR repair at approximately 100M parameters.** The central comparison remains A100/B100/C101, with B100-acoustic, adapted ByT5-small, task-matched Qwen and a bounded published-editor feasibility gate. The study requires no external annotator, second rater, human adjudicator, listening queue, or repetitive author labeling. This is the complete canonical v1.2 replacement specification, not an authorization to implement or run it.
+
+The revised scientific question is: **At matched model scale and downstream source exposure, how does output representation change reference-error repair, introduced word errors, and inference cost in ASR transcript restoration?** Preservation remains important, but the natural-corpus result is conditional on the released reference and deterministic scoring policy. It cannot establish all semantic harm, the speaker's intended meaning, or which missing fact was inferable from text. Those broader claims no longer form a premise of the paper.
+
+The strongest prospective contribution is the controlled representation experiment, especially the B/C contrast with the same backbone and a shared guard toggle. Automatic transition analysis and a generated technical stress suite are reproducible methods and artifacts. Three-way correction evaluation, edit precision/recall, and overcorrection are established; I-measure and CLEME2.0 are close antecedents. No novel metric name or human FTR annotation contribution is retained. [M1-M6]
+
+**CALCULATION.** Retain the exact model ladder: MODEL-0 at 8,621,312 parameters; educational MODEL-1 and the separate A100 conditional baseline at 100,685,568; B100 at 100,686,336; C101 at 101,081,859; S203 at 202,936,320; S316 at 316,196,352; and S510 at 509,944,320. S154, S752 and S988 remain optional configurations fully specified in Section 18. No model size or representation is assumed to win.
+
+The educational model remains a modern causal Transformer trained from random initialization: 14 layers, width 768, 12 query heads, 4 KV heads, SwiGLU width 2,048, pre-RMSNorm, RoPE and a reversible 16,384-token byte BPE vocabulary. Its 10M/50M/250M stages and conditional 1B-token goal remain intact. A100 starts a separate random conditional-restoration lineage. Completing the long educational campaign is outside the one-month paper critical path.
+
+The minimum paper has four scratch arms and three final seeds per arm, each receiving 150M paper-canonical exposures: twelve final runs and 1.8B exposures. Twelve 10M development probes add 120M. B100-acoustic replaces the fixed 40% corruption share on matched written/spoken seeds and uses B100-text's selected optimizer. ByT5-small has three separately disclosed adaptation seeds and a pre-freeze budget qualification. ConstDecoder retains its two-engineering-day maximum feasibility gate. The 203M/316M/510M product budgets remain conditional later work.
+
+**FACT / PROPOSED POPULATION.** Existing LibriSpeech-PC and SLUE-VoxCeleb references support a planned full released test population of 8,826 natural cases before automatic structural exclusions, without new per-case reference verification. Two frozen recognizers supply paired hypotheses. Source access, exact file hashes, grouping and preprocessing still require qualification. SLUE's all-released 3,553-case population differs from its 3,426-case official ASR-compatible subset; both identities remain explicit. [D1-D2, D18-D19] A separate generator specifies 30,000 technical cases; a fixed 9,000-case panel is the mandatory model-evaluated stress population. Natural and generated results never become one population estimate.
+
+The automatic scorer retains every eligible case for WER/CER/exact scoring, exposes alignment ambiguity, and uses conservative bounds for ambiguous transition counts. The introduced-error denominator is reference words; repair uses original source errors. Completed-output repair, WER and comparison with deterministic processing prevent an identity policy or failed decoder from earning a useful-corrector claim. Source-correct literal masks are frozen from source/reference pairs alone; they are a narrow secondary analysis.
+
+**FACT.** The retained LocalFlow audit at commit `77d2368025a7fb057e447d711b94a3c230d7b308` describes Parakeet TDT v3 and Qwen3-4B-Instruct-2507 in the recorded MLX pipeline. Product cleanup receives a post-proposal normalized window; the paper receives raw 1-best text. Sections 4 and 30 preserve this distinction and the integration contract. [R1-R9]
+
+**ENGINEERING PROPOSAL.** A month is plausible only under favorable complete-update, data-generation, decoding and scorer timings. Part VI budgets 110–150 active researcher hours, zero annotation hours, and a favorable approximately 350.4 device-hour scenario plus 20 hours of nonoverlapped CPU work including reserve (370.4 serialized hours). These are planning calculations, not a measured forecast. BENCH-00 and the day-7–8 freeze gate determine whether the minimum protocol fits. At the 4-TFLOP/s and 0.5-second/output assumptions, 370.4 hours exceeds 22 device-work days × 16 hours; it fits the extended 20-hours/day scenario only. These are days 4–25 including pre-freeze work, not twenty-two final-training days after the freeze. One Mac cannot train, synthesize, recognize and decode simultaneously at their isolated rates. The current MLX backward path remains an early correctness/performance risk. [S1-S6]
+
+Publication viability survives, with narrower claims and greater dependence on the quality of the controlled evidence. A well-qualified positive, negative or tradeoff result can support a serious empirical manuscript. An undertrained comparison, broken comparator, opaque scorer, or insufficient precision supports only a bounded project report. No experiment has been run for this specification; all `MEASURED_RESULT` fields remain empty.
+
+
+## 2. Publication thesis and contribution map
+
+### 2.1 One thesis and a compact question hierarchy
+
+**RESEARCH HYPOTHESIS.** Output representation may change how a text-only restorer allocates its errors between unrepaired ASR errors and errors introduced by correction, at matched approximately 100M scale and 150M downstream exposure. The measured object is the triple **released reference R, raw ASR source S, delivered bare model output O** under fixed lexical and output-validity policies. The phrase *reference-conditional* is essential: an automatic alignment can establish a relation to R; it cannot prove a unique human interpretation of audio or text.
+
+| Question | Exact scope | Evidence and status |
+|---|---|---|
+| RQ1 — representation | How do causal full text, encoder-decoder full text, and sparse edit/copy restoration differ in repair, introduced word errors, WER/CER, output burden and latency at matched scale/exposure? | Primary empirical question: A/B/C, three seeds; H1 isolates B/C with closely matched backbone and shared-guard attribution |
+| RQ2 — data channel | Does replacing the fixed 40% text-corruption allocation with an automatically screened TTS→Parakeet channel improve untouched real-speech restoration? | Supporting confirmatory H2: common accepted seeds, written target, spoken rendering, exposure and B-text-selected optimizer |
+| RQ3 — practical comparison | Where do the scratch systems fall relative to deterministic processing, adapted ByT5-small, Qwen and any feasible published editor on quality and native cost? | Descriptive frontier plus unchanged-model second-recognizer transfer; no third multiplicity-consuming primary hypothesis |
+
+RQ1 is the paper's organizing question. RQ2 explains a concrete training-data intervention. RQ3 provides credibility and practical context. Broad pretraining allocation, tokenizer sweeps, scale laws and new preservation mechanisms are not additional MVP questions. The educational program retains its own completion criteria.
+
+### 2.2 Ranked contribution candidates
+
+These are prospective assessments, not acceptance probabilities or completed findings. The focused metric audit in Section 3 precedes any claim of novelty.
+
+| Candidate | Novelty assessment | Scientific value if executed well | Cost and dependence | Decision |
+|---|---|---|---|---|
+| C1 — controlled representation evidence | New algorithmic novelty is not claimed; the specific matched B/C evidence may add information beyond prior ASR correction/editor reports | Separates quality, introduced errors, output burden and wrapper attribution within one declared regime | Twelve scratch runs including acoustic arm; public sources; functioning controls and qualified scorer | Strongest prospective contribution |
+| C2 — supporting evaluation artifacts | Related metrics, three-way alignment, behavioral testing and template generation exist | Makes the study auditable and runnable without new human labels | Software qualification, frozen exact rules and released fixtures | Methodology/artifacts, not an asserted invention |
+| C3 — acoustic-channel and resource evidence | TTS→ASR generation and compact correction are established; novelty lies only in the controlled result obtained | Tests whether this fixed channel allocation transfers and what the experiment actually costs | Three of the twelve scratch runs, matched construction, measured data and inference cost | Supporting contribution if informative; may be combined with C1 |
+| Natural automatic literal subset | Exact extraction and alignment are narrower than semantic annotations | Exposes concrete changes to eligible numbers/identifiers without a labeling project | Fixed source/reference-only extraction; coverage and ambiguity report | Secondary analysis; no population-wide semantic-harm claim |
+| Human FTR preservation benchmark | Incompatible with the required labor model | Would support broader human constructs only with work the project will not perform | Requires new human evidence | Retired from the prospective contribution set |
+| New preservation mechanism / scaling law | Not established by existing C renderer or proposed sizes | Potential later question | New audit, controls, exposure/time budgets and protocol | No present claim; stretch only if a concrete question emerges |
+
+These v1.2 contribution-map labels describe prospective roles; the experiment claim identifiers are H1/H2 and the S-prefixed cards in Section 20. The v1.1 human-resource claim C1 is retired and is not an inherited experiment claim. An artifact becomes a resource contribution only after it is implemented, useful, rights-compatible, released and demonstrably distinct from existing resources. Its existence is not guaranteed by this specification. The paper needs one defensible empirical contribution, not a fixed number of novel-looking headings. I-measure already uses source/reference/hypothesis comparison; M2/ERRANT supply familiar correction metrics; CLEME2.0 explicitly separates successful, wrong, missed and excessive correction. [M1-M6]
+
+### 2.3 Primary claim candidates and falsification
+
+**PAPER CLAIM CANDIDATE PC-1 / H1 — representation.** In the frozen regime, C101 has a lower reference-anchored introduced-word-error rate than B100-text while retaining useful reference-error repair. The operational introduced count includes newly inserted errors as well as damage at source-correct reference positions; it is not restricted to critical semantic content. Sections 23 and Part IV define the joint alignment and all conditional-optimum ties. All headline denominators are fixed independently of candidate outputs.
+
+The draft joint gates are introduced errors/reference words superiority (one-sided upper bound below zero for C−B; observed decrease at least 0.1 percentage point), completed repair/source errors noninferiority (lower bound above −3 percentage points), and all-case WER noninferiority (upper bound below +0.5 percentage points). Both B and C must improve completed repair over DET by at least 5 observed percentage points with a positive fixed lower bound, and improve WER over raw ASR. Sections 20/25 fix the precise cluster and multiplicity procedure. Identity-only behavior cannot pass the repair gate; an aggressive system cannot offset arbitrary introduced errors through a high raw repair numerator.
+
+H1 fails if preservation superiority is unsupported, repair or WER crosses the noninferiority margin, either system is not useful, scorer ambiguity prevents a robust conclusion, or the effect appears only after the optional common guard. A nonsignificant difference is not equality. C's renderer is constitutive, so the claim concerns representation plus rendering; it is not pure neural architecture attribution.
+
+**PAPER CLAIM CANDIDATE PC-2 / H2 — data channel.** Replacing the frozen 40% text-corruption share with automatically screened TTS→Parakeet pairs reduces the equal-domain natural WER score by at least 0.5 observed percentage points with a supported improvement, while introduced errors/reference words remain noninferior within +0.1 percentage point. The equal-domain score averages LibriSpeech-PC corpus WER and the full released SLUE-VoxCeleb corpus WER. The treatment is conditional on the accepted common-seed population and the intended-target generation policy. Automatic speech screening is not certification that TTS realized every written target faithfully.
+
+H2 fails on absent supported WER improvement, a preservation regression beyond the margin, invalid target lineage, output-driven screening, or unmatched seeds/exposure/optimizer selection. Report null, negative and inconclusive outcomes as such. Development feasibility can block or amend the experiment before freeze; it cannot repair one final arm after viewing outcomes while retaining the original channel-only interpretation.
+
+These margins use new units and are not inherited case-level CADR thresholds. They are **proposed, not frozen or achieved**. Development-only uncertainty and runtime evidence must justify them before PUB-GATE 3. If the actual clusters, source-error denominator or alignment identification widths cannot support useful inference, freeze estimation-only scope before outcomes or extend the schedule. Larger automatically scored n reduces labeling cost, not every source of uncertainty.
+
+### 2.4 What the thesis gains and gives up
+
+The study gains full released natural-test coverage where structurally eligible, all-seed automatic evaluation, explicit alignment uncertainty, exact controlled technical cases, and a reproducible scorer whose correctness can be assessed as software. It gives up new independent human judgments of meaning, arbitrary semantic roles, intended speech, permissible paraphrase, and whether a hidden missing fact was inferable from the source. Those are real losses. They do not invalidate a carefully bounded reference-error study, but they prevent calling its rates universal faithfulness or semantic safety.
+
+The public automatic literal subset is secondary and may be small. Structured synthetic fields support exact type/value/position/binding assertions within the generator's grammar, including mixed repair/preservation. Controlled repair instances require a source-visible unique-recoverability witness. Knowing a hidden generated value is insufficient to make a text-only task solvable. An inverse-rule baseline is included; beating the generator is not the neural contribution.
+
+### 2.5 Secondary claims and prohibited extrapolations
+
+Secondary analyses include A/B, common guard effects on cached identical proposals, output burden, native latency/memory, pretrained-versus-scratch tradeoffs, and unchanged-model Whisper transfer. Optional AI judges, if used, remain blinded model-based exploration and never resolve primary ambiguity. Removing them and all optional author inspection leaves H1/H2 unchanged.
+
+Do not claim that a 4B model is generally unnecessary, scratch training is universally efficient, copying guarantees meaning, one reference is every acceptable utterance, synthetic frequency equals natural prevalence, or three sizes establish a scaling law. Do not attribute fallback corrections to the student or upstream pretraining cost to zero. Do not call public test exposure in pretrained models absent when it is unknown. No apparent positive result can excuse a broken comparator, an undertrained arm, candidate-dependent exclusions, or post-result metric selection.
+
+
+## 3. Publication-readiness and nearest-prior-work audit
+
+**AUDIT FINDING.** Version 1.0 provides an engineering and learning program, but its combination of small models, random initialization, synthetic ASR errors, copying, preservation checks and Apple Silicon does not by itself establish a research contribution. The literature contains close precedents for every one of those ingredients. Version 1.2 asks a narrower, solo-executable question: under declared downstream training budgets, how does output representation change the repair–preservation tradeoff measured from public reference/source/output triples and exact generated targets? The primary contribution candidate is a controlled empirical finding. The proposed human-annotated FTR resource and manually established CADR/NCS endpoints are retired from the paper. Their names must not be reused for superficially similar automatic quantities.
+
+**EVIDENCE STATUS.** The repository findings in Section 4 are retained from the pinned v1.0 audit. The retained literature review and this focused metric update cover sources inspected through October 4, 2026. Consensus discovery records were fetched before use; metric facts below were checked against primary papers, proceedings and official scorer documentation. The original ten model/benchmark cards remain, with their remaining-distinction fields revised for the new study. Publication dates and model lineages below come from those primary sources where available. No student has been trained, no proposed benchmark has been constructed, and no candidate comparison or native training measurement has been run. Reported prior-paper results are external evidence, not measurements of this project. The protocol remains a design awaiting PUB-GATE 3; writing it does not constitute preregistration.
+
+### 3.1 Classification of all 17 v1.0 components
+
+Each component retains one of the requested classifications. The classification assesses its role in the original program; the final column states the v1.2 disposition after both publication reviews. “Direct paper” means capable of supporting a claim after a valid experiment, not that novelty or a positive result has already been established.
+
+| ID | Component | Classification | Role | v1.2 disposition |
+|---|---|---|---|---|
+| A01 | 100.69M educational MODEL-1 | REMOVE FROM PAPER CRITICAL PATH | Primarily learning; shared correctness support | Retain its full educational run and first-principles demonstrations. Share the mathematical tests, data contracts and short convergence checks. Completion of the educational 1B-token run does not gate the research branch. A100 is a separate randomly initialized conditional run. |
+| A02 | A100/B100/C101 architecture comparison | STRENGTHEN | Direct paper experiment; later engineering selection | Keep the dimensions. Freeze all headline arms, three final seeds per arm, equal canonical exposure, tuning allowances and endpoint rules. Interpret A/B as a family comparison and B/C as a representation-plus-renderer comparison. Report measured-compute views separately. |
+| A03 | 203M prototype | KEEP BUT REFRAME | Engineering candidate; optional paper capacity replication | Retain the configuration and arithmetic. It can test whether an effect survives a capacity change, but it does not precede the minimum paper by necessity. It is a conditional stretch point. |
+| A04 | 316M production hypothesis | KEEP BUT REFRAME | Product candidate; paper stretch point | Preserve it as a hypothesis about useful capacity. Its success, optimality and architecture are not premises. A scientifically informative outcome need not select this size. |
+| A05 | Conditional 510M scale-up | REMOVE FROM PAPER CRITICAL PATH | Product escalation; optional research extension | Retain its conditional engineering path. Escalation requires a diagnosed capacity question and affordable experiment; failing a product threshold alone does not make a larger run scientifically informative. |
+| A06 | Tokenizer work | SEPARATE ENGINEERING FROM SCIENCE | Learning and engineering; experimental control | Retain reversible bytes, coordinate tests, vocabulary arithmetic and a frozen tokenizer. A broad tokenizer sweep is outside the primary paper unless a separate controlled hypothesis is selected. Byte encoding does not guarantee correct byte generation. |
+| A07 | Synthetic text corruption | STRENGTHEN | Direct paper control; training supply | Match written seeds and spoken renderings across the text/acoustic treatment. Freeze error calibration, source grouping, acceptance rules and canonical exposure. Report rejection and repetition rather than allowing easier examples or more data to masquerade as a channel effect. |
+| A08 | TTS → Parakeet corruption | RESEARCH NOVELTY BEFORE COMMITTING | Supporting paper data experiment | The novelty audit finds clear prior art. Retain a controlled real-speech transfer experiment; remove the pipeline's standalone novelty claim. Charge synthesis, ASR replay, failed attempts and deterministic validation costs. Frozen automatic acceptance must not conceal a required listening queue. Parakeet version pinning provides reproducibility. |
+| A09 | Teacher-generated data | KEEP BUT REFRAME | Engineering supply and provenance; secondary paper method | Preserve teacher lineage and machine-checkable target constraints; unsupported target quality cannot be repaired by a mandatory author-labeling queue. Random student weights do not make the entire data lineage independent of pretrained systems. Teacher agreement is not gold. The primary channel comparison excludes teacher/private material that would change its matched data contract. |
+| A10 | Sparse edit/copy modeling | RESEARCH NOVELTY BEFORE COMMITTING | Direct paper comparison candidate | Prior art establishes sparse generation, source-span editing and copying. Retain C101 as a specified intervention, including byte positions and deterministic source splicing. The empirical comparison may contribute; the generic editing idea does not. |
+| A11 | Protected spans and sentinel masking | SEPARATE ENGINEERING FROM SCIENCE | Product safeguard; paper mechanism ablation | Preserve restoration, conflict and rollback contracts. Compare the same additional guard on both full-text and sparse proposals. Distinguish C's constitutive renderer from optional safeguards, and prohibit oracle protected-span labels as paper-model input. |
+| A12 | Preservation metrics | STRENGTHEN | Direct paper measurement; separate product gates | Replace mandatory manual CADR/NCS with reference-conditioned repair and introduced-error quantities, WER/CER and exact literal diagnostics. Freeze candidate-independent source populations, alignments, ambiguity rules and uncertainty. Established correction/overcorrection metrics are predecessors; generic transition scoring is not a new invention. |
+| A13 | BENCH-00 | KEEP AS-IS | Engineering feasibility and paper reproducibility | Retain its workload, version pinning, sustained timing, memory and ETA contracts. Add experiment-cost attribution around it. A platform measurement supports the measured regime and does not establish model novelty. |
+| A14 | LocalFlow integration | REMOVE FROM PAPER CRITICAL PATH | Product engineering; optional case study | Preserve typed tasks, post-proposal input, source hashes, offsets, fallback, residency and rollout. The paper needs a reproducible offline runner; owner-database access and live application promotion are not prerequisites. |
+| A15 | Production acceptance thresholds | SEPARATE ENGINEERING FROM SCIENCE | Product qualification | Retain them as proposed promotion decisions. Zero observed failures, low fallback and a target latency ratio do not define whether a scientific result is publishable. Report a valid negative or uncertain result even when product gates fail. |
+| A16 | Scaling study | STRENGTHEN | Paper stretch; engineering capacity choice | Use the same data/exposure checkpoints and a distinct measured-time view across sizes. Do not confound larger parameters with larger training exposure. A few capacities establish, at most, a bounded trend; compact ASR scaling itself is already studied. |
+| A17 | Apple Silicon compute study | KEEP BUT REFRAME | Engineering reproducibility; descriptive paper efficiency | Keep the primary Mac platform and native calibration. Separate model, guard and end-to-end timings. Conclusions name the hardware, precision, kernels and workload; one Mac cannot establish general superiority over other accelerators. |
+
+The principal publication repairs are now explicit: a public reference-faithful task using existing references, deterministic scoring with explicit coverage, exact generated stress targets, strong pretrained controls, fixed input information, controlled representation and guard comparisons, clustered uncertainty, and bounded negative-result language. No required raters, adjudicator, new critical-span annotation, listening queue or repetitive author inspection remains in the paper path. The specified controls and feasibility checks remain gates to execute and verify. None is satisfied solely by inclusion in this specification.
+
+### 3.2 Evidence standard and reading the matrix
+
+The review covered ASR correction and postprocessing, compact specialists, scratch training, LLM correction and distillation, neural editing, tagging and pointer/copy models, byte representations, denoising, speech-channel corruption, constrained decoding, semantic faithfulness, edit minimality and device efficiency. The ten closest works below were selected for their direct overlap with the proposed mechanisms, data treatment or benchmark claim. Supporting work follows in Section 3.4. This is a serious bounded review, not a proof that all related work has been found.
+
+The matrix is transposed into compact cards so that every work has the same 15 fields. **NR** means not reported or not verified in the inspected source; it does not mean zero or absent. **N/A** means that the field does not apply. Parameter counts retain their reported denominator; no unreported total is inferred from a model nickname. A correction model's weight initialization and the pretrained ASR used to generate its inputs are separate facts. “Remaining distinction” identifies a proposed contrast with that work; it is not a novelty certificate.
+
+### 3.3 Ten closest prior works
+
+#### 3.3.1 N1  -  Revisiting ASR Error Correction with Specialized Models
+
+| Field | Evidence |
+|---|---|
+| Paper/system | Gu et al.; ECLM. [N1] |
+| Year | 2024 preprint; revised 2026; reviewed venue unverified. |
+| Task | ASR hypothesis correction and acoustic rescoring. |
+| Architecture | Character Transformer; 16 encoder, 4 decoder layers. |
+| Pretrained vs scratch | Task-trained; random initialization not explicitly declared. |
+| Parameter scale | 69M, 155M, 484M; scaling extends to 1B. |
+| Training data | Real pairs and cascaded TTS→ASR; text-scale ablations. |
+| Output representation | Full character transcripts; optional correction candidates. |
+| Copy/edit mechanism | No explicit source-byte copying guarantee reported. |
+| Preservation evaluation | WER, low-error behavior, lexical hallucination measure. |
+| ASR source | CTC recognizers, Whisper, Parakeet TDT v2. |
+| Public benchmark used | LibriSpeech and cross-domain speech test sets. |
+| Main findings | Compact specialists outperform compared LLMs; channel and scale matter. |
+| Overlap with proposed contribution | Compact correction, speech corruption, scaling, Parakeet transfer. |
+| Exact remaining distinction | Controlled same-backbone representation/renderer and guard attribution with explicit reference-conditioned repair, damage and coverage. |
+
+#### 3.3.2 N2  -  PATCorrect
+
+| Field | Evidence |
+|---|---|
+| Paper/system | Zhang et al.; PATCorrect. [N2] |
+| Year | Interspeech 2023, reviewed. |
+| Task | English 1-best ASR correction. |
+| Architecture | Text/phoneme encoders and parallel decoder; 6 layers each. |
+| Pretrained vs scratch | Explicitly trained from scratch; separate synthetic-pretraining ablation. |
+| Parameter scale | Total NR; width 512, FFN 2048. |
+| Training data | Over 3.5M real ASR pairs; optional noisy Wikipedia. |
+| Output representation | Length-adjusted, parallel target-token sequence. |
+| Copy/edit mechanism | Edit alignment; phoneme-guided tag prediction and generation. |
+| Preservation evaluation | Detection precision/recall/F0.5 and correction accuracy. |
+| ASR source | NeMo Conformer, Jasper, QuartzNet 5×5. |
+| Public benchmark used | Common Voice v9; LibriSpeech also supplies training. |
+| Main findings | Improves FastCorrect WERR; AR retains better WER at higher latency. |
+| Overlap with proposed contribution | Scratch correction, architecture comparison, preservation-equivalent metrics. |
+| Exact remaining distinction | Matched-budget B/C representation-plus-renderer contrast with frozen ambiguity handling, reference-word/source-error denominators and secondary source-correct slices. |
+
+#### 3.3.3 N3  -  ConstDecoder
+
+| Field | Evidence |
+|---|---|
+| Paper/system | Yang, Li and Peng; ConstDecoder. [N3] |
+| Year | Interspeech 2022, reviewed; also available as a preprint. |
+| Task | ASR hypothesis correction. |
+| Architecture | BERT encoder; shallow Transformer or LSTM decoder. |
+| Pretrained vs scratch | BERT-base-uncased initialization. |
+| Parameter scale | Total NR; encoder width 768. |
+| Training data | Synthetic ASR pairs from ATIS, SNIPS and TOP. |
+| Output representation | Keep/Delete/Change actions and changed-span text. |
+| Copy/edit mechanism | Alignment retains unchanged content; changed spans decode selectively. |
+| Preservation evaluation | WER and sampled correction-category analysis. |
+| ASR source | TTS/noise→LAS, TTS→Kaldi, commercial/internal speech pipelines. |
+| Public benchmark used | ATIS, SNIPS, TOP; speech inputs synthesized. |
+| Main findings | Approximately 3.4×/5.7× faster decoding; table WER worsens versus BART. |
+| Overlap with proposed contribution | Sparse ASR editing, keep/copy behavior, TTS→ASR pairing. |
+| Exact remaining distinction | Scratch lineage and controlled full-text/sparse comparison on existing real-speech references and exact generated diagnostics. |
+
+#### 3.3.4 N4  -  SoftCorrect
+
+| Field | Evidence |
+|---|---|
+| Paper/system | Leng et al.; SoftCorrect. [N4] |
+| Year | AAAI 2023, reviewed; preprint 2022. |
+| Task | Selective ASR correction. |
+| Architecture | Transformer detector and constrained CTC corrector. |
+| Pretrained vs scratch | Synthetic-pair pretraining; external weight initialization NR. |
+| Parameter scale | Total NR in inspected source. |
+| Training data | 400M pseudo pairs plus ASR-paired corpora. |
+| Output representation | Error probabilities and parallel corrected text. |
+| Copy/edit mechanism | Correct detected-error regions; copy undetected tokens. |
+| Preservation evaluation | Detection precision/recall/F1, correction precision, CER/CERR. |
+| ASR source | ESPnet Conformer hypotheses and multiple candidates. |
+| Public benchmark used | AISHELL-1 and Aidatatang. |
+| Main findings | Reported relative CER reductions of 26.09% and 9.40%. |
+| Overlap with proposed contribution | Protecting correct tokens, selective edits and overcorrection evaluation. |
+| Exact remaining distinction | Fixed text-only 1-best information and matched B/C intervention; no claim to invent correct-token preservation or correction metrics. |
+
+#### 3.3.5 N5  -  FastCorrect
+
+| Field | Evidence |
+|---|---|
+| Paper/system | Leng et al.; FastCorrect. [N5] |
+| Year | NeurIPS 2021, reviewed. |
+| Task | Fast ASR error correction. |
+| Architecture | Six-layer encoder/decoder; convolutional length predictor. |
+| Pretrained vs scratch | Own pseudo-pair pretraining; imported weight lineage NR. |
+| Parameter scale | Total NR; width 512, FFN 1024. |
+| Training data | 400M noised sentences, followed by ASR-paired training. |
+| Output representation | Source-token multiplicities and parallel target tokens. |
+| Copy/edit mechanism | Edit alignment and duration expansion guide non-autoregressive decoding. |
+| Preservation evaluation | Recognition error and efficiency; critical-harm suite NR. |
+| ASR source | ESPnet Conformer and internal hybrid recognizer. |
+| Public benchmark used | AISHELL-1; additional internal Mandarin corpus. |
+| Main findings | Near-autoregressive correction quality with reported 6-9× speedup. |
+| Overlap with proposed contribution | Compact correction, edit alignment and architecture/latency comparisons. |
+| Exact remaining distinction | Controlled full-text/sparse representation comparison with separate repair, introduced-error and resource outcomes. |
+
+#### 3.3.6 N6  -  EdiT5
+
+| Field | Evidence |
+|---|---|
+| Paper/system | Mallinson et al.; EdiT5. [N6] |
+| Year | Findings of EMNLP 2022, reviewed. |
+| Task | GEC, sentence fusion and decontextualization. |
+| Architecture | Parallel tagging/reordering plus autoregressive insertion decoder. |
+| Pretrained vs scratch | T5 warm start and editing-specific pretraining. |
+| Parameter scale | Reported Small 50M, Base 141M; denominator not independently audited. |
+| Training data | C4 denoising, DiscoFuse, GEC and decontextualization corpora. |
+| Output representation | Keep/delete tags, reordered source and sparse insertions. |
+| Copy/edit mechanism | Pointer reordering; generate only new material. |
+| Preservation evaluation | Exact match, rewrite-subset accuracy, SARI and GEC F0.5. |
+| ASR source | N/A; text editing experiments. |
+| Public benchmark used | DiscoFuse and public editing/GEC tasks. |
+| Main findings | Competitive quality and task-dependent speedups up to 25×. |
+| Overlap with proposed contribution | Small efficient editing with limited generation. |
+| Exact remaining distinction | Scratch ASR restoration under fixed information and exposure, with constitutive renderer and optional guard effects separated. |
+
+#### 3.3.7 N7  -  Pronunciation Guided Copy and Correction
+
+| Field | Evidence |
+|---|---|
+| Paper/system | Dong et al.; PGCC. [N7] |
+| Year | Reviewed journal article, 2024. |
+| Task | Mandarin ASR error correction. |
+| Architecture | BART plus phonetic encoder and copy gate. |
+| Pretrained vs scratch | Pretrained `fnlp/bart-base-chinese`. |
+| Parameter scale | Total NR; BART 6+6 layers, width 768. |
+| Training data | AISHELL-1/MagicData pairs plus 4M noised sentences. |
+| Output representation | Full corrected character sequence. |
+| Copy/edit mechanism | Pronunciation-guided source-copy versus generation mixture. |
+| Preservation evaluation | CER/CERR, precision/recall/F0.5 and entity overcorrection analysis. |
+| ASR source | ESPnet Conformer; stronger-ASR appendix experiment. |
+| Public benchmark used | AISHELL-1 and MagicData. |
+| Main findings | Copy/phonetic modeling helps; low-error entity failures remain. |
+| Overlap with proposed contribution | Copy preservation, correction precision and strong-ASR failure analysis. |
+| Exact remaining distinction | Scratch lineage and source-byte edit contract under a matched B/C study; copy preservation and correction metrics are prior art. |
+
+#### 3.3.8 N8  -  Conservative Data Filtering
+
+| Field | Evidence |
+|---|---|
+| Paper/system | Udagawa et al.; Conservative Data Filtering. [N8] |
+| Year | EMNLP Industry 2024, reviewed. |
+| Task | Robust Japanese ASR correction under domain shift. |
+| Architecture | Decoder-only LLM; text and ASR phoneme inputs. |
+| Pretrained vs scratch | LoRA-adapted Swallow-Mistral and Sarashina-2. |
+| Parameter scale | 7B each. |
+| Training data | Subset of an 8,000-hour transcribed-speech corpus. |
+| Output representation | Full corrected transcript. |
+| Copy/edit mechanism | Identity targets when acceptability or inferability filters fail. |
+| Preservation evaluation | CER, altered-hypothesis rate and linguistic-acceptability scoring. |
+| ASR source | Internal Conformer-CTC and phoneme/graph decoding. |
+| Public benchmark used | None reported; 21 internal benchmarks. |
+| Main findings | Filtering reduces overcorrection and improves aggregate correction robustness. |
+| Overlap with proposed contribution | Recoverability filtering, identity supervision and conservative correction. |
+| Exact remaining distinction | Public existing-reference evaluation and same-input scratch representation experiments; inferability filtering is not new. |
+
+#### 3.3.9 N9  -  Failing Forward / DARAG
+
+| Field | Evidence |
+|---|---|
+| Paper/system | Ghosh et al.; DARAG. [N9] |
+| Year | Findings ACL 2025, reviewed; preprint 2024. |
+| Task | Generative ASR correction and domain adaptation. |
+| Architecture | LLaMA-2 with N-best input and retrieved entities. |
+| Pretrained vs scratch | Pretrained correction model; LoRA fine-tuning. |
+| Parameter scale | 7B correction model. |
+| Training data | Real pairs plus LLM text→TTS→actual ASR. |
+| Output representation | Full corrected transcript. |
+| Copy/edit mechanism | Hypothesis/entity prompting and retrieval; no byte-copy guarantee. |
+| Preservation evaluation | WER, named-entity F1 and domain-shift analysis. |
+| ASR source | Trained encoder-decoder recognizers; five hypotheses. |
+| Public benchmark used | LibriSpeech, SPGISpeech, VoxPopuli, GigaSpeech, TED-LIUM. |
+| Main findings | Synthetic augmentation/retrieval improve tested in-domain and adaptation settings. |
+| Overlap with proposed contribution | Realistic acoustic-channel generation, teacher text and entity restoration. |
+| Exact remaining distinction | Fixed text-only 1-best input, scratch student and common-seed controlled channel intervention with automatic endpoint limits. |
+
+#### 3.3.10 N10  -  RCbench
+
+| Field | Evidence |
+|---|---|
+| Paper/system | Huang et al.; RCbench. [N10] |
+| Year | 2026 ICML audio-workshop camera-ready; not main-conference publication. |
+| Task | Revise earlier targets using later spoken clarification. |
+| Architecture | Benchmark; no new correction architecture. |
+| Pretrained vs scratch | N/A benchmark; evaluates existing systems. |
+| Parameter scale | N/A benchmark; tested-system totals NR. |
+| Training data | N/A; 180 authored sentences, five human recordings each. |
+| Output representation | Transcripts evaluated at labeled target regions. |
+| Copy/edit mechanism | N/A benchmark. |
+| Preservation evaluation | Target accuracy/WER and non-target control accuracy/WER. |
+| ASR source | Whisper-large-v3, ProGRes, FHMV and Typeless AI. |
+| Public benchmark used | 900 scripted recordings across six clarification subcategories. |
+| Main findings | Clarification-driven target recognition remains difficult despite better control performance. |
+| Overlap with proposed contribution | Context-grounded necessary correction and targeted benchmark controls. |
+| Exact remaining distinction | Programmatically generated latent truth and natural reference-conditioned transitions; generic targeted/control testing is not new. |
+
+### 3.4 Supporting precedents and limits of interpretation
+
+**FACT - LITERATURE.** General editing and faithfulness work strengthens these boundaries. Seq2Edits uses source-span edits and selective generation; FELIX separates tagging and insertion; ERRANT extracts and categorizes edits; USIM evaluates semantic faithfulness. ByT5 establishes pretrained byte-to-byte modeling. Their existence rules out treating spans, edit precision, semantic preservation or byte representation as newly introduced concepts. [N19, N18, N13, N12, N11]
+
+Recent applied work also matters. Small fine-tuned ByT5/mT5 models outperform examined larger-LLM correction settings in Hindi; Ma et al. study LLM correction with constrained N-best/lattice decoding; ChFT combines speech synthesis, ASR, punctuation/number processing and structured/full-text correction; CoTD uses teacher-generated supervision for a pretrained multimodal correction student. These support strong baselines and honest lineage reporting. They do not establish the proposed random-init, fixed-input result in advance. [N14-N17]
+
+Several details prevent misleading comparisons:
+
+- Gu et al.'s headline 1.5/3.3 LibriSpeech WER uses a changed ASR training setup and correction-first acoustic rescoring. It is not a text-only drop-in cleanup score. Its hallucination definition counts output words absent from both hypothesis and reference; this does not detect every wrong value binding or meaning change. [N1]
+- PATCorrect explicitly verifies scratch initialization. EdiT5's ablation without its additional pretraining still retains the T5 warm start. Neither an omitted initialization statement nor task-specific pretraining is evidence of imported pretrained weights. [N2, N6]
+- ConstDecoder's result table shows faster decoding alongside higher WER than BART. PGCC's manuscript and final abstract differ slightly on the AISHELL reduction; the published appendix also documents entity overcorrection with a stronger recognizer. The specification does not combine incompatible version-specific scores. [N3, N7]
+- DARAG has N-best and retrieved-entity information, and its OOD setup includes a small amount of unlabeled target-domain speech. Those are extra information relative to the proposed 1-best paper task. [N9]
+- RCbench's 900 recordings derive from 180 sentence designs and five speakers; they are not 900 independently authored cases. Its non-target control is closely related to preservation evaluation, but the inspected paper does not report before/after damage conditional on initially correct source atoms. The advertised repository could not be verified in this audit, so availability, scorer version and redistribution license remain unverified, not proven absent. [N10]
+
+### 3.5 Explicit answers to the eight novelty questions
+
+1. **Is a small Transformer for ASR correction already well established? Yes.** FastCorrect, PATCorrect and the compact ECLM study provide direct evidence. Small size and efficient inference remain useful engineering objectives and experimental variables, but they are not contributions merely because this project implements them. [N1, N2, N5]
+
+2. **Is a from-scratch specialist itself novel? No as a generic claim.** PATCorrect explicitly trains correction models from scratch. The core student in this project remains randomly initialized because that is a learning and research constraint. The paper must disclose pretrained ASR, TTS and any teacher data lineage separately from student weights. [N2]
+
+3. **Are explicit preservation metrics novel? Their general purpose is not.** Edit precision, correction precision, F0.5, semantic faithfulness, overcorrection and target/non-target controls have precedents. Version 1.2 uses established correction and overcorrection concepts with explicit reference-conditioned denominators. Automatic transition scoring and reporting preservation alongside repair are methodology, not a newly established metric contribution. The focused audit in Section 3.7 gives the nearest precedents. [N2, N4, N7, N8, N10, N12, N13]
+
+4. **Is sparse edit/copy ASR restoration already established? Yes.** ConstDecoder, SoftCorrect and PGCC are direct ASR precedents; EdiT5 and Seq2Edits broaden the representation lineage. A byte-splicing renderer has a mechanical copying invariant. Its correct choice of edit boundaries and replacements is a separate empirical question. [N3, N4, N6, N7, N19]
+
+5. **Is exact-ASR-channel synthetic corruption established? Yes.** Passing synthesized speech through the recognizer that generates correction inputs already appears in close work. Gu et al. also study speaker, noise, real/synthetic and data-scale effects. Pinning the actual Parakeet version makes an experiment reproducible; it does not invent the acoustic-channel method. [N1, N3, N9]
+
+6. **Is the architecture comparison itself novel enough to matter? Not automatically.** Prior papers already compare autoregressive, non-autoregressive and editing approaches. This study becomes informative if it identifies a reproducible repair–preservation tradeoff under declared data, tuning and compute constraints, with stable scoring coverage and no semantic-harm extrapolation. B/C supports a representation-plus-renderer contrast; A/B changes a bundle of family properties and cannot isolate bidirectionality. [N2-N6]
+
+7. **Is the scaling study novel enough to matter? Not as a generic size sweep.** Gu et al. already scale compact correction models and training data. The proposed 100M/203M/316M extension can test whether a measured preservation effect persists across a bounded capacity range. It cannot establish universal power laws or a generally optimal production size. [N1]
+
+8. **What combination is defensible? A controlled empirical finding supported by reproducible measurement artifacts.** C1 becomes the matched B/C representation-plus-renderer study. C2 is the deterministic scorer and exact generated stress package, treated as supporting methodology unless a separate technical advance is demonstrated. C3 supplies conditional acoustic-channel and bounded resource evidence. The abandoned human FTR contribution does not survive under a new label; none of these candidates warrants a first-ever claim.
+
+### 3.6 Revised contribution boundaries under the solo constraint
+
+**PROPOSED DECISION — C1, controlled empirical study.** The principal candidate is a reproducible comparison of full-text B100 and sparse-edit C101, including C’s constitutive renderer, under the same source information, approximately matched scale, frozen canonical exposure, tuning policy and three final seeds. A100 provides a broader family control. The study jointly measures repair and introduced error relative to the supplied reference, reports ordinary lexical metrics over the full frozen population, and keeps optional guards and Qwen rescue separate. A positive result is conditional on the frozen joint hypothesis, anti-identity gate, adequate precision and scorer validity. A useful negative result can expose a bounded tradeoff or pretrained dominance.
+
+This is not a generic new-architecture or new-metric claim. Unchanged-gap byte copying is a renderer invariant; selecting good boundaries and replacements is an empirical behavior. B/C changes representation plus the renderer needed to define that representation. A/B changes a bundle of family properties. A benefit appearing only after additional guards belongs to those guards or their interaction. Neither identity behavior nor smaller output volume alone establishes useful restoration.
+
+**PROPOSED DECISION — C2, supporting evaluation artifacts.** The public package consists of a fully specified deterministic scorer, normalization policies, ambiguity/coverage outputs, test fixtures, reproducible existing-reference data views and programmatic stress generators with latent ground truth. It is a methodology and reproducibility deliverable. A new corpus acronym, a four-cell transition table, or machine-generated examples do not establish resource or metric novelty. The primary paper does not require a human-annotated FTR benchmark, manual critical-atom labels, manual NCS verification or an AI substitute for those labels. “Critical literal” denotes an exact structured category under the declared extractor, not an exhaustive semantic-harm construct.
+
+Existing public references define the natural-data target policy; they are not presumed infallible or exhaustive over acceptable paraphrases. Generated latent records define the separate stress target. Automated software verification can establish conformance to these contracts, not agreement with all possible human judgments. Claims therefore concern reference-conditioned lexical repair, introduced discrepancies and exact literal behavior. They do not assert comprehensive faithfulness, inferred speaker intent or semantic safety. Ambiguity is recorded or bounded by the frozen algorithm, never routed to a required annotator. Sections 23, 25 and 26 and Part IV specify the executable definitions.
+
+**PROPOSED DECISION — C3, supporting data and resource evidence.** The acoustic treatment remains a controlled replacement of the designated corruption share on common accepted written seeds and spoken renderings, with the B-text optimizer recipe inherited as specified. Its exact target lineage is not proof that TTS realized the intended speech. Automatic qualification must establish an operationally defensible restricted population; otherwise the claim is narrowed or the acoustic experiment is blocked. No mandatory listening queue repairs that gap. Generation, rejection, validation, training and tuning costs are separate. Established TTS→ASR construction and compact-model scaling remain precedents. [N1, N3, N9]
+
+The publication verdict is conditional but positive: the scientific question survives without new annotation because it now concerns quantities the declared references and algorithms can identify. What is lost is a claim about independently assessed semantic importance, recoverability or general meaning preservation. What is gained is scalable, repeatable scoring with inspectable exclusions and exact generator targets. The paper is credible only if a measured distinction remains informative relative to the close prior work; successful implementation alone supports a project report, not an automatic research contribution.
+
+### 3.7 Focused metric and stress-test nearest-prior-work matrix
+
+**FACT — LITERATURE.** The following matrix supplements the retained N1–N10 cards. These are direct precedents for the revised evaluation object. It distinguishes a scorer’s unit and denominator from an informal description of its purpose. It does not assert that a GEC score validates every ASR or technical-string use.
+
+#### 3.7.1 M1 — I-measure and three-way correction evaluation
+
+| Field | Verified overlap and limit |
+|---|---|
+| Work/status | Felice and Briscoe, NAACL 2015, reviewed. [M1] |
+| Established mechanism | Exact source/hypothesis/reference sum-of-pairs alignment; token-level detection/correction counts, true negatives and identity-relative improvement. |
+| Repair versus damage | The correction table distinguishes correct preservation, repair, missed errors and unnecessary changes. A changed-but-still-wrong token can contribute both a false positive and false negative. |
+| Boundary for this project | Triple alignment and preservation-sensitive evaluation are prior art. Its joint alignment and contingency accounting are not automatically identical to the proposed conditional alignment objective, all-ties bounds or fixed reference-word/source-error denominators. Use as a methodological predecessor; do not rename the project scorer “I-measure” unless its published algorithm is reproduced. |
+
+#### 3.7.2 M2 — MaxMatch and edit precision/recall/F0.5
+
+| Field | Verified overlap and limit |
+|---|---|
+| Work/status | Dahlmeier and Ng, NAACL 2012, reviewed; official scorer documents later F-beta and insertion fixes. [M2] |
+| Established mechanism | Builds an edit lattice, permits phrase-level combinations and selects a hypothesis edit sequence with maximal gold-edit overlap. The official tool reports precision, recall and F0.5 by default. |
+| Repair versus damage | Correct-edit overlap rewards repairs; unmatched proposed edits lower precision. All proposed edits are the precision denominator, not all initially correct source opportunities. |
+| Boundary for this project | Freeze tokenization, reference-edit extraction, alternatives and scorer version. Automatically derived source/reference edits are an algorithmic reference view, not newly human-labeled gold. M2 is a useful conventional comparator, but its aggregate score alone does not identify introduced-error incidence or semantic harm. |
+
+#### 3.7.3 M3 — ERRANT
+
+| Field | Verified overlap and limit |
+|---|---|
+| Work/status | Bryant, Felice and Briscoe, ACL 2017, reviewed; official maintained toolkit. [M3, N13] |
+| Established mechanism | Automatically extracts edits using linguistically informed alignment/merging, then assigns rule-based error categories. Its tooling converts parallel original/corrected texts into M2 records and compares system and reference edits. |
+| Repair versus damage | Enables correction precision/recall/F0.5 and error-type analysis without new case-by-case source/output annotation. |
+| Boundary for this project | NLP tokenization, linguistic features and merging rules affect the unit. Pin them. English GEC categories are not a semantic oracle or an exact parser for arbitrary URLs, commands and version strings. Use unweighted, frozen scoring as a diagnostic; technical literals retain their own exact schema. |
+
+#### 3.7.4 M4 — GLEU and GLEU Without Tuning
+
+| Field | Verified overlap and limit |
+|---|---|
+| Work/status | Napoles et al., ACL-IJCNLP 2015, reviewed; 2016 correction is an author preprint and official code update. [M4] |
+| Established mechanism | Source-aware n-gram evaluation from source, corrected reference and output, without requiring explicit error annotations. The authors recommend the revised untuned version over the original implementation. |
+| Repair versus damage | Credits reference overlap while accounting for changes from the source and retained source errors. It is an aggregate sequence metric. |
+| Boundary for this project | Direct precedent for automatically evaluating correction from triples. It does not yield occurrence-level correct-source damage counts, guarantee reference completeness or establish exact value binding. If reported, name and pin the revised version; do not substitute it silently for a transition endpoint. |
+
+#### 3.7.5 M5 — CLEME
+
+| Field | Verified overlap and limit |
+|---|---|
+| Work/status | Ye et al., EMNLP 2023, reviewed. [M5] |
+| Established mechanism | Merges overlapping hypothesis/reference edits into consistent chunk boundaries across source, output and references; supports correction-dependence and correction-independence assumptions for multi-reference evaluation. |
+| Repair versus damage | Makes edit/chunk comparisons consistent where separately segmented corrections would mismatch. |
+| Boundary for this project | Consistent multi-string chunking is prior art. Because hypothesis edits participate in boundary construction, the chunks are not automatically a fixed candidate-independent source/reference denominator. Reference-combination assumptions also require care; arbitrary mixtures of accepted clauses may not remain valid. Treat the proposed fixed-unit population as a separate disclosed design. |
+
+#### 3.7.6 M6 — CLEME2.0
+
+| Field | Verified overlap and limit |
+|---|---|
+| Work/status | Ye et al., ACL 2025, reviewed main-conference paper. [M6] |
+| Established mechanism | Separates hit-correction, wrong-correction, under-correction and over-correction; divides false positives into changes at erroneous versus already-correct regions. |
+| Exact denominator distinction | Hit uses `TP/(TP+FP_ne+FN)`; Over uses `FP_un/(TP+FP_ne+FP_un)`. The latter is a fraction of proposed edits; the project’s primary introduced word-error rate instead divides by all reference words. |
+| Boundary for this project | The four-way conceptual distinction is already explicit. Reuse recognizable terminology, but label different units/denominators accurately. Its model-weighted extensions are separate from unweighted deterministic counts and cannot supply primary truth in this project. No metric-branding or priority claim is justified. |
+
+#### 3.7.7 Direct ASR precedents and generated stress tests
+
+| Precedent | Exact overlap | Remaining boundary |
+|---|---|---|
+| PATCorrect and SoftCorrect, retained N2/N4 | Both evaluate detection and correction separately. PATCorrect’s detection precision counts actually erroneous tokens among edited tokens; its correction statistic asks whether edited error tokens reach the target. SoftCorrect also reports detection P/R/F1 and correction precision. | Editing a genuinely wrong token is detection, not necessarily successful repair. Neither those labels nor an edit F-score may be relabeled as the primary repair or introduced word-error rate without checking the unit and denominator. |
+| RED-ACE, released alignment-derived labels [D23] | The public resource already supplies binary source-token error labels obtained by minimum-edit alignment of recognizer hypotheses to existing references. Automatic source-error labeling is direct prior art. | One selected pairwise edit path is not an all-optimal three-string treatment, semantic truth or a complete critical-literal annotation. Its word confidence is additional input excluded from the primary text-only comparison. |
+| PGCC, conservative filtering and ECLM, retained N7/N8/N1 | Existing ASR work treats overcorrection, low-error inputs, copying and output hallucination as important failure modes. | A token absent from both source and reference is only one operational hallucination test. It misses some substitutions, reordered bindings and inappropriate reuse of source words. |
+| Behavioral template/invariance testing and targeted ASR controls | CheckList-style testing provides direct methodological precedent for generated cases and controlled transformations; RCbench already separates targeted recognition from non-target controls. IFEval supplies programmatic constraint checks, and RULER supplies generated exact-value/binding tasks. Exact technical generators in Part V specialize established testing approaches. IFEval is an automatic-scoring precedent; its original prompt preparation is not evidence of zero-human construction. | Template generation, minimal pairs and exact match are not new ideas. Generated frequencies are properties of the generator; they are not prevalence estimates for natural dictation. The project may contribute a useful reproducible artifact, but its scientific novelty requires demonstrated additional value. [T1–T3, N10] |
+
+### 3.8 Terminology and adoption decisions
+
+**PROPOSED DECISION.** Retire the manual primary meanings of CADR and NCS. Do not present a mechanically narrower number under the old name while retaining the old semantic claim. The primary comparison uses plain descriptive names for the reference-conditioned quantities defined in Section 23 and Part IV; any abbreviation is only an internal schema key, not metric branding.
+
+| Term | How this specification uses it |
+|---|---|
+| WER, CER, exact/reference-normalized match | Established lexical/full-output outcomes on every frozen valid-reference case, with explicit missing/invalid-output handling. |
+| Correction precision, recall and F0.5 | Conventional edit-based diagnostics under a named extractor/scorer. Detection precision is separately identified when it counts an edit at an error rather than a successful repair. |
+| Valid-completion source-error repair rate | Primary repaired source error units divided by the fixed minimum source/reference edit count, including source insertions. Incomplete or invalid outputs earn zero primary repair. Raw repair is exported separately; neither quantity is automatically edit recall, PATCorrect Correction or CLEME Hit. |
+| Introduced word-error rate | Primary introduced error count divided by all designated-reference words. It includes output-only insertions in any reference gap, including gaps with pre-existing source errors. This is an error burden, not a percentage of initially correct words damaged; it differs from CLEME Over and `1 - precision`. |
+| Correct-source preservation | A secondary fixed-mask slice whose eligible reference/source occurrences are determined from R/S alone. It retains the declared unit, ambiguity and failure policy. It must not be computed by dropping inconvenient candidate outputs. |
+| Automatic critical-literal retention/repair | Exact behavior on deterministically extracted unambiguous literals or generated latent fields. No claim that all critical meaning has been identified. |
+
+The primary raw counts satisfy the registered lexical conservation identity `repairs - introduced_errors = d(R,S) - d(R,O)` on each admissible alignment. Valid-completion gating intentionally breaks that identity for the primary repair score on failed runs; raw counts remain available. Wrong-to-different-wrong events remain unresolved in this decomposition, whereas I-measure can count such a change in both false-positive and false-negative terms. This is an operational difference, not a superiority claim.
+
+The quantitative paper can survive without the optional GEC diagnostics if their versioned extraction is unsuitable for ASR, but it cannot silently claim equivalence to those established metrics. A small frozen diagnostic roster is preferable to accumulating redundant scores. The selected triple scorer must resolve repeated tokens, insertions and candidate/source synchronization as an explicit mathematical contract. Independent pairwise optimal alignments alone do not prove a coherent shared occurrence assignment. Candidate-independent inclusion, unavailable regions, invalid outputs and coverage are frozen before final results. If a required invariant cannot be satisfied, amend the scorer and protocol before running the affected final comparison or report a narrower estimation study.
+
+Software conformance and construct validity remain different. Exact tests can establish that an implementation computes the declared reference-based quantity. They cannot prove that every public transcript is acoustically correct, that every acceptable paraphrase is present, or that token differences are a complete measure of semantic harm. No mandatory manual review is added to close that gap; the claim is narrowed to the identifiable target instead.
+
+### 3.9 Explicit answers to the eight Round 2 novelty questions
+
+1. **Which proposed automatic metrics already exist?** WER/CER, edit precision/recall/F0.5, source-aware n-gram scoring, three-way correction evaluation and correction/overcorrection decompositions all have precedents. Fixed reference-word/source-error denominators with the proposed conditional joint-alignment bounds are project-specific operational definitions; they are not evidence of a new general metric. [M1–M6]
+
+2. **Which terminology should we reuse?** Use correction, repair, preservation, introduced error and overcorrection, with the unit and denominator visible. Use M2, ERRANT, GLEU, I-measure or CLEME only for the corresponding published method/version. Reserve “semantic faithfulness” for a claim that has semantic evidence, which the automatic MVP does not promise.
+
+3. **Does source-correct → output-wrong have an established name?** Yes: an unnecessary correction or overcorrection, represented by a false-positive correction in suitable evaluation schemes. The primary introduced word-error rate has the broader denominator of all reference words and also includes inserted errors. Source-correct opportunity incidence is a secondary slice; neither is a renamed edit precision complement. [M1, M6]
+
+4. **Does source-wrong → output-correct have an established name?** Yes: a correct correction, successful repair or hit-correction. Correctly detecting an error and then replacing it with another wrong value is a different outcome. The operational correspondence and rate denominator determine which published quantity, if any, is numerically equivalent. [N2, M6]
+
+5. **Should we adopt standard paired edit metrics instead of inventing our own?** Adopt established metrics as named diagnostics where their input/extraction assumptions fit. They do not by themselves supply the registered reference-word/source-error decomposition or every secondary source-correct opportunity view. The primary scorer may supply an explicit conditional decomposition, but it must show exact differences, stable populations, ambiguity coverage and conformance tests. It cannot claim superiority over established metrics without a separate justified evaluation.
+
+6. **Is the controlled B/C comparison still publishably informative?** Potentially. A replicated, adequately precise result showing how representation plus rendering changes reference-conditioned repair, introduced error and resource use can be informative even when the metrics are established. It must survive matched-input/budget controls, no-op and aggressive-edit controls, uncertainty, external transfer and the separation of renderer/guard effects. No outcome is assumed.
+
+7. **Does removing the human benchmark contribution make the project too weak for a serious arXiv paper?** Not necessarily. It removes the independent semantic-annotation resource claim and reduces the number of prospective contributions. A careful controlled empirical study remains coherent. Submission merit depends on the result’s informativeness, execution quality and distinction from close ASR work; arXiv availability itself is not peer review or proof of novelty.
+
+8. **If the empirical distinction is too weak, what is the strongest low-labor alternative?** A transparent reproducibility and failure-analysis study: quantify when existing metrics disagree under known generated edits, demonstrate an actual alignment/coverage failure and its verified remedy if one exists, and document a bounded repair–preservation/resource tradeoff against credible controls. Exact fixtures and public artifacts support that result. If no new empirical or technical insight survives, publish an engineering report rather than inventing a benchmark or metric contribution. No alternative requires recruitment, adjudication or repetitive labeling.
+
+### 3.10 What is retained, removed and still unknown
+
+The scratch model ladder, A/B/C controls, tokenizer, inherited acoustic recipe, current pretrained comparators, BENCH-00, random-init lineage, guard attribution, public split discipline, clustered inference, native resource measurements and conditional LocalFlow branch remain. The nearest-work facts in the ten cards remain relevant even though the paper’s evaluation contribution changed.
+
+Removed from the MVP are new manual reference verification, semantic-atom annotation, dual raters, adjudication, all-seed CADR/NCS review and quantitative claims that depend on them. Existing dataset references may have been produced by humans upstream; reusing them under their actual terms is different from requiring this project to create or verify them manually. HyPoradise/HypR and other released source/reference resources are assessed in Section 12; their existence does not imply exhaustive accepted alternatives or ready-made critical-span labels.
+
+Still unknown until the future authorized development phase are automatic alignment coverage, real source-error denominators, reference-policy suitability, precision at the selected sample, TTS qualification yield, model learnability at 150M exposures, and the complete native compute schedule. These are automated feasibility and stop/amendment gates. Optional bounded qualitative inspection or model-based semantic analysis cannot alter primary labels, resolve primary ambiguity or become a hidden requirement for the quantitative claim.
+
+
+## 4. Current-state assumptions and pinned repository findings
+
+**VERIFIED REPOSITORY EVIDENCE  -  retained from v1.0.** This section describes LocalFlow at commit `77d2368025a7fb057e447d711b94a3c230d7b308`, not a newly fetched October 2026 HEAD. Neither the v1.1 nor v1.2 specification task repeated the repository audit, inspected owner databases, or run the existing comparison. The retained findings below concern the product pipeline and its controls. [R1-R9]
+
+**SCOPE CLARIFICATION.** Instructions below to include the current wrapper and freeze the current Qwen rendering apply to product replay and qualification. The paper's separate `restore_reference` task uses common raw 1-best input, a task-matched Qwen control, and explicitly separated bare/guarded outputs. The ordinary product cleanup prompt is not scored against a verbatim reference as though its intended task were unchanged. These two evaluation contracts share evidence and engineering components without conflating their targets.
+
+### 4.1 Verified current state
+
+| Area | Finding at the pinned repository state | Consequence for this project |
+|---|---|---|
+| Models | Production configuration still names mlx-community/parakeet-tdt-0.6b-v3 and mlx-community/Qwen3-4B-Instruct-2507-4bit. | Establish these as controls, not an older remembered model. |
+| Loading | ModelRunner.load calls mlx_lm.load(model_id); the production call itself does not pass an immutable revision. | Record and verify actual cached weight/tokenizer hashes for a benchmark. |
+| Generation | The runner applies the tokenizer's chat template, disables thinking, and uses greedy temperature zero. | Freeze the real rendering and decoding for the Qwen control. |
+| Engine | CleanupEngine owns windows, correction proposals, validation, and fallback. The default window is 200 words. | Smaller neural weights alone do not define the replacement system. |
+| Recent repairs | The current engine includes coverage alignment and a bounded restore-and-revalidate salvage path for small deletion-only failures. | Include the current wrapper for every baseline; do not benchmark an older wrapper. |
+| Model coupling | The worker's runner also supports non-cleanup transforms. | Add explicit backend/task routing; do not globally replace the shared runner. |
+| Qualification | STATUS records M07 model-behavior blockage, M15 infrastructure integrated but comparison not run, and final M11 qualification pending. | Do not call today's Qwen baseline accepted or invent an existing final gold score. |
+| Corpus | 60 provisional legacy real-text cases remain unqualified in the historical product workflow; they are not new gold for the paper. | Keep the historical product status visible. Their resolution is outside the zero-annotation MVP and is not a prerequisite for this paper. |
+| Timing | STATUS says current dictation end-to-end timing is not measured. | Measure current full latency; old cleanup timings are historical diagnostics. |
+| Data | Export and curation machinery exist; actual current eligible pair volume was not accessible in this read-only repository review. | Budget real pairs as an unknown supply to inventory later, not thousands of assumed examples. |
+
+Sources: current STATUS, runner, engine/contract, benchmark adapter, curation/export interfaces. [R1-R7]
+
+### 4.2 Exact integration surfaces
+
+Current construction is:
+
+~~~text
+CleanupEngine(generate_fn, model_id="", notifier=None,
+              render_fn=None, template_revision=None)
+
+generate_fn(prompt, max_tokens) ->
+  {"text": str, "output_tokens": int, "limit_hit": bool, "prompt": str}
+
+clean(text, *, mode="clean", locale="en-US", destination_profile=None,
+      relevant_vocabulary=None, protected_spans=None, vocabulary_pairs=None)
+  -> CleanupResult
+~~~
+
+The worker's argument named raw_text receives normalized text from the app path. Admitted correction proposals can then remove spans before the ordinary cleanup model call: that call sees the provisional corrected text, while final validation still uses the original normalized window. Names in an export or callback are not sufficient to establish stage provenance. The dataset adapter must explicitly map raw ASR, normalized input, post-proposal model-call input, proposed cleanup, validated output, and actually applied output. [R3-R5]
+
+The engine has a correction-proposal path distinct from ordinary cleanup. The existing parser expects exact source deletion strings, one per line, or NONE. The engine knows when it is making that call, but the low-level generate/render callbacks do not expose a typed task field. A new adapter must add explicit task identity at that known call boundary. It must not infer the task from the contents of an arbitrary dictated prompt.
+
+The current few-shot framing includes 20 cleanup pairs and 8 correction examples. The current cleanup output budget is bounded by min(words × 3 + 96, 4096); correction proposals have a separate 160-token budget. A compact specialist framing can reduce overhead, but that changes the adapter and must be measured separately from simply swapping weights. [R3-R4]
+
+### 4.3 Evidence that must not be overinterpreted
+
+The published focused diagnostic result described as 6/10 includes three negative controls: correction-positive success is 3/7 and negative-control success is 3/3. A fidelity record reports 58/60, including fallback-rescued cases. These are historical diagnostic outcomes under recorded configurations, not a new evaluation of this candidate or a population estimate of Qwen's correction accuracy. [R2, R8]
+
+The cleanup-supervised export uses normalized input and an actually applied output explicitly marked correct. Its source_text is raw ASR. A boolean intended-output judgment, a verbatim acoustic transcription, and a local span correction are different evidence types. None authorizes treating every history row or edit as a complete desired-output training pair. The new research schema must retain these distinctions. [R6-R7]
+
+Known recorded control identities include Qwen snapshot 50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b and Parakeet revision ed2b7e8c15f9aaa0b5772e2efb986255eaef7e15. These are published evidence identities, not a claim that their bytes were inspected in this session or that a future runtime automatically enforces them. [R2, R8]
+
+### 4.4 Assumptions requiring native verification
+
+The Mac has the specified M5 Pro and 48GB unified memory, but its GPU bin and chassis must be recorded. Apple offers both 16-core and 20-core M5 Pro GPUs at 307 GB/s; 48GB alone does not resolve the bin. Current installed MLX/macOS versions, sustained thermals, eligible private data count, actual model cache identity, and production memory residency remain unmeasured here. [S1]
+
+This research can proceed on public/synthetic training material and a separate research development suite while the existing LocalFlow corpus review is pending. It must not run the existing M15 comparison against an unfrozen corpus, label provisional cases gold, or silently consume them as training data.
+
+### 4.5 Boundary between the retained product audit and the paper
+
+**PROPOSED DECISION.** Product `cleanup` and `correction_proposals` retain their normalized and post-proposal boundaries. The paper adds the offline research task `restore_reference` with a separate checkpoint and data lineage. Its raw 1-best input is common across systems; deterministic normalization is an explicit baseline. Neither paper labels nor experimental model selection may consume the provisional LocalFlow final corpus.
+
+The shared worker still needs Qwen for non-cleanup transforms. Any future product adapter must route tasks explicitly at the call boundary, preserve those transforms, and preserve original normalized-window identity for final validation. No configuration or repository mutation is authorized by this specification. Native cached model identities, current eligible data volume, sustained performance and product qualification remain measurements to obtain later under their respective gates.
+
+
+## 5. Project and paper principles
+
+**ENGINEERING PROPOSAL.** The following rules govern both the personal learning program and the research record.
+
+1. Every core student's learned weights begin randomly, including embeddings and all encoder, decoder and pointer parameters. Save seeds and initial tensor hashes. Continuing that student's own checkpoint is permitted. External pretrained weights belong only to separately labeled comparators.
+2. A small correct implementation precedes a large campaign. Gradient, attention-mask, cache, token-weighted accumulation, optimizer, tokenizer, renderer and resume contracts are gates, not outcomes to infer from falling loss.
+3. Source fidelity takes priority over fluent unnecessary rewriting. The permitted operation depends on the task: the paper preserves spoken disfluencies; LocalFlow's product contract may authorize their removal. These targets must never be mixed under one score.
+4. Preservation and correction are measured jointly. Identity is desirable on true no-ops but fails necessary-correction evaluation. Abstention, invalid output, fallback and missing output keep explicit denominators.
+5. Separate trained-model behavior, structural rendering, deterministic guards and complete fallback delivery. Match protection across models when attributing an effect. A copied gap is a renderer guarantee, not evidence that the neural model understood its meaning.
+6. Hypotheses, source splits, tuning budgets and final-test rules precede final experiments. Development remains flexible; final evidence cannot be recycled as a fresh holdout after a repair.
+7. Public real speech is required for primary paper evidence. Private LocalFlow data is supplemental. Releasability and reconstruction are part of scientific validity, not an afterthought following model selection.
+8. Keep data lineage as explicit as weight lineage. Teacher-created text and pretrained TTS/ASR introduce pretrained dependencies even when the student's parameters start randomly. They do not violate the scratch-weight objective, but they must be disclosed.
+9. Use simple controlled experiments before adding losses or mechanisms. Cross-entropy, realistic examples and a strong adapted baseline precede semantic embedding rewards, preference optimization, confidence heads or custom kernels.
+10. Keep all token and cost ledgers named. Paper-canonical clean anchors, actual model tokens, supervised decisions, product exposures and teacher tokens measure different things. Repeated presentations do not become unique data.
+11. Report native hardware evidence precisely. BENCH-00 and real workload distributions determine time and memory. A theoretical operation count is a calculation; a completed measured run is a result. Neither substitutes for the other.
+12. Keep the program portable and modest in infrastructure. A future sibling research repository, immutable manifests, JSONL logs, resumable checkpoints and a narrow LocalFlow package interface are sufficient. This specification creates no repository or production changes.
+13. The MVP requires zero external annotators, second raters, human adjudicators, repetitive author labels or listening queues. Existing released references, exact generated fields and qualified deterministic algorithms supply the primary evidence. Optional debugging or model-based judges cannot change labels, resolve primary ambiguity or become a gate.
+14. Record unsuccessful runs and negative findings with the same provenance as favorable ones. Undertraining and inadequate precision are limitations; they cannot be promoted into broad negative scientific conclusions.
+
+**Evidence vocabulary.** FACT identifies verified repository behavior or external documentation. CALCULATION identifies arithmetic under explicit assumptions. ENGINEERING PROPOSAL identifies a recommended design or future action. RESEARCH HYPOTHESIS identifies an empirical question. PAPER CLAIM CANDIDATE identifies conditional manuscript language linked to an experiment. PRE-REGISTERED DECISION is reserved for fields actually frozen and hashed before affected final results; all such fields in this document are marked draft or pending. **MEASURED RESULT: no entries.** Historical published or repository observations are cited facts, not measurements performed by this project.
+
+
+## 6. Learning track and research track
+
+**ENGINEERING PROPOSAL  -  preserve both goals, with a shared foundation and independent completion criteria.** The educational language model remains a substantial part of the project. Its full 1B-token run does not block the minimum paper. Confirmatory research runs can proceed once the owned implementation passes V0-V8, the selected tokenizer and source contracts are fixed, BENCH-00 establishes a workable native regime, and a short source-conditioned experiment demonstrates real held-out convergence. Development work needed to establish those facts is part of the shared foundation, not an activity waiting for the educational campaign to finish.
+
+The shared implementation includes embeddings, attention, positional conventions, normalization, residual blocks, losses, optimizer state, accumulation, checkpointing, generation, caching, and measurement. New encoder-decoder and edit components repeat the relevant shape, masking, gradient, rendering, overfit, and resume checks before participating in an architecture comparison. Passing the causal model’s tests does not automatically qualify cross-attention or a pointer renderer.
+
+| Track | Work and completion criterion | Relationship to the paper |
+|---|---|---|
+| SHARED FOUNDATION | R-M0-R-M3: source and task contracts; transparent mathematics; reversible tokenizer; correctness ladder; short convergence; native calibration | Required for trustworthy experiments and reproducibility. It is not itself the scientific contribution. |
+| LEARNING | R-M4: MODEL-1 from random initialization; 50M/250M learning checkpoints; conditional progression to 1B; instrumentation and first-principles demonstrations | Continues as a personal objective. Include an implementation-validation or educational appendix only when it helps readers; do not use its fluency as evidence for ASR restoration. |
+| SCIENTIFIC EVIDENCE | Public existing-reference populations and deterministic scoring; realistic corruption; A/B/C comparison; the B100 acoustic treatment; pretrained controls; preservation attribution; external ASR; uncertainty and release | The minimum manuscript path. The primary final scratch experiment contains twelve approximately 100M runs. |
+| PRODUCT ENGINEERING | Intent-cleaned references, LocalFlow’s two-task adapter, optional 203M/316M/510M campaigns, runtime qualification, shadow use and promotion | Retained in full, but independent of manuscript completion. Paper restoration quality does not qualify ordinary cleanup or Prompt Engineer. |
+
+The shared short language-convergence rehearsal may begin MODEL-1’s own lineage and count toward its educational token budget. The later 50M, 250M and 1B checkpoints are not synchronization barriers for the paper. Source-conditioned convergence can be credited to a declared development/HPO run when its exact data, recipe and accounting match; it never counts as one of the three final independent training seeds.
+
+The paper’s A100 uses MODEL-1’s dimensions but begins as a separate randomly initialized conditional model. It does not import the educational checkpoint. B100 and C101 likewise begin randomly. A product model may later continue a declared scratch-trained lineage, with an explicit task change and checkpoint ancestry; it cannot inherit a paper qualification claim after its weights, targets or runtime have changed.
+
+**Synchronization points:** mathematical and data contracts precede both branches; final public source/split/label policy and development feasibility precede the paper protocol freeze; all paper arms use that frozen protocol; exported runtime and thresholds freeze before final test inference; product promotion has its own held-out qualification. A learning report can finish before or after the paper without changing those scientific rules.
+
+Parallel work means independent progress, not simultaneous competing measurements. On the one Mac, schedule only one sustained GPU training, teacher or ASR workload during a measured campaign. CPU preparation, scorer verification, source review, manuscript drafting and analysis can proceed while a model trains. If optional cloud work is later selected, keep its hardware and compute evidence separate from the Mac measurements.
+
+
+## 7. System architecture
+
+### 7.1 Shared implementation, distinct evidence paths
+
+**ENGINEERING PROPOSAL.** Four components share mathematical primitives, tokenizer tooling and versioned artifacts: the educational language-model laboratory; the public restoration experiment; the public-reference, exact-generator and automatic-evaluation system; and the later LocalFlow product integration. They share no imported pretrained weights in the core students.
+
+:::diagram training
+~~~mermaid
+flowchart TD
+    A["Shared math and data contracts"] --> B["Correctness and BENCH-00"]
+    B --> C["Educational MODEL-1"]
+    B --> D["Development pilots"]
+    E["Existing references and automated scorer"] --> F["Frozen paper protocol"]
+    D --> F
+    C --> G["Learning report"]
+    F --> K["Final runs and sealed evaluation"]
+    K --> H["Claims, uncertainty and release"]
+    K --> I["Conditional product specialization"]
+    I --> J["LocalFlow qualification"]
+~~~
+
+The graph shows program dependencies, not a data leak: frozen test inputs and labels are never training inputs. Benchmark construction and development can proceed before the learning campaign finishes. Final test scoring begins only after model, protocol and analysis freeze. The experiment reuses released human references and fixed automatic policies. Source/reference eligibility is frozen before candidate outputs; no new author labeling or listening establishes final truth. The text restoration model receives no audio.
+
+### 7.2 Task and boundary contracts
+
+| Path / task | Model input | Desired output | Permitted information | Qualification |
+|---|---|---|---|---|
+| Educational `lm` | Earlier tokens from approved training text | Next token | Within-document prefix | Held-out language learning and implementation demonstrations |
+| Paper `restore_reference` | Raw pinned recognizer 1-best text plus trusted task control | Reference-faithful lexical transcript with frozen surface policy | Same source text for every model; no audio, N-best, owner context or oracle critical masks | Automatic paired metrics, unambiguous literal subset, exact stress panel and external recognizer |
+| Product `correction_proposals` | Original normalized window | Exact admitted deletion proposals or NONE | Current documented correction context and protection ledger | Existing conservative admission contract and targeted correction tests |
+| Product `cleanup` | Actual post-proposal window | Authorized intended written text | LocalFlow's documented locale/mode, permitted destination hints, vocabulary and spans | Preservation, coverage and full runtime promotion gates |
+| Optional product transforms | Their existing typed task inputs | Qualified stylistic or structural transformation | Existing transform contract | Separate evaluation; cleanup success does not qualify them |
+
+Paper input is deliberately a new offline experimental boundary. Using the product normalizer on every neural input would entangle a deterministic transformation with the learned restoration effect; instead, that normalizer is an explicit baseline and optional matched wrapper. Raw, normalized, post-proposal and delivered views remain in the common provenance schema. Future comparisons of one-pass and two-pass product adapters are separately named experiments.
+
+### 7.3 Training and output flow
+
+Training material is split by original source and derivation family before tokenization or augmentation. The scientific text and acoustic arms use the same trusted clean spoken rendering and written reference as an accounting anchor, with their actual corrupted sources kept separate. The student sees only its source and trusted controls. A100 and B100 predict full targets; C101 predicts source-relative edits whose deterministic rendering is evaluated against the same full reference.
+
+All model outputs first enter a bare-output record. S-raw means no acceptance guard or Qwen rescue, but includes the structural parser/renderer required to define C's output. S-guard applies the fixed candidate-independent deterministic rule set. S-full includes every rejected attempt, fallback and final delivered answer. Never overwrite the raw record with a rescued result. Invalid grammar is a model failure with an explicit score and trace, not a silently discarded row.
+
+The LocalFlow runtime continues to process completed text windows after ASR closes. A later prefix pass may reduce perceived latency, but no provisional cleaned text is inserted before the source and validation decision are final. Bidirectional encoder states generally change when source words are appended; cache reuse requires demonstrated mathematical equivalence rather than an assumed append-only interface.
+
+### 7.4 Evidence and synchronization artifacts
+
+Shared gates produce exact configuration/parameter manifests, tokenizer hashes, tensor/mask tests, learning smoke-test records and BENCH-00 measurements. Research gates additionally produce a public source/rights manifest, reference-policy, scorer and split versions, `paper_protocol_v2`, immutable candidate outputs and analysis scripts. Learning checkpoints and paper checkpoints have distinct run IDs. Product qualification references a specific exported checkpoint, precision, adapter and calibration record; a paper result does not promote an app default automatically.
+
+
+## 8. Educational model
+
+**ENGINEERING PROPOSAL.** This complete learning program is retained. MODEL-1 remains a randomly initialized causal language model; its experiments are educational and implementation validation, with an optional appendix role. It is not a paper scaling point and its full 1B-token completion does not block the research track. The following mathematical and numerical contracts also support the scratch research implementations. The recommended hyperparameters are proposals; the equations and parameter accounting are calculations, and the cited mechanisms are established prior work.
+
+### 8.1 MODEL-1 configuration
+
+| Choice | Exact initial value | Why it exists |
+|---|---|---|
+| Family | Dense causal decoder-only Transformer | Makes next-token learning and generation directly inspectable. |
+| Layers / width | 14 / 768 | Approximately 100M while leaving comfortable experimental headroom. |
+| Q heads / KV heads / head dimension | 12 / 4 / 64 | Teaches GQA; head dimension aligns with supported MLX attention paths. |
+| Feed-forward | SwiGLU, hidden width 2,048 | Three projections with useful gated nonlinearity at a controlled parameter budget. |
+| Norm / residuals | RMSNorm, epsilon 1e-6, pre-norm; final RMSNorm | Normalizes each branch while retaining a direct residual route. |
+| Positions | RoPE on all Q/K dimensions; base 10,000 | Explicit relative-position mechanism; no learned position table. |
+| Context | 1,024 initially; 2,048 only after measured extension | Short enough for realistic iteration; longer support must be trained and tested. |
+| Vocabulary | 16,384 total, including 64 reserved IDs | Reversible technical-text coverage with a modest head. |
+| Embeddings | Shared input/output matrix; no separate LM head | Saves 12,582,912 parameters at this size. |
+| Biases / dropout | No linear biases; dropout 0 initially | Simplifies accounting and repeatable correctness experiments. |
+| Initialization | Normal(0, 0.02) for embedding/projection weights; norm scales 1 | Explicit and conventional starting point, verified by activation instrumentation. |
+| Residual output initialization | Attention output and FFN down matrices std 0.02 / sqrt(2L) | Limits initial residual accumulation as depth increases. |
+| Precision | FP32 master weights and optimizer; BF16 working matmuls after FP32 correctness | Preserves small updates while learning mixed-precision mechanics. |
+| Optimizer | AdamW; beta1 0.9, beta2 0.95, epsilon 1e-8, bias correction on | An explicit optimizer contract rather than backend-default assumptions. |
+| Decay / clipping | Weight decay 0.1 on matrix weights including tied embedding once; zero on norm scales; global norm clip 1.0 | Prevents duplicate updates to shared weights and bounds unstable steps. |
+| Learning rate | Peak 3e-4; warm up over first 2% of planned tokens; cosine to 3e-5 | Stable beginning and a clear, token-based schedule. |
+| Batch proposal | Microbatch 4 × 1,024; accumulation 8 | 32,768 processed tokens per optimizer update before padding adjustments. |
+| Initial fallback batch | Microbatch 1; accumulation 32 | Same token budget if stable-release attention or memory limits require it. |
+| Checkpoints | Every 25M tokens or 30 elapsed training minutes, whichever comes first, at update boundaries | Bounds lost work and permits controlled resume tests. |
+
+RoPE, RMSNorm, SwiGLU, and GQA have direct primary research precedents; the exact combination and dimensions above are this project's proposed configuration. None of those papers proves these hyperparameters optimal for LocalFlow. [S7-S10]
+
+RoPE pairing is fixed to adjacent real coordinates throughout reference and optimized paths. Position i rotates pair j by angle i × 10000^(-2j/64). Record this convention in the package; a kernel using another convention requires an explicit conversion or matching flag. Do not silently extend context by changing the RoPE base after training.
+
+### 8.2 Mathematical contract
+
+Let X have shape [B,T,d], h=12, hk=4, dh=64, k=hk×dh=256, and f=2048.
+
+~~~text
+N(X) = X * gamma / sqrt(mean(X^2, final_axis) + epsilon)
+
+Q = reshape(N(X) Wq)       Wq: [d,d]
+K = reshape(N(X) Wk)       Wk: [d,k]
+V = reshape(N(X) Wv)       Wv: [d,k]
+Q,K = RoPE(Q,K, positions)
+
+A = softmax(Q K^T / sqrt(dh) + causal_mask) V
+Y = X + concat_heads(A) Wo
+Z = Y + (SiLU(N(Y) Wg) * (N(Y) Wu)) Wdown
+
+logits = final_norm(Z) E^T
+loss = sum(valid_mask * -log_softmax(logits)[next_token]) / valid_count
+~~~
+
+Every K/V head is shared by three query heads. The attention scale is 1/sqrt(64)=1/8. With roughly independent unit-variance query/key components, an unscaled dot product's variance grows with dh; scaling controls its size so the softmax does not begin unnecessarily saturated. Heads can learn different relationships, but those relationships are not predefined human labels.
+
+:::diagram model
+~~~mermaid
+flowchart TD
+    X["Residual stream X"] --> N1["RMSNorm"]
+    N1 --> A["Q K V, RoPE, causal GQA"]
+    X --> R1["Add attention output"]
+    A --> R1
+    R1 --> N2["RMSNorm"]
+    N2 --> F["SwiGLU"]
+    R1 --> R2["Add FFN output"]
+    F --> R2
+    R2 --> O["Next block or tied logits"]
+~~~
+
+### 8.3 Modules to implement directly
+
+Use MLX arrays, autograd, matrix kernels, and basic layers. Own the arrangement and data flow below. Start with a transparent attention implementation on tiny tensors; use the verified optimized primitive after parity tests. The production framework supplies autograd; an independent full autodiff engine is outside scope.
+
+| Module and shapes | Mathematical job | Failure to catch | Smallest useful test | Intuitive purpose |
+|---|---|---|---|---|
+| Tokenizer: bytes to [T] IDs | Deterministic reversible segmentation | Lost spaces, Unicode changes, accidental control tokens | Round-trip a path, emoji, combining mark, and literal control-like string | Turns text into pieces the model can manipulate. |
+| Embedding: [B,T] to [B,T,d] | Row lookup in E[V,d] | Wrong indexing or duplicated shared parameters | Repeated ID gives identical vectors; gradients add at that row | Assigns each piece a learnable starting description. |
+| RMSNorm: [B,T,d] unchanged | Divide by root mean square; multiply gamma[d] | Wrong axis, mean subtraction, unstable zero input | Hand-compute [1,2,3,4], plus zero-vector result | Keeps signal sizes manageable. |
+| Projections | Q[B,h,T,dh], K/V[B,hk,T,dh] | Transpose/head grouping errors | Tiny explicit matrix multiplication | Builds queries, matching keys, and information values. |
+| RoPE: Q/K shape unchanged | Pairwise rotations by position | Rotating V, wrong pair layout or cache offset | Zero position; norm preservation; relative-dot-product identity | Makes matching sensitive to where words occur. |
+| Causal attention | Softmax over keys, then weighted V | Future leakage, wrong scale, all-masked NaNs | Perturb token 4: outputs 0-3 remain unchanged | Selects relevant earlier information. |
+| GQA | Share K/V across query groups | Incorrect repeated-head order | Compare native GQA to explicit K/V repetition on tiny tensors | Reuses stored context across several readers. |
+| Output mixing: [B,h,T,dh] to [B,T,d] | Concatenate heads, apply Wo[d,d] | Wrong concatenation axis | Compare a known numbered tensor to expected order | Combines what the heads found. |
+| SwiGLU: d to f to d | SiLU(XWg) multiplied by XWu, then Wdown | Missing gate or dead projection | Compare a 2×3 example with scalar calculations; all three gradients nonzero | Selects and transforms features at each position. |
+| Residual block: [B,T,d] unchanged | Add branch output to prior stream | Accidental post-norm or overwritten input | Zero branch weights give exact identity before final norm | Lets useful earlier information survive depth. |
+| Tied logits: [B,T,V] | HE^T | A second copied embedding updated separately | Count one shared matrix and one optimizer update | Scores every possible next text piece. |
+| Cross-entropy: scalar | Stable log-softmax against shifted targets | Current-token target, pad loss, incorrect mean | Three-token manual loss and analytic uniform-loss check | Penalizes assigning too little probability to the correct next piece. |
+| Backpropagation | Chain rule to all parameter leaves | Detached cast or missing branch | FP32 finite differences on a tiny matrix; tolerance 1e-3 relative | Sends each mistake back to the decisions that caused it. |
+| Accumulation | Sum token-normalized gradients across microbatches | Averaging unequal batch means or stepping too early | One batch versus uneven microbatches within 1e-5 FP32 relative tolerance | Simulates a larger batch without holding it at once. |
+| AdamW | FP32 moments, bias correction, decoupled decay | Wrong step count, BF16 moments, decaying twice | Two scalar updates against hand calculation | Smooths noisy gradients and adapts update sizes. |
+| Scheduler | LR as a function of processed tokens | Different schedule after resume | Values at warmup end, midpoint, final token and resumed position | Controls how aggressively weights change. |
+| Cache | Rotated K and ordinary V per layer | Wrong offsets; incorrect multi-token causal alignment | Cached 1-token and 4-token chunks match full forward | Reuses prior context instead of recomputing it. |
+| Sampler | Greedy or filtered categorical distribution | Wrong top-p support or temperature-zero behavior | Fixed logits, known support, repeatable seed | Chooses a next token from model scores. |
+| Checkpoint | Serialize all resumable state | Missing optimizer, RNG, data cursor or accumulators | Interrupted and uninterrupted 20-step trajectories agree | Preserves the actual training process, not only weights. |
+
+For FP32 optimized/reference forward checks use atol 1e-5 and rtol 1e-4 initially; for BF16 use atol 2e-2 and rtol 2e-2 on deliberately bounded small tensors, plus loss/gradient-direction checks. Tighten or justify tolerances from measured numerical error; broad tolerances must never excuse a wrong mask or shape. Exact-string, offset, shape, and causal-leakage invariants do not become approximate.
+
+### 8.4 Training-loop contract
+
+Gradient accumulation is weighted by valid loss tokens, not merely divided by the number of microbatches. Accumulate loss sums/gradients and denominators, divide once for the optimizer update, clip after accumulation, update AdamW once, then clear accumulators. The scheduler advances by the recorded processed-token convention and resumes at the exact saved count.
+
+For causal training, use independent document sequences or correctly isolated packed segments. Right padding with causal attention and a loss mask is valid for earlier real tokens. Concatenating documents with EOS permits cross-document attention; EOS is not an isolation mask. Such concatenation is an explicitly named ablation only. Array-mask packing is permitted when correct, but its speed and memory must be benchmarked.
+
+Keep FP32 master parameters, FP32 optimizer moments, and FP32 accumulation. Cast for BF16 working computation through a differentiable path. Confirm actual gradient and state dtypes after the first materialized optimizer update. Avoid manual loss scaling for BF16 unless a demonstrated numerical failure motivates it; FP16 is a separately qualified alternative.
+
+Compute RMS statistics, softmax and loss reductions in FP32, then explicitly cast branch outputs into the chosen working/residual dtype. Differentiating through BF16 casts from FP32 master leaves ordinarily yields FP32 microgradients. With a separate FP32 accumulator, budget 22N bytes for the basic live parameter/state/gradient buffers; Section 19 includes the additional activation/workspace allowances.
+
+Training pseudocode specifies behavior, not a library-hidden implementation:
+
+~~~text
+load model configuration, tokenizer, dataset manifest, seed
+initialize every trainable tensor randomly, except norm scales
+for each optimizer update:
+    clear FP32 accumulated gradient sums and valid-token count
+    for each microbatch in this update:
+        compute shifted masked loss sum and gradients
+        accumulate gradients and count valid targets
+        materialize needed state; release obsolete graph references
+    divide gradient sums by total valid-target count
+    clip global norm; apply one FP32 AdamW update
+    evaluate updated parameters, optimizer and accumulators
+    record tokens, loss, LR, norms, time and memory
+    periodically validate and atomically save resumable state
+~~~
+
+For MODEL-1 and full-text A/B, the single valid-token denominator above is the loss normalization contract. C has separately normalized action, start-pointer, end-pointer and replacement losses. Before its update, compute each component's total valid count from the queued labels across all microbatches. Scale each microbatch component loss sum by that whole-update component count before backpropagation, accumulate the weighted gradients into one FP32 accumulator, and omit components with zero valid count. Then clip and update once; do not divide those gradients again by a shared target-token count. This preserves exact component weighting without silently allocating four full-size gradient accumulators beyond the 22N memory model.
+
+### 8.5 Instrumentation and learning checkpoints
+
+Every 100 updates log loss, LR, gradient/global parameter norms, processed/valid tokens, throughput, and memory. Every 1,000 updates sample per-layer residual RMS, activation quantiles, attention entropy, and update-to-weight norm ratios. At fixed checkpoints render short attention maps in a diagnostic forward pass, embedding-neighbor examples, and the same 20 generated prompts. Do not retain full attention matrices during normal training merely for visualization.
+
+Learning demonstrations must use measured code behavior: remove sqrt(dh) and observe logits/entropy; zero RoPE and test reordered sequences; disable the cache and measure identical output but greater work; alter the causal mask and expose leakage; compare plain SGD and AdamW on a tiny task; interrupt and resume training; quantize an accepted checkpoint and measure weight error and output changes. Attention maps illustrate patterns, not proof of faithful human-readable explanations.
+
+A useful MODEL-1 checkpoint must generate readable short continuations on held-out topics within its training domain, outperform a trained n-gram baseline on the same tokenization or a tokenizer-independent bits-per-byte measure, and demonstrate generalization beyond memorized training passages. It is not expected to become a factual assistant.
+
+
+## 9. Specialist architecture families
+
+### 9.1 Status, shared foundations, and the two task boundaries
+
+**ENGINEERING PROPOSAL / RESEARCH HYPOTHESIS.** Compare three small source-conditioned Transformer families before committing to a larger specialist. The proposed A100, B100, and C101 models have approximately matched active parameter counts, a common project tokenizer, and separate random initializations. Their exact counts appear in Section 18. No family is a measured winner. The 316M encoder-decoder remains a conditional product hypothesis; it is not a selected replacement for Qwen.
+
+All scratch families use pre-RMSNorm, SwiGLU, bias-free backbone projections, RoPE self-attention, and shared input/output embeddings. These components have established precedents; their combination, dimensions, and training budgets here are proposed experimental choices. GQA is adopted as an attention design, not through conversion of a pretrained multi-head checkpoint. [S7-S10]
+
+The paper and LocalFlow product are distinct transformations. Their source boundaries must not be mixed.
+
+| Property | Paper: `restore_reference` | Product: `correction_proposals` / `cleanup` |
+|---|---|---|
+| Source | Raw 1-best text from the pinned recognizer, identical for every model | Original normalized window for correction proposals; actual admitted post-proposal text for cleanup |
+| Target | Lexical spoken reference with punctuation/case under the frozen corpus policy | The task-specific, intent-cleaned LocalFlow reference under the existing contract |
+| Disfluencies and spoken self-corrections | Preserve audible content required by the reference policy | Apply only the existing qualified cleanup/correction rules |
+| Additional model input | Trusted task framing only; no audio, N-best, owner context, oracle atoms, or reference annotation | Only context and metadata permitted by the existing product contract |
+| Normalization | A separately scored baseline; not a hidden preprocessing advantage | Existing deterministic normalization remains part of the product boundary |
+| Source-relative edits | Refer to the raw paper input bytes | Refer to the exact normalized or post-proposal bytes actually supplied to that call |
+
+The same model code may eventually support several task IDs, but the primary paper curriculum uses `restore_reference` throughout. A later LocalFlow specialization has its own checkpoint lineage and evaluation. It cannot be described as the unchanged paper system. The paper task consumes one existing reserved vocabulary slot, so the vocabulary and parameter counts remain unchanged. [R4; Sections 11, 17, 30]
+
+### 9.2 A: causal decoder-only conditional generation
+
+A100 uses the educational MODEL-1 dimensions: 14 layers, width 768, 12 query heads, four KV heads, head dimension 64, and FFN width 2,048. It is a **new randomly initialized conditional training run**, not the educational checkpoint reused after language pretraining. Shared implementation is an educational efficiency; shared pretrained weights would change the scientific lineage.
+
+Serialize trusted controls, the actual task source, a separator, and the full target. Apply specialization loss only to target tokens and EOS. At training time, shift targets by one position and prevent every target position from attending to later target tokens. At inference, prefill the source once and cache decoder self-attention K/V.
+
+The source positions themselves have causal representations: an early source token cannot attend to a later source token. Generated output positions can attend to the **entire completed source prefix**, so A is capable of using later source evidence. Do not explain a weak correction result by claiming that a causal corrector cannot see later words at all.
+
+Every generated token traverses all 14 blocks. This makes implementation reuse straightforward but places the full depth on the serial output path. Whether that is slower than B or C at the same quality depends on actual sequence lengths, kernel paths, vocabulary projection, batching, and cache behavior. Measure these costs rather than inferring latency from parameter count.
+
+### 9.3 B: bidirectional encoder and autoregressive full-text decoder
+
+B100 has eight encoder layers and four decoder layers at width 768. The encoder uses MHA; decoder self-attention and cross-attention use GQA. The same vocabulary matrix serves encoder input, decoder input, and decoder output. Encoder blocks have two RMSNorm scale vectors; decoder blocks have three; each stack has its own final RMSNorm. The parameter formula in Section 18 counts every one of these objects.
+
+Let source states have shape `[b,s,d]`, decoder states `[b,t,d]`, query-head count `h`, KV-head count `h_k`, and head dimension `d_h=64`. Encoder Q/K/V have `h` heads. Decoder self-attention has Q `[b,h,t,d_h]` and K/V `[b,h_k,t,d_h]`. Cross-attention uses normalized decoder states for Q and encoded source states for K/V, giving Q `[b,h,t,d_h]` and K/V `[b,h_k,s,d_h]`. The attention scale is `1/sqrt(64)`. Grouping must be identical in explicit-reference and optimized paths.
+
+Encoder self-attention is bidirectional over valid source positions. Decoder self-attention is causal. Cross-attention may attend to all valid source positions, with source padding masked. Exclude control/padding positions from any source-offset pointer map, although trusted controls may still participate in ordinary source encoding. Avoid all-masked rows and cross-example attention when packing. EOS is not an isolation mask.
+
+Apply RoPE independently to encoder and decoder self-attention, with adjacent-coordinate pairing and base 10,000 as in Section 8. **Do not apply RoPE to cross-attention initially.** Equal source and target indices need not correspond linguistically after insertion, deletion, punctuation, or expansion. Source and decoder positions each begin under their own recorded convention. Cache rotated decoder self K and ordinary V, and cache each decoder layer's projected encoder cross K/V once per source. A cached multi-token chunk must match the full causal forward pass.
+
+Full-text target cross-entropy is B's initial objective. A standard vocabulary decoder has no explicit source-copy operation. Identity examples and preservation-aware evaluation can encourage copying, but they do not turn generation into a byte-preserving renderer.
+
+The larger B-family product configurations retain an encoder-heavy allocation, including S316's 12 encoder and six decoder layers. This spends more capacity on source processing than on serial generation. It is a latency/quality hypothesis, not a proven optimum. The primary B100 experiment and optional scaling study determine whether to continue it. [S11]
+
+### 9.4 C: sparse source-relative edits with deterministic copying
+
+C101 uses B100's complete eight/four backbone and adds the pointer and decision heads defined below. It predicts edits rather than regenerating unchanged source gaps. Span editing, operation prediction, and selective insertion are established approaches; the closest precedents include Seq2Edits, ConstDecoder, EdiT5, LaserTagger, GECToR, FELIX, and ASR systems that protect detected-correct tokens. The planned contribution is the controlled evaluation, not the invention of editing. [S15-S16; N3-N7; N18; N19]
+
+Each external edit has the following mathematical contract:
+
+
+~~~text
+e_j=(a_j,b_j,r_j),; 0<= a_j<= b_j<= |x|_bytes,
+~~~
+
+
+where `[a_j,b_j)` is a half-open interval in the **original input byte string** and `r_j` is a valid UTF-8 replacement. An insertion has `a_j=b_j`; a deletion has an empty replacement. Identity is an empty edit list followed by a normal terminal decision. Abstention is separately represented and counted; it must not disappear into identity success.
+
+#### Boundary representation and head shapes
+
+Tokenization supplies cumulative byte offsets for every source-content token boundary. Only boundaries that coincide with UTF-8 code-point boundaries are legal pointer targets. A byte-BPE token can end inside a multi-byte code point; mask that boundary rather than slicing there. The terminal boundary at the end of the source is included. The source-content boundary map excludes trusted framing and padding.
+
+Use existing encoder states to represent the boundaries without adding trainable boundary embeddings. A complete initial convention is: the boundary before the first source token uses the designated source-start separator state; every later boundary uses the state of the source token immediately before it. This includes the final boundary and handles an empty source through its source-start state. Freeze this convention in the architecture manifest. The encoder has already seen the whole source, so these are contextual boundary features rather than isolated preceding-token embeddings.
+
+For decoder state `h in R^d` and boundary feature `z_i in R^d`, score a start boundary using
+
+
+~~~text
+q_s=hW_qs,; k_s,i=z_iW_ks,; 
+ell_s,i=q_s k_s,i^T/sqrt(128)+m_s,i,
+~~~
+
+
+with `W_qs,W_ks in R^(d x 128)`. A separate pair `W_qe,W_ke` scores the end boundary, conditioned on the chosen start and a mask that excludes preceding or otherwise illegal endpoints. The query/key heads are distinct; do not accidentally tie them or include a vocabulary-sized start/end classifier.
+
+An affine `d->3` head predicts EDIT, END, or ABSTAIN. Its three biases are an explicit exception to the bias-free backbone. At `d=768`, the added count is
+
+
+~~~text
+4(768)(128)+3(768)+3=395,523,
+~~~
+
+
+so C101 totals **101,081,859 parameters**. No optional confidence head or boundary embedding is included in that number.
+
+#### Decision sequence, conditioning, and length accounting
+
+Freeze the following autoregressive event convention in the serializer and architecture manifests. The decoder begins with exactly one BOS input. Action decisions do not themselves append an input position.
+
+1. At the current decoder state, classify EDIT, END, or ABSTAIN. If EDIT is chosen, score the start pointer at that same state.
+2. Append one start-feedback input, equal to the existing EDIT embedding plus the selected encoder boundary feature. Its decoder state scores the conditional end pointer, with the chosen start represented in its input and enforced by the legal-end mask.
+3. Append one end-feedback input, equal to the existing END-EDIT embedding plus the selected end-boundary feature. Its state predicts the first ordinary replacement token, or END-EDIT for an empty replacement.
+4. Generate and append the ordinary replacement tokens autoregressively, then generate and append one END-EDIT delimiter. The delimiter's decoder state supplies the next action decision, returning to step 1.
+5. END or ABSTAIN terminates at the current state without appending another decoder input. No terminal EOS input or extra action-feedback position is added.
+
+Teacher forcing supplies the gold previous boundaries and tokens; inference supplies only predicted decisions. Shifted inputs, position IDs, and the action/start/end/vocabulary loss masks must follow this same sequence. Start feedback and end feedback reuse counted structural embeddings and parameter-free boundary features, so they add no trainable objects beyond the 395,523 parameters above.
+
+For one unpadded example with `K` edits and `R` ordinary replacement tokens, excluding END-EDIT delimiters, the exact counts are
+
+
+~~~text
+T_decoder=1+R+3K,; 
+T_vocab=R+K,; 
+n_start=n_end=K,; 
+n_action=K+1.
+~~~
+
+
+The `3K` positions are start feedback, end feedback, and the appended END-EDIT delimiter for every edit. The `R+K` vocabulary targets include every END-EDIT delimiter; an action END is a separate classifier target. An identity example has one BOS input and one END action target, with no pointer or vocabulary targets. A deletion still has a delimiter vocabulary target even though its ordinary replacement is empty. These are valid-decision counts, not a claim that every implementation evaluates its heads only at those positions.
+
+Pointer-feedback and delimiter positions consume decoder context and compute. Consequently, “few changed words” does not imply that the native decoder sequence is always shorter. Log operation count, pointer decisions, unpadded event positions, padded positions, ordinary replacement tokens, delimiter targets, terminal decisions, and complete rendered-output length separately. Section 10.5 applies the event-position formula to the common context envelope.
+
+#### Whole-update component normalization
+
+Normalize action CE, start-pointer CE, conditional end-pointer CE, and replacement-token CE over their own valid decisions across the **whole optimizer update**, initially with coefficients `lambda_k=1.0`. Before processing that update's microbatches, use the frozen example schedule and canonical gold edit labels to determine its four denominators `D_k`. For complete labels, these are `sum_i(K_i+1)` for actions, `sum_iK_i` for each pointer component, and `sum_i(R_i+K_i)` for replacement vocabulary CE. Thus END-EDIT participates in both the replacement loss sum and its denominator. Identity examples still train END, while contributing zero to the other three counts.
+
+For microbatch `j`, let `S_jk` be the summed valid CE for component `k`. Differentiate
+
+
+~~~text
+L_j = sum_k:D_k>0 lambda_k (S_jk/D_k)
+~~~
+
+
+and add its gradients to a single FP32 accumulator. At the update boundary, the accumulated gradient already represents the sum of the four whole-update mean losses. Do not divide it again by microbatch count, a generic valid-token count, or canonical exposure. Apply the common global-norm clipping and AdamW update, then clear the accumulator. A component with `D_k=0` contributes a defined zero; never divide by zero or average per-microbatch means with unequal decision counts. Record each component's loss sum and denominator separately.
+
+This algorithm needs one shared FP32 gradient accumulator, consistent with Sections 8 and 17; it does not require four retained full-model gradient buffers. The 22N planning subtotal still excludes activation, temporary, and framework overhead. There is no target-text loss on mechanically copied gaps. This objective difference is part of the representation treatment and must be reported.
+
+#### Label generation and deterministic rendering
+
+Generate supervised edit labels using a deterministic minimum-edit alignment with a stable leftmost tie-break. If an intended edit boundary falls inside a BPE token or an invalid UTF-8 boundary, expand the span to the enclosing legal source boundaries and regenerate the small enlarged region. Include the preserved material inside that replacement target. If expanded edits overlap, merge them deterministically and recompute the replacement. Do not discard these examples without reporting representability and applying the same training eligibility rule to every family.
+
+Several legal edit sequences can render the same correct text. Train against a stable canonical decomposition, but score rendered output and task-valid alternatives; do not mark a correct restoration wrong solely because it chose a different equivalent segmentation.
+
+The renderer validates the source hash and byte length; checks legal ordered, non-overlapping intervals; copies each intervening source byte range once; inserts the replacement; and appends the final untouched suffix. Multiple insertions at one boundary are combined in a canonical order. It never applies later offsets to a source already modified by an earlier edit. Never locate a repeated identifier by choosing its first textual occurrence. The same string may occur at several distinct positions and refer to different entities.
+
+Decode BPE output by concatenating token byte strings before strict UTF-8 decoding. Validate the final replacement and rendered text. Reject malformed grammar, illegal pointers, overlap, source-hash mismatch, unknown terminal state, missing END, and exhausted output limits. In the raw scientific condition these are recorded failures, not invented successful identity outputs. A separately evaluated wrapper may return the original valid source after rejection.
+
+Copy rendering guarantees equality only for **gaps that the model elected to leave untouched**. The model may select the wrong gap, delete negation, substitute a value, or remove a necessary clause. Such mistakes remain possible with a perfectly correct renderer. Thus B/C compares a representation plus its constitutive renderer; it cannot by itself establish a pure learned-architecture preservation effect. Section 10 separates raw decision quality from additional guard effects.
+
+### 9.5 D: prefix language model, a bounded optional control
+
+D reuses A's dimensions and parameterization while changing the attention mask. For source region `S` and target region `T`, allowed connections are: source queries to all source keys; no source query to a target key; target queries to all source keys and current-or-earlier target keys. Future target keys are forbidden. Prefix source states can therefore be bidirectional without introducing a separate encoder stack.
+
+An A/D comparison can probe the source-mask intervention more directly than A/B. It still changes training/inference kernel behavior and may change realized compute. The inspected MLX array-mask routes require their own calibration; full-depth target decoding remains. D is a short, bounded supplementary control after the mandatory comparison, not an automatic fourth large campaign. Report its changed mask, sequence envelope, measured update time, and cache parity. T5 provides an established precedent for architecture/objective comparisons. [S3-S4; S11]
+
+### 9.6 Optional mechanisms and conditions for adding them
+
+| Mechanism | Initial status | Evidence required for promotion |
+|---|---|---|
+| Source conditioning | Required for all specialists | Correct source/target masking and improvement on source-dependent tasks |
+| Identity and minimal-edit examples | Required in the common curriculum | Retain needed-correction coverage; identity alone cannot establish usefulness |
+| Sparse edits and deterministic copying | Required C101 challenger | Valid representation, rendered-output quality, and disclosed head/event overhead |
+| Token-level pointer-generator mixture | Optional later ablation | Better correction-damage tradeoff at measured cost |
+| Deployment-observable typed span detection | Wrapper trial only for paper; existing validation retained in product | No oracle annotations, documented false positives, calibrated coverage |
+| Sentinel replacement | Optional wrapper trial | Added preservation without unacceptable loss of correction evidence |
+| Dual tokenizer or character encoder | Deferred | Measured boundary/fragmentation failures that justify another alignment path |
+| Non-autoregressive tagging/CTC editor | Later efficiency candidate | Adequate output coverage, including insertions and unseen technical strings |
+| Learned confidence head | Deferred | Reliable candidate-correctness labels and independent calibration |
+| Semantic embedding loss | Excluded initially | Must detect exact-value/negation damage rather than merely semantic similarity |
+| Differentiable edit-distance objective | Excluded initially | Evidence beyond simpler aligned supervision |
+| Constrained decoding | Structural constraints only initially | Valid grammar/UTF-8/offsets; no incomplete hard-coded correction vocabulary |
+| Speculative decoding | Deferred | Generation shown to dominate latency and a qualified draft/verification path |
+
+An optional pointer-generator mixture may use
+
+
+~~~text
+p(w)=g p_vocab(w)+(1-g)sum_i:x_i=walpha_i.
+~~~
+
+
+The sum includes **all** matching source occurrences. Choosing only the first match loses probability mass and confuses token probability with occurrence identity. A token-level mixture also does not guarantee exact source-byte reconstruction. If occurrence identity matters, use explicit position information rather than pretending the generated token identifies its source location. The original pointer-generator precedent used recurrent summarization; adapting that mechanism to a Transformer is itself an experimental choice. [S17]
+
+Closed edit-tag inventories can be efficient but cannot generate every unseen identifier or arbitrarily long replacement without an insertion mechanism. Non-autoregressive independence and alignment constraints may limit correction coverage. These are reasons to evaluate such systems, not reasons to assume their inferiority. FastCorrect, SoftCorrect, and related systems are important published comparators. [N4-N5]
+
+### 9.7 Protection without oracle input
+
+The paper's reference-derived literal masks and generated latent fields are **evaluation metadata only**. Models, prompts, decoders, and guards cannot receive gold boundaries, target values, correctness flags, hidden allowed renderings, or expected-edit labels. A detector used by a guard must operate from the same raw source and permitted deployment metadata available to every compared system. Its misses and overprotection are part of measured system behavior.
+
+For the product, retain existing span detection and raw-to-normalized coordinate maps. A retained literal carries original bytes, half-open offsets, occurrence identity, source hash, type, evidence source, and retention policy. Separate the requirement to preserve the bytes of a retained literal from the decision that a literal belongs in an intent-cleaned result. In “version 3.11, no, version 3.12,” the paper's audible-reference task ordinarily preserves the spoken correction sequence; product cleanup may have a different qualified policy. Do not import that deletion authority into the paper task. [R4]
+
+The product's initial adapter retains the current conservative correction guards. If a valid product reference requires deleting a protected superseded atom that the current parser forbids, record unsupported/fallback and count the needed-correction miss. A future explicit correction ledger may authorize such removal, but that is a separately qualified behavior change.
+
+An optional sentinel trial proceeds by mapping detector-identified retained spans into actual input coordinates, replacing them with type/slot tokens, retaining an immutable external slot-to-bytes map, varying slot assignments during training, enforcing permitted occurrence/order constraints, and restoring bytes deterministically. Identical literals at different locations get distinct slots. Unknown, duplicated, missing, reordered, or malformed slots reject the proposal. More than 32 slots require an already qualified safe window policy or fallback; never truncate the ledger.
+
+Sentinels can remove evidence needed for correction, especially when a number is spoken, later corrected, or needed for nearby grammar. Compare false rejection, necessary correction, generated-token count, and complete latency. An edit renderer protects unchanged gaps; sentinels can protect selected content inside regenerated spans. Add both only after measuring the combined effect. Quoted prompts, shell commands, paths, and instruction-like strings remain text to restore; the system does not execute them or rewrite a user's prompt into a better instruction.
+
+
+## 10. Architecture bake-off
+
+### 10.1 What the comparison is intended to establish
+
+**PRE-REGISTERED DECISION  -  proposed, pending protocol freeze.** The primary comparison tests the correction-introduced-damage tradeoff under declared downstream budgets. It does not test architectural novelty, universal scaling laws, or an already established replacement claim. The 2026 RCbench precedent also means context-dependent correction of critical targets is not by itself a new benchmark concept. [N10]
+
+Retain the v1 design priors as planning aids, with 1 meaning weaker and 5 stronger. These are judgments, not measured scores or evidence of superiority.
+
+| Candidate | Implementation reuse | Source understanding prior | Preservation potential prior | MLX simplicity prior | Serial latency potential prior |
+|---|---:|---:|---:|---:|---:|
+| A: causal decoder | 5 | 3 | 3 | 5 | 3 |
+| B: encoder-decoder | 4 | 5 | 4 | 4 | 4 |
+| C: sparse edit/copy | 3 | 5 | 5 | 2 | 5 |
+| D: prefix LM | 4 | 5 | 3 | 3 | 3 |
+
+A/B changes bidirectional source encoding, stack allocation, cross-attention, and serial workload together: conclude only an architecture-family effect. B/C holds the main backbone fixed but changes output representation, decision heads, supervision, native sequence length, and renderer. Conclude a representation-plus-renderer effect. The guard factorial below isolates an additional deterministic intervention using identical raw proposals.
+
+### 10.2 Fixed primary run matrix
+
+| Run family | Parameters | Corruption treatment | Final seeds | Final budget per seed |
+|---|---:|---|---|---:|
+| A100 text control | 100,685,568 | Matched text-corruption mixture | 1729, 2718, 31415 | 150M `paper_canonical_v2` exposures |
+| B100 text control | 100,686,336 | Same text-corruption mixture | 1729, 2718, 31415 | 150M |
+| C101 text control | 101,081,859 | Same text-corruption mixture | 1729, 2718, 31415 | 150M |
+| B100 acoustic treatment | 100,686,336 | Replace only the designated 40% component with accepted TTS→ASR pairs | 1729, 2718, 31415 | 150M |
+
+The final scratch matrix contains **12 runs and 1.8B canonical exposures**, before common-update overshoot. Identically numbered seeds identify matched initialization/sampling blocks; they are not a claim that nonidentical A/B/C architectures have identical initial tensors. B-text/B-acoustic can share a deterministic initial-weight recipe because their architecture is identical, while each is still a distinct training run.
+
+Every phase uses the same 30% identity/minimal-edit, 20% verified rule compositions, 10% public real pairs, and 40% matched corruption allocation by canonical exposure. The 150M schedule is 100M light source-conditioned transduction, 40M focused task data, and 10M fresh preservation/hard cases, always for `restore_reference`. Acoustic treatment changes only the designated corruption pool and uses the same written seeds and spoken renderings on the accepted-seed intersection. Real-data availability and learnability must be established on development data before freeze; if inadequate, amend the shared recipe or declare feasibility blocked. Do not silently replace missing public examples with teacher or private data. [Sections 12, 14-17]
+
+All final runs complete the 150M budget unless the frozen numerical-failure rule fires. The primary checkpoint is the final budget endpoint. Save common 50M, 100M, and 150M checkpoints for development learning curves. Full sealed-test evaluation is mandatory only at the final 150M endpoint; evaluating other checkpoints on the sealed population is a separately budgeted pre-freeze expansion. Do not select each arm's best development checkpoint, stop weak arms early for performance, or extend only favorable arms within the headline comparison. The v1 “two finalists, two seeds” screen is superseded for the paper. Product development campaigns may retain their own early-stopping rules, clearly separated from these final scientific runs.
+
+### 10.3 Symmetric pilots, HPO, and failure handling
+
+Use independent pilot seed 42. Each of A-text, B-text, C-text, and B-acoustic receives exactly three predeclared recipes at 10M canonical exposures each: **12 pilot runs, 120M exposures**, reported outside the final matrix. The initial recipe sweep uses peak LR `10^-4,3 x 10^-4,6 x 10^-4` with the shared AdamW, decay, clipping, warmup, and token-based schedule from Sections 8 and 17. C's initial component weights are all 1.0. If a loss-weight recipe is substituted, it consumes one of C's three recipe slots and is declared before that sweep; it is not free extra tuning.
+
+Select A-text, B-text, and C-text recipes using only their respective three development trials and a frozen decision rule that includes necessary-correction coverage. B-text's primary optimizer, peak LR, and schedule are selected only from its B-text trials. **B-acoustic uses exactly that selected B-text recipe** in the final H2 comparison. Its three 10M probes are feasibility and sensitivity checks; they cannot select a separate best-acoustic primary recipe. If the common selected recipe fails acoustic feasibility, amend the common recipe and repeat comparable development checks before freeze, with the additional trials and cost disclosed, or declare H2 blocked. Do not quietly tune the acoustic treatment after selection. This preserves equal tuning opportunities for the A/B/C representation comparison while isolating the data-channel intervention in H2.
+
+The final paper schedule is one continuous 150M `paper_canonical_v2` exposure schedule at the selected peak LR: warm up for 2%, or 3M exposures, then cosine-decay to 10% of the peak at 150M. The 100M and 140M curriculum boundaries change data difficulty, without restarting warmup, resetting the LR schedule, or resetting optimizer state. Product phase schedules remain a separate convention in Section 17. Each short pilot uses its predeclared pilot schedule; its 10M endpoint is not a restart point in a final run.
+
+The three final seed IDs are not tuning seeds. Pretrained controls receive three downstream adaptation recipes and the same declared measured adaptation allowance; their imported pretraining is disclosed rather than charged as zero total learning. Report all trial outcomes, not only the chosen configuration. ConstDecoder's two-day feasibility gate and eventual adaptation cost remain separate from the 12 scratch runs. [Section 22]
+
+The short v1 screen of 50k accepted training pairs plus 5k separate development pairs remains a possible pilot organization, grouped before augmentation and deduplicated across splits. It is not a promise that those many usable pairs already exist, nor a substitute for the public-data acceptance gate. Before final freeze, use pilots to decide whether 150M gives a scientifically interpretable learnability regime. A short budget can yield a valid negative study, but an untrained or broken model cannot establish an architecture ranking.
+
+Freeze a numerical-failure rule: non-finite loss/gradients/state, a reproducible corrupted checkpoint, or violation of an exact tensor/mask contract stops the affected run. A proposed bounded diagnostic policy is one replay from its last verified checkpoint with the same seed and recipe; repeated numerical failure marks the run failed. Hardware interruptions may resume only from verified state and with every lost/repeated exposure and elapsed cost logged. Do not rescue one final arm by changing its LR, data, context, or objective after viewing outcomes. A material correction requires a documented protocol amendment and a symmetric rerun decision. Failed seeds stay visible; a two-run average is not mislabeled a completed fixed three-run mean.
+
+### 10.4 Versioned data exposure and compute ledgers
+
+Equal data and equal compute answer different questions. The primary comparison matches canonical example exposure; the secondary comparison matches measured training time. Neither is described as matching every possible token/FLOP quantity simultaneously.
+
+**The paper uses `paper_canonical_v2`.** For paired example `i`, define a canonical length `c_i` by tokenizing a frozen accounting serialization of trusted controls, the **clean spoken rendering** (or frozen existing official reference for a real pair, without new listening or reverification), and the full written target. All canonical text uses the frozen project tokenizer. Count trusted framing/EOS once under the serializer specification, and exclude padding. This is a bookkeeping anchor, never extra model input.
+
+For a matched text/acoustic seed, that clean anchor and written target remain identical even if the corrupted sources have different lengths. Therefore the same seed presentation counts the same `c_i` in both treatments. A source-dependent denominator would unintentionally give one channel more or fewer presentations merely because it corrupts token length differently. This is why the paper ledger changes from v1.
+
+
+~~~text
+C_paper=sum_(presented examples i) c_i.
+~~~
+
+
+Retain **`product_canonical_v1`** for the conditional engineering campaigns: its original convention counts controls plus the original normalized source and the full rendered gold target, regardless of whether the model emits edits. Record actual post-proposal cleanup inputs separately in the compute/source ledger rather than silently changing that canonical anchor. Keep the educational processed-language-token ledger separate too. Never add these different definitions into one total called “training tokens.”
+
+| Ledger | What is recorded | What it answers |
+|---|---|---|
+| Unique data | Unique source/seed IDs, clean renderings, targets, families, and accepted variants | How much distinct information was available |
+| Canonical v2 | Clean-anchor framing plus full target for every presentation | Whether primary arms saw equal canonical data exposure |
+| Actual source | Raw corrupted bytes and actual project/native input tokens | Whether acoustic/text channels and tokenizers change input work |
+| Decoder | Full-text tokens for A/B; every event, pointer-feedback position, and replacement token for C | Actual serial/teacher-forced decoder workload |
+| Loss | Valid target tokens and each C decision denominator | Which supervised decisions contribute gradients |
+| Padded compute | Materialized sequence lengths, padded positions, masks, microbatches and accumulation | Actual tensor work and efficiency |
+| Updates | Attempted/successful optimizer updates, replayed work, processed exposure at each save | Exact progress and restart accounting |
+| Time/resources | Full-update wall time, modeled FLOPs, peak memory, compilation, failure, HPO and data-generation costs | Realized resource frontier and hidden overhead |
+
+Use the same predeclared example schedule and canonical accumulation target, initially 32,768 canonical exposures per update if BENCH-00 supports it. Stop after the common completed update that first reaches the final target and report any overshoot. Do not split a pair or alter one arm's presentation schedule to manufacture an exactly rounded total. The learning-rate scheduler advances on the declared canonical count; loss normalization advances on valid decisions, not on this accounting anchor. External pretrained models retain their native tokenizer while canonical accounting still uses the common project tokenizer.
+
+### 10.5 Common context and decoding controls
+
+The initial specialist example envelope is at most 1,024 source/control tokens and 1,024 full-target tokens including EOS under the project tokenizer. A/D receive a 2,048-position combined specialist context; B/C qualify 1,024 positions per stream. This is distinct from MODEL-1's initial 1,024-position educational context and requires separate training/memory checks. For a short pilot, use the same shorter-example filter for every family.
+
+C's native event serialization must also fit its qualified decoder context. A full-text target of 1,024 tokens including EOS contains 1,023 ordinary target tokens. Replacing the entire source with that text in one edit has `K=1`, `R=1,023`, and therefore `T_decoder=1+1,023+3=1,027`: it exceeds C's initial 1,024-position cap even though the full-text envelope is satisfied. Matching rendered-target length alone does not establish matching native-context eligibility.
+
+Measure edit-label representability and the exact `1+R+3K` serialization length before assigning training data to arms. Deterministic edit coalescing may reduce excessive fragmentation; it cannot make that oversized full-span replacement fit. Apply a common training eligibility rule or a declared, equally applied windowing policy to all arms before final schedules are frozen. Never drop only C's difficult examples. Serializer conformance fixtures must cover identity, empty replacement, one edit, multiple edits, the last legal context position, and the first over-cap case, checking input positions and all four target counts against Section 9.4. A larger C event cap is a separately benchmarked extension with its compute and memory cost disclosed.
+
+Keep every frozen evaluation case in the population. Cap exhaustion, unrepresentable output, truncation, and missing terminal decisions remain explicit failure outcomes; never trim the reference or discard a case after seeing a model's output. A valid output prefix is scored as emitted for ordinary WER and raw transition analysis under Part IV. Invalid, missing or unrenderable output has an empty scoring transcript plus an explicit failure status. Completed-output repair is zero for capped, invalid or missing calls even if raw algebraic repair is nonzero. Alignment ambiguity receives conservative bounds and cannot erase the row; a genuine valid empty output is distinguished from an absent call. Report the corresponding failure and coverage counts alongside the metrics. These rules do not authorize recovery of a malformed C edit sequence into an invented valid prefix.
+
+Primary decoding uses greedy, deterministic decisions: one beam, temperature zero, fixed terminal/grammar handling, fixed per-call limits, and a single proposal. Count full-text vocabulary steps, C operation decisions, pointer scores, replacement steps, and rejected/unfinished proposals. Do not compare greedy C with best-of-N B, give one arm teacher-suggested edits, or let one arm retry until its guard accepts. Beam-search or sampling sensitivity is secondary and receives a symmetric declared budget.
+
+Cache semantics, stop conditions, detokenization, source framing, precision, and validation policy are frozen before final evaluation. Train comparisons start with the qualified common numerical policy; if quantization is evaluated, keep it as a separate exported-precision intervention rather than confusing it with architecture. Measure preprocessing, tokenizer, prefill, cross-K/V preparation, pointer/renderer overhead, and complete decoding latency, not just the fastest kernel.
+
+### 10.6 Minimal representation/guard factorial
+
+Train B and C once per seed, then evaluate their identical cached raw proposals with the common guard disabled and enabled:
+
+| Cell | Learned system | Extra deterministic protection | Output path |
+|---|---|---|---|
+| B-raw | Full-text B100 | Off | Raw full-text proposal |
+| B-guard | Same B100 | On | Same cached proposal through common acceptance policy |
+| C-raw | Sparse-edit C101 | Off | Parsed edit proposal and constitutive renderer |
+| C-guard | Same C101 | On | Same cached proposal through common acceptance policy and renderer |
+
+“Guard off” does not mean disabling C's parser/renderer or allowing invalid UTF-8 to become a successful answer. Those define its representation. Additional protection means deployment-observable literal rules, edit-budget checks, or other explicitly selected acceptance rules. Use one representation-neutral initial policy where possible: if a raw proposal violates a rule, reject it and return the original valid input in the guarded system. For the paper that input is the raw recognizer text; for the product it is the actual normalized task source. Selective repair, regeneration, and Qwen fallback are additional interventions outside this minimal factorial.
+
+For metric `M`, report
+
+
+~~~text
+Delta_R=M(C_raw)-M(B_raw),; 
+Delta_G,B=M(B_guard)-M(B_raw),
+~~~
+
+
+~~~text
+Delta_G,C=M(C_guard)-M(C_raw),; 
+Delta_interaction=Delta_G,C-Delta_G,B.
+~~~
+
+
+The within-model guard effects use identical proposals, isolating the fixed acceptance intervention. The representation contrast includes the renderer, head/grammar supervision, and output workload. Its interaction with guards is an empirical result, not proof of a specific neural mechanism. Score common predeclared input subsets and all cases; accepted-only quality is accompanied by coverage and is never the headline estimand.
+
+Introduced errors/reference words, completed repair/source errors and WER are evaluated jointly. The first includes new insertions in any region and is not synonymous with semantic critical damage. A source-correct occurrence mask and automatic literal subset are separate secondary views. Full text and rendered C text pass through the same reference-anchored scorer; all conditional-optimum alignment ties remain visible. The scorer cannot inspect the C edit script to give C a favorable correspondence. [M1-M6; Sections 23-26]
+
+The primary H1 joint comparison is C-raw versus B-raw under introduced-error superiority, completed-repair noninferiority, WER noninferiority and utility gates in Sections 20 and 25. H2 is B-acoustic versus B-text, with WER superiority and introduced-error noninferiority. Every primary natural endpoint is the equal-domain mean of the two corpus ratios. The fixed one-sided 97.5% component-bound protocol, intersection-union logic, and multiplicity handling are specified there; this chapter does not redefine statistical significance. Report three seed-specific results and the fixed three-run mean, not an ensemble unless predictions are actually combined.
+
+### 10.7 Equal-time view, decision order, and limits
+
+Before final outcomes, use BENCH-00 and pilots to fix a full-update accelerator wall-time cap `T^*` on the same hardware. For the matched-time view, select the nearest completed checkpoint that does not exceed that cap under the frozen policy. The MVP retains its measured cost and development quality view; a second full sealed-test inference roster at this checkpoint is optional and must be budgeted/frozen before final outputs. Do not imply an equal-time final-test conclusion from development scores. Report actual exposures, updates, native/loss tokens, memory, and modeled FLOPs at that point. Sparse decoding or longer acoustic sources may change those values. Model-derived FLOPs are not measured FLOPs, and nominal hardware peak is not achieved training throughput.
+
+Resource comparisons include data preparation/TTS, HPO, compilation, failed/repeated work, checkpointing, and inference separately from steady-state optimizer time. A fast native training step does not imply a fast complete product request. Shared-hardware latency is the preferred cross-family comparison; a CUDA-only external method cannot establish an Apple-device speed result without a separately validated runtime.
+
+Engineering selection remains lexicographic: mathematical correctness; output coverage; preservation/critical-failure qualification; useful correction; unwanted edits and coverage; full-system p95 latency; memory; implementation burden. A weighted average cannot compensate for a failed preservation gate. Scientific reporting retains every arm, including negative tradeoffs and failed learning, rather than only the selected product candidate.
+
+The earlier product aspiration that C improve end-to-end p95 by at least 20% at noninferior correction remains a **conditional engineering decision rule**, not the paper's confirmatory hypothesis. B has no automatic victory. If A gives the best measured product tradeoff, scale A. If C helps only after deterministic guards, attribute the improvement accordingly. If none beats deterministic correction on necessary edits, report the unsuccessful specialist result and stop the replacement claim.
+
+
+## 11. Tokenizer
+
+### 11.1 Default design and freeze boundary
+
+**ENGINEERING PROPOSAL.** Train a reversible byte-level BPE tokenizer on permitted training partitions only. All scratch families use the same frozen tokenizer and ID map. The educational model may share that tokenizer while remaining a separate weight lineage. A simple educational merge trainer on a small corpus explains pair counts and merges; the real tokenizer can use a pinned optimized trainer after encoding-equivalence checks. A tokenizer is not a pretrained neural checkpoint, but its training data and preprocessing still belong in the reproducibility record.
+
+The default vocabulary contains exactly **16,384 entries**: 256 base bytes, 64 reserved IDs, and 16,064 learned merges. Base-byte coverage means any valid UTF-8 input string can be encoded without an unknown-token fallback. It does not mean each Unicode character occupies one token, nor that a model will preserve those bytes after generation.
+
+No implicit lowercasing, NFC/NFKC conversion, whitespace collapse, newline replacement, quote substitution, number formatting, or path rewriting is permitted. UTF-8 encoding and decoding are strict. Preserve leading/trailing spaces, repeated spaces, tabs, CRLF versus LF when present at the task boundary, combining marks, emoji sequences, and literal control-looking strings. An upstream normalizer's changes cannot be retroactively credited to the tokenizer as source fidelity.
+
+The paper's tokenizer consumes raw pinned-recognizer text. Product tokenization consumes the actual normalized or post-proposal input defined by its contract. The byte string, source hash, offset map, task ID, tokenizer hash, and framing version must travel together. An invalid Unicode input is an explicit input-contract failure; never silently repair it and call the repaired bytes an exact round trip.
+
+### 11.2 Reserved tokens, trusted serialization, and `restore_reference`
+
+Reserved strings in user text are ordinary bytes. Only the trusted serializer may insert a reserved ID. A transcript that literally contains a task name, sentinel spelling, XML-like tag, command, or prompt delimiter cannot change modes or claim a protected slot merely by resembling one.
+
+The following numeric map is a proposed complete retained allocation for v1.2 to freeze with the tokenizer artifact. It preserves the original 64-slot budget; no model has yet been trained against it.
+
+| IDs | Count | Meaning |
+|---|---:|---|
+| 0-255 | 256 | Literal byte values |
+| 256-259 | 4 | PAD, BOS, EOS, SEP |
+| 260-263 | 4 | Existing task controls: `lm`, `clean`, `corrections`, `denoise` |
+| 264-267 | 4 | Structural controls: IDENTITY, ABSTAIN, EDIT, END-EDIT |
+| 268-275 | 8 | Span types: path, URL, identifier, flag, command, version, number, term |
+| 276-307 | 32 | Occurrence-specific protected-span slots |
+| 308 | 1 | New paper task: `restore_reference` |
+| 309-319 | 11 | Reserved for versioned extensions |
+| 320-16,383 | 16,064 | Learned byte-BPE merges |
+
+The product task names `cleanup` and `correction_proposals` map through the trusted interface to their documented existing task IDs; this table does not rename the external LocalFlow API. The new paper task occupies the first former extension slot. All 16,384 embedding rows already belong to the counted matrix, so assigning that reserved row a meaning does not grow the model.
+
+Save the literal textual display names and numeric IDs in `special_tokens.json` and the complete merge/byte map in `tokenizer.json`. Hash the exact bytes of these artifacts. If the eventual implementation chooses a different initial numeric layout, freeze and record it before any training rather than claiming interchangeability with these IDs. A later ID remap requires an explicit compatible embedding permutation or a new tokenizer/model version.
+
+Action/pointer feedback in C reuses existing structural embeddings as specified in Section 9; it does not allocate an uncounted vocabulary or boundary table. Slot embeddings exist in every scratch model's tied matrix even when the primary paper input contains no sentinels. Merely having a slot ID is not permission to supply oracle critical annotations.
+
+### 11.3 Byte fidelity and position maps
+
+A byte-BPE token denotes a byte string, which may be a complete character, several characters, or only part of a multi-byte code point. Concatenate those byte strings before strict UTF-8 decoding. Decoding each token separately and joining decoded strings can corrupt valid sequences or introduce replacement characters.
+
+Maintain the following maps as separate, versioned objects:
+
+| Map | Required relationship |
+|---|---|
+| Python/code-point to UTF-8 bytes | Valid string index boundaries map to cumulative byte offsets |
+| Token boundaries to bytes | Each source-content token boundary maps to a cumulative source byte offset |
+| Legal pointer mask | A token boundary is legal only when its byte offset is also a UTF-8 code-point boundary |
+| Window to original task source | Window-local bytes map to the source version used by that call |
+| Product stage maps | Raw, normalized, and post-proposal coordinates remain distinct |
+
+Never apply a UTF-8 byte offset directly to a Python string slice. Never reuse raw-source offsets on normalized text, post-proposal offsets on the original window, or token offsets on a detokenized string without conversion. The paper's raw input and product's normalized boundary have different source hashes and may have different byte lengths even for the same utterance.
+
+Required exact conformance cases include repeated identical literals at different offsets; an emoji adjacent to an edit; combining-mark sequences with the same visible appearance but different bytes; empty input; insertions at both ends; adjacent edits; two insertions at one boundary; replacement of a token that spans several characters; literal special-token spellings; and malformed output that must be rejected. Source hashing prevents a well-formed edit list for one window from being applied to another. These are exact invariants, not approximate numerical tests.
+
+C label generation may expand to a legal enclosing boundary, as described in Section 9. Record the frequency and extra generated length of those expansions. If they materially damage coverage or efficiency, a code-point boundary encoder or byte-only representation is an explicit later ablation with revised parameter/compute counts. Do not make a second representation path part of the initial implementation without that evidence.
+
+### 11.4 Alternative tokenizers and their scientific role
+
+| Strategy | Strength | Cost or limitation | Initial decision |
+|---|---|---|---|
+| Ordinary custom BPE | Simple merge mechanics | Requires explicit complete fallback and normalization control | Educational comparison |
+| Byte BPE | Complete byte coverage and reversible segmentation | Identifier fragmentation and boundaries inside code points | Default scratch tokenizer |
+| SentencePiece unigram | Different segmentation and optional subword sampling | Normalization/whitespace settings require deliberate control; verify byte fallback | 16k development challenger |
+| Existing open tokenizer | Mature tooling and known interfaces | A large vocabulary can dominate a small model; data lineage must be recorded | Control unless complete efficiency improves |
+| Pure bytes / ByT5-style | No learned segmentation; every byte representable | Longer sequences increase attention, activation, and serial decoding work | Optional later scratch ablation; ByT5 remains a separate pretrained control |
+| Dual subword/byte path | Potential efficient prose with explicit literal handling | Extra alignments, routing, tensors, and failure modes | Deferred |
+
+SentencePiece's normalization and whitespace behavior are documented; exact preservation requires an explicitly qualified configuration, not the package name alone. ByT5 demonstrates standard Transformer byte processing and associated robustness/compute tradeoffs. It is not a theorem of byte-exact correction. [S18-S19]
+
+The ByT5-small control keeps its native byte tokenizer and pretrained weights. Replacing its tokenizer with the project BPE would change the model being compared. Use the same raw input/reference information, record native sequence lengths and admitted context, and retain the common project-tokenizer **accounting** anchor for downstream exposure. Native-token throughput is not directly comparable across these tokenizers; report bytes, examples, full requests, and measured time as well.
+
+### 11.5 Vocabulary arithmetic
+
+With one tied matrix, vocabulary parameters are `Vd`. Weight tying removes a second trainable output matrix but does not remove the output matrix multiplication at each predicted vocabulary step. Pointer-head steps and action-head steps have different output costs and must be counted separately.
+
+| Vocabulary size | Parameters at `d=768` | Parameters at `d=1,152` | BF16 matrix storage at `d=1,152`, decimal MB |
+|---:|---:|---:|---:|
+| 8,192 | 6,291,456 | 9,437,184 | 18.874368 |
+| 16,384 | 12,582,912 | 18,874,368 | 37.748736 |
+| 32,768 | 25,165,824 | 37,748,736 | 75.497472 |
+| 151,936, illustrative large vocabulary | 116,686,848 | 175,030,272 | 350.060544 |
+
+These are direct arithmetic values, not measured memory peaks. Optimizer state, gradients, activations, caches, and temporary logits are additional. The illustrative large-vocabulary row is not a recommendation to inherit a particular open model's tokenizer.
+
+### 11.6 Development benchmark and freeze gate
+
+Use 10,000 development-only strings stratified across ordinary prose, digit sequences, dotted versions such as 3.12.4, CamelCase, snake_case, kebab-case, scientific names, URLs, macOS and Windows-looking literal paths, flags, slash commands, percentages, currency, emoji, combining marks, and mixed alphanumerics. Testing a Windows-looking string does not add a Windows product target.
+
+Require 100% exact encode/decode round trip and zero unintended reserved IDs on valid source strings. Report tokens per UTF-8 byte, p50/p95 tokens per example, fragmentation by literal category, native context/cap incidence, tokenizer time, attention/update time, and complete decoding time. Compare digit-isolating pretokenization with unrestricted merges before freeze; do not assume either whole-number tokens or digit tokens are universally better for unseen values.
+
+Retain 16k unless an 8k or 32k development challenger improves complete model efficiency or relevant task quality enough to justify the changed embedding/head and sequence costs. Recompute exact parameter totals if vocabulary changes. Compare likelihood across tokenizers using bits per byte on the same byte strings; token perplexity across different segmentations is not a meaningful direct ranking.
+
+Freeze training corpus IDs, tokenizer trainer/version/options, merge list, special-ID policy, digit policy, round-trip fixtures, and hash before final model runs. No final benchmark text enters tokenizer training or merge selection. The tokenization benchmark is a development decision, not a repeated view of the final holdout.
+
+
+## 12. Public data architecture
+
+### 12.1 Task identity and the zero-annotation boundary
+
+The primary task is **reference-relative English ASR transcript restoration**. Its observable objects are an existing public reference `R`, one raw recognizer hypothesis `S`, and a corrector output `O`. The paper asks how output representation changes the balance between reference-relative repair and introduced word errors under the fixed architecture and training contracts. It does not claim that an automatic alignment recovers every intended meaning or that an upstream transcript is infallible.
+
+Retire the proposed newly annotated FTR critical-preservation benchmark as a headline contribution. LibriSpeech-PC already supplies formatted references; HyPoradise, HypR and RED-ACE already supply recognition/reference pairs or automatically derived error labels. Reusing these resources and a deterministic scorer enables the study; a new collection name is not novelty. The controlled empirical contrast and any supported acoustic-channel result carry the scientific claim. [D1, D9, D10, D23]
+
+Every paper model receives the same raw one-best text for its recognizer view. Deterministic normalization remains a separately evaluated baseline. Audio, N-best alternatives, recognizer confidence, reference words, oracle literal masks, sentiment labels and private owner context are unavailable to the corrector. The existing reserved task token `restore_reference` remains within the 16,384-token vocabulary and its 64 reserved tokens. `cleanup` and `correction_proposals` remain separate product tasks and checkpoint/data lineages.
+
+Use existing published references directly under their documented conventions. Do not create an audio-listening queue, repair test transcripts manually, commission critical-span labels, or ask another person to adjudicate ambiguities. No mandatory author spot check supplies final labels. A parseable but debatable reference remains the frozen release's reference; its limitations constrain interpretation. Deterministic structural failures are handled before final outputs, while alignment ambiguity remains in broad quality scoring and the formal transition bounds. Optional qualitative inspection and model-based judging in Section 26 cannot change primary labels.
+
+The selected natural population is **all released LibriSpeech-PC test rows plus all released SLUE-VoxCeleb test rows**, subject only to frozen automatic structural eligibility. This replaces the v1.1 selected 5,000-case/2,000-critical-case/1,000-human-case design. The primary task follows reference content, including whatever disfluencies the official reference retains. It does not convert a recorded “Monday, no, Tuesday” into a polished intended “Tuesday” unless that is already the designated release's text; intended cleanup belongs to Section 13.
+
+### 12.2 Record schema and provenance
+
+Keep the upstream asset, its reference convention, model input and automatically derived scoring objects separate. A JSONL or Parquet record must be able to represent the following fields. This is a future schema contract; no records are generated by this specification.
+
+~~~text
+example_id, schema_version, task_kind, population_kind, input_view
+source_group_id, document_id, book_id, chapter_id, video_id, call_id
+template_family_id, session_group_id, speaker_id, speaker_id_scope
+split, exposure_status, source_origin, source_revision, source_hash
+upstream_reference, reference_text, reference_policy_version
+reference_origin, reference_surface_available, official_scorer_policy
+raw_asr, actual_model_call_input, actual_model_call_input_hash
+target_text, spoken_rendering, target_lineage, generated_latent_record
+permitted_operations, forbidden_operations, locale, permitted_context
+structural_eligibility, structural_exclusion_reason, asset_check_hash
+source_reference_alignment_version, source_reference_alignment_hash
+source_consensus_mask, literal_instances, literal_extractor_hash
+ambiguity_status, scoring_coverage_fields, unavailable_reason
+error_tags[], edit_density, length_bucket, source_sampling_weight
+asr_id, asr_revision, decoder_config_hash, audio_hash, segment_times
+tts_id, tts_revision, voice_ids, acoustic_condition, generation_seed
+teacher_id, teacher_revision, prompt_hash, teacher_token_ledger
+tokenizer_hash, canonical_ledger_version, canonical_anchor_hash
+input_tokens, anchor_tokens, target_tokens, canonical_exposure_tokens
+native_encoder_tokens, native_decoder_tokens, action_tokens
+padded_compute_tokens, valid_loss_tokens, valid_loss_decisions
+parent_ids[], rights_or_permission_source, redistribution_tier
+~~~
+
+Store model outputs, completion/failure status and output-dependent transition intervals in a separate result table keyed by example, recognizer view, model, seed and checkpoint. Source-derived masks are frozen without candidate outputs; output-dependent ambiguity is a scoring result, not a reason to edit the source record or remove a model from its denominator. A reference token's correctness in Parakeet is not automatically its correctness in Whisper.
+
+Missing metadata is an explicit null with a reason. Do not invent global speaker identity, complete book lineage, confidence or timestamps. Reference origin is one of existing corpus transcription, published book-alignment restoration, or exact generated target; it is not “newly human verified.” Existing annotation provenance can be recorded accurately without implying that this project repeated its annotation process.
+
+The product extension may additionally retain raw ASR, `normalized_input`, `post_proposal_input`, proposal provenance, admitted deletions, existing owner acceptance and permission records. These fields are not prerequisites for the public paper. Optional AI-judge outputs live in a labeled secondary table and cannot fill deterministic ambiguity fields. Oracle reference masks, generated latent fields and teacher explanations are never ordinary model inputs.
+
+### 12.3 Three token ledgers, with the existing canonical anchors
+
+**The primary paper ledger remains `paper_canonical_v2`.** Count trusted control/framing tokens, the clean spoken-rendering anchor, and the full written target with the frozen project tokenizer and explicit BOS/EOS/delimiter rules. For generated pairs, the clean rendering comes from the latent target construction. For real pairs, use the frozen existing official reference as the declared clean accounting stream; this replaces v1.1's requirement for new independent audio verification. Preserve its reference policy and do not invent a more verbatim transcript. The anchor is accounting metadata, not extra input. Paired text/acoustic corruptions retain the same canonical cost despite different corrupted-input lengths.
+
+**The retained product ledger remains `product_canonical_v1`.** Count trusted controls, the original normalized source, and the full rendered target. Post-proposal input length belongs to actual compute and provenance accounting; it never replaces the original normalized source in the canonical anchor. The 600M, 1.5B and 2B product campaign proposals retain this convention. Do not add these totals to paper-v2 exposures or treat their units as interchangeable.
+
+Actual compute records corrupted source positions, encoder/decoder or causal work, actions, replacement tokens, padding and native-tokenizer work. Loss records valid supervised tokens and, for C, valid pointer/classification decisions separately. Teacher tokens and TTS/ASR construction have separate ledgers. Repeated presentations increase exposure, not independent source count. MODEL-1's 1B next-token LM tokens are another training ledger.
+
+All paper runs retain the 150M endpoint and stop after the common scheduled final update, reporting overshoot. An edit model does not receive extra examples because it emits fewer actions. ByT5's native byte-token work is reported separately while the project tokenizer defines its common exposure anchor. Equal canonical exposure, unique content and measured wall time remain distinct comparisons.
+
+For example, 250,000 accepted pairs averaging 20 controls, 160 anchor/source tokens and 160 full-target tokens yield 85M canonical tokens and 40M target tokens per complete pass. In paper-v2, 160 denotes the clean anchor; in product-v1, the original normalized source. This is illustrative arithmetic, not a measured distribution. A 400M product phase at that mean is about 4.7 passes, not 400M unique words.
+
+### 12.4 Educational corpus retained for MODEL-1
+
+The educational program retains its proposed 1B-token mixture, retokenized with the project tokenizer. Published source-token totals are not local token counts.
+
+| Source class | Share | Planned tokens | Purpose and provenance |
+|---|---:|---:|---|
+| TinyStories | 30% | 300M | Early short-context language learning; record synthetic origin |
+| Deduplicated FineWeb-Edu sample | 50% | 500M | Broader syntax and explanatory prose |
+| Selected Cosmopedia v2 educational prose | 10% | 100M | Structured explanations with generation/seed provenance |
+| Selected technical text with usable rights | 10% | 100M | Identifiers, numbers, instructions and code-adjacent prose |
+
+Begin with the story-heavy 50M checkpoint drawn from the final quota; retain the 250M learning checkpoint, optional 0.5B checkpoint, 1B attempt and conditional 2B extension in Section 17. Stream a pinned deterministic sample rather than an entire multi-trillion-token collection. Split documents and near-duplicate families before sampling. Exclude final natural references, corresponding known books/videos and derived hypotheses from tokenizer/educational sampling and specialist training.
+
+TinyStories' card declares CDLA-Sharing-1.0; FineWeb-Edu declares ODC-By and Common Crawl conditions. SmolLM-Corpus contains Cosmopedia v2, deduplicated FineWeb-Edu and Python-Edu with source/subset obligations; a collection badge is not a blanket relicense of every code file. Archive the selected versions and applicable terms. [S12, S20-S22]
+
+Cosmopedia and FineWeb metadata use other tokenizers, so recompute exposures locally. Synthetic educational prose and filtering retain their pretrained-model data lineage even though MODEL-1 starts with random weights. This learning branch does not establish public restoration quality or require a human annotation project.
+
+### 12.5 Dataset audit: task, reference and access
+
+The primary-source audit distinguishes existing human transcriptions from algorithmically generated labels and existing hypotheses. None of these sources supplies universal semantic-preservation gold. A public download or repository code license does not erase upstream conditions.
+
+| Candidate | Available evidence and task fit | Quantity/grouping actually verified | v1.2 role |
+|---|---|---|---|
+| LibriSpeech + LibriSpeech-PC | Original speech plus PC references recovered by alignment to book text; native segmentation retained; no required new hypotheses supplied by PC | PC test: 2,417 clean/4.98h and 2,856 other/5.17h. Original LS test speakers: 40 clean/33 other; retained PC speaker/book count requires inventory | **Primary read-speech source**; reuse official PC target directly. [D1, D2] |
+| SLUE-VoxCeleb v0.2 | Existing human transcripts, audio, speaker IDs and official crop times; `normalized_text` available, no formatted reference field | 5,777 train, 1,454 validation, 3,553 test rows; published 120/20/35 speakers and 12.8/3.2/7.8h | **Primary conversational source**; interviewee-only snippets, not meeting or two-party dialogue. [D18, D19] |
+| Earnings-22 | Existing human verbatim transcripts and timing; prepared remarks plus Q&A; machine entity tags are not semantic gold | 125 calls/119h; global unique speakers and an automatic window count are not established | Optional finance extension; remove from MVP to avoid new window policy and unresolved audio redistribution. [D3, D4] |
+| RED-ACE | LS references, Google default/video hypotheses, confidence and minimum-edit-derived word-error labels | Stable LS IDs and original pool fields; chosen-model test/intersection count not inventoried | Strong optional fixed-recognizer diagnostic; confidence stays out of model input. [D23] |
+| HypR | Existing `ref`, `utt_id`, ranked 50-best hypotheses and ASR scores from LS, TED-LIUM2 and AISHELL-1 | One utterance is one source despite 50 hypotheses; exact chosen test intersection unknown | Optional LS first-best view; not extra training or an independent speech domain. [D10, D22] |
+| HyPoradise | WavLM/Whisper hypothesis lists with existing references across nine source domains | Paper reports 316,881 training and 17,383 test pairs; released-file membership/version must be pinned | Optional external corpus after subset rights and lineage checks. [D9, D21] |
+| GenSEC SLT Task 1 pilot | Repackaged HyPoradise-derived hypotheses/references with source fields | Current card metadata and prose disagree on counts; no reconciled quantity asserted | Not independent evidence or mandatory MVP data; inventory before any use. [D25] |
+| AMI | Existing manual word-level transcripts and audio; spontaneous multiparty meetings with timing annotations | About 100h total; official scenario test has five meeting series/20 meetings; full-corpus-ASR is a different split | Credible later meeting extension, with more automatic channel/segmentation work than SLUE. [D20] |
+| SLUE-VoxPopuli | Existing raw/normalized parliamentary text and NER annotations | 5,000/1,753/1,842 rows in train/dev/test | Optional formatted/entity source; scripted speech, not a conversational substitute. [D5, D18] |
+| GigaSpeech v1 | Human-annotated dev/test, normalized references; training references have different provenance | 10k transcribed training hours; 12h dev/40h test; complete speaker identity unverified | Optional broad-domain study, not required redistribution package. [D6] |
+| GigaSpeech2 | Automated transcription/refinement of Thai, Indonesian and Vietnamese audio | English restoration/reference fit absent | Exclude this English MVP. [D15] |
+| Common Voice scripted | Volunteer read audio and prompts; validated reading is not proof of exact prompt delivery | Current version-specific eligible English counts unknown | Optional accent/recording study; no manual prompt-to-audio recertification. [D8] |
+| TED-LIUM 3 | Existing talk audio/transcripts and derivatives | Exact selected release/split inventory not repeated here | Optional prepared-talk comparison, not code dictation. [D7] |
+| LibriTTS | Audio with original and normalized text | 585h/2,456 speakers reported | Useful reference resource but shares LS lineage; not independent transfer. [D16] |
+| CALLHOME American English | Unscripted telephone speech; release-dependent transcript packages | Original 56h/120 calls; 2026 repackaging differs | Licensed acquisition outside MVP. [D17] |
+| CHSER | Existing child-speech hypothesis/reference pairs, generated with Whisper-base.en | Paper reports about 200k pairs; selected-source rights/row counts not qualified here | Later child-speech study; no blanket permission inferred from code availability. [D24] |
+
+| Candidate family | Reported data terms/access | Reuse and unresolved boundary |
+|---|---|---|
+| LS and LS-PC | CC BY 4.0 | Preserve both attributions, reference revision and modifications; upstream audio retrieval is reproducible. [D1, D2] |
+| SLUE-VoxCeleb | Card declares CC BY 4.0 for subset/transcription/times and retains original-owner notices; current HF access requests contact-information agreement | One-time author account/access administration is allowed; no current access assumed and no annotation follows from the gate. Prefer source-ID reconstruction over unnecessary audio rehosting. [D18] |
+| SLUE-VoxPopuli | Card declares CC0 for the subset and added labels, with Parliament notice | Keep source notices and precise subset identity. [D5, D18] |
+| Earnings-22 | Archived source file explicitly covers transcript/alignment text under CC BY-SA 4.0 | It does not establish an unrestricted audio-rehosting grant; optional reuse remains conditional. [D4] |
+| RED-ACE | Official Google dataset card declares CC BY 4.0 | Preserve dataset/LS attribution; frozen released hypotheses need no new commercial ASR API request. [D23] |
+| HypR | README describes academic availability and defers to original LS/TED/AISHELL licenses | No blanket rebundling or commercial permission is inferred. [D22] |
+| HyPoradise/GenSEC derivatives | Dataset cards display MIT or Apache labels; HyPoradise also links a separate data agreement and mixes upstream corpora | Qualify the exact subset. The separate agreement was located but not successfully extracted in this audit; no blanket license conclusion follows. [D21, D25] |
+| AMI | Official v1.6.2 download page states signals/transcription are CC BY 4.0 | Use this exact release; an older OpenSLR mirror advertises a different earlier license. No manual recertification is required. [D20] |
+| GigaSpeech v1 | Noncommercial research/education access conditions coexist with a code-license badge and retained upstream copyright | Do not distribute all audio under the code license. [D6] |
+| Common Voice, TED-LIUM, LibriTTS, CALLHOME | Respectively versioned CC0 terms; reported TED-LIUM3 CC BY-NC-ND3.0; LibriTTS CC BY4.0; LDC agreement/acquisition | Preserve the original audit and qualify any exact optional release; an unofficial mirror is not an access workaround. [D7, D8, D16, D17] |
+| CHSER | Repository identifies the data but a complete selected-source reuse license was not established in this audit | No mandatory dependency and no invented permission. [D24] |
+
+PC's published alignment filtering already removes some Unicode mismatches, short clips and book-text anomalies; the resulting population is not all LibriSpeech audio. SLUE's conversation snippets are selected broadcasts and do not represent every accent or everyday microphone setting. These inherited selection policies remain in the dataset card. [D1, D19]
+
+### 12.6 Training supply, deterministic eligibility and release gate
+
+The unchanged paper curriculum uses public data only. Its real-pair allocation remains 15M paper-canonical exposures across the 100M/40M/10M phases. Eligible source supply is the official LS-PC training partitions and SLUE fine-tune/train partition, after automatic source-family separation. Existing official references are targets; no per-case listening or teacher rewrite is required. Pin the real-pair source allocation and ordering on development data for every matched arm. Source-specific target encoding is recorded: SLUE's normalized form does not become invented punctuation/case gold.
+
+The published PC training durations are 91.61h, 333.13h and 449.10h for the corresponding 100/360/500 partitions; SLUE train has 5,777 rows/12.8h. These are available-source metadata, not a promise to decode the entire supply. Select only the amount needed for the fixed exposure budget, count unique anchors and repeats, and record actual source distribution. [D1, D18, D19]
+
+Automatic qualification establishes schema, stable identity, reference availability, valid crop coordinates, accessible decodable audio, source split and recorded terms. It does not declare every transcript acoustically correct. Hashing, duplicate detection and metadata joins happen before augmentation. Source-level exclusions are fixed before model outcomes; changed source hypotheses or uncertain alignments do not invite a manual repair queue.
+
+Access to the chosen SLUE release is an early feasibility gate. If it cannot be lawfully acquired or reconstructed, record a scope amendment before protocol freeze and retraining/model selection as necessary. AMI is a researched alternative, not an automatic substitution after outcomes; a read-speech-only paper must say that it lost the conversational claim. Private LocalFlow data does not replace a missing public arm. Source rights and computational validation may block a claim; the remedy is a smaller honest claim or a pre-freeze redesign, never compulsory human annotation.
+
+
+## 13. Private and product data
+
+### 13.1 Availability and separation from the public paper
+
+The eligible volume of private LocalFlow dictation, owner-authorized audio and previously accepted cleanup pairs is **unknown**. Export code and corpus-preparation records describe workflows; they do not establish a completed private corpus or a blind holdout. Pending, exposed or model-generated records are not ground truth merely because they are stored in a review system. [R6, R7, R9]
+
+Private data may support a separately reported product supplement and later specialization. The public training, natural final evaluation, generated stress study and second-recognizer experiment remain executable without it. Permission scope, collection provenance, actual task, permitted context and release status are explicit fields. Access to a transcript does not imply permission to publish its audio or private content.
+
+The zero-annotation MVP does not transfer its abandoned work into a private review queue. Use existing legitimate owner acceptance or exact programmatic targets where available; otherwise omit the record from any result requiring a trusted target. Do not require new repetitive owner labeling, a second rater, an adjudicator, or human validation of thousands of private examples. Optional personal debugging remains optional and is not primary evidence.
+
+Map LocalFlow `train`/`validation`/`frozen_test` and M15 `dev`/`validation`/`held_out` to research training/development/calibration/final roles explicitly. A family used for prompt changes, demonstrations, mining or debugging remains exposed; renaming it does not restore blindness. Publication and product target policies and calibrations remain separate. [R6, R7, R9]
+
+### 13.2 Preserve the actual product input boundary
+
+The product system-level view is original normalized window to intended final text. Its ordinary cleanup call may receive a post-proposal view after admitted deletions from `correction_proposals`. Derive that view by replaying the qualified admission rules and retaining the proposal ledger, original input hash, generator checkpoint and actual call input. Raw ASR to final text remains a separate end-to-end diagnostic.
+
+Training replay includes NONE/unmodified paths and imperfect but admitted proposals. Gold-only deletions would create an unrealistically easy distribution. If an admitted deletion removes information unavailable to the cleanup call, record rejection or pipeline recovery; do not supervise invention. Without the actual post-proposal view, mark `text_pair_only` and restrict the record to its declared system-level or single-pass experiment.
+
+Targets distinguish release-relative transcript restoration from intended cleaned writing. Product policy separately permits specified filler/repetition deletion, unambiguous self-correction resolution, numeric rendering and structure. Existing user-authorized targets or a known operation grammar may establish those transformations. A plausible model answer does not. Identity or abstention is appropriate when the available evidence cannot establish the intended target.
+
+The paper's reference-aligned introduced-word-error rate is not a proof of safe intended cleanup, intent recovery, proper-name truth or complete clause meaning. A product default-replacement decision must retain its stronger acceptance boundary. If that boundary cannot be supported by the available automatic or existing evidence, default promotion remains blocked; the paper may still be valid.
+
+### 13.3 Retained product-only mixture
+
+| Source class | Initial share of product supervised presentations | Solo-compatible construction |
+|---|---:|---|
+| Identity/minimal-edit counterexamples | 30% | Exact inputs, controlled permitted formatting and structured ambiguity controls |
+| Empirical ASR-style text corruption | 25% | Training-side observed Parakeet patterns with recorded source/reference lineage |
+| Self-correction, numeric, technical and formatting compositions | 20% | Explicit operation grammar and machine-readable target records |
+| Teacher-proposed diverse examples | 15% | Accept only where an independent algorithmic/latent target check supports the task; otherwise omit |
+| Eligible real speech and already accepted LocalFlow pairs | Up to 10% initially | Actual available public references or existing authorized acceptance, with no new manual quota |
+
+This 30/25/20/15/10 product hypothesis is distinct from the controlled paper's 30/20/10/40 recipe. If real data or independently checkable teacher proposals are scarce, rebalance eligible algorithmic/public supply and report it. Repeating a small set does not create new independent speech. Synthetic speech may replace part of the corruption allocation only through a separately registered product recipe.
+
+Retain at least 10% long-input and 10% composite-operation examples as overlapping tags, not additional mixture shares. The separate proposal task initially receives 10% of product task-phase presentations from the same grouped sources; half initially require NONE/abstention, including misleading correction markers and repeated literals. These are deliberate training balances, not natural prevalence estimates.
+
+### 13.4 Conditional product scale and collection economics
+
+Retain the proposed product campaigns: S203 at 450M/120M/30M v1 exposures, S316 at 1,000M/400M/100M, and conditional S510 at 1,300M/550M/150M. They total 600M, 1.5B and 2B under `product_canonical_v1`, with original normalized source anchors. They are later conditional work, not permission to start training and not a substitute for the paper's 150M-per-run experiments.
+
+For the S316 hypothesis, approximately 0.5M–1M unique clean transduction seeds and 2M presentations averaging 500 v1 tokens would supply its 1B foundation phase. Grow accepted task pairs from roughly 20k–50k toward 100k–250k only when automatic checks and actual yield support them. The 100M refinement proposal may use 5k–20k structured hard cases or existing resolved records. It no longer prescribes thousands of newly adjudicated cases. Count repetition and stop harmful oversampling when development results deteriorate.
+
+A future representative private holdout may grow toward 5,000 windows grouped by session/source if suitable authorized records already exist or accrue naturally. That quantity is a product planning target, not current verified evidence or a required collection/annotation job. It is separate from the 8,826 nominal public natural cases and the generated technical stress population. An opt-in utility finding, a narrow supported operation and default Qwen replacement require different evidence. The public paper does not automatically authorize or qualify any of those product transitions.
+
+
+## 14. Text corruption and exact target construction
+
+### 14.1 Three sources of truth, with different limits
+
+**ENGINEERING PROPOSAL.** The primary paper uses existing public references and exact generated targets. It requires no new human source labels, critical-span annotation, audio listening, output adjudication or repetitive author review. The permissible evidence depends on the population.
+
+For natural public speech, the released reference is the evaluation target under its documented policy. Compare raw recognizer source `S`, existing reference `R` and model output `O` with the deterministic scorer in Part IV. This measures agreement with that reference; it does not certify every word as acoustically correct or every reference error as recoverable from text alone. Reference imperfections and alternative transcriptions remain limitations, without a new annotation project to repair them.
+
+For exact technical stress, a constructor defines the complete written target, field identities, bindings and permitted surfaces. It then records a deterministic corruption and qualifies its inverse. This provides exact truth for the generated contract. It does not turn arbitrary deleted information into an inferable answer.
+
+For TTS training, the intended written target and deterministic spoken rendering have exact lineage, while the words actually realized in the waveform are not independently certified. The specified automatic screens supply fallible consistency evidence; recognizer or forced-aligner agreement is not an audio certificate. Section 15 treats the whole automatically screened construction policy as the intervention.
+
+### 14.2 Recoverability without an annotation queue
+
+The hidden clean seed is not automatically a fair correction target after corruption. An unmentioned digit, lost polarity or substituted arbitrary name can have several plausible originals. No primary construction procedure asks a person or AI judge to resolve such cases.
+
+For programmatic required-repair records, the public grammar, type constraints, source-visible cues and permitted corruption relation must yield a unique admissible target for each required field. Qualification uses the actual source and all permitted inverse operations, rather than the particular hidden operation recorded by the generator. Confirm that the resulting unique target agrees with the generated reference. If inversion is ambiguous, exceeds its declared search bound or needs missing information, reject it from required-repair supervision or place it in the explicitly underdetermined diagnostic population.
+
+Qualified mechanisms include bijective separator/spelling renderings; type-constrained confusable characters; and intact redundant cues whose authority is part of the public task grammar. Random replacement of one valid value by another is not qualified merely because edit distance is small. Deleting the only `not` from a sentence is not qualified merely because the generator remembers negative polarity.
+
+The natural reference-anchored repair metric has a different scope: it measures reduction of source errors relative to the existing reference, without claiming that every error was uniquely source-recoverable. The retired manual NCS eligibility process is not reconstructed through hidden AI labels. Keep this distinction explicit when discussing generated versus natural results.
+
+### 14.3 Empirical operations and exact operator records
+
+Use training-side source/reference pairs to characterize recognizer substitutions, insertions, deletions, boundary changes and co-occurrence. Freeze the characterization sources, aligner, ambiguity rule, confusion tables, lexicons and severity schedule before final training. When a source/reference alignment is ambiguous, omit that region from a particular confusion estimate or retain a declared ambiguity set; record its coverage. Do not resolve it by listening or choosing whichever edit favors a planned model.
+
+| Operation family | Construction and record | Required automatic qualification |
+|---|---|---|
+| Surface | Punctuation, case and spacing changes with before/after spans | Exact reference policy and immutable lexical content where the operation is surface-only |
+| Local lexical | Training-observed confusions, word-boundary errors and bounded substitutions | Declared empirical source, severity and alignment coverage; required-repair stress additionally needs a unique source inverse |
+| Spoken rendering | Deterministic quantities, dates, units, symbols and initialisms | Shared written target and spoken rendering for both channel arms; exact rendering-policy version |
+| Disfluencies/repetition | Literal repetitions, fillers and spoken self-correction strings | Preserve the source/reference sequence in `restore_reference`; generated duplication operators do not authorize general filler deletion |
+| Compositions | Multiple operations with intermediate strings and final coordinate map | Recheck the whole source after composition; one operation must not destroy another's recovery cue |
+| Technical literals | Paths, flags, versions, identifiers and closed-vocabulary names | Exact field IDs, byte spans, binding/order/multiplicity and permitted forms; no hidden spelling inference |
+| Identity controls | Already-correct inputs and unchanged qualified fields | No forced edit quota; include no-op outcomes in the declared mixture |
+| Underdetermined diagnostics | Conflicting valid values, destroyed cues or multiple inverse candidates | No obligatory hidden-target repair; separate population and descriptive output-change analysis |
+
+An operator's intended label is distinct from an observed real-ASR error classification. A regex identifying a number does not establish its acoustic correctness. A teacher's plausible reconstruction does not establish its truth. Record unknown states rather than assigning a confident semantic tag.
+
+Severity includes actual source/reference edit density, affected fields, missing-information class, source length, position and compositions. The primary text and acoustic channels do not receive post hoc equal-error-density filtering: channel error distribution is part of the treatment. A predeclared severity-matched diagnostic is secondary and reports the original yield and selection change.
+
+### 14.4 Controlled curriculum and paired channels
+
+The retained 150M paper curriculum is 100M light transduction, 40M task-focused training and 10M preservation/hard-case refinement. Every phase contains 30% identity/minimal-edit, 20% constructor-qualified rule compositions, 10% eligible public real pairs and 40% channel-specific pairs under `paper_canonical_v2`. A100, B100-text and C101 share the text-control content and presentation plan. B100-acoustic replaces only the final allocation: 60M of the total 150M exposures.
+
+The paired pools share written seeds, deterministic spoken renderings, targets and the common automatically accepted seed/variant intersection. Text corruption starts from the same spoken rendering that enters TTS. Neither arm gains private data, teacher-generated targets, extra exposure or a different primary B optimizer. B-acoustic inherits the optimizer, peak LR and continuous schedule selected using only B-text's development recipes; its own three 10M probes assess feasibility/sensitivity.
+
+The v2 accounting anchor contains trusted controls, the clean intended spoken rendering for generated pairs or the existing official reference for public real pairs, and the full target under the frozen project tokenizer. It is accounting metadata, not extra model input. Preserve the identifier `paper_canonical_v2`, record this provenance clarification in the protocol amendment, and do not describe the public reference or TTS rendering as newly audio-verified. Actual corrupted/native/encoder/decoder/action/loss/padding/generated tokens remain separate. The source-dependent `product_canonical_v1` ledger is unchanged and is never combined with this total.
+
+Report distinct seeds, variants, accepted/rejected counts, per-category support, identity yield and repetition. A small accepted corpus repeated to fill 60M exposures is not 60M unique evidence. Construction failure is resolved by a development-only common amendment or a blocked experiment, not by manually repairing an accumulating queue or replenishing only the weaker arm.
+
+### 14.5 Programmatic stress population and leakage boundary
+
+Part V specifies `technical_latent_v1`, its exact fields and qualification rules. The full test pool contains 30,000 cases: 25 category strata × four template families × 100 base groups × three clean/repair-focused/mixed views. The mandatory model panel selects 30 groups per category/template cell under the frozen hash order, preserving all three views: 9,000 cases and 3,000 base groups. All sixteen bare learned/comparator configurations receive that same panel. Full-pool model inference is stretch unless qualified and frozen from BENCH-00 before candidate outputs.
+
+Split template, semantic and lexical family packs before rendering values, corrupting text or synthesizing speech. Preserve related paraphrases, repeated literal bundles and every variant on one side. Shared grammar primitives such as digits and unit symbols are documented exceptions to lexical-disjointness claims. The final pool does not supply TTS seeds, training rules, teacher prompts or hard-example mining. Its latent targets remain evaluation metadata.
+
+Template-based behavioral testing and controlled exact-value tasks are established methods; the suite's role is a reproducible stress population for the representation study. Its count and exactness do not make it a natural-distribution benchmark or a novel general semantic metric. [T1–T4]
+
+### 14.6 Formal taxonomy and automatic provenance
+
+Retain the existing failure families, but make the source of each tag explicit. A constructor tag describes what it generated. A deterministic extractor tag describes what a rule found. A reference-alignment tag describes a source/reference relationship under a frozen scorer. None alone asserts unobserved spoken meaning.
+
+| Family | Retained tags and automatic boundary |
+|---|---|
+| Surface | `punctuation`, `capitalization`, `spacing`, `filler_marker`, `repetition`, `false_start_marker`; marker detection does not authorize cleanup |
+| Numeric | `integer`, `sign`, `decimal`, `currency`, `percentage`, `date`, `time`, `version`, `unit_binding` |
+| Technical | `path`, `URL`, `CLI_command`, `CLI_flag`, `programming_identifier`, `controlled_name`, `scientific_spelling`, `acronym`, `CamelCase`, `snake_case`, `kebab_case` |
+| Relations | `negation_marker`, `uncertainty_marker`, `subject_object_binding`, `clause_structure`, `repeated_occurrence`, `near_confusable_value`; natural semantic coverage is explicitly limited |
+| Structure | `paragraphing`, `list_structure`, `prompt_like_text`, `long_input`, `extra_prefix`, `extra_suffix`, `duplicate_field`, `order_violation` |
+| Decision | `identity_noop`, `qualified_repair`, `mixed_case`, `nonunique_inverse`, `alignment_ambiguous`, `multiple_transformations`, `unavailable_fine_grained_label` |
+| Provenance | `programmatic_corruption`, `raw_recognizer_output`, `intended_TTS_target`, `automatic_screen_rejection`, `existing_public_reference`, `reference_policy_uncertainty` |
+
+All category reports include eligible counts, unavailable/ambiguous counts, coverage, overlaps and population identity. No final case disappears because of model uncertainty, an invalid edit program, decoder truncation or an unfavorable answer. Ordinary all-input WER/CER/exact metrics remain available under their failure policy even when a fine-grained region is deterministically ambiguous. Part IV and Sections 23–26 govern transition bounds, coverage and software qualification.
+
+
+## 15. TTS → ASR corruption without manual labeling
+
+### 15.1 Scientific purpose and epistemic boundary
+
+**FACT.** Synthetic correction pairs produced through TTS and ASR are established prior work, including specialized correction models, DARAG and ChFT. This project does not claim to invent the speech loop, voice/noise variation, inverse normalization or synthetic-to-real transfer. [N1, N9, N16]
+
+**RESEARCH HYPOTHESIS H2.** At the fixed B100 budget, does the specified acoustic-generation and automatic-selection policy improve restoration of untouched real public-reference speech compared with calibrated text corruption of the same intended content? The treatment includes its actual residual synthesis errors and selection effects. It is not a claim that every generated discrepancy is a genuine ASR error.
+
+The exact generated written target and deterministic spoken rendering describe what the synthesizer was asked to say. They do not prove what its waveform contains. A recognizer can agree with an incorrect synthesis, and different recognizers can share errors. A forced aligner can fit an intended transcript without certifying every word. Automatic screening is therefore an operational inclusion rule, not an independent acoustic truth label. The main scientific endpoint remains natural public-reference evaluation, which uses no newly written or manually verified references.
+
+The paper corrector receives a raw one-best source and common trusted `restore_reference` controls. It receives no audio, N-best list, oracle spans, latent target, source-specific correction mask or private owner context. Audible disfluencies and spoken self-corrections remain in existing public references according to their released policies; intent-cleaned product output is a separate lineage.
+
+:::diagram data
+~~~mermaid
+flowchart TD
+    A["Training-only written seeds"] --> B["Shared spoken rendering"]
+    B --> C["Calibrated text corruption"]
+    B --> D["TTS"]
+    D --> E["Pinned Parakeet"]
+    C --> F["Common automatic seed qualification"]
+    E --> F
+    F --> G["Matched B100 training arms"]
+    G --> H["Untouched real public evaluation"]
+~~~
+
+*Proposed construction and comparison, with no generated data or measured result. Automatic qualification checks intended-target consistency under the frozen rules; it does not certify waveform truth. The primary pool contains no private or teacher-generated targets.*
+
+### 15.2 Exactly what changes between the arms
+
+**PROTOCOL DECISION — DRAFT, pending publication freeze.** Reuse the three B100-text runs and add three B100-acoustic runs with paired initialization seeds 1729, 2718 and 31415. Each completes 150M `paper_canonical_v2` exposures. The 100M, 40M and 10M phases retain 30% identity/minimal-edit, 20% constructor-qualified rules, 10% eligible public real pairs and 40% channel-specific pairs.
+
+| Phase budget, millions of canonical exposures | Identity/minimal edit | Qualified rules | Public real pairs | Paired channel pool |
+|---|---:|---:|---:|---:|
+| 100M | 30M | 20M | 10M | 40M |
+| 40M | 12M | 8M | 4M | 16M |
+| 10M | 3M | 2M | 1M | 4M |
+| Total 150M | 45M | 30M | 15M | 60M |
+
+Only the channel-specific 40% changes: 60M of 150M exposures. The other content, target policy, source order, tokenizer, architecture, context and primary optimizer recipe remain common. Text corruption starts from the same spoken rendering as TTS; starting one arm from already formatted written targets would introduce an additional treatment.
+
+Select the B optimizer and peak LR using only B-text's three 10M development recipes at pilot seed 42. B-acoustic inherits that complete recipe. Its three 10M probes are feasibility/sensitivity checks and cannot select a different primary optimizer. The development plan remains twelve trials and 120M exposures across A/B-text/C/B-acoustic. If an acoustic probe exposes method failure, amend the common B recipe and repeat comparable development before freeze, with added cost recorded, or block H2. Both B arms use a continuous 150M schedule: 3M-anchor warmup, then cosine decay to 10% of the selected peak, without resets at 100M or 140M.
+
+Canonical accounting uses trusted controls, the clean intended spoken rendering and full written target for generated pairs. Public real pairs use the existing official reference as their clean anchor. This is not a claim of newly verified verbatim speech. The anchor is accounting metadata only. Record actual corrupted/native/encoder/decoder/action/loss/padding/generated positions and measured time separately; retain `product_canonical_v1` as a separate source-dependent product ledger.
+
+### 15.3 Exact intended-target lineage
+
+A controlled proposal retains the latent record `z`, exact written target `y`, deterministic intended spoken rendering `r`, generated waveform `a`, raw Parakeet output `x`, and any separate screening transcript `v_screen`. Record every object's hash and lineage. `v_screen` is a recognizer prediction; it must not be relabeled “the checked speech actually spoken.” Actual realized speech is not independently certified in this MVP.
+
+The renderer `technical_spoken_renderer_v1` is a finite typed policy, not an LLM paraphrase. It specifies signs, digit/number readings, decimal points, units, dates, times, short version components and allowed letter names. It preserves every lexical cue required by the target contract. If two written targets collapse to the same permitted spoken form without disambiguating context, remove the ambiguity through a public rendering convention or exclude that template from the primary pool.
+
+For example, a decimal can be rendered using an explicit sign, integer part, the word “point,” and each fractional digit; a date can use a full month name and four-digit year under a fixed locale. A URL, arbitrary path or mixed-case identifier is not spoken by guessing its pronunciation. The exact technical stress suite can cover those bytes without placing them into the primary acoustic pool.
+
+Neither branch passes its source through the LocalFlow normalizer before student input. Deterministic normalization is its own baseline. A later product checkpoint may replay normalization/proposal stages, but its corpus and task lineage cannot replace the primary raw-source H2 experiment.
+
+### 15.4 Restricted template families and construction bound
+
+Retain the bounded plan of 2,000 training-only written seeds, with 250 seeds per primary construction slice. All final natural/test-stress references and source families are excluded. The following slices replace open-ended sentences requiring case-by-case listening.
+
+| Slice | Admitted source family |
+|---|---|
+| Ordinary declarations | Closed-vocabulary short clauses with deterministic lexical targets |
+| Roles and bindings | Explicit role labels and controlled names/identifiers whose renderings are unique |
+| Integers and quantities | Bounded numbers with explicit units and source-visible relations |
+| Signed decimals | Explicit sign and per-digit fractional rendering; no ambiguous scale omission |
+| Dates and times | Valid generated calendar/time values under a fixed unambiguous locale policy |
+| Short versions/initialisms | Only the finite component/letter renderings supported by the qualified grammar |
+| Local lexical/boundary changes | Closed vocabulary with unique permitted inverse where required correction is supervised |
+| Negation and repetition | Polarity cues, fillers and self-correction sequences preserved as generated; no intent-polishing target |
+
+Arbitrary scientific-name pronunciation, long URLs, filesystem paths, commands, unconstrained acronyms and ambiguous mixed-case identifiers are excluded from the initial acoustic pool. They remain eligible for exact text stress. This restriction narrows the channel's linguistic support and must be visible in the paper; it is not evidence of broad technical-speech robustness.
+
+Use the provisional `hexgrad/Kokoro-82M` v1.0 model with training voices `af_bella` and `am_michael`, nominal speed 1.0. Its official card identifies an 82M model, Apache 2.0 and 24 kHz examples. Pin the checkpoint, voice tensors, grapheme-to-phoneme dependencies, sampling settings and runtime before generation. Voice IDs are not certifications of distinct human speakers or demographic coverage. [D11]
+
+For each seed and voice, synthesize one clean waveform, then derive clean and one mild-noise view. The proposed noise condition is licensed nonspeech background at 15 dB SNR; freeze the file manifest, mixing weights, loudness calculation, clipping/resampling policy and random seeds. Additional voices, noise families, reverberation and telephony are stretch. Reserve `af_sarah`/`am_fenrir` for development diagnostics and `af_nicole`/`am_puck` for a separate synthetic diagnostic only if those optional views are exercised.
+
+**CALCULATION.** There are at most 4,000 first-attempt clean TTS waveforms and 8,000 Parakeet input views. At an illustrative mean ten seconds, this is 11.1 hours of base synthesis and 22.2 hours of recognizer input. The views are generated once and reused by the three final student seeds. Four views of one written seed do not create four independent linguistic examples.
+
+If every variant were accepted and the mean clean anchor were 100 tokens, one pass over 8,000 variants would supply 0.8M exposures; the 60M channel allocation would repeat that pool about 75 times. A conditional 10,000-seed four-view pool would supply 4M per pass and need about 15 passes, with 111.1 nominal recognizer-input hours. These are arithmetic scenarios, not diversity guarantees or a new generation mandate. The development gate must freeze an affordable independent-seed supply and repetition cap before final training.
+
+### 15.5 Frozen automatic qualification
+
+The default proposed qualification policy, `automatic_tts_screen_v1`, has four stages, all completed before any final corrector outputs are examined. Its transcript comparison is `spoken_lexical_compare_v1`, and its source inverse uses `technical_inverse_v1`; exact implementation/configuration hashes are future freeze requirements.
+
+1. **Structural checks.** Validate the latent values, exact written/spoken round trip, template-family split, permitted source envelope and recoverability cues. Invalid constructors are rejected by reason code, without a manual repair queue.
+2. **Waveform checks.** Check finite samples, channel/sample-rate contract, nonempty duration, clipping, silence and plausible duration relative to rendered length. Initial engineering bounds are 3–20 seconds, 0.8–6 rendered lexical tokens per second, and no more than 0.1% near-clipped samples; the development probe freezes the final thresholds and their precise definitions. These detect some technical defects, not semantic pronunciation truth.
+3. **Separate clean-audio screen.** Provisionally use pinned `facebook/wav2vec2-base-960h` with greedy CTC decoding on the clean waveform. Require exact agreement with the intended spoken lexical sequence under a frozen case/spacing/punctuation comparison. The official card declares Apache 2.0 and 16 kHz input; checkpoint/runtime and local throughput remain to be qualified. [T5] Screen the clean waveform once, before adding noise, rather than requiring the final noisy Parakeet transcript to be error-free. Whisper is not used for this construction screen, preserving its separately declared external-recognizer role.
+4. **Source-only pair qualification.** For both text corruption and raw Parakeet output, use the public rendering/corruption grammar to verify uniquely inferable required fields or the declared identity class. Compare that result with the intended target. Nonunique inverses, destroyed cues and unsupported field mappings are excluded from required-repair supervision or assigned to the separately registered ambiguity pool. They are not sent to a human or an AI judge for a preferred answer.
+
+The separate recognizer can reject correctly pronounced speech because it makes its own errors, and it can accept a defective waveform. Its training history and errors may overlap those of the other components. Report this as a selected intended-target training policy. It supplies no sensitivity/specificity claim without a separately justified truth source. An optional forced aligner or extra recognizer can be a secondary diagnostic, not an undisclosed replacement for this frozen screen.
+
+Plan a 100-base-clip, length-stratified development probe for waveform failures, screen agreement, accepted support, each stage's RTF, memory and unattended runtime. It requires no listening or labels. If the screen/runtime cannot be qualified within the resource envelope, change the common policy on development evidence before final freeze and disclose the new intervention, or block H2. Do not conceal the issue by calling all targets audio-verified.
+
+A transient runtime or file failure may receive one retry with the same registered settings/seed. Pronunciation disagreement is not permission to resample voices until an accepted waveform appears. Log every attempt, retry and exclusion, including failed proposals outside the accepted pool.
+
+### 15.6 Common support, weighting and selection bias
+
+The primary training arms use the common accepted seed/variant intersection. Reject a disqualified acoustic variant from its text-control counterpart as well. Keep the same target, anchor and paired presentation plan. If a seed retains different numbers of views, use the frozen seed-balanced/view-balanced sampling rule rather than giving it extra weight merely because more variants survived. Report independent seed support separately from view support.
+
+The selection rule is fixed independently of corrector outputs. Record proposed, retained and rejected counts by slice, voice, acoustic condition, length, error density, identity/repair class and rejection stage. Compare each channel's raw proposal yield and its accepted support; the matched experiment cannot establish equal natural generation yield. Automatic diagnostics on rejects are allowed, but there is no required listening or manual audit of them.
+
+No-error outputs remain valid under the fixed identity quota/rule. Selecting only errorful acoustic examples would change the intervention and must be a separate predeclared choice. A reserve seed order and exhaustion policy are frozen before generation, not chosen to replace hard cases after a model has struggled.
+
+The public-grammar inverse qualifies the text relation and cannot prove that the target was actually spoken. Residual synthesis error, verifier error and selection toward a narrow vocabulary remain part of the disclosed treatment. This does not prevent a valid comparison of that training policy's real-reference transfer; it prevents overclaiming what caused a benefit.
+
+### 15.7 Natural endpoints, costs and stop conditions
+
+**PAPER CLAIM CANDIDATE H2.** Evaluate untouched existing-reference natural cases: all 5,273 LS-PC test cases and all 3,553 released SLUE-VoxCeleb test cases, totaling 8,826. Do not apply the synthetic acceptance filter to this final population. Use the same pinned Parakeet identity `mlx-community/parakeet-tdt-0.6b-v3`, recorded revision `ed2b7e8c15f9aaa0b5772e2efb986255eaef7e15`, with its exact runtime/decoding manifest reverified before use. Do not substitute v2 or an unpinned later snapshot. [R2, R8]
+
+The H2 quality endpoint is the equal-domain mean `0.5 × WER_LS-PC + 0.5 × WER_SLUE-VoxCeleb`, each corpus WER recomputed from total word errors and reference words. The draft observed improvement target is at least 0.5 percentage points, with the acoustic-minus-text superiority upper bound below zero. The joint preservation component uses deterministic introduced word errors, including new insertions, divided by reference words and aggregated with the same equal-domain weighting. Its noninferiority upper bound must be below +0.1 percentage point. Part IV and Sections 20/25 define the alignment-bound computation and fixed one-sided 97.5% component gates; no CADR/NCS annotation panel remains.
+
+Report both domain scores, pooled word-weighted WER, all three paired seeds, raw/completion-qualified repair, introduced-error bounds and deterministic-scoring coverage. Ambiguous correspondence is handled algorithmically under the frozen rule, never through manual resolution. Raw WER uses actual valid emitted text/prefix; absent or unrenderable output is empty under the all-input failure rule. Source-return delivery is separately labeled guarded/full performance. A capped or invalid output cannot receive complete-restoration credit merely because a prefix repaired some words.
+
+The same untouched natural audio receives a frozen Whisper-large-v3-turbo view for secondary zero-shot recognizer transfer. No Whisper outputs tune the corrector or select its training pool. Existing source-specific references and deterministic source/reference relationships are reused; no new critical-span or listening project is created. [D12]
+
+**CALCULATION.** With base duration `H_base` and two acoustic views, sequential device cost is approximately `H_base × RTF_TTS + 2 × H_base × RTF_Parakeet + H_base × RTF_screen`, plus I/O, resampling and rejected/retried work. With the illustrative 11.1-hour base and all three RTFs equal to 0.2, this is approximately 8.9 device-hours before overhead. None of these rates is measured. Record stage-specific CPU/accelerator/wall time, loading, conversion, generated tokens where relevant, storage and actual acceptance yield.
+
+The one-month plan's provisional 24-hour training-data construction envelope includes TTS, screening, synthetic training-side ASR, selected real training/development/calibration Parakeet hypotheses, rejected attempts, retries and preprocessing. Existing real references do not supply those hypotheses; Section 19 prices their exact selected audio hours times the measured Parakeet real-time factor plus loading/I/O. Both required final natural recognizer views have a separate provisional 18-hour allowance in Part VI. Count each operation once, and qualify both allowances from development measurements before final construction and decoding. Any measured construction overrun is additive in the month ledger. A small pool repeated 75 times does not automatically satisfy the data-diversity or learnability gate. If the qualified common pool cannot meet the registered repetition/support policy within the 24-hour construction envelope, revise both arms before freeze or block H2; do not quietly enlarge the generation budget or require manual listening to rescue it.
+
+Interpret transfer alongside accepted independent seeds per device-hour, repetitions and complete construction-plus-student cost. If unique support, automatic qualification or precision is inadequate, amend on development evidence before freeze or report a bounded feasibility/negative result. LLM corruption, additional engines and mixture search are secondary and cannot displace the calibrated text control.
+
+**MEASURED RESULT — empty.** No waveform, recognizer output, screen, corpus, model or transfer measurement was produced for this specification.
+
+
+## 16. Optional teacher use and model-based evaluation
+
+### 16.1 Primary independence from teachers and new human labels
+
+All core students retain random initialization. The main 30/20/10/40 paper recipe uses exact constructor targets and existing public references; it has no teacher-target category and no teacher-judge dependence. Primary scores come from the deterministic source/reference/output framework and the exact generated contract. Removing every teacher and AI-judge analysis must leave H1/H2 and the main manuscript valid.
+
+A pretrained teacher is a data-generation or analysis dependency when used, not random initialization for the student. Its architecture, weights, prompt and training history remain a separate lineage. A teacher's fluent output is not automatically an authorized correction, a reference transcript or a source-recoverability label. Agreement between two teachers does not make it ground truth.
+
+The retained product branch may use offline distillation or the current Qwen fallback under its own task and provenance. Product budgets and teacher targets cannot enter only one primary channel arm or silently alter the paper's public source mix. A separately qualified teacher-corruption experiment is a stretch treatment with a matched source/exposure control and a new registry record.
+
+### 16.2 Allowed optional construction roles
+
+| Method | v1.2 disposition | Required contract |
+|---|---|---|
+| Teacher proposes corrupted sources from a known target | Optional secondary data-channel experiment | Target remains exact generated/public-reference truth; source qualifies under the same deterministic rules and groups |
+| Teacher proposes a new clean target | Excluded from primary truth | A plausible answer cannot replace an existing reference or generated latent value |
+| Multiple candidates and a model judge | Optional development exploration | Log all candidates, identity where appropriate, judge identities and disagreement; no vote creates primary labels |
+| Teacher proposes grammar/operator code during later implementation | Coding assistance, not annotation | Ordinary software review, conformance/property tests and version hashes establish the implementation contract |
+| Preference pairs | Deferred product or objective experiment | Exact source/task lineage and independently defined acceptability; no primary dependence on subjective model preference |
+| Full or top-k logit distillation | Stretch only | Tokenizer mapping, omitted mass, storage, compute and imported knowledge are explicit |
+| Teacher rationale as ordinary student target | Excluded from the main recipe | The restoration target is the transcript/edit contract, not an explanation |
+| Iterative hard-example mining | Training/development or product shadow only | Fixed replay and source-family caps; no mining of sealed final inputs, references or candidate outputs |
+
+For exact generated records, a teacher proposal can pass only by satisfying the frozen structural/target language or the source-only inverse rule. If it adds an unsupported value, changes a required binding, removes a required clause or destroys the only recovery cue, deterministic rejection is the primary disposition. When the contract cannot decide a free-form proposal's validity, that proposal does not enter primary supervised truth. There is no required manual exception queue.
+
+Teachers may help an author inspect a small development failure qualitatively, but that does not create a final label. Optional author inspection is debugging, not a replacement for thousands of ratings. No external annotator, second rater, adjudicator or repetitive author labeling is required by this section.
+
+### 16.3 Optional AI-judge semantic analysis
+
+An exploratory semantic analysis can ask whether outputs appear to add unsupported information, delete a clause, change polarity or alter a subject/object relation. These are useful questions beyond exact word/field conformance, but model answers are fallible model-based assessments.
+
+If retained, freeze the sampled cases, rubric, exact judge checkpoints/API versions, prompts, output schema, decoding and presentation-order seeds before judging. Hide system identities and randomize comparison order. Using different model families can expose disagreement; it does not establish independent human validation or remove common contamination and model-family bias. Record refusals, malformed verdicts, missing outputs and every raw judge response.
+
+Report the analysis under an explicit model-based-evaluation heading with its own denominator. It is not a human-evaluation section. A judge cannot resolve a primary alignment ambiguity, amend the reference, change a latent value, certify TTS pronunciation, decide a primary source-correct field, or overrule a deterministic failure. The judge's selection of a preferred surface does not silently extend the accepted-target language.
+
+Do not use final judging results to mine student training data or choose a checkpoint, prompt, guard threshold or scorer. If an exploratory observation inspires a model/scorer revision, the affected test is exposed and the revised claim needs the registry's amendment/fresh-evaluation treatment. The manuscript remains complete if this entire optional analysis is omitted.
+
+### 16.4 Economics and bounded scope
+
+The MVP teacher-generation allocation is zero. The one-month plan does not hide model-judge calls or a review queue within automatic evaluation. All optional teacher costs belong to separately funded and registered stretch work; no API spending or generation is authorized by this specification.
+
+The earlier volume arithmetic remains a useful optional planning example. At hypothetical 70% automatic acceptance, 10,000 accepted pairs require approximately 14,286 proposals. At 600 input and 250 output tokens each, that is approximately 8.57M input and 3.57M output tokens before retries or judging. A hypothetical local 30 output-token/second rate would require roughly 33 hours for output generation alone. These are calculations, not measured throughput, accepted yields or current service prices.
+
+A future provider-specific cost is `input_tokens × input_rate + output_tokens × output_rate`, plus separately itemized judges, retries, loading and infrastructure. Verify a provider's actual current price only when that optional model/service is chosen; do not place assumed free frontier inference inside the MVP budget.
+
+For a proposed optional recipe, first run a small automatically qualified development probe under a fixed attempt/time cap. Record proposed, accepted, rejected and ambiguous counts; source diversity; exact token categories; wall/CPU/accelerator time; versions; and any optional author debugging time. Do not revive the former 200-pair mandatory manual audit or require a reviewer for each changed number. Unsupported free-form labels remain outside primary truth.
+
+### 16.5 Provenance and contamination
+
+Store teacher/judge identity, checkpoint or API revision, prompt/chat template, controls, decoding, generation seeds, raw responses, parsed outputs, acceptance rules and exclusion reasons. Keep generation and judging roles separate in the ledger even if one model performs both; they are then correlated roles, not independent validation.
+
+Teachers used for any training-side proposal never receive sealed final sources, reference text, latent test records or final candidate outputs as mining material. Exact generated seeds, public natural references and optional model-generated proposals have different truth/provenance classes. Upstream pretraining overlap remains unknown where undisclosed. A teacher-free primary evaluation does not erase the pretrained lineage of TTS, ASR, ByT5 or Qwen; those dependencies remain recorded in their own model manifests.
+
+**MEASURED RESULT — empty.** No teacher generation, judging, distillation, preference optimization or human review was performed for this remediation.
+
+
+## 17. Objectives and curriculum
+
+**ENGINEERING PROPOSAL.** All core students learn from random weights. The scientific comparison and later product campaigns use separately named task distributions and token ledgers. This section specifies their complete schedules; no previous-version document is required to recover the product plan.
+
+
+### 17.1 Loss and accumulation contracts
+
+Educational model: masked causal next-token cross-entropy. Specialist A/B: target-only conditional cross-entropy including EOS, realistic denoising/transduction data, identity reconstruction, and task-appropriate controls. Correction-proposal supervision belongs to the product curriculum; it is absent from the primary reference-faithful paper task. A curriculum is a data/objective schedule, not an additional loss by itself.
+
+For valid target tokens m, use L = -sum(m log p(target | source, prior target)) / sum(m). Count valid tokens over the complete accumulated optimizer update. Do not average a 30-token example and a 1,000-token example as equal losses unless that alternative weighting is deliberately chosen and named.
+
+For sparse edit model C, use separately logged edit/end classification, start pointer, conditional end pointer, and replacement-token CE. Initially normalize each component over its own valid decisions and set equal component coefficients of 1.0. Give C the same small tuning allowance as other models if this balance fails. EOS/identity cases remain represented. Compute each component denominator across the entire queued optimizer update before microbatch backpropagation. Weight each component loss sum by its own whole-update denominator, omit a component whose count is zero, and accumulate the resulting gradients into one FP32 buffer. Clip/update once with no second shared-denominator division. The single-denominator A/B/M1 accumulation pseudocode is not applied unchanged to C.
+
+
+### 17.2 Primary paper curriculum and stopping contract
+
+Use `restore_reference` throughout the final A/B/C and B-acoustic runs. The 150M budget uses `paper_canonical_v2`: trusted controls plus the clean spoken rendering or frozen existing official-reference anchor (no new listening or reverification) plus the full written target under the project tokenizer. This invariant anchor permits the same ordered source-seed presentations across the text and acoustic treatments. It is accounting metadata; the model receives only its corrupted recognizer-like source. Actual input, padded compute, emitted action and loss positions are recorded independently. The source-dependent `product_canonical_v1` convention remains valid for product campaigns and is not mixed into the paper total.
+
+| Phase | Paper-canonical budget | Common objective and focus | Fixed source mixture in that phase |
+|---|---:|---|---|
+| P0: source-conditioned foundation | 100M | Light, recoverable transduction; identity and local correction; no owner-style rewriting | 30% identity/minimal edit; 20% verified rule compositions; 10% public real pairs; 40% paired corruption pool |
+| P1: task specialization | 40M | More difficult real-ASR-like errors and composites using the same reference policy | Same shares; difficulty schedule frozen before final training |
+| P2: preservation refinement | 10M | Fresh training-only counterexamples motivated by aggregate pilot/development error categories, with earlier-domain replay | Same shares; fresh source families remain training-only |
+
+In A100/B100/C101 the 40% pool uses calibrated text corruption. In B100-acoustic it uses TTS→Parakeet corruption of the identical clean seeds and spoken renderings. Use the common accepted seed intersection and record generation rejection/yield separately. The replacement changes 60M of the total 150M anchored exposures. Teacher-generated corruption and private LocalFlow pairs are absent from these main arms; they remain disclosed optional training sources for other experiments.
+
+Freeze the shared P2 source pool, generation rules, difficulty schedule and replay policy before the final seed runs. Aggregate development error categories can motivate new training examples; development utterances, references, audio and held-out source/template lineages never move into training.
+
+The initial 10% public real share is a supply requirement to verify, not a statement that a particular unique corpus already exists. Record unique seeds, duplicates, epochs, actual retained source balance and within-source repetition. If the public supply or short-run learnability does not support this recipe, amend all affected arms on development evidence before final freeze. Do not silently replace missing real pairs with private history or count repeat presentations as new data.
+
+All headline arms use final seeds 1729, 2718 and 31415; pilot/tuning seed 42 is separate. Each arm receives three 10M-exposure pilot recipes. The initial scratch peak-LR grid is {1e-4, 3e-4, 6e-4}; other changes count against the same declared tuning allowance and must be recorded. A100, B100 and C101 select their primary recipes from their own predeclared development trials. B-acoustic inherits exactly the optimizer, LR and schedule selected using B-text development only; its three additional probes are feasibility/sensitivity checks, never a best-acoustic recipe selection for the primary contrast. If they reveal a substantive failure, amend the common B recipe and repeat comparable development before freeze, or block H2. The public development suite also determines whether 150M constitutes an informative fixed-budget experiment. A lower loss alone is insufficient if needed correction remains near identity.
+
+Final comparison runs use the frozen selected recipe and complete 150M exposures, except for predeclared numerical or infrastructure failure. There is no performance-based early stopping or best-checkpoint selection using either development or final-test outcomes in final comparison runs. The primary checkpoint is the final complete update at that boundary; report the common update overshoot. Evaluate 50M/100M/150M checkpoints on development data as a predeclared secondary learning curve; a full sealed-test intermediate or matched-time roster is a separately budgeted pre-freeze stretch expansion. Do not choose a candidate's best final-test checkpoint or early-stop one family based on favorable test scores. Numerical failures keep their seeds, attempted budget and status in the run registry; a repair that changes the method requires a dated amendment and symmetric treatment of affected arms.
+
+Use one continuous paper learning-rate schedule: the selected peak LR, warmup over the first 2% of 150M (3M anchored exposures), then cosine decay to 10% of peak at the endpoint. Do not reset LR or optimizer state at 100M or 140M. The phases change the data difficulty, not the scheduler identity. Accumulation, loss normalization and optimizer dtypes retain the mathematical contracts below. A paper reset treatment would require a separate predeclared recipe or ablation. Product-specific adaptive stopping rules later in this section apply only to those conditional engineering campaigns. Optional objective or broad-pretraining studies require their own claim, budget and protocol record.
+
+
+### 17.3 Educational curriculum
+
+| Phase | Budget | Objective / data | Stop and failure criteria |
+|---|---:|---|---|
+| Tensor and overfit screen | At most 1M processed MODEL-0 tokens | Tiny deterministic tasks | V0-V4 must pass before native timing |
+| Memorization and reproducibility | Up to 10M replayed MODEL-0 tokens, plus recorded repeat/resume work | Fixed 2k-token corpus and short two-seed checks | V5, V7 and V8; keep this test compute separate from the language corpus budget |
+| Short convergence rehearsal | 10M MODEL-1 tokens, counted within its 1B campaign | First real training-data shard and untouched development split | V6 must pass before long training |
+| First language learning | 50M, then 250M cumulative | Story-heavy beginning, transition into Section 12 educational mixture | Require held-out loss decrease and non-memorized readable samples |
+| MODEL-1 complete attempt | Up to 1B cumulative | Same next-token objective with full mixture | Stop early after three 25M checkpoints with no useful validation gain |
+| Optional extension | Up to 2B cumulative | Additional unseen data; optional 2,048-context tail | Only for a named learning or quality deficit with a positive improvement slope |
+
+A new context length changes a run phase, config, and memory benchmark. Keep 10% earlier-domain replay during any strongly shifted phase. Preserve pre-transition and best-development checkpoints.
+
+
+### 17.4 Conditional product-specialist curriculum
+
+**ENGINEERING PROPOSAL - PRODUCT TRACK.** The following v1.0 long campaigns use product_canonical_v1 and the LocalFlow task boundary. They are conditional engineering routes outside the minimum paper. Their exposure totals are not directly added to paper_canonical_v2 totals.
+
+**Default: targeted denoising/transduction from random initialization → LocalFlow task supervision → preservation/hard-example refinement.** Do not automatically spend billions of tokens learning broad chatbot behavior first.
+
+| Phase | 203M pilot | 316M candidate | Objective and data | Validation and risk |
+|---|---:|---:|---|---|
+| S0: source-conditioned foundation | 450M | 1,000M | Light realistic corruption, identity, technical prose; at most 20% generic span reconstruction | Held-out language/transduction loss plus real task probes; watch copy collapse and invented missing content |
+| S1: task specialization | 120M | 400M | Accepted system pairs with actual post-proposal cleanup views; 10% correction-proposal mode | Balanced DEV slices; watch over-editing and incorrect correction deletions |
+| S2: preservation refinement | 30M | 100M | Fresh counterexamples, hard cases, identity, long inputs; CE initially | Development and regression suites; watch forgetting and identity-only behavior |
+| Total canonical exposures | **600M** | **1,500M** | Source + controls + full target | Not a claim of this many unique tokens |
+
+The 510M candidate initially receives 1.3B/0.55B/0.15B across S0/S1/S2, totaling 2B. Larger rows are conditional hypotheses, not scheduled work.
+
+Use peak LR 3e-4 for the first 100M architecture trials, 2e-4 for 203M/316M, and 1.5e-4 for 510M. Warm up over 2% of each newly initialized campaign; decay by planned token count to 10% of peak. At a phase transition, continue from that candidate's own checkpoint with LR reset to at most 30% of its original peak, a 1% phase warmup, and explicit optimizer continuation. Compare reset-versus-continued optimizer only if the transition is unstable. This is continued training of the same scratch lineage. Keep calibration unused for early stopping or architecture selection; freeze model weights, exported precision, framing and decoding before final acceptance-threshold calibration, then freeze the entire system before final-holdout evaluation.
+
+For every phase preserve initial, last-known-good, best-development, and pre-transition checkpoints. Evaluate at least every 25M canonical tokens. Stop after three evaluations with less than 0.5% relative task-loss improvement and no useful slice gains, or immediately after persistent non-finite gradients or a reproducible preservation regression. For these product-only development campaigns, repeat seeds where variance can change the decision. All headline scientific arms instead follow the fixed three-seed policy; final comparison runs do not use this development early-stop rule.
+
+
+**ENGINEERING PROPOSAL.** These are retained development and stretch options, not extra unregistered treatments in the final paper comparison.
+
+
+### 17.5 Optional objective ablations
+
+| Objective | Initial use | Advancement condition |
+|---|---|---|
+| Standard CE / seq2seq CE | Required | Correct implementation and held-out improvement |
+| Realistic denoising | Required | Helps natural cleanup rather than only synthetic reconstruction |
+| Generic span corruption | At most 20% of initial denoising presentations | Retain only if task quality improves at equal compute |
+| Identity reconstruction | Required; start 30% in task data | Tune 20/30/40% while preserving needed-edit recall |
+| Edit-aware weighting | First optional loss ablation | Weight automatically aligned changed target tokens 2×; compare with 1×; keep all-token likelihood reporting |
+| Numeric/technical token weighting | Later | Requires reliable alignments and no worse context errors |
+| Copy permission head | Optional | High-quality labels and measurable risk/coverage gain |
+| Semantic-preservation embedding loss | Excluded initially | May miss exact values/negation; cannot act as safety proof |
+| Differentiable edit distance | Excluded initially | Must beat simpler alignment supervision |
+| Preference optimization | Late optional | Stable supervised baseline and at least 5k useful same-task pairs |
+| Confidence/abstention objective | Late optional | Train on candidate correctness, then independently calibrate |
+
+Label smoothing is zero initially. A generic reward for making fewer edits is not enough: it encourages identity on needed corrections. Mild copy/edit priors are judged using both preservation and useful correction coverage.
+
+
+### 17.6 Conditional broad-pretraining allocation study
+
+This remains a major empirical question. A narrow cleanup model needs language competence, but it need not acquire an unrelated fact inventory. A source-conditioned denoiser learns syntax and local reconstruction while exercising the actual encoder-decoder interface. Its risk is a shallow copying shortcut that fails genuine corrections.
+
+At approximately 100M and then, only if needed, at 203M, compare:
+
+1. Direct targeted transduction from random weights.
+2. Broad source-prefix → text-continuation pretraining for 25% of the compute, then targeted transduction.
+3. Direct supervised task data with equal compute as a lower-data-efficiency control.
+
+Use the same complete encoder-decoder architecture for these paths. Prefix-to-continuation supplies a general-language pretraining experiment without transferring a separately pretrained decoder into a different architecture. Equalize measured compute, and also report source/loss token differences. If path 2 materially improves unseen correction quality at unchanged preservation, allocate some S0 budget to it. If it does not, keep the targeted path. T5 motivates testing objectives and architecture rather than assuming a universal recipe. [S11]
+
+
+## 18. Exact candidate configurations
+
+### 18.1 Scope and interpretation of the candidate table
+
+**ENGINEERING PROPOSAL / CALCULATED VALUES.** The table preserves all ten v1 configurations and their exact counts. It is a catalog of correctness models, primary scientific arms, and conditional scale candidates - not a commitment to train ten models. The primary paper uses A100, B100, C101, and a second B100 data treatment. The optional same-family scaling study adds S203 and S316 only under the stretch protocol. S154, S510, S752, and S988 remain conditional alternatives.
+
+All rows use `V=16,384`, head dimension 64, RoPE base 10,000, one shared/tied vocabulary matrix, bias-free attention/FFN projections, RMSNorm scales, and the stack/final-norm conventions below. Listed KV heads apply to causal decoder attention and to **both** decoder self/cross attention in seq2seq models; encoder attention is MHA with as many KV heads as query heads. No learned position table is included. The only counted linear biases are C101's three action-classifier biases.
+
+| ID and current role | Encoder / decoder layers | Width `d` | Query / decoder KV heads | SwiGLU width `f` | Exact trainable parameters |
+|---|---|---:|---|---:|---:|
+| MODEL-0, correctness decoder | 0 / 6 | 256 | 4 / 2 | 704 | **8,621,312** |
+| MODEL-1 educational / A100 dimensions | 0 / 14 | 768 | 12 / 4 | 2,048 | **100,685,568** |
+| B100, primary full-text arm | 8 / 4 | 768 | 12 / 4 | 2,048 | **100,686,336** |
+| C101, primary sparse-edit arm | 8 / 4 plus pointer/action heads | 768 | 12 / 4 | 2,048 | **101,081,859** |
+| S154, optional intermediate | 8 / 6 | 896 | 14 / 2 | 2,432 | **153,943,552** |
+| MODEL-2 / S203, conditional prototype or stretch size | 8 / 6 | 1,024 | 16 / 4 | 2,816 | **202,936,320** |
+| MODEL-3 / S316, conditional product hypothesis or stretch size | 12 / 6 | 1,152 | 18 / 6 | 3,072 | **316,196,352** |
+| MODEL-3b / S510, conditional larger size | 16 / 8 | 1,280 | 20 / 5 | 3,456 | **509,944,320** |
+| MODEL-4a / S752, optional larger/local-or-cloud study | 17 / 8 | 1,536 | 24 / 6 | 4,096 | **751,921,152** |
+| MODEL-4b / S988, optional upper sub-billion study | 21 / 12 | 1,536 | 24 / 6 | 4,096 | **987,881,472** |
+
+MODEL-0's FFN width 704 is an intentionally small multiple of 64 for correctness work. The main models use FFN widths divisible by 128. All rows satisfy `d=h x 64` and an integer query-to-KV grouping ratio. S316's 18 query heads and six KV heads give three query heads per KV head; S510's 20/five gives four. Do not infer that every row uses the same group size.
+
+The educational and A100 models have identical dimensions and counts but different initialization/checkpoint identities and training tasks. D, if run, has the same count as A100 because its mask changes no trainable tensor. B-text and B-acoustic each retain the B100 count. The reserved `restore_reference` ID is already inside `V`; it adds **zero parameters**.
+
+### 18.2 Parameter formulas
+
+Let `d` be model width, `f` the SwiGLU width, `V` vocabulary size, `k=h_kd_h` the projected K/V width, `L` causal layers, `E` encoder layers, and `D` decoder layers. Matrix dimensions below use input-width by output-width notation; storing a transposed weight does not change its count.
+
+One GQA attention contains
+
+
+~~~text
+W_q in R^(d x d),; 
+W_k,W_v in R^(d x k),; 
+W_o in R^(d x d),
+~~~
+
+
+so
+
+
+~~~text
+P_GQA=d^2+dk+dk+d^2=2d^2+2dk.
+~~~
+
+
+MHA uses `k=d`, hence `P_MHA=4d^2`. SwiGLU has gate/up matrices `d x f` and a down matrix `f x d`, so
+
+
+~~~text
+P_FFN=3df.
+~~~
+
+
+A causal block has one GQA attention, one SwiGLU, and two RMSNorm scale vectors. Its model total is
+
+
+~~~text
+P_A=Vd+L(2d^2+2dk+3df+2d)+d.
+~~~
+
+
+An encoder block has MHA, SwiGLU, and two norm scales. A decoder block has independent self and cross GQA projections, SwiGLU, and three norm scales. With final norms for both stacks,
+
+
+~~~text
+P_B=Vd+E(4d^2+3df+2d)
++D(4d^2+4dk+3df+3d)+2d.
+~~~
+
+
+For C with pointer width `p=128`, four bias-free `d x p` query/key projections and one affine three-way action classifier give
+
+
+~~~text
+P_C=P_B+4dp+3d+3.
+~~~
+
+
+This formula assumes the same source and decoder width. A future unequal-width cross-attention architecture requires a different formula. Learned relative-position biases, extra output heads, untied embeddings, biases added by framework defaults, or trainable boundary tables also change the count and must be included explicitly.
+
+### 18.3 Worked calculations and matching tolerance
+
+For MODEL-1/A100, `k=4 x 64=256`. The embedding has `16,384 x 768=12,582,912` parameters. Each attention has 1,572,864; each SwiGLU has 4,718,592; each block's norm scales add 1,536. Thus each block has 6,292,992, fourteen blocks have 88,101,888, and the final norm has 768:
+
+
+~~~text
+12,582,912+88,101,888+768
+=100,685,568.
+~~~
+
+
+B100 has the same embedding, eight encoder blocks of 7,079,424, four decoder blocks of 7,866,624, and 1,536 final-norm scales:
+
+
+~~~text
+12,582,912+8(7,079,424)+4(7,866,624)+1,536
+=100,686,336.
+~~~
+
+
+B100 exceeds A100 by only 768 parameters. C101 adds 395,523 to B100, approximately **0.3928%**, giving 101,081,859. This satisfies a proposed within-1% active-parameter tolerance without pretending the counts are identical. Do not add unused dummy tensors to a competitor to manufacture exact equality; report meaningful active capacity and the unavoidable head overhead.
+
+For S316, `d=1,152`, `k=384`, and `f=3,072`. The embedding has 18,874,368 parameters. Each encoder block has 15,927,552, giving 191,130,624 across twelve. Each decoder block has 17,698,176, giving 106,189,056 across six. Final norms add 2,304:
+
+
+~~~text
+18,874,368+191,130,624+106,189,056+2,304
+=316,196,352.
+~~~
+
+
+The following component ledger makes every remaining row independently checkable. “Decoder block” means a causal block for MODEL-0 and MODEL-1/A100 and a self-plus-cross-attention block for the other rows.
+
+| Candidate | Shared embedding | Encoder block, each | Decoder block, each | Final norms | Extra heads |
+|---|---:|---:|---:|---:|---:|
+| MODEL-0 | 4,194,304 |  -  | 737,792 | 256 | 0 |
+| MODEL-1 / A100 | 12,582,912 |  -  | 6,292,992 | 768 | 0 |
+| B100 | 12,582,912 | 7,079,424 | 7,866,624 | 1,536 | 0 |
+| C101 | 12,582,912 | 7,079,424 | 7,866,624 | 1,536 | 395,523 |
+| S154 | 14,680,064 | 9,750,272 | 10,209,920 | 1,792 | 0 |
+| S203 | 16,777,216 | 12,847,104 | 13,896,704 | 2,048 | 0 |
+| S316 | 18,874,368 | 15,927,552 | 17,698,176 | 2,304 | 0 |
+| S510 | 20,971,520 | 19,827,200 | 21,466,880 | 2,560 | 0 |
+| S752 | 25,165,824 | 28,314,624 | 30,675,456 | 3,072 | 0 |
+| S988 | 25,165,824 | 28,314,624 | 30,675,456 | 3,072 | 0 |
+
+The architecture counts and component arithmetic are calculations verified during specification authoring, not execution of the models. V0 must independently sum unique trainable leaves in the eventual implementation and match them exactly before any training is admitted.
+
+### 18.4 Initialization, precision, context, and implementation assertions
+
+Initialize ordinary embedding/projection matrices from `Normal(0,0.02^2)`, norm scales to one, and any specified classifier bias to zero. For a causal stack, initialize attention output and FFN down projections at standard deviation `0.02/sqrt(2L)`. For seq2seq, use `0.02/sqrt(2E)` for encoder residual-branch outputs and `0.02/sqrt(3D)` for decoder residual-branch outputs. Other cross-attention projections use the ordinary projection initialization. These are initial recipes to qualify by activation/gradient checks, not fitted results.
+
+Retain RMSNorm epsilon `10^-6`, zero dropout initially, adjacent-coordinate RoPE pairing, no learned position embeddings, and the same documented causal/masking contracts across reference and optimized implementations. Educational MODEL-1 begins at a total context of 1,024. Specialist A/D qualification uses 2,048 combined positions; seq2seq begins at 1,024 per stream, with the C event-length constraints in Section 10. A context extension needs training coverage, cache/mask validation, and a new BENCH-00 record; changing RoPE base after training is not a transparent extension.
+
+Start with FP32 correctness, then use the qualified BF16 working path with FP32 master weights, optimizer moments, gradient accumulation, and sensitive reductions as specified in Sections 8 and 19. Exact dtype inventories follow the first materialized update. No count in this table assumes a pretrained checkpoint. A BF16 or 4-bit export changes storage and arithmetic, not the number of learned parameters; quantization metadata and export precision are additional package facts.
+
+Required implementation assertions are: exact vocabulary size and task-ID map; `d=h x 64`; integer head grouping; all declared matrix shapes; one shared vocabulary object with one optimizer update; correct number of norm vectors; no accidental framework biases; four C pointer projections plus the explicit classifier; no trainable RoPE/cache buffers; and no silently attached confidence or boundary head. Report tied leaves once by object identity. Encoder, decoder, and output references to one matrix are not three independent parameter objects.
+
+If a later ablation changes tokenizer size, bias policy, source/decoder width, number of heads, optional learned protection, or output tying, publish a new exact configuration and count. Preserve the old ID for the old architecture. A new head cannot be hidden behind a familiar “100M” or “316M” label.
+
+### 18.5 Which configurations belong to which campaign
+
+| Campaign | Configurations | Budget interpretation |
+|---|---|---|
+| Correctness and educational learning | MODEL-0; separately initialized MODEL-1 | V0-V8 and educational processed-language-token curriculum; not a paper prerequisite to finish 1B tokens |
+| MVP paper | A100, B100, C101, B100 acoustic treatment | Twelve final 150M `paper_canonical_v2` runs; symmetric pilots separate |
+| Stretch capacity study | B100, S203, S316, three seeds at each included size | Fixed 50/100/150M views plus separate measured-time views; six added S203/S316 runs equal 0.9B canonical exposures |
+| Conditional product specialization | S203, S316, or the family that actually wins | v1 source-conditioned/product budgets of 600M/1.5B, using `product_canonical_v1`; no automatic training commitment |
+| Conditional larger escalation | S154 interpolation or S510/S752/S988 where justified | Fresh feasibility and quality justification; S510's former 2B product recipe remains conditional |
+
+S316 is a sensible **product hypothesis** to evaluate after smaller evidence, not the default scientific winner. If S203 suffices, stop product scale-up. If the approximately 100M model already meets the qualified product target, do not train a larger one merely to complete the table. If size increases fail to improve the named deficits, investigate data, recoverability, objective, and interface errors before buying more compute. The scientific fixed-budget size study, if executed, is a bounded capacity/compute trend; it does not establish a universal power law or compute-optimal frontier. [S23-S24]
+
+
+## 19. Memory, compute and BENCH-00
+
+**PROPOSED DESIGN AND CALCULATIONS; MEASURED RESULT: not available.** The calculations below preserve the engineering feasibility contract and add the publication run ledger. They do not establish that a model was trained, that the user’s machine was inspected, or that any quality, memory or timing gate passed.
+
+Apple lists 307GB/s memory bandwidth for M5 Pro, including the 16-core and 20-core GPU configurations; 48GB unified memory alone does not identify which GPU configuration or chassis the user owns. Record the exact machine before calibration. Bandwidth and M5 inference demonstrations are not a full-training FLOP rate for these models. [S1-S2]
+
+Two token ledgers remain deliberately versioned. The retained product_canonical_v1 ledger counts the ORIGINAL NORMALIZED source plus trusted controls and the full rendered target; it does not shrink after a correction proposal removes source text. The scientific paper_canonical_v2 ledger instead counts trusted controls plus the clean spoken rendering, or existing public reference text under its documented verbatim policy for a real pair, plus the full written target, all under the frozen project tokenizer. This anchor stays identical across paired corruption channels. Actual corrupted input, encoder, decoder action, native-tokenizer, padded and valid-loss positions are separately recorded. The change is necessary because different corruptions can change input length; equal actual source-token totals would otherwise change how often the same clean seeds are presented.
+
+The primary paper arms process the same ordered clean-seed presentations until 150M anchored tokens, finishing the last complete optimizer update and reporting its overshoot. In the illustrative arithmetic tables, the clean-source anchor and actual corrupted input are both assumed to have the displayed source length. Real mixtures require recalculation and native timing.
+
+### 19.1 Memory model
+
+Use decimal GB (10^9 bytes) throughout these tables; divide GB by 1.073741824 for GiB. The machine's 48GB is shared by the operating system, applications, model, caches, and workspaces.
+
+For C101, precompute each complete optimizer update's valid action/start/end/replacement-label denominators from its labels before the microsteps. Scale each component loss sum by its own full-update denominator before backpropagation; omit a component with zero valid labels. Accumulate these correctly weighted microgradients into ONE FP32 buffer, then clip and update once without another target-token division. Do not allocate one full parameter-gradient buffer per objective. The simpler single-valid-token-denominator accumulation rule applies to A/B/MODEL1. This distinction is required for both objective correctness and the memory estimate below.
+
+The proposed explicit precision layout has 2N bytes of BF16 working weights, 4N FP32 master weights, 4N accumulated gradients, and 8N Adam moments: **18N persistent bytes**. The chosen differentiable FP32-master path also materializes up to 4N bytes of FP32 microgradients, giving **22N basic live bytes**. Old/new optimizer overlap, temporary casts and retained graphs can need more; inspect tensor ownership and materialized peaks instead of trusting this arithmetic.
+
+| Size represented | BF16 weights | FP32 accumulator | Adam m/v | FP32 master | Persistent total |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| M1 100.69M | 0.201 GB | 0.403 GB | 0.805 GB | 0.403 GB | 1.812 GB |
+| S154 153.94M | 0.308 | 0.616 | 1.232 | 0.616 | 2.771 |
+| S203 202.94M | 0.406 | 0.812 | 1.623 | 0.812 | 3.653 |
+| S316 316.20M | 0.632 | 1.265 | 2.530 | 1.265 | 5.692 |
+| S510 509.94M | 1.020 | 2.040 | 4.080 | 2.040 | 9.179 |
+| S752 751.92M | 1.504 | 3.008 | 6.015 | 3.008 | 13.535 |
+| S988 987.88M | 1.976 | 3.952 | 7.903 | 3.952 | 17.782 |
+
+The familiar 16N rule describes some other dtype layouts, including all-FP32 weights/gradients/moments or BF16 weights/gradients with FP32 master/moments. It omits the separate FP32 accumulation in this layout. Stock MLX AdamW does not automatically create FP32 master copies for BF16 parameters; its moments are initialized from parameter dtype, and bias correction must be requested explicitly. [S5]
+
+### 19.2 Conditional peak planning envelope
+
+These are **engineering allowances, not measurements or fit guarantees**. They assume microbatch 1; 1,024 tokens for the causal model, source=target=1,024 for seq2seq; activation recomputation per block; bounded logit calculation; prompt release of obsolete graphs; 2GB other workspace/cache allowance; and 8GB reserved for macOS/other processes.
+
+| Candidate | Activation allowance | Estimated whole-machine envelope including 22N + workspace + reserve | Initial training batch |
+| --- | ---: | ---: | --- |
+| M1 | 1-2 GB | 13.2-14.2 GB | B1  ×  1,024; accumulate 32 |
+| S154 | 1.5-3 GB | 14.9-16.4 GB | B1  ×  (1,024+1,024); accumulate 16 |
+| S203 | 1.5-3 GB | 16.0-17.5 GB | Same |
+| S316 | 2-4 GB | 19.0-21.0 GB | Same |
+| S510 | 2.5-5 GB | 23.7-26.2 GB | Same |
+| S752 | 3-6 GB | 29.5-32.5 GB | Same, conditional only |
+| S988 | 3.5-7 GB | 35.2-38.7 GB | Same, conditional only |
+
+At fixed 1,024/1,024 seq2seq lengths, 16 accumulated examples give 32,768 actual source+target tokens and 16,384 target-loss tokens per update, excluding minor controls/EOS conventions. At variable lengths, accumulate until approximately 32k canonical exposure tokens, finish the last whole example, and log the true number and target denominator. The initial educational B4/accum 8 option must be measured separately from the B1 memory table.
+
+Do not add process RSS and MLX active memory: they overlap. Record active, cache and peak allocations plus RSS, system pressure and swap growth as separate views. Prefer a measured training-process ceiling of 36GB and stable memory pressure; reduce batch/context before relying on swap. A configured MLX memory limit is not a guarantee of a hard no-swap ceiling. [S6]
+
+### 19.3 Attention is the major version-specific caveat
+
+The inspected stable release, MLX v0.32.3, defaults to unfused Metal attention in training; its Metal VJP always falls back. Fast inference attention or force_fused forward does not establish memory-efficient backward. The inspected newer commit, 0e3ff3643b1c3719f78814b98e0d222afbad867c, has a newer backward implementation, but array masks exclude its fused path. Benchmark these as separate pinned configurations. [S3-S4]
+
+For S316 at B1 and source=target=1,024, one FP32 attention-score-sized tensor retained across encoder/self/cross operations occupies approximately 1.812GB. At 2,048 it occupies 7.248GB. Additional softmax/backward tensors can multiply this. GQA reduces KV width; it does not reduce the number of query-head score matrices.
+
+Recomputation reduces retained activations but adds work and can still require large per-layer temporary matrices. Fused attention may reduce storage without eliminating quadratic attention arithmetic. A 2,048 or 4,096-token run therefore requires its own calibration; none is certified by the table above.
+
+### 19.4 Operation accounting
+
+For a dense causal language model, 6ND is a useful coarse training proxy, where N is a stated parameter convention and D processed tokens. It is not an exact count, and it does not directly apply to every encoder-decoder position. Use the following more explicit seq2seq calculation, with B examples, source length S, target T:
+
+~~~text
+F_linear_forward =
+  2B [ E*S*(4d^2 + 3df)
+      +D*( T*(4d^2 + 2dk + 3df) + 2S*dk )
+      +T*d*V ]
+
+F_attention_forward approximately =
+  4B*d [ E*S^2 + D*(T^2 + S*T) ]
+
+F_training approximately 3*(F_linear_forward + F_attention_forward)
+  plus actual recomputation, optimizer, norms and other operations.
+~~~
+
+The attention expression uses full-square arithmetic, including the causal triangle that some kernels skip. Decoder cross K/V projections occur on source positions. Tied embeddings save storage but retain the T × d × V output projection work. The timing scenarios below approximate all blocks being recomputed once: four times forward block arithmetic plus three times output-head arithmetic. They exclude unmodeled launch, graph, optimizer and I/O overhead. [S23]
+
+### 19.5 Original engineering-campaign throughput and duration scenarios
+
+**No primary-source measurement matching this exact M5 Pro full-training setup was found.** Accordingly, the following is a sensitivity analysis at assumed sustained effective rates of **1 / 4 / 8 TFLOP/s**, not measured hardware throughput, a promised range, or a lower/upper bound. Real performance can fall outside these scenarios. Shape and optimizer overhead at microbatch one are especially important.
+
+These retained campaigns are conditional engineering and educational options, not the publication MVP. M1 is calculated at T=1,024. Seq2seq rows use S=T=512 and total non-padding source+target tokens. Head/control overhead and real length distributions change the result.
+
+| Candidate | Planned exposure | Approx. campaign FLOPs | Tokens/s at 1 / 4 / 8 TF/s | Continuous days at 1 / 4 / 8 TF/s |
+| --- | ---: | ---: | --- | --- |
+| M1 100.69M | 1.0B | 0.956  ×  10^18 | 1,046 / 4,183 / 8,366 | 11.1 / 2.77 / 1.38 |
+| S154 optional | 0.4B | 0.270  ×  10^18 | 1,483 / 5,932 / 11,863 | 3.12 / 0.78 / 0.39 |
+| S203 prototype | 0.6B | 0.527  ×  10^18 | 1,138 / 4,552 / 9,104 | 6.10 / 1.53 / 0.76 |
+| S316 engineering primary | 1.5B | 2.038  ×  10^18 | 736 / 2,943 / 5,887 | 23.6 / 5.90 / 2.95 |
+| S510 conditional | 2.0B | 4.373  ×  10^18 | 457 / 1,830 / 3,659 | 50.6 / 12.65 / 6.33 |
+| S752 optional | 3.0B | 9.569  ×  10^18 | 314 / 1,254 / 2,508 | 110.8 / 27.69 / 13.84 |
+| S988 optional | 4.0B | 16.836  ×  10^18 | 238 / 950 / 1,901 | 194.9 / 48.72 / 24.36 |
+
+Source+target accounting makes a seq2seq token cheaper on average than a causal token passing through every layer; the table must not be used to declare one model faster at equal product work. Compare identical strings and actual elapsed time.
+
+At eight available training hours per day, multiply continuous days by three, then add measured evaluation, save/load, teacher generation and recovery costs. A provisional 20% overhead allowance is reasonable for planning only; replace it with measurement.
+
+The retained M1+S203+S316 campaign budget is a vector: **1.0B educational processed tokens plus 2.1B product_canonical_v1 exposures**, with about **3.52  ×  10^18 modeled FLOPs**, excluding small bake-offs and failed runs. Adding S510 gives **1.0B educational processed tokens plus 4.1B product_canonical_v1 exposures**, with about **7.89  ×  10^18 modeled FLOPs**. The token ledgers are not one common scientific exposure unit; the same-unit modeled operation totals can be summed under the stated shape assumptions. At the illustrative 4 TF/s point these correspond to about 10.2 and 22.9 continuous compute days before overhead. This is a multistage research campaign, not one overnight run.
+
+For a broad-language-model comparison, the often-cited 20-tokens-per-parameter scale would mean 20B tokens for 1B parameters. Even the coarse 6ND proxy is 1.2  ×  10^20 FLOPs: about 174 continuous days at 8 TF/s, before omitted costs. This is not a mandatory ratio for a cleanup specialist; it explains why casually proposing broad 1B pretraining on a laptop is a poor default. [S24]
+
+### 19.6 Checkpoints and SSD
+
+Save at optimizer boundaries so gradients need not be serialized. FP32 master weights plus two moments require approximately 12N bytes. BF16 inference exports require 2N before metadata; Q8/Q4 exports are separately validated.
+
+| Candidate | One full resume checkpoint | Three resume copies | BF16 export | Suggested free SSD before campaign |
+| --- | ---: | ---: | ---: | ---: |
+| M1 | 1.21 GB | 3.62 GB | 0.20 GB | 30 GB |
+| S154 | 1.85 | 5.54 | 0.31 | 35 GB |
+| S203 | 2.44 | 7.31 | 0.41 | 40 GB |
+| S316 | 3.79 | 11.38 | 0.63 | 60 GB |
+| S510 | 6.12 | 18.36 | 1.02 | 80 GB |
+| S752 | 9.02 | 27.07 | 1.50 | 110 GB |
+| S988 | 11.85 | 35.56 | 1.98 | 140 GB |
+
+Free-space budgets are planning allowances for selected text/audio shards, temporary checkpoints, exports and logs, not observations of the user's disk. With a 16k vocabulary, uint16 token arrays cost roughly 2GB per billion stored token IDs, plus offsets and metadata. Exposures repeated in memory do not require duplicate token storage. Keep raw source snapshots and only bounded TTS audio; do not retain every generated intermediate indefinitely.
+
+### 19.7 BENCH-00 calibration design
+
+**Purpose:** replace speculative duration/memory assumptions with a versioned native measurement before a long run. This document did not execute BENCH-00 on the user's Mac.
+
+1. **Identity record.** Capture GPU core count, chassis, macOS build, native ARM Python, MLX wheel/source commit, power mode, charger state, competing GPU processes, available disk, model config and dtype policy. Confirm Metal execution. Record thermal state and fan/power information when available.
+2. **Prerequisites.** Pass V0-V4 for the transparent model and optimized attention path. Check causal leakage, GQA gradients, output shifting, accumulation equivalence and actual FP32 optimizer states. A CPU fallback result is not a GPU benchmark.
+3. **Fixed workload.** For each selected configuration perform 5 complete warmup optimizer updates followed by **100 timed optimizer updates**. Use 32,768 nominal processed/canonical tokens per update as defined for that task. Record compilation and first materialized optimizer initialization separately. Pre-evaluate synthetic inputs for compute-only timing.
+4. **Representative grid.** Test M1 at T=512 and 1,024, B1 then B4 if memory permits. Test B100 and S203 at (S,T)=(64,64), (256,256), (1,024,1,024), (512,128), and (128,512), with B1 unpadded. Add S316 only after earlier fit is known. Compare the actual representative-length mixture, not only the best-shaped dense case.
+5. **Correct masking.** On the stable backend also measure correctly padded/masked small batches. On the newer pinned backend compare unpadded causal/unmasked training after output/gradient parity. Never ignore source padding to obtain a faster result. Record whether forward and backward actually use the intended kernel.
+6. **Full training operation.** Time forward, target loss, backward, FP32 accumulation, clipping and actual AdamW cadence. Explicitly evaluate parameters, optimizer state, loss and accumulators before ending a timed update. Release obsolete lazy graphs each microstep.
+7. **Sustained thermal run.** Run the selected production-shaped mixture for at least 20 measured minutes after warmup. This is separate from the fixed-step screen. Report whole-run and last-five-minute throughput, per-minute rates, update-time p50/p95, and first-five versus last-five degradation.
+8. **Memory and utilization.** Record MLX active/cache/peak, RSS, system pressure and swap growth at initialization, steady state, validation and save/reload. Measure GPU utilization with an available native profiler or powermetrics; if unavailable, label that field unavailable and document the Metal execution proof. Do not infer utilization from bandwidth.
+9. **Dataset-path benchmark.** Repeat a bounded measured segment with the real tokenizer/reader, length buckets and augmentations. Report pipeline throughput separately from synthetic compute-only throughput.
+10. **Checkpoint rehearsal.** Save a full checkpoint at an update boundary; restart only the disposable benchmark process; compare 20 resumed updates against an uninterrupted control. Measure write/load time, bytes, hashes and memory peak.
+
+BENCH-00 emits machine.json, software-lock.json, config.json, dtype-inventory.json, steps.jsonl, memory.jsonl, thermal.jsonl, resume-report.json and calibration.json. It reports input tokens/s, target loss tokens/s, canonical exposures/s, padded throughput and data efficiency separately.
+
+For the publication experiment, test A100/B100/C101 at source/full-target pairs (64,64), (256,256), (1,024,1,024), (512,128) and (128,512), with trusted controls included within the declared source limit. A100 uses the corresponding combined context up to 2,048 positions; B100 uses separate encoder/decoder lengths. C101 additionally uses its actual action-position distribution and complete multi-component loss, including a registered dense-edit stress shape. ByT5-small processes the same strings at their actual native byte lengths; common project-tokenizer lengths are not a substitute. Expand the full grid only after shorter shapes and memory fit pass. Measure the B100 acoustic arm's actual input-length mixture separately if it differs materially from the text control. S203/S316 benchmark expansion is conditional on the stretch decision; it is not a new MVP training requirement. Each checkpointed or optimized path must retain its real objective, source-padding mask and decoder/cross-attention semantics. Canonical token accounting does not justify replacing native byte lengths by subword lengths in a performance report.
+
+Compile/materialize every selected bucket and optimizer state before its timed updates; keep compilation and first-use cost as separately reported measurements. A lazy forward call without completed gradients and parameter updates is not a training benchmark. The twenty-minute sustained test is performed on a representative production-shaped mixture after warmup, not inferred from a brief dense-matrix burst. It is proposed work to run later on the user’s Mac, never an automatically executed part of this design deliverable.
+
+**Acceptance:** finite updates; correct masks/gradients/resume; no sustained growth from retained graphs; acceptable system pressure; stable last-window rate or an explicitly conservative throttled rate; observed memory below the chosen local envelope. If the projected S316 run exceeds 14 continuous-equivalent days, re-evaluate token budget, data efficiency, kernels or size before scheduling it. This cap is a proposed personal research budget, not a claim about hardware limits.
+
+**ETA formula:** measured training seconds = sum over length buckets(exposure_tokens_bucket / sustained_exposures_per_second_bucket), plus measured validation/checkpoint/data costs. Use the actual production mixture and the slower sustained window, not peak burst speed. Calibration is rerun after meaningful changes to architecture, context, precision, masks, optimizer or backend.
+
+### 19.8 Publication run ledger and matched budgets
+
+The MVP has four final scratch arms: A100 text, B100 text, C101 text and B100 acoustic. Each has three independent final training seeds, **1729, 2718 and 31415**, and each processes 150M paper_canonical_v2 anchored tokens. The total is **12 final scratch trajectories and 1.8B anchored token exposures**. These are proposed experiments. No run is complete.
+
+Each arm receives three development probes at 10M anchored tokens with the separate pilot seed 42: **12 trials, 120M anchored tokens in total**. A100, B100-text and C101 use their probes for the registered recipe selection. B100-acoustic uses its three probes only for feasibility and sensitivity; its primary optimizer, learning rate and schedule are copied exactly from the B100-text recipe selected by the preregistered text-development rule. The default learning-rate screen is the retained set 1e-4, 3e-4 and 6e-4; any broader optimizer change needs symmetric, budgeted development comparison and a pre-test protocol amendment. The earlier engineering idea of extending selected development trajectories to 50M is optional and separately costed. It is not an unrecorded addition to this paper's HPO allowance.
+
+All final trajectories start afresh after recipe selection. The paper schedule is continuous: 3M anchored-token warmup (2% of 150M), then cosine decay to 10% of the selected peak learning rate at 150M, with no optimizer or learning-rate reset at the 100M/140M phase boundaries. An HPO run or educational MODEL1 checkpoint cannot count as one of the three final replications. B100-acoustic replaces the registered 40% synthetic-corruption allocation in each curriculum phase, using the same accepted clean seeds and spoken renderings. Its other 60% is identical; the development-compute allowance is symmetric although the probe selection roles differ. A/B/C representation recipes may be selected within the common allowed grid. For H2, the acoustic treatment does not select its own best recipe: it uses the exact B100-text optimizer, learning rate and schedule. If its feasibility probes reveal failure, amend the common B recipe and repeat comparable development before freeze, or block H2. The primary channel contrast therefore holds the training algorithm fixed.
+
+| Experiment group | New final trajectories | Anchored exposures | HPO allowance | Status |
+| --- | ---: | ---: | ---: | --- |
+| A100 / B100 / C101 text arms | 9 | 1.35B | 9  ×  10M | Mandatory MVP |
+| B100 acoustic arm | 3 | 450M | 3  ×  10M | Mandatory MVP; B100 text controls reused |
+| ByT5-small task adaptation | 3 | Actual anchored and native-byte totals reported | Three bounded recipes | Mandatory practical comparator; separate pretrained lineage |
+| B203 / B316 text frontier | 6 | 900M | Frozen size-transfer policy or a separately declared symmetric allowance | Stretch |
+| B100 / B203 / B316 continuation to 300M | No new independent seeds; nine continuations | Additional 1.35B | No test-driven retuning | Optional stretch |
+| Educational MODEL1 | Separate trajectory | Original 50M / 250M / 1B milestones | Educational budget | Parallel learning track |
+
+ByT5-small receives three final adaptation seeds and three equal, predeclared development recipe allowances. Register its native runtime, context feasibility, optimizer recipe, downstream time cap and stopping rule after BENCH-00 and before final comparisons. A practical comparison at the same downstream training-time cap can process a different amount of anchored text; report that difference. If a separate equal-exposure ByT5 result is claimed, all common eligible examples and its actual exposure budget must also be matched. Neither comparison makes its previous pretraining compute equal to the scratch students'. [D13, S19]
+
+The primary scratch exposure checkpoints are 50M, 100M and 150M; retain weights and development learning curves at all three. Full sealed-test evaluation is mandatory only at the final confirmatory 150M checkpoint; complete test learning curves are a separately costed extension. No performance-based early stopping occurs in those final runs. A fixed numerical-failure policy can terminate a failed run, with retries, wasted work and incomplete cells shown in the registry. Development evidence must establish that 150M is an interpretable learning budget before freeze.
+
+For the secondary matched-compute view, define a common measured training-time cap T* on the same machine from BENCH-00 before final outcomes. Record full-update accelerator wall time, synchronized at the update boundary. Include forward, loss, backward, accumulation, clipping, optimizer and required device transfers; record compilation, warmup, validation, data preparation and checkpoint-writing costs separately under a common accounting policy. “Accelerator wall time” here means elapsed time for the declared synchronized update workload; it is not an inference of GPU utilization or a device-counter FLOP measurement.
+
+Select the nearest retained completed optimizer checkpoint **not exceeding T***. Freeze its recording cadence, report any undershoot, and use a cadence fine enough for the intended time comparison. Do not retrospectively choose a favorable time or interpolate model quality between checkpoints. Actual examples, anchored tokens, corrupted-input tokens, loss positions, action/native tokens and model-derived FLOPs can differ at T*. A data-matched result and a time-matched result are separate estimands. The mandatory MVP retains T* checkpoints, measured times and development-quality comparisons. Full sealed-test T* quality is an optional pre-freeze-budgeted expansion, not an implied equal-time claim about the final 150M results. Evaluating every 16-system roster again on both natural views and the 9,000-case panel would add up to another 426,432 outputs; an expansion with fewer eligible checkpoints records its exact smaller roster.
+
+### 19.9 Whole-paper operation and duration sensitivity
+
+For this arithmetic only, use actual source length 512, clean-source anchor length 512 and full target length 512. A100 processes a combined 1,024-token sequence but computes vocabulary logits on its 512 target positions. B100/B203/B316 use 512 encoder and 512 decoder positions. Recompute every transformer block once, as in Section 19.4.
+
+C101's two numerical rows are **dense-head planning scenarios**, with 512 or 1,024 native decoder event positions for the same 512-source/512-rendered-target case. They assume vocabulary, pointer and action-classifier heads are evaluated at every decoder position and approximate the boundary-key count by S=512. Neither is a bound on real event length, actual executed work or total runtime. The dense-head calculation adds three times this simplified pointer forward arithmetic, using T_decoder for its event-position count:
+
+~~~text
+F_pointer_forward =
+    4 * 128 * d * (S + T_decoder)
+  + 4 * 128 * S * T_decoder
+  + 6 * T_decoder * d
+~~~
+
+The exact head-dispatched implementation distinguishes decoder states, vocabulary predictions and edits. With the event convention in Section 9, let K be edits and R replacement tokens. The decoder begins with BOS; an edit appends start-feedback and end-feedback states, replacement tokens and END-EDIT; terminal END/ABSTAIN decisions do not add input positions. Then:
+
+~~~text
+T_decoder = 1 + R + 3K
+T_vocab   = R + K
+n_start = n_end = K
+n_action = K + 1
+
+F_vocab_forward = 2 * T_vocab * d * V
+F_pointer_dispatched_forward =
+    4 * p * d * (S_b + K)
+  + 4 * p * S_b * K
+  + 6 * d * (K + 1),     p = 128
+~~~
+
+Here S_b is the valid boundary-key count. Decoder blocks use T_decoder; the vocabulary head uses T_vocab; pointers and the action classifier use their actual event counts. Apply the declared block-rematerialization and head-backward multipliers to their respective costs. Bias adds, normalization, masking, launch and other stated overhead remain outside this simplified count. Identity has one decoder state and an END decision; an empty replacement still predicts END-EDIT. There is no parameter-count change from this dispatch convention.
+
+Keeping the table's other dense-pointer assumptions but reducing vocabulary projections from 1,024 to 512 positions yields 612,840,960 FLOPs per canonical token rather than 650,589,696. That is an arithmetic illustration, not a measured efficiency result. Recalculate forecasts from actual K/R/S_b distributions before scheduling.
+
+Native-length feasibility is separate from the canonical budget. A single full-span replacement with 1,023 ordinary target tokens needs 1,027 decoder states under this convention. A 1,024-native-position cap therefore does not prove that every 1,024-full-target example is equally representable by C. Freeze any label coalescing/common training eligibility, benchmark an increased native cap if selected, and preserve explicit unsupported/cap outcomes on the full frozen test. Do not silently drop those test inputs to improve C's score.
+
+| Candidate and declared shape | Modeled FLOPs per paper_canonical_v2 token under the equal-source-length assumption |
+| --- | ---: |
+| A100, combined 1,024 / target head 512 | 918,552,576 |
+| B100, source 512 / target 512 | 440,401,920 |
+| C101, source 512 / decoder positions 512, dense heads | 441,981,696 |
+| C101, source 512 / decoder positions 1,024, dense-head planning allowance | 650,589,696 |
+| B203, source 512 / target 512 | 878,706,688 |
+| B316, source 512 / target 512 | 1,358,954,496 |
+
+These counts include dense block arithmetic, full-square attention, output projection, the declared dense C-head scenario and rematerialization. They omit some optimizer, norm, loss, launch, allocator, data and checkpoint work. The table is an architecture-derived operation model, **not measured executed FLOPs**. Replace its average lengths, head dispatch and edit/event distributions by the actual buckets before using it for a campaign forecast. The aggregate budget rows below retain the 1,024-position dense-head C scenario so their arithmetic remains explicit and reproducible.
+
+| Work item | Modeled FLOPs |
+| --- | ---: |
+| Twelve final scratch MVP runs | 1.1024757504  ×  10^18 |
+| Twelve 10M scratch development trials | 0.07349838336  ×  10^18 |
+| Scratch MVP plus its HPO | 1.17597413376  ×  10^18 |
+| Six additional B203/B316 150M stretch trajectories | +1.0069475328  ×  10^18 |
+| Nine B-family 150M-to-300M continuations | +1.2051283968  ×  10^18 |
+| Optional early educational MODEL1 50M stage | +0.0478150656  ×  10^18 |
+
+Let F_P denote the operation model for ByT5-small's three recipe trials and three final adaptations at their native byte lengths. A provisional **F_P ≤ 1.0  ×  10^18 FLOP allocation** is a budget proposal until BENCH-00 and its exact implementation establish a credible adaptation schedule. It is not a calculation of ByT5's required work, a measured Mac result, or a promise that 150M anchored tokens fit within it. If a useful fair comparator cannot be trained within that allowance, amend the budget before test; do not give an undertrained baseline a nominally equal label.
+
+The complete training accounting is:
+
+~~~text
+F_paper =
+    F_scratch_final + F_scratch_HPO + F_ByT5
+  + F_correctness_and_BENCH + F_failed_attempts
+  + F_optional_registered_extensions
+~~~
+
+Generation, ASR replay, evaluation, CPU scoring and researcher attention have their own cost ledgers because a single FLOP estimate cannot honestly summarize every stage. The following table substitutes the provisional ByT5 allocation for F_P and excludes the still-unmeasured correctness/BENCH and failed-attempt terms:
+
+| Prospective scenario | Modeled allocation | Continuous days at assumed 1 TF/s | At 4 TF/s | At 8 TF/s |
+| --- | ---: | ---: | ---: | ---: |
+| MVP scratch + HPO + ByT5 allowance | 2.17597413376  ×  10^18 | 25.18 | 6.30 | 3.15 |
+| Above plus the three-size B frontier | 3.18292166656  ×  10^18 | 36.84 | 9.21 | 4.60 |
+| Above plus B-family 300M continuations | 4.38805006336  ×  10^18 | 50.79 | 12.70 | 6.35 |
+
+Each entry is FLOPs divided by assumed TF/s  ×  10^12  ×  86,400. These **1/4/8 effective TF/s values are sensitivity assumptions**, not a measured range, expected minimum, or hardware limit. Performance can fall outside them. ByT5 byte lengths, unfused masked attention backward, small microbatches, action density and rematerialization can change the realized rate substantially.
+
+At eight available training hours per day, multiply continuous days by three. A separate provisional 20% operational allowance gives another factor of 1.2: approximately 90.7 / 22.7 / 11.3 calendar days for the MVP row at the three assumed rates. Replace both the rate and overhead by observed native measurements before scheduling. These figures exclude corpus generation, native porting, evaluation, CPU scoring and the full educational program. Part VI replaces this eight-hour planning illustration with an explicit conditional thirty-day schedule. No manual annotation cost is required by the publication MVP.
+
+### 19.10 Automatic construction, inference and scoring costs
+
+The publication MVP requires **zero new human annotation hours**. There is no rater recruitment, second rater, adjudication, author listening queue, hand-marked critical panel or output-by-output human verification. Existing public transcripts and programmatically generated latent records define the reference policy. Software qualification, deterministic ambiguity bounds and source limitations replace the former annotation contract. Researcher coding, protocol administration, analysis and writing still require time; Part VI budgets that attention explicitly.
+
+The natural population has a nominal 5,273 LS-PC test cases plus 3,553 released SLUE-VoxCeleb test cases: **8,826 cases and about 17.95 audio hours before the future source-only inventory**. Retained cases, exact durations, words, source errors and provenance blocks remain unknown until that inventory. Parakeet and the fixed Whisper external view decode the same audio. Their serial device cost is approximately 17.95  ×  (RTF_Parakeet + RTF_Whisper) hours, plus loading and I/O; both RTFs equal to one would imply 35.9 hours. This is arithmetic, not a measured rate.
+
+The bounded acoustic training construction starts with 2,000 clean seeds and two voices: 4,000 base synthesized clips. At an assumed ten seconds per clip this is about 11.1 hours to synthesize. Two clean/noise views give 8,000 Parakeet decodes, about 22.2 audio hours. The independent clean-synthesis defect screen uses the pinned wav2vec2 CTC verifier on the 4,000 clean clips, about 11.1 hours. Its exact lexical agreement is an automatic defect screen, not proof that generated audio is true. Whisper is not used to select training examples. Sequential cost is therefore approximately:
+
+~~~text
+H_acoustic_pool = 11.1 * RTF_TTS
+                +22.2 * RTF_Parakeet
+                +11.1 * RTF_verifier
+                + loading, preprocessing, rejected attempts and bounded retries.
+~~~
+
+At assumed RTF .2 for each stage, the first three terms total 8.9 device-hours. The month scenario reserves 24 hours for the complete training/development construction work, including the real-audio term below; actual accepted yield, selected audio duration and retry caps must qualify before freeze. Generate the immutable accepted pool once and reuse it across the three training seeds. If all 8,000 records were accepted and averaged 100 anchored tokens, one pass would contain .8M anchored tokens, and a 60M acoustic allocation would repeat it about 75 times. Neither acceptance nor those mean lengths are known, and 60M exposures are not 60M unique tokens. If automatic acceptance/support or diversity fails its development gate, block or amend H2 before test; do not open a manual repair queue.
+
+The registered 10% real-pair training share also requires the pinned Parakeet hypotheses for the selected public training, development and calibration audio. Existing references or available audio do not imply that these hypotheses already exist. Let H_real_train_dev_audio be the exact selected audio duration in hours, after source-only manifests and deduplication. Add the following term to the same provisional 24-hour construction allowance:
+
+~~~text
+H_real_ASR = H_real_train_dev_audio * RTF_Parakeet
+           + model loading, preprocessing, I/O and registered retries.
+H_construction = H_acoustic_pool + H_real_ASR + other registered construction work.
+~~~
+
+Record the training/development/calibration subsets and their actual hours separately. Reuse existing hypotheses only if their recognizer version, decoding, preprocessing and provenance meet the frozen input recipe; do not presume such caches are available. No whole-corpus decode is required when a smaller predeclared source pool supplies the fixed exposure schedule. The proposed 24-hour allowance is valid only if **all** construction terms fit after measurement; any overrun is added to the device ledger and month inequality. The separate 18-hour recognizer allowance covers only final natural Parakeet and Whisper evaluation, not this real training/development work.
+
+The bare inference roster is twelve scratch runs, three ByT5 adaptations and one fixed task-matched Qwen configuration: **16 systems**. Seeds produce separate output files but do not create independent source cases. Raw-input and deterministic baselines need CPU processing; they do not add neural generations. The mandatory generated panel contains 9,000 cases, hash-selected before outcomes as 3,000 complete clean/repair/mixed groups from the specified 30,000-case pool.
+
+| Output workload | Arithmetic | Mandatory correction outputs |
+| --- | --- | ---: |
+| Natural Parakeet view | 8,826  ×  16 | 141,216 |
+| Natural Whisper view | 8,826  ×  16 | 141,216 |
+| Balanced generated panel | 9,000  ×  16 | 144,000 |
+| Mandatory total | 16  ×  (2  ×  8,826 + 9,000) | **426,432** |
+| Full 30,000 generated-case alternative | 16  ×  (2  ×  8,826 + 30,000) | **762,432** |
+
+These are nominal arithmetic counts before structural inventory, not completed outputs. The full-pool alternative requires a pre-freeze runtime decision or remains stretch; 9,000 evaluated cases never become a 30,000-case model census. All eligible attempted outputs, including failures, remain in the score ledger. A failed output must not reduce the cost or denominator by disappearing.
+
+Use a per-system, per-shape timing ledger: H_inference = sum(number of requests in cell  ×  measured seconds per request in cell)/3,600, plus cold load/compile and retries. A pooled hypothetical .25/.5/1 second per output gives **29.61/59.23/118.45 hours** for the mandatory roster. It gives **52.95/105.89/211.79 hours** for the full 30,000-case alternative. This average is only a sensitivity input; Qwen, ByT5 native bytes, long cases and autoregressive edits can differ greatly. A fast student rate cannot be applied to the whole roster.
+
+Deterministic guards should reuse cached bare proposals. Fresh Qwen fallback calls, export/quantization sweeps, full-test matched-time checkpoints and extra prompts are additional workloads. Mandatory warm/cold and guarded/full-system timing uses a frozen representative request panel and at least the registered timing sessions; it is budgeted separately from quality generation. Its actual panel, repetitions, load costs and Qwen-fallback count must fit the runtime allowance before freeze. Do not call all-system deployment latency measured from a bare-forward microbenchmark.
+
+Development correction inference is additional to the 426,432 final outputs. Use one small frozen common decoding panel and record its exact size and eligibility before recipe selection. The request ledger enumerates every HPO recipe check, final-run 50M/100M/150M development checkpoint, retained T* checkpoint, ByT5 recipe/adaptation check and bounded Qwen prompt candidate. Its cost is sum over these system/checkpoint/prompt cells of panel requests times measured seconds per request, plus actual load/compile costs. Charge these decoded checks inside the provisional 12-hour development/runtime allowance alongside warm/cold and guarded/full timing; if the combined work exceeds it, add the measured overrun. Teacher-forced development loss is separately recorded and is not a decoded WER or repair-quality curve. A narrower predeclared development panel can control this cost; omitting a required selection check or calling its accelerator work free cannot.
+
+CPU scoring also has a budget. Compute the exact triple-alignment sufficient counts once per cached output; bootstrap resamples those counts, rather than rerunning alignment 20,000 times. BENCH-00's scoring extension measures normalization, tokenization, ordinary edit distance, exact-lattice visits, cap/fallback frequency, elapsed CPU time and peak resident memory on short, long, repeated-token and dense-error development cases. Freeze the scorer work cap and analytic bound fallback in Part IV. At a hypothetical .01/.1/1 CPU-second per output, the 426,432 outputs require **1.18/11.85/118.45 single-worker CPU-hours**, before setup and bootstrap. These are sensitivities, not a guarantee of sparsity or coverage. Parallel workers share the Mac's memory bandwidth, RAM and thermal envelope. Count extra simultaneous workers only after measuring that configuration; scorer/training overlap is not free.
+
+The primary scorer never discards a difficult row or requests a human ruling. Its cap fallback widens the source-fixed identification bounds. If these bounds or the source-cluster precision cannot support a primary claim, the result is inconclusive; a faster but biased scorer is not an acceptable month-saving shortcut.
+
+### 19.10a Whole-program month gate
+
+Part VI provides the executable scheduling contract for later implementation. Its mandatory-study sensitivity reserves 16 device-hours for correctness/BENCH, 24 for all acoustic and selected real training/development construction, 18 for final public recognizer views only, and 12 for decoded development checks plus warm/cold/guard/full timing: **70 additional device-hours**, all provisional caps to validate. Combined with the full ByT5 training allowance and .5 seconds per correction output, the assumed 4 TF/s training point gives 151.11 + 59.23 + 70 = **280.34 device-hours**. A 25% rerun/operational reserve gives **350.42 hours**. At 1 TF/s the same scenario needs 917.08 hours including reserve; at 8 TF/s it needs 255.98 hours. These numbers show conditional sensitivity, not observed M5 performance. In particular, the 370.42-hour CPU-inclusive scenario below remains applicable only if all selected real training/development ASR and acoustic construction fit the 24-hour allowance and all decoded development/runtime work fits the 12-hour allowance; measured overruns are additive.
+
+The 350.42-hour figure excludes CPU scoring. A separate provisional 16-hour serial CPU scoring/bootstrap/setup allowance, with the same 25% reserve, raises the illustrative critical-path total to **370.42 hours** unless measured safe overlap reduces its incremental cost. Thus this 4 TF/s/.5-second scenario does not fit the 352-hour conservative capacity on a serial accounting basis.
+
+Twenty-two device-available days at 16 or 20 hours/day supply 352 or 440 hours. Availability is an upper planning capacity, not proof that the dependencies finish before the results deadline. Full training, TTS, ASR and neural inference serialize on the single Mac. Writing and agent-assisted code review may overlap unattended device work; another coding agent does not supply another accelerator. CPU scoring must also meet the measured critical-path and contention gate. A 30-day program is accepted only after actual native timings, ByT5 feasibility, code readiness and the dependency schedule fit, with the reserve intact.
+
+If it does not fit, remove optional scale-up, extra test checkpoints, the remaining 21,000 generated model cases and extra export/prompt sweeps before altering the core study. Preserve the twelve final scratch runs, three seeds, 150M exposure and qualified ByT5 comparator. If those still exceed capacity, report a thirty-day pilot or extend the calendar; do not call an incomplete grid the registered MVP or lower a statistical margin after outcomes.
+
+### 19.11 Checkpoint retention and reproducible accounting
+
+The Section 19.6 SSD table concerns one candidate campaign, not all saved study trajectories. Compute whole-study storage from the number of retained full-resume states, weight-only evaluation snapshots, temporary writes, token/audio shards and exports. Do not assume every optimizer state is resident or every model trains concurrently.
+
+For each final trajectory retain immutable initialization and data manifests; the 50M/100M/150M evaluation weights; a verified end-of-run resume state if continuation is planned; and the logs needed to reproduce the training budget. During an active run keep two verified recovery checkpoints plus an in-progress write. Archive or remove redundant completed optimizer states only under a declared retention policy after hash verification.
+
+A resume record includes FP32 master weights and moments, optimizer step, scheduler position, Python/NumPy/MLX RNG states where used, data order and cursor, augmentation RNG, model/tokenizer/dataset hashes, software/backend identity and current phase. Optimizer-boundary saves need no accumulated gradient buffer. A mid-accumulation save must also serialize the accumulator and denominator; otherwise equivalent resume is not established.
+
+Write a checkpoint into a new temporary directory, verify hashes, shapes and a small forward evaluation, then atomically publish its completion marker. A partial directory never becomes latest. Save/load timing, disk bytes and their memory peaks belong in BENCH-00. The uninterrupted-versus-resumed twenty-update comparison establishes only the declared numerical tolerance on the pinned backend; it does not prove bitwise reproducibility across arbitrary software or hardware changes.
+
+The run ledger records exact parameter counts, dtypes, masks, initialization lineage, canonical and actual token totals, active/native device, all HPO and failed work, measured time, modeled operations, memory, precision and checkpoint identities. These records support a reproducible single-platform study. They do not support a claim that every 48GB Apple Silicon machine has the same training efficiency.
+
+
+## 20. Claim-to-experiment matrix
+
+**All claims are prospective. MEASURED RESULT: not available.** Only H1 and H2 form the primary statistical family. The former human-annotated resource claim C1 and human-audit claim S-HUM are retired. S-VALID records deterministic software qualification; S-LITERAL and S-STRESS have explicitly limited automatic evidence scopes. Neither a new benchmark name nor a taxonomy establishes novelty. The paper asks a narrow fixed-budget empirical question in relation to prior compact/TTS–ASR/scaling work.
+
+Common protocol P0 is Sections 10,19,21–27 and Parts IV–VI: raw pinned one-best input for task restore_reference; source-only eligibility and immutable provenance; paper_canonical_v2 clean-anchor exposures; no gold spans/audio provided to a corrector; final seeds 1729/2718/31415; pilot 42; fresh final 150M trajectories; frozen prompts/decoding/weights; all failures retained. The primary ratios D, completion-gated repair Q and WER W are each the equal-domain mean of LS-PC and full released SLUE corpus ratios. Pooled word/error-weighted estimates are secondary.
+
+Raw WER scores actual valid emitted text/prefix or empty for absent/unrenderable output. Invalid/missing/capped outputs receive zero completion-gated repair. Introduced-error and raw-repair attribution retains all admissible alignments or analytic cap bounds. The identity r−d=d(R,S)−d(R,O) applies to raw repair, not completion-gated Q. Source-return safeguards are separate guarded-system rows. Least-favorable primary contrasts use treatment upper D minus control lower D, and treatment lower Q minus control upper Q, with fixed source denominators. No manual reference or output-resolution gate is required.
+
+Statistical bounds follow Section 25, including source clusters, identification widths, denominator-zero handling and the conditional fixed-three-run scope. The figure/table IDs are planned artifact slots. A headline must match a completed card; no empty plot or hypothetical number is a result. All twenty required fields appear explicitly for every remaining card.
+
+### 20.1 H1
+
+| Required field | Registered design |
+| --- | --- |
+| Claim ID | H1 |
+| Exact prospective claim text | At the registered approximately 100M scale and 150M anchored exposure, C101 lowers reference-anchored introduced word errors relative to B100 while retaining completion-gated source-error repair and all-case WER within the registered margins. |
+| Research question | RQ1: representation, useful correction and preservation. |
+| Hypothesis | Joint alternative: ΔD<0, ΔQ>−.03 and ΔW<+.005 for C minus B, with least-favorable alignment bounds. Anti-identity gates also apply. |
+| Independent variable | Full-target generation versus pointer/action generation plus its constitutive deterministic copy renderer on the shared backbone; this is a representation-plus-renderer bundle. |
+| Dependent variable / primary endpoint | Equal-domain D/N_ref superiority; completed-repair/dS NI; all-case corpus-WER NI. D and Q have distinct source-fixed denominators. |
+| Control | B100 text with common source pool, tokenizer, eligibility, bounded recipe selection, curriculum, exposure schedule and seed count. |
+| Baselines | Raw source and deterministic normalization for utility; A100, ByT5 and task-matched Qwen as reference rows. |
+| Dataset / population | Nominal 8,826 natural cases: all LS-PC test plus full released SLUE test, subject only to frozen source-only eligibility. Primary recognizer is Parakeet. |
+| Unit of analysis | Paired source case aggregated into provenance clusters; fixed three-run mean. The rendered output, not exact latent action matching, is scored. |
+| Sample size | Actual retained cases, N_ref, dS, speakers/books/videos and independent blocks must be inventoried. Nominal rows do not establish power or scorable coverage. |
+| Seeds | 1729, 2718, 31415 per final arm; pilot 42 excluded. |
+| Statistical method | Paired domain-stratified cluster inference on least-favorable endpoint contrasts; Section 25 gives identification, zero-denominator and seed-conditional rules. |
+| Effect size to report | Percentage-point D, Q and W contrasts; identified ranges; both B/C utility contrasts; raw counts; per-seed and domain effects. |
+| Confidence interval | Fixed one-sided 97.5% component bounds. Report identified ranges and descriptive outer confidence regions; no midpoint-only interval. |
+| Multiple-comparison treatment | One joint member of the Bonferroni H1/H2 family. Necessary components use intersection–union logic; utility requirements restrict declaration. |
+| Predeclared success criterion | Upper ΔD<0; lower ΔQ>−3 pp; upper ΔW<+.5 pp. Practical observed least-favorable D reduction≥.1 pp. Both B/C observed Q gain over deterministic≥5 pp with lower bound>0, and WER versus raw upper bound<0. |
+| Falsification result | Failure of any necessary component or utility gate blocks the joint practical claim. Wide bounds are inconclusive; lower damage purchased through lost repair is a tradeoff result. |
+| Required figure/table | F01 introduced-error versus completed-repair bounds, with seed traces; T03 architecture and anti-identity results. |
+| Mandatory for MVP | Yes; a positive outcome is not assumed. |
+
+### 20.2 H2
+
+| Required field | Registered design |
+| --- | --- |
+| Claim ID | H2 |
+| Exact prospective claim text | Replacing the registered text-corruption allocation by paired TTS-to-Parakeet corruption improves real-speech reference restoration under the fixed B100 training algorithm while remaining within the introduced-error NI margin. |
+| Research question | RQ2: acoustic-channel data transfer. |
+| Hypothesis | Joint alternative: acoustic-minus-text equal-domain ΔW<0 and ΔD<+.001. |
+| Independent variable | Replace the 40% synthetic allocation in every phase with acoustic corruptions of the same accepted clean seeds/renderings; keep the other 60% and exact B-text-selected optimizer/LR/schedule fixed. |
+| Dependent variable / primary endpoint | Equal-domain corpus WER superiority and equal-domain D/N_ref NI. Completed repair, failures and generation yield are reported alongside. |
+| Control | The three existing B100-text runs; control work is reused rather than double-counted. |
+| Baselines | Raw source, deterministic normalization and practical pretrained/incumbent rows; no deliberately weak uniform-typo-only control. |
+| Dataset / population | Same nominal 8,826 natural Parakeet cases. Training estimand is conditional on frozen common automatically accepted paired support. |
+| Unit of analysis | Paired source case and provenance cluster. Training voices/noise variants remain grouped under clean seed. |
+| Sample size | Actual natural cases, word counts, source errors, accepted independent seeds and source blocks reported; no hand-selected critical subset. |
+| Seeds | 1729,2718,31415 for acoustic and text; matched initialization/data plan where applicable. |
+| Statistical method | Recompute domain corpus ratios and .5/.5 mean in paired cluster draws; preservation uses Dplus_acoustic−Dminus_text. |
+| Effect size to report | Absolute/relative WER change, introduced-error difference and identification width, repair, accepted yield, unique-source/repeated exposure and full construction cost. |
+| Confidence interval | Fixed one-sided 97.5% upper bounds for both decision components; per-domain/seed descriptive regions. |
+| Multiple-comparison treatment | Second joint member of primary Bonferroni family. Additional mixtures/verifiers/severity controls cannot replace it after outcomes. |
+| Predeclared success criterion | Upper ΔW<0 and upper ΔD<+.1 pp. Proposed practical observed WER gain≥.5 pp. Automatic pool/algorithm/budget gates pass before test. |
+| Falsification result | No natural transfer, preservation NI failure, inadequate common support or unequal training algorithm blocks interpretation. Synthetic-only gains are insufficient; wide bounds are inconclusive. |
+| Required figure/table | F02 real-channel correction/preservation; T04 proposal-to-acceptance flow and all construction/training costs. |
+| Mandatory for MVP | Yes. If feasibility fails, document a blocked claim or amend before freeze; never repair labels through a required human queue. |
+
+### 20.3 S-AB
+
+| Required field | Registered design |
+| --- | --- |
+| Claim ID | S-AB |
+| Exact prospective claim text | The matched A100/B100 study estimates the quality, preservation and resource tradeoff between the causal and encoder-decoder families at the declared exposure. |
+| Research question | RQ1 secondary architecture-family comparison. |
+| Hypothesis | No positive ordering is assumed. A family effect is not attributed exclusively to bidirectionality. |
+| Independent variable | Architecture family including attention/context and output-loss structure. |
+| Dependent variable / primary endpoint | D, completion-gated repair, equal-domain WER, completion/ambiguity coverage, measured training/inference time and memory. |
+| Control | A100 and B100 on the same ordered anchored presentations, tokenizer and declared eligibility with bounded HPO. |
+| Baselines | Deterministic, C101 and practical pretrained/incumbent controls. |
+| Dataset / population | Same nominal 8,826 natural cases and 9,000 generated panel; populations reported separately. |
+| Unit of analysis | Paired provenance blocks; runtime session/request blocks are separate. |
+| Sample size | Actual cases/word/error/source-block denominators; all 16 roster includes three runs of each family. |
+| Seeds | Three final seeds in each arm. |
+| Statistical method | Paired descriptive endpoint contrasts and cluster regions. MVP measured-time checkpoint quality is development-only; final-test equal-exposure is distinct. |
+| Effect size to report | Quality ratio differences in pp; identification widths; resource differences/ratios and per-seed traces. |
+| Confidence interval | Descriptive 95% outer regions and declared timing intervals, conditional on fitted runs and sources. |
+| Multiple-comparison treatment | Secondary estimation, not a third unadjusted primary superiority claim. |
+| Predeclared success criterion | Complete fair comparison with explicit bundle attribution and uncertainty; no required positive direction. |
+| Falsification result | Asymmetric input/tuning/budget, underlearned controls or selected-seed reporting defeats the intended comparison. |
+| Required figure/table | T03 architecture results; F01; T09 resources. |
+| Mandatory for MVP | Yes as a reference experiment. |
+
+### 20.4 S-GUARD
+
+| Required field | Registered design |
+| --- | --- |
+| Claim ID | S-GUARD |
+| Exact prospective claim text | A frozen deterministic guard changes applied introduced errors and useful repair for the same cached proposals, separating guard effects from representation effects. |
+| Research question | RQ1/RQ3 system attribution. |
+| Hypothesis | Guarding may reduce damage while rejecting correct repairs; both effects are retained. |
+| Independent variable | Bare versus common guarded application policy; optional Qwen fallback is an additional named system. |
+| Dependent variable / primary endpoint | D, completed repair, WER, acceptance/change coverage, invalid/cap counts and bounded end-to-end runtime. |
+| Control | Identical cached bare proposals and source-only guard decisions; no gold span or audio access. |
+| Baselines | Source return, deterministic normalization and Qwen fallback where explicitly measured. |
+| Dataset / population | Natural test and 9,000 generated panel for cached guard rescoring; fresh fallback inference uses a pre-frozen budgeted timing panel. |
+| Unit of analysis | Paired case/source block; request/session for timing. |
+| Sample size | Actual full cached guard roster and exact timing-panel/repetition/fallback counts. Full natural fallback-quality sweeps are not silently included. |
+| Seeds | All registered scratch/ByT5 seeds for cached guard effects; Qwen configuration pinned. |
+| Statistical method | Paired descriptive bound differences with the same provenance resampling; reuse output files instead of regenerating proposals. |
+| Effect size to report | Change in error, repair and accepted coverage; fallback fraction; observed p50/p95 and cold-start overhead. |
+| Confidence interval | Descriptive cluster outer regions and session-aware runtime intervals. |
+| Multiple-comparison treatment | Secondary. Threshold sweeps use development only and cannot be promoted after final inspection. |
+| Predeclared success criterion | Guard contribution is separately identifiable, covers failures, and reports repair/coverage cost; no automatic claim that it improves every objective. |
+| Falsification result | A harm reduction achieved solely by source return without useful repair cannot be called an effective corrector. Unpriced fallback defeats the latency claim. |
+| Required figure/table | F03 guard correction/preservation/coverage; T05 bare/guard/full attribution. |
+| Mandatory for MVP | Cached guard comparison yes; full-scale fallback quality and extra export variants stretch. |
+
+### 20.5 S-PRE
+
+| Required field | Registered design |
+| --- | --- |
+| Claim ID | S-PRE |
+| Exact prospective claim text | The scratch arms occupy a measured practical reference-restoration/resource position relative to a task-adapted ByT5-small and the fixed task-matched Qwen incumbent. |
+| Research question | RQ3 practical frontier at one scratch scale. |
+| Hypothesis | No scratch advantage is assumed; prior pretraining remains an explicit asymmetry. |
+| Independent variable | Model lineage and deployment configuration, with separately named fixed-exposure and measured-downstream-time budgets. |
+| Dependent variable / primary endpoint | D, completed repair, WER, generated exact outcomes, native training/inference time and memory. |
+| Control | Common strings, references and task contract. ByT5 processes native bytes; Qwen prompt/decoding is frozen on development. |
+| Baselines | ByT5-small three adaptations and one pinned task-matched Qwen configuration; raw/deterministic controls. |
+| Dataset / population | Natural two-recognizer roster and mandatory 9,000 generated panel; source domains reported separately. |
+| Unit of analysis | Paired source/template groups and timing-session blocks. |
+| Sample size | Actual natural 8,826 nominal per recognizer and 9,000 generated inputs per configured model; native lengths and unsupported cases included. |
+| Seeds | Three ByT5 adaptation seeds matched to the final IDs; three per scratch arm; one fixed Qwen configuration is not three independent replications. |
+| Statistical method | Paired descriptive quality bounds and measured deployment frontier. ByT5 native BENCH and bounded recipes qualify before freeze. |
+| Effect size to report | Quality/resource coordinates with uncertainty; actual downstream time, anchored/native exposure and adaptation allocation; external pretraining identified as unmatched. |
+| Confidence interval | Descriptive cluster outer regions and timing intervals. No precise seed-population claim from three adaptations. |
+| Multiple-comparison treatment | Secondary estimation. A formal dominance claim requires separately corrected pre-test registration. |
+| Predeclared success criterion | A qualified, useful ByT5 comparator within the registered allocation and full honest cost/context reporting. Its native budget cannot be inferred from subword counts. |
+| Falsification result | An undertrained/incompatible comparator, hidden context exclusions or unmatched task defeats the practical ranking; pretrained dominance is a valid research outcome. |
+| Required figure/table | F04 practical quality/latency/memory frontier; T06 comparator lineage and budgets. |
+| Mandatory for MVP | Yes for ByT5 and task-matched Qwen. ConstDecoder integration is optional after a bounded pre-freeze compatibility gate. |
+
+### 20.6 S-EXT
+
+| Required field | Registered design |
+| --- | --- |
+| Claim ID | S-EXT |
+| Exact prospective claim text | The observed corrector effects are assessed on a fixed Whisper view of the same public audio to test dependence on the training recognizer. |
+| Research question | RQ2/RQ3 external-recognizer sensitivity. |
+| Hypothesis | Transfer may attenuate or reverse; no recognizer independence is assumed. |
+| Independent variable | Parakeet versus pinned Whisper raw one-best source on identical audio. |
+| Dependent variable / primary endpoint | WER, D, completion-gated repair, completion/ambiguity coverage and per-domain effects. |
+| Control | Same final weights, reference policy, decoding and source cases; recognizer-specific source-error denominators recomputed. |
+| Baselines | Each recognizer raw source/deterministic baseline; all 16 bare systems. |
+| Dataset / population | Nominal 8,826 natural cases under both recognizers; no new listening or reference relabeling. |
+| Unit of analysis | Paired audio and provenance block across recognizers/models. |
+| Sample size | 17,652 nominal recognizer-case views and 282,432 neural correction outputs across the two views; these remain 8,826 source cases. |
+| Seeds | All three final seeds for trainable arms; pinned Qwen. |
+| Statistical method | Paired descriptive recognizer-effect and model-effect bounds, preserving shared audio blocks. Whisper never screens the acoustic training pool. |
+| Effect size to report | Absolute/relative score changes, source error rate, identification widths and interaction sensitivity. |
+| Confidence interval | Descriptive cluster outer regions; no independent-two-samples treatment of the shared audio. |
+| Multiple-comparison treatment | Secondary, outside H1/H2. No new confirmatory claim from selecting the favorable recognizer. |
+| Predeclared success criterion | Complete registered external replay with all failures and source-specific denominators shown. |
+| Falsification result | Gains confined to Parakeet narrow transfer claims; using Whisper to filter training invalidates the intended external axis. |
+| Required figure/table | T07 external recognizer results and source-specific coverage. |
+| Mandatory for MVP | Yes for one fixed external recognizer; further recognizers stretch. |
+
+### 20.7 S-SCALE
+
+| Required field | Registered design |
+| --- | --- |
+| Claim ID | S-SCALE |
+| Exact prospective claim text | If completed, the B100/B203/B316 experiment describes a bounded fixed-exposure learning/resource frontier within one encoder-decoder family. |
+| Research question | RQ3 optional size extension. |
+| Hypothesis | No monotonicity, universal scaling law or 1B extrapolation is assumed. |
+| Independent variable | Declared B-family size grid with architecture dimensions changing by the frozen config; data, tokenizer and output representation held fixed. |
+| Dependent variable / primary endpoint | Final 150M quality/preservation bounds, development 50/100/150M curves and measured resources; optional registered common-time evidence. |
+| Control | Existing B100 text runs; B203/B316 share ordered anchored presentations and recipe-transfer rule. |
+| Baselines | Longer B100 continuation and practical pretrained/incumbent rows when separately budgeted. |
+| Dataset / population | Same frozen natural/stress populations; any extension chosen after final outcomes is exploratory or uses new held-out evidence. |
+| Unit of analysis | Source blocks and independent seed trajectories; checkpoints are repeated observations. |
+| Sample size | Three sizes × three seeds=9 trajectories, six new 150M runs beyond MVP. Saved checkpoint count is not independent n. |
+| Seeds | 1729,2718,31415 at each size. |
+| Statistical method | Descriptive bounded trends and paired source-cluster regions; no five-parameter law fit from three sizes. |
+| Effect size to report | Observed gains, learning slopes, uncertainty and quality/resource frontier; actual unique/repeated data. |
+| Confidence interval | Descriptive source-conditional regions and seed traces; no narrow extrapolation interval to 752M/988M. |
+| Multiple-comparison treatment | Stretch secondary. New formal hypotheses need registration and corrected family before their outcomes. |
+| Predeclared success criterion | All three family points complete at common budgets with honest cost; causal A100 cannot substitute for B100. |
+| Falsification result | Incomplete grid, family/data changes, undertraining or seed-unstable orderings limit size interpretation. |
+| Required figure/table | F05 same-family learning/resource curves; T08 optional size ledger. |
+| Mandatory for MVP | No; outside the mandatory 30-day program. |
+
+### 20.8 S-OBJ
+
+| Required field | Registered design |
+| --- | --- |
+| Claim ID | S-OBJ |
+| Exact prospective claim text | A separately registered objective ablation estimates whether an added preservation-oriented loss changes the correction/preservation tradeoff beyond the base objective. |
+| Research question | RQ1 optional mechanism analysis. |
+| Hypothesis | An objective may help preservation or merely suppress changes; no benefit presumed. |
+| Independent variable | One precisely specified loss component/weight with unchanged architecture/data and correct whole-update normalization. |
+| Dependent variable / primary endpoint | D, completion-gated repair, WER, completion/coverage and training cost. |
+| Control | The relevant base arm with identical three-seed exposure and recipe-allocation policy. |
+| Baselines | Deterministic utility floor and raw-input WER; registered base C101 or B100. |
+| Dataset / population | Same frozen natural and generated populations or new held-out evidence if prompted by outcomes. |
+| Unit of analysis | Paired source groups and training trajectories. |
+| Sample size | Three fresh final runs per added objective treatment plus symmetric declared development work; not paid for by reusing pilot seed as final. |
+| Seeds | The three registered final IDs, with fresh independent runs for each added arm. |
+| Statistical method | Paired descriptive bounds; a formal test requires its own predeclared corrected family. |
+| Effect size to report | Quality/preservation and cost differences, actual loss-component denominators and optimization stability. |
+| Confidence interval | Descriptive source-cluster outer regions and per-seed contrasts. |
+| Multiple-comparison treatment | Optional secondary family; never replace H1 with a favorable loss ablation. |
+| Predeclared success criterion | Identifiable single treatment, symmetric tuning and anti-identity utility retained. |
+| Falsification result | Any apparent gain explained by changed data/budget or collapsed repair does not support the objective mechanism. |
+| Required figure/table | T10 optional objective ablations. |
+| Mandatory for MVP | No; outside 30-day MVP. |
+
+### 20.9 S-MAC
+
+| Required field | Registered design |
+| --- | --- |
+| Claim ID | S-MAC |
+| Exact prospective claim text | On the recorded Mac and pinned native backend, the registered training and deployment workloads have measured memory, sustained throughput, recovery and latency characteristics. |
+| Research question | RQ3 resource feasibility. |
+| Hypothesis | Native correctness, sustained operation and month capacity are empirical gates, not consequences of advertised bandwidth. |
+| Independent variable | Model/config, backend path, dtype, real masks, source/native event lengths and deployment mode. |
+| Dependent variable / primary endpoint | Full optimizer-update throughput, active/cache/peak/RSS views, swap pressure, save/load and resumed parity; cold/warm request p50/p95. |
+| Control | Pinned machine/software/power settings, common representative inputs and synchronized complete work. |
+| Baselines | Transparent versus optimized path for parity; ByT5/Qwen native deployments and declared baseline modes. |
+| Dataset / population | BENCH-00 grid, production-shaped mixture and frozen representative latency panel; actual full-run timing logs. |
+| Unit of analysis | Complete optimizer update; sustained time block; request and timing session. |
+| Sample size | Five warmups then 100 timed updates per selected shape; at least 20 sustained measured minutes;20 resumed-control updates; registered latency repetitions/sessions. |
+| Seeds | Benchmark RNG/config recorded; three final model runs contribute actual training logs. Timing repetitions are not training seeds. |
+| Statistical method | Native synchronization and thermal time-series summaries; resource accounting and conditional ETA from measured bucket mix. |
+| Effect size to report | Tokens/exposures per second, degradation, peak memory, checkpoint bytes/time, latency and total program device-hours. |
+| Confidence interval | Runtime intervals reflect session/block dependence; modeled 1/4/8TF scenarios carry no measured confidence interval. |
+| Multiple-comparison treatment | Descriptive engineering validation, not an additional H1/H2 statistical discovery. |
+| Predeclared success criterion | Pass correctness/masking/resume; stable or conservatively throttled throughput; bounded memory; complete budget inequality with reserve. |
+| Falsification result | CPU fallback, inference-only timing, lazy unfinished updates, sustained swap or missed complete-program capacity defeats the claimed local feasibility. |
+| Required figure/table | T09 resource/calibration ledger; F06 sustained throughput and latency distributions. |
+| Mandatory for MVP | Yes before long runs; this document does not execute it or assert it passed. |
+
+### 20.10 S-VALID
+
+| Required field | Registered design |
+| --- | --- |
+| Claim ID | S-VALID |
+| Exact prospective claim text | The specified deterministic scorer implements its declared finite edit/alignment policy and conservative cap behavior on a reproducible verification suite. |
+| Research question | Methodological qualification supporting RQ1/RQ2; no claim of a new universal metric. |
+| Hypothesis | Independent tiny exhaustive and property checks agree with the declared counts, bounds and invariants. |
+| Independent variable | Scorer implementation/path, token patterns and deterministic cap policy. |
+| Dependent variable / primary endpoint | Edit-distance parity, all-optimal extrema, r−d conservation for raw counts, identity/reference limits, completion policy, cap enclosure and determinism. |
+| Control | Independent exhaustive enumerator on bounded fixtures and an independent ordinary edit-distance implementation; exact latent fixtures. |
+| Baselines | Ordinary WER/CER, source identity, reference output and analytically derived fallback intervals. |
+| Dataset / population | Fully specified tiny exhaustive alphabets/lengths plus adversarial repeated-token, Unicode, empty, insertion/deletion, truncation and long-path fixtures. |
+| Unit of analysis | Configured fixture/property input; these are software test cases, not human judgments or independent natural examples. |
+| Sample size | Exact future fixture bounds, generated test counts and pass/failure inventory frozen before primary scoring. No tests were executed in this specification. |
+| Seeds | Property-test RNG seeds and implementation versions recorded; model seeds irrelevant to scorer truth. |
+| Statistical method | Exact equality/enclosure checks and cross-implementation differential tests; runtime/cap profiling on development only. |
+| Effect size to report | Pass/fail counts, discrepancy types, cap coverage/runtime and bound widths, with reproducible counterexamples. |
+| Confidence interval | No significance interval establishes algorithm correctness; natural coverage is separately measured and scoped. |
+| Multiple-comparison treatment | Qualification record outside primary hypothesis family; fixes version the scorer and rerun all affected outputs. |
+| Predeclared success criterion | All required invariants/parity checks pass and the measured cap policy fits before freeze; no manual resolution fallback. |
+| Falsification result | A counterexample, candidate-dependent denominator or cap interval failing enclosure blocks primary scoring until repaired and requalified. |
+| Required figure/table | T02 scorer/version/coverage and verification inventory; Part IV algorithms and fixtures. |
+| Mandatory for MVP | Yes. Replaces the retired human-resource reliability claim C1. |
+
+### 20.11 S-LITERAL
+
+| Required field | Registered design |
+| --- | --- |
+| Claim ID | S-LITERAL |
+| Exact prospective claim text | Frozen automatic literal-sensitive analyses describe exact-form preservation and repair on the detectable public-reference subset, with explicit alignment ambiguity and extraction coverage. |
+| Research question | RQ1 secondary exact-content diagnostic. |
+| Hypothesis | Literal effects may differ from aggregate word errors; detected forms are proxies, not human semantic criticality labels. |
+| Independent variable | Model/representation on source-fixed extracted literal forms and allowed canonicalizations. |
+| Dependent variable / primary endpoint | Exact literal preservation/repair bounds, changed forms, coverage and failure counts by prespecified literal category. |
+| Control | Candidate-blind source/reference extraction and frozen canonicalization; all admissible attribution policies retained. |
+| Baselines | Raw source, deterministic baseline and all registered bare arms. |
+| Dataset / population | Automatically detected natural numbers/URLs/code-like or other registered forms; actual category sizes unknown until inventory. Generated literals reported separately. |
+| Unit of analysis | Source case/span with shared source provenance; overlapping category counts are not added as independent n. |
+| Sample size | Actual source-fixed detectable/eligible spans, cases, words and blocks with ambiguity coverage; no guaranteed 2000-case critical panel. |
+| Seeds | All final seeds; no hand-picked seed for favorable literal behavior. |
+| Statistical method | Descriptive paired conservative bounds and source-cluster uncertainty where defensible; output-consensus-only summaries labeled separately. |
+| Effect size to report | Category-specific exact outcome differences and source/alignment detection coverage. |
+| Confidence interval | Descriptive outer regions; sparse categories may be estimation-only without an interval claim. |
+| Multiple-comparison treatment | Secondary diagnostic; category multiplicity cannot produce an unregistered critical-harm headline. |
+| Predeclared success criterion | Traceable rules, fixed denominators and honest coverage; all difficult/ambiguous cases represented under frozen policy. |
+| Falsification result | Output-dependent exclusions, semantic overclaiming or treating a proxy as human gold defeats the interpretation. |
+| Required figure/table | T11 automatic literal-sensitive results and coverage. |
+| Mandatory for MVP | Yes as automatic diagnostics, with no minimum human-labeled n. |
+
+### 20.12 S-STRESS
+
+| Required field | Registered design |
+| --- | --- |
+| Claim ID | S-STRESS |
+| Exact prospective claim text | The models exhibit measured correction/preservation behavior on the frozen 9,000-case generated panel with exact latent records, and the full 30,000-case generator meets its declared structural contract. |
+| Research question | RQ1/RQ3 controlled technical stress. |
+| Hypothesis | Controlled categories may expose failures hidden by aggregate natural WER; no natural prevalence or real-world semantic guarantee is inferred. |
+| Independent variable | Clean/repair/mixed view, registered category/template/constructor and model. |
+| Dependent variable / primary endpoint | Exact target/field/edit outcomes, D/repair bounds, completion failures, schema/inverse checks and coverage. |
+| Control | Frozen latent records, deterministic renderers/corruptors and group-preserving hash selection before model outcomes. |
+| Baselines | Identity/deterministic outputs and all 16 bare systems on the same mandatory panel. |
+| Dataset / population | 25 strata × 4 template families × 100 latent groups × 3views=30,000 pool. Hash-select 30 groups per cell for 9,000 model-evaluated cases. |
+| Unit of analysis | Latent triple group and shared constructor/template hierarchy; finite evaluated panel is primary scope. |
+| Sample size | 3,000 selected groups,9000 cases and 144,000 model outputs mandatory. Remaining 21,000 cases have conformance only unless separately model-evaluated. |
+| Seeds | Three final seeds per trainable arm; fixed Qwen; generator/selection seed and hashes registered. |
+| Statistical method | Finite-panel exact summaries and grouped descriptive uncertainty if a sampling estimand is justified; preserve all triples in resampling. |
+| Effect size to report | Per-category exact outcomes, repair/preservation tradeoff, confidence/abstention if registered, failures and evaluated coverage. |
+| Confidence interval | No iid 9,000-case interval by default; any group-based region states constructor assumptions. Exact finite-panel tally needs no sampling CI. |
+| Multiple-comparison treatment | Secondary descriptive capability suite; category rankings do not create new confirmatory hypotheses. |
+| Predeclared success criterion | Complete exact latent/conformance contract and every registered panel output, with generated-only scope and actual population size stated. |
+| Falsification result | Broken inverse/schema checks, shared-source leakage, favorable panel selection or claims of full 30k inference without outputs invalidate the result. |
+| Required figure/table | F07 generated category outcomes; T12 panel/pool allocation and conformance. |
+| Mandatory for MVP | Yes for 30k generator contract and 9k all 16 model panel; remaining 21k model inference stretch unless pre-freeze budget qualifies full pool. |
+
+
+## 21. Public evaluation populations, references and release
+
+### 21.1 Exact selected natural population
+
+The primary natural pool consists of every released test row in the following sources, subject only to the frozen structural rules in Section 21.2. Do not select a quota based on ASR errors, literal richness, model disagreement or ease of scoring. The published counts and durations are source metadata; this specification has not downloaded, decoded or inventoried the corpus.
+
+| Source and official split | Published rows | Published audio duration | Reference used |
+|---|---:|---:|---|
+| LibriSpeech-PC test-clean | 2,417 | 4.98h | Official released PC text, with original native utterance identity |
+| LibriSpeech-PC test-other | 2,856 | 5.17h | Official released PC text, retaining test-other identity |
+| SLUE-VoxCeleb v0.2 test | 3,553 | 7.8h | Official `normalized_text` for the provided start/end crop |
+| Nominal complete natural pool | **8,826** | **17.95h** | Two source domains; no new reference annotation |
+
+LS-PC retains its parent segmentation and splits but has already excluded some book-alignment failures. The complete PC test pool contains 5,273 native utterances, not thousands of newly authored long windows. Its formatted text comes from published book alignment, not a new teacher-generated gold set. [D1]
+
+The SLUE paper labels its source conversational broadcasting, specifically single-sided interviewee snippets. Its current release provides the full test references, speaker IDs and crop times. The original paper's official ASR reporting excludes 23 `Mixed` and 104 `Disagreement` sentiment cases, yielding **3,426** test cases by subtraction. Our primary population deliberately uses all 3,553 released reference rows; sentiment ambiguity is not assumed to imply transcription ambiguity. Report the existing-label 3,426-case official-compatible subset as a secondary diagnostic and label the distinction clearly. Do not claim that the all-row result reproduces the original official ASR population. [D18, D19]
+
+The proposed design no longer contains a manually enriched 2,000-case critical panel, mandatory 1,000-case human-output sample, or 1,000 authored stress cases. Literal analysis is derived automatically from the complete natural pool. Fine-grained coverage, retained source groups, token denominators and post-exclusion duration remain unknown until the future frozen scorer and asset inventory are run. None is assumed equal to 8,826.
+
+Parakeet and Whisper decode the same eligible audio. Nominal recognizer work therefore covers 17,652 case-views and 35.9 audio-hours at real-time factor one, before actual runtime overhead. This arithmetic is not a latency measurement. Sixteen bare model/seed instances yield 141,216 output records per recognizer view, or 282,432 across both views; the three main scratch families across three seeds yield 79,434 per view. Final natural scoring uses the frozen final checkpoints. Additional checkpoint curves on the sealed test set move to STRETCH; development curves remain available.
+
+### 21.2 Existing references and automatic structural eligibility
+
+Pin the reference release, manifest and source-ID mapping before model outcomes. The reference policy is **release-relative truth**: existing transcripts are accepted as that release's intended reference, not certified through a new listening pass. Preserve original text beside the deterministic scorer view. Reference errors, book-transcript differences, normalization and incomplete context are limitations of the measured task.
+
+| Reference view | Required treatment | Claim boundary |
+|---|---|---|
+| LS-PC designated reference | Use the published PC text; keep original LS reference/ID where available for a separately labeled compatibility check | Formatted book-alignment reference; no claim of new audio adjudication |
+| SLUE designated reference | Use `normalized_text` directly; retain official segment and speaker metadata | Lexical transcript reference; do not create punctuation/case gold from a teacher |
+| Common lexical scorer | Frozen Unicode case folding, token/punctuation/symbol rules and no implicit number/ITN equivalence under Section 23 | Strict reproducible reference-relative comparison |
+| Exact/surface metrics | Retain original byte distinctions; no silent Unicode normalization; surface restoration is reported only where the reference supplies it | SLUE unformatted text does not support natural punctuation/case accuracy claims |
+| Optional official scorers | Report original corpus normalization and membership separately | Never silently change the primary reference to make an output match |
+
+The structural eligibility function is versioned, deterministic and candidate-independent. It checks that the source belongs to the chosen official test split; its ID and reference field are present and parseable; audio is accessible and decodable; timestamps are finite and valid; and duplicated IDs do not contain conflicting assets or references. Exact duplicate records may collapse to one source identity with the duplicate count retained. A legitimately empty reference is distinct from a null or documented missing-reference sentinel and follows Section 23's empty-reference accounting.
+
+For LS-PC, retrieve the corresponding original native audio segment by its stable ID. For SLUE, apply the official `start_second` and `end_second` crop once to the referenced audio. The published card explicitly requires this crop. Convert seconds to sample indices with the frozen rule, retain source and cropped hashes, and test boundary behavior in the future data-loader fixtures. Do not crop an already cropped repackaging a second time; an incompatible schema/version is a failed asset contract, not a reason to invent new time boundaries. [D18]
+
+Automatic asset failures receive reason codes and a predeclared retry rule. Freeze exclusions and their counts before candidate outputs; there is no replacement quota. A persistent absence of usable audio is an asset exclusion, while a valid audio item on which ASR returns an empty transcript is still an evaluated case. A failed recognizer call uses the frozen failure/retry policy and is reported; it cannot be silently removed because it would worsen a system's result.
+
+Do not exclude cases for high initial WER, uncertain meaning, uncommon names, repeated words, missing critical literals, a corrector's abstention, decoder truncation, or alignment ambiguity. Invalid/missing corrector outputs follow the common empty-output/failure rules; valid emitted prefixes remain scoreable. Local ambiguity affects the transition interval or secondary scoring coverage, not membership in ordinary WER/CER. No human or AI judge resolves it for the confirmatory result.
+
+### 21.3 Splits, grouped inference and contamination
+
+Preserve official roles: LS-PC train-clean-100/train-clean-360/train-other-500 and SLUE `train` supply possible real training pairs; LS-PC dev-clean/dev-other and SLUE `validation` supply development. SLUE's HF `train` and `validation` correspond to original fine-tune and dev. All selected test rows remain sealed from model selection. PC dev durations are published as 4.96h and 4.77h, while exact retained dev row counts are not asserted here; SLUE validation has 1,454 rows/3.2h. [D1, D18]
+
+Source-family exclusions happen before corruption or pair generation. Keep corpus, speaker, chapter/book, recording/video, segment, recognizer view, clean seed and generated variant relationships. For SLUE, cluster by speaker and retain source-video nesting. For LS, retain reader/chapter/book relationships and the registered crossed or connected-component sensitivity in Section 25. The parent LS test sets have 40 and 33 speakers; that does not prove that the retained PC pool has exactly those counts or that all reader/book clusters are independent. SLUE reports 35 test speakers before structural filtering. [D2, D19]
+
+When a known source family spans roles, preserve final membership and remove its training/development derivatives as required by the frozen grouping policy. Automatic exact/near-duplicate checks use a pinned rule and report removals. Missing book/video mappings remain explicit unknowns; no manual identity investigation is required. A short generic sentence match does not automatically establish shared source identity, so duplicate policies must distinguish exact asset matches from text similarity.
+
+If a guard needs separate calibration, reserve an automatic whole-source-group partition from training-side material before any fitting, using the registry's partition seed and recorded membership. Do not spend final labels on guard thresholds or relabel a development set as untouched calibration after using it. Calibration size is its actual eligible count, not a fabricated 2,000-case annotation target. Bare-model primary claims remain independent of optional guard promotion.
+
+Exclude known final references and source families from tokenizer sampling, educational text, specialist training, retrieval, prompts, corruption calibration and generated-template seeds. Book text, videos and hypotheses may already have appeared in external pretraining; absence from undisclosed ASR/TTS/LM training cannot be proved. Report known overlap and unknown exposure separately. Frozen released hypotheses from RED-ACE, HypR or HyPoradise never quietly enter the controlled paper curriculum.
+
+The solo author can enforce a process holdout through separate manifests, frozen hashes and one-shot scoring. Public reference availability is not secrecy, and no external custodian or annotator is required. After unblinding, outcome-driven scorer, normalization or membership changes require an explicit exploratory label or a fresh confirmatory test; a patch cannot silently manufacture a new holdout from exposed results.
+
+### 21.4 Full-population transitions and automatic literal analysis
+
+The primary broad endpoints are ordinary WER, **introduced word errors divided by total reference words**, and **completed-output source-error repairs divided by total source edit distance to the reference**; CER is also reported. These descriptions follow the scorer in Section 23 and Part IV. The introduced-error numerator includes corruption of originally correct reference content and newly added output insertions under the joint alignment definition; it is not limited to numbers or named entities. Identity output repairs nothing on a nonzero source-error denominator.
+
+The raw repair count supports the scorer's edit-distance conservation identity. Primary repair credit instead uses the completion-gated count `R_complete = c × R_repair`, where `c` is the registered normal-completion indicator. Invalid, missing or decode-capped output receives no completed-repair credit, while a valid emitted prefix still receives its ordinary WER/CER and introduced-error scoring. Do not apply the raw conservation identity to a completion-gated count on failed runs.
+
+For each primary natural endpoint, aggregate as an **equal-domain mean of corpus ratios**: one half for LS-PC with clean/other pooled, and one half for the full eligible SLUE-VoxCeleb population. Recompute each corpus numerator and denominator before taking that mean. This applies to introduced errors, completed repair and WER; pooled word/error-weighted totals and separate clean/other scores are secondary. The same domain convention applies to Parakeet and Whisper, with recognizer-specific source-error denominators.
+
+The reference-word and source-error denominators are fixed for a corpus/recognizer view before candidate outputs. Multiple optimal joint alignments yield lower/upper transition counts, and computationally unavailable cases follow the registered conservative bounds. They do not vanish from those denominators. Report primary bounds and ordinary quality on the full eligible natural population, plus conditional point estimates only on the deterministic consensus regions. A zero source-error denominator is reported as unavailable repair evidence, never manufactured usefulness. The exact algorithms, confidence procedure and anti-identity gate are defined in Sections 23–25 and cannot be redesigned from final outcomes.
+
+Report four different quantities: source/reference structural eligibility; source-side alignment-consensus eligibility; output-dependent consensus coverage; and computational-unavailable counts. An automatically scorable token or literal count is not a human-validated semantic label. Its actual value is unknown until execution. A confidence bound that becomes too wide is an inconclusive result, not a request to fill a manual annotation queue.
+
+Automatic critical-literal analysis is secondary and uses the frozen extractor and unambiguous reference/source relationships. Candidate categories include digit-form numbers, decimals, percentages, currency/date/time strings, version patterns, acronyms, identifiers, units, URLs and paths where the official reference actually contains them. Word-form numerals are not silently changed into digits; a source identifier is not treated as a known person or scientific truth merely because a pattern matches. Repeated ambiguous literals and uncertain role bindings are unavailable for that fine-grained analysis under the deterministic rule.
+
+Report category-wise extracted instances, eligible initially correct instances, source-wrong instances, retained/repaired/corrupted counts, ambiguous exclusions and output coverage. Zero natural examples in a category is a valid result. In particular, SLUE's normalized references and LS-PC's literary domain may supply very little code, CLI, URL or version evidence. Do not invent a natural critical-literal quota or infer broad semantic safety from exact-string retention.
+
+### 21.5 Programmatic stress is a separate population
+
+Part V defines a **30,000-case generated/conformance pool**: 25 category strata × four frozen template families × 100 latent base groups × three views. The views are clean preservation, repair-focused, and mixed repair/preservation. The latent record determines exact field identity, reference rendering, corruption and expected behavior without human labeling.
+
+The mandatory model-evaluation panel is **9,000 cases**, selected before outcomes by hashing 30 base groups per category/template cell: 3,000 groups × the same three views. All variants of a base group travel together. Full 30,000-case model inference is STRETCH if the pre-freeze runtime budget qualifies. Do not confuse generating/checking 30,000 cases with obtaining 30,000 outputs from every model.
+
+Keep the generator's immutable namespaces: manifest 120012, partition 120101, training values 120201, development values 120202, test values 120203, corruption 120301, TTS 120401, noise 120402 and panel selection 120501. Domain-separated derivations retain base-group and coarser template/constructor/lexical-family identities. The training seeds 1729, 2718 and 31415 are unchanged. These are proposed frozen construction choices, not a claim that a corpus exists.
+
+Natural and generated results never share a prevalence denominator. Three corruptions of one generated value are dependent stress conditions; 30,000 generated rows are not 30,000 independent real speech events. Report generated field-level correctness and collateral damage separately from natural reference-relative word metrics, with group-aware uncertainty. Exact latent ground truth proves correctness relative to the generator contract, not coverage of all real dictation meanings.
+
+### 21.6 Release policy and retained product suites
+
+Release a reconstructible manifest, reference-policy description, scorer/configuration hashes, automatic exclusion and ambiguity ledgers, generated schema/seeds, baseline settings, and item-level outputs where source terms permit. Keep source data rights separate from the project's code license. Existing upstream human annotations are credited as existing work; this paper does not announce a newly human-annotated preservation resource.
+
+Use upstream source-ID retrieval recipes when rehosting audio adds no value. LS/PC and the SLUE card declare CC BY 4.0 with their respective notices; SLUE's access agreement and original-owner provisions remain visible. Optional E22 transcript use retains CC BY-SA obligations and does not imply audio-rehosting permission. A recipe records actual acquisition conditions and hashes without promising permanently ungated access. [D1, D2, D4, D18]
+
+The product branch retains its engineering suite roles: at least 500 fast parser/tokenizer/protected-byte fixtures, at least 1,000 development regressions, a separately locked initially 2,000-case balanced cleanup challenge, and a prospective private holdout if eligible authorized data exists. Implement these from exact operation grammars, existing legitimate acceptance or suitable public references; no new mandatory manual-review quota follows. The challenge may retain overlapping critical slices and long/composite cases, but its designed frequencies are not natural incidence.
+
+| Product slice | Automatically supportable evidence | Retained proposed product threshold, scoped to that evidence |
+|---|---|---|
+| Numbers, percentages, currency | Known generated value/sign/unit/rendering | At least 99% correct; zero observed introduced critical mutations on mandatory fixtures |
+| Dates/times | Explicit locale and generated interpretation | At least 98%; preserve or abstain on designated ambiguity controls |
+| Versions | Latent component identity and allowed rendering | At least 99%; exact required version bytes |
+| Paths, URLs, commands, flags, identifiers | Generated or already trusted bytes/order | 100% on mandatory protected fixtures; unsupported conversion falls back |
+| Names, terms, acronyms | Fixed exact literals where evidence exists | At least 99% retention; report repair separately; no general factual-name claim |
+| Self-correction | Explicit operation grammar and known surviving span | At least 95% supported-case success and 99.5% false-trigger restraint |
+| Punctuation/case | Existing formatted target or generated alternatives | At least 97% policy match; do not substitute a missing human semantic judgment |
+| Filler, fragment, repetition | Explicit permitted removal grammar | At least 97% precision and 90% recall within supported operations |
+| Paragraphs/lists and long prompts | Latent structure and clause-presence fixtures | At least 95% structure; at least 99% required-clause retention |
+| No-op and mixed cases | Exact input/target or declared permitted formatting | At least 99.5% no-op success; report mixed/long degradation separately |
+
+These remain proposed product gates, not paper success criteria. Unsupported intent, clause meaning and arbitrary real-world semantic damage are not validated merely because automatic fixtures pass. Broader default replacement remains conditional on the stronger product evidence policy; a narrow opt-in result must retain its scope. Do not obtain a default-promotion claim by quietly weakening the gate to what is easy to count.
+
+Report intervals and achieved denominators. Zero observed failures in a small correlated stress slice does not establish a rare natural failure rate. Keep text-only replay, audio replay and complete user-perceived latency distinct; pipeline replay does not automatically include microphone effects or final insertion acknowledgement. [R5, R9]
+
+
+## 22. Baselines
+
+### 22.1 Minimal baseline roster and identities
+
+**ENGINEERING PROPOSAL.** Every comparator must answer a defined scientific or product question. Keep the following roster; avoid adding unrelated language models merely to enlarge a table.
+
+| ID | System and lineage | Role | Required view |
+|---|---|---|---|
+| ASR-P | Pinned `mlx-community/parakeet-tdt-0.6b-v3` with recorded snapshot and decoding | What the recognizer supplied | Raw 1-best, before normalization |
+| DET | Frozen LocalFlow deterministic normalization/cleanup, with all operations documented | Whether cheap rules already solve the errors | Paper output plus its exact input/output trace; product native boundary separately |
+| Q4-paper | `Qwen/Qwen3-4B-Instruct-2507`, full-precision official weights converted reproducibly to the qualified runtime | Strong task-matched general instruction-model control | BF16 bare and common guards; frozen reference-faithful prompt |
+| Q4-product | Recorded `mlx-community/Qwen3-4B-Instruct-2507-4bit` with the current LocalFlow engine | Actual incumbent product comparison | Current full pipeline, raw candidate, proposed matched protection where applicable |
+| PT-ByT5 | `google/byt5-small`, approximately 300M, task-adapted from released pretrained weights | Whether a small pretrained text-restoration model dominates the scratch frontier | Three adaptation seeds; byte-native model input; bare and common guards |
+| PUB-Const | Official ConstDecoder-Transformer adaptation, conditional on the bounded reproduction gate | Whether an established edit method explains the proposed advantage | Supported lexical task; code/lineage/tokenizer limits explicit |
+| A100 | Separate randomly initialized causal conditional model | Scratch family control | Three seeds; raw/guard views |
+| B100 | Randomly initialized full-text encoder-decoder | Backbone control for output representation and data | Three text-control seeds and three acoustic-treatment seeds |
+| C101 | Randomly initialized sparse-edit version of B's backbone | Main representation-plus-renderer treatment | Three seeds; structural rendering always included; guards separate |
+
+**FACT.** ByT5's official model card describes byte input and a pretrained model that requires downstream adaptation; using it without appropriate task training would be a weak control. The card declares Apache 2.0. Qwen's official Instruct-2507 card also declares Apache 2.0. Exact downloaded revisions and complete tensor counts remain future manifest requirements; no model bytes were downloaded or run for this specification. [D13-D14, N11]
+
+The pretrained control does not change the core scratch objective. It has its own imported-weight provenance, adaptation manifest, tokenizer and training-cost ledger. Report known upstream training information and mark unknown historical compute as unknown. Downstream compute matching cannot establish equal lifetime training compute or disentangle every benefit of upstream data and architecture.
+
+### 22.2 Fair task adaptation and prompting
+
+The paper's Qwen prompt requests reference-faithful restoration from the supplied transcript only: retain spoken lexical content, disfluencies and self-corrections; fix source-recoverable recognition errors; preserve names, values and uncertainty; output only the transcript. It does not request polishing or semantic compression. Freeze the exact chat template, trusted controls, examples, greedy decoding, stopping strings, cap and input hashes. Give Qwen a bounded development-only prompt comparison under the same declared task, then freeze it. A current product prompt that intentionally deletes fillers is not fairly evaluated as though it were instructed to retain every spoken word.
+
+Adapt ByT5 on the same approved training source groups and target policy. Use three development recipes and three final seeds. The intended full-data view uses the same 150M paper-canonical schedule; a separate measured-time cap supplies the downstream-budget comparison. BENCH-00 and the development pilot must establish the native byte sequence envelope and affordable adaptation budget before freeze. If a budget cap prevents the full-data view, report the attained exposure and label it an equal-budget control; do not call that run equal-data or imply convergence. A strong comparator requires credible development performance or a documented reason it remains limited.
+
+Native tokenization is part of a released pretrained model. Keep ByT5's bytes and Qwen's tokenizer instead of replacing them with the scratch tokenizer. Compare source coverage, UTF-8 lengths, canonical anchors and actual native token positions. No comparator silently truncates content. Any unsupported length or decode failure remains in the all-input score and is reported separately; a supported-intersection table is secondary. Do not claim broad model superiority when it is explained by an unqualified comparator interface.
+
+Use BF16 for the main quality comparison where the native runtime qualifies it. Report Q8 and Q4 as separately frozen efficiency/quality points after re-evaluation; the existing Qwen Q4 product artifact remains a required practical control. If different backends are necessary, report them and their native timing separately. A faster kernel or quantization may be part of a product frontier but is not isolated architecture evidence.
+
+### 22.3 Published-system reproduction gate
+
+**FACT.** The inspected ConstDecoder repository has official code and some English task assets, but no verified released task checkpoint. Its uncased WordPiece representation and bounded additions constrain surface restoration. Its paper therefore supplies a relevant lexical editing precedent, not a turnkey byte-faithful baseline. FastCorrect's inspected assets do not provide a simpler matched English replacement: linked Chinese pretraining weights and internal-corpus dependencies have different scope. [N3, N5]
+
+**ENGINEERING PROPOSAL.** Before final freeze, allow at most two engineering days to qualify official ConstDecoder-Transformer code at pinned commit `b671d10d8c1f5379b9b0d68b78d16530878afa28`: verify license, installability, supported English formatting, shared-pair conversion, a tiny learning test and evaluation compatibility. This is a future gate, not work started here. If code/task compatibility and the declared local execution budget both qualify before freeze, task-adapt it under an explicit additional comparator budget, record its pretrained BERT initialization, and report lexical results plus its representational limitations. Do not quietly change its tokenizer or mechanism and call the result a faithful published reproduction.
+
+The executable comparison is conditional on code/task compatibility and an affordable declared local budget. Failure of either condition closes the gate as blocked; the bounded compatibility decision and prior-work analysis remain. If the gate fails, preserve the concrete blocker and retain ByT5 as the mandatory strong small comparator. Narrow claims to the controlled scratch representations; do not state that C outperforms published edit systems. This limitation may reduce peer-review readiness, especially if a headline novelty argument depends on that comparison. The decision is made before final comparisons, not after learning which baseline is strongest.
+
+### 22.4 Model, guard and fallback comparability
+
+Cache each bare candidate output once. Apply the same deterministic guard policy with guards off/on to B and C, and to Qwen/ByT5 wherever the input contract permits. This yields within-model wrapper contrasts without changing the proposal. C's structural edit renderer is part of its representation and remains present in both states. A difference between B-raw and C-raw identifies the representation-plus-renderer system, not a pure neural architecture effect.
+
+Full LocalFlow comparisons run each candidate's own correction proposals through identical admission rules. Oracle proposals are diagnostic only. Qwen fallback restarts from the original normalized window and discards the failed student's deletion ledger and derived source. Report student-only quality, accepted coverage, fallback reliance and complete delivery separately. The paper's raw-1-best experiment has no hidden two-pass cleanup or fallback contribution.
+
+
+## 23. Evaluation metrics
+
+### 23.1 Endpoint hierarchy and terminology
+
+**ENGINEERING PROPOSAL / DRAFT PRE-REGISTERED DECISION.** The publication evaluates reference restoration from `R = designated public reference`, `S = raw recognizer source`, and `O = rendered model output`. Every primary label is a deterministic function of those objects, immutable source metadata and the frozen scorer. No human critical-atom labels, source-only recoverability judgments, adjudication or AI-judge decisions are required. The former paper endpoints CADR and NCS are retired. Product fidelity requirements retain their separate task and population; lexical scores do not certify semantic safety.
+
+| Level | Endpoint | Fixed population and interpretation |
+|---|---|---|
+| H1 preservation component | Introduced word-error rate, with alignment bounds | Introduced error count divided by all designated-reference words; includes newly introduced insertions |
+| H1 correction component | Valid-completion source-error repair rate, with alignment bounds | Repaired source error units divided by the original minimum source/reference edit count |
+| H1 safeguards | Full-population WER noninferiority and usefulness relative to raw ASR and DET | All frozen natural cases, including failures; exact decision rules in Sections 20 and 25 |
+| H2 | Equal-domain WER improvement plus introduced word-error noninferiority | Same natural populations, recognizer view, model scale, exposure and scorer |
+| Exact technical evidence | Structure-qualified exact field preservation/repair and complete target conformance | Frozen generated fields and cases, reported separately from natural speech |
+| Secondary natural evidence | Source-correct token retention, automatic critical-literal retention/repair, CER, exact match, edit precision/recall/F0.5 and edit burden | Explicit source-defined subsets or complete natural population, each with its own denominator and coverage |
+| Product evidence | Existing CPFR, UER, useful coverage, fallback and latency requirements | A future qualified product holdout; no automatic promotion from a public-paper score |
+
+These are descriptive error-count decompositions, not a new branded metric or a claim of first source/reference/output evaluation. I-measure already uses three-way token alignment and correction transitions; M2 addresses alternative edit decompositions; ERRANT supplies automatic edit extraction and error types. CLEME and CLEME2.0 provide chunk-based reference evaluation and overcorrection terminology. Their denominators and alignment objectives differ from the study defined here. [A1–A5] The primary novelty candidate remains the controlled empirical comparison.
+
+### 23.2 Complete-population counts and fixed denominators
+
+Use the exact unit-cost word Levenshtein policy in Part IV. For case i, let `n_i` be the reference lexical token count, `eS_i = d(R_i,S_i)` and `eO_i = d(R_i,O_i)`. Before candidate outputs, freeze the case manifest, references, lexical normalization, `n_i`, `eS_i`, source/reference alignment lattice and optional source-consensus masks. The same `n_i` and `eS_i` apply to every system/seed using that recognizer source.
+
+The joint alignment first requires its R/S and R/O projections to attain their respective minimum edit distances. Among those compatible joint alignments it minimizes the induced S/O edit distance, retaining **all ties at that conditional optimum**. It does not select independent pairwise argmin paths, require all three unconstrained pairwise optima to coexist, or claim to recover true word provenance. Part IV gives the recurrence and a nonempty-feasible-set proof.
+
+In a column containing a reference token, a source error followed by a correct output contributes one repair; a correct source followed by an output error contributes one introduced error. In a reference-gap column, a source-only token contributes a repaired insertion and an output-only token contributes an introduced insertion. A source and output token together in that gap remain an unresolved insertion error. A wrong word replaced by a different wrong word remains unresolved under this reference-error decomposition; edited-but-unresolved events are also reported. Beginning and end insertions count, so added words cannot escape behind unchanged reference words.
+
+For a valid observed text, every admissible optimal path satisfies:
+
+~~~text
+repairs_i - introduced_errors_i = eS_i - eO_i
+0 <= repairs_i <= eS_i
+0 <= introduced_errors_i <= eO_i
+
+repairs_i in [repairs_lower_i, repairs_upper_i]
+introduced_errors_i in [introduced_lower_i, introduced_upper_i]
+~~~
+
+The endpoints are exact minima and maxima over the conditional optimum graph. The source-correct reference-word contribution and introduced-insertion contribution are retained separately. Separate interval extrema need not occur on the same path; the directly optimized total is authoritative.
+
+For corpus d, sum numerators before dividing:
+
+~~~text
+Nref_d = sum_i n_i
+Esource_d = sum_i eS_i
+
+WER_d = sum_i eO_i / Nref_d
+introduced_word_error_rate_d = sum_i introduced_errors_i / Nref_d
+source_error_repair_rate_d = sum_i repairs_i / Esource_d
+
+primary_repair_i = repairs_i, if complete_valid_i = true
+primary_repair_i = 0, otherwise
+valid_completion_repair_rate_d = sum_i primary_repair_i / Esource_d
+~~~
+
+Apply the same sums to lower and upper count endpoints. Introduced word errors are errors per reference word, not the percentage of originally correct words damaged and not an utterance-level catastrophic-failure rate. This denominator remains fixed where source occurrence alignment is ambiguous; insertion errors may make the rate exceed 100%. Source-error repair lies between zero and one when defined. A zero source-error denominator produces an undefined repair rate with its zero denominator recorded.
+
+The selected two natural corpora receive their registered equal-domain weight of one half each. Also report each corpus and ordinary word-weighted pooled WER. Never pool generated technical cases with natural speech or treat correlated recognizer views as independent utterances. Equal-domain repair averages two ratios with different fixed source-error denominators; it is not the repair ratio of pooled counts.
+
+Conservation applies to **raw repair counts for the emitted text**. Completion-gating deliberately breaks that identity on failed executions. Export both versions so the failure rule cannot masquerade as an alignment discrepancy. Section 25 supplies the draft margins in their new units; the old one-percentage-point utterance-CADR margin is not transferred to this word-based rate.
+
+### 23.3 Alignment ambiguity, fixed slices and coverage
+
+The primary comparison retains every case and both fixed denominators. For introduced-error superiority, the adverse paired endpoint is treatment upper minus control lower; for repair superiority/noninferiority it is treatment lower minus control upper. Section 25 applies grouped sampling uncertainty to these endpoints. Averaging only candidate-specific consensus regions, narrowing an interval by selecting a convenient path, or using an AI judge to decide a tie is prohibited.
+
+Fine-grained source-correct retention is a separate descriptive estimand. A reference token is source-correct eligible only if **every** minimum R/S alignment maps it to the same equal source occurrence. A source-wrong reference token requires invariant error status; a source insertion occurrence requires an invariant source index and reference gap. These masks are frozen from R/S alone. An output classification is a point only if it agrees throughout the permitted joint optimum graph; otherwise export an unavailable point and a binary interval on the original source-defined subset. Source ambiguity does not disappear merely because O makes one correspondence more attractive.
+
+Report distinct coverage fields: all-case WER coverage; source-consensus reference-word coverage; source-error eligibility coverage; automatic-literal extraction and source-alignment eligibility; output event-consensus coverage on each fixed subset; and computational availability of exact joint bounds. None substitutes for another. Values remain **unknown until future execution**.
+
+Exact pairwise distances remain available when the joint state budget is exceeded. Such a case receives the conservative finite envelope:
+
+~~~text
+repairs in [max(0, eS - eO), eS]
+introduced_errors in [max(0, eO - eS), eO]
+~~~
+
+Use the same envelope on a scorer infrastructure failure after exact pairwise distances are obtained, with an explicit reason. This is an outer bound, not an observed transition estimate. Part IV fixes state budgets, fast paths and deferred exact-WER handling. Difficult or aggressive outputs may widen uncertainty and block a claim; they cannot improve the primary comparison by disappearing.
+
+### 23.4 Normalization, references and exact technical scoring
+
+The word scorer has its own frozen normalization, separate from the reversible model tokenizer and `paper_canonical_v2` exposure ledger. Its policy is strict UTF-8; Unicode NFC; versioned default case folding; finite apostrophe/hyphen mappings; and the exact scanner in Part IV. Repetitions, fillers, number words and contractions remain. `can't`, `can not` and `cannot` are not silently equivalent. No general inverse text normalization, spelling correction, number-word expansion, entity resolution or recoverability inference occurs inside primary scoring.
+
+Byte exact match compares complete UTF-8 strings; reference-normalized exact match compares lexical token sequences. Both require a complete valid output, so a matching capped prefix or missing output against an empty reference does not earn exact-completion success. Raw surface CER uses the observed Unicode scalar sequence and preserves case, punctuation and whitespace; a separately named NFC CER is optional. Punctuation/case conclusions use only corpora whose official reference policy supports them. Corpus-official WER is an additional score with its own pinned preprocessing and alignment policy. A scorer with different edit costs is not automatically a parity oracle for unit-cost Levenshtein. [A6, A7]
+
+For natural critical literals, extract from source/reference surfaces using the frozen deterministic grammar. Include only source-defined instances with unambiguous span, type, occurrence and reference/source relationship. Report eligible counts, exact retention/repair, introduced literal corruption, exclusions and output ambiguity on the original eligible denominator. Literal identity is case-sensitive where required. A number appearing elsewhere in O does not establish retention at the correct occurrence. This subset does not cover all semantic harm.
+
+For generated examples, immutable latent records supply field IDs, values, reference/source spans, scaffold, allowed renderings and corruption lineage. A complete parser consumes the entire output under the frozen structural grammar. With a unique structural parse, score fields independently against finite permitted target forms; a mixed case can show a successful repair beside damaged previously correct content. Structural ambiguity, unmatched extra text, a duplicated field or malformed output gives zero structure-qualified field success and zero complete target conformance on fixed denominators. Independent raw literal diagnostics may be shown separately. Full target conformance additionally requires every field to be correct. Parts IV and V define the shared contract.
+
+### 23.5 Missing, invalid, empty and capped outputs
+
+| Observed outcome | Text for WER/CER and raw transitions | Primary repair and exact conformance |
+|---|---|---|
+| Complete valid text, including a deliberately empty text | Actual rendered text | Score normally; valid empty text differs from a missing record |
+| Full-text decoding cap with valid UTF-8 prefix | Actual prefix without fabricated suffix | Zero primary repair; conformance fails |
+| Incomplete or invalid C edit sequence | Empty hypothesis; partial edits are not silently rendered | Zero primary repair; conformance fails |
+| Invalid UTF-8, unrenderable output, missing output, timeout without valid full-text prefix, explicit abstention | Empty hypothesis | Zero primary repair; conformance fails |
+| Valid full-text prefix available at timeout | Actual prefix under the same frozen cap rule | Zero primary repair; conformance fails |
+| Guard rejection with source-return delivery | Keep the bare record; score delivered source separately | Never replace a bare failure with identity success |
+
+An empty hypothesis has a specified lexical score; it is not an unresolved semantic label. Introduced-error counts refer to the observed text or explicit empty failure representation. Record complete-valid status, failure reason, length, stop reason and cap incidence. Failures cannot earn repair credit by deleting source insertion errors. A capped prefix that accidentally equals R remains a failed completion for primary repair; its separate raw count still satisfies conservation.
+
+### 23.6 Secondary edit, no-op and resource measures
+
+Report input-correct no-op preservation on a source-defined denominator, exact output match, net WER reduction, source-to-output edit burden `d(S,O)/max(1,|S|)`, and edited-but-unresolved reference errors. Precision alone is insufficient: identity proposes no edits and must fail useful correction. Optional ERRANT precision/recall/F0.5 uses a pinned official implementation and automatically extracted source/reference edits; its tokenizer, linguistic dependencies, merge rules and empty-edit conventions are recorded. Do not rename `repairs/(repairs+introduced_errors)` as standard edit precision: wrong-to-different-wrong edits make them differ. [A2, A3]
+
+Record parameters, serialized bytes, precision, peak allocation, memory pressure, native input/output positions, C actions, copied bytes, prefill, decoding, rendering, validation and complete latency. Teacher, TTS, ASR, optional judge and scorer costs remain separate from optimization. A Pareto comparison names its axes, populations, tested systems and uncertainty. Tokens/s across tokenizers is not request latency. Energy is optional and requires a documented measurement method and idle baseline.
+
+
+## 24. Preservation framework
+
+### 24.1 Operational fidelity and mechanism boundaries
+
+**ENGINEERING PROPOSAL.** The paper measures reference-conditional error transitions. A source error is an edit unit in the frozen source/reference alignment policy; a successful repair removes such a unit; an introduced error adds an error relative to the reference. A source-correct reference occurrence and a typed literal have stricter source/reference-only eligibility masks. These distinctions are explicit because introduced insertions can occur inside an already-wrong region. Calling the entire introduced-error count damage to previously correct content would overstate its interpretation.
+
+WER alone can conceal simultaneous repair and error introduction. Preservation alone can favor identity. The primary analysis therefore reports introduced errors/reference words, completed-output repairs/source errors, and WER together, with fixed denominators, exact ambiguity bounds and anti-identity gates. Part IV specifies joint reference-anchored alignment rather than two independently tie-broken alignments. Locally ambiguous occurrences are unavailable for fine-grained classification, while their examples remain in lexical scores and conservative aggregate bounds. No human resolves them to improve coverage.
+
+Manual CADR and NCS are retired. The automatic literal subset uses exact deterministic extraction and unambiguous source/reference occurrence identity. It captures a bounded subset of numbers, versions and other structured forms; it cannot measure all semantic roles, unsupported claims, intent, certainty or acceptable paraphrases. Generated fields can test binding/order/value within an explicit grammar because those relations are generated structurally. Neither spelling retention nor renderer copying proves semantic preservation in natural speech. [M1-M6, T1-T3]
+
+Product concepts remain separately defined: an unwanted edit violates the authorized cleanup contract; a catastrophic preservation failure changes a substantive value, unit, polarity, identity, command/path/code, certainty, role, operative clause or fact. The public automatic metrics do not certify these broader product constructs. No product default-promotion decision depends on silently treating them as equivalent.
+
+### 24.2 Retained product rates and denominators
+
+Let n be all evaluated inputs, a specialist auto-applied outputs, c changed outputs, U outputs containing unwanted edits and K outputs containing catastrophic mutations. Keep the following definitions for conditional product qualification. They require a defensible measurement basis for the stated product construct; the MVP does not supply new human labels or claim these gates passed:
+
+~~~text
+UER_all = unwanted-edit outputs / all inputs
+UER_changed = unwanted-edit changed outputs / changed outputs
+UER_auto = unwanted-edit specialist-auto outputs / specialist-auto outputs
+
+CPFR_all = catastrophic outputs / all inputs
+CPFR_auto = catastrophic specialist-auto outputs / specialist-auto outputs
+
+Coverage = specialist-served inputs / eligible inputs
+Edit_needed_coverage = specialist-served edit-needed inputs / all edit-needed inputs
+Useful_correction_coverage = acceptable specialist corrections without fallback
+                             / all edit-needed inputs
+~~~
+
+Report both mutations relative to the actual model input and final correctness against the intended target. A fallback's repair is not a student correction. Returning an already-wrong source is not a new mutation but remains a failed needed edit. Unresolved outcomes cannot disappear from rate denominators.
+
+### 24.3 Guard attribution and the limits of copying
+
+The primary B/C experiment compares bare trained systems, including the constitutive C renderer. A separate paired guard-off/guard-on analysis applies exactly the same proposals to a fixed guard. This isolates postprocessing within each model. The cross-model contrast remains representation plus rendering because removing C's renderer would remove its output definition.
+
+C copies every untouched original-source byte. This is a deterministic guarantee about untouched gaps. It neither guarantees correct edit selection nor protects a literal inside a replaced span. A proposed deletion of a negation can be well formed and semantically wrong. Score selected edits and correction omissions separately from bytes that the renderer mechanically retained. A guard-only win is useful product evidence and a negative result for any claim that the learned representation supplied the improvement.
+
+### 24.4 Protected spans and correction conflicts
+
+Reuse current product span identification and raw-to-normalized coordinate mapping first. Spans carry original bytes, half-open offsets, source hash, type, evidence source and retention policy. Repeated identical literals are distinct occurrences; never locate them by taking the first matching substring. [R4]
+
+Separate a literal's exact retained bytes from whether the literal belongs in the desired final text. In a product utterance such as “version 3.11, no, version 3.12,” the intent-cleaned target may remove the superseded version. The paper's reference-faithful task preserves the spoken correction sequence; these are different policies. Arbitrarily deleting protected numbers or requiring every spoken number in every product target would each violate one of those contracts.
+
+The initial LocalFlow adapter keeps the current conservative correction guards. An existing qualified product reference that requires a currently rejected protected-atom deletion remains unsupported/fallback and counts against useful correction coverage. A later, independently qualified correction ledger may authorize superseded-span removal before final retention protection. That is an explicit behavior change with regression tests, not a relaxed validator hidden inside a model swap.
+
+Reference-derived literal masks, generator latent values, expected corrections and accepted target forms are evaluation metadata only. They are never passed to models or runtime guards. Guards use the raw source and deployable deterministic detectors available to every system. A source-visible grammar or task rule used in generated cases is public and identical for all baselines; the hidden target record is not.
+
+### 24.5 Optional sentinel ablation
+
+Compare direct input plus post-validation with typed masking only after the main representation study. Map deployably identified literal spans into the actual input coordinates; replace each with a type ID and one of 32 slot IDs; keep an immutable external slot-to-bytes/offset/type map; vary slot assignments in training; require the permitted occurrence/order pattern; restore bytes and validate the complete output.
+
+Source text resembling control syntax remains literal bytes unless trusted metadata inserts a slot. Identical literals receive distinct occurrence slots. Unknown, duplicated, missing, reordered or malformed slots reject the candidate. More than 32 slots requires a qualified window split or fallback; the ledger is never truncated. A sentinel-trained model is a new input treatment with its own training and cost record, not the same cached-proposal guard toggle.
+
+Sentinels can reduce literal generation but remove lexical information useful for adjacent grammar and correction. Do not mask every spoken number before normalization or correction resolution. Evaluate preservation, necessary correction, false rejection, output burden and latency. The edit renderer and sentinels are overlapping mechanisms: unchanged-gap copying and selected-literal restoration. Retain both only if an ablation supports their incremental benefit.
+
+### 24.6 Adversarial and rare-event evidence
+
+Retain minimal pairs changing one critical property: “do not” versus “do”; 0.05 versus 0.5; mg versus mcg; may versus will; sender versus recipient; 3.12.4 versus 3.12; `/tmp/a-b` versus `/tmp/a_b`; and `--dry-run` versus `--run`. These are literal test strings, not medical or shell instructions. Include repeated paths with different referents, Unicode confusables, combining marks, quoted false starts, false correction cues, “no more than,” meaningful repetitions and dictated prompts containing apparent instructions. Check operative clauses as well as word counts.
+
+With zero failures in n independent representative trials, the one-sided 95% upper binomial bound is `1 - 0.05^(1/n)`: approximately 0.994% at n=300, 0.299% at 1,000, 0.0998% at 3,000 and 0.0300% at 10,000. [S25] The relevant n for CPFR_auto is specialist-auto outputs, not all attempted cases, and cluster dependence may make this simple calculation inapplicable. Three seeds over the same natural cases are repeated trained-run evaluations, not additional independent ordinary-use trials. The 9,000 generated panel cases share 3,000 latent groups and a much smaller grammar family. Their zero-event scores do not establish a natural catastrophic-error bound. The paper reports reference-conditional errors and formal-suite behavior; product rare-event qualification remains a separate later gate. If a broader product construct lacks a valid automatic or existing-reference basis, keep it unqualified rather than creating a new manual queue inside the MVP.
+
+
+## 25. Statistical analysis and decision rules
+
+**PROPOSED ANALYSIS; no final outcomes or measured power exist.** All numerical margins below are proposals requiring development-only justification, frozen with the source inventory, scorer version, work caps, cluster method, model and output-generation policies, and run budgets before the affected final test. None is inherited by changing the units of an earlier human-label metric. This analysis requires no new human labels, adjudication, audio listening or candidate-output review queue.
+
+### 25.1 Reference-anchored estimands and fixed denominators
+
+The natural primary population is the source-only eligible portion of all 5,273 LS-PC test cases and all 3,553 released SLUE-VoxCeleb test cases, nominally 8,826. It is a specified public English reference population, not a sample of LocalFlow users or all dictation. LS-PC clean and other pool within the LS-PC domain. The original SLUE official-compatible 3,426-case ASR subset is a labeled secondary result; existing sentiment-label exclusions do not change the primary population. Actual source inventory, word/error counts and provenance blocks remain unknown until the future data step.
+
+For case i, let R_i be the frozen normalized reference, S_i the raw recognizer source and O_msi the actual rendered output from model m, final training seed s. Let n_i=|R_i|, e_i=d(R_i,S_i), and o_msi=d(R_i,O_msi), using the common lexical edit-distance policy in Section 23. Source denominators n_i and e_i are fixed before candidate outputs. A case with e_i=0 contributes zero to the repair denominator and can still contribute introduced errors, reference words, WER and literal-preservation evidence. Do not exclude it from the natural population.
+
+The deterministic algorithm in Part IV returns raw source-error repair bounds [r_minus,r_plus] and introduced-error bounds [d_minus,d_plus] over every admissible optimal triple alignment. These are project-defined descriptive counts, not a claim to have discovered a new standard metric or human semantic truth. For each admissible alignment, raw r-d=e_i-o_msi, 0≤r≤e_i and 0≤d≤o_msi. Keeping the source unchanged gives r=d=0; emitting the reference gives r=e_i and d=0. Insertions can make D/N_ref exceed 100%.
+
+Let c_msi=1 only for an output that completes validly under the frozen generation/rendering contract. Define **completion-gated repair** r_complete=c_msi × r, with bounds multiplied by the same indicator. An invalid, absent, unrenderable or capped output has r_complete=0. The raw r/d conservation identity does not apply after this completion gate; publish raw repair separately when reporting the identity. A valid prefix still supplies raw WER and introduced-error evidence. Absent or unrenderable output is the empty string. Automatic return of S_i belongs to a separately named guarded/full system, never silently to the raw model.
+
+For domain j, aggregate numerator counts before division:
+
+~~~text
+D_j(m,s) = sum_i d_msi / sum_i n_i
+Q_j(m,s) = sum_i r_complete_msi / sum_i e_i
+W_j(m,s) = sum_i o_msi / sum_i n_i
+Primary X(m,s) = 0.5 * X_LS-PC(m,s) + 0.5 * X_SLUE(m,s)
+Primary X(m)   = mean over the three fixed final runs of Primary X(m,s).
+~~~
+
+Here X is D, Q or W. Apply the same aggregation to the lower and upper numerators. **Every natural primary endpoint uses the equal-domain mean of corpus ratios.** Individual-domain, clean/other and pooled word/error-weighted ratios are secondary. The .5/.5 weighting is a research estimand, not an asserted deployment frequency. The three-run mean is not an ensemble prediction and does not multiply the number of source cases.
+
+For a treatment-minus-control preservation contrast, the least-favorable identified upper endpoint is D_plus(treatment)-D_minus(control). For a repair contrast, the least-favorable lower endpoint is Q_minus(treatment)-Q_plus(control). Average these within the registered three paired seed blocks and the two domains. The endpoint-by-endpoint construction may be conservative because separate extrema need not share an alignment; it is deliberately an outer bound, not a fabricated single alignment. Do not select the favorable alignment or reference independently for each model.
+
+If the exact scorer reaches its deterministic work cap, retain the row with the analytic bounds in Part IV: raw r∈[max(0,e_i-o_msi),e_i] and d∈[max(0,o_msi-e_i),o_msi], then apply c to repair. All reference/error denominators remain. Report exact-lattice completion, ambiguous-span and cap/fallback coverage, bound widths and completion failures by system, source and length. Output-dependent consensus-region or literal scores can be useful descriptive analyses, but cannot replace the full-population primary denominator.
+
+The frozen normalizer does not declare semantic equivalence between every number format, acronym, punctuation choice or paraphrase. Public references may have errors or a transcription policy different from the intended product. These uncertainties are not repaired through a mandatory manual queue. State the policy, report official-score and designated alternative-normalizer sensitivities where registered, and limit claims to the resulting reference-anchored evidence. Software qualification does not prove reference truth.
+
+### 25.2 Dependence and provenance
+
+All model comparisons are paired on the same source cases. Resampling preserves the relationships that generated those cases.
+
+| Structure | Required grouping |
+| --- | --- |
+| SLUE-VoxCeleb | Keep speaker, source video and its released segments together under the recorded hierarchy. The published test has 35 speakers; this is not 3,553 independent people. |
+| LS-PC | Inventory speaker, chapter, book and shared passages; speaker and source book may be crossed. Retained independent block counts are not established by the nominal case total or original LibriSpeech speaker totals. |
+| Parakeet and Whisper | Both recognizer views of the same audio remain paired within its source block. Their source-error denominators and alignment opportunities are recomputed separately. |
+| Generated clean/repair/mixed triples | Keep the whole latent seed group together; record template, constructor and shared semantic/lexical dependencies. Three views are not three independent source draws. |
+| Training runs | Seed is a crossed replication dimension, not an additional speaker, word or utterance. |
+| Runtime measurements | Pair requests where appropriate, and preserve timing-session and consecutive-load/thermal blocks. |
+
+For a single hierarchy use the highest relevant identifiable source cluster. For crossed speaker/book dependencies, inspect a provenance graph before outcomes. Conservative connected components are acceptable if enough independent blocks remain. If most data collapses into a few components, use a predeclared justified multiway method or narrow the inferential claim; do not revert to independent utterance resampling because its interval is narrower. Report the block inventory, size imbalance and method sensitivity. Crossed-factor resampling is methodological background, not a guarantee for this particular inventory. [ST3]
+
+The generated 30,000-case pool contains 10,000 latent groups; the mandatory 9,000-case panel contains 3,000 complete groups. Its 25 categories and four nominal template families per category are design strata, not proof of 100 independent generative mechanisms. Shared constructors can create coarser dependence. Results primarily describe the actual finite evaluated panel. A model score on 9,000 cases is not a census score on the other 21,000 cases.
+
+### 25.3 Identification bounds and source-cluster intervals
+
+On a fixed corpus with fixed outputs, the deterministic identified ranges are exact consequences of the registered reference/alignment policy, subject to passing software qualification. They do not need a sampling interval to state their finite-benchmark value. The proposed source-cluster intervals address extrapolation to comparable source blocks under the declared exchangeability assumptions. They do not account for every possible reference error, domain shift or future training initialization.
+
+Use 20,000 domain-stratified paired cluster bootstrap draws with analysis RNG seed 20261004 as the proposed computation. Carry all model, seed, guard and recognizer records for a sampled source block together; recompute the domain numerator/denominator ratios and fixed three-run contrast in each draw. The scorer's per-output sufficient counts are cached once. Bootstrap never reruns the expensive triple alignment.
+
+The proposed regular-endpoint interval is a studentized cluster bootstrap with a declared cluster jackknife or equivalent variance estimate. Verify its behavior on development-generated ratio scenarios and the actual development block structure before freeze. Register the exact method, random seed, clustering, empty-denominator policy and numerical conventions. If a multiway method is required, freeze it then. This validation chooses a defensible method before outcomes; it is not a search for the method that later rejects a null. NLP test selection should follow the actual metric, pairing and dependence. [ST1]
+
+For the proposed one-way stratified case, estimate variance by deleting each source block in turn within its domain and summing the ordinary domain jackknife variances of the complete equal-domain statistic. In a bootstrap draw, use the corresponding delete-one-resampled-block variance, preserving all paired outputs. With t_b=(theta_b−theta_hat)/SE_b, the lower bound is theta_hat−q_.975(t) × SE_hat and the upper bound theta_hat−q_.025(t) × SE_hat. Use the empirical generalized-inverse quantile (sorted rank ceil(p × 20,000)), without interpolation, and strict inequalities at decision boundaries. These are an asymptotic proposed procedure, not an assertion of exact finite-cluster coverage. Undefined studentization follows the conservative rule below. A source design requiring a multiway method must register that replacement and its validation before outcomes.
+
+A one-sided upper confidence bound is applied to the **least-favorable upper identified contrast**, and a lower bound to the **least-favorable lower identified contrast**. If the procedure covers that endpoint with its stated probability, it also covers the corresponding partially identified contrast in the required conservative direction. Do not compute a narrow interval around the midpoint of the identified range. Report the identified range and source-sampling uncertainty separately. A displayed two-sided outer confidence region can combine a 97.5% lower bound for its lower endpoint and a 97.5% upper bound for its upper endpoint; it is not a point-identified treatment estimate.
+
+All domain reference totals must be positive. If an observed domain has no source errors, its repair ratio is undefined: do not set it to zero or drop the domain and renormalize weights. H1's repair claim is then unavailable under this estimand; WER and introduced-error analyses remain reportable where defined. The reference-only inventory establishes this eligibility before outputs.
+
+A frozen bootstrap draw with zero repair denominator is also undefined, not a reason to redraw until a convenient sample appears. The conservative default is: report the number of such draws and assign the affected repair comparison the full possible [-1,+1] confidence range for decision purposes, which cannot pass the proposed NI/usefulness gates. A more informative ratio-inversion procedure would need development validation and pre-test registration. Zero reference denominators, too few independent blocks, degenerate studentization or sparse all-zero outcomes similarly trigger a predeclared conservative/inconclusive analysis. Never insert a tiny variance to produce an impressive interval.
+
+Identification width need not decrease when more related cases are added. If every problematic output hits the alignment cap, a larger nominal n does not restore the missing attribution. Pass the primary gate only under the complete least-favorable bounds; otherwise report a bounded, inconclusive result with coverage. There is no human-resolution escape hatch. Optional AI judgments do not replace these primary bounds or certify reference correctness.
+
+### 25.4 Two primary joint hypotheses and practical gates
+
+The confirmatory family is **H1 and H2 only**. Each necessary component uses a fixed one-sided **97.5% confidence bound**, corresponding to alpha .025. The rule is predeclared and does not change with observed p-value ordering.
+
+**H1, C101 versus B100:** all three statistical components must pass on the equal-domain natural primary estimand:
+
+1. The upper bound for D_C-D_B is **below zero**: introduced-error superiority under the least-favorable alignment contrast.
+2. The lower bound for Q_C-Q_B is **above -0.03**: completion-gated repair NI within 3 percentage points of source errors.
+3. The upper bound for W_C-W_B is **below +0.005**: all-case WER NI within 0.5 percentage point of reference words.
+
+For the proposed practically useful H1 claim, the observed least-favorable introduced-error reduction must also be at least **0.001**, or **0.1 percentage point of reference words**. Both B100 and C101 must independently have an observed least-favorable Q gain of at least **0.05** over deterministic normalization and a one-sided 97.5% lower bound above zero. Each must also improve all-case WER over unchanged raw ASR, with its one-sided 97.5% upper contrast bound below zero. These anti-identity interpretation gates prevent a pair of ineffective copying systems from qualifying. They constrain H1; they do not create additional uncorrected headline discoveries. WER against deterministic normalization remains a secondary comparison, since the utility gate already requires useful repair beyond that cheap baseline.
+
+**H2, B100 acoustic versus B100 text:** both statistical components must pass:
+
+1. The upper bound for W_acoustic-W_text is **below zero**.
+2. The upper bound for D_acoustic-D_text is **below +0.001**, a preservation NI margin of 0.1 percentage point of reference words.
+
+The proposed practically useful H2 claim additionally requires an observed equal-domain WER reduction of at least **0.005**, or **0.5 percentage point**. All completion failures, introduced-error bounds and repair outcomes are also reported. The acoustic arm uses the exact B-text-selected optimizer, learning rate and schedule; its probes do not select a separately optimized primary recipe.
+
+The new word/error ratio units matter. The 0.1 pp introduced-word-error margin is not the earlier case-level critical-atom margin with its number relabeled. Development must justify the proposed 3 pp repair NI margin, 0.5 pp WER NI margin, 0.1 pp introduced-error target/margin, 0.5 pp WER practical gain and 5 pp repair usefulness floor in their actual units and attainable precision. If those cannot be justified or powered, declare the affected claim estimation-only before final outcomes. Do not widen them to meet a calendar limit or after seeing a result. An observed practical target is not proof that the true improvement exceeds that target; distinguish those statements.
+
+Within a joint claim, the alternative is the intersection of all required component alternatives and the null is their union. If any necessary component null is true, the probability that every component incorrectly passes is at most .025 when the component procedure is valid. Bonferroni across H1 and H2 therefore controls the primary family at at most .05. Additional necessary usefulness gates can only restrict declaration. This does not make the interval method valid with inadequate source clusters; the qualification conditions above still apply.
+
+Secondary contrasts receive effect estimates, identified ranges and clearly labeled descriptive intervals. If a separate secondary family is preregistered for formal tests, specify and adjust that family, for example with Holm using valid p-values. A post hoc favorable secondary result cannot become a primary hypothesis. Do not derive new confidence levels from the observed Holm rejection order. [ST4]
+
+### 25.5 Three training seeds and their limits
+
+Final seeds are **1729, 2718 and 31415**; development seed 42 is separate. Report all per-seed metrics and paired contrasts, their arithmetic mean, range and standard deviation. No best-of-three checkpoint or replacement of an unfavorable successful seed is allowed. A numerical failure follows its frozen retry policy and remains visible in cost and completeness records.
+
+Primary source-cluster inference conditions on these three fitted runs. It does not precisely characterize the universe of future random initializations. Common seed IDs pair data order and augmentation where possible; they do not make different architecture tensors identical. For the identical B100 channel architecture, matched random initialization within each seed block is an additional control.
+
+A source-by-seed resampling sensitivity may be shown but is unstable with only three seed levels. A 95% t interval over three paired seed differences has two degrees of freedom and critical value about 4.303. An exact one-sided sign-flip test over three seed differences has only eight sign patterns and cannot reach p<.05. Millions of tokens, multiple recognizer views and synthetic variants cannot manufacture more training replications. If development shows that seed variation is decisive, register additional seeds and cost before final outcomes or narrow the claim. Reporting nondeterministic variation rather than a fortunate run is a known concern. [ST2]
+
+### 25.6 Source-cluster precision and power sensitivity
+
+Nominal n=8,826 does not establish power. Actual reference words, source errors, source clusters, cluster imbalance, paired endpoint variance and identification width are not measured in this specification. The former binary case-event sample-size table does not apply to introduced-word-error and repair ratios. Words and output variants are not iid Bernoulli trials.
+
+For a single domain with K independent source blocks, let X_g be the sum of the paired numerator contrast in block g, already averaged across the three fixed runs, and Y_g the corresponding source-fixed word or source-error denominator. With theta=sum(X_g)/sum(Y_g), a first-order cluster variance approximation is:
+
+~~~text
+V(theta) approximately K/(K-1) * sum_g (X_g - theta*Y_g)^2 / (sum_g Y_g)^2.
+V(equal-domain contrast) approximately 0.25 * [V_LS-PC + V_SLUE].
+~~~
+
+The second line assumes the domain source blocks are independent. It must be amended if provenance reveals shared sources or a crossed method. For partial identification use the actual relevant endpoint contributions. This approximation illustrates what development must measure; the frozen inference method remains authoritative.
+
+For transparent sensitivity only, suppose clusters have equal denominator weight and each domain's paired cluster-ratio differences have standard deviation sigma. Then SE=0.5*sigma*sqrt(1/K_LS+1/K_SLUE). A normal 80%-power directional alpha .025 detectable effect is approximately (1.960+0.842)*SE. The following **hypothetical** block counts and SDs are not claims about either retained corpus:
+
+| Assumed independent blocks LS / SLUE | MDE if paired cluster SD=2 pp | SD=5 pp | SD=10 pp |
+| --- | ---: | ---: | ---: |
+| 30 / 20 | 0.81 pp | 2.02 pp | 4.04 pp |
+| 60 / 35 | 0.60 pp | 1.49 pp | 2.98 pp |
+| 100 / 50 | 0.49 pp | 1.21 pp | 2.43 pp |
+
+For example, 60/35 hypothetical equal-weight blocks and 5 pp SD yield about 1.49 pp MDE. They do not establish power for a .1 pp introduced-error target. These normal approximations omit finite-block corrections, unequal weights, sparse source-error denominators, seed-population uncertainty and alignment conservatism; they can be optimistic. The last row is an algebraic sensitivity, not an available SLUE test collection.
+
+For NI with true contrast zero, the margin must be large relative to the same approximate 2.802 × SE. For a partially identified contrast, the conservative identification penalty also consumes the margin or the superiority effect. More observations do not automatically remove that penalty. A small source-error denominator may make repair precision poor even when the reference-word count is large.
+
+Development-only planning should simulate the real source-block weights, count ratios, paired model differences, completion failures and frozen cap policy across conservative variance scenarios. Do not simulate a desired effect and report it as observed. Report minimum detectable effects or expected interval widths conditional on those assumptions, not a promised power based only on 8,826 rows. A wide final interval is inconclusive, not evidence of equivalence or a plateau.
+
+### 25.7 Deterministic stress and literal analyses
+
+The generated suite has exact latent records under its grammar; it supports exact-match, field, edit, introduced-error and repair analyses plus documented structural failure counts. It does not establish the natural frequency of technical hazards, speaker intentions or human harm. Report the 9,000 mandatory evaluated cases, 3,000 grouped seeds, all 25 categories and actual template/constructor dependencies. Other generated cases contribute conformance evidence only until model outputs exist.
+
+Natural literal-sensitive analyses use frozen source/reference extraction rules, permissible canonicalization and admissible alignment policy. Their eligible counts and coverage remain unknown until execution. They are reference-anchored proxies for exact numbers, URLs, code-like strings or other detected forms; they are not gold semantic critical spans. Candidate-output ambiguity cannot create an easier denominator. Include conservative bounds or explicitly label an output-consensus-only descriptive analysis with its coverage.
+
+Property tests, tiny exhaustive checks, independent implementation parity and metamorphic tests are software evidence, not a sample of human semantic judgments. Their configured scope, failures, fixes, version and test counts are reported. No claim of 100% natural scorable coverage follows from passing them. AI-assisted assessments, if explored, are optional secondary evidence and can be removed without changing H1/H2.
+
+### 25.8 Rare events, failures and reporting
+
+The paper's introduced-word-error statistic is not product CPFR, total semantic preservation or a harmful-event rate. It cannot automatically certify a .1% semantic product release threshold. The original product qualification vocabulary remains a separate future contract; this zero-annotation publication MVP does not create a hidden human evaluation prerequisite for it.
+
+For a truly specified binary event over n independent trials with zero observed events, the familiar one-sided 95% iid upper bound is 1-0.05^(1/n), about .299% at n=1,000 and .100% at n=2,995. [S25] That formula is not valid merely by substituting reference words, correlated utterances, seed copies or generated variants for independent trials. It also does not bound unobserved semantic harms from a reference-edit metric. Report deterministic failure counts and source-cluster uncertainty under their actual design.
+
+Invalid, missing and capped raw outputs receive zero completion-gated repair; WER scores actual valid emitted text/prefix or empty. Introduced-error bounds remain scoreable from that text. Alignment cap or ambiguity broadens attribution bounds without dropping the case. Guard/source-return and fallback behavior are separate named system rows. Every final table includes source/word/error denominators, completed outputs, invalid/missing/capped counts, exact-lattice and fallback coverage, bound widths, per-domain and per-seed results, training completeness and cost. Report failed cells and inconclusive gates beside successful ones. No result exists until those records are produced.
+
+
+## 26. Automated evaluation validity and optional qualitative review
+
+### 26.1 Validity from explicit contracts and software verification
+
+**DRAFT PRE-REGISTERED DECISION.** The MVP requires zero external annotators, second raters, adjudicators, mandatory listening queues and repetitive author labeling. Existing public references retain their published policy; controlled examples carry generated latent truth. Scorer verification establishes that the implementation computes the declared estimand. It does not establish perfect upstream transcripts or comprehensive semantic fidelity. Those limits narrow the claim instead of creating a human annotation dependency.
+
+Part IV is normative. Freeze its algorithm, normalization, reference selection, failure mapping, ambiguity bounds, exact technical parser, denominators, state budgets and tests before examining final outputs. Compute R/S source masks and generated field obligations without candidate outputs and hash them separately. Candidate identity, architecture, native edit actions and judge verdicts are absent from the lexical scorer's input interface.
+
+### 26.2 Required deterministic correctness suite
+
+| Verification layer | Required evidence before final evaluation | Failure detected |
+|---|---|---|
+| Finite obvious fixtures | Exact counts for identity, repair, damage, unresolved replacement, insertions/deletions, repetitions, reordering, empty strings, Unicode and failures | Basic errors in the mathematical implementation |
+| Pairwise distance oracle | Exact unit-cost distances and all-optimal edges agree with an independently written small implementation | Incorrect WER, pruning or lattice extraction |
+| Exhaustive tiny sequences | All R/S/O triples over `{a,b}` with each length 0–3; independent path enumeration checks feasibility, conditional optimum and extrema | Hidden tie, gap and boundary errors |
+| Property tests | Conservation, count bounds, identity, perfect-reference output, perfect-source behavior, integer reproducibility and fixed denominators | Accounting contradictions and model-dependent populations |
+| Metamorphic tests | Relabeling, reversal, isolated anchored edits, Unicode equivalence, duplicate/reordering attacks and representation parity | Fragile behavior under specified transformations |
+| Generated latent conformance | Full parser consumption, independent fields, repeated occurrence IDs, corruption boundaries and extra-text rejection | Substring-only success, wrong binding and ignored additions |
+| Cross-implementation parity | Independently structured scorers agree on finite/exhaustive suites and a frozen development batch | Shared assumptions hidden inside an optimized implementation |
+| Resource fallback conformance | Small state budgets yield valid outer bounds with unchanged WER and denominators | Computational difficulty causing favorable exclusion |
+
+These are future tests, not tests run by this revision. No scorer implementation or benchmark is created here. Part IV gives expected values and pass criteria. An independent implementation is another program that the sole researcher may create with coding-agent assistance; it does not require another human evaluator. A general edit-distance library verifies distance only unless it implements the same triple objective and gap rules.
+
+### 26.3 Ambiguity and coverage qualification
+
+The R/S preflight obtains possible matches from the minimum-edit DAG without enumerating whole paths. It freezes source-certain masks, ambiguous counts, literal eligibility and denominators. Repeated words belong in development fixtures; plausible-looking alignments are not certain occurrence identities.
+
+The output stage retains every conditional-optimum triple path. Per-event consensus can be unavailable even when a total count is identified; agreement on some words does not identify the total. Export both local coverage and total intervals. Include beginning/end gaps and every added insertion error. If the exact joint graph exceeds its registered budget, retain the case using the mathematical envelope. No author or judge resolves it to increase coverage.
+
+Before final training, benchmark scoring on development-only lengths, error burdens and adversarial repetition, recording throughput, state counts, memory and bound widths. Establish the registered computational-availability and interval-width feasibility conditions from development data. If conservative bounds cannot distinguish planned margins, narrow the claim or retain an estimation study; do not substitute favorable tie-breaking. More generated cases cannot eliminate structural ambiguity or create additional natural source clusters.
+
+### 26.4 Generated-ground-truth and representation conformance
+
+Validate each generator/parser against an independently expressed latent specification. Field IDs remain unique when values repeat. Parse the entire output, scaffold, multiplicity, order and position-specific bindings. A matching string elsewhere does not establish field retention. Corruption that destroys all source-visible evidence belongs to underdetermined diagnostics, not confirmatory inferable repair; a known latent answer does not establish text-only recoverability.
+
+Adversarial fixtures include one repaired field beside one corrupted field, duplicate values, appended explanations, swapped unequal values, removed negation, changed signs/units, extra CLI flags, truncation and Unicode variants. If swapping equal rendered values changes no observable text or binding, hidden intent is not detectable. Test exact-byte and explicitly permitted normalized contracts separately.
+
+The same rendered R/S/O triple receives identical lexical scores for A, B, C, ByT5, Qwen, DET and every seed. Validate C's structural renderer separately. Native edit boundaries are not privileged evaluation labels. A broken renderer is an implementation failure; a correct renderer applying a bad learned edit is a model outcome.
+
+### 26.5 Release, failure and amendment rules
+
+The release contains scorer specification/implementation hashes, normalization tables, dependency versions, finite fixtures, exhaustive-oracle specification and future results, property/metamorphic seeds, independent parity results, source-mask hashes, generated schema/parser hashes, per-case counts/denominators/bounds, exclusion reasons and population identities. Test results and measured coverage remain empty until execution.
+
+A blocking failure includes any violated invariant, unexplained parity mismatch, candidate-dependent source mask, lost output, inconsistent reference, uncounted insertion or failed completion awarded repair. Fix it with a reproducible fixture, version the scorer and rerun relevant verification. Inability to finish exact pairwise WER is a pending evaluation failure, not permission to exclude the row or impute a favorable WER.
+
+Before unblinding, apply a justified scorer bug correction to every affected output and retain both versions. After comparative outcomes are known, distinguish a demonstrable bug from an estimand change. A new normalization, alternative form, alignment objective, denominator, state budget selected for favorable coverage, or ambiguity policy changes the protocol. Report the registered analysis and label the changed analysis exploratory unless a fresh confirmatory evaluation is obtained. No quantitative headline depends on manual auditing of automatic negatives.
+
+### 26.6 Optional author inspection
+
+There is **no required author inspection quota**. The researcher may inspect up to 25 development cases per scorer version for debugging or choose a few illustrations. This creates no final labels, accuracy qualification, primary ambiguity resolution or required endpoint. A suspected reproducible defect becomes a general deterministic test under the version rule. This is not an expandable review queue.
+
+Final qualitative examples disclose their selection rule. They illustrate mechanisms or failures; they do not estimate incidence. Agreement with the author does not substitute for the frozen quantitative result.
+
+### 26.7 Optional AI-judge exploration
+
+AI judging is outside the MVP critical path and may be omitted entirely. If separately budgeted, preselect cases by source-only hashes/strata, hide system/architecture/seed identities, randomize order, use at least two identified model families, and freeze the rubric/prompts. Ask separately about unsupported additions, clause deletion, polarity, participant relations and material meaning change; allow uncertainty. Retain raw structured verdicts, request/response metadata, model snapshots, dates, failures and token/monetary costs.
+
+Call the result **model-based semantic evaluation**. Report agreement/disagreement and sensitivity to model family and presentation order. Correlated model verdicts are not independent human votes; majority voting does not create ground truth. Never train on final verdicts or use a judge to resolve primary alignment/reference ambiguity. Pretraining overlap, family preferences and prompt dependence remain limitations. Removing this entire experiment must leave every primary hypothesis, validity gate, result table and publication conclusion intact.
+
+
+## 27. Scaling and capacity decisions
+
+### 27.1 Publication scaling is an optional controlled extension
+
+The MVP can support the representation and corruption-channel questions with the four approximately 100M arms. It does not need a 203M or 316M model merely to produce a size plot. If no size extension is completed, describe a matched-scale study and practical baseline comparison; do not call it a scratch-model scaling study.
+
+The minimum meaningful same-family grid is:
+
+| Family point | Exact parameters | Final seeds | Anchored exposure checkpoints | Added final training beyond MVP |
+| --- | ---: | --- | --- | ---: |
+| B100 | 100,686,336 | 1729, 2718, 31415 | 50M / 100M / 150M; final-test 150M | None; existing B100 text control |
+| B203 | 202,936,320 | Same three independent seed blocks | 50M / 100M / 150M; final-test 150M | Three 150M trajectories |
+| B316 | 316,196,352 | Same three independent seed blocks | 50M / 100M / 150M; final-test 150M | Three 150M trajectories |
+
+This extension adds **six final scratch runs and 900M paper_canonical_v2 anchored exposures**, giving 18 final scratch runs and 2.7B exposures across the complete architecture/channel/size study. The three B-family sizes supply nine independent training trajectories, each with repeated checkpoints. The 27 size-by-seed-by-checkpoint development scores are not 27 independent training replicates. Full sealed-test learning curves require their own pre-freeze inference allocation; only final 150M sealed-test results are mandatory for a registered size extension.
+
+Use B100 as the small seq2seq point. MODEL1/A100 is causal and has a different active-token/computation structure. Its educational checkpoint also has a different training history. Neither may substitute for B100 in a causal interpretation of the B-family size curve.
+
+Hold tokenizer, output representation, task restore_reference, source pool, curriculum, corruption policy, ordered anchored presentations, final budgets, evaluation and decoding fixed across the B grid. Width, depth, attention-head grouping and FFN dimensions change according to the exact declared configurations; the result concerns this architecture family, not parameter count stripped of every architectural choice.
+
+The default stretch cost in Section 19 assumes a recipe-transfer policy frozen from B100 development, with no unlisted size HPO. If independent size tuning is necessary, give B203 and B316 the same three-recipe  ×  10M development allowance before final runs. Those six extra development trials add 60M exposures and approximately **0.06712983552  ×  10^18 modeled FLOPs** under the Section 19 shape surrogate. Amend the run ledger and totals explicitly. A larger model that needs extra tuning cannot quietly receive it while being labeled equal-tuning.
+
+The stretch decision is based on development learning, BENCH-00, data availability and the declared resource budget before affected final-test results. If the MVP final outcome itself motivates the larger run, label the extension exploratory or confirm it on independently held-out evidence. It must not retrospectively strengthen the original preregistered H1/H2 claim.
+
+### 27.2 Exposure and time ask different questions
+
+At 50M/100M/150M anchored exposures, every B model has seen the same ordered clean-source presentations under paper_canonical_v2. Record actual encoder, decoder, loss, corrupted-input and padded positions; these can differ from the invariant anchor and from each other. Repetitions do not become unique data merely because the exposure total is large.
+
+The independent measured-time comparison uses the Section 19 T* cap and the nearest retained completed checkpoint not exceeding it. A larger model may process fewer examples within that time. Compare its result to the smaller model's result at the same cap, not to a conveniently chosen early or late small-model checkpoint.
+
+Report parameters, independent clean source count, cumulative anchored exposures, unique and repeated data, optimizer updates, actual native tokens, model-derived FLOPs, measured synchronized training time, peak memory, task loss, equal-domain WER, introduced word-error bounds D/N_ref, completion-gated source-error repair bounds, automatic literal scores, ambiguity/termination coverage and inference latency. Keep model-derived operation counts separate from measured elapsed time. Do not label the same comparison simultaneously data-matched and compute-matched unless both equalities actually hold.
+
+Additional useful controls ask whether the larger model's cost is better spent on longer training of B100, additional independent clean sources, or harder/repaired data. Each is a separate registered treatment. Changing both size and data quality is an engineering trajectory, not an isolated capacity effect.
+
+### 27.3 What three sizes can establish
+
+The B100/B203/B316 experiment can describe a bounded empirical trend and the observed correction/preservation/runtime frontier under the declared budgets. It can reveal plateaus, reversals, undertraining and a practically useful range. It cannot identify a universal power law, an asymptote, compute-optimal model/data allocation or performance at 1B parameters.
+
+An optional development-only descriptive function is:
+
+~~~text
+L(N, D) = L_infinity + a * N^(-alpha) + b * D^(-beta)
+~~~
+
+Use it only after enough independently informative model/data settings exist and publish its uncertainty, residuals and extrapolation limits. Three sizes and a few correlated checkpoints do not reliably identify all five quantities. They do not justify a narrow confidence band around a 752M/988M prediction. Simple observed curves are preferable when the evidence cannot support a fitted law.
+
+Broad-language-model compute-scaling papers inform budget reasoning, but their token/parameter relationships are not mandatory prescriptions for high-overlap transcript restoration. The specialist's mixture, recoverability, target structure and repeated presentations differ. [S23-S24]
+
+A practical frontier point includes uncertainty and its actual deployment configuration. A lower parameter count alone is not lower end-to-end latency, especially if unsupported cases trigger a failed specialist attempt followed by Qwen. Quality comparisons and runtime comparisons use the same stated bare/guard/full system identity.
+
+### 27.4 Optional 300M continuations
+
+Extending B100, B203 and B316 from 150M to 300M adds **nine continuations, 1.35B anchored exposures and approximately 1.2051283968  ×  10^18 modeled FLOPs** under the Section 19 arithmetic. These are the same seed trajectories, not nine new independent seeds.
+
+Freeze the continuation data, objective and learning-rate schedule before the affected final outcomes. A trajectory originally planned with a 300M schedule can provide an unchanged-policy 150M/300M learning curve. If the original 150M schedule decayed to its endpoint and later training restarts or changes the schedule, label the added stage a registered continuation/restart policy. It is not the same training algorithm that would have run continuously with the original schedule.
+
+Keeping only B-family continuations answers a B-family exposure question. It does not create a fair 300M A/B/C or acoustic-channel comparison. Any such new comparison requires the corresponding other arms to receive their own registered continuation budgets and evaluation; list their extra work rather than reusing the 150M controls.
+
+A continuation chosen because final performance was disappointing is an adaptive research repair. It can be useful, but its confirmatory status requires a predeclared rule or fresh held-out evidence. The originally frozen 150M results remain in the report.
+
+### 27.5 Retained conditional engineering ladder
+
+The original longer campaigns remain valid **product/educational options**, separate from the publication grid:
+
+| Candidate campaign | Original total processed exposure | Role |
+| --- | ---: | --- |
+| MODEL1 100.69M | 1B; educational checkpoints at 50M/250M; optional 2B only if justified | Learning program, separate lineage |
+| S154 | Optional 400M interpolation | Cost/capacity probe when the useful range appears below 203M |
+| S203 | 600M | Product prototype; retained 450M foundation plus task/hard phases |
+| S316 | 1.5B | Product primary-size candidate; retained 1B foundation, 400M task and 100M preservation phases |
+| S510 | 2B, conditional | Escalation only after an explicit scale-responsive failure |
+| S752 | Optional 3B planning scenario | Later conditional study |
+| S988 | Optional 4B planning scenario | Later conditional study |
+
+These campaigns use their separately versioned product/educational token ledgers and task contracts. Do not add them to the paper's 1.8B anchored-token claim as though all units, tasks and data were identical. Their modeled operation costs and time sensitivities are retained in Section 19. Their unique-source and repeated-exposure counts remain distinct.
+
+The product family can be selected using development and qualified system evidence. If C rather than B is chosen, derive and record the scaled pointer/action configuration and its exact parameter count; a B203/S316 count does not remain correct after adding C heads. New parameters or new product heads change the model identity. Core student weights still originate from random initialization; exact continuation of the candidate's own lineage is allowed, imported pretrained student weights are not.
+
+Retain the following proposed development escalation conditions:
+
+- **Approximately 100M → 203M → 316M:** progress only when smaller models have learned the task, automatic provenance/contamination checks and development evidence support real transfer and native cost fits. The original 203M-to-316M gate seeks at least a 3 pp useful-correction improvement over the approximately 100M product winner, or a 15% relative task-error reduction, with unchanged preservation. Evaluate that gate on development, with intervals and seed variability, before spending the larger budget.
+- **316M → 510M:** require an explicit missed replacement gate, passing automatic data checks and train/development evidence of insufficient capacity rather than simple overfitting or invalid labels. A short capacity probe should support a preregistered expectation of at least 20% relative reduction in remaining useful-task error at feasible native cost. If 316M already qualifies, 510M is not mandatory.
+- **752M/988M:** require at least three completed size points and matched-budget data/compute controls, plus a preregistered prediction of at least 25% relative reduction in remaining useful-task error, no preservation regression and a still-plausible twofold total-cleanup latency advantage over the incumbent. Validate with a bounded 10% pilot and a BENCH-derived resource allocation before extending.
+
+These are proposed engineering decision thresholds, not existing model results or universal scaling rules. A fit curve cannot waive preservation, useful correction or runtime constraints. Native memory fit does not imply that a months-long campaign is worthwhile.
+
+If additional size does not help, inspect recoverability, label quality, task mismatch, target loss, data diversity, optimizer/attention correctness and source-language competence before escalating. If longer training helps more efficiently than size, report that result. If a smaller pretrained model dominates under the practical downstream budget, the research may still be informative while the product case for scratch becomes weaker.
+
+### 27.6 Month scope, stopping and permissible claims
+
+All size extensions, the 300M continuations and the original long product/educational campaigns are outside the mandatory thirty-day MVP. BENCH-00 must qualify the complete primary grid, native ByT5 adaptation, two-recognizer natural evaluation, 9,000-case generated panel, CPU scorer and analysis deadline before spare capacity is allocated. The practical frontier at one approximately 100M scratch scale is still reportable; it is not a scaling result. No scaling headline appears without the complete three-size, three-seed controlled grid.
+
+The original product escalation thresholds above retain their product meanings; they are not silently reinterpreted as the new paper's word-error/repair margins. Any automatic metric used for a future product gate must be named and frozen explicitly. The paper's reference-anchored introduced-error statistic does not certify a semantic CPFR release target. This publication specification creates no required human evaluation, labeling or listening stage.
+
+Stop mandatory product scale-up when a smaller model meets the product gates with adequate uncertainty. Stop an unproductive research ladder when the next experiment cannot discriminate the remaining explanation or fit the resource budget. Do not complete every listed candidate simply because it appears in the specification.
+
+The final size decision reports the complete registered evidence, including failed fits, unstable seed orderings, learning curves, actual costs and conditional system behavior. A smaller effect with a wide interval is not proof of a plateau. A larger effect on synthetic tests alone is not proof of real transfer. A model that is accurate only with frequent Qwen fallback is a measured hybrid system, not a raw specialist replacement.
+
+
+## 28. External recognizer generalization
+
+### 28.1 Paired zero-shot recognizer transfer
+
+Decode the same eligible natural audio from Section 21 with the pinned primary Parakeet recognizer and `openai/whisper-large-v3-turbo`. The latter's official card identifies an 809M-parameter model; freeze its checkpoint revision, runtime, precision and decoder settings before final scoring. The primary Parakeet identity remains the recorded v3 checkpoint in Section 4. This is one controlled recognizer-transfer axis, not ASR training or a new speech-domain claim. [D12, R8]
+
+The nominal source pool has 8,826 rows and 17.95 published audio-hours. Both recognizers use identical case IDs and audio crops. Freeze language/task, temperature or beam settings, segmentation, prompt/context carry-over, silence policy, timestamps and preprocessing. Record raw one-best strings, including emitted punctuation/case. Every corrector receives the same raw text for a given view; deterministic processing remains a separate baseline. No reference-derived prompt, N-best list, confidence score or audio reaches a corrector.
+
+Training, corruption construction, HPO, prompt design and guard calibration remain Parakeet-focused. Whisper hypotheses and outputs do not select the correctors or their thresholds. Apply the unchanged final model/seed roster without adaptation. A technical decoder smoke test on development material can confirm the runtime and schema, but cannot become a hidden Whisper-specific optimization campaign.
+
+### 28.2 Recognizer-specific denominators and coverage
+
+The two recognizers have different source errors even on identical audio. Compute the reference/source alignment, total source edit distance and automatic literal/source-consensus masks independently for each raw hypothesis. Reference words and source membership remain common; a Parakeet-correct word or literal is not assumed correct in Whisper.
+
+The all-row population removes v1.1's manually selected Parakeet-conditioned critical-panel design. Conditional literal subsets can still differ by recognizer, however. Report each recognizer's eligible counts, source-error denominator, initial correct-token/literal coverage, output-consensus coverage and computationally unavailable counts. A shared deterministic intersection is a useful paired secondary analysis, not an unconditional estimate of all recognizer behavior.
+
+Primary introduced-error and completed-repair endpoints retain the frozen full-population denominators and conservative transition bounds from Section 23. Each natural primary endpoint is the equal-domain mean of the pooled LS-PC corpus ratio and the full eligible SLUE corpus ratio. Completion gating suppresses repair credit for invalid, missing or capped output; raw repair remains a separate conservation diagnostic. Local ambiguity never triggers listening, manual annotation or an AI-judge repair of the metric. Ordinary WER/CER and exact results remain available for every structurally eligible case under the common failure contract. Do not compare a high-coverage Parakeet point estimate with a tiny easy Whisper subset without its coverage and bounds.
+
+Repeated recognizer views do not double independent speakers, books or recordings. Preserve case pairing, model seeds and source clusters under Section 25. Report input WER, length, punctuation/case conventions and source-error opportunities alongside correction effects. A transfer difference may reflect the new input distribution rather than a single recognizer architecture property.
+
+### 28.3 Fixed existing-hypothesis resources as optional diagnostics
+
+Existing correction corpora provide an additional low-inference-cost option, without replacing the required paired Whisper view or adding training exposure. Preselect one resource/view before final outcomes and label it secondary or STRETCH.
+
+| Resource/view | Input and reference contract | What it can establish |
+|---|---|---|
+| RED-ACE Google `default` | Existing released word hypothesis rendered by the frozen space-join rule; LS ID/reference retained; no confidence input | Transfer to a historical fixed commercial-recognizer output without making new API calls; automatic label-parity diagnostic. [D23] |
+| HypR LS `withoutLM`, first published hypothesis | `hyps[0]` in the released rank order, joined by `utt_id`; no reranking, scores or extra candidates | Another fixed recognizer view over overlapping read speech, not a new domain. [D22] |
+| Qualified HyPoradise subset | One predeclared first-best list element and its existing reference under source-specific terms | A bounded additional corpus/view; not an independent aggregate of every repackaging. [D21] |
+
+RED-ACE supplies binary word-error labels produced by one minimum-edit hypothesis/reference alignment. These are useful existing automatic annotations, not independently judged semantic labels and not proof of the all-optimal triple scorer. Missing hypothesis words have no corresponding hypothesis-word label, and tie policies can differ. Compare legacy labels only where orientation, normalization and alignment contracts genuinely match; keep the comparison separate from primary transition outcomes.
+
+A PC intersection uses exact source IDs and records the original pair corpus's reference alongside PC's designated reference. If the references differ after the frozen lexical transformation, do not transfer legacy word labels as if they used the same `R`; retain the mismatch as a diagnostic or use the original-reference optional view. Report actual joined counts, duplicate views and missing IDs. Those quantities are not known from the specification alone.
+
+HypR/HyPoradise data terms remain source-specific; a repository badge is not a blanket permission over LS, TED, WSJ, Switchboard or other content. RED-ACE's published hypotheses can be reconstructed from a pinned release even if the historic live ASR endpoint has changed. No new cloud transcription, endpoint bill or corpus generation is authorized now.
+
+### 28.4 Scope and completion rule
+
+Report raw recognizer and deterministic controls, each retained model/seed's full reference-relative WER/CER, introduced-error/completed-repair bounds, automatic literal coverage, output burden, failure/abstention counts and measured latency/memory. Punctuation/case results use LS-PC where the reference supports them; SLUE's normalized field does not supply formatted conversational gold. Each three-seed aggregate is a mean across runs, not an ensemble unless outputs were actually combined.
+
+The confirmatory H1/H2 decisions remain on the declared primary Parakeet population. Whisper supplies the prespecified external-transfer result and does not replace an unfavorable primary endpoint. Guards use unchanged thresholds and report their own coverage; a fallback model's quality cannot be credited to the bare student.
+
+The bounded allowed claim is transfer without correction-model adaptation to **one second recognizer on the same two-source public population**. It does not establish universal ASR transfer, new speaker-domain coverage, hidden-pretraining independence, arbitrary accents, meeting speech or software dictation. Optional existing-hypothesis and private product analyses add their own limited evidence. If the paired Whisper run cannot be completed, mark the external-transfer gate unmet; a convenience corpus does not silently satisfy the same requirement.
+
+
+## 29. Runtime and product evaluation
+
+### 29.1 Scientific runtime evidence
+
+**ENGINEERING PROPOSAL.** Measure the frozen paper models on the same Mac, OS, power mode, backend and request population. Report BF16 quality first, then separately qualified Q8/Q4 points. Randomize model order within sessions and repeat across sessions so warmup, temperature and background load do not consistently favor one candidate. Model-only trials run with identical source bytes, greedy decoding and native required rendering, with no Qwen rescue. Guarded trials add the fixed validation policy. Product trials include all failed attempts, correction passes, fallback execution and final delivery.
+
+Use the natural public core for the paper's actual length distribution, with results by UTF-8 bytes, words and the frozen project tokenizer. Do not call native LibriSpeech utterances a long-dictation benchmark. Add the retained longer product buckets below as a separate workload. For every p95 show the request count, repeated-session design and a resampled uncertainty interval. A single fastest run does not establish a speedup. Training throughput and inference latency are separate measurements.
+
+The minimum paper needs measured model/guard latency, memory, output burden and downstream training cost. It does not require default LocalFlow promotion, a 2× speed target, Qwen retirement, or a 0.1% catastrophic-error bound. These remain product gates below. An architecture that misses the product gate can still contribute a controlled scientific result.
+
+### 29.2 Retained product runtime targets
+
+Measure latency from a clearly defined boundary. Cleanup latency begins when final normalized input and its permitted context are available and ends when the final validated text or normalized-source fallback is ready for insertion. It includes all correction, validation, rejected-attempt and Qwen fallback execution time. Report the specialist's first-attempt timing separately. Full user-perceived post-release latency includes final ASR work, normalization, cleanup, optional transform and insertion acknowledgement.
+
+| Input length in words | Proposed warm cleanup p95 target | Minimum comparison requirement |
+|---|---:|---|
+| 1-20 | 350 ms | At least 2× faster than current Qwen in the same test |
+| 21-50 | 600 ms | Same |
+| 51-200 | 1.5 s | Same on typical supported windows |
+| 201-500 | 4 s total across windows | No degradation versus current engine |
+| Above 500 / over token capacity | Explicit bounded windowing or fallback | No silent truncation or dropped clauses |
+
+These are product targets, not benchmark results. Measure by words/characters and a fixed reference tokenizer as well as the candidate's own tokens; token/s from different tokenizers is not directly comparable.
+
+Additional targets: warm first output token at or below 100ms for short windows; cold model load at or below 2s after OS file caching, and separately measure true cold-start conditions; steady specialist allocation at or below 2GB for S316 including runtime caches on qualified windows; no unbounded memory growth. Report p50/p95 for cold load, prefill, correction pass, generation, validation, fallback and delivered text. Measure BF16, then Q8; attempt Q4 only after repeating quality gates. Small models can be disproportionately sensitive to quantization.
+
+Measure at least 30 fresh-process loads and 200 warm requests per main length bucket across several sessions, randomizing model order. Benchmark model-only and intended Parakeet/Qwen co-residency separately. Optional power measurement reports energy per completed cleanup including failed attempts/fallback, with idle baseline and measurement method; otherwise mark unavailable.
+
+**Streaming decision:** do not initially insert partial cleaned text. Bidirectional source states change when later words arrive, and a late self-correction can invalidate an early decision. An experimental prefix pass can precompute provisional work, but final normalization, source hashing and validation must rerun as needed. Reuse cached encoder states only when mathematical equivalence is established; a bidirectional encoder does not generally support naïve append-only caching.
+
+**Speculation decision:** consider speculative decoding only if profiling identifies autoregressive token generation as dominant. A second model or repeated verification can erase the latency gain on short requests. Sparse edits and reducing serial decoder depth are earlier, simpler experiments.
+
+
+### 29.3 Product promotion gates
+
+These are conditional product acceptance targets for a frozen candidate, not claims about achieved quality or requirements for the paper MVP. Broader unwanted-edit/meaning constructs need an appropriate existing-reference or independently qualified measurement basis. The automatic paper scorer does not supply it. If that basis is unavailable, product default promotion stays unqualified; the month plan creates no human labeling queue to close it.
+
+| Criterion | Gate |
+|---|---|
+| Protected literal bytes and edit structure | Zero violations in all mandatory regression/challenge cases |
+| Catastrophic preservation | Zero observed catastrophic failures in final acceptance; one-sided 95% upper CPFR_auto below 0.1% where sampling assumptions support it |
+| Unwanted edits | One-sided 95% upper UER_auto below 0.5%; also report UER_all and UER_changed |
+| No-op accuracy | At least 99.5% observed exact/policy-approved preservation, with interval and n shown |
+| Needed-edit precision | At least 98% valid edits under the qualified product reference policy; no critical slice hidden by aggregate |
+| Needed-edit success | At least 95% on unambiguous supported cleanup examples |
+| Qwen noninferiority | Lower bound of paired 95% interval for scratch-minus-Qwen success above -2 percentage points, overall and on predeclared important slices with adequate n |
+| Specialist coverage | At least 90% overall; at least 85% on edit-needed inputs |
+| Useful correction coverage | At least 80% of all edit-needed inputs corrected acceptably without Qwen fallback |
+| Qwen fallback reliance | At most 10% of representative inputs for a default-replacement claim; count identity/abstention separately |
+| Latency | At least 2× p95 cleanup speed improvement over current Qwen system on short/medium typical inputs; no worse p95 full pipeline on any required supported bucket |
+
+A model may be useful in opt-in mode before meeting default-promotion gates. Report that narrower result honestly. Baseline Qwen having poor behavior does not waive absolute preservation gates.
+
+
+### 29.4 Product slice gates
+
+Numeric thresholds apply to unambiguous references under the stated locale/policy. Ambiguous cases require identity or appropriate abstention rather than guessing.
+
+| Slice | Main metric | Proposed threshold |
+|---|---|---|
+| Number, percentage, currency | Correct canonical value, sign, unit and rendering | At least 99% correctness; zero introduced critical mutations |
+| Date/time | Policy-correct interpretation without invented context | At least 98%; 100% abstain/preserve on designated ambiguity controls |
+| Version | Exact component identity and permitted spoken conversion | At least 99%; literal versions preserved exactly |
+| Paths, URLs, CLI flags/commands, identifiers | Exact retained bytes and order | 100% on mandatory protected tests; unsupported normalization falls back |
+| Proper names/scientific terms/acronyms | Correct retained or explicitly justified form | At least 99% retention; report correction recall separately |
+| Self-correction | Correct intended survivor plus valid deletion | At least 95% on unambiguous supported cases; at least 99.5% false-trigger restraint |
+| Punctuation/capitalization | Accepted-reference or blind rubric score | At least 97% acceptable, with no meaning-changing punctuation |
+| Filler/false start/repetition | Permitted removals, meaningful wording preserved | At least 97% precision and at least 90% recall |
+| Paragraphs/lists | Structure rubric and content completeness | At least 95% accepted structure; zero critical clause loss |
+| Long prompts | Operative-clause retention and formatting | At least 99% clause-level retention; zero catastrophic omission/change |
+| No-op | Byte-exact or explicitly authorized formatting equality | At least 99.5% |
+| Mixed/long cases | Same per-category metrics | No more than 2 percentage points degradation against matched short cases, or narrower supported scope |
+
+Require at least 200 relevant test observations for a preliminary slice score, publish intervals, and expand critical-slice evidence before making rare-error claims. The same example may exercise several categories. A 100% result in 200 cases does not establish a population failure rate below 0.1%.
+
+### 29.5 Regression and diagnosis views
+
+Maintain a fast deterministic suite of at least 500 parser/tokenizer/protected-span cases; a model regression suite of at least 1,000 development examples; the locked balanced challenge; and the representative holdout. Freeze scorer versions and store full source/candidate/reference output, existing or structurally generated permitted-edit records, category scores and fallback reasons.
+
+Report each failure at its originating stage: ASR, normalization, correction proposal, neural cleanup, restoration, validation, chunk seam, optional transform or insertion. Run text-only replay and audio replay separately. Existing audio-replay timing omits physical microphone/device and final insertion; name it pipeline replay rather than complete user-perceived latency. [R5, R9]
+
+For a new data round, compare both fixed regressions and untouched new examples. A lower training loss with no improvement in real correction success is a data/objective warning, not permission to increase model size.
+
+
+## 30. LocalFlow integration
+
+**ENGINEERING PROPOSAL - PRODUCT TRACK.** The complete v1.0 integration contract is retained. This section describes future changes only; this specification has not modified LocalFlow or begun implementation. The paper's offline `restore_reference` interface takes raw recognizer text and fixed task controls and emits text or source-relative edits with input/model hashes. It shares packaging and output logging but does not inject benchmark labels, audio or oracle protected spans. It is separate from the product interface below, whose normalized and post-proposal boundaries remain authoritative. A paper checkpoint requires a separately recorded product-task specialization and qualification before it can serve intent-cleaned dictation.
+
+### 30.1 Versioned specialist interface
+
+Add a typed internal interface in a future integration milestone. Keep the existing ModelRunner path as the Qwen control.
+
+~~~text
+CleanupRequest v1:
+  task_kind: cleanup | correction_proposals
+  request_id, normalized_window_utf8, normalized_window_sha256
+  actual_call_source_utf8, actual_call_source_sha256, admitted_deletion_ledger
+  locale, mode, permitted_destination_hints
+  relevant_vocabulary, protected_span_ledger, correction_policy
+  token_budget, absolute_deadline
+
+CleanupResponse v1:
+  status: candidate | identity | abstain | timeout | error
+  task_kind, actual_call_source_sha256
+  output_text OR ordered_edits OR correction_proposals
+  generated_tokens, limit_hit, termination_reason
+  model_package_id, tokenizer_hash, adapter_version
+  timings, optional_calibrated_score
+~~~
+
+Use permitted context from the current cleanup contract: normalized text, locale/mode, destination category/structure, relevant vocabulary, protected spans and documented neighboring-window context. Do not add ambient application text or private workspace context merely because the new model has room for it. The input distribution and evaluation must match the actual interface. [R4]
+
+A correction-proposal bridge translates structured source spans to the exact deletion strings accepted by the legacy parser and retains its original-source validation. It consumes the normalized original window. Ordinary cleanup consumes the post-proposal source and returns text or rendered sparse edits. Bind edits to that actual source hash and retain the mapping back to the original window for final validation. Distinguish these tasks explicitly at the engine's existing corrections_pass branch. Never train the model to infer the task from arbitrary source content.
+
+The legacy engine uses Python string coordinates, while the proposed edit renderer uses UTF-8 byte offsets. Build and test explicit code-point↔byte boundary maps through raw, normalized, window-local, post-proposal and tokenized stages. Never pass byte offsets directly to a Python string slice or apply post-proposal offsets to the original window.
+
+### 30.2 Packaging
+
+Each immutable export contains model.safetensors or deterministic shards, config.json, tokenizer.json, tokenizer_config.json, special_tokens.json, runtime_manifest.json, normalization/adapter compatibility versions, inference configuration, a model card, calibration/acceptance report hashes, and a small synthetic conformance fixture set.
+
+Record architecture type, exact parameter count, tensor names/shapes/dtypes, tied-weight mapping, RoPE convention/base, max qualified source/target lengths, quantization scheme/group size, weight/tokenizer hashes, training code commit, training dataset manifest hash, seed, token totals, source checkpoint hash, MLX/software identity and source-only random-initialization lineage.
+
+Safetensors stores arrays, not an architecture implementation. A custom encoder-decoder or edit model is not automatically loadable by mlx_lm.load; provide the project's own versioned MLX loader/runtime. Do not fake a Hub repository revision to satisfy the current benchmark manifest. Add a separate local-package candidate type with content hashes and qualified loader identity. [R3, R9]
+
+### 30.3 Runtime flow
+
+:::diagram runtime
+~~~mermaid
+flowchart TD
+    A["Parakeet and normalization"] --> B["Input and protection ledger"]
+    B --> C{"Selected cleanup backend"}
+    C -->|Specialist| D["Typed scratch inference"]
+    C -->|Current| E["Qwen engine"]
+    D --> F["Render and validate"]
+    F -->|Accept| G["Validated cleanup"]
+    F -->|Reject or deadline| H["Bounded fallback"]
+    H --> E
+    H -->|No time or valid result| I["Normalized source"]
+    E --> G
+    I --> G
+    G --> J["Optional qualified transform and insertion"]
+~~~
+
+Fallback Qwen output still passes the engine's existing validation. The fallback system must return a recorded, finite result by an absolute request deadline.
+
+### 30.4 Rollout states
+
+| Stage | Behavior | Advancement evidence |
+|---|---|---|
+| Offline | Isolated files; no live output | Mathematical, dataset and benchmark contracts pass |
+| Shadow | Existing output remains served; specialist result logged only where current collection permits | Representative quality, failures and realistic cost understood |
+| Side-by-side | Owner compares retained candidates | Blinded useful-output judgments; no silent history relabeling |
+| Opt-in experimental | Specialist serves supported cases; bounded fallback retained | Preliminary per-slice quality and regression gates |
+| Default candidate | Chosen model frozen; full acceptance measured | All preservation, coverage, quality and latency gates |
+| Eventual default | Specialist chosen for ordinary clean mode | Reproducible acceptance record and reversible model selection |
+| Fallback retirement | Optional later decision | Broad coverage and separately qualified transform strategy |
+
+Use an isolated synthetic store during adapter tests. No owner database is required for unit/integration validation. Future real-data collection/export uses the existing owner-controlled collection and eligibility mechanisms; this specification does not authorize harvesting historical content.
+
+### 30.5 Failure behavior
+
+For timeout, malformed grammar, missing EOS/limit hit, invalid UTF-8, unexpected sentinel count, source-hash mismatch, illegal offsets, protected-span change, uncertain decision, or length violation: reject candidate, record the exact reason, and run at most one fallback attempt if the remaining absolute deadline permits it. If not, return the already-valid normalized source with fallback metadata. Never launch an unbounded retry chain.
+
+A Qwen fallback restarts from the original normalized window and original applicable protected-span metadata. Discard all partial specialist corrections, deletions, edits and derived post-proposal input; let Qwen run its own correction proposals through admission. If even the normalized-source fallback is unavailable or invalid, return a typed failure to the caller instead of inserting partial output.
+
+Cancellation must discard the candidate belonging to an obsolete request. A model returning identity is distinct from a failed cleanup and from a Qwen fallback. All three affect coverage and quality denominators.
+
+Initially retain Qwen for non-cleanup transforms. Benchmark two residency policies: both models resident with serialized GPU work, and specialist resident with Qwen loaded on demand. The first uses more memory; the second adds cold fallback/transform latency. This is a measured product decision. A smaller cleanup model does not imply Qwen's entire memory footprint disappears.
+
+One-pass fusion of correction resolution and cleanup is a later experiment. It may improve latency, but it changes the existing two-task engine contract and must pass targeted source-coverage, protected-span and correction tests before promotion.
+
+
+## 31. Reproducibility and open-science plan
+
+### 31.1 A public experiment must be reconstructible without owner history
+
+**ENGINEERING PROPOSAL.** Release the public experiment’s own code, model definitions, configuration, source manifests, preprocessing and ASR recipes, training/evaluation scripts, tokenizer, eligible scratch checkpoints, scorer/test specifications, existing references where permitted, exact generated manifests or an authorized construction recipe, and the data needed to regenerate the reported figures. Private LocalFlow material is a separate supplement and is never required to reproduce a headline public result.
+
+The release distinguishes ownership and source terms at the file or source-shard level. A permissive code license cannot grant rights to unrelated audio, text, teacher outputs or pretrained weights. The intended repository code license is a separate project decision, provisionally a permissive license for original implementation code. Third-party notices and terms remain attached to their own components.
+
+| Release class | Planned material | Release decision and evidence |
+|---|---|---|
+| Definitely releasable as original project work, once created and checked | Original model/training/evaluation code, mathematical contracts, configs, synthetic fixtures, schema definitions, original protocol prose, run summaries and plotting code | Record authorship and dependencies; apply the chosen code/document license. This category states intended ownership, not that any implementation already exists. |
+| Releasable under verified attribution terms | Permitted LibriSpeech/LibriSpeech-PC IDs, hypotheses, compatible reference payloads and source notices | The audited releases state CC BY 4.0. Preserve attribution and source/version identity; an upstream acquisition recipe can accompany the payload. [D1-D2] |
+| Likely releasable with source-specific conditions | SLUE acquisition recipes and reference payloads under their actual access/redistribution terms; accepted synthetic pairs, generated speech where permitted, tokenizer artifacts and scratch checkpoints | Complete the exact asset-level compatibility and source-term record before publication. SLUE is gated at acquisition; do not infer audio redistribution permission from a dataset card. Earnings22 remains an optional extension with its separately limited transcript/alignment license. [D4, D18-D20] |
+| Obtain upstream rather than silently rebundle | Pretrained ByT5/Qwen/ASR/TTS weights, original audio where rehosting rights are not established, and external method dependencies | Publish model/source identifiers, hashes, installation/acquisition instructions and notices under their applicable terms. Verify whether adapters or converted weights may be distributed separately. |
+| Private or non-releasable without a separate basis | Owner history, personal audio/context, restricted third-party source material, and any unpublished annotation containing private content | Exclude from the public package. Release only explicitly permitted aggregate or de-identified evidence; do not claim that the private supplement is independently reproducible. |
+
+The public data plan in Section 12 controls exact source eligibility. In particular, SLUE access, versioned test references and permitted uses must be resolved before final selection. If either primary corpus cannot support the experiment, amend the public population before freeze and recompute weights, clusters, costs and precision; do not preserve an obsolete 5,000-case target or silently substitute private material. Do not publish a recipe that only works against an inaccessible private archive. Source rights and access are material dataset constraints, not a reason to add a broader compliance program.
+
+### 31.2 Release inventory
+
+| Artifact | Required contents |
+|---|---|
+| Source and environment | Owned model modules; training, tokenizer, synthetic, evaluation and inference code; dependency lock; supported invocation recipes; known platform limitations |
+| Tokenizer | Trainer/configuration; tokenizer model and reserved-ID map; hash; exact normalization policy; byte/Unicode conformance fixtures |
+| Model definitions and checkpoints | Exact tensor shapes/counts, configs, initialization lineage, eligible scratch checkpoints, source checkpoint hashes, export/quantization metadata and model cards |
+| Public benchmark | Task/data card; source licenses and identities; acquisition/construction recipe; splits; reference policy; permitted forms; automatic literal masks and eligibility; generated recoverability witnesses; scorer/version/test hashes and ambiguity rules |
+| Experiment evidence | Frozen `paper_protocol_v2`; per-experiment registry; all planned and completed run IDs; seeds; tuning budget; exclusions; failures; costs; measured versus modeled quantities; deviations |
+| Comparator evidence | ByT5-small adaptation configs and manifests; Qwen prompts/decoding/precision; deterministic rules; ConstDecoder feasibility/adaptation record and limitations |
+| Evaluation payload | Paired source/candidate/reference outputs where distributable; per-case scores; cluster IDs or a permitted mapping; automatic exclusion/ambiguity reasons; calibrated thresholds; aggregate tables with denominators |
+| Paper reproduction | Figure/table generation scripts, fixed input summaries, error-sampling rule, bibliography, limitations and a reproducibility checklist |
+| Hardware evidence | BENCH-00 report, hardware/software identity, dtypes, masks, actual sequence distributions, sustained throughput, peak memory, thermal observations and timing boundaries |
+
+ConstDecoder uses an existing published mechanism and official implementation; credit and preserve that lineage. Its bounded feasibility gate does not turn the project’s C101 into a reproduction if the external method cannot be adapted. ByT5-small remains the mandatory pretrained restoration comparator, with its pretrained provenance and native byte representation disclosed. [N3, N11, D13]
+
+### 31.3 Experiment records and checkpoint integrity
+
+Use one run directory with immutable initial manifests, append-only JSONL observations, atomic checkpoint completion and a final `decision.json`. A small SQLite index may summarize runs; an external tracking service is optional. Part III supplies the complete experiment-registry template.
+
+Every run captures code commit and dirty-state indicator; architecture configuration and enumerated parameter count; tokenizer hash; dataset/split/label manifests; initialization and augmentation seeds; initial tensor hashes; phase; optimizer/moment/gradient dtypes; LR/decay/warmup; batch and accumulation rules; valid-target denominators; context/mask conventions; precision and actual attention path; device/software identity; start/end checkpoints; unique source counts and all applicable token ledgers; elapsed time; throughput; memory; losses; category outcomes; failures; and notes.
+
+For paper comparisons, record the versioned `paper_canonical_v2` anchor: trusted controls plus clean spoken rendering, or frozen existing official reference for a real pair, plus the full written target, all under the fixed project tokenizer. This is accounting metadata, not extra model input. Corrupted-source, native-tokenizer, padded, action and loss tokens remain separate. Product experiments retain `product_canonical_v1`, based on their normalized original source and full target. Do not add the two canonical totals and describe the result as one comparable training-data quantity.
+
+Save Python/NumPy/MLX RNG state when used, optimizer step and moments, LR position, data order/cursor and augmentation state. Save at optimizer-update boundaries by default. A mid-accumulation save must also preserve gradient sums and their denominator; otherwise it is not an equivalent resume point.
+
+Write into a new temporary checkpoint directory; verify tensor names, shapes, hashes and a small forward pass; then atomically publish the completion marker and latest pointer. Keep two verified recovery checkpoints plus the in-progress write. A partial write cannot become the latest checkpoint. Preserve development-selected diagnostic snapshots without consulting final-test results; the confirmatory endpoint remains the registered 150M checkpoint, including its explicitly recorded final-update overshoot.
+
+Reproducibility has two levels: exact or tolerance-controlled continuation on the same pinned backend, and statistically comparable behavior after a hardware/dependency change. Do not promise cross-hardware bitwise identity. A backend change repeats correctness and short-learning checks and creates a new measurement identity. No pretrained weights, including token embeddings, enter a core scratch lineage.
+
+### 31.4 Repository architecture
+
+**ENGINEERING PROPOSAL.** After implementation approval, create a sibling research repository, provisionally `localflow-transformer-lab`. LocalFlow consumes an immutable exported package through its small versioned adapter. No repository is created by this specification task.
+
+| Proposed path | Purpose |
+|---|---|
+| `model/` | Embeddings, norms, RoPE, attention, SwiGLU, causal and encoder-decoder blocks, edit heads |
+| `tokenizer/` | Educational trainer, optimized trainer interface, reversible encoding fixtures and hashes |
+| `training/` | Losses, explicit optimizer/accumulation/scheduler contracts, checkpointing and native benchmark |
+| `data/` | Schemas, source/rights manifests, source-family splits, reference policies and optional LocalFlow export adapters; bulk data excluded from ordinary git |
+| `synthetic/` | Rule/text corruption, spoken rendering, TTS/ASR replay and separately scoped teacher jobs |
+| `evaluation/` | Reference-conditional lexical/transition/literal metrics, exact-field scoring, software verification, uncertainty and external-transfer scoring; optional model-based exploration separately |
+| `benchmarks/` | BENCH-00, automatic evaluation contracts, exact stress protocols and compact evidence |
+| `configs/` | Exact model, data, comparator and experiment configurations |
+| `experiments/` | Protocol versions, per-run manifests, amendments, decisions and compact summaries |
+| `checkpoints/` | Recoverable training states; excluded from ordinary git |
+| `inference/` | MLX loader, caching/generation, deterministic edit renderer and typed interfaces |
+| `exports/` | Content-addressed model packages; large weight objects stored outside ordinary git |
+| `docs/` | Canonical spec, derivations, decisions, milestone records and source licenses |
+| `lessons/` | Inspectable learning scripts/notebooks and the MODEL-1 report |
+| `paper/` | Manuscript, bibliography, planned/result tables, figure-generation inputs and release checklist |
+| `tests/` | Mathematical, data, tokenizer, renderer, runtime, resume and adapter contracts |
+
+Research independence keeps long-running training dependencies from destabilizing the app. Shared schemas are versioned and checked against exported fixtures; avoid copying internal production modules without an explicit revision. A reader must be able to run the public experiment without mounting LocalFlow’s owner database.
+
+
+## 32. Publication milestones and decision gates
+
+**PRE-REGISTERED DECISION  -  PROPOSED, NOT YET FROZEN.** The following gates define what evidence must exist. Writing their descriptions does not pass them. At publication of this specification, PUB-GATE 1-7 are **PENDING**; no empirical gate has been executed, and **MEASURED RESULT remains empty**.
+
+| Gate | Evidence required to pass | Failure response | Current status |
+|---|---|---|---|
+| PUB-GATE 1  -  Novelty | Closest-work matrix is checked; generic novelty claims are removed; a precise public-resource or controlled-study distinction remains; comparison to the nearest ASR/edit work is explicit | Narrow or change the thesis before expensive experiments; retain the engineering/learning project if no distinct paper contribution remains | PENDING |
+| PUB-GATE 2  -  Automated evaluation validity | Existing public reference/audio rights and access are adequate; reference policy and source grouping are frozen; fixtures/properties/metamorphisms/exhaustive oracle/parity and generator conformance qualify the scorer; ambiguity/caps/coverage and candidate-independent eligibility are explicit; no manual labeling is required | Repair the implementation/policy or amend the population before freeze; retain uncertainty and failures; no manual ambiguity rescue or private substitute | PENDING |
+| PUB-GATE 3  -  Experiment freeze | Development pilots support feasibility and the intended precision; primary claims, endpoints, margins, seeds, baselines, context, HPO, data/compute budgets, stop/failure rules, scorer/generator versions, automated verification and statistical analysis are recorded in a versioned protocol before affected final runs/results | Resolve ambiguity or explicitly reduce scope to an estimation study; no outcome-driven protocol changes | PENDING |
+| PUB-GATE 4  -  External validity | The frozen public real-speech evaluation and the predefined external-recognizer evaluation have run, with actual counts, input-specific eligibility and scoped interpretation | Restrict the manuscript’s generalization claim; the absent external test cannot be replaced by synthetic-only scores | PENDING |
+| PUB-GATE 5  -  Claim support | Every abstract-level sentence maps to completed evidence, effect size, uncertainty and its registered population; negative or inconclusive outcomes remain visible | Remove or weaken unsupported claims; a failed positive hypothesis is not rewritten as success | PENDING |
+| PUB-GATE 6  -  Reproducibility | Required public code/config/tokenizer/model/benchmark or recipe, source notices, run/failure ledger and figure inputs are complete, with an automated clean-environment reconstruction check or precisely disclosed limits; no second human is required | Repair missing artifacts or narrow the reproducibility claim before submission | PENDING |
+| PUB-GATE 7  -  Manuscript readiness | Related work, results, limitations, negative findings and released evidence agree; no unsupported superiority, safety, scaling or hardware claim remains | Revise the manuscript, or publish an appropriately scoped project report instead of claiming the planned research result | PENDING |
+
+PUB-GATE 3 freezes the experimental protocol before confirmatory training. A second artifact freeze records the resulting model/package/threshold hashes after training and any permitted calibration, but before final-test inference. These are different events: final weight files do not exist when the experiment is first preregistered.
+
+Amendments are allowed on development evidence before the affected final comparison. Record the date, rationale, old/new protocol IDs, which evidence was already inspected, and which outcomes remain sealed. If final cases motivate a repair, that test version is exposed for subsequent models; collect or reserve fresh final evidence for new confirmatory claims. Original one-shot results retain their historical identity and are not silently overwritten.
+
+### Retained engineering and learning gates
+
+The v1.0 decision gates remain useful in their own tracks. They do not all become paper prerequisites.
+
+| Gate | Question and required evidence | Track and NO-GO response |
+|---|---|---|
+| GATE-A | Is the implementation mathematically correct? V0-V8, analytic counts, masks, gradients, accumulation and resume pass | SHARED. Repair before long training or scientific comparisons |
+| GATE-B | Did MODEL-1 learn language? Held-out improvement, readable novel continuations and first-principles demonstrations | LEARNING. Repair the loop/data or narrow its educational domain; the later 1B finish does not block the paper |
+| GATE-C | Can the small specialist learn the transformation? Development evidence generalizes beyond templates and improves needed correction over deterministic handling | ENGINEERING/RESEARCH FEASIBILITY. Diagnose labels/representation/optimization; distinguish an uninterpretable pilot from a valid bounded negative result |
+| GATE-D | Does targeted specialization beat spending the same resource on broad pretraining or naïve size growth? A registered matched-compute ablation supports that decision | CONDITIONAL RESEARCH/ENGINEERING. This objective study is stretch, not an assumed or passed MVP gate; repair allocation before a scale-up justified by that claim |
+| GATE-E | Does approximately 300M approach Qwen for the product task? S316 is within 5 percentage points on supported product DEV and has a credible strict-gate path | PRODUCT. Diagnose a plateau; do not automatically purchase capacity |
+| GATE-F | Does approximately 500M meet replacement quality? Complete product quality/preservation/coverage gates if 510M is needed | PRODUCT. Stop or revise the replacement hypothesis; not applicable if a smaller model already qualifies |
+| GATE-G | Is 752M-988M justified? At least three-size evidence, a positive 10% pilot and an affordable native/cloud budget | CONDITIONAL. Keep the smaller model or stop when predicted marginal gain is unsupported |
+| GATE-H | Are product preservation gates satisfied? Structural/literal invariants, actual rare-event support and useful coverage pass | PRODUCT. Remain experimental or fall back; a public reference-conditional error result alone does not satisfy this gate |
+| GATE-I | Is the product runtime benefit real? Full fallback-inclusive latency, load and residency meet the retained targets | PRODUCT. Retain the incumbent or optimize a measured bottleneck |
+
+
+## 33. Full combined milestone dependency graph and specifications
+
+### 33.1 Dependency map
+
+The `R-M` prefix distinguishes this program from LocalFlow’s existing M07/M15 ledger. Milestones may contain explicitly named scientific and product routes; their evidence and completion statuses remain separate. This prevents completion of the paper from accidentally asserting product acceptance.
+
+:::diagram milestones
+~~~mermaid
+flowchart TD
+    M0["R-M0 audit and contracts"] --> M1["R-M1 mathematical core"]
+    M0 --> M2["R-M2 splits and tokenizer"]
+    M1 --> M3["R-M3 correctness and BENCH-00"]
+    M2 --> M3
+    M2 --> M5["R-M5 references, scorer and stress"]
+    M5 --> M6["R-M6 corruption system"]
+    M3 --> M4["R-M4 educational learning"]
+    M3 --> P7["R-M7 pilots and guard policy"]
+    M6 --> P7
+    P7 --> G3["PUB-GATE 3 protocol freeze"]
+    G3 --> F7["R-M7 twelve final scratch runs"]
+    F7 -.-> M8["Optional R-M8 203M"]
+    F7 -.-> M9["Optional R-M9 data repair"]
+    M8 -.-> M9
+    M8 -.-> M10["Optional R-M10 316M"]
+    M9 -.-> M10
+    F7 --> M11A["R-M11 apply registered guards"]
+    M10 -.-> M11A
+    M11A --> M12["R-M12 qualify frozen runtime"]
+    M12 --> M11B["R-M11 final calibration"]
+    M11B --> M14S["R-M14-S public final and transfer"]
+    M14S --> PUB["PUB-GATES 4-7 manuscript"]
+    M11B -.-> M13["Optional R-M13 live integration"]
+    M13 --> M14P["R-M14-P product acceptance"]
+    M14P --> M15["R-M15 product size decision"]
+    M15 --> M16["R-M16 default promotion"]
+    M15 -.-> M17["Optional R-M17 larger campaign"]
+    M17 -.-> M11A
+~~~
+
+Solid edges show the applicable route's required sequence; dashed edges are conditional branches, not additional prerequisites for the minimum paper. Guard policy, runtime selection rules and calibration methods are developed in the pilot and fixed at PUB-GATE 3. The post-training nodes apply that registered policy, qualify its declared runtime and execute the reserved calibration procedure; they do not invent new guards after the protocol freeze. R-M14-S does not depend on live integration, a 203M/316M campaign, or the full educational run. Optional capacity experiments use their own amended protocol before affected outcomes; the R-M8→R-M10 scientific route preserves the same B-family recipe rather than changing it through product-oriented data repair.
+
+Each milestone closes with `decision.json`: objective, protocol identity, evidence paths, pass/fail/partial status, unmet assumptions, interpretation and next justified action. A command completing or an implementation existing is not sufficient evidence. All implementation and data-generation actions described below occur only after a future implementation authorization; this specification has not begun R-M1.
+
+### R-M0  -  Research audit and contracts
+
+**Track: MULTIPLE. Objective and scope:** establish the pinned product boundary, source-stage truths, scratch-weight invariant, resource envelope, reference-faithful paper task, intended product cleanup behavior and nearest-work distinction.
+
+**Deliverables and experiments:** repository/source inventory; reviewed canonical specification; publication-readiness and nearest-work matrices; task/risk taxonomy; model/data manifests; and one worked synthetic trace from ASR through normalization, correction admission, cleanup and final validation. The paper trace separately records raw one-best input and its reference-faithful target.
+
+**Acceptance:** every stage/control has an identity; proposals and facts are distinct; private data volume is not assumed; primary candidate claims have clear prior-work boundaries. **Failure:** unresolved model-input/task identity, or no defensible paper distinction after the novelty review.
+
+**Dependencies:** none. **Parallel work:** source review, mathematical design and data-source inventory. **Evidence/handoff:** source links, hashes, trace, audit and decision record for R-M1/R-M2 and PUB-GATE 1. **Non-goals:** implementation, repository creation or product replacement during this specification task.
+
+### R-M1  -  Mathematical core
+
+**Track: SHARED. Objective and scope:** implement the transparent tensor-level educational core after approval, with contracts that can support later encoder-decoder and edit modules.
+
+**Deliverables and experiments:** owned modules from Section 8; explicit shape/parameter ledger; tiny FP32 reference attention; initialization and AdamW equations; hand-worked attention, RMSNorm and loss examples. Encoder-decoder/pointer additions repeat their relevant tests before entering the bake-off.
+
+**Acceptance:** analytic and enumerated counts agree; V0-V3 pass; gradients reach every intended branch; tied weights update once. **Failure:** silent dtype/shape changes, future leakage or unexplained numerical mismatch.
+
+**Dependencies:** R-M0. **Parallel work:** R-M2 and initial benchmark authoring. **Evidence/handoff:** reference calculations, numerical comparisons, tests and instrumented traces for R-M3. **Non-goals:** large training, advanced auxiliary losses or custom Metal kernels.
+
+### R-M2  -  Splits and tokenizer
+
+**Track: SHARED. Objective and scope:** establish reversible tokenization and source-group contracts before generated training variants can leak across partitions.
+
+**Deliverables and experiments:** 8k/16k/32k byte-BPE comparisons; bounded 16k unigram/reused-tokenizer controls where useful; training-only corpus manifests; exact byte/Unicode/coordinate fixtures; public speaker/book/call/seed grouping; and explicit mapping of any later LocalFlow export splits. Reserve `restore_reference` within the existing 64 control IDs without changing the vocabulary size.
+
+**Acceptance:** exact round-trip and special-token isolation on mandatory strings; no known cross-split source/variant groups; final vocabulary/hash and paper counting anchor fixed for the comparison. **Failure:** irreversible normalization, leakage, or fragmentation/context behavior that makes common eligible examples unusable.
+
+**Dependencies:** R-M0. **Parallel work:** R-M1 and reference/benchmark policy authoring. **Evidence/handoff:** tokenizer report, source/split hashes, fragmentation tables and selection rationale for R-M3/R-M5. **Non-goals:** production training, owner-history harvesting, or a tokenizer novelty claim without a selected experiment.
+
+### R-M3  -  Correctness ladder and native calibration
+
+**Track: SHARED. Objective and scope:** prove intentional learning on simple tasks and establish the exact native training regime before long runs.
+
+**Deliverables and experiments:** MODEL-0; the verification ladder; BENCH-00; stable-versus-newer-backend comparison when justified; checkpoint/reload rehearsal; and short source-conditioned convergence before confirmatory specialist training. A development run used for convergence is recorded and credited only to its matching development budget.
+
+**Acceptance:** V0-V8 pass; actual dtype/gradient ownership and mask/kernel behavior are known; measured rate/memory supports a realistic ETA; each new specialist family passes relevant overfit/renderer checks. **Failure:** inability to overfit, non-finite values, corrupt resume, wrong masking or retained-graph memory growth.
+
+**Dependencies:** R-M1 and R-M2. The source-conditioned extension uses the Section 9 model definitions and qualified R-M5 development fixtures; it may share a budgeted R-M7 development trial without requiring R-M7 acceptance. R-M3’s core checks unlock development, and its specialist extension must pass before confirmatory training. **Parallel work:** CPU data work only during timing. **Evidence/handoff:** complete BENCH-00 artifacts, test reports and source-conditioned convergence trace for learning and research. **Non-goals:** quality claims from randomly initialized timing runs or waiting for MODEL-1’s 1B-token completion.
+
+| Gate | Exact required evidence |
+|---|---|
+| V0  -  Shapes | Dimensions, mask broadcasts, vocabulary IDs, shared leaves and analytic counts agree |
+| V1  -  Attention | Tiny reference parity; causal future-perturbation invariance; GQA grouping; valid padding and cross-attention masks |
+| V2  -  Deterministic forward | Repeated same-input execution on a pinned backend agrees within declared FP32/BF16 tolerances |
+| V3  -  Gradients | Intended parameters receive finite gradients; finite differences on tiny FP32 leaves agree within the declared 1e-3 relative tolerance where numerically meaningful |
+| V4  -  Tiny-batch overfit | A fixed non-conflicting 4×64-token batch reaches CE below 0.05 and at least 99% teacher-forced token accuracy within 2,000 updates, with test weight decay/dropout disabled |
+| V5  -  Tiny-corpus memorization | A fixed 2k-token corpus reaches CE below 0.1 and reproduces at least 95% of designated continuations within 5,000 updates; no contradictory duplicate prefixes |
+| V6  -  Short convergence | At least 10M MODEL-1 tokens reduce held-out loss versus initialization and an earlier checkpoint, without growing numerical/memory failures; these count toward its educational campaign. Before research final runs, separately demonstrate short source-conditioned convergence on held-out development cases |
+| V7  -  Resume | A save at an update boundary reproduces the next 20 uninterrupted updates’ data order, LR, loss and parameters within the declared same-backend tolerance |
+| V8  -  Reproducibility | The same seed/data/backend reproduces a short trajectory; a second seed also converges; differences are reported |
+| V9  -  Generation/cache | Greedy cached and full-forward outputs match; one-token and multi-token decoding, EOS, output bounds and sampling support are tested |
+| V10  -  Held-out utility | The relevant educational or specialist-domain gate passes on separate examples; memorization alone cannot satisfy it |
+
+The tiny mathematical/overfit screen has its own bounded exposure budget; the 10M convergence rehearsal is a separately counted phase. Step ceilings in V4/V5 do not make unlogged training free. If a tolerance check fails, identify mathematical, kernel or numerical causes; do not widen tolerances until a wrong implementation passes.
+
+### R-M4  -  Educational MODEL-1
+
+**Track: LEARNING. Objective and scope:** train the 100,685,568-parameter causal model from random weights and understand the complete language-model stack.
+
+**Deliverables and experiments:** 50M/250M checkpoints; conditional progression toward 1B; fixed sample panel; embedding/attention/residual/gradient instrumentation; cache, sampling, optimizer and quantization demonstrations; and a learning report linked to actual measurements.
+
+**Acceptance:** V9-V10 pass; held-out language loss improves beyond a comparable trained n-gram baseline; at least 70 of 100 blind short in-domain continuations are readable and responsive to their prefix; widespread memorized retrieval does not explain the result. Inspect long training matches as well as fluency. **Failure:** overfitting without held-out gain, unreadable output after data/implementation repairs, or unacceptable native cost.
+
+**Dependencies:** R-M3’s educational core. **Parallel work:** research-data authoring, review and CPU analysis; schedule GPU campaigns separately. **Evidence/handoff:** learning curves, fixed-seed samples, n-gram comparison and first-principles module explanations. **Non-goals:** chatbot factual authority, pretrained initialization, or a dependency that prevents the paper track from starting.
+
+### R-M5  -  Public data and evaluation foundation
+
+**Track: SCIENTIFIC EVIDENCE, with PRODUCT support. Objective and scope:** establish suitable existing-reference policies and inspectable automatic development/final evaluation before the paper’s data treatments and claims are frozen.
+
+**Deliverables and experiments:** research schema; frozen existing-reference and automatic source-eligibility policy; public-source access and release records; 20k-50k accepted pilot-pair plan and actual inventory; separate development/calibration manifests; bounded automatic scorer feasibility/coverage probes and software fixtures; planned all-released 8,826-case natural public population under two recognizers, source/reference-only literal masks, and 30,000 generated stress cases with a fixed 9,000-case model panel. These are planned counts, not newly constructed data. There is no manual reference, atom or semantic-rating panel. Retain the optional LocalFlow export adapter and future-use holdout protocol separately.
+
+**Acceptance:** existing references have a suitable documented policy; public natural data are not silently replaced by synthetic or owner-only cases; corpus/cluster eligibility, source-error counts, literal coverage and ambiguity bounds are known; deterministic scorer tests and runtime are qualified; all baseline input/output stages remain distinct. **Failure:** applied model output treated as truth, verbatim references silently rewritten as intended prose, missing stage inputs, unresolved source access, or exposure of final cases to training/generators.
+
+**Dependencies:** R-M0 and R-M2. **Parallel work:** R-M3/R-M4; R-M6 can begin development after source-group contracts exist. **Evidence/handoff:** automatic contract/parity report, reference policy, rights/source manifests, split/exposure report and scorer tests for PUB-GATE 2. **Non-goals:** manufacturing a corpus during this spec task or claiming an initial sample establishes rare-event product safety.
+
+### R-M6  -  Synthetic ASR system
+
+**Track: SCIENTIFIC EVIDENCE, with PRODUCT support. Objective and scope:** create recoverable training corruptions and a controlled acoustic-channel intervention after implementation approval.
+
+**Deliverables and experiments:** calibrated text generator and rule compositions; explicit clean written seeds and spoken renderings; fixed TTS/Parakeet configurations; common accepted-seed intersection; rejected/yield logs; and the Section 15 text/acoustic treatment. Preserve the bounded engineering screen of 2,000 training-only sentences, two voices/prosodies and two acoustic conditions, up to 8,000 clips; scale only after its actual costs and task support are known. The paper changes the registered 40% corruption allocation, not the other mixture components. Optional 1k then 10k teacher seeds and clean-intent correction grammar remain separate product/development work, outside the frozen primary mixture.
+
+**Acceptance:** structural/value/recoverability fixtures, properties, latent-schema conformance and automatic acceptance checks pass; development-only coverage/yield/runtime support the declared treatment. This certifies the declared construction algorithm, not 99% actual spoken-label correctness. Residual TTS realization uncertainty remains explicit under the intended-target generation policy. A positive acoustic effect is not required to complete a valid scientific comparison. **Failure:** hidden unrecoverable targets, differential filtering that changes the purported treatment population, source leakage, repetitive monoculture, or an unaffordable data pipeline.
+
+**Dependencies:** R-M5. **Parallel work:** CPU generation during learning; TTS/teacher/ASR GPU work outside measured training. **Evidence/handoff:** versions, seeds, written/spoken/source identities, accepted/rejected cases, automatic acceptance/conformance report, common-support manifest and full compute ledger for R-M7. **Non-goals:** filling quotas with weak labels or declaring TTS-ASR generation/recoverability filtering novel. Product retention of TTS still requires useful real-task transfer in its own evaluation.
+
+### R-M7  -  Architecture, comparator and data experiments
+
+**Track: SCIENTIFIC EVIDENCE. Objective and scope:** run a controlled approximately 100M comparison and one acoustic-channel treatment before optional size escalation.
+
+**Development phase:** validate A100/B100/C101 and the B100 acoustic recipe; pass relevant source-conditioned convergence and renderer tests; use pilot seed 42 and the symmetric three-recipe, 10M-exposure HPO allowance per scratch arm. Any additional development continuation is explicitly budgeted and common where its results influence arm selection. Establish the adequacy of the final 150M study point before PUB-GATE 3. Final seeds are never used for tuning. The B100 channel contrast retains a common frozen training recipe apart from the declared data treatment; a different tuning-policy estimand requires an amendment before freeze.
+
+**Confirmatory deliverables:** twelve fresh scratch runs - A100-text, B100-text, C101-text and B100-acoustic, each with seeds 1729, 2718 and 31415 - at 150M `paper_canonical_v2` exposures per run. Preserve registered 50M/100M/150M checkpoints. Every final arm completes its fixed endpoint unless a predeclared numerical/resource failure occurs; there is no performance-based early stopping. Count the final shared-update overshoot explicitly.
+
+Run raw/deterministic/Qwen controls and the mandatory three-seed ByT5-small adaptation under their frozen contracts. Complete the ConstDecoder official-code feasibility gate within at most two engineering days before final freeze; if code/task compatibility and the declared local budget both qualify, run its separately budgeted task adaptation. If either compatibility or budget is blocked, record the cause and narrow the published-system superiority claim rather than substituting C101. Its uncased representation limits the comparable surface task. [N3, D13]
+
+**Acceptance:** all primary comparisons are methodologically executable, the planned runs/controls and failure statuses are preserved, and the resulting estimates can support the registered question whether positive, negative or inconclusive. For a useful positive representation claim, the Section 20/25 introduced-error/repair/WER conditions and anti-identity controls must pass. The retained engineering continuation criterion is at least one viable contender with useful held-out correction beyond deterministic handling; a failed or undertrained screen triggers diagnosis before larger runs.
+
+**Failure:** template-only apparent learning, incorrect renderer, selective seed omission, unqualified comparator truncation, mismatched context or data support, or no interpretable source-conditioned experiment at the affordable budget.
+
+**Dependencies:** R-M3’s shared core, R-M5 and R-M6 development unlock the pilot; R-M3’s specialist convergence extension and PUB-GATE 3 must pass before confirmatory runs. **Parallel work:** evaluation setup, CPU analysis and the independent learning report; one measured GPU arm at a time. **Evidence/handoff:** all run manifests and outputs, budgets, seed results, comparator feasibility, data-treatment identities and checkpoint artifacts for R-M11/R-M12/R-M14-S. **Non-goals:** assuming a winner, calling C’s known mechanism novel, or using the pilot as production qualification. Prefix D and continuation-first objectives are stretch controls.
+
+### R-M8  -  Conditional MODEL-2, approximately 203M
+
+**Track: CONDITIONAL SCIENTIFIC EVIDENCE / PRODUCT. Objective and scope:** pursue capacity only for a specified reason, with separate scientific and product recipes.
+
+**Scientific route and deliverables:** if the stretch capacity question is selected before affected final results, train S203 in the same B family with three fresh seeds and the same 150M paper exposure recipe/checkpoints. Compare with B100; do not mix a causal educational point into the curve.
+
+**Product route and deliverables:** retain the 600M-exposure specialist prototype: 450M source-conditioned foundation, 120M task specialization and 30M preservation refinement under the product ledger. Use the actual `cleanup`/`correction_proposals` inputs and complete two-task adapter simulation. A separately declared continuation from an eligible scratch lineage is allowed; no external pretrained student weights are imported.
+
+**Acceptance:** the scientific route produces an interpretable matched-capacity result, without requiring larger to win. The product route requires at least 85% successful supported necessary corrections on product DEV, real-example gains, acceptable preservation and a cost consistent with BENCH-00. **Failure:** weak source-language competence, no useful capacity benefit for the intended decision, preservation regression or synthetic overfit.
+
+**Dependencies:** shared correctness/convergence and R-M7; the optional scientific protocol or product resource decision must be recorded. Full R-M4 completion is not required. **Parallel work:** new automatically generated development examples and CPU analysis. **Evidence/handoff:** weights, lineage, manifests, stage-specific metrics and residual errors. **Non-goals:** default replacement, a compulsory 316M run or calling different token budgets a size-only effect.
+
+### R-M9  -  Conditional hard-example and objective repair
+
+**Track: ENGINEERING and selected SCIENTIFIC ABLATIONS. Objective and scope:** test whether data or objective changes solve a named residual problem more efficiently than additional parameters.
+
+**Deliverables and experiments:** a 5k-20k hard-case plan with actual unique counts; replay mixture; one identity-ratio comparison; one edit-weighting comparison when indicated; a matched-compute extra-data control; and optional targeted-versus-continuation-first foundation analysis. Apply one interpretable change at a time.
+
+**Acceptance:** a specific error decreases on untouched development evidence without unwanted-edit/coverage regression, or a registered negative finding clearly shows that the repair did not help. Product continuation requires a useful benefit. **Failure:** training-loss-only improvement, contaminated final examples, aggressive rewriting, or multiple inseparable changes.
+
+**Dependencies:** diagnosed errors from R-M7 development or conditional R-M8. A change after PUB-GATE 3 is a new experiment/protocol, not a hidden edit to the primary arms. **Parallel work:** automatic scoring and CPU failure analysis. **Evidence/handoff:** paired before/after outputs, exact data/objective delta, rejection decisions and cost for the next justified experiment. **Non-goals:** mining locked final cases while retaining their blind status, or forcing this work onto the MVP path.
+
+### R-M10  -  Conditional MODEL-3, approximately 316M
+
+**Track: CONDITIONAL SCIENTIFIC EVIDENCE / PRODUCT. Objective and scope:** run the first production-size hypothesis only when evidence supports its cost, or complete the predeclared B-family capacity extension.
+
+**Scientific deliverables:** S316 in the unchanged B family, three seeds, 150M paper exposures and common 50M/100M/150M checkpoints; together with B100/S203 this supports the bounded three-size comparison. Do not silently use a product data repair on only the largest point.
+
+**Product deliverables:** fresh S316 or a declared selected-family equivalent; up to 1.5B product exposures; comparison with the best smaller model; qualified 1,024/2,048 context decision; complete error report and package lineage. Preserve the product phase allocation of 1B/400M/100M and its explicit repetition/unique-data records.
+
+**Acceptance:** scientific completion requires valid controlled evidence, not a favorable slope. The product route requires being within 5 percentage points of Qwen on supported product DEV, useful gains over the smaller model, no unacceptable preservation regression and a credible path to the strict gates. Skip the product campaign if a smaller candidate already qualifies. **Failure:** a clean-data plateau, loss of runtime advantage, or capacity increasing risk without useful correction.
+
+**Dependencies:** R-M7 and the predeclared scientific size protocol, normally alongside S203; or R-M9 plus the product scaling gate. **Parallel work:** CPU runtime fixtures and automated data checks. **Evidence/handoff:** runs, checkpoints, family/recipe identity, costs and per-slice results for qualification or manuscript analysis. **Non-goals:** requiring 510M, selecting a preferred size after viewing final tests, or asserting a universal scaling law.
+
+### R-M11  -  Preservation methods and calibration
+
+**Track: MULTIPLE, with separate scientific/product records. Objective and scope:** qualify byte/coordinate/rendering behavior, identify guard effects, and calibrate fixed runtime acceptance where used.
+
+**Deliverables and experiments:** adversarial fixtures; direct-versus-sentinel comparison when justified; superseded-protected-span handling; common guard off/on evaluation of identical cached B/C proposals; optional learned score trained only on training-side correctness labels; and calibration on an unused partition after runtime/precision selection. Sparse rendering is constitutive to C and cannot be removed while still calling it the same representation.
+
+**Acceptance:** structural and literal invariants pass; case eligibility is unchanged by model output; needed correction remains visible; guard effects are attributed to guards; thresholds have an honest risk/coverage record. Scientific qualification permits a negative guard result; product qualification separately requires its stricter preservation behavior. **Failure:** identity/fallback gaming, malformed edit acceptance, oracle gold atoms supplied as inputs, or meaning errors hidden by superficial count checks.
+
+**Dependencies:** candidate artifacts from R-M7 or a conditional larger/product route. For the paper, guard policy, allowed features, runtime selection rules and calibration procedure are fixed at PUB-GATE 3; this milestone applies them after training. Final calibration follows fixed weights, precision, framing and decoding. A later product extension may design new guards under its own development and qualification record. **Parallel work:** profiling that preserves the currently evaluated identity. **Evidence/handoff:** cached proposals, all rejection causes, source/coordinate fixtures, calibration partition and threshold record. **Non-goals:** treating a validator pass or unchanged-gap guarantee as proof of semantic equivalence.
+
+### R-M12  -  Runtime measurement and optimization
+
+**Track: SCIENTIFIC EVIDENCE / PRODUCT. Objective and scope:** measure the bounded native resource frontier and obtain the product benefit without weakening fidelity.
+
+**Deliverables and experiments:** cached inference; typed framing; BF16 MVP comparison; Q8 and Q4 are conditional product/stretch precision studies; common-input length profiles; cold/warm load and co-residency measurements; optional edit-decoding optimization; actual generated-position burden, failures and full fallback timing. The scientific runner measures all named baselines under their disclosed native tokenizer/precision constraints.
+
+**Acceptance:** scientific measurements are reproducible and scoped to the actual hardware/software regime; absence of a speed win is still a result. The product route must satisfy Section 29’s runtime targets or an explicitly narrower supported scope, repeat quality qualification for each exported precision, and show no memory growth or cancellation error. **Failure:** incorrect optimized output, uncounted fallback, silent context truncation or fragile complexity without a measured gain.
+
+**Dependencies:** candidate/runtime contracts from R-M7/R-M11 or a conditional larger route. **Parallel work:** adapter fixtures and documentation. **Evidence/handoff:** profiler, latency/memory/throughput records and conformance results; selected package identities return to R-M11 for final calibration. Any change to weights, precision, framing, decoding or score computation requires renewed calibration; if old calibration prompted the change, use a separately reserved calibration partition. **Non-goals:** requiring 2× product p95 for the paper, or speculative/custom-kernel work without a bottleneck.
+
+### R-M13  -  Optional shadow and opt-in integration
+
+**Track: PRODUCT. Objective and scope:** exercise the real typed LocalFlow boundary while preserving the incumbent path until the owner selects the experiment.
+
+**Deliverables and experiments:** local-package loader, explicit task dispatch, synthetic-store tests, shadow comparisons, side-by-side review and bounded opt-in trial. Ordinary cleanup consumes its actual post-proposal source; failed specialist attempts cannot contaminate Qwen’s original normalized fallback input.
+
+**Acceptance:** training/runtime source stages agree; Python-code-point/UTF-8 maps are correct; rich transforms retain their qualified backend; failed or canceled requests do not insert text; fallback/history metadata are accurate. **Failure:** global runner replacement changes unqualified tasks, incorrect relabeling of owner data, or shadow work harms ordinary dictation.
+
+**Dependencies:** product-ready R-M11/R-M12 and the separately authorized integration scope. **Parallel work:** permitted product holdout review and CPU regression tests. **Evidence/handoff:** synthetic or appropriately authorized traces, co-residency timing, refusal/cancellation and rollback cases for R-M14-P. **Non-goals:** making live app access a paper dependency, unrequested default changes, or tests that require opening owner-private storage.
+
+### R-M14  -  Frozen scientific evaluation and separate product acceptance
+
+**Track: SCIENTIFIC EVIDENCE / PRODUCT, separate outcomes.**
+
+**R-M14-S objective:** evaluate the frozen public experiment exactly once under its registered protocol. **Deliverables:** final model/adapter/threshold hashes; all baseline outputs; natural/literal/exact-stress scores with actual denominators, software qualification, alignment identification bounds and zero required human ratings; fixed-seed traces; uncertainty; common-guard attribution; native resources; external-recognizer results; failures and deviations. **Acceptance:** the experiment is valid, complete or precisely bounded, and each claim is classified supported, falsified or inconclusive. A positive H1/H2 result is not required to close a scientifically valid negative experiment. **Failure:** invalid labels/eligibility, uncontrolled model differences, outcome-driven analysis, inadequate precision hidden as equivalence, or an unperformed external test represented as transfer. **Dependencies:** R-M7 final artifacts, relevant R-M11/R-M12 work, PUB-GATE 2/3 and the final artifact freeze. R-M13 is not required.
+
+**R-M14-P objective:** test a product-qualified checkpoint/system on untouched product challenge and representative-use evidence. **Deliverables:** frozen product model/adapter/threshold identities, baseline outputs, per-category quality, rare-event uncertainty, all-input timing, specialist useful coverage and Qwen invocation rate. **Acceptance:** all applicable retained quality, preservation, coverage, fallback, rare-event and latency gates pass. **Failure:** critical invariant failure, insufficient support for a product risk claim, inadequate useful coverage or no material latency benefit. **Dependencies:** R-M13 and existing LocalFlow corpus requirements wherever that corpus is reused.
+
+**Parallel work:** report preparation; no tuning of the evaluated system. **Evidence/handoff:** immutable outputs, scorer/protocol identities, full results and separate scientific/product decisions. **Non-goals:** moving thresholds after final results, pooling public reference-restoration scores with intent-cleaned product scores, or declaring product acceptance from paper significance.
+
+### R-M15  -  Product size and continuation decision
+
+**Track: PRODUCT, with SCIENTIFIC interpretation support. Objective and scope:** choose the smallest qualifying product candidate or explicitly stop/revise the replacement attempt.
+
+**Deliverables and experiments:** quality/latency/compute Pareto comparison; diagnosis of any remaining product deficit; optional larger-model prediction under Section 27; and a separate statement of what the paper does and does not show about size.
+
+**Acceptance:** a qualified model is chosen, a specific evidence-backed next experiment is authorized, or scale-up stops with a bounded falsification record. **Failure:** automatically preferring the largest model, relabeling a mixed-budget trajectory as size causality, or reusing repaired final cases as blind evidence.
+
+**Dependencies:** R-M14-P for a product-selection claim and the applicable size comparisons. R-M14-S may independently support manuscript completion while no product qualifies. **Parallel work:** none required. **Evidence/handoff:** selection rationale, supported scope and resource estimate for R-M16 or conditional R-M17. **Non-goals:** mandatory 203M/316M/510M training or 752M/988M without predicted marginal value.
+
+### R-M16  -  Default promotion
+
+**Track: PRODUCT. Objective and scope:** make a qualified specialist the ordinary-cleanup default through an explicit, reversible model-selection change.
+
+**Deliverables and experiments:** immutable export; compatibility version; chosen fallback/residency policy; rollback package; synthetic/native conformance; and post-promotion observations.
+
+**Acceptance:** installed weights/tokenizer/runtime match the accepted identities; owner-selected promotion is concrete and reviewable; other transforms remain qualified; rollback is straightforward. **Failure:** deployed identity differs from evaluated artifacts, fallback routes are incomplete, or real behavior changes materially.
+
+**Dependencies:** a successful R-M15 product decision and necessary LocalFlow release qualification. **Parallel work:** documentation and observation review. **Evidence/handoff:** package hashes, selected settings and verification record. **Non-goals:** making this a publication prerequisite, retiring Qwen for unrelated transforms, or expanding scope without new evidence.
+
+### R-M17  -  Optional larger or cloud campaign
+
+**Track: CONDITIONAL SCIENTIFIC EVIDENCE / PRODUCT. Objective and scope:** test 510M, and then possibly 752M/988M, only for a diagnosed scale-responsive deficit or a separately justified stretch question.
+
+**Deliverables and experiments:** 10% compute pilot; updated BENCH-00/ETA; fresh initialization or exact continuation of the candidate’s own scratch lineage; matched smaller-model/data controls; and a declared native/cloud resource budget. The retained 510M product cap is 2B exposures with phases 1.3B/0.55B/0.15B under the product ledger. Larger campaigns keep their own explicit budgets and do not alter the completed MVP experiment.
+
+**Acceptance:** the pilot supports the predeclared marginal benefit at an acceptable cost; a completed candidate repeats preservation, runtime and fresh applicable final qualification. **Failure:** prediction misses, useful errors do not decline, or time/latency cost becomes irrational.
+
+**Dependencies:** R-M15 or an earlier explicit stretch decision; return to the relevant R-M11/R-M12/R-M14 route. **Parallel work:** CPU review; cloud work only after owned-module/checkpoint parity and actual accelerator feasibility are verified. **Evidence/handoff:** marginal gains, all consumed compute, lineage and final qualification. **Non-goals:** using cloud as an unstated default, importing pretrained student weights, or asserting broader scaling from one favorable pilot.
+
+
+## 34. Negative-result paths
+
+**RESEARCH HYPOTHESIS.** The program does not require the scratch student to defeat Qwen, C101 to defeat B100, or acoustic corruption to improve the model. It requires an experiment whose outcome changes what a reader can reasonably conclude about the declared setting.
+
+| Outcome | Scientifically supportable conclusion | What must not be concluded |
+|---|---|---|
+| C lowers introduced word errors but loses too much completed repair | The tested sparse representation-plus-renderer changes the preservation/correction tradeoff; the joint superiority/noninferiority claim fails | That C is a better restoration system merely because it edits less |
+| B and C copy almost everything and fail the deterministic usefulness check | Preservation alone did not establish useful correction at this budget; investigate data/optimization or report the bounded failure | That zero introduced damage demonstrates a successful specialist |
+| Acoustic treatment does not improve real-speech quality | The registered 40% substitution did not provide the claimed benefit on the common accepted-seed population and test domains | That all synthetic speech or all exact-channel corruption is ineffective |
+| Acoustic treatment improves quality but increases introduced errors/reference words beyond the H2 margin | The quality/preservation joint claim fails; report the adverse tradeoff and secondary automatically measured literal/error findings | That lower WER alone establishes faithful restoration |
+| ByT5-small dominates the scratch models | Pretrained adaptation has the stronger observed frontier under the declared downstream budgets; scratch initialization is not justified by those practical results | That all scratch training is inferior regardless of scale, data or objective |
+| Guards account for the apparent preservation gain | The measured benefit belongs to the guard intervention in this setting; raw model superiority is unsupported | That the student’s architecture learned the guard’s guarantee |
+| A100 matches or outperforms the source-conditioned families | The selected encoder-decoder/edit priors did not improve the measured regime; keep the causal result | That bidirectional conditioning can never help, since A/B changes a family of factors |
+| A completed B100/203/316 extension plateaus | A bounded capacity trend or plateau exists at the observed exposure/compute grid | A universal scaling law or impossibility of improvement at larger data budgets |
+| Native efficiency is weak | The measured architecture/runtime does not provide the intended Mac benefit under this backend and workload | Hardware-general inferiority without cross-platform measurements |
+| The external recognizer loses the apparent gain | The result is recognizer-conditional; identify the transfer failure and its error distribution | Universal ASR restoration or robustness |
+
+An interval spanning practically useful benefit and harm is **inconclusive**, not equivalence. Failure to reject a null does not prove a method is ineffective. A noninferiority failure can mean damage, insufficient precision, or both; show the estimate and interval. An undertrained model, broken baseline, an incorrect scorer or unsuitable reference policy or missing public sample is a feasibility/design failure until repaired, rather than a strong negative scientific result.
+
+A credible negative manuscript needs optimization adequacy within the declared budget, functioning positive controls, sufficient public evidence, honest uncertainty and a distinction from findings already established in close work. If the only outcome is that a short-budget scratch model learns poorly on a private sample, the appropriate output is an engineering/learning report. A public evaluation protocol and carefully controlled tradeoff can remain useful even when no product is promoted, but resource-contribution language requires the actual qualified generator/scorer, useful distinct artifact and release to exist.
+
+
+## 35. Risks, early detection and recovery
+
+**ENGINEERING PROPOSAL.** The MVP has no required annotator, second rater, adjudicator, audio-listening queue or repetitive author labeling. Every recovery below uses a deterministic correction, an existing public artifact, a pre-freeze change of scope, or an explicitly narrower claim. Optional qualitative inspection and AI judges cannot repair a failed primary endpoint. A risk table is not authorization to start implementation, generate data, train a model or spend resources.
+
+### 35.1 Measurement and scientific interpretation
+
+| Risk | Early deterministic evidence | Recovery or interpretation boundary |
+|---|---|---|
+| Official reference differs from the actual speech or permits another valid rendering | Existing release metadata, reference-policy differences, normalization discrepancies and published source limitations | Use the frozen official reference as the stated comparison target; report source-specific scores. Do not claim new acoustic truth, semantic faithfulness or uniquely intended writing. A source whose policy is unsuitable is replaced or excluded under a source-only rule before freeze, without a listening queue. |
+| Candidate output changes its own scoring eligibility | An output creates repeated-word or alignment ambiguity and its conditional damage rate improves as its denominator shrinks | Freeze source/reference masks and primary denominators before outputs. Keep output-induced ambiguity in conservative bounds over the fixed population. Report conditional fine-grained coverage separately; unavailable classification never becomes observed preservation. |
+| Independently chosen pairwise alignments create false repair or damage | Identity with repeated tokens, such as reference `a a` and source/output `a`, receives nonzero transition counts | Use the specified joint alignment and conditional correspondence objective; verify identity and exact-reference invariants exhaustively on small sequences. Do not select independent argmin paths and combine them as established correspondence. |
+| Joint alignment is described more strongly than it identifies | A selected source occurrence becomes “certain” only after conditioning on the candidate output | State the lexicographic objective and its remaining tied alignments precisely. Source-consensus masks use the entire source/reference optimal-path set before candidate outputs. Conditional alignment does not reveal a true hidden occurrence identity. |
+| Insertions disappear from preservation accounting | Appending unsupported words leaves every existing reference word intact and appears to have zero introduced error | Include reference-gap events, including leading and trailing gaps, in introduced-error accounting and retain ordinary all-case WER. The additive transition identity must reconcile the source and output edit distances. An exact literal-retention score alone cannot establish restraint. |
+| Tied gap alignments have different transition counts | Source-gap `a b` and output-gap `b c` admit substitution/substitution and deletion/keep/insertion paths with different repair/damage counts | Compute the registered minimum and maximum additive event counts over all conditional optimum paths. Do not replace a tied gap with one convenient edit script or call a count-only simplification token-identity truth. |
+| Automatic lexical agreement is treated as semantic preservation | Word/reference or literal metrics improve while the manuscript claims preservation of meaning, intent, role bindings or factual truth | Remove the semantic claim. The primary result concerns reference-relative lexical error transitions. Exact generated fields support only their declared formal contracts. Model-based semantic analysis, if retained, is optional and separately labeled. |
+| An unchanged source wins a preservation-only endpoint | Identity has zero introduced-error count but no source-error repair or WER improvement | Keep the registered correction noninferiority and anti-identity usefulness requirements. Include raw source and deterministic processing as controls. A model that passes only restraint is not a successful corrector. |
+| An aggressive corrector hides harmful changes | Large edit burden, introduced gap errors, poor all-case WER or a widening upper damage bound despite favorable repair recall | Require the joint preservation/correction rule on every fixed input, plus the registered all-case quality and failure conditions. Report both ends of the repair/preservation bounds, edit burden and failure counts; do not select a favorable alignment or scoring subset. |
+| Natural critical-literal analysis has little usable coverage | Exact extractor yields few eligible numbers, paths, versions or identifiers; repeated occurrences lack unique source/reference correspondence | Report actual eligible/excluded counts and unavailable slices. Use the programmatic stress population for controlled literal tests. Do not recruit human labels, treat an empty slice as perfect retention, or imply that automatic patterns cover all critical meaning. |
+| Invalid or missing output is turned into artificial success | A timeout, unrenderable edit stream or truncated candidate is replaced with the source before bare scoring | Preserve the raw failure status and apply the frozen pessimistic/interval rule. A source-return safeguard belongs to the guarded or complete system. Keep all fixed cases and their failures; never rescue a bare-model headline with fallback. |
+| Scorer tests merely reproduce the implementation | Both “independent” paths share the same alignment helper, or only familiar successful strings are tested | Use a separately structured tiny exhaustive oracle, property and metamorphic fixtures, and a trusted pairwise edit-distance comparison for projected costs. Check both numerical results and formal invariants. These establish conformance to the metric, not semantic validity of every public reference. |
+| Alignment consumes excessive CPU or memory | Ambiguous long sequences exceed the frozen state/work cap; dense cubic products dominate evaluation | Use exact sparse reachable-state dynamic programming and proved exact fast paths. On cap exhaustion apply the specified conservative automatic fallback and report its frequency. Never silently choose one favorable alignment, drop the case, or open a manual resolution queue. If bounds become uninformative, narrow the claim or change the declared evaluator before final freeze. |
+| Too little independent evidence or too-wide identification bounds | Development source clusters, paired variance or ambiguity bounds cannot resolve the proposed margin | Increase automatically processed independent public evidence where available, revise the pre-freeze question, or mark the endpoint estimation-only. Additional variants or model seeds over the same source do not create new independent speech observations. |
+| Repeated final-test selection | A metric, margin, extractor, checkpoint, seed or filtering threshold changes after final outputs are inspected | Retain the frozen result and label the new analysis exploratory, or obtain a fresh appropriate holdout. A larger automatically scored test does not make outcome-driven selection valid. |
+| Prior work already supplies the apparent novelty | I-measure, M2, ERRANT, CLEME/CLEME2.0 or ASR correction work already contains the claimed idea | Reuse established terminology where it matches. Describe the specific scorer and stress suite as supporting methodology unless a precise new result survives the focused audit. Keep the controlled empirical question or publish an engineering report; do not manufacture a new metric name as a contribution. |
+
+### 35.2 Data generation, splits and lineage
+
+| Risk | Early deterministic evidence | Recovery or interpretation boundary |
+|---|---|---|
+| Exact latent target is not recoverable from the corrupted source | Two different latent values can generate the same permitted source, especially after dropping a digit, name or negation | For confirmatory generated repair tasks, use a declared uniquely invertible corruption/rendering rule or an explicit redundant source cue. Keep underdetermined cases in their own task with an appropriate set-valued or restraint target, or remove that repair claim. Knowing the generator seed is not information available to the corrector. |
+| TTS changes the written target | Automated pronunciation/rendering checks fail, independent recognizer views disagree, or a field falls outside the declared supported rendering grammar | Apply the frozen automatic construction filter to both paired arms and report all yields and rejected source families. Recognizer agreement is a filter, not proof of speech realization. If realization cannot be certified, frame H2 as the specified generation/filtering-policy intervention evaluated against existing real-speech references, and restrict its categories; do not introduce listening or adjudication. |
+| Channel filtering changes the treatment population | Acoustic and text arms retain different clean seeds, written targets, spoken renderings or difficulty mix | Use the common accepted seed/variant intersection and a frozen reserve/exhaustion policy. Report common-support efficacy and original-proposal yield/cost separately. If support is inadequate, amend both arms before freeze or stop H2. |
+| H2 also changes optimization | B-acoustic selects a different best LR or scheduler from its own probes | Inherit the primary B-text optimizer/LR/schedule exactly. Acoustic probes remain feasibility/sensitivity checks. A common recipe repair requires comparable pre-freeze development and a revised cost record. |
+| Programmatic stress variants are treated as independent natural cases | Clean/repair/mixed versions or repeated literals from one seed inflate n | Group the family and template lineage. Keep the natural public and generated stress populations in different tables, denominators and statistical analyses. Large generated volume supports a controlled capability claim, not natural error prevalence. |
+| Generator and scorer share a compensating bug | Latent records and outputs agree only because the same renderer, parser or position helper is reused | Verify field serialization and scoring with independently structured fixtures and exhaustive small cases. Store raw strings, latent values, byte offsets, schema versions and seeds so the result can be reconstructed. Do not execute generated commands or URLs as validation. |
+| Training and final test share source content | Exact/near duplicates, book passages, speakers, videos, templates, seed families or generated variants cross partitions | Split original source families before tokenization or augmentation. Remove known overlaps under the frozen rule and record hashes. Public availability or new filenames do not restore a holdout already used for development. |
+| Pretrained exposure is unknown | ASR, TTS, ByT5 or Qwen disclosures cannot exclude the public test material | Disclose the unknown and known overlap. Distinguish audited project splits from unverifiable upstream pretraining. Do not claim proof of uncontaminated semantic evaluation. |
+| Public rights or access prevent reproducibility | Exact source asset cannot be obtained or its license does not cover the planned use or redistribution | Use a qualified predeclared source or amend before final selection. Keep transcript, audio, annotation, code and model terms separate. An optional finance corpus cannot become a hidden dependency. |
+| Paper and product targets are mixed | Spoken disfluencies or self-corrections are removed from a reference-restoration target because product cleanup would remove them | Preserve `restore_reference` and official source-specific reference policy. Keep product `cleanup`/`correction_proposals`, normalized/post-proposal inputs and intended writing in separate later lineages. |
+| Canonical exposure changes with output representation or corruption length | C receives additional examples because its action stream is short, or one channel receives fewer presentations because its ASR source is longer | Retain the invariant clean-anchor `paper_canonical_v2`, ordered presentations and complete update boundaries. Record actual source, native tokens, actions and losses separately. `product_canonical_v1` retains the original normalized source anchor and is never added as the same token unit. |
+| Teacher or AI-judge output silently becomes primary gold | A model resolves alignment ambiguity, validates a TTS clip as certainly correct, or changes official final references | Remove that dependency. Optional model-based judgments remain removable secondary analysis with exact model/prompt/version lineage; primary scores use the frozen deterministic rules and existing references. |
+
+### 35.3 Training, resource and product risks retained from v1.1
+
+| Risk | Early evidence | Recovery or interpretation boundary |
+|---|---|---|
+| Insufficient real-pair or clean-seed supply | The public inventory cannot sustain the 10% real share, independent seed count or repetition cap | Amend the shared recipe using development evidence before freeze or declare feasibility blocked. Repeated exposure is not additional unique data; private history is not an automatic substitute. |
+| Inadequate language acquisition or identity collapse | Mathematical tests pass but development repair and reference quality remain near raw/deterministic controls | Diagnose source-conditioning, objective, data and optimization. Do not assume 150M suffices or enlarge models automatically. A bounded undertrained attempt is not a strong negative architecture result. |
+| Synthetic mismatch | Generated scores rise while natural public-reference scores stagnate | Inspect automatic error distributions and source support. Keep a valid negative channel result; change the development recipe before freeze rather than adding favorable final cases. |
+| Overfitting or teacher monoculture | Training improves while grouped development worsens; one template or teacher style dominates | Increase source diversity, reduce repeats or register a controlled regularization/data change. No private/teacher augmentation may enter only one main arm. |
+| Forgetting across curriculum phases | Earlier deterministic slices regress after later data phases | Use the frozen replay and continuous paper LR schedule. Product development may test lower LR or a checkpoint restoration under its own lineage; final scientific runs retain their registered endpoint. |
+| Training instability | Non-finite states, exploding activation norms or repeated clipping | Apply the predeclared nonselective recovery policy; check masks, initialization, dtype ownership and data. Log every lost/repeated exposure and failed attempt. |
+| Tokenizer or coordinate failure | Round-trip mismatch, malformed UTF-8, illegal pointer boundary, source hash mismatch or common-context overflow | Fix before final freeze and repeat affected mathematical/conformance checks. Preserve explicit raw/normalized/post-proposal/code-point/byte maps and do not silently truncate. |
+| Long-input or window-seam failure | Lost source coverage, split edits or dropped protected literals | Qualify the exact context and window contract. Retain failures in the evaluation and narrow the product's supported scope when needed. A favorable short-utterance result does not establish long-dictation behavior. |
+| Inefficient MLX attention or optimizer path | Unfused backward, array masks, variable shapes, logit buffers or retained graphs dominate measured time/memory | Benchmark correct pinned alternatives with parity checks. Keep the 22N live-state assumptions and actual activations/workspaces visible; do not remove necessary masks to improve timing. |
+| Corrupt checkpoint or resume | Shape/hash mismatch, missing data cursor or interrupted/uninterrupted trajectories diverge | Use atomic completion, two verified recovery copies and saved optimizer/RNG/data/scheduler state. Do not relabel a restarted seed as an uninterrupted run. |
+| The one-month plan hides shared-device contention | Training, TTS, Parakeet, Whisper, ByT5 and Qwen are all scheduled as simultaneous GPU work | Serialize sustained measured accelerator workloads on the one Mac. Parallelize CPU scorer work, writing and agent coding only within measured memory/thermal limits. Count all inference, failed work, conversion and generation. Agents add development capacity, not a second accelerator. |
+| Automatic evaluation dominates the month | A large natural/stress set multiplied by all seeds, baselines, guards and recognizers overwhelms inference or DP time | Cache reusable hypotheses and bare proposals; derive guard views from cached outputs; use the registered generated-family and secondary-view budgets. Move optional sweeps to stretch before sacrificing final seeds, comparator quality or inferential integrity. If the frozen MVP still cannot finish, report the larger ETA or amend before final outcomes. |
+| ByT5 or a published comparator is artificially weak | Inadequate adaptation, hidden truncation, wrong task prompt, incompatible precision or missing task checkpoint | Qualify the mandatory ByT5 control under its declared downstream budget. Apply the bounded ConstDecoder feasibility rule and disclose scope/blockage. Narrow superiority claims rather than treating a broken interface as a model result. |
+| Scratch models plateau below the practical controls | Controlled data/optimization work yields little natural repair benefit | Stop product escalation and report a valid bounded comparison. Keep Qwen for existing functions. This does not invalidate the educational objective or prove universal scratch-model inferiority. |
+| A larger model fits but is uneconomic | Native ETA, memory and total-request latency grow faster than any development benefit | Keep 203M/316M/510M and cloud work conditional. Do not place the educational 1B completion or larger campaigns on the paper critical path merely because they fit in memory. |
+| Fallback or guard policy hides a weak model | Delivered quality is high but specialist repair, coverage or latency is poor | Keep S-raw, S-guard and S-full separate; reuse identical proposals for guard attribution. No Qwen-generated repair is credited to the bare student. |
+| Quantization or runtime changes alter the qualified system | BF16/Q8/Q4, stopping rules, tokenization or validation produce different errors | Give the export a new identity and repeat its applicable deterministic evaluation/calibration. Do not transfer a qualification across changed weights or runtime behavior. |
+| Product semantic qualification is inferred from automatic paper scores | Strong reference-relative/stress results are used to claim full intent preservation or default replacement | Retain the product thresholds as separate future decisions, but do not claim them passed by the automatic paper. Any later product evidence must fit the then-authorized scope; the MVP does not reopen manual review queues. |
+| Hardware or negative-result claims overgeneralize | One Mac/backend/budget is described as universally superior, or a wide interval is called equivalence | Name the exact regime and measured population. Show failed runs, uncertainty and limitations. No significant effect, undertraining and an adequately bounded negative result are distinct outcomes. |
+
+The earliest stop conditions are automated scorer failure, a source/reference contract that does not support the stated estimand, a primary bound that can be gamed by coverage, or an unaffordable complete campaign after native calibration. The allowed response is repair before freeze, reduce a nonessential claim, or produce an honest bounded report. Human annotation is not a fallback dependency.
+
+
+## 36. Minimum viable paper
+
+### 36.1 Fixed minimum experiment set
+
+**ENGINEERING PROPOSAL.** The minimum is one controlled empirical paper with two confirmatory hypotheses and bounded supporting analyses. It contains no required new human annotation or semantic-rating component.
+
+| Component | Minimum scope | What it establishes |
+|---|---|---|
+| Public natural evaluation | All 5,273 released LibriSpeech-PC test rows and all 3,553 released SLUE-VoxCeleb test references before frozen automatic structural exclusions; 8,826 nominal cases | Reference-conditional natural ASR error evidence under two explicit domain policies; actual n, words, source errors and clusters reported |
+| Two recognizers | Frozen Parakeet primary and Whisper transfer hypotheses for the same eligible audio; no student retuning on transfer | One controlled recognizer-transfer axis; not universal ASR generalization |
+| A/B/C representation | A100, B100-text, C101-text, each 150M canonical exposures and seeds 1729/2718/31415 | Matched approximately 100M-scale family comparison; B/C is the primary representation-plus-renderer contrast |
+| Acoustic treatment | Three B100-acoustic runs at 150M, replacing only 40% corruption exposure on common accepted seeds | H2 on automatically screened intended-target generation; B-text-selected optimizer retained |
+| Development probes | Three 10M recipes for each of four arms, seed 42; acoustic recipes feasibility-only | Twelve documented probes, 120M exposure; final optimizer policy and adequacy decided before freeze |
+| Strong pretrained comparator | Three task-adapted ByT5-small seeds with native bytes and qualified exposure/time policy | Honest small-pretrained control; upstream pretraining and budget limits disclosed |
+| General comparator and simple controls | Task-matched BF16 Qwen3-4B, raw source, DET; frozen greedy decoding and prompts | Practical context and anti-identity utility; product Qwen4-bit separately |
+| Published editor | At most two engineering days for official ConstDecoder feasibility before freeze | A completed viable adaptation or a recorded blocker; no fabricated successful reproduction |
+| Scorer qualification | Fixtures, properties, metamorphisms, exhaustive small sequences, independent tiny oracle / standard edit parity, generator conformance and deterministic ambiguity handling | Software-level evidence for the specified reference policy, no human annotation campaign |
+| Exact stress evidence | 30,000 generated/conformance pool; fixed 9,000-case model panel balanced across 25 categories, 3,000 latent groups and three views; all sixteen model instances | Formal clean/repair/mixed behavior and collateral-literal errors; never merged with natural prevalence |
+| Guard attribution | Fixed common guard applied to cached identical bare proposals, especially B/C; complete fallback view separately scoped | Separates guard effect within each system; C renderer always constitutive |
+| Inference and statistics | Fixed three-run mean, per-seed results, least-favorable alignment bounds, source-cluster uncertainty, native training/inference/memory/cost | Reconstructible conclusions with actual denominators, failures and limits |
+| Manuscript/release | Protocol v2, source rights/manifests, model and scorer identities, outputs where allowed, calculations, failures and figure recipes | Public reproducibility without owner history or unavailable humans |
+
+The sixteen model instances are twelve scratch checkpoints, three adapted ByT5 checkpoints and one Qwen checkpoint. This gives **282,432 natural model outputs** for 8,826 cases × two recognizers × sixteen, plus **144,000 stress outputs** for 9,000 × sixteen: **426,432 planned bare outputs**, before exclusions or a viable additional published comparator. Raw/DET evaluation and cached guard scoring add work but not extra model generations. Time every family and include rendering/scoring cost; these counts are planned, not completed.
+
+### 36.2 Hypotheses and stop/scope gates
+
+H1 requires lower introduced errors/reference words for C than B, repair noninferiority, WER noninferiority and useful completed repair beyond DET. H2 requires lower WER from acoustic replacement and introduced-error noninferiority. Every primary natural endpoint is the equal-domain mean of the two corpus ratios, with per-domain and pooled ratios secondary. Proposed margins and inference rules are in Sections 20/25; Part III freezes their machine-readable identities before execution. The scorer's transition intervals must support the conclusion under least-favorable alignment choices, not only a displayed convenient tie.
+
+Before PUB-GATE 3, block or amend the confirmatory plan if data access/rights fail, source/reference policy is inappropriate, exact scoring is incorrect or too ambiguous for the targeted precision, source clusters or source-error denominators are inadequate, the selected training budget is uninterpretable, the ByT5 control is unqualified, or total measured device work does not fit the chosen schedule. No model outcome is needed to decide source rights, a deterministic eligibility rule, or the 9,000-case stress panel.
+
+A blocked ConstDecoder gate narrows claims about published editors and does not remove mandatory ByT5. A blocked natural corpus cannot silently be replaced with private or synthetic evidence. A revised domain, exposure, margin or inference scope requires a pre-outcome protocol amendment and new cost/precision justification. Do not select fewer seeds after seeing variance, stop at favorable checkpoints, or choose a favorable scorer alignment after comparing architectures.
+
+The month is conditional. At the favorable Part VI timing assumptions, the device envelope with reserve is about 350.4 hours plus 20 hours of serialized CPU scoring/analysis work, or 370.4 hours. This exceeds the 352-hour scenario (22 device-work days × 16 hours/day, provisionally days 4–25 including pre-freeze work) with a day-7–8 protocol-readiness gate, but fits the extended 440-hour scenario at 20 available hours/day. Validated overlap or faster execution may improve the result; neither is assumed free. Actual timings must qualify the calendar. The alternative is a longer schedule or an explicitly narrower prefinal study. Calendar pressure cannot turn an unperformed comparison into a result.
+
+### 36.3 Excluded from the minimum critical path
+
+The MVP has zero external annotators, second raters, adjudicators, required author case-labeling, all-seed manual audits or TTS listening. Optional bounded author debugging and optional AI judgments can both be deleted without changing any headline metric or gate. No primary metric depends on semantic annotation.
+
+Completion of the educational 1B-token campaign, S203/S316/S510 product runs, six-run controlled size extension, full 30,000-case model inference beyond the fixed panel, extra HPO, objectives/sentinels, broad semantic judge analysis, finance/meetings expansion, private data, cloud training, quantization sweeps and product default promotion remain stretch or separate conditional work. Their absence cannot leave a premise missing from the main paper.
+
+
+## 37. Stretch paper and conditional extensions
+
+**ENGINEERING PROPOSAL / RESEARCH HYPOTHESIS.** Add work only when it addresses a concrete uncertainty left by the minimum study. Rank by information gained relative to native compute, automatic-evaluation and implementation cost.
+
+| Priority | Extension | Trigger and required control | Permissible claim |
+|---|---|---|---|
+| 1 | Same-family capacity study | Add S203 and S316, three seeds each, 150M paper exposures; retain B100 and common 50M/100M/150M checkpoints plus a measured-time view | A bounded B-family capacity/compute trend, not a universal scaling law |
+| 2 | Foundation-objective comparison | Pilot suggests copying shortcuts or weak language acquisition; compare targeted transduction with a registered continuation-first allocation at equal downstream resources | Which allocation helps this task/regime; no assumed need or irrelevance of broad pretraining |
+| 3 | Additional corruption controls | Closest work or treatment interpretation requires LLM-simulated errors, acoustic-condition changes or another mixture fraction | A registered data-treatment effect; keep common seeds, rejection/yield and generation costs visible |
+| 4 | Richer published-method comparison | ConstDecoder feasibility succeeds or a specifically justified alternative becomes reproducible | A scoped comparison to that method under disclosed adaptation and representation constraints |
+| 5 | Optional model-based semantic analysis | A precise exploratory question justifies frozen blinded multi-family judge prompts and a separate token/cost allowance | Judge-model verdicts, agreement and failure modes only; no human-equivalent truth, primary ambiguity resolution or headline dependency |
+| 6 | Tokenization/prefix/byte variants | A measured boundary or native length cost limits the selected representation | A separate tokenizer/family result after new counts/context/compute matching |
+| 7 | Longer context or another transfer axis | The first external/long-input analysis exposes a specific failure | Results on the newly declared domain/recognizer/length distribution only |
+| 8 | Product-oriented sparse routing or sentinels | Current guards, generation length or protected-span conflicts dominate the app result | A measured system improvement, with raw model and wrapper attribution preserved |
+| 9 | 510M/752M/988M or optional cloud | Capacity/data evidence predicts sufficient useful gain and BENCH-00 supports the resource decision | A bounded larger-model or platform result; no hidden cloud default |
+
+The six additional S203/S316 runs add **900M paper exposures** to the final-run ledger. They are separate from the 600M/1.5B product campaigns. A selected later 300M-per-run continuation is another prospective budget with its own common rules; it cannot be introduced only for a favorable size after seeing final outcomes. If C becomes the desired family for a scaling paper, define a complete C-family grid rather than mixing C at one size with B at others.
+
+The research ideas retained from the original program remain useful but are not presumed novel: exact-ASR error curricula; sparse edits with unchanged-byte copying; shallow-decoder allocation for actual kernels; calibrated identity/correction routing; technical-text tokenizer/boundary handling; and optional punctuation/case tagging. Their priority depends on measured failure modes. Semantic-embedding losses, complex differentiable edit losses, multiple unisolated auxiliaries and speculative decoding remain deferred until a simple baseline gives a concrete reason to test them.
+
+An optional cloud path begins with the exact owned architecture and parity checks on the selected accelerator. If the chosen MLX backend cannot support it adequately, a small owned PyTorch execution path must match forward, gradients, tensor layout and checkpoint continuation before measurements are compared. Resume only the candidate’s own scratch lineage or start it randomly. Record actual throughput and current rental terms before deciding on a run; no cloud purchase or execution is part of this specification.
+
+
+## 38. Prospective manuscript outline
+
+**ENGINEERING PROPOSAL.** Working title: **“Output Representation and the Repair–Preservation Tradeoff in ASR Transcript Restoration.”** The abstract must immediately explain that natural preservation is measured relative to released references and that the introduced-error endpoint also includes new insertions. A more literal alternative is **“Reference-Error Repair and Error Introduction in Small ASR Restorers.”** Neither title asserts that the proposed models prevent all harmful edits.
+
+The manuscript leads with the controlled A/B/C comparison, especially B/C at matched backbone, scale and downstream exposure. The automatically scored triples and exact structured stress suite make the experiment reproducible; they are methods, with explicit credit to I-measure, M2/ERRANT, GLEU, CLEME/CLEME2.0 and programmatic behavioral tests. No human FTR benchmark contribution is asserted. [M1-M6, T1-T3]
+
+The main body covers task/reference policies; nearest work and the remaining empirical distinction; model/count/training contracts; natural populations and controlled acoustic data; deterministic scorer and ambiguity; H1/H2 and utility gates; completed results; native costs; and limits. Part VII supplies the complete subsection hierarchy, abstract template, planned tables, figures and claim checklist.
+
+The minimum results package contains all twelve final scratch runs, three adapted ByT5 seeds, Qwen/raw/DET controls, the ConstDecoder feasibility outcome, all eligible public natural cases under two recognizers, the fixed 9,000-case exact-stress model panel, shared guard attribution, software-verification records, source-cluster intervals, ambiguity bounds and failures. There is no mandatory human evaluation section. Optional author illustrations and model-based judging are removable supplements.
+
+**PAPER CLAIM CANDIDATE.** A completed manuscript may report a representation-specific reduction in introduced word errors within the frozen margins, a correction/preservation tradeoff, pretrained dominance, no channel benefit, or an inconclusive result with clearly bounded uncertainty. If implementation or comparator adequacy fails, describe the resulting feasibility limitation rather than a general architecture result. All result cells and abstract numbers remain empty until execution; no result is anticipated by the outline.
+
+
+## 39. Final recommended path
+
+### 39.1 The twenty-five hard questions answered
+
+**ENGINEERING PROPOSAL AND PROSPECTIVE SCIENTIFIC JUDGMENT.** The following decisions define the smallest defensible solo-research program. They do not assert successful implementation, adequate power, favorable model results or publication acceptance. Every empirical publication gate remains pending until its required evidence exists.
+
+**1. Can the primary scientific question be answered without new human annotation?** Yes, after narrowing it to a controlled comparison against released public references: at the same approximate scale and downstream exposure, does the B/C output-representation intervention change introduced reference errors while preserving useful repair and overall reference accuracy? Existing references, raw ASR strings and model outputs supply the inputs. The scorer supplies an explicit operational correspondence with uncertainty where that correspondence is ambiguous. Generated examples separately test specified transformations with recorded latent fields. None of this establishes unrestricted semantic faithfulness, author intent, acoustic truth or a new human-validated critical-content benchmark. Those broader claims are removed rather than left dependent on unavailable labor.
+
+**2. Which exact automatic metrics should replace CADR/NCS?** Replace the human-dependent headline endpoints with ordinary WER and two precisely defined reference-relative quantities. For a case, let `eS = edit_distance(R,S)`, `eO = edit_distance(R,O)`, `N_R` be its reference-word count, `r` the raw repaired-error count and `d` the introduced-error count under Part IV. The raw counts satisfy `r − d = eS − eO`. Within each registered domain, introduced-error burden is `sum(d) / sum(N_R)`; completed source-error repair is `sum(complete × r) / sum(eS)`, where `complete` is the frozen validity/completion indicator. All natural primary endpoints use the equal-domain mean of those corpus ratios: 0.5 LibriSpeech-PC plus 0.5 full SLUE-VoxCeleb, with source-cluster inference specified in Section 25. Report individual domains and pooled word/error-weighted ratios secondarily. Every denominator is fixed from the source/reference inventory, never from the model's accepted edits. Report identification intervals when event correspondence is ambiguous. The completion-gated repair endpoint does not inherit the raw conservation identity. CER, unchanged-output rate, edits, invalid/capped outputs, deterministic literal preservation/repair and qualified fixed-source slices are secondary. These are replacements with different units and scope, not automatic versions of the former human CADR/NCS labels.
+
+**3. Which of those metrics are already established in the literature?** WER/CER and edit precision, recall and F0.5 are established. I-measure already uses three-way correction evaluation; M2 and ERRANT provide established edit scoring/extraction; CLEME and CLEME2.0 provide related reference-conditioned correction and overcorrection decompositions. Their alignments, edit units and denominators are not interchangeable. In particular, a proposed-edit overcorrection fraction is not introduced errors per reference word. Adopt the established vocabulary and report conventional metrics under their actual published implementations where included. Describe the project's conditional-alignment counts as an operational measurement choice whose implementation must be validated. Do not claim novelty merely for distinguishing source-wrong/output-correct and source-correct/output-wrong transitions. [M1–M6]
+
+**4. What fine-grained information is lost without human annotations?** The automatic MVP cannot establish whether an official reference itself accurately captures every spoken word, whether an alternative wording preserves intended meaning, whether an edit was justified by information available to the text-only system, or whether an error is consequential in its real use. It also loses independently judged acceptability, intent-aware correction obligations, comprehensive natural critical-atom coverage and a semantic assessment of product cleanup. A number/string parser recognizes its declared syntax; it does not establish every entity's identity or every utterance's implication. Ambiguous occurrence correspondences remain bounded rather than adjudicated. Optional illustrative examples cannot fill these quantitative gaps.
+
+**5. Does that loss matter to the main thesis?** It changes the thesis materially, but does not erase the controlled empirical question. The strongest claim becomes a reference-relative B/C representation-plus-renderer tradeoff on declared public corpora, with useful-repair and WER requirements. It can show that one treatment introduces fewer reference errors under a fixed scoring rule and tested regime. It cannot show that the treatment is safer for every user's intended meaning or qualifies as the default LocalFlow replacement. The human FTR benchmark contribution is retired. The paper must earn its contribution through revealing controlled results and reproducibility rather than treating the automatic scorer as equivalent evidence.
+
+**6. How do we detect alignment ambiguity without manually resolving it?** Preserve all optimal R/S and R/O Levenshtein paths, form compatible joint paths, conditionally minimize the induced S/O cost, and retain every tie at that conditional optimum. Compute event minima and maxima over that defined set. Source occurrence eligibility and any literal masks are fixed from R/S before O is considered. Repeated words and gap-only insertions therefore have explicit outcomes or bounds. A state/work cap produces automatic conservative aggregate bounds and an unavailable local classification, while the case remains in WER/CER and the fixed headline denominators. The algorithm does not claim to recover an objectively true occurrence identity. Part IV must prove the chosen recurrence, tie rules and fallback bounds, including identity on repeated tokens.
+
+**7. How much natural public data becomes automatically scorable?** The planned released inventory is all 5,273 LibriSpeech-PC test cases and all 3,553 SLUE-VoxCeleb released test cases: 8,826 nominal cases and approximately 17.95 audio hours before frozen automatic structural exclusions. Run both pinned recognizers on the same eligible audio. This is an inventory, not a measured final eligible count. Ordinary normalized WER/CER can cover structurally valid reference/output cases; exact transition classifications and natural critical-literal coverage remain unknown until the automatic development inventory and scorer qualification. Bound unresolved transitions rather than dropping their cases. LibriSpeech-PC supports its declared punctuation/case diagnostics; SLUE's normalized reference does not create a missing formatted gold. The official 3,426-case SLUE ASR-compatible subset is a separately named secondary result; its excluded sentiment labels are not automatically defective transcripts. Sections 21 and 28 define these sources and policies.
+
+**8. How large can the exact-ground-truth synthetic stress suite reasonably be?** Specify the full 30,000-case pool as 25 categories × four template cells × 100 latent groups × three views: clean, repair and mixed. The mandatory model panel is 9,000 cases from 3,000 groups, using 30 groups per cell selected by a frozen hash order before outputs. All 16 mandatory model instances run on that panel, giving 144,000 generated model outputs. The full 30,000-case model sweep is stretch unless pre-freeze measurement supports it; it would require 480,000 outputs. Pool size is cheap to state and does not establish inference affordability, independent sample size or linguistic diversity. Exact latent targets support exact structural scoring only under their specified renderers and recoverability rules. Part V defines the records, split units and permissible conclusions.
+
+**9. How do we keep synthetic evidence from masquerading as natural-distribution evidence?** Maintain separate population identities, tables, denominators, clusters, uncertainty and claim language. Never average natural and generated scores into a headline. Keep all variants of a latent/source family together; account for the shared template structure in the declared uncertainty calculation. Generated category balance is a design distribution, not an estimate of naturally occurring ASR errors. Report clean preservation, uniquely recoverable repairs, mixed cases and deliberately underidentified cases separately. A latent field known to the generator is not necessarily recoverable from S: arbitrary digit deletion or polarity loss without a visible cue cannot support a source-recoverable repair claim. Generated evidence tests the registered capability under its assumptions.
+
+**10. How do we prove the scorer itself is correct?** Establish conformance to its formal definition through independently structured implementations and finite exhaustive checks, not agreement with a second copy of the same helper. The required suite includes ordinary edit-distance parity, exhaustive short-sequence joint-path enumeration, identity and gold-output invariants, insertions/deletions/repetitions, raw `r − d` conservation, fixed denominators, case-order and record-serialization invariance, invalid-output handling, ambiguity detection, cap-bound containment and independently rendered latent fixtures. The efficient implementation must match the tiny oracle exactly on qualified cases. A deliberately malformed output must not earn completed repair. Hash the algorithms, tests and frozen fixtures. This provides strong software-correctness evidence; it does not prove official-reference accuracy, semantic validity or universal absence of bugs. Failure blocks the affected endpoint or narrows its claim without creating a human review queue.
+
+**11. Does C still have a fair comparison with B under these metrics?** Yes, if the fairness contract remains explicit. B100 and C101 share the encoder-decoder backbone, approximate parameter budget, tokenizer, accepted clean sources, ordered canonical exposure, context coverage, seed blocks and tuning allowance. C's small additional heads and its exact renderer are reported; the intervention is representation plus its constitutive renderer, not representation alone. Score the same final strings under the same reference algorithm, including invalid and capped outputs. Compare bare proposals first. Apply the same previously registered guard to identical cached proposals for each model's guard-on view, so guard benefits cannot be credited to learned editing. Canonical exposure is matched; actual native positions, loss terms, FLOPs and elapsed time need not be identical and must be reported separately.
+
+**12. Can a copy-everything model game the new metrics?** It can achieve zero introduced errors, which is correct for that narrow quantity. It cannot satisfy the full claim. For `O=S`, the scorer must return raw repair zero as well as introduced errors zero, even with repeated words. The model must also improve completed repair over the deterministic baseline and improve WER over raw ASR. Its unchanged-output rate and needed-repair coverage remain visible. A pair of passive models cannot qualify because their damage is low, and a guard that returns S cannot turn a failed bare model into a successful representation result.
+
+**13. Can an aggressive corrector game the new metrics?** A repair-only score could reward aggressive guessing, so it is not used alone. Introduced errors count additions and substitutions under the fixed reference-relative definition, including new insertion errors in already erroneous gaps. WER captures the net reference error burden and can exceed 100%; completion rules prevent malformed/truncated outputs from earning primary repair. Fixed source/reference denominators and least-favorable identification contrasts prevent a model from improving its headline by making difficult units unclassifiable. A system that happens to guess an unidentifiable reference string correctly can still earn ordinary reference accuracy; that is why the paper must not reinterpret natural repair as proof that every edit was justified by S or semantically safe.
+
+**14. What is the minimum anti-identity gate?** Both B100-text and C101-text must beat the registered deterministic baseline on completed source-error repair: the observed least-favorable gain must be at least five percentage points of source-error opportunities and the one-sided 97.5% lower bound must exceed zero. Each must also improve all-case WER over raw ASR, with the one-sided 97.5% upper bound of model-minus-raw below zero. These are interpretation gates attached to H1, not additional opportunities to search for a headline. Report deterministic-baseline WER as well, but there is no extra deterministic-WER passing requirement in this MVP. Development must justify the five-point utility floor and demonstrate attainable precision before final freeze; copying everything does not meet the useful-restoration criterion merely because its damage score is optimal.
+
+**15. What is the minimum overcorrection/preservation gate?** For H1, C-minus-B must have an upper one-sided 97.5% bound below zero for introduced errors per reference word, with an observed least-favorable reduction of at least 0.1 percentage point, equivalent to one introduced error per 1,000 reference words. Completed repair must be noninferior with a lower bound above −3 percentage points, and all-case WER must be noninferior with an upper bound below +0.5 percentage point. Both models must pass Question 14's utility gates. For H2, B-acoustic must improve equal-domain WER with an upper bound below zero and an observed reduction of at least 0.5 percentage point, while the introduced-error increase has an upper bound below +0.1 percentage point. Apply the joint-hypothesis and multiplicity rules in Section 25: fixed one-sided 97.5% component bounds, intersection-union tests within H1/H2, and Bonferroni control across the two primary joint claims. These proposed margins require development justification; a broad interval cannot be repaired by weakening a final-test margin.
+
+**16. Is ByT5 still the right strong pretrained control?** Retain ByT5-small as the mandatory adapted small-pretrained control. Its role is to test whether the scratch program adds useful evidence relative to a credible compact pretrained restoration model; neither Qwen alone nor an unadapted small model fills that role. Qualify native-byte lengths, context handling, loss masking, convergence, precision and actual cost on development, and retain its three adaptation seeds and declared matched-exposure view. Byte length can make its real cost substantially different from project-BPE counts, so its affordable time view must be separately named. Do not make a knowingly truncated or undertrained comparator the basis for a scratch-superiority claim. The choice remains a defensible control, not an assertion that every later pretrained model is weaker. Sections 3, 19 and 22 provide the model provenance and comparison limits.
+
+**17. Is ConstDecoder still worth the implementation gate?** Yes, as a bounded attempt to include a relevant published edit method. Cap its initial official-code/task-adaptation feasibility work at two engineering days; record what ran, the source/version, task compatibility and the exact blocker if it fails. Passing that gate authorizes only the separately costed proposed comparison, not an invisible expansion of the month. If the method cannot be made credible within the budget, retain the strong mandatory controls and narrow any claim of superiority over published edit systems. This gate must not displace scorer correctness, final seeds or ByT5 quality, and a broken interface is not a negative result about ConstDecoder. [N3]
+
+**18. Is B100-acoustic still worth three final runs?** Retain it because a single controlled training-data intervention can explain whether the selected TTS/ASR pipeline improves transfer to real reference-based evaluation at this scale. It adds three final 150M runs, or 450M canonical exposures, so it must pass an early common-support, generation-yield and resource gate. Both channels use the same accepted written seeds and clean spoken anchors; only the registered 40% corruption share changes, or 60M of each final run's exposures. The primary acoustic arm inherits B-text's selected optimizer, LR and continuous schedule; its own three probes are feasibility/sensitivity checks. A written TTS target is not proof of the words actually pronounced. Use the frozen intended-target generation/filtering policy and disclose that uncertainty; claim a policy intervention, not verified isolation of acoustic errors. If automatic construction cannot support the registered treatment before freeze, remove H2 through a disclosed pre-final scope amendment rather than add listening labor or run three uninterpretable replicas.
+
+**19. What becomes the strongest prospective contribution after removing human FTR annotation?** A controlled empirical study of full-text versus sparse-edit output at a matched small backbone and exposure, with three trained realizations, useful-repair requirements, introduced-error bounds, a strong pretrained comparator and guard attribution. The public reference scorer and exact-field stress artifacts support inspectability; they are not automatically independent metric or benchmark inventions. The acoustic intervention and measured local resource frontier are supporting findings if informative. Novelty must survive comparison with the specialized ASR correction, conservative editing and three-way evaluation work in Section 3. A favorable B/C result is one possible outcome; a well-bounded finding that its benefit disappears after repair matching or comes entirely from the guard can also be informative.
+
+**20. Is the resulting MVP still strong enough for a serious arXiv paper?** Potentially, with substantial publication risk still present. A serious manuscript needs correct automatic measurement, credible optimization and controls, public natural evidence, transparent uncertainty, a useful distinction from the nearest work and enough reproducibility to let another researcher reconstruct the comparison. A complete controlled result can meet that standard without new annotations. Merely assembling a scratch model, a custom scorer and generated examples cannot. If the data cannot resolve the tradeoff, the comparator is weak, or every claimed finding restates established work, present a transparent project report or narrowly bounded replication rather than manufacture novelty. Writing a specification does not close any of these gates, and venue fit or acceptance remains an external judgment.
+
+**21. What would a skeptical ACL/Interspeech reviewer now attack?** The strongest objections are reference quality versus claimed semantics; overlap with I-measure/CLEME and existing correction methods; the legitimacy and tightness of conditional-alignment bounds; incomplete insertion or repeat handling; sparse natural critical-literal coverage; synthetic-template leakage; inadequate small-pretrained adaptation; an undertrained 150M scratch regime; source/seed dependence; a channel treatment confounded by acceptance filtering or pronunciation errors; and unmeasured one-Mac compute claims. The response is the specified controls, explicit estimand, common support, software parity, grouped inference and bounded conclusions. Do not answer these objections by restoring manual review under the name of validation. A reviewer may still judge the contribution too narrow even when the implementation is correct.
+
+**22. Can the complete MVP realistically be executed by one researcher in at most 30 days if BENCH-00 is favorable?** It is conditionally plausible, not the default promise. At an assumed effective 4 TFLOP/s, the scratch campaign plus provisional ByT5 allowance uses 151.1 device hours; 426,432 mandatory model outputs at an assumed weighted 0.5 seconds/output use another 59.2 hours. Adding the other stated device allocations gives about 280.3 hours, or 350.4 with a 25% reserve. That calculation omits CPU scoring. Charging a further 16 serial CPU hours plus its reserve produces **370.4 total serial work hours**, which does **not** fit 22 scheduled work days × 16 available hours/day = 352 hours. Those days are provisionally days 4–25 and include early BENCH/data/HPO work; the day-7–8 freeze is a prerequisite for final training, not the start of all 22 work days. It fits the more demanding 22 × 20-hour availability scenario of 440 hours. At 4 TFLOP/s and 0.25 seconds/output the total is about 333.4 hours; at 8 TFLOP/s and 0.5 seconds/output it is about 276.0 hours. At 4 TFLOP/s and one second/output, about 444.5 hours already exceeds even the 440-hour scenario. These are arithmetic sensitivities, not native forecasts. The actual scorer may exceed the 16-hour allowance, and any successful additional published-method run needs its separate budget. Do not assume CPU/GPU overlap until memory, thermals and measured throughput justify it. Unfavorable ByT5 byte lengths, decoding or source supply breaks the month. Move optional full-stress sweeps, larger models, scaling, extra checkpoints, extra recognizers and product integration to stretch before weakening mandatory scientific controls. Part VI contains the authoritative phase and resource accounting.
+
+**23. What is the expected active human labor after remediation?** Budget approximately 110–150 active researcher hours as a planning range, or roughly 3.7–5 hours/day over 30 days, with uneven early and final workloads. Required annotation/listening/adjudication hours are exactly zero. Active effort remains in design decisions, coding-agent review, mathematical/scorer debugging, source and rights checks, development interpretation, experiment launches/recovery, statistical review, figures and manuscript writing. Unattended training and inference are device hours, not human labor; reading agent output and debugging failures are human labor, not free automation. Part VI owns the detailed non-overlapping phase allocation and must revise the estimate using early measured development work. A substantial scorer or backend repair can exceed this range without violating the science; the honest response is a revised ETA.
+
+**24. What remaining repetitive manual task can still be automated or deleted?** Automate manifest hashing and split checks, candidate-independent source inventories, schema/offset validation, exact and near-duplicate checks, run-state/recovery logs, output caching, validity/completion flags, scorer parity/property fixtures, ambiguity/cap counts, cluster bootstrap jobs, table generation and figure consistency checks. Render guard variants from the same cached bare proposal rather than generating and reviewing them again. Delete mandatory all-seed output spot checks, manual critical-atom markup, listening to certify TTS targets, manual resolution of repeated-word alignments and any AI-judge approval dependency. Keep a small number of explicit scientific decisions for the researcher: defining the task, accepting a pre-freeze amendment, interpreting measured limits and approving the manuscript's claims. Automation can execute checks; it does not make those judgments disappear.
+
+**25. What should be the exact first implementation action after v1.2 passes independent review?** After a future instruction authorizes implementation, create the isolated sibling research workspace and record the approved specification/protocol identities. Its first bounded scientific deliverable should be the tiny independent scorer oracle and adversarial fixture suite from Part IV, developed alongside the retained MODEL-0 mathematical correctness ladder. Include `R=[a,a], S=[a], O=[a]`, unequal inserted-gap strings, `O=S`, `O=R`, malformed output and state-cap containment before attempting full evaluation. The oracle is a development artifact for formal parity, not a generated benchmark corpus or a training run. Then qualify the efficient scorer and native model/BENCH path on bounded development inputs, close the source and comparator feasibility checks, and freeze the full experiment before final runs. Section 40 gives the complete sequence. R-M1 has not started, and this document itself performs none of these implementation actions.
+
+### 39.2 Retained engineering recommendations
+
+The educational objective remains intact. MODEL-1 is the exact 100,685,568-parameter causal model with 14 layers, width 768, 12/4 query/KV heads, head dimension 64, SwiGLU 2,048, pre-RMSNorm, RoPE base 10,000 and initial context 1,024. The full educational target remains 1B language tokens under its own ledger. Shared mathematical correctness, recovery and short source-conditioned convergence support the paper branch; completion of educational 50M/250M/1B milestones is not a paper prerequisite.
+
+The paper retains twelve final scratch runs at 150M `paper_canonical_v2` exposures plus twelve 10M development probes, the mandatory adapted ByT5 and task-matched Qwen controls, deterministic baselines and the bounded published-method gate. Independent random scratch lineages are mandatory. The B100/C101 comparison is the minimum architecture mechanism study; A100 supplies the same-scale decoder reference. It is not a size-scaling curve.
+
+The first conditional product prototype remains S203 at 202,936,320 parameters. S316 is a later production-size hypothesis and S510 a conditional escalation. Preserve the product exposure budgets of 600M, 1.5B and 2B under `product_canonical_v1`; do not add them to paper-canonical or educational tokens as a common unit. If a smaller model satisfies the separately authorized product requirements, it wins that engineering decision. A same-family B100/S203/S316 three-seed comparison can support a bounded capacity trend only after the stretch work is complete; neither that grid nor these three sizes alone establishes a universal scaling law.
+
+Replacement of ordinary cleanup remains unproven. Broader Qwen reasoning, stylistic transformations and Prompt Engineer behavior lie outside `restore_reference`. Keep typed routing, explicit original-versus-post-proposal source lineage and existing task support. The automated paper's reference-relative scores do not qualify semantic product thresholds or establish a default replacement. Stop product scaling when a correct, adequately diagnosed small-model campaign cannot provide useful correction and a bounded data/optimization repair fails; do not interpret that local outcome as universal scratch-model inferiority.
+
+### 39.3 Optional cloud route and final recommendation
+
+Cloud remains a later, explicitly authorized option, outside the one-Mac execution claim. A future move requires measurement of the exact model, data shape, optimizer and supported backend, plus current cost and source-use checks. Preserve random initialization or resume the same scratch lineage with complete optimizer, RNG, scheduler and data state. If a second execution backend is required, establish forward, gradient, checkpoint and tensor-layout parity before interpreting a speed difference. Importing pretrained weights into the core scratch students remains prohibited; using the declared pretrained baselines remains necessary.
+
+Proceed with the solo MVP only after the automatic scorer, source/reference contract, native resource plan and credible comparator pass their development gates. Freeze the 9,000-case stress model panel and full natural population before outcomes, then execute the registered three-seed comparison and second-recognizer evaluation. Keep every valid negative, ambiguity count and failed attempt visible under the frozen rules. Recommend a research manuscript only when the resulting evidence answers a useful question beyond the nearest work; keep learning and product extensions available without making them conditions for that answer.
+
+
+## 40. Exact first actions after independent design review and implementation authorization
+
+**SPECIFICATION BOUNDARY.** This document does not start R-M1, create a repository, implement the scorer/generator/models, construct final data, train, modify LocalFlow or purchase compute. The steps below are the future execution sequence after the design passes review and the user authorizes implementation. An independent design/software check can be performed by coding/research agents or a separately authored oracle; no additional human researcher is a required resource.
+
+1. **First concrete implementation action: create the isolated research scaffold and the versioned scorer-contract fixture file on tiny obvious triples.** Record the accepted v1.2/protocol draft hashes, freeze a development-only reference policy, and encode identity, exact repair, unique introduced substitution/insertion/deletion, repeated-token ambiguity, Unicode, empty output and invalid/truncation expectations from Part IV. Create the explicit Levenshtein oracle and verify those fixtures before any model training or final benchmark construction. The deliverable is a failing-then-passing software contract, not a human-labeled corpus. Keep production LocalFlow unchanged.
+2. **Implement MODEL-0 primitives and the existing correctness ladder in parallel with bounded scorer/data development.** Own embeddings, RMSNorm, RoPE, attention/masks, SwiGLU, CE, optimizer/accumulation, checkpoints and caches. Qualify B/C-specific heads, C event sequence and renderer before their pilot use. Do not infer correctness merely from falling loss.
+3. **Run BENCH-00 with the exact retained architecture and real workload.** Pass V0-V4 first, then measure five warmups and one hundred complete timed updates, thermal sustainability, memory, actual masks/dtypes, gradient accumulation and twenty-step resume. Qualify the inspected MLX path and any alternate pinned backend through parity. Add ByT5/Qwen native decoding, ASR/TTS and scorer timing samples; training FLOPs alone cannot decide the month.
+4. **Qualify existing public data and deterministic evaluation without new labels.** Record source access/rights, hashes, split/group identities and the existing reference policies. Use only development material for scorer tuning, coverage/runtime qualification and exact generator conformance. Establish automatic structural eligibility and source-only literal masks. Keep final inputs/references isolated from training, corruption tuning, prompts and optional AI judges.
+5. **Run the bounded conditional and comparator pilots.** Execute the twelve prescribed 10M scratch probes with recorded roles, qualify ByT5 native-byte/context and adaptation budget, and close the at-most-two-day ConstDecoder gate. Measure actual source-error denominators, cluster structure, alignment-bound widths, acoustic acceptance yield and complete pipeline cost. Development outcomes decide whether the 150M regime can answer the proposed question.
+6. **Freeze `paper_protocol_v2`, scope and manifests before the twelve final scratch runs.** Freeze source IDs, automatic exclusions, normalizers, joint-alignment/cap rules, scorer/parity tests, literal/generator identities, stress panel mode, seeds, budgets, HPO, curriculum, primary ratios/margins, statistics, failure/retry rules and release plan. Record all pending runtime identities. After training, freeze weight/export/threshold hashes before final inference. A day-7–8 scheduling gate determines whether the one-month target survives.
+
+The first scorer deliverable is a small reproducible correctness report with fixture/property/exhaustive/parity status, ambiguity cases and runtime caps. The first native report covers complete-update throughput, memory, thermal behavior, accumulation/resume agreement and the resulting educational/paper projections. The first data report covers access, reference policy, grouping, automatic eligibility, source-error support and expected precision. None requires per-case author labels or listening.
+
+The subsequent action follows those measured gates. If they fail, repair the development design or extend the calendar before final results. Do not drop inconvenient seeds, add an unregistered rescue optimizer, promote a product model, start a larger campaign or spend cloud resources merely because a later roadmap option exists.
+
+
+## Part III - Publication experiment registry v2
+
+This is the complete copy-ready registry: a filled **draft** of `paper_protocol_v2`, a reusable per-experiment plan, and an empty post-execution schema. It records the intended experiment, not an executed preregistration or achieved software qualification. Actual source/model hashes, hardware settings, measured development adequacy and freeze signatures remain pending. Every field affecting final inference must be resolved before PUB-GATE 3; resulting weight/export hashes are recorded at the later artifact freeze before final inference.
+
+The protocol requires no additional humans. Independent program/oracle checks and clean-environment reconstruction are software verification that one researcher can perform with coding-agent assistance. Optional author inspection and optional model-based judging supply no primary labels and are not gate dependencies. Preserve the frozen record and append dated amendments; post-result estimand changes cannot become retrospective preregistration.
+
+```text
+PUBLICATION EXPERIMENT REGISTRY v2 — DRAFT, NO EXECUTION RECORD
+
+RECORD A: paper_protocol_v2
+
+IDENTITY AND STATUS
+  protocol_id: paper_protocol_v2
+  specification: LocalFlow From-Scratch Transformer Master Specification v1.2
+  draft_date_utc: 2026-10-04
+  owner: Daniel Escalante
+  status: DRAFT_AWAITING_PUB_GATE_3
+  design_review_record_and_hash: PENDING
+  freeze_timestamp_utc: null
+  frozen_protocol_sha256: null
+  registration_location: PENDING
+  external_registration: NONE_CLAIMED
+  affected_final_results_seen: false
+  final_training_started: false
+  publication_gates_passed: []
+  implementation_authorization: NOT_GRANTED_BY_THIS_SPECIFICATION
+  required_external_annotators: 0
+  required_second_human_raters: 0
+  required_human_adjudicators: 0
+  required_repetitive_author_labeling_hours: 0
+  required_listening_queues: 0
+  MEASURED_RESULT: {}
+
+SCOPE, THESIS AND INFORMATION CONTRACT
+  working_title: Output Representation and the Repair-Preservation Tradeoff
+    in ASR Transcript Restoration
+  task_id: restore_reference
+  thesis: At matched scale and downstream source exposure, measure how output
+    representation changes reference-error repair, introduced word errors
+    and native inference cost.
+  input: Raw pinned recognizer one-best text and common trusted task controls.
+  forbidden_extra_input: Audio; N-best; acoustic confidences; reference text;
+    hidden generated values; gold literal masks; owner context; judge verdicts.
+  target: Existing designated reference under frozen corpus lexical/surface policy;
+    preserve the spoken disfluency/self-correction sequence where referenced.
+  natural_claim_boundary: Reference-conditional error restoration, not all
+    permissible transcripts, text inferability or comprehensive semantic safety.
+  generated_claim_boundary: Exact formal grammar and source-visible recovery
+    conditions, not natural incidence or arbitrary hidden-value recovery.
+  separate_product_tasks: correction_proposals and cleanup; normalized and
+    post-proposal input boundaries; intent-cleaned target and separate lineage.
+  core_weight_lineage: Every scratch parameter randomly initialized, including
+    embeddings, encoder, decoder, pointers and classifiers.
+  nonclaims: No invention claim for scratch ASR correction, sparse editing,
+    copy rendering, source/reference/output transitions, overcorrection metrics,
+    TTS-to-ASR generation, exact behavioral tests or universal scaling laws.
+
+QUESTIONS AND CLAIM MAP
+  RQ1: Matched A/B/C representation, repair, introduced errors and output burden.
+  RQ2: Fixed text-to-acoustic corruption replacement on untouched real speech.
+  RQ3: Bounded pretrained/deterministic/native-resource comparison and transfer.
+  primary_contribution_candidate: Controlled empirical representation evidence.
+  supporting_contribution_candidate: Controlled acoustic and resource evidence.
+  methods_artifacts: Qualified deterministic scorer and exact technical generator;
+    no independent novelty claim assumed for either.
+  retired_claims: Human-annotated FTR resource; manual CADR; manual NCS;
+    mandatory human semantic audit.
+  H1: C101-text versus B100-text bare, introduced-error superiority plus
+    completed-repair/WER noninferiority and anti-identity usefulness.
+  H2: B100-acoustic versus B100-text bare, WER superiority plus introduced-error
+    noninferiority under fixed 40 percent replacement.
+  S-AB: Secondary causal/encoder-decoder family contrast.
+  S-GUARD: Common deterministic guard on identical cached bare proposals.
+  S-PRE: Adapted ByT5-small, task-matched Qwen and deterministic frontier.
+  S-EXT: Unchanged-model evaluation on frozen Whisper hypotheses.
+  S-STRESS: Exact generated clean/repair/mixed technical behavior.
+  S-MAC: Complete native training/inference/recovery/resource accounting.
+  S-LITERAL: Automatic source/reference-defined natural literal subset.
+  S-SCALE: Optional same-family B100/S203/S316 controlled study.
+  S-OBJ: Optional common-family objective study.
+  S-VALID: Deterministic scorer, generator and evaluation software qualification;
+    no semantic-gold or new-metric claim.
+  S-AI: Optional model-based semantic analysis; disabled for MVP by default;
+    separate optional analysis, not one of the 12 canonical claim cards.
+  all_claim_statuses: CANDIDATE_NOT_TESTED
+
+PRIMARY SCORER CONTRACT
+  specification_version: Part_IV_v1.2_normative
+  algorithm_id_and_version: reference_triple_v1
+  scorer_implementation_commit_and_sha256: PENDING
+  independent_oracle_implementation_sha256: PENDING
+  parity_batch: 500 preselected development triples, at most 64 lexical tokens per sequence;
+    zero unexplained count/mask/status/bound disagreements required.
+  deterministic_traversal: States ordered by (i+j+l,i,j,l); moves 111,110,101,011,100,010,001.
+  empty_result_policy: All actual qualification and metric fields remain null or empty.
+  dependency_lock_and_normalization_tables_sha256: PENDING
+  word_normalizer_id: lexical_eval_v1, Unicode 15.1.0 tables pinned
+  text_input: Strict UTF-8; immutable raw strings; NFC and pinned case-folding
+    for primary word scoring; finite apostrophe/hyphen mappings and scanner.
+  excluded_primary_normalizations: No spelling repair, inverse text normalization,
+    general number expansion, contraction expansion or semantic equivalence.
+  raw_byte_exact: Complete_valid AND exact complete UTF-8 strings.
+  normalized_exact: Complete_valid AND equality of primary lexical token sequences.
+  CER: Raw Unicode scalar-value edit distance preserving case/punctuation/spacing;
+    separate NFC-CER only if explicitly named and frozen.
+  n_i: Number of designated-reference lexical tokens.
+  eS_i: Unit-cost Levenshtein distance between reference and source.
+  eO_i: Unit-cost Levenshtein distance between reference and scored output text.
+  joint_alignment: R/S and R/O projections must each be minimum-edit paths.
+    Among compatible monotone triple paths minimize induced S/O edit cost.
+    Retain all ties at that conditional optimum. Do not require three
+    unrestricted pairwise optima to coexist. No native C actions are scorer inputs.
+  reference_column_repair: Source wrong/output correct relative to reference token.
+  reference_column_introduced: Source correct/output wrong relative to reference.
+  gap_column_repair: Source token with output gap, removing a source insertion.
+  gap_column_introduced: Output token with source gap, a new output insertion.
+  gap_column_both_tokens: Unresolved insertion, even when token values differ.
+  unresolved_change: Wrong-to-different-wrong reported as edited-but-unresolved.
+  raw_invariant: repair_i - introduced_i = eS_i - eO_i.
+  count_bounds: 0<=repair_i<=eS_i; 0<=introduced_i<=eO_i.
+  exact_intervals: Direct minimum/maximum counts over all conditional-optimum paths.
+  source_masks: R/S-all-optimal occurrence consensus only; computed and hashed
+    before candidate outputs, never narrowed using model output.
+  ambiguity_rule: Fine-grained point unavailable where correspondence/status
+    varies; original case stays in WER/CER/exact and aggregate bounded analysis.
+  output_consensus: Report unavailable local point and original-denominator
+    binary bounds; never divide headline metrics by candidate-specific coverage.
+  pair_lattice_cell_budget: 4000000 materialized cells per pair
+  joint_state_budget: 250000 reachable states
+  joint_edge_budget: 1750000 examined moves; deterministic work count, no wall-clock label cap
+  exact_fast_paths: Identity source/output, perfect reference/source/output cases and
+    exact graph pruning as proven in Part IV; no approximate tie rescue.
+  joint_cap_fallback: repair in [max(0, eS-eO), eS]; introduced in [max(0, eO-eS), eO].
+  unfinished_pair_distance: Pending evaluation failure until exact WER is obtained;
+    no row deletion or favorable imputation.
+  primary_completion_gate: repair_completed_i = raw_repair_i only for complete_valid;
+    otherwise 0. Preserve raw counts separately because conservation no longer applies
+    to completion-gated repair on failed calls.
+  output_failure_mapping: Valid full-text capped/timeout prefix scored as emitted;
+    invalid UTF-8, invalid/unrenderable C, missing output and no-prefix timeout
+    score an empty hypothesis. No partial C edits are fabricated into text.
+  genuine_empty_output: Valid completed empty string distinct from missing call.
+  capped_prefix_equal_reference: May score zero raw WER but completed repair remains 0.
+  explicit_abstention: Bare failure/empty scoring text; source-return delivery
+    is a separately labeled system view.
+  guard_rejection: Preserve bare output record; separately score delivered source.
+  allowed_equivalent_forms: Frozen finite forms only in the named literal/generated
+    scorer; no output-driven aliases or hidden general semantic matching.
+  scorer_output_schema_id_and_hash: score_record_v1; implementation schema hash PENDING
+
+PRIMARY RATIOS, WEIGHTS AND DECISION GATES
+  natural_domain_weights: LibriSpeech_PC = 0.5; full_released_SLUE_VoxCeleb = 0.5.
+  domain_WER: sum(eO_i)/sum(n_i).
+  domain_introduced_rate: sum(introduced_i)/sum(n_i), with count interval endpoints.
+  domain_completed_repair_rate: sum(repair_completed_i)/sum(eS_i), with bounds.
+  primary_aggregate: Equal-domain mean of each domain ratio, for ALL H1/H2 metrics.
+  secondary_aggregates: Each domain; pooled word-weighted WER/introduced errors;
+    pooled source-error-weighted completed repair; official-compatible subsets.
+  zero_denominator: Undefined with count recorded; do not silently drop a domain or
+    substitute 100 percent. Check source-error support feasibility on DEV before
+    PUB-GATE 3; run an output-blind final eS preflight before artifact freeze. If a
+    final domain has no source errors, the H1 repair claim is unavailable; do not
+    change domain weights. The resampling rule is in Section 25.
+  rate_units: Proportions stored; percentage-point differences displayed.
+  introduced_interpretation: New error units/reference word, including insertions
+    in already-wrong regions; not percent source-correct atoms damaged.
+  H1_direction: C101 minus B100-text.
+  H1_introduced_superiority: Fixed one-sided 97.5 percent upper bound < 0.
+  H1_practical_target: Least-favorable observed reduction >= 0.1 percentage point.
+  H1_completed_repair_NI: Fixed one-sided 97.5 percent lower bound > -3 percentage
+    points.
+  H1_WER_NI: Fixed one-sided 97.5 percent upper bound < +0.5 percentage point.
+  H1_utility_completed_repair: Both B100-text and C101 minus DET have observed gain >= 5
+    percentage points AND fixed one-sided 97.5 percent lower bound > 0.
+  H1_utility_WER: Both B100-text and C101 versus raw ASR have a fixed one-sided
+    97.5 percent upper WER-difference bound below zero; no result-dependent rule.
+  utility_family: Two fixed model-minus-DET repair contrasts with pointwise one-sided
+    97.5 percent lower bounds, all required under Section 25's interpretation gates;
+    no result-dependent method/confidence choice or separate utility-family claim.
+  H2_direction: B100-acoustic minus B100-text.
+  H2_WER_superiority: Fixed one-sided 97.5 percent upper bound < 0.
+  H2_practical_target: Observed equal-domain WER reduction >= 0.5 percentage point.
+  H2_introduced_NI: Fixed one-sided 97.5 percent upper bound < +0.1 percentage point.
+  margin_status: PROPOSED_NEW_UNITS_REQUIRING_DEVELOPMENT_JUSTIFICATION_AND_FREEZE.
+  practical_vs_statistical: Observed effect target is not a confidence bound
+    proving the effect exceeds that target; report both distinctly.
+  identity_rule: No edits cannot pass completed-repair utility beyond DET.
+  aggressive_rule: More raw repairs do not excuse introduced-error/WER gate failure.
+  missing_label_rule: No new semantic labels exist; deterministic ambiguity is
+    bounded computational identification, not a human adjudication backlog.
+
+NATURAL DATA AND SEALED POPULATIONS
+  nominal_final_cases: 8826 before frozen automatic structural exclusions.
+  LibriSpeech_PC: All released 2417 test-clean + 2856 test-other = 5273 reference rows.
+  SLUE_VoxCeleb: v0.2: all 3553 released test-reference rows, not only the official ASR
+    filter.
+  SLUE_official_ASR_secondary: 3426 rows after excluding 23 Mixed + 104 Disagreement
+    sentiment labels; sentiment ambiguity is not assumed transcript invalidity.
+  nominal_published_audio_hours: 17.95; actual cropped sum PENDING.
+  corpus_reference_policies: LS-PC official reference and lexical policy;
+    SLUE released normalized_text; punctuation/case primary diagnostics LS-PC only.
+  new_reference_verification: NONE_REQUIRED; no per-case listening or rewriting.
+  source_asset_revisions_license_hashes_and_access: PENDING.
+  source_case_split_content_and_cluster_manifest_sha256: PENDING.
+  eligibility: Frozen automatic structural checks; audio/text present and decodable;
+    reference nonempty for primary normalized scoring; stable ID; legal source use;
+    source-only context/windowing if needed shared across systems; exact counts/reasons.
+  no_candidate_dependent_exclusion: Difficulty, error burden, ambiguity, failed
+    output, low literal coverage or poor model score never removes final case.
+  exact_source_hypothesis_manifest_hashes: PENDING_PARakeet_and_Whisper.
+  source_grouping: LS speaker/book or connected source groups; SLUE speaker/video;
+    preserve original audio/source IDs and duplicate/overlap connected components.
+  disjoint_roles: Train; HPO development; calibration; sealed natural; sealed stress.
+  split_before_augmentation: All variants of source/document/template/latent group
+    stay together; freeze near-duplicate rules and source-family mappings.
+  pretrained_contamination: Known exposure recorded; unobservable upstream
+    training overlap remains unknown, never claimed absent.
+  Earnings22: Optional finance extension only; no MVP audio/reference task.
+  existing_pair_options: RED-ACE default/PC intersection is the preferred optional
+    historical diagnostic; HypR/HyPoradise/GenSEC require exact rights/file/split
+    qualification.
+  mixed_populations: Natural and synthetic never pooled into one frequency estimate.
+
+AUTOMATIC NATURAL CRITICAL-LITERAL SUBSET
+  extractor_id_version_and_sha256: critical_literal_extractor_v1; implementation hash PENDING.
+  categories: Integers; decimals; signed values; percentages; currency; dates/times;
+    versions; numeric model names; acronyms; uppercase/mixed identifiers; units;
+    URL/path/CLI forms where present; exact controlled-name dictionary if qualified.
+  eligibility: R/S-only deterministic extraction and invariant occurrence identity;
+    type/value/form policy fixed before output; no arbitrary semantic entity mapping.
+  repeated_values: Separate occurrence IDs, spans, gap/position binding and multiplicity.
+  eligible_count_and_extraction_coverage: EMPTY_UNTIL_EXECUTION.
+  outputs_to_report: Source-correct retention; source-wrong repair; introduced
+    corruption; unresolved output states; ambiguous extraction/alignment exclusions;
+    all original source-defined denominators and covered fraction.
+  prohibited_use: No oracle input; no manual resolution; no claim to cover all harm.
+
+GENERATED TECHNICAL SUITE
+  schema_id_version: technical_latent_v1
+  schema_sha256: PENDING
+  target_language_id: technical_target_language_v1
+  inverse_baseline_id: technical_inverse_v1
+  core_corruption_policy: qualified_core_v1
+  underdetermined_policy: underdetermined_diagnostic_v1; separate optional diagnostic population
+  generator_id_version: programmatic_stress_generator_v1
+  generator_implementation_and_lexicon_sha256: PENDING
+  parser_id_version_and_sha256: technical_structure_parser_v1; implementation hash PENDING
+  generator_seed_map: manifest 120012; partition 120101; values train 120201 / dev 120202 / test 120203;
+    corruption 120301; TTS 120401; noise 120402; panel 120501; domain-separated SHA-256
+  latent_group_id: Stable original template/seed-group identity shared by all views.
+  required_fields: case_id; template_id; field_name; occurrence_id; field_type;
+    canonical_value; surface_rendering; allowed_forms; source_span; reference_span;
+    expected_preservation_or_repair; corruption_operator; generation_seed;
+    binding/order/multiplicity; source_visible_recoverability_witness.
+  categories_count: 25; exact full category table and operators in Part V.
+  full_pool: 25 categories * 4 template cells * 100 groups * 3 views = 30000 cases.
+  views: clean_preservation; uniquely_recoverable_repair; mixedrepair_preservation.
+  mandatory_panel: 25 * 4 * 30 * 3 = 9000 cases, 3000 latent groups.
+  selection: First 30 groups per category/template cell by frozen source-only hash
+    order; keep all three views; manifest frozen before any candidate output.
+  full_pool_model_inference: STRETCH_UNLESS_BENCH_QUALIFIES_BEFORE_FREEZE.
+  remaining_pool_model_cases: 21000; no outcome-adaptive expansion.
+  exact_scoring: Whole-output structural parse; exact field-specific finite forms;
+    bindings/order/multiplicity retained; unconsumed text/ambiguous parse fails
+    structure-qualified field success and complete target conformance.
+  repair_identifiability: Target must be unique under visible source/corruption rules;
+    arbitrary hidden name/digit/polarity deletion is underidentified diagnostic-only.
+  inverse_rule_baseline: Required for the controlled generated task; a perfect inverse
+    may solve intended repair; neural superiority over the generator grammar is not a
+    claim.
+  stress_population: Formal templates/lexicons/corruption operators, not natural ASR.
+  statistics: Keep three views and all seeds nested within the latent group; disclose
+    shared constructor/template dependencies, not 30000 independent natural trials.
+  output_count_mandatory: 9000 * 16 = 144000 bare model outputs, before an extra
+    published comparator.
+
+MODEL, TOKENIZER AND BASELINE IDENTITIES
+  MODEL_0: 8621312 parameters, correctness ladder only.
+  MODEL_1_and_A100_dimensions: 14 layers, d = 768, 12 Q / 4 KV heads, head width 64,
+    SwiGLU width 2048; vocabulary 16384, tied embedding, RoPE, pre-RMSNorm; 100685568
+    parameters.
+  A100_lineage: Independent random conditional-restoration run; not MODEL-1 weights.
+  B100: 8 MHA encoder + 4 GQA decoder layers, d = 768, 12 Q / 4 decoder KV heads, SwiGLU
+    width 2048; exactly 100686336 parameters; bidirectional encoder/causal target with
+    cross-attention.
+  C101: B100 backbone + boundary pointers + three-way action classifier; exactly
+    101081859 parameters; 395523 extra, including 3 classifier biases.
+  C_event_contract: One BOS; action/start; start feedback; end; end feedback;
+    replacement tokens + END_EDIT; delimiter predicts next action; terminal END/ABSTAIN.
+  C_counts: T_decoder = 1 + R + 3K; T_vocab = R + K; K start labels; K end labels; K + 1
+    action labels.
+  C_loss: Whole-update component denominators from queued labels; each microbatch
+    contributes sum_k(lambda_k * S_jk / D_k); skip a component when D_k = 0; one FP32
+    accumulator; no additional division; END_EDIT included in the replacement
+    denominator; initially all lambda values = 1.
+  C_renderer: Constitutive source-byte copying of untouched gaps; invalid edit
+    sequence has no invented partial rendering; no extra guard credited to model.
+  tokenizer: Reversible byte BPE; 256 bytes + 64 reserved + 16064 merges = 16384.
+  tokenizer_reserved_map_trainer_config_sha256: PENDING; Section 11 is normative.
+  source_target_context: Initial 1024 source/control + 1024 full target including EOS; A
+    combined limit 2048; B/C streams qualified; C events independently qualified.
+  C_overflow_fixture: 1023 ordinary replacement tokens + one edit gives 1027 C
+    positions; common training eligibility/coalescing/qualified extension, no C-only
+    test drop.
+  random_init_and_initial_weight_hashes: PENDING_perarm_seed.
+  configs_actual_parameter_enumeration_and_hashes: PENDING.
+  final_weights_exports_precision_hashes: PENDING_AFTER_TRAINING_BEFORE_INFERENCE.
+  ASR_P: mlx-community/parakeet-tdt-0.6b-v3; recorded revision
+    ed2b7e8c15f9aaa0b5772e2efb986255eaef7e15; resolved bytes/runtime pin PENDING.
+  RAW: Identity of each recognizer's raw one-best text; no cleanup.
+  DET: Source-only frozen reference-task deterministic rules, version/hash PENDING; no
+    runtime access to reference or hidden generator target.
+  Qwen_paper: Qwen/Qwen3-4B-Instruct-2507; task-matched BF16; frozen prompt, greedy
+    decode, official weight revision, conversion and runtime hashes PENDING.
+  Qwen_product: Recorded mlx-community 4-bit checkpoint and current LocalFlow task;
+    separate later product comparison, not the paper BF16 control.
+  ByT5: google/byt5-small; native byte tokenizer; three adaptation seeds 1729, 2718,
+    31415; revision, weights, adapter implementation, context and budget qualification
+    PENDING.
+  ConstDecoder: Official code at recorded commit
+    b671d10d8c1f5379b9b0d68b78d16530878afa28; executable comparison requires
+    code/task compatibility AND a declared local budget before freeze. The outer
+    decision window is at most two engineering days: a 2-active-hour compatibility
+    scan, then at most 6 additional active hours and 2 device-hours for the
+    conditional integration probe specified in Part VI. A concrete blocked-budget
+    record is valid before freeze and makes no reproduced-result claim. Record
+    lexical uncased limits and separate costs; this does not replace ByT5 or become
+    free extra tuning.
+  learned_comparator_instances: 12 scratch + 3 ByT5 + 1 Qwen = 16, before conditional
+    ConstDecoder.
+  inference_states: bare; guard; full, never pooled.
+  guard_policy_hash: PENDING; common cached proposals, no oracle masks.
+  inference_config_permodel: PENDING: task framing, context, greedy decoding, stop rule,
+    maximum tokens/actions, timeouts, renderer, normalization, precision, abstention and
+    limits.
+
+TRAINING, EXPOSURE, HPO AND FAILURE CONTRACT
+  final_arms: A100 text; B100 text; C101 text; B100 acoustic.
+  final_seeds: 1729; 2718; 31415.
+  final_runs: 12.
+  HPO_seed: 42, never a final seed.
+  final_exposure_each: 150000000 paper_canonical_v2 exposures.
+  total_final_scratch: 1800000000 before update overshoot.
+  paper_canonical_v2: Fixed project-tokenizer count of trusted controls + clean spoken
+    rendering (or frozen existing official reference for real pairs) + full written
+    target; identical accounting anchor across corruption views, not extra model input.
+  product_canonical_v1: Normalized original source + full target + controls; separate
+    ledger.
+  educational_tokens: Processed language-model tokens, separate from paper/product.
+  actual_ledgers: Source bytes; native input; encoder; decoder; action; replacement;
+    valid loss; padding; generated tokens; copied bytes; updates; unique and repeated
+    sources.
+  curriculum: 100M light transduction + 40M task focused + 10M fresh preservation/hard
+    cases; restore_reference throughout.
+  phase_mixture: 30 percent identity/minimal; 20 percent verified rule compositions; 10
+    percent public real pairs; 40 percent matched corruption.
+  acoustic_replacement: Only 40 percent = 60M total exposures changes channel; the other
+    90M remain common.
+  HPO: 4 arms * 3 recipes * 10M = 12 trials, 120M planned exposures.
+  LR_candidates: 1e-4; 3e-4; 6e-4, symmetric development amendment only.
+  recipe_selection: A/B-text/C use their own three DEV recipes; B-acoustic reuses the
+    selected B-text optimizer, peak LR and full schedule; its 3 probes are
+    feasibility/sensitivity only.
+  acoustic_probe_failure: Amend the common B recipe and conduct comparable reruns before
+    freeze, or block H2; no acoustic-only rescue inside the channel claim; additional
+    cost reported.
+  optimizer: AdamW: beta1 = 0.9, beta2 = 0.95, epsilon = 1e-8, bias correction, matrix
+    decay = 0.1, zero norm decay, tied embedding updated once, global clip = 1.0.
+  precision: BF16 working weights/computation with FP32 master weights, moments and
+    gradient accumulation; actual mask/backward path qualified, not assumed from forward
+    performance.
+  paper_schedule: Continuous 150M clock; 3M linear warmup; cosine decay to 10 percent of
+    peak; no reset at 100M/140M; record update-boundary overshoot.
+  batch: Initial 32768 canonical anchors/update if BENCH qualified; actual microbatch,
+    accumulation, length buckets, padding and valid-loss denominators PENDING.
+  checkpoint: First complete update reaching 150M, with overshoot; no performance-based
+    early stopping.
+  checkpoint_snapshots: 50M/100M/150M saved; DEV learning curves mandatory.
+  sealed_intermediate_inference: STRETCH_ONLY_IF_PREFREEZE_BUDGETED.
+  numerical_failure: Nonfinite loss/gradient/state, corrupt checkpoint or exact-contract
+    failure; one replay from the last verified checkpoint with the same seed/recipe; a
+    repeat failure marks the run failed.
+  infrastructure_resume: Verified RNG/optimizer/data/LR state; lost/repeated work
+    logged.
+  seed_failures: Visible; no replacement seed; a two-run mean is not a completed
+    three-run mean.
+  material_bug: Document an amendment and symmetric rerun decision; no outcome-driven
+    rescue.
+  ByT5_tuning: Three adaptation recipes within a separate downstream allowance; intended
+    150M canonical exposures for each final seed; actual native/time feasibility
+    qualified.
+  ByT5_budget_caveat: Provisional allocation is not proof of adequacy; the budget-capped
+    view records actual exposure and cannot be called equal-data or converged.
+  matched_time_Tstar: PENDING from BENCH/pilots before outcomes; nearest completed
+    checkpoint <= cap; measured cost + DEV quality is MVP; sealed Tstar inference is
+    optional and budgeted.
+  learning_track: Full MODEL-1 program retained; 1B completion is not an MVP barrier.
+  product_ladder: S203: 600M; S316: 1.5B; S510: 2B under the product ledger, conditional
+    and not MVP.
+  stretch_size_grid: B100/S203/S316: same family, seeds and 50/100/150M grid; S203/S316
+    add six runs and 900M exposures; no automatic extension.
+
+TEXT, TTS AND ASR CONSTRUCTION
+  text_corruption_version_hash_and_errorprofile: PENDING from development only.
+  spoken_renderer_id_version_hash: technical_spoken_renderer_v1; implementation hash PENDING
+  target_lineage: Structured template -> written_target -> deterministic spoken
+    rendering -> TTS -> Parakeet; retain the latent record and hashes at every edge.
+  speech_truth_boundary: Written intention does not prove audio realization; no field
+    representing human-verified actual speech is fabricated.
+  confirmatory_spoken_scope: Frozen closed rendering grammar and qualified template
+    categories; unsupported pronunciations/values excluded by automatic construction
+    rules.
+  TTS_identity: Provisional hexgrad/Kokoro-82M v1.0; exact weights, voices, G2P, speed,
+    resampling and runtime hashes PENDING.
+  acoustic_screening: Frozen automatic signal/text checks and a separate recognizer
+    where qualified; agreement is screening, not acoustic certification or proof of
+    independence.
+  pilot_bound: 2000 training-only seeds * 2 voices * 2 conditions <= 8000 first-attempt
+    clips; 100-clip automatic RTF/yield probe; no human-label fidelity timing.
+  acceptance: Deterministic target/rendering/type/recoverability checks; fixed
+    cap/retry/reserve-seed order; no author manual judgment or listening.
+  common_support: Identical written/spoken target and accepted seed/variant intersection
+    in B-text/B-acoustic; rejected target lineage does not get rewritten in one arm.
+  no_error_selection: Preserve the frozen natural identity/no-error allowance; do not
+    keep drawing until only easy errorful outputs remain.
+  generation_cost: Proposed/accepted/rejected/retry counts; independent seed count;
+    audio duration; TTS/ASR/screening RTF; CPU/device/elapsed time; storage; memory;
+    currency.
+  repetition: Record exposures per independent seed; 8000 variants are not 8000 sources;
+    the 60M allocation needs development-supported diversity and a declared repetition
+    cap.
+  final_data_exposure: No final reference/audio in TTS seeds, prompts, tuning or ASR
+    error calibration.
+  teacher_additions: NONE in the primary channel contrast; LLM direct corruption/product
+    teachers are stretch work.
+
+AUTOMATED EVALUATION VALIDITY
+  required_fixture_suite_hash: PENDING_IMPLEMENTATION_OF_PART_IV_FIXTURES.
+  property_test_suite_version_hash: PENDING
+  property_random_seeds: 20261004; initial 10000 bounded trials proposed; test hash/result PENDING
+  metamorphic_suite_version_hash: PENDING
+  exhaustive_suite: All R/S/O triples over {a,b}, each length 0 through 3; independent
+    enumeration validates pair DAGs, the conditional optimum and count extrema.
+  independent_scorer_parity_protocol: Different program structure, a small oracle plus
+    frozen DEV batch; a standard edit library validates distance only unless it has the
+    same objective.
+  independent_scorer_parity_result: null
+  generated_conformance_suite_hash: PENDING
+  no_actual_test_claim: All software qualification results remain empty until execution.
+  exact_exclusion_and_ambiguity_ledger: PENDING_schema_and_future_records.
+  coverage_fields: All-case WER availability; R/S source-consensus words/errors; literal
+    extraction/eligibility; output local consensus; exact joint computational coverage;
+    cap counts; bound widths; invalid/missing/capped output counts.
+  candidate_blind_population: Source eligibility and denominators never use model
+    outputs.
+  DEV_feasibility: Exact scorer runtime/memory and worst-case bound widths qualified;
+    margins not changed after final results; broader ambiguity may block a positive
+    claim.
+  frozen_output_identity: Hashes for raw string, scored string, status, model and case;
+    no lost/deduplicated row without a declared mapping.
+  scorer_bug_rule: General reproducible fixture; version fix; all affected outputs
+    rescored; preserve the original; a post-outcome estimand change is exploratory
+    unless fresh confirmatory data are used.
+  optional_author_debugging: No quota; at most 25 DEV cases/scorer version if chosen;
+    creates no final labels, no headline validity and no expanding manual queue.
+  optional_AI_judges: DISABLED_BY_DEFAULT; removable from all primary claims/gates.
+  optional_AI_fields: Model/provider/snapshot/date; prompt/rubric hash; case and order
+    seed; blinded identity mapping; raw verdicts/uncertainty; family agreement;
+    failures; tokens/cost.
+  AI_restrictions: No human-label terminology; no primary gold; no ambiguity
+    adjudication; no final-judge training; contamination/family preference/prompt
+    dependence disclosed.
+
+STATISTICS AND UNCERTAINTY
+  primary_family: H1, H2; familywise alpha = 0.05.
+  fixed_component_bounds: One-sided 97.5 percent; Bonferroni across two joint claims;
+    intersection-union within each claim; no result-dependent bound/test selection.
+  descriptive_CI: Two-sided 95 percent, all per-seed estimates and seed spread.
+  point_identification: Interval-valued counts on fixed source-defined denominators.
+  adverse_contrast_for_error_upper: Treatment upper minus control lower.
+  adverse_contrast_for_repair_lower: Treatment lower minus control upper.
+  practical_gate_bounds: A proposed practical claim must also survive the
+    least-favorable alignment endpoint assignment; a convenient-path point may be
+    descriptive only.
+  cluster_unit: Original natural provenance group; within-corpus paired resampling;
+    carry all models/seeds/recognizer views and associated metadata as paired records.
+  crossed_groups: Speaker/book/video/source connected-component sensitivity; effective
+    cluster inventory and dominant groups reported.
+  synthetic_cluster: Latent group with all views, seeds and corruption variants;
+    template/constructor-conditioned interpretation, not independent natural n.
+  resampling_method: Paired domain-stratified source-cluster bootstrap, studentized when regular,
+    cluster-jackknife variance and generalized-inverse empirical quantiles; Section25
+    fixes sparse/zero-denominator/inconclusive conventions; implementation hash PENDING
+  bootstrap_replications: 20000.
+  bootstrap_seed: 20261004
+  statistics_implementation_version_hash: PENDING
+  variance_zero_sparse_failures: No arbitrary small variance or zero-width population
+    risk; insufficient clusters/denominators/variance yield inconclusive or
+    estimation-only status.
+  training_seed_estimand: Fixed mean of three completed runs, not an ensemble or
+    population inference over all possible training randomness.
+  n_not_multiplied: Cases * seeds * recognizers * synthetic variants are not independent
+    samples.
+  power_inputs: DEV-only source-error counts, paired differences, word lengths, cluster
+    moments, effective groups and identification widths; actual values PENDING.
+  power_claim: Planned 8826 does not guarantee power; words are not independent trials.
+  low_precision_response: Before freeze, extend independent support or the
+    calendar/amend scope; no human labels to improve coverage, no post-result margin
+    widening.
+  repeated_looks: Final 150M sealed test once; secondary checkpoints are DEV-only unless
+    an extra roster is registered; no selection of the best test checkpoint.
+  optional_p_values: Only valid predeclared joint p-values; secondary Holm tests cannot
+    override gates.
+  natural_synthetic_separation: Never pool numerators, denominators, prevalence or
+    independent n.
+
+NATIVE RESOURCE AND ONE-MONTH PLAN
+  intended_machine: Apple Silicon M5 Pro 48GB; actual SKU/OS/power mode/memory/runtime
+    PENDING.
+  BENCH_00: 5 warmup + 100 timed complete updates; 32768 nominal canonical
+    anchors/update; representative actual reader/masks/loss; 20-minute thermal test;
+    20-step resume check.
+  memory_contract: 18N persistent + 4N microgradient = 22N before activation/temporary
+    costs.
+  backend: Inspected MLX 0.32.3 reference; qualify the actual backward/mask path and any
+    newer version; no forward-only timing or wrong-mask speed claim.
+  final_scratch_FLOPs: 1.1024757504e18, modeled arithmetic, not measurement.
+  HPO_FLOPs: 0.07349838336e18, modeled.
+  total_scratch_FLOPs: 1.17597413376e18, modeled.
+  provisional_ByT5_FLOP_envelope: 1e18, not a verified requirement or guaranteed
+    adequacy.
+  combined_training_hours_scenarios: 604.4/151.1/75.6 at assumed 1/4/8 TFLOP per second.
+  natural_bare_outputs: 8826 * 2 * 16 = 282432 nominal.
+  mandatory_stress_bare_outputs: 9000 * 16 = 144000.
+  total_bare_outputs: 426432 before a conditional published comparator.
+  full30k_stress_alternative_total: 762432; pre-freeze-budgeted stretch only.
+  inference_time_scenario: At an assumed weighted 0.5 s/output: 59.2 h mandatory or
+    105.9 h full pool; actual per-family/native/context/caching speeds PENDING.
+  other_device_envelopes: 16 h correctness/BENCH; 24 h TTS, synthetic and real
+    training/development/calibration ASR, screening and retries; 18 h final public
+    Parakeet/Whisper ASR; 12 h decoded development checks plus runtime/guard
+    measurement. Enumerate HPO, 50M/100M/150M/Tstar, ByT5 and bounded Qwen prompt
+    checks on the frozen common development panel. These are additional to final
+    output counts. All are provisional allowances; measured overrun adds cost or
+    blocks the calendar.
+  favorable_base_hours: 280.3 device h; with 25 percent reserve, 350.4 device h;
+    excludes CPU scoring/bootstrap/setup; not a measured forecast.
+  CPU_scoring_bootstrap_setup_hours: 16 base CPU h + 25 percent reserve = 20 h.
+  serialized_total_hours: 350.4 device h + 20 CPU h = 370.4 h.
+  calendar_gate: The 22 availability days are provisionally days 4-25, INCLUDING
+    pre-freeze BENCH/HPO, not 22 days after the day 7-8 readiness gate. Final days
+    support analysis/writing. At 16 h/day the window provides 352 h; at 20 h/day it
+    provides 440 h. The 370.4 h serialized scenario does not fit 352 h but fits
+    440 h. A single Mac serializes heavy tasks.
+  active_human_target: 110 to 150 h, including coding-agent direction/review, setup,
+    software verification, operations, analysis, figures and writing; annotation 0 h.
+  human_device_parallelism: No free CPU overlap is assumed. CPU documentation/analysis
+    may overlap a GPU job only if measured interference is acceptable; one researcher
+    attention budget and one GPU queue.
+  final_BENCH_schedule_formula: Measured training + TTS + ASR + all-model decode + CPU
+    scorer/bootstrap/setup + runtime + IO + recovery reserve <= available serialized
+    hours; replace assumed terms before freeze.
+  stretch_to_protect_month: Educational 1B finish; larger sizes; extra HPO; full 30k
+    inference; sealed Tstar/intermediate inference; objectives; judges; quantization
+    sweeps; extra audio/domains/recognizers; product promotion; cloud.
+  failed_month_gate: Longer schedule or pre-outcome protocol amendment; no hidden
+    weak-seed drop.
+  external_costs: No spending authorized; current tariffs and optional cloud costs
+    separate.
+
+RELEASE, PROVENANCE AND PUBLICATION GATES
+  asset_manifest: Origin URL/ID; revision; retrieval date; content/license hash;
+    permitted use; exact redistribution scope; attribution; access requirements per
+    asset.
+  release_classes: Authorized payload; upstream acquisition recipe; restricted/private
+    material excluded.
+  model_lineage: Scratch/pretrained/adapted/teacher-generated lineages separate.
+  code_lineage: Commit, dirty diff, dependency lock, build/runtime/patch hashes.
+  public_artifacts: Owned model/scorer/generator code after implementation; all configs;
+    tokenizer; eligible weights; existing reference/ASR recipes; latents/fixtures;
+    manifests; frozen protocol; all run/failure logs; per-case bounds; figure inputs.
+  historical_product_material: Not required to reproduce the paper; no assumed private
+    corpus.
+  PUB_GATE_1: Focused novelty audit and precise controlled empirical distinction.
+  PUB_GATE_2: Automated evaluation validity: software tests, reference/rights,
+    deterministic eligibility, ambiguity/coverage/caps, exact generator conformance, no
+    manual dependency.
+  PUB_GATE_3: Development adequacy and full protocol/scope/budget/statistics freeze.
+  PUB_GATE_4: Completed natural and external-recognizer evidence with actual
+    populations.
+  PUB_GATE_5: Every claim supported, falsified or inconclusive with
+    scope/effect/uncertainty.
+  PUB_GATE_6: Clean-environment automated reconstruction/release or precisely disclosed
+    limits.
+  PUB_GATE_7: Manuscript, evidence, limitations, negative outcomes and release agree.
+  gate_statuses: All PENDING; none passed by writing this specification.
+
+PLANNED FIGURES, TABLES AND EXAMPLES
+  figure_table_manifest: Part VII and Section 20 are authoritative for planned IDs.
+  required_views: Representation repair versus introduced error; H1/H2 component bounds;
+    scorer coverage/identification widths; natural/synthetic results separate; exact
+    mixed fields; pretrained/runtime frontier; guard attribution; second recognizer;
+    cost/thermal data.
+  example_rule: Frozen hash/stratum selection from permitted outputs; show failures,
+    ambiguous alignments and counterexamples; qualitative examples are not incidence
+    estimates.
+  no_result_graphs: No fabricated points, placeholder estimates or simulated findings
+    presented as experiment results; planned figure descriptions only.
+
+AMENDMENTS AND GOVERNANCE
+  amendment_fields: ID; UTC date; author; old/new hashes; exact change/reason; affected
+    claims, data/runs; development basis; results access; cost/calendar impact;
+    confirmation status.
+  legitimate_prefreeze_reasons: Access/rights; reference policy; scorer correctness;
+    insufficient precision; runtime compatibility; inadequate learning/comparator
+    budget.
+  post_result_changes: Disclosed deviation or exploration; original analysis retained; a
+    new confirmatory claim requires newly sealed appropriate evidence.
+  claim_status_options: CANDIDATE_NOT_TESTED; BLOCKED; ESTIMATION_ONLY;
+    SUPPORTED_WITHIN_SCOPE; FALSIFIED; INCONCLUSIVE; EXPLORATORY; WITHDRAWN.
+  invariant_claim_rules: All joint gates required; identity is not useful repair; a
+    failed seed is not dropped; the copy renderer is not semantic proof; fallback is not
+    student credit; zero failures is not zero risk; nonsignificance is not equivalence;
+    a three-run mean is not an ensemble.
+  freeze_blockers: Resolve every field affecting
+    data/scoring/eligibility/normalization/tuning/identity/stopping/inference/statistics/decoding
+    budget before affected results.
+  MEASURED_RESULT: {}
+
+RECORD B: REUSABLE PER-EXPERIMENT PLAN — COPY FOR EACH EXPERIMENT
+
+  experiment_id: PENDING
+  title_purpose_and_decision: PENDING
+  protocol_id_version_hash: paper_protocol_v2 / PENDING_FROZEN_HASH
+  classification: CONFIRMATORY / SECONDARY / DEVELOPMENT / ENGINEERING / STRETCH
+  status: DRAFT_NOT_STARTED
+  mandatory_for_MVP: PENDING
+  linked_claims_RQs_and_exact_prospective_claim: PENDING
+  intervention_control_and_information_advantage_audit: PENDING
+  population_identity: NATURAL / PROGRAMMATIC_STRESS / DEVELOPMENT / PRODUCT
+  source_case_split_cluster_manifest_hashes: PENDING
+  reference_policy_normalizer_and_eligibility_hashes: PENDING
+  source_rights_release_scope_attribution: PENDING
+  source_only_denominators_and_fixed_masks_hash: PENDING
+  natural_vs_synthetic_weights_and_nonpooling: PENDING
+  planned_n_words_sourceerrors_clusters_and_DEVprecision_basis: PENDING
+  scorer_algorithm_version_implementation_hash: PENDING
+  ambiguity_policy_caps_fallback_and_coverage_fields: PENDING
+  transition_definitions_denominators_failure_mapping: PENDING
+  literal_extractor_version_hash: PENDING_OR_NOT_APPLICABLE
+  latent_schema_generator_parser_version_hashes: PENDING_OR_NOT_APPLICABLE
+  generation_seeds_grouping_witnesses_panel_manifest_hash: PENDING_OR_NOT_APPLICABLE
+  fixture_property_metamorphic_exhaustive_suite_hashes: PENDING
+  independent_scorer_parity_protocol_and_result_ref: PENDING
+  model_run_ids_lineage_config_initial_weights_tokenizer_hashes: PENDING
+  seeds_roles_pairing: PENDING
+  HPO_budget_recipes_selection_source_and_full_trial_register: PENDING
+  canonical_version_exposure_unique_sources_repetitions: PENDING
+  actual_native_encoder_decoder_action_loss_padding_output_ledgers: PENDING
+  optimizer_precision_accumulation_schedule_mask_backend: PENDING
+  primary_checkpoint_stop_failure_retry_and_resume_rules: PENDING
+  matched_parameter_data_time_views_and_limits: PENDING
+  inference_prompt_context_greedy_stops_caps_renderer_guard_fallback: PENDING
+  hardware_runtime_dependency_commit_dirty_state: PENDING
+  timing_materialization_load_warmup_residency_interference: PENDING
+  primary_estimand_ratio_weights_direction_and_joint_components: PENDING
+  practical_margin_effect_target_and_fixed_statistical_gate: PENDING
+  uncertainty_identification_bounds_clusters_seeds_multiplicity: PENDING
+  missingness_zero_denominators_sparse_events_and_ambiguity: PENDING
+  exact_exclusion_ambiguity_failure_coverage_output_schema: PENDING
+  falsification_inconclusive_and_undertrained_response: PENDING
+  active_human_hours_and_device_CPU_elapsed_cost_budget: PENDING
+  repetitive_human_labeling_requirement: NONE
+  optional_AI_model_prompt_orderseed_version_cost: DISABLED_OR_SEPARATE_PLAN
+  planned_figures_tables_percase_artifacts_release_paths: PENDING
+  nonselective_reporting_and_negative_result_plan: PENDING
+  inherited_overrides_with_reason: PENDING
+  review_freeze_timestamps_hash_and_affected_results_access: PENDING
+  amendment_ids: []
+  MEASURED_RESULT: {}
+
+RECORD C: EMPTY POST-EXECUTION RESULT SCHEMA
+
+  experiment_id_and_frozen_plan_hash: PENDING_AFTER_EXECUTION
+  schema_required_fields:
+    Actual UTC start/end; attempt/run/seed IDs; complete/failed/resumed status;
+    exact code/config/data/model/tokenizer/scorer/generator/runtime hashes;
+    start/end checkpoint and export identities; unique cases/sources/clusters;
+    actual reference words/source errors, all fixed denominators; exclusion-reason counts;
+    source/output ambiguity counts; literal-extraction coverage; exact joint coverage;
+    cap/fallback counts; count-interval widths; invalid/missing/empty/truncated outputs;
+    expected fixture/property/metamorphic/exhaustive checks and actual test results;
+    independent parity result and any discrepancy fixture; generator conformance;
+    canonical exposure/update overshoot; native/input/encoder/decoder/action/
+    replacement/loss/padding/output tokens; copied bytes; serial steps; repeated work;
+    generation proposed/accepted/rejected/retry counts; independent-seed yield;
+    TTS/ASR/screening audio hours/RTF; CPU/device/elapsed/load/compile/checkpoint/
+    inference/scoring time; human active hours; storage; memory; currency; energy if measured;
+    primary ratio intervals, adverse paired differences, statistical component bounds,
+    effect CIs, all per-seed values, seed spread, cluster inventory, resampling identity;
+    separate natural and formal-stress results; literal eligibility/retention/
+    repair/corruption/unresolved counts; raw versus completion-gated repair;
+    secondary guards/full fallback/transfer/native-cost results; all failures;
+    optional model-based judge identities/prompts/raw verdicts/uncertainty/cost;
+    amendments/deviations with chronology and results access; figure/table/source/
+    per-case/log hashes; release permissions; claim statuses and remaining limits;
+    clean-environment reconstruction record and unresolved reproduction blockers.
+  MEASURED_RESULT: {}
+  output_artifacts: []
+  claim_decisions: []
+  release_verification: {}
+
+END OF COMPLETE TEMPLATE
+```
+
+A completed run, a supported claim and a reproducible release are separate statuses. A valid negative experiment may complete the scientific purpose; a favorable estimate with unresolved scorer validity or incomplete controls may not. Actual cost includes generation, evaluation, failed attempts and repeated work. The empty result schema does not certify any planned gate or expected count.
+
+
+## Part IV - Automated scorer technical specification
+
+### IV.1 Status, purpose and relationship to established metrics
+
+**Normative specification; implementation and measured validation are future work.** This part defines the exact source/reference/output scorer for `paper_protocol_v2`. It authorizes no code implementation, benchmark construction, model run or cloud expenditure during this remediation. Pseudocode and finite illustrative fixtures describe future behavior only.
+
+The scientific object is reference restoration, not unconstrained rewriting or a complete judgment of semantic harm. A public human reference can contain an upstream mistake or a convention the model cannot infer from its input. The scorer faithfully measures agreement with that designated target; it does not prove that every error is recoverable from text alone. Generated inferable-repair cases additionally require the source-visible witness defined in Part V.
+
+Use established WER, CER, exact match and edit precision/recall terminology. The additional primary quantities are plainly named **introduced word-error rate** and **valid-completion source-error repair rate**. They are the project’s declared decomposition of word edit errors, not standard I-measure, ERRANT or CLEME scores and not a new branded metric. Felice and Briscoe’s I-measure is a direct three-way-alignment precedent; its sum-of-pairs objective and error treatment differ. M2 addresses edit decomposition, ERRANT extracts/classifies edits, and CLEME2.0 distinguishes wrong, missed and excessive corrections. [A1–A5] The implementation below is derived for this study’s fixed denominator and ordinary-WER requirements. No priority claim is made.
+
+### IV.2 Input, source preflight and status contracts
+
+The scorer accepts one immutable case and one output record. It never receives model-family-specific scoring instructions.
+
+| Input | Required content |
+|---|---|
+| Case identity | Case ID, natural/generated population ID, corpus, split, recognizer view, source-cluster IDs and manifest hash |
+| Text evidence | Raw designated-reference UTF-8 bytes and source UTF-8 bytes; original upstream reference hash and reference-policy ID |
+| Reference choice | One designated reference chosen before O; any upstream alternatives remain separate named secondary views |
+| Frozen source metadata | Normalization version, token-to-raw-offset map, source/reference distance, source consensus masks, optional literal extraction record |
+| Output evidence | Actual full-text bytes or independently validated C rendered bytes; completion flag, stop reason, parser/renderer status and failure reason |
+| Generated evidence | Latent-schema/generator/template IDs, unique field occurrence IDs, source/reference spans, permitted forms, structural grammar and target-language hashes |
+| Provenance-only join fields | System ID, seed and output view, retained for grouping but unavailable to scoring branches |
+
+The source preflight runs before final candidate outputs exist. It validates rights/manifests and text encoding under the data contract, computes all R/S-only metadata and seals its hashes. Source/reference input-contract failures follow the frozen construction rule before model inference; they do not become output-dependent exclusions. An unexpected input mismatch at evaluation is a blocking manifest failure. An output row cannot change the reference, source, source mask or denominator.
+
+Define `complete_valid` as a valid complete transcript with the required normal terminal state under its representation. A deliberately empty completed transcript is valid text. A missing record, explicit abstention, invalid UTF-8, malformed/incomplete C edit sequence or exhausted output cap is not a valid completion. A full-text cap or timeout may expose a valid emitted prefix; score that prefix as observed text while retaining failure status. Never invent a prefix from a malformed C edit sequence. Its empty-hypothesis failure representation is specified below.
+
+### IV.3 Normative text views and tokenization
+
+#### IV.3.1 Preserve the original evidence
+
+Keep immutable raw UTF-8 byte strings. Exact byte match uses those complete strings and no normalization. Never decode malformed bytes with replacement or ignore errors; a literal U+FFFD already present in a valid UTF-8 string remains ordinary observed content. Unicode surrogate code points are invalid scalar text. A byte-order mark, format character or control character is not silently discarded by the scorer.
+
+The neural tokenizer remains exactly reversible under Section 11. Evaluation normalization is a separate operation; its output never replaces training inputs, raw outputs or literal offsets. The name `paper_canonical_v2` remains the training-exposure ledger and is not reused for evaluation normalization.
+
+Carry original byte/code-point span provenance through decomposition, case-fold expansion, canonical reordering and composition. Normalized-to-raw mapping is not generally one-to-one. A normalized token may carry several contributing original intervals; exact raw slicing requires a unique contiguous boundary interpretation. If that interpretation cannot be certified, retain ordinary lexical scores and mark the affected source literal ineligible before O, or mark its output-local match unavailable on the already frozen field denominator. Never fabricate a byte offset from a normalized character index. Generated fields use their original latent byte/scalar spans directly.
+
+#### IV.3.2 Common lexical normalization, version `lexical_eval_v1`
+
+Pin Unicode data version **15.1.0**, including normalization, default case folding, general category and White_Space tables, with actual table hashes recorded at implementation freeze. A later runtime’s Unicode version must not silently substitute its tables. Unicode provides a normalization conformance test; the implementation must run the pinned version’s test data. [A7]
+
+Apply these operations identically to R, S and O:
+
+1. Strict UTF-8 decoding to Unicode scalar values.
+2. NFC normalization.
+3. Full default, non-Turkic Unicode case folding using the pinned tables, followed by NFC again.
+4. Map U+2018 and U+2019 to ASCII apostrophe U+0027; map U+2010 and U+2011 to ASCII hyphen-minus U+002D. No other look-alike mapping is implied.
+5. Scan tokens according to the following exact rules, in order.
+
+The scanner consumes a maximal run of characters whose general category begins with L, M or N, permitting ASCII apostrophe or hyphen **inside** that run only when both immediately adjacent characters have category L, M or N. Thus a contraction or hyphenated word is one lexical token; leading/trailing quote punctuation is not part of it. Outside such a run, skip White_Space characters. Retain ASCII `-` and `%` as singleton tokens. Skip every other character in a punctuation category P. Retain every remaining scalar as its own singleton token, including currency/mathematical symbols, emoji scalars, controls, format characters and unassigned scalars under the pinned version.
+
+This is a deliberately explicit lexical policy, not an assertion of linguistic word boundaries for every language. It retains repeats, fillers, negation, digit strings and symbols such as plus, minus, percent and currency. It removes ordinary punctuation and case for the primary English lexical comparison. Colon, slash, underscore and decimal-point distinctions can disappear in this view; literal and surface scores preserve them. Export normalization/token offsets so such limitations are inspectable.
+
+| Strings | Common lexical behavior | Exact-surface consequence |
+|---|---|---|
+| `Don't` and `don’t` | Same lexical token after declared case/quote mapping | Different raw bytes |
+| `café` and `cafe` followed by U+0301 | Same NFC lexical token | Potentially different bytes and raw CER |
+| `can't`, `can not`, `cannot` | Three distinct sequences | No contraction expansion |
+| `2.1` and `2 1` | Both tokenize as `2`, `1` | Literal/version and surface scores distinguish them |
+| `-5` and `5` | `-`, `5` versus `5` | A sign is not discarded |
+| `−5` and `-5` | Distinct minus scalars unless a separate typed literal policy permits them | No implicit Unicode look-alike equivalence |
+| `file_name` and `file name` | Same lexical words under this policy | Path/identifier exactness remains separate |
+| `a a` and `a` | Two tokens versus one | Repetition is never deduplicated |
+
+Do not expand abbreviations, convert number words to digits, choose alternate spellings, infer names, strip disfluencies or rewrite references inside this scorer. A finite accepted-form rule must be present before O and name its type and scope. Generated fields may have finite allowed surface sets. Natural literal matching defaults to case-sensitive NFC string identity, or exact bytes where the type requires them. An optional typed numeric-value view may use exact decimal/rational parsing with frozen signs, units and locale, but is separately named; it cannot treat versions, identifiers or leading-zero codes as numbers merely to accept an output.
+
+#### IV.3.3 Other text scores
+
+`raw_byte_exact` is one only for a complete valid output whose raw bytes equal the reference. `lexical_exact` is one only for a complete valid output whose lexical tokens equal the reference. A capped matching prefix or an empty failure against an empty reference does not earn exact-completion success. A separately named `observed_text_equal` diagnostic may report equality without that completion requirement. Raw surface CER is unit-cost Levenshtein distance on observed Unicode scalar sequences divided by total reference scalar count; it includes case, punctuation and whitespace. Empty-reference rows retain their scalar-error numerator; an entirely zero reference-scalar denominator is undefined. An NFC CER is a separate optional field. Corpus-official WER retains its official normalization and alignment configuration as a named secondary score. In particular, the NIST SCLITE default alignment weights differ from unit Levenshtein; matching a package name alone does not establish parity. [A6]
+
+All primary word-distance computations use substitution, insertion and deletion cost one and match cost zero. A different S/D/I decomposition may have the same total. Report a deterministic illustrative traceback only as such; primary transition uncertainty comes from the full graph.
+
+### IV.4 Pairwise optimal lattices and candidate-blind source masks
+
+Let the normalized sequences be `R=(r1,…,rn)`, `S=(s1,…,sm)` and `O=(o1,…,ok)`. The mathematical symbol ε denotes a gap. In an implementation it is a tagged non-text value, never the literal Greek character/string `ε`; that character can occur as ordinary transcript content. Define:
+
+~~~text
+c(x,y) = 0, if x=y (including ε=ε)
+c(x,y) = 1, otherwise
+
+F_XY(i,j) = minimum cost aligning X[1:i] and Y[1:j]
+F(0,0)=0; F(i,0)=i; F(0,j)=j
+F(i,j)=min(F(i-1,j)+1,
+           F(i,j-1)+1,
+           F(i-1,j-1)+c(X_i,Y_j))
+~~~
+
+Compute a reverse distance `B_XY(i,j)` from each prefix state to the final state. A monotone edge `u→v` belongs to the all-optimal lattice exactly when:
+
+~~~text
+F_XY(u) + edge_cost(u,v) + B_XY(v) = d(X,Y)
+~~~
+
+Use exact integers. The lattice contains all minimum alignments without enumerating paths. A saturating path count capped at two suffices to distinguish unique from multiple pairwise paths; exact enormous path counts are unnecessary.
+
+For each reference position, collect every possible aligned source index or ε from the R/S lattice. Its pre-output label is:
+
+| Source-only label | Exact condition |
+|---|---|
+| Certain source-correct occurrence | Every optimal path maps this reference token to the same source index with equal lexical token |
+| Certain source-error status | Every optimal path gives a substitution or deletion here; the more specific source index may remain unavailable |
+| Source-ambiguous | Correct/error status varies, or a claimed correct occurrence is not uniquely identified |
+
+For each source token, likewise collect whether it is paired to a reference index or inserted at reference gap `g∈{0,…,n}`. A certain source-insertion occurrence requires that every R/S optimum inserts this same source token at the same gap. A reference gap has a certain source insertion sequence only if its complete ordered source index list is invariant. Gaps before the first and after the last reference token are ordinary gaps.
+
+These masks are descriptive metadata and optional literal eligibility. The primary denominators are `n` and `eS=d(R,S)`, which do not vary over the lattice. Do not replace them with a count of source-correct columns from a candidate-selected alignment. A source-correct mask is not recomputed from the triple graph. If the preflight cannot materialize the R/S lattice within its fixed budget, it still obtains exact eS and seals source-mask status `computationally_unavailable`, with the affected reference/source counts. Such a record contributes to every primary denominator, and to the source-computational-coverage accounting, but cannot supply invented literal/occurrence eligibility. An output-specific opportunity to complete that lattice does not retroactively change the frozen secondary source mask.
+
+### IV.5 Exact compatible triple graph
+
+#### IV.5.1 States and admissible moves
+
+A state `(i,j,l)` records consumed prefixes of R, S and O. The start is `(0,0,0)` and end is `(n,m,k)`. There are seven possible nonzero binary increments `(a,b,c)`; each coordinate advances zero or one and may not exceed its sequence length. The corresponding column contains the next token of each advanced sequence and ε for an unadvanced sequence.
+
+A triple edge is admissible if its R/S projection is an edge in the R/S all-optimal lattice whenever `(a,b)≠(0,0)`, and its R/O projection is an edge in the R/O all-optimal lattice whenever `(a,c)≠(0,0)`. A projected ε/ε column is removed and costs zero. This is a **joint graph**, not two independently chosen tracebacks.
+
+Every admissible complete path therefore has R/S cost `eS` and R/O cost `eO=d(R,O)`. Its conditional S/O cost is the sum of `c(source_column,output_column)` over all columns. Let `H*` be the minimum S/O cost over admissible complete paths. Retain all paths attaining `H*`.
+
+Equivalently the objective is lexicographic: first minimize the sum of R/S and R/O unit edit costs, which reaches `eS+eO`; then minimize S/O cost. An implementation should use explicit pairwise-lattice constraints and integer costs, not a floating-point “very large” coefficient. **All optimal alignments in this document means all ties under this declared conditional objective.** It does not mean all unconstrained pairwise-optimal combinations or all possible human occurrence interpretations.
+
+#### IV.5.2 Why a compatible path always exists
+
+Take any optimal R/S alignment and any optimal R/O alignment. For each reference gap, interleave their source and output insertion sequences in any monotone way. Then emit a shared column for the next reference token, with the source/output token or deletion already specified by each alignment. Repeat through the final gap. Both reference projections remain exactly the chosen optima. This constructs an admissible path. Its S/O cost need not be an unconstrained S/O minimum, which is why imposing all three independent pairwise optima is prohibited.
+
+A concrete noncoexistence fixture is `R=[a,b,c]`, `S=[b,c,a]`, `O=[c,a,b]`. All three unconstrained pairwise distances are two. The R/S optimum matches `b,c`; the R/O optimum matches `a,b`. Their forced joint order gives S/O columns `(ε,c),(ε,a),(b,b),(c,ε),(a,ε)`, with cost four. Thus `H*=4` while `d(S,O)=2`; demanding all three pairwise minima would leave no feasible triple. The declared conditional objective remains defined and yields two repairs and two introduced errors.
+
+#### IV.5.3 Why exact identity cannot create false repair or damage
+
+If S and O have identical normalized token sequences, use the same optimal R/S path for both projections and pair corresponding S/O tokens together. Its S/O cost is zero. Thus `H*=0`. Every conditional optimum must have zero S/O cost and hence pair the same ordered source/output tokens without mismatches or one-sided gaps. Each column has identical source and output error status, so repair and introduced-error counts are zero on every permitted path. This includes `R=[a,a], S=O=[a]`, where independent reference tracebacks would falsely create one repair and one damage.
+
+#### IV.5.4 Canonical tracebacks are diagnostic only
+
+The primary result is the graph and its count extrema. If a human-readable alignment is exported, choose the lexicographically smallest complete move sequence among optimum paths under the frozen order `111,110,101,011,100,010,001`. Record that it is one witness, not unique ground truth. C's predicted edit operations never select this witness or change the graph.
+
+### IV.6 Column events, insertion accounting and conservation
+
+For a column `(r,s,o)`, let `e_s=c(r,s)` and `e_o=c(r,o)`. Define repair contribution `max(e_s-e_o,0)` and introduced-error contribution `max(e_o-e_s,0)`.
+
+| Column condition | Event | Repair | Introduced error |
+|---|---|---:|---:|
+| Reference token, source/output both equal it | Preserved source-correct word | 0 | 0 |
+| Reference token, source wrong/deleted, output equal | Repaired source substitution/deletion | 1 | 0 |
+| Reference token, source equal, output wrong/deleted | Introduced substitution/deletion | 0 | 1 |
+| Reference token, source/output both wrong/deleted | Unresolved reference error | 0 | 0 |
+| Reference gap, source token, no output token | Removed source insertion | 1 | 0 |
+| Reference gap, no source token, output token | Introduced output insertion | 0 | 1 |
+| Reference gap, source token and output token | Unresolved insertion error | 0 | 0 |
+
+The final row applies whether the two inserted strings are equal or different. A wrong-to-different-wrong reference column is also unresolved. Export a separate edited-but-unresolved flag when both sides are erroneous and `s≠o`. This avoids pretending the decomposition is ordinary edit precision or an exhaustive semantic-overcorrection measure.
+
+Gap rewards are **columnwise**, not `max(total source-gap length − total output-gap length,0)`. For example, with fixed correct boundary words, source gap `[a,b]` and output gap `[b,c]` have two equally cheap S/O alignments: two substitutions give zero repair/damage; delete `a`, keep `b`, insert `c` gives one repair and one introduced error. Both remain in the interval. No nonadditive gap cost is hidden inside a scalar recurrence.
+
+For every complete permitted path A:
+
+~~~text
+Repair(A) - Introduced(A)
+    = sum_columns(e_s - e_o)
+    = eS - eO
+
+Unresolved(A) = eS - Repair(A) = eO - Introduced(A)
+0 <= Repair(A) <= eS
+0 <= Introduced(A) <= eO
+~~~
+
+Thus the decomposition agrees exactly with ordinary word edit distance while revealing compensating improvements and deterioration. Introduced errors include new insertions inside an already erroneous region; they are not limited to source-correct words. All insertions, including arbitrarily long added prefixes/suffixes, contribute to `eO` and cannot disappear from full-population accounting.
+
+If O equals R after lexical normalization, the R/O optimum has zero error. Every source error is repaired: `Repair=eS`, `Introduced=0`. If S equals R, `eS=0`, so `Repair=0`, `Introduced=eO`. In particular, appending q tokens to a fully correct source/reference creates exactly q introduced errors, irrespective of how many original words remain present.
+
+### IV.7 Exact extrema and local consensus without path enumeration
+
+Compute forward minimum conditional S/O costs `Hf(v)` and reverse costs `Hb(v)` on the admissible joint DAG. Retain an edge `u→v` exactly when:
+
+~~~text
+Hf(u) + c(s_column,o_column) + Hb(v) = H*
+~~~
+
+All states/edges must also be reachable from the start and able to reach the end. On this retained graph, compute minimum and maximum sums of the additive repair contribution. The extrema of introduced errors follow exactly by conservation. A direct independent introduced-error DP is part of verification.
+
+~~~text
+Specification pseudocode; not executable implementation
+
+PREPARE_SOURCE(R_bytes, S_bytes, frozen_policy):
+    validate immutable case and strict text encoding
+    R, S, offset_maps := normalize_and_tokenize(R_bytes, S_bytes)
+    eS := exact_unit_word_distance(R, S)
+    RS_lattice := all_optimal_edges_within_fixed_materialization_budget
+    masks := source_consensus(RS_lattice) if available
+             else frozen computationally_unavailable source-mask record
+    return sealed source record including |R|, eS, masks and hashes
+
+SCORE_OUTPUT(source_record, output_record):
+    O_text, complete_valid, failure := apply_frozen_output_status_rule
+    O := normalize_and_tokenize(O_text)
+    eO := exact_unit_word_distance(R, O)
+    eSO := exact_unit_word_distance(S, O)
+    compute raw exact / lexical exact / CER fields
+
+    if O == S: raw repair = 0; introduced = 0
+    else if O == R: raw repair = eS; introduced = 0
+    else if S == R: raw repair = 0; introduced = eO
+    else:
+        attempt R/O optimum-lattice materialization under fixed budget
+        if both required pairwise lattices are available:
+            joint_status := attempt reachable joint graph under fixed budget
+        else:
+            joint_status := required_lattice_unavailable
+        if joint_status is not complete:
+            set raw repair / introduced intervals to conservative envelope
+            set explicit fallback reason and local-unavailable status
+        else:
+            Hf, Hb := conditional S/O shortest-path distances
+            keep every edge on a conditional-optimum path
+            repair_lower := shortest additive repair path on retained graph
+            repair_upper := longest additive repair path on retained graph
+            introduced_lower := repair_lower - eS + eO
+            introduced_upper := repair_upper - eS + eO
+            derive optional local event sets from retained edges
+
+    FINALIZE EVERY BRANCH, INCLUDING CLOSED FORMS AND FALLBACK:
+    completed_repair interval := raw repair interval if complete_valid
+                                else [0,0]
+    compute local/literal scores only with their required correspondence
+        proof or retained graph; otherwise export fixed-subset outer bounds
+    score latent fields using their independent full structural parser
+    export counts, denominators, status, bounds, coverage and hashes
+~~~
+
+Closed-form point identification of a **total** does not automatically identify local word/literal occurrences. A local shortcut must have its own proved premise: for example, exact source/output bytes preserve an already eligible literal, while lexical equality alone does not preserve its casing, path separators or formatting. If local correspondence needs the joint graph, compute it within the same fixed budget or mark the local point unavailable with its fixed-subset bounds. A generated structural parser is independent of lexical alignment and still runs after a lexical fast path or fallback. Completion-gating and final record export run on every branch.
+
+Every reference index is consumed once on a path. Collect its event labels and output occurrence mappings across retained edges that consume that index. A point label exists only if the required label and occurrence mapping agree. For a source insertion occurrence, collect the retained edges consuming that source index and its gap attribution. Conditional point labels are unavailable when they disagree; the fixed source mask and denominator remain intact. A Boolean “at least one introduced error” incidence can be bounded from the total interval: lower is one iff the lower count exceeds zero; upper is one iff the upper count exceeds zero.
+
+For a source-defined correct-token subset C, also compute direct min/max additive damage **restricted to C** on the retained DAG. Its retention interval is `[1-damage_upper/|C|, 1-damage_lower/|C|]`. Do not sum per-token extrema and call the result a sharp joint bound; incompatible local extrema can make that sum unnecessarily wide. A consensus-only point summary may be reported descriptively with its coverage and the original fixed-subset interval beside it.
+
+For a fixed source-error subset E, comprising certain erroneous reference positions and certain inserted source occurrences from the R/S preflight, optimize the additive repair contributions restricted to those units and divide by `|E|`. Report `|E|/eS` as its source-error eligibility coverage when eS is positive. This secondary fixed-subset repair is distinct from primary repair over the entire fixed error burden eS. A source deletion unit is identified by its reference position even though it has no source-token index.
+
+When the retained graph is already available, a cheap optional diagnostic may count previously source-ambiguous positions whose available R/S correspondences narrow under conditional S/O optimization. Such narrowing is an effect of the operational alignment rule, not discovery of true occurrence identity. It is not another required full-cubic sweep.
+
+### IV.8 Aggregation, identification bounds and failure behavior
+
+#### IV.8.1 Corpus rates and paired comparisons
+
+For each natural corpus, sum count lower bounds and upper bounds separately, using the **same pre-output** `Nref=sum n_i` and `Esource=sum eS_i` for every candidate. Word-error rate is `sum eO_i/Nref`. Introduced word-error rate is bounded by the summed introduced endpoints over `Nref`. Primary valid-completion repair is bounded by summed completion-gated repair endpoints over `Esource`.
+
+The natural primary endpoint is the equal-domain average of the two corpus ratios, with weights 0.5 LibriSpeech-PC and 0.5 full released SLUE-VoxCeleb. Compute that average for every endpoint, including its lower/upper bound. Each corpus and the appropriate pooled ratio are secondary. Keep generated populations, secondary recognizer views and model seed summaries separate under Section 25. Never concatenate their rows into a larger independent sample.
+
+For treatment T and comparator C, a valid conservative paired contrast interval is:
+
+~~~text
+introduced difference:
+    [introduced_rate_T_lower - introduced_rate_C_upper,
+     introduced_rate_T_upper - introduced_rate_C_lower]
+
+completed repair difference:
+    [repair_rate_T_lower - repair_rate_C_upper,
+     repair_rate_T_upper - repair_rate_C_lower]
+~~~
+
+These are identification bounds conditional on the declared alignment rule, not sampling confidence intervals. They may be conservative because each system's extremum is optimized separately. Section 25 adds paired cluster uncertainty and fixes all decision margins. No primary superiority claim is based on an optimistic interval midpoint. Point bounds can collapse to a single value without making local occurrence identities unique.
+
+If an entire corpus has zero reference words, its word-rate endpoint is undefined and its confirmatory gate is blocked. An individual empty-reference case contributes its insertion errors to the corpus numerator with zero reference denominator contribution. A whole corpus with zero source errors has no defined repair opportunity; follow the frozen statistical gate, not a post-output replacement denominator. Per-case ratios are not macro-averaged to evade these rules.
+
+#### IV.8.2 Invalid and missing outputs
+
+Use the exact table in Section 23. A complete valid transcript scores as emitted, including a deliberate empty string. A valid full-text prefix at a cap/timeout scores as emitted for raw WER/CER/transitions. Invalid UTF-8, unrenderable or incomplete C grammar, missing text, explicit abstention, or a timeout with no valid prefix becomes the empty hypothesis. No output is dropped. Do not map an invalid C proposal to source identity in the bare score.
+
+Primary repair equals zero on **every** incomplete/invalid outcome. Raw repair still records the observed-text decomposition and conservation identity. Primary generated conformance and structure-qualified field success also equal zero on such outcomes. Introduced-error counts score the observed prefix or declared empty failure representation; they do not infer what an unfinished decoder intended to say. Completion failure rate and reason counts accompany the quality table.
+
+This handling prevents an unrenderable/empty failure from receiving useful-correction credit merely because it removes source insertion errors. A wrapper may return S, but its delivered record has a distinct output-view ID and retains the rejected bare attempt and cost.
+
+#### IV.8.3 Conservative fallback when joint scoring is unavailable
+
+Exact distances suffice for a finite outer envelope:
+
+~~~text
+raw_repair_lower = max(0, eS-eO)
+raw_repair_upper = eS
+introduced_lower = max(0, eO-eS)
+introduced_upper = eO
+~~~
+
+The bounds follow from nonnegativity, the count limits and conservation. They contain every admissible conditional-optimum count. They do not claim all enclosed integers are attainable. They widen an existing exact interval and therefore cannot improve the least-favorable primary contrast. Completion-gating still changes failed-output repair to `[0,0]`.
+
+Fixed-source subset diagnostics without a computed joint graph receive `[0,eligible_count]` for binary successes/damage, with point value unavailable. Optional stronger bounds require proof and frozen tests. If exact word distance itself has not completed, record the row as `scoring_pending`, retain its denominator, and block final analysis until exact WER is obtained. Do not silently use a timeout estimate of WER.
+
+### IV.9 Computational feasibility and exact fast paths
+
+The dense worst case has `(n+1)(m+1)(k+1)` states and at most seven outgoing edges per state: cubic in equal sequence lengths. No path enumeration occurs in production. Pairwise distances cost quadratic time with linear-row memory when only the distance is required. The following proposed budgets are **specification limits, not measured runtime facts**:
+
+| Budget | Frozen v1 proposal | Consequence of excess |
+|---|---:|---|
+| Materialized cells per pairwise lattice | 4,000,000 | Exact rolling-row distance remains mandatory; joint/local metadata may use fallback |
+| Reachable joint states per triple | 250,000 | Abort the joint graph deterministically and export the count envelope |
+| Examined outgoing joint moves | 1,750,000 | Same fallback; check alongside state count |
+| Optional diagnostic traceback count | One witness | Never enumerate all optimum paths |
+
+State/move budgets are integer counts with a fixed traversal order, not hardware-dependent wall-clock timeouts. A pairwise cell is one distinct `(i,j)` analysis state, even if it holds both forward and reverse distances; the rolling-row computation of the exact scalar distance is separate. A joint state is one distinct reachable `(i,j,l)`. Count each attempted one of the seven outgoing moves before boundary/lattice rejection. Traverse states in increasing `(i+j+l,i,j,l)` order and moves in the declared order. A limit is exceeded only when adding/examining the next item would exceed it; discard partial purported point estimates. Cache R/S preprocessing once per recognizer/case and cache identical normalized triples by their content/policy hashes while preserving every case/system/seed mapping.
+
+Exact optimizations, each requiring parity tests, are:
+
+1. Identity, O=R and S=R closed forms in IV.7. They provide exact total bounds even if local source masks are ambiguous.
+2. O=ε closed form when the minimum R/S lattice identifies the relevant totals; otherwise the general exact graph or envelope applies. Never assume the correct-source count equals `n-eS`, because eS includes insertions.
+3. Restrict pairwise states to exact optimal-lattice nodes. Unit-distance banding `|i-j|<=d(X,Y)` is a safe necessary condition, not a complete lattice definition.
+4. Form triple states only from `(i,j)` in the R/S lattice and `(i,l)` in the R/O lattice. A safe candidate-count upper bound is `sum_i |J_RS(i)|*|J_RO(i)|`; reachable-state traversal may be smaller.
+5. If both pairwise alignments are certified unique, only insertion gaps require local S/O alignment. Reference-bearing columns are fixed. Independent minimum S/O DPs for those gap strings, retaining all ties and additive rewards, reproduce the global conditional optimum exactly.
+6. Factor only at proven graph articulation/mandatory vertices or uniquely certified boundaries. A word that merely appears unique in the strings is not automatically a safe cut. Any segmentation shortcut needs an equality proof and parity fixtures.
+
+Do not replace exact objectives with a greedy diff, beam alignment, sampled paths, a heuristic band or approximate matching and then call the result exact. The 30,000-case generated pool can undergo generator/parser conformance without running model inference or triple DP on every pool item. The mandatory 9,000-case model panel and its fixed population are specified in Part V. Whole-output and field conformance are direct structured checks; they do not require cubic lexical scoring to establish their exact endpoint.
+
+Development measurement must establish wall time, state-count percentiles, peak memory, fallback frequency, interval widths and exact computational coverage at the prospective output volume. No throughput is asserted here. If the resulting full evaluation cannot fit the month, amend the pre-freeze computation plan or narrow claims; do not introduce candidate-specific sample selection or change caps after observing favorable model results.
+
+### IV.10 Automatic natural critical literals
+
+#### IV.10.1 Source-defined extraction
+
+Use deterministic grammars and a pinned precedence table under ID `critical_literal_extractor_v1`. The following initial grammar is the selected natural-text subset, not a promise of nonzero yield. Boundaries must not fall inside an adjacent letter/mark/number/underscore run. Numeric parsing uses exact base-10 integers/rationals, never binary floating-point comparison. Unlisted forms remain excluded rather than requesting a human interpretation.
+
+| Category | Deterministic initial recognition rule |
+|---|---|
+| Integer / decimal | Optional ASCII `+` or `-`, one or more ASCII digits, optionally one decimal point followed by one or more digits; no commas, exponents, word numbers or adjacent identifier characters |
+| Percentage | The numeric grammar followed by `%`, allowing only zero or one ASCII space before the sign; retain the complete span |
+| Currency | One of `$`, `€`, `£`, `¥` immediately before a numeric literal, or a numeric literal plus one ASCII space and one of `USD`, `EUR`, `GBP`, `JPY`; no exchange/value conversion |
+| Date | Complete `YYYY-MM-DD` with a valid proleptic Gregorian calendar date, year 0001–9999; locale-ambiguous slash dates are excluded |
+| Time | Complete `HH:MM` or `HH:MM:SS`, 24-hour range with seconds 00–59; optional literal `Z`; no inferred timezone, 12-hour ambiguity or leap-second interpretation |
+| Version | Two to four dot-separated nonnegative digit groups, optionally preceded by `v`, with the immediately preceding reference word `version` or `release`, or a match in a separately frozen exact version vocabulary; otherwise classify a two-group form under the decimal rule |
+| Mixed identifier / numeric model string | A maximal 2–64 character run from ASCII letters/digits/underscore/hyphen/dot containing at least one letter and one digit; a controlled exact model/package vocabulary can add named strings before freeze |
+| Uppercase string | A maximal 2–32 character ASCII uppercase/digit/underscore run with at least two uppercase letters; its label is uppercase-string fidelity, not proof that it is a semantic acronym |
+| Quantity and unit | Numeric literal plus one ASCII space and a unit from the frozen case-sensitive list `s, ms, μs, ns, m, cm, mm, km, g, kg, mg, K, °C, °F, Hz, kHz, MHz, GHz, B, KB, MB, GB, KiB, MiB, GiB, W, kW, V, mV, A, mA, Pa, kPa, MPa, mol, mmol, L, mL, ppm` |
+| URL-like span | Maximal whitespace-delimited ASCII span beginning `http://` or `https://`, with a nonempty authority, no control/backslash characters, and valid `%HH` escapes; reject a candidate ending in sentence-punctuation/quote/closing-bracket characters whose boundary is uncertain |
+| Path-like span | Maximal whitespace-delimited span beginning `/`, `./`, `../`, or ASCII drive-letter plus `:\\`; no controls, unescaped whitespace or uncertain trailing sentence punctuation; it is text, never a filesystem lookup |
+| CLI flag | One or two ASCII hyphens, an ASCII letter, then letters/digits/underscore/hyphen; optional `=` and a nonempty printable nonwhitespace value with an unambiguous span |
+| CLI-like command / package / proper name | Only an explicitly delimited literal span or complete match in a frozen exact vocabulary, with a unique full parse and source alignment; no inferred entity, package existence or command semantics |
+
+The numeric, date, time, version and literal kinds remain distinct even when substrings overlap. A number cannot be extracted as a proper part of a larger digit structure joined by dot, colon, slash or hyphen; require the complete larger form to pass a declared grammar or exclude that structure. This prevents a malformed date or unsupported version from becoming several supposedly independent integers. No reference-dependent vocabulary is learned from candidate outputs. Structured proper-name analysis defaults to unavailable if no qualified exact vocabulary is supplied; an NER model or judge is not a substitute. For whitespace-delimited URL/path candidates, the uncertain trailing set is `. , ; : ! ? ) ] } ' "` plus U+2018/U+2019/U+201C/U+201D. Exclusion is deliberately conservative, including legitimate literals with such endings. URI canonicalization, path resolution and case-insensitive filesystem assumptions are not permitted.
+
+The initial precedence is longest span first, then URL/path/CLI, version/identifier, quantity/currency/percentage, date/time, number and uppercase-string categories. Record all overlapping tags, but select only one primary span per overlap component with the frozen type priority. Do not call an uppercase string a semantically verified acronym unless a controlled vocabulary establishes it. Ambiguous locale dates, unsupported spoken-to-written conversions, partial parses and overlapping unresolved spans remain extraction exclusions. Zero yield in a category is a valid outcome.
+
+A natural literal occurrence is eligible only when its reference span is exactly located, its source relationship is invariant over the entire R/S optimum lattice, and its immediately neighboring reference lexical tokens outside the literal map to invariant equal source occurrences. Start/end sentinels can serve as boundary anchors. Raw interiors run from the left anchor token's raw end to the right anchor token's raw start; a sentinel uses byte offset zero or the full byte length. Strip only outer characters in the pinned White_Space table for the field parse, preserving everything inside the field. The reference interior must equal the extracted literal span under that outer-whitespace rule, and the source interior must admit exactly one whole-span parse of the same kind or be empty at those uniquely located boundaries. Quote/bracket wrappers not included in the declared literal grammar are excluded. This narrow rule deliberately excludes many speech errors whose hidden literal identity is not automatically defensible.
+
+Freeze `reference_literal_id`, category, exact reference/source spans, left/right anchor identities, allowed-form policy and source-correct/source-wrong status before O. A source-wrong literal has a unique unequal typed source value or a uniquely located supported deletion. This establishes reference-relative mismatch, not natural text-only recoverability.
+
+#### IV.10.2 Output matching and denominators
+
+Inspect retained graph edges consuming each of the two frozen reference anchors. For each anchor, collect its possible output indices and whether any permitted path gives a mismatch or gap. Require one invariant equal output occurrence for each anchor; a start/end sentinel has the invariant output byte boundary zero/full length. If either anchor is lost, mismatched or has more than one possible output occurrence, return an unavailable literal point and success interval `[0,1]` on its fixed denominator. This deliberately conservative rule does not enumerate whole paths and does not infer unique identity merely because several candidate spans contain the same value.
+
+With both output boundaries uniquely certified, take their complete raw interior using the same byte-offset and outer-whitespace rule as the source preflight. Parse and compare that whole field once. Success is one only if it matches the permitted reference value/surface at that occurrence; otherwise it is zero. A target string elsewhere in O is insufficient. Extra numbers, conflicting values, new flags or words inside the field interior fail whole-field matching. Graph-edge inspection plus one whole-span parse is sufficient; no hidden exponential all-path literal matcher is required. A proved raw-identity shortcut may establish the same boundaries; a lexical-total fast path alone cannot.
+
+Report source-correct literal retention and its complementary corruption rate, and source-wrong literal repair, separately by type and corpus. Denominators are the frozen source-correct/source-wrong eligible field counts. Count reference extraction candidates, eligible source matches, source-ambiguous exclusions, output-ambiguous outcomes and computational failures separately.
+
+An unsupported literal added outside every frozen window is outside this narrow critical-literal rate; it still contributes to lexical/surface error and, where applicable, introduced-insertion counts. No claim of all semantic harm or complete numeric hallucination detection follows from literal retention. The optional added-literal diagnostic must use its own declared full-reference denominator and cannot expand the primary field population after O.
+
+### IV.11 Exact generated-ground-truth interface
+
+#### IV.11.1 Two grammars with different purposes
+
+Each case supplies a frozen **structural grammar G_i** and **target language T_i**. Shared IDs are `technical_latent_v1`, `programmatic_stress_generator_v1`, `technical_structure_parser_v1` and `technical_target_language_v1`; the inverse, spoken-rendering and acoustic-screen IDs are defined in Part V. G_i consumes the entire text, preserves the ordered scaffold, and exposes named occurrence-specific slots while permitting wrong or empty slot values. Its role is to identify which output value belongs to which field. T_i additionally restricts every slot to its finite permitted target surfaces and enforces the latent binding/multiplicity constraints. The generator must establish that its own target is unambiguously represented.
+
+The parser returns `no_parse`, `unique_parse` or `ambiguous_parse`; ambiguity means distinct field-boundary/value assignments, not duplicate derivations of an identical assignment. Do not choose the parse closest to the reference, discard unmatched suffixes, search for an expected substring, accept only the first matching field, or execute a path/URL/command. Repeated equal values retain distinct field IDs. A truly text-identical exchange of equal values is not an observable error.
+
+#### IV.11.2 Exact scores
+
+For field f, let `correct_source_f` be the latent, source-only truth established from the declared field contract and corruption record. Let `eligible_repair_f` additionally require a nonidentity controlled corruption and the generator’s source-visible recoverability witness. Define:
+
+~~~text
+structure_ok_i = complete_valid_i AND parser(G_i,O_i)==unique_parse
+field_match_if_parsed_f = output slot f belongs to allowed target forms for f
+
+structure_qualified_field_match_f =
+    1, if structure_ok_i AND field_match_if_parsed_f
+    0, otherwise
+
+complete_target_conformance_i =
+    1, if structure_ok_i AND every required field matches
+          AND all latent cross-field constraints hold
+    0, otherwise
+
+field_preservation = sum field_match over frozen source-correct fields
+                     / frozen source-correct field count
+field_repair = sum field_match over frozen eligible-repair fields
+               / frozen eligible-repair field count
+~~~
+
+Wrong values in a uniquely parsed field do not automatically erase other fields’ matches. A mixed case can therefore repair one field while damaging another. If the entire structure cannot be parsed uniquely, the **structure-qualified** field endpoint is zero on the fixed denominator. This is an explicit task-conformance failure, not a claim that every literal was semantically destroyed. Optional local literal diagnostics may distinguish intact strings in malformed output, but cannot turn them into primary field successes.
+
+Report clean/mixed preservation, repair/mixed repair, joint mixed success, complete target conformance, structural failure, and byte/surface exactness separately. A natural-frequency interpretation is prohibited. Retain group/template dependence across clean, repair and mixed variants. The full generator pool, selected model panel and every system/seed use the fixed Part V manifest; scorer decisions cannot alter membership.
+
+For the actual TTS→ASR branch, target lineage survives through the latent record, but source-correct/repair roles must be derived from the realized ASR source under the frozen source-only rule. The intended text corruption does not establish what ASR actually emitted. Uncertified acoustic categories stay in their stated diagnostic role; neither a second recognizer nor a judge silently certifies target audibility.
+
+### IV.12 Finite illustrative fixtures
+
+**These are mathematical test fixtures, not generated benchmark cases or measured results.** Sequences below are already lexical tokens unless a Unicode example states otherwise. Brackets in bounds denote inclusive integer extrema.
+
+| ID | R | S | O | eS / eO | Raw repair interval | Introduced interval | Purpose |
+|---|---|---|---|---|---|---|---|
+| F01 | `red blue` | `red blue` | `red blue` | 0 / 0 | [0,0] | [0,0] | Identity |
+| F02 | `red blue` | `red green` | `red blue` | 1 / 0 | [1,1] | [0,0] | Unique substitution repaired |
+| F03 | `red blue` | `red blue` | `red green` | 0 / 1 | [0,0] | [1,1] | Correct word damaged |
+| F04 | `red blue` | `red green` | `red black` | 1 / 1 | [0,0] | [0,0] | Edited unresolved error; its diagnostic count is one |
+| F05 | `a b c d` | `a x c d` | `a b y d` | 1 / 1 | [1,1] | [1,1] | Repair and collateral damage |
+| F06 | `a b` | `a` | `a b` | 1 / 0 | [1,1] | [0,0] | Source deletion repaired |
+| F07 | `a b` | `a b` | `a` | 0 / 1 | [0,0] | [1,1] | Output deletion introduced |
+| F08 | `a b` | `a x b` | `a b` | 1 / 0 | [1,1] | [0,0] | Source insertion removed |
+| F09 | `a b` | `a b` | `a x b` | 0 / 1 | [0,0] | [1,1] | Output insertion introduced |
+| F10 | `a a` | `a` | `a` | 1 / 1 | [0,0] | [0,0] | Repeated-word identity; source occurrence masks ambiguous |
+| F11 | `a a` | `a` | `a a` | 1 / 0 | [1,1] | [0,0] | Repeated-word full repair |
+| F12 | `a b` | `a b` | `z a b q q` | 0 / 3 | [0,0] | [3,3] | Prefix/suffix insertion accounting |
+| F13 | `START END` | `START a b END` | `START b c END` | 2 / 2 | [0,1] | [0,1] | Tied insertion-gap alignments |
+| F14 | `a b` | `a b` | `b a` | 0 / 2 | [0,0] | [2,2] | Reordering; total identified, local labels may differ |
+| F15 | `a b` | `a b` | empty valid text | 0 / 2 | [0,0] | [2,2] | Valid empty output |
+| F16 | empty | empty | `x y` | 0 / 2 | [0,0] | [2,2] | Empty reference; corpus insertion numerator retained |
+| F17 | `a` | `a x` | empty missing output | 1 / 1 | [1,1] | [1,1] | Raw deletion removes insertion; completed repair must be [0,0] |
+| F18 | `a b` | `a x` | `a b` at a decoding cap | 1 / 0 | [1,1] | [0,0] | Correct prefix is still failed completion; completed repair [0,0] |
+| F19 | `a b c` | `b c a` | `c a b` | 2 / 2 | [2,2] | [2,2] | Conditional S/O cost four versus unrestricted S/O distance two |
+
+Additional required surface fixtures are composed/decomposed `café`, straight/curly apostrophes, U+2212 versus ASCII minus, supplementary-plane characters, CRLF versus LF, a literal reserved-token spelling, standalone combining marks, and invalid UTF-8. The raw scalar distance between `café` and `cafe` plus U+0301 is two while their NFC lexical distance is zero. Do not conflate byte, scalar and word distances.
+
+Required structural fixtures use the assignment `A=15; B=20.` with distinct field IDs and a full grammar equivalent to literal `A=`, an A slot, literal `; B=`, a B slot, and the final literal period. Each slot accepts zero or more printable ASCII characters except `=`, `;` and `.`; it therefore permits empty/wrong values without swallowing another assignment or the terminal delimiter. Exact target passes; `A=15; B=21.` preserves A and fails B; `A=20; B=15.` fails both position-bound target values. A duplicated `A=`/`B=` assignment, suffix after the final period, missing terminal scaffold or otherwise unconsumed text fails this grammar. A source with wrong A and correct B, corrected to right A but wrong B, produces repair success and collateral preservation failure. An allowed alternate rendering passes only under the frozen allowed-surface policy. Other templates may treat an extra argument as a wrong value inside a structurally valid command field; that still fails the field and complete target conformance without falsely declaring unrelated fields unparseable.
+
+### IV.13 Property, metamorphic, exhaustive and independent verification
+
+#### IV.13.1 Required properties
+
+For every tested triple, verify all distances/counts are nonnegative integers; `0<=repair_lower<=repair_upper<=eS`; `0<=introduced_lower<=introduced_upper<=eO`; and both endpoint pairs satisfy raw conservation. Direct introduced-error extrema agree with those derived from repair extrema. The reported unresolved interval agrees with both error identities. Exact counts lie inside the resource fallback envelope.
+
+Verify identity, O=R and S=R proofs as executable properties once implementation is authorized. Normalization is idempotent on text views where claimed; legal byte/scalar and token-boundary maps recover their exact raw spans, while nonunique normalization provenance is explicitly unavailable; no output changes a source hash/mask/denominator; architecture/view metadata alone cannot alter a score. Duplicating every row of a corpus with the same positive multiplicity scales its aggregate numerators and denominators together and leaves corpus rates unchanged. Duplicating only one heterogeneous row can change a corpus rate and is not an invariance. Duplicates never create additional independent source clusters. Failed completions always have zero primary repair and conformance. JSON round trips preserve integers, booleans, nulls and reason codes exactly.
+
+Property generation uses a recorded seed and bounded families spanning empty/long/repeated strings, variable error density, Unicode and fixed grammar fields. Freeze the future suite seed as `20261004` and its number/configuration before results; an initial 10,000 bounded trials is a proposed verification workload, not an executed test count.
+
+#### IV.13.2 Metamorphic relations with explicit preconditions
+
+| Transformation | Required result | Necessary limitation |
+|---|---|---|
+| Bijectively rename every token in R/S/O | Distances, count bounds and ambiguity structure unchanged | Operate after normalization or choose tokens whose normalization is injective |
+| Reverse all three token sequences | Total distances and count intervals unchanged; boundary gaps swap | Diagnostic canonical traceback may differ because its tie order is directional |
+| Change only system/seed metadata | Every score unchanged | Group labels remain available to later statistics |
+| Add a unique common boundary token to all three sequences | Error counts unchanged; reference denominator grows by one | Prove the added anchor is obligatory in both optimal lattices; reject a test premise if not certified |
+| Replace a unique correct token by a new unequal token | One introduced error under the certified isolated-alignment fixture | This is not asserted for arbitrary repeated or globally rearranged strings |
+| Restore a unique wrong token to its reference token | One additional repair in a certified isolated fixture | Other correspondence must be held fixed by verified anchors |
+| Append q tokens when S=R | Exactly q introduced errors | General erroneous-source append behavior is bounded by conservation, not this equality |
+| NFC-equivalent spelling change | Lexical metrics unchanged | Byte exactness and raw scalar CER may change |
+| Render two legal C edit decompositions to identical bytes | Lexical/literal scores identical | Native action/latency diagnostics legitimately differ |
+| Reduce joint state budget | Exact result or a containing fallback interval; WER and denominators unchanged | A wider interval cannot create a least-favorable primary win |
+| Append a generated suffix or duplicate field certified outside G_i | Complete conformance and structure-qualified fields fail | Certify structural nonmembership; do not strip the suffix before parsing |
+
+Do not assert false universal monotonicity: an arbitrary single-token edit can change several optimal alignments. Tests with locality claims require the stated anchor/uniqueness certificate. Synthetic variations remain tests of software, not additional independent natural evidence.
+
+#### IV.13.3 Exhaustive tiny-sequence oracle
+
+Use the alphabet `{a,b}` and all sequences of lengths 0–3. There are `1+2+4+8=15` sequences and `15^3=3,375` R/S/O triples. Independently enumerate all monotone seven-move triple paths for each triple, without calling the production lattice code. Compute projected R/S and R/O costs for each path, retain paths with both exact pairwise minima, then retain the minimum S/O cost and enumerate their event totals. Compare every count extremum, conditional cost, event-consensus set, source-only mask and claimed unique-alignment certificate with the optimized scorer. The reference enumerator must not inherit the same pruning or traceback routine.
+
+Also enumerate all pairwise paths on the tiny pairs and verify optimal-lattice edge membership. Explicitly retain the repeated-word identity counterexample and the insertion-gap tie fixture even though they fall partly outside the binary/length-three grid. Expanding the grid to length four is optional unless a specific defect requires it. Exhaustion of the declared finite domain is a precise result; it is not a proof over all natural sentences.
+
+#### IV.13.4 Cross-implementation parity
+
+The production implementation and an independently structured transparent implementation must agree exactly on the finite fixtures and exhaustive domain. Add a preselected development-only parity batch of 500 triples, bounded to 64 lexical tokens per sequence for the transparent reference, spanning no-op, repair, deletion, insertion, repetition and field-bearing examples. Select its IDs/hashes before final results; no human labels are required. Different languages are helpful but not mandatory. Independence means different recurrence organization/data flow and no shared alignment/pruning code, not a second wrapper around the same library.
+
+Allow zero disagreement in integers, source masks, completion flags, local availability statuses and interval endpoints. Aggregate floating display values must be derived from identical integer numerator/denominator tuples; use exact rational comparison where possible. Trusted libraries may validate unit word/scalar distance under matching policies. Published I-measure/M2/ERRANT scores are related measures, not equality oracles for this custom conditional objective.
+
+For generated fields, compare the parser against direct latent construction predicates and deliberately mutated toy outputs. Test that the exact target belongs to both G_i and T_i, wrong values can belong to G_i without belonging to T_i, and extra content cannot be silently accepted. Any parity mismatch blocks final evaluation until explained by a versioned general rule and corrected everywhere.
+
+### IV.14 Machine-readable scorer record and release contract
+
+The implementation exports one record per case/system/seed/view and an independently sealed source record. The following is a **schema template with no measured results**; nulls are populated only by future execution. Lists of allowed reasons and field types belong to the schema artifact.
+
+~~~json
+{
+  "schema_version": "score_record_v1",
+  "scorer_algorithm": "reference_triple_v1",
+  "scorer_spec_hash": null,
+  "scorer_implementation_hash": null,
+  "normalization_id": "lexical_eval_v1",
+  "normalization_tables_hash": null,
+  "case_id": null,
+  "population_id": null,
+  "corpus_id": null,
+  "recognizer_view": null,
+  "cluster_ids": [],
+  "system_seed_id": null,
+  "output_view": null,
+  "reference_hash": null,
+  "source_hash": null,
+  "output_hash": null,
+  "source_mask_hash": null,
+  "reference_policy_id": null,
+  "complete_valid": null,
+  "failure_reason": null,
+  "observed_text_policy": null,
+  "reference_words": null,
+  "source_words": null,
+  "output_words": null,
+  "source_word_errors": null,
+  "output_word_errors": null,
+  "source_output_word_distance": null,
+  "conditional_source_output_cost": null,
+  "raw_repair_lower": null,
+  "raw_repair_upper": null,
+  "introduced_lower": null,
+  "introduced_upper": null,
+  "completed_repair_lower": null,
+  "completed_repair_upper": null,
+  "introduced_reference_word_bounds": null,
+  "introduced_insertion_bounds": null,
+  "unresolved_bounds": null,
+  "edited_unresolved_bounds": null,
+  "raw_byte_exact": null,
+  "lexical_exact": null,
+  "surface_character_errors": null,
+  "reference_scalar_count": null,
+  "source_consensus_eligible_counts": null,
+  "output_consensus_counts": null,
+  "source_ambiguous_counts": null,
+  "alignment_status": null,
+  "fallback_reason": null,
+  "joint_states_examined": null,
+  "joint_moves_examined": null,
+  "literal_extractor_hash": null,
+  "literal_fixed_denominators": null,
+  "literal_success_bounds": null,
+  "literal_exclusion_reason_counts": null,
+  "latent_schema_hash": null,
+  "structural_parser_hash": null,
+  "structural_parse_status": null,
+  "structure_qualified_field_matches": null,
+  "complete_target_conformance": null,
+  "scoring_status": null,
+  "MEASURED_RESULT": null
+}
+~~~
+
+Alignment status values distinguish `exact_point`, `exact_interval`, `closed_form_point`, `resource_envelope`, `infrastructure_envelope` and `scoring_pending`. Exact-point status concerns totals; local labels can still be ambiguous. A source/reference mask is independently frozen and cannot change with alignment status. Missing subtype diagnostics may be null with a reason even when primary total bounds are known. Unknown is never serialized as zero.
+
+The aggregate artifact retains integer sums, immutable denominators, population and corpus weights, per-seed records, lower/upper identification endpoints, separately computed confidence bounds, failure counts and coverage components. Coverage is reported in counts and proportions at case, reference-word, source-error and literal-field levels as applicable. Every exclusion is source-defined with a reason; output ambiguity is an outcome on a retained row.
+
+The automated validity gate requires the normative tests, independent parity, source-mask immutability, justified computational availability, complete ordinary-WER accounting and sealed analysis policy. Implementation hashes, achieved coverage, runtimes, test pass counts and final hypotheses remain **unmeasured and empty** in this v1.2 deliverable.
+
+
+## Part V - Programmatic technical stress-suite specification
+
+### V.1. Purpose, population and claim boundary
+
+**ENGINEERING PROPOSAL.** This suite measures exact restoration of controlled technical text without constructing human labels. A deterministic generator will create the reference, its field identities and permitted forms, the source corruption, and the corresponding preservation/repair obligations. Those objects exist before any model output. This document specifies that future generator and gives three illustrative records; it does not implement a generator or create a benchmark.
+
+The generated population is separate from natural public speech. A path-heavy template is useful for exposing a failure but does not estimate the frequency of paths in dictation. Generated cases do not enter the natural WER denominator, supply extra natural speakers, or justify a claim about all semantic harm. Their measurements are structure-qualified exact field matches, whole-case conformance and controlled repair/preservation behavior. The primary empirical study remains the natural reference-anchored representation comparison.
+
+Template testing, perturbations and minimal pairs are established methodology. CheckList supplies behavioral tests using templates and lexicons; IFEval supplies programmatically verifiable requirements; RULER supplies generated values, distractors and bindings; GSM-Symbolic supplies controlled instantiations of symbolic templates. The proposed suite is a reproducible task-specific measurement artifact, not a claim to invent these methods. IFEval's automatic scoring does not make its original manually checked prompt construction a precedent for zero-human construction. [T1–T4]
+
+### V.2. Exact size and the model-evaluation panel
+
+Freeze two distinct inventories. The **generation/conformance pool** contains 30,000 test cases: 25 category strata × four template families per stratum × 100 latent base groups per category/template cell × three source views. The **mandatory model-evaluation panel** contains 9,000 cases: select 30 of those 100 base groups in each cell, then retain all three views. This yields 3,000 base groups, 120 per category and 30 per category/template cell.
+
+The three views are clean, repair-focused and mixed. Every view retains the same latent content bundle, template-family lineage and paired-view group ID. A source view is a distinct model input, not a new independent semantic example. Main generated results name the 9,000 evaluated cases and 3,000 base groups. Do not describe all 30,000 pool cases as model-evaluated merely because their references and conformance records exist.
+
+All sixteen bare learned/comparator configurations use the same mandatory panel: twelve final scratch runs, three adapted ByT5 runs and the fixed task-matched Qwen control. This means 144,000 planned model-case outputs before output deduplication. Deterministic baselines and scorer-only fixtures are recorded separately. Full-pool inference would contain 480,000 such outputs; the additional 21,000 inputs are stretch unless BENCH-00 qualifies and freezes full-pool evaluation before candidate results. There is no result-driven enlargement.
+
+Select the nested panel by a published, domain-separated hash ordering within each category/template cell. No reference difficulty estimate, model confidence or model error influences selection. If the qualified generator cannot meet a cell's quota, report the shortfall and amend the population before final freeze; do not refill it with another category after seeing outputs.
+
+An optional underdetermined diagnostic pool may contain up to 2,500 source records with at least two admissible latent originals. It is separate from these totals and carries no required-repair success claim. It is not necessary for an MVP quantitative result.
+
+### V.3. Latent schema and immutable interface
+
+Use schema ID `technical_latent_v1`. Its manifest, canonicalization rules, grammar catalog and generator version receive separate hashes. A record has the following required components.
+
+The normative component IDs are `programmatic_stress_generator_v1`, `technical_latent_v1`, `technical_structure_parser_v1`, `technical_target_language_v1`, `technical_inverse_v1`, `technical_spoken_renderer_v1` and `exact_utf8_v1`. The acoustic extension adds `automatic_tts_screen_v1` and `spoken_lexical_compare_v1`. These are proposed version identifiers, not claims that implementations or hashes already exist. Part IV uses the same latent/parser/target-language contract.
+
+| Component | Required fields and meaning |
+|---|---|
+| Record identity | `case_id`, `base_group_id`, `paired_view_id`, `view_kind`, `population_id`, `partition`, `primary_category`, `secondary_categories[]` |
+| Family lineage | `template_id`, `template_family_id`, `constructor_family_id`, `semantic_family_id`, `lexical_family_ids[]`, `parent_ids[]` |
+| Exact strings | `reference_utf8`, `source_utf8`, their byte lengths and hashes; optional deterministic `spoken_rendering_utf8` with its own policy/hash |
+| Structural definition | Immutable ordered scaffold segments; field-slot IDs; structural grammar/version; target-language/version; full-input-consumption rule; escaping and delimiter policy |
+| Field occurrences | Unique `field_id`, `field_name`, `field_type`, `role`, `canonical_value`, `reference_surface`, `allowed_target_surfaces[]`, occurrence ordinal and binding IDs |
+| Coordinates | Half-open reference/source byte spans; corresponding Unicode-code-point spans; explicit deleted/inserted/gap status; final coordinate map after every corruption |
+| Relations | Equality or inequality where specified; quantity/unit binding; subject/object or field-label binding; permitted order; required multiplicity; relationships between repeated occurrences |
+| Source-derived status | `initial_field_match`, `preserve_required`, `repair_required`, `recoverability_class`, `recoverability_witness`, `inverse_candidate_count` or a certified uniqueness result |
+| Corruption | Ordered `operations[]`: operator ID/version, affected field IDs, source/reference intervals, before/after strings, parameters and per-operation derived seed |
+| Construction provenance | Manifest/partition/value/corruption seeds; vocabulary sources and rights; generator/configuration hashes; proposal ordinal; rejection reason; qualification status |
+| Evaluation membership | Full-pool membership; nested-panel selection key; inclusion probability; frozen evaluation mode; grouping/weighting stratum |
+
+`field_id` identifies an occurrence, not just a string value. Two occurrences of `18` in different slots have different IDs even if their canonical values are equal. A field may also have a `binding_id` linking it to a unit, an entity or a repeated mention. Do not recover occurrence identity by searching for the first matching substring.
+
+Reference and source spans come from structural rendering and the explicit corruption map. They are not reverse-engineered from model output. Recompute final source coordinates after compositions; never reuse pre-edit offsets after an insertion or deletion. A deleted field has a recorded source gap, not an invented nonempty span. Both byte and code-point coordinates are retained because the project renderer uses UTF-8 byte boundaries while some diagnostics operate on Unicode characters.
+
+A legitimate empty field can also have a zero-length span: for example, the absent negation slot in an affirmative template. If the public grammar uniquely identifies that slot, its required absence is part of exact conformance. Inserting `not` there must not escape scoring merely because no nonempty reference literal occupied the gap.
+
+The model receives only the source string and the common trusted task framing. It receives no latent JSON, field offsets, correct values, case-specific corruption mask, reference text or target-language automaton. The evaluator and the latent-aware constructor consistency validator may inspect those objects to check rendering, spans and target consistency. The source-only inverse qualifier receives only the source string and the public grammar and corruption policy; it receives no case-specific template, latent type, mask, offsets or actual corruption path. A separate consistency validator compares its independently derived unique inverse with the latent target and rejects a mismatch; the latent target cannot select an inverse. The public grammar inverse baseline obeys the same source-only input restriction and is separately identified because its generator-specific public knowledge is an intentional diagnostic advantage.
+
+### V.4. Generation strata and controlled vocabularies
+
+There are 25 balanced primary strata. A case can carry secondary tags, but each base group belongs to exactly one primary stratum for allocation. Mixing category tags does not create additional cases.
+
+| Stratum | Generated content | Required exactness or recoverability restriction |
+|---|---|---|
+| 01 Integers | Counts, indices and bounded nonnegative integers | Preserve all digits and leading-zero policy; random digit changes require a unique inverse or intact cue. |
+| 02 Signs | Explicit plus/minus with integer or decimal magnitudes | Sign is a separate stored component. A dropped sign is not automatically recoverable. |
+| 03 Decimals | Fixed-scale decimal strings, including nearby decimal points | Store integer coefficient and scale; never generate targets through binary floating-point rounding. |
+| 04 Percentages | Signed/unsigned percentages and decimal percentages | Bind value and percent marker; do not silently convert percentages to fractions. |
+| 05 Currencies | Amounts with an explicit currency symbol/code | Bind currency and amount. Ambiguous `$` is not resolved to an unmentioned national currency. |
+| 06 Dates | Valid ISO-style dates and explicitly declared written variants | Use a fixed calendar/locale rule; ambiguous day/month order is excluded from required repair. |
+| 07 Times | Explicit 24-hour times or declared AM/PM forms | Preserve time zone only when present. Missing AM/PM without a cue is underdetermined. |
+| 08 Negation | Positive/negative minimal pairs; scope-bearing `not`, `never`, `no` | Generate each polarity as its own true reference. Deleting the only polarity cue does not create an identifiable repair. |
+| 09 Model names | Controlled names with numeric release components | Fictitious stems are permitted and labeled synthetic. Do not require knowledge of actual model releases. |
+| 10 Software versions | Multi-component versions and declared prerelease suffixes | Preserve component order, separators and suffixes; no inferred “latest version.” |
+| 11 Package names | Closed documented or synthetic package-name vocabularies | Spelling and case policy are explicit; no package installation or external existence check is part of scoring. |
+| 12 Acronyms/uppercase IDs | Acronyms, initialisms and uppercase identifiers | Preserve character order and case. Repair lost case only when the source/type policy uniquely determines it. |
+| 13 CamelCase | Mixed-case words and concatenated identifiers | Capitalization is semantic to the test contract; lowercasing is not an accepted universal normalizer. |
+| 14 snake_case | Underscore-separated identifiers | Preserve underscores, repeated separators where permitted, and digit boundaries. |
+| 15 kebab-case | Hyphen-separated identifiers | Distinguish hyphens from underscores, minus signs and dashes under the frozen byte policy. |
+| 16 Paths | Relative/absolute path-like strings with nested components | No filesystem access. Preserve case, separators, extensions and distinct repeated occurrences. |
+| 17 URLs | Controlled URL-like strings with path/query fragments | No network access. Preserve domain/path distinctions, query keys and explicit encoding policy. |
+| 18 CLI commands | Inert command-line strings with program and arguments | Never execute them. Argument order and quoting are fixed by the generated contract. |
+| 19 CLI flags | Long/short flags and attached values | Distinguish one/two hyphens, flag identity and value binding; deletion of `--no-...` is not a harmless formatting edit. |
+| 20 Programming identifiers | Controlled variable/function/type names | Preserve exact spelling and case; no compiler or external program semantics are needed. |
+| 21 Scientific names | Spellings from a versioned closed vocabulary | Score only the declared string/identifier relation. Do not infer taxonomy, synonyms or biological identity from approximate spelling. |
+| 22 Units and quantities | Values with units and explicit subject bindings | Use nonclinical illustrative quantities. Unit conversion is allowed only by an explicit exact rule, not a guessed equivalence. |
+| 23 Repeated literals | The same surface in two or more labeled positions | Maintain separate occurrence IDs and multiplicity. Exchanging truly identical bytes is not an observable swap. |
+| 24 Nearby confusable values | Pairs such as `0.05`/`0.5` or similar version strings | Store both values and their roles. Correctly copying one occurrence does not excuse moving it to the wrong slot. |
+| 25 Multiple bindings | Two to six simultaneous fields and cross-field relations | At least one mixed-view payload requires repair while another remains correct; measure collateral conformance explicitly. |
+
+Use finite vocabularies with recorded provenance and rights. Invented package/model/identifier stems avoid dependence on external factual knowledge. A scientific-name vocabulary is a spelling list with sources, not a semantic oracle. Common digits, letters, punctuation and unit symbols are shared grammar primitives; their occurrence across splits is not described as contamination. Distinct content stems and complete latent bundles receive the stricter family split below.
+
+Every category includes source lengths and literal positions beyond a single easy sentence. Freeze short/medium/long buckets within the existing model context envelope, including fields near the beginning, middle and end. The MVP does not increase any model's context merely to accommodate stress records. Cases outside the shared source-only envelope have a recorded construction rejection; runtime model failures on admitted cases remain outcomes.
+
+### V.5. Recoverability is a construction property, not a hidden answer
+
+Let the public constructor grammar and permitted corruption relation define a set of possible clean documents for a source `S`. A required field repair is admitted only if every admissible inverse agrees on that field's target value and permitted rendering. The uniqueness check uses `S` and the published grammar/corruption rules; the hidden generated `R` is used only to check that the intended target agrees with that unique result. The rules cannot select an inverse merely because it equals `R`.
+
+The source-only qualifier receives the public grammar catalog and corruption policy, not the case-specific template ID, hidden field values, type labels, offsets or actual operation trace. Any type or template restriction needed to prove recovery must follow unambiguously from the visible source and public contract. Consider every compatible public template, not only the generator's recorded template. The same inverse operators are available in training-side examples on disjoint content/families; their existence is not an extra test-only oracle supplied to one model.
+
+For required whole-case restoration, all admissible inverses must also agree on the canonical scaffold/target language up to its frozen finite accepted forms. If only one field is identifiable while the rest of the target is not, retain a field-only or underdetermined diagnostic instead of asserting a uniquely required complete reference.
+
+A bounded inverse enumerator or equivalent symbolic proof must consider the full permitted operation family, not only the operation that happened to generate this example. Otherwise the recorded operation would leak the answer into qualification. If the search reaches its time/state bound without proving uniqueness, the record is not a qualified required-repair case. Its target is not made fair by increasing compute until one preferred answer is found.
+
+Freeze separate public policies for `qualified_core_v1` and `underdetermined_diagnostic_v1`. Arbitrary valid-value replacement or uncued erasure belongs to the latter, not a hidden extra operator in the former. The qualifier considers every allowed operator and its preconditions within the declared core task. This is an explicitly restricted synthetic error model, not a claim that natural ASR obeys those restrictions.
+
+Three mechanisms can justify repair. A type-constrained invertible substitution can map an alphabetic confusable back to a digit when no other permitted integer inverse exists. A deterministic spelling/separator rendering can preserve every character in the source. A redundant, explicitly authoritative source cue can retain the information lost from another occurrence. The cue must remain in the actual source and the rule assigning authority must be public; “the generator knows the answer” is not a cue.
+
+For example, the public numeric-field corruption rule may allow ASCII `1` to become lowercase `l` while forbidding letters in the clean integer field. `Integer retries: l8.` then has the unique numeric inverse `18` under that specified rule. This establishes a bounded structured-transduction task. It does not establish that any natural transcript containing `l8` must mean `18`.
+
+By contrast, deleting the only `not`, changing an otherwise valid `0.05` to `0.5`, dropping the middle digit of a valid version, or substituting one valid arbitrary name for another normally leaves multiple admissible originals. Keep such records in the optional underdetermined diagnostic population. Do not score restoration of the sampled hidden original as an obligatory repair, and do not ask a person or AI judge to choose one for the primary metric.
+
+A public-grammar inverse baseline uses the source and the frozen grammar to return the unique qualified target, or preserve/abstain when uniqueness is absent. It is a useful construction check and may solve this bounded task perfectly. Report that outcome honestly. The suite is intended to expose learned-model behavior and collateral damage, not to prove that a neural model is necessary for a problem deliberately designed to have an exact inverse.
+
+### V.6. Views and corruption operators
+
+Every base group has at least two payload fields. Clean views change none. Repair-focused views corrupt the designated payload fields under certified inverse rules. Mixed views corrupt a nonempty proper subset, retaining at least one nearby initially correct payload. Source-visible witness fields, if present, remain separately identified. A repair-focused case can therefore contain correct witness content; its name does not imply that every token in the source is wrong.
+
+Every literal occurrence, including a witness occurrence, has its own source-derived state. Report payload and witness results separately so repeated explanatory cues do not inflate payload retention. Whole-case conformance still requires the entire output, including witnesses and scaffold, to satisfy the frozen target.
+
+| Operator | Qualified use | Nonqualified case or failure to reject |
+|---|---|---|
+| Typed character confusion | A finite map such as digit/letter confusables has a unique inverse in the declared field type. | A valid alternate digit/name is not uniquely recoverable merely because it is close. |
+| Explicit separator verbalization | Words such as `underscore` or `dot` preserve each separator under a bijective field-specific rendering. | Ordinary occurrence of “dot” in a name is not globally replaced. |
+| Deterministic spacing | Insert/remove boundaries only where the public grammar gives one inverse. | Multiple valid segmentations go to the underdetermined set. |
+| Casing corruption | Use explicit spelling/case cues or a type with one declared canonical casing. | Arbitrary CamelCase is not reconstructed from an ambiguous lowercase string. |
+| Punctuation/scaffold damage | Omit or replace a separator when the full grammar uniquely fixes its position. | Do not pretend a stylistic punctuation preference is a mandatory lexical repair. |
+| Bounded deletion | Delete a character/field only when the remaining public cue or constraint uniquely identifies it. | Uncued deletion of digits, signs, polarity or names is not qualified. |
+| Local duplication | Introduce a duplicate with an exact inverse under the structural multiplicity rule. | Meaningful spoken repetition is not generally removed; this is a generated-contract operator. |
+| Unit/surface alias | Use an explicit finite mapping with preserved quantity and binding. | No silent conversion across ambiguous units, scales or currencies. |
+| Order perturbation | A source-visible numbered/keyed structure and public canonical order uniquely fix the output. | An unlabeled swap of arbitrary values is not assigned the generator's preferred interpretation. |
+| Negation spelling perturbation | Corrupt the spelling while retaining enough polarity evidence for a unique inverse. | Erasing the only polarity signal cannot become a required repair. |
+| Compositions | Compose qualified operations, then recheck uniqueness of the complete source. | Individually reversible operations may become jointly ambiguous; do not assume compositional recoverability. |
+
+Preserve operation order and intermediate strings. A composition that overwrites a cue used to justify another repair fails qualification. Case views and the inverse check are created before model outputs; no corruption is selected because a model failed it. Severity is a recorded factor, not an adaptive attack budget chosen per architecture.
+
+The main generated suite is text-only. Applying TTS or an actual recognizer to these same cases changes the source process and can destroy recoverability. Such a view requires its own construction filter, population ID and cost record; it cannot inherit the exact field-state certificate merely because the original text record had one.
+
+### V.7. Splits, grouping and contamination
+
+Assign family packs to training, development and final test before drawing values or producing corrupted views. A pack contains related template skeletons, surface paraphrases, semantic relations and lexical stems. All clean/repair/mixed variants and all acoustic variants of one latent bundle remain in the same partition. The test pool must not provide seeds for the 30/20/10/40 training mixture, TTS prompts, teacher mining or generator debugging.
+
+Use four frozen test template-family cells per category. Each contains 100 latent groups for the full pool; the mandatory panel selects 30 per cell. Training and development use disjoint families from the same declared constructor catalog. Semantic-family IDs track shared relation patterns; lexical-family IDs group identifier/package/model stems, URL/path stems and complete field bundles where relevant. Common grammar primitives are explicitly exempt from an impossible demand that every digit or unit be unseen.
+
+A nominal count of 100 instantiated test template IDs is not proof of 100 independent linguistic mechanisms. Preserve coarser constructor and semantic dependencies and publish the actual family graph. If many template IDs share one constructor, treat that dependency transparently. Exact duplicate sources, references or latent bundles across partitions are prohibited; near-duplicate grouping thresholds and collision rules are fixed before model outputs.
+
+The main generated table is a paired finite-benchmark comparison with all registered seed results. If uncertainty for new random value draws is reported, it is conditional on the frozen grammar/family mix and resamples complete base groups within registered cells. A broader claim about unseen template/semantic families needs adequate independent family replication and a separately justified grouped analysis. Neither three source views nor multiple training seeds creates extra independent natural examples.
+
+Generated new strings reduce direct duplication risk but do not establish absence of familiar templates, names, vocabularies or grammar rules from pretrained models. Record known overlap and unknown upstream exposure. Do not market fresh pseudorandom strings as complete decontamination.
+
+### V.8. Seeds, deterministic sampling and construction limits
+
+Freeze these proposed namespaces in `paper_protocol_v2`:
+
+| Purpose | Seed |
+|---|---:|
+| Generator manifest | 120012 |
+| Family partition | 120101 |
+| Training values | 120201 |
+| Development values | 120202 |
+| Test values | 120203 |
+| Corruption choices | 120301 |
+| TTS variant generation | 120401 |
+| Acoustic-noise generation | 120402 |
+| Mandatory stress-panel selection | 120501 |
+
+Derive per-record/per-operation randomness with domain-separated SHA-256 over the protocol ID, purpose, seed, partition, family ID, base-group ID, view ID and operation ordinal. Specify serialization, Unicode policy, byte order and unbiased bounded-integer sampling in the future implementation manifest. Parallel workers must not share a mutable random stream whose result depends on execution order. These generator seeds do not replace training seeds 1729/2718/31415 or development seed 42.
+
+Every proposed record undergoes deterministic constructor checks: valid typed values, valid calendar/range constraints, collision-free scaffold escaping, correct span maps, exact rerendering, unique reference structural parse, source inverse qualification and expected view membership. Rejection reasons are enumerated and counted. A fixed maximum of 50 proposals per required base-group slot is a planning bound; exhaustion blocks the cell quota rather than starting an unbounded search. Freeze any changed bound on development evidence before final generation.
+
+Test-pool values and model-panel selection are sealed after the approved schema/grammar qualification. A bug discovered from unblinded test-model results cannot be repaired and silently presented as the original confirmatory suite. Version the correction, retain the original outputs, and narrow the claim or obtain fresh held-out evidence as required by the registry.
+
+### V.9. Exact scoring contract
+
+Use the generic scorer in Part IV together with the latent interface here. Distinguish the **structural grammar**, which parses the complete output into the frozen scaffold and permissive field slots, from the **target language**, which additionally requires the fields' permitted target values and surfaces. A wrong but structurally parseable value does not destroy the ability to score other slots.
+
+The structural parser must consume the whole output. It preserves slot order, field multiplicity and bindings, and permits wrong or empty slot contents so failures can be measured. It never searches for a preferred substring and discards the rest. Extra prefaces, suffixes, duplicate fields, swapped labels and conflicting values are structural or target failures under the frozen grammar, even if a correct target value appears somewhere in the output.
+
+For a uniquely parsed output, a field succeeds if its captured surface belongs to that occurrence's finite accepted set and its binding/multiplicity/order constraints hold. The initially correct and repair-required field sets are frozen from `R`, `S` and the qualified construction before `O`. Fields that were already correct cannot be relabeled as repair opportunities because the model changed them.
+
+If complete structural parsing is invalid or ambiguous, structure-qualified field success is zero under the primary generated conformance definition, with the fixed field/case denominators retained. Report structural failure separately. This is a deliberately strict exact-task failure, not a claim that every field's semantic value was corrupted. Optional localized diagnostics may report identifiable substrings with uncertainty, but cannot override the complete-output endpoint or turn a malformed output into a successful case.
+
+Report source-correct field retention, introduced structure-qualified field failure, required-field repair, and the corresponding raw numerators/denominators, separately for payloads and witnesses. Report whole-case target conformance; all-source-correct-fields retained; and mixed-case success, requiring all designated repairs plus retention of all initially correct fields and valid complete structure. Undefined rates with no eligible fields remain undefined, not 100%. Identity has zero required-field repair on genuinely nonempty qualified repair sets.
+
+Exact UTF-8 is the default for paths, flags, identifiers, version strings and other technical bytes. Any NFC or other canonicalization is type-specific, versioned and reported as a separate or explicitly allowed form. Do not globally lowercase, strip punctuation, trim an extra sentence, collapse meaningful whitespace, decode URL escapes, or select the nearest-looking value to rescue an output. Numeric value-equivalence diagnostics use exact integer/rational representations and do not replace strict surface conformance.
+
+An actually emitted empty transcript is an output and fails all nonempty required fields. Invalid UTF-8, absent output and unrenderable edit programs produce a failed-output record and zero generated conformance; no row disappears. A valid capped prefix can receive ordinary WER/CER and observed field diagnostics, but an incomplete/capped output cannot pass complete restoration. Source-return safeguards belong to guarded/full system scores, not the bare proposal.
+
+Swapping two genuinely identical rendered values produces no observable change in the text. The scorer must not claim to detect a hidden semantic swap when the strings, positions and bindings presented to it are unchanged. Use distinct nearby values for observable binding-swap tests, and equal-valued repetitions for multiplicity/occurrence tests.
+
+### V.10. Illustrative records
+
+The following are documentation fixtures only. They are not sampled benchmark cases, model results or a completed implementation. All strings are ASCII, so the shown UTF-8 byte and Unicode-code-point spans coincide. Each record would also carry the hashes and family/partition metadata required by the schema; those hashes cannot be fabricated before the corresponding manifest exists.
+
+~~~json
+{
+  "schema_version": "technical_latent_v1",
+  "population_id": "documentation_fixture",
+  "case_id": "example_clean_repetition",
+  "base_group_id": "example_group_01",
+  "template_id": "two_labeled_counts_v1",
+  "view_kind": "clean",
+  "reference_utf8": "Primary count: 18; backup count: 18.",
+  "source_utf8": "Primary count: 18; backup count: 18.",
+  "canonicalization": "exact_utf8_v1",
+  "fields": [
+    {"field_id": "primary_count.1", "field_type": "integer",
+     "canonical_value": "18", "allowed_target_surfaces": ["18"],
+     "reference_span": [15, 17], "source_span": [15, 17],
+     "binding_id": "primary", "preserve_required": true,
+     "repair_required": false},
+    {"field_id": "backup_count.1", "field_type": "integer",
+     "canonical_value": "18", "allowed_target_surfaces": ["18"],
+     "reference_span": [33, 35], "source_span": [33, 35],
+     "binding_id": "backup", "preserve_required": true,
+     "repair_required": false}
+  ],
+  "operations": [],
+  "generation_seed": 120203,
+  "MEASURED_RESULT": {}
+}
+~~~
+
+This fixture requires two correctly bound occurrences. An output retaining one `18` or appending a third count does not pass. The record makes no claim about a swap that leaves the exact two equal strings unchanged.
+
+~~~json
+{
+  "schema_version": "technical_latent_v1",
+  "population_id": "documentation_fixture",
+  "case_id": "example_unique_repair",
+  "base_group_id": "example_group_02",
+  "template_id": "typed_integer_v1",
+  "view_kind": "repair_focused",
+  "reference_utf8": "Integer retries: 18.",
+  "source_utf8": "Integer retries: l8.",
+  "canonicalization": "exact_utf8_v1",
+  "fields": [
+    {"field_id": "retries.1", "field_type": "unsigned_integer",
+     "canonical_value": "18", "allowed_target_surfaces": ["18"],
+     "reference_span": [17, 19], "source_span": [17, 19],
+     "binding_id": "retries", "preserve_required": false,
+     "repair_required": true,
+     "recoverability_class": "unique_public_inverse",
+     "recoverability_witness": "integer_type_plus_1_to_l_rule_v1",
+     "inverse_candidate_count": 1}
+  ],
+  "operations": [
+    {"operator": "typed_digit_confusable_v1", "field_id": "retries.1",
+     "before": "18", "after": "l8", "changed_span": [17, 18]}
+  ],
+  "generation_seed": 120203,
+  "MEASURED_RESULT": {}
+}
+~~~
+
+This small schema fixture has one payload field; the full three-view pool uses at least two so that mixed cases exist. Its inverse is unique only under the explicitly published typed-corruption rule. It is not evidence of unconstrained natural-language recoverability.
+
+~~~json
+{
+  "schema_version": "technical_latent_v1",
+  "population_id": "documentation_fixture",
+  "case_id": "example_mixed",
+  "base_group_id": "example_group_03",
+  "template_id": "retry_and_quantity_v1",
+  "view_kind": "mixed",
+  "reference_utf8": "Integer retries: 18; timeout: 5 s.",
+  "source_utf8": "Integer retries: l8; timeout: 5 s.",
+  "canonicalization": "exact_utf8_v1",
+  "fields": [
+    {"field_id": "retries.1", "field_type": "unsigned_integer",
+     "canonical_value": "18", "allowed_target_surfaces": ["18"],
+     "reference_span": [17, 19], "source_span": [17, 19],
+     "binding_id": "retries", "preserve_required": false,
+     "repair_required": true,
+     "recoverability_class": "unique_public_inverse",
+     "recoverability_witness": "integer_type_plus_1_to_l_rule_v1"},
+    {"field_id": "timeout.1", "field_type": "quantity",
+     "canonical_value": {"coefficient": "5", "scale": 0, "unit": "s"},
+     "allowed_target_surfaces": ["5 s"],
+     "reference_span": [30, 33], "source_span": [30, 33],
+     "binding_id": "timeout", "preserve_required": true,
+     "repair_required": false}
+  ],
+  "operations": [
+    {"operator": "typed_digit_confusable_v1", "field_id": "retries.1",
+     "before": "18", "after": "l8", "changed_span": [17, 18]}
+  ],
+  "generation_seed": 120203,
+  "MEASURED_RESULT": {}
+}
+~~~
+
+An output with retries `18` and timeout `50 s` succeeds on the first field and fails on the second if the complete structure parses uniquely; it fails mixed-case success. An output that adds an unsolicited suffix fails complete-output conformance even when both expected values occur earlier.
+
+### V.11. Constructor and scorer qualification
+
+Qualification is software verification, not a review queue. Before any final model output, test deterministic regeneration, round-trip rendering/parsing, exact span maps, escaping, finite accepted surfaces, source-only inverse uniqueness and view classification. Exhaustively check small field domains and short operation compositions where enumeration is practical. Property-based tests generate larger domain cases with independently computed latent expectations.
+
+Required metamorphic fixtures include identity; one uniquely wrong field repaired; one correct field changed; a mixed repair with collateral damage; omitted/duplicated/reordered fields; near-confusable values; changed units/bindings; extra prefix/suffix; truncation; malformed Unicode; and repeated equal values with no observable swap. Relabeling field IDs without changing text and bindings must not alter a metric. Reordering the test-file rows must not change aggregate results or the nested panel. Increasing a copied literal's occurrences must change the denominator only through explicit new occurrence records.
+
+The parser must distinguish a complete structural match with a wrong value from structural nonconformance. Verify both outcomes against small fixtures. An independent implementation or exhaustive reference checker validates the full-parser/field-matcher behavior on bounded domains. Part IV supplies the generic sequence-scorer parity and ambiguity tests; this suite supplies exact latent fixtures for those tests.
+
+No test in this gate requires listening to TTS or manually labeling a large output sample. Optional author inspection can illustrate a bug but cannot create final labels, resolve ambiguity or increase a primary denominator. An AI judge also cannot overrule exact conformance or turn a nonunique inverse into a certified repair.
+
+### V.12. Reporting, release and negative results
+
+Release the qualified grammar/constructor descriptions, latent schema, seeds, version hashes, approved vocabulary provenance, split/family manifests, full-pool manifest, mandatory-panel membership and scoring rules where rights permit. References and model outputs retain separate files/identities; the model-input export excludes latent answers. Record every rejected proposal by construction reason and every failed model output by runtime reason.
+
+Tables identify natural versus generated populations, full pool versus model panel, payload versus witness fields, and clean versus repair-focused versus mixed views. Report all seed-specific results and complete-output failure rates. Generated exact-match or field-conformance success is not relabeled semantic safety, general ASR accuracy or real-user failure probability.
+
+A result in which identity preserves everything but repairs nothing is an expected control. A public-grammar inverse baseline that solves the qualified fields is also expected. A sparse editor that preserves fields by making too few necessary changes demonstrates a tradeoff, not a complete win. A result confined to the generated grammar cannot replace the natural-reference hypothesis. These outcomes remain reportable without any new human annotation.
+
+**MEASURED RESULT — empty.** No pool, model panel, generator, scorer, qualification test, model prediction or empirical coverage estimate was created by this specification.
+
+
+## Part VI - One-month execution plan
+
+**Status: proposed execution plan, not an implementation or a completed experiment.** No models, corpora, scorers, benchmarks or repositories were created or run by this specification. A full thirty-day study is possible only if the native qualification measurements, implementation readiness, automatic data yield and source-cluster analysis gates support the complete workload. The tables below expose scenarios that do and do not fit. They do not establish an observed M5 Pro rate.
+
+### VI.1 Nonnegotiable scope and finish line
+
+The mandatory scientific core is twelve fresh scratch runs: A100 text, B100 text, C101 text and B100 acoustic, each at seeds 1729/2718/31415 and 150M paper_canonical_v2 anchored exposures. Twelve 10M development probes add 120M exposure, with pilot seed 42. A/B/C text select within their preregistered development recipe grid. Acoustic probes check feasibility; final acoustic training copies exactly the B-text-selected optimizer, learning rate and continuous 3M-warmup/cosine schedule. Failed acoustic feasibility prompts a common B development amendment before freeze or a blocked H2, not a separately favored optimizer.
+
+The practical control is mandatory ByT5-small with three adaptation seeds and three bounded development recipes, qualified at its actual native byte lengths, plus one pinned task-matched Qwen configuration. The provisional ByT5 operation allocation is at most 1.0 × 10^18 modeled FLOPs, not proof that a useful 150M-exposure adaptation fits. Register its actual useful adaptation budget, downstream time cap, native context support, optimizer, learning and stopping policy before final comparison. If a valid comparator cannot fit, the core plan needs a pre-test budget/calendar amendment; quietly omitting or undertraining it is not a valid month-saving device.
+
+Full sealed-test inference occurs only at final 150M for scratch models. Save 50M/100M weights and development learning curves. Save the predeclared measured-time T* checkpoints and report measured time plus development-quality comparisons. Additional full-test learning curves or T* quality need explicit pre-freeze capacity. Final 150M quality is not simultaneously called time-matched when actual training times differ.
+
+The natural input population is the source-only eligible inventory of 8,826 nominal cases, all 5,273 LS-PC test and 3,553 released SLUE-VoxCeleb test. Run Parakeet and one pinned Whisper view of the same audio. Evaluate all 16 model/seed configurations on both views and on the fixed 9,000-case generated panel. The panel is 3,000 complete latent groups, clean/repair/mixed, hash-selected as 30 groups in each of 25 × 4 category/template cells. The full 30,000-case pool receives generator/schema/conformance treatment; model inference on the remaining 21,000 is optional unless BENCH qualifies it before freeze.
+
+The deliverable at day 30, if gates pass, is a complete result registry, reproducible analysis, figures and manuscript with negative/inconclusive outcomes preserved. A thirty-day pilot may still be valuable, but it is labeled a pilot if core training, comparison or scoring remains incomplete. No positive H1/H2 outcome is a finish-line requirement.
+
+### VI.2 Researcher attention, with zero required annotation
+
+No rater, second rater, adjudicator, author-labeling campaign or listening queue is required. Existing public references and exact generated latent records supply the declared reference policy. Optional tiny development debugging inspections do not become a label source or quantitative primary evidence. AI-assisted code drafting and review can reduce some active work, but their output still needs engineering review and cannot provide extra local accelerator capacity.
+
+The following is a **110–150 active person-hour planning allocation**, including reserve. It is a proposed attention envelope, not a claim that an unimplemented custom training stack can certainly be completed at this pace.
+
+| Researcher-active work | Proposed hours | Required output |
+| --- | ---: | --- |
+| Protocol, source access/rights and immutable manifests | 6–8 | Frozen scope, licenses/access, source-only exclusions and provenance plan |
+| Owned model/training/native runtime implementation review and BENCH qualification | 24–32 | Correct gradients/masks/accumulation/resume and measured production-shaped rates |
+| Deterministic scorer, generator and automatic data-pipeline review | 16–22 | Independent tiny-fixture checks, cap policy, reference normalization and structural checks |
+| ByT5/Qwen baselines and bounded prior-method compatibility decision | 8–12 | Native comparator qualification and task-matched pinned control |
+| Run supervision, failures, storage and recovery | 10–14 | Complete logs, verified checkpoints and exact retry accounting |
+| Statistical analysis and figures | 12–16 | Source-cluster/identification calculations, denominators and full negative-result reporting |
+| Manuscript and reproducibility package | 18–24 | Claim-linked paper, registry, limitations and release-ready permitted artifacts |
+| Active-work contingency reserve | 16–22 | Unexpected implementation, access or recovery work without borrowing from required comparisons |
+| **Total** | **110–150** | No human annotation or listening workload hidden in the sum |
+
+This averages about 3.7–5.0 active hours per calendar day, with concentrated early review days. Completing native model/scorer qualification and baseline readiness by day 7–8 is aggressive; AI coding assistance does not eliminate the researcher's review bottleneck. Calendar arithmetic does not ensure that all expertise or implementation effort fits. If core kernels, byte-model adaptation or the exact scorer cannot be qualified within the opening implementation window, reassess before starting final runs. Do not count generated code as tested code, or use the reserve twice for both routine unfinished work and later reruns.
+
+ConstDecoder receives a bounded compatibility decision rather than an open-ended reimplementation: provisionally at most 2 active hours to assess license/assets, interface, local backend and task compatibility. “Viable for the month” means code/assets, task compatibility and measured budget all qualify before freeze. If direct usable assets meet all three conditions, allow at most 6 additional active hours and 2 device-hours for the registered integration probe; otherwise mark the executable comparison as code-, task- or budget-blocked with a precise scope explanation and retain the prior-work comparison. This cap is included in the baseline/contingency allowance, not free extra labor. It does not replace mandatory ByT5 or authorize reproducing a full prior project inside the month.
+
+### VI.3 Serial accelerator ledger
+
+The Mac has one shared GPU/Metal resource. Training, TTS, ASR, ByT5/Qwen inference and other neural evaluation are serialized unless a particular overlap is measured to improve the whole schedule without breaking memory or timing comparability. Coding agents do not change this resource. Model-derived FLOPs remain distinct from measured accelerator wall time.
+
+Retaining the Section 19 shape assumptions and dense-head C planning scenario gives:
+
+| Training work | Modeled FLOPs |
+| --- | ---: |
+| Twelve 150M final scratch runs | 1.1024757504 × 10^18 |
+| Twelve 10M development probes | 0.07349838336 × 10^18 |
+| Scratch total | 1.17597413376 × 10^18 |
+| Provisional ByT5 native adaptation/development allocation | up to 1.0 × 10^18 |
+| **Training allocation used in sensitivity** | **2.17597413376 × 10^18** |
+
+At assumed effective 1/4/8 TFLOP/s, that allocation takes 604.44/151.11/75.55 continuous device-hours before the other work below. These are sensitivity assumptions, not a measured range or guarantee. Native byte lengths, decoder action density, masks, rematerialization and launch overhead can invalidate a shared rate; the final schedule instead sums measured per-arm/per-bucket costs.
+
+| Other device work | Provisional allocation | What must be measured before freeze |
+| --- | ---: | --- |
+| Correctness, full-update BENCH, thermal and resume tests | 16 h | Selected—not every optional—shape/path grid; compile/warmup separately logged |
+| Complete training/development construction: bounded acoustic pool plus selected real training/development/calibration Parakeet ASR | 24 h | Actual selected audio hours, per-stage RTF, accepted yield, loading/I/O and retries; add any overrun |
+| Final natural-test Parakeet plus Whisper raw ASR only | 18 h | Nominal 17.95 h audio; combined RTF near 1 would consume 17.95 h before loading/I/O |
+| Decoded development checks, warm/cold and common guard/full timing, bounded baseline integration | 12 h | Every development system/checkpoint/prompt cell, timing-session requests, cold loads and fallback calls; add any overrun |
+| **Subtotal** | **70 h** | Caps are provisional and cannot hide overrun |
+
+The acoustic pool is generated once, not separately for every training seed. Its initial clip arithmetic is 4,000 × 10-second base synthesis≈11.1 h;8,000 two-view Parakeet decodes≈22.2 h;4,000 independent verifier decodes≈11.1 h. Device time is 11.1 RTF_TTS+22.2 RTF_Parakeet+11.1 RTF_verifier plus preprocessing, rejection and bounded retries. At each RTF=.2 this is 8.9 h before those costs. Automatic agreement is a defect screen, not audio truth; accepted yield and unique-seed diversity can still block H2.
+
+The 10% real-pair allocation needs raw Parakeet hypotheses on the **selected real training, development and calibration audio** as well. Let H_real_train_dev_audio be its exact source-manifest audio hours. Its additional device term is H_real_train_dev_audio × RTF_Parakeet plus model loading, preprocessing, I/O and registered retries. It is included in the same provisional **24-hour complete construction allowance**, alongside the acoustic-pool formula above. Record subset-specific hours; an existing reference transcript or available recording is not a completed recognizer run. Existing hypotheses may be reused only when their pinned recognizer/decoding/preprocessing/provenance satisfy the frozen recipe, with no assumed cache availability. A bounded selected pool is sufficient if it meets the registered exposure/support plan; the specification does not require decoding an entire training corpus. If measured total construction exceeds 24 hours, add the overrun to the month ledger. The separate 18 hours is exclusively the final natural two-recognizer ASR allowance.
+
+Decoded development quality also costs device time beyond the final-output roster. Freeze a small common development decoding panel and enumerate every HPO recipe, final-seed 50M/100M/150M checkpoint, retained T* checkpoint, ByT5 development/final check and bounded Qwen prompt candidate that uses it. Price the exact sum of panel size × system/checkpoint/prompt repetitions × measured seconds per request, plus cold loads/compiles. Charge those checks to the **12-hour combined development/runtime allowance**, together with required warm/cold, guard/full-system timing and bounded comparator integration. Report the panel count and every reuse; if the combined workload exceeds 12 hours, add the measured excess. Teacher-forced loss is not a decoded WER/repair curve and cannot stand in for the registered quality checks.
+
+Corrector inference is a separate large term. Natural two-view evaluation produces 282,432 outputs; the 9,000-case panel adds 144,000; mandatory total **426,432**. Per-system/native-length timing must replace the pooled sensitivity below. Loading and compiles are not charged on every warm request, but must be charged on every actual cold run. Guard rescoring reuses cached proposals. Fresh fallback calls, quantized exports, prompt sweeps and extra checkpoints add their own output cells.
+
+| Assumed weighted mean seconds per correction output | Mandatory 426,432 outputs | Full 30,000-case panel alternative:762,432 outputs |
+| --- | ---: | ---: |
+| .25 | 29.61 h | 52.95 h |
+| .5 | 59.23 h | 105.89 h |
+| 1.0 | 118.45 h | 211.79 h |
+
+The full-pool alternative adds 336,000 model outputs, or 46.67 h at hypothetical .5 seconds each. A second complete 16-system evaluation at T* or an earlier checkpoint would add up to another 426,432 outputs; two such extra checkpoint rosters would add 852,864. Actual optional rosters can be smaller if explicitly specified, but must be counted rather than called free learning curves.
+
+### VI.4 CPU scoring, contention and the feasibility inequality
+
+The exact triple-alignment scorer can be expensive on repeated or long strings. Its frozen work caps are 4 million materialized cells per pairwise lattice,250000 reachable joint states and 1.75 million examined joint moves, with deterministic traversal, exact fast paths and analytic attribution bounds on capped cases as specified in Part IV. Ordinary rolling-row edit distance must still complete; a missing WER computation is scoring-pending and blocks the final analysis. A cap never drops a row or creates a listening task.
+
+Compute alignment sufficient counts once per output, then bootstrap cached counts. Twenty thousand bootstrap draws do not mean twenty thousand alignment runs. At .01/.1/1 hypothetical CPU-second per output, mandatory scoring alone takes 1.18/11.85/118.45 single-worker CPU-hours. The planning table below includes **16 serial CPU-hours** for scoring, ordinary edit distances, aggregation and bootstrap setup as a provisional favorable allowance. The actual scorer benchmark must establish whether this fits and whether cap-induced bounds remain informative. Generator conformance, manifests and statistics also have measured CPU costs; any overrun enters this ledger, not an unpriced background task.
+
+For a conservative schedule let H_GPU be all serial device work, H_CPU_incremental the CPU work that lies on the critical path after measured safe overlap, and H_fixed the remaining required setup/I/O stages not already counted. Let H_available be actual powered, unattended availability before the results deadline. The acceptance condition is:
+
+~~~text
+H_required = 1.25 * (H_GPU + H_CPU_incremental + H_fixed)
+H_required <= H_available,
+with all implementation/data prerequisites ready before dependent jobs,
+and statistical/figure/writing time available before day 30.
+~~~
+
+The 25% reserve is for measured operational variability, a bounded failed-run replay, checkpointing and recovery, not a claim that all failures fit. The exact retry policy allows the registered single replay for numerical failure, with the original failed work recorded; repeated failure blocks the cell rather than silently consuming unlimited days. Verify whether the most expensive permissible replay fits the reserve. If it does not, increase the reserve or reject the schedule before freeze.
+
+CPU jobs may overlap GPU jobs only after measuring the joint workload's memory, bandwidth, thermal and throughput effects. If overlap reduces GPU throughput, account for that loss. Simply subtracting all CPU hours because the machine has CPU cores is invalid. The conservative table takes the 16-hour allowance as fully serial; qualified overlap can improve it.
+
+| Assumed effective training rate | Assumed correction seconds/output | GPU work: training+inference+70 h | Plus 16 h CPU and 25% reserve | Fits 352 h? | Fits 440 h? |
+| --- | ---: | ---: | ---: | --- | --- |
+| 1 TF/s | .5 | 733.66 h | 937.08 h | No | No |
+| 4 TF/s | .25 | 250.72 h | 333.40 h | Conditional arithmetic fit | Conditional arithmetic fit |
+| 4 TF/s | .5 | 280.34 h | 370.42 h | No | Conditional arithmetic fit |
+| 4 TF/s | 1.0 | 339.56 h | 444.45 h | No | No |
+| 8 TF/s | .5 | 204.78 h | 275.98 h | Conditional arithmetic fit | Conditional arithmetic fit |
+| 8 TF/s | 1.0 | 264.01 h | 350.01 h | Bare arithmetic fit | Conditional arithmetic fit |
+
+Twenty-two available days at 16 h/day give 352 h; at 20 h/day give 440 h. These are days 4–25 including early BENCH/HPO and construction, not 22 additional days after the day 7–8 freeze. The illustrative 370.42-hour scenario remains conditional on all construction, including selected real training/development ASR, fitting the 24-hour allowance and all decoded development/runtime work fitting the 12-hour allowance; every measured excess is added before applying the reserve. A fit in this table is necessary but not sufficient: individual dependencies, early code readiness, final scoring/writing deadlines, the actual ByT5 schedule and cap coverage still decide feasibility. Near-capacity cases leave little room for timing-model error. The 1 TF/s scenario alone disproves any unconditional month promise.
+
+For transparency, the full 30,000-case alternative at hypothetical 4 TF/s and .5 seconds/output gives 408.75 h with 25% reserve before CPU, or **428.75 h with the same 16 h serial CPU allowance**. That CPU allowance would need separate qualification for 762,432 outputs; it cannot be reused automatically. This alternative barely fits 440 h on paper and is not the default mandatory scope.
+
+### VI.5 Calendar and dependency gates
+
+Use the following as a proposed dependency plan, not a claim that all tasks have already started. Twenty-two device days can provisionally run from days 4–25, leaving the final days for completed analysis and review. Methods writing and registry preparation begin earlier. The actual calendar is rebuilt from BENCH durations before final runs; no job is assigned time before its inputs and software are ready.
+
+| Calendar window | Researcher-active focus | Unattended work and hard gate |
+| --- | --- | --- |
+| Days 1–3 | Finalize source access, protocol, exact model/scorer contracts, implementation review assignments, manifests and initial software tests | No long training. Source-only population and rights/access must be feasible; no presumed user Mac measurement. |
+| Days 4–7 | Qualify model correctness, native ByT5, scorer/property tests, development recipes and construction policy | Serial BENCH/HPO, bounded TTS/verifier/ASR jobs when prerequisites pass. Public test ASR may continue later; it need not delay training freeze. Inventory and source grouping remain candidate-blind. |
+| Day 7–8 decision | Freeze training/scoring/decoding, practical margins, source clusters, cap policy, T*, native comparator budget and complete job queue | Accept full study only if measured critical path plus reserve fits. Otherwise amend before outcomes or declare a pilot/longer calendar. |
+| Days 8–21 | Monitor logs/checkpoints, verify completion, write methods and limitations while jobs run | Sequential final training with cached validation; schedule final model inference after its checkpoint is frozen. Do not share GPU with competing TTS/inference and label the result an uncontended benchmark. |
+| Days 20–25 | Resolve software/data-processing failures under frozen policy; verify immutable output/score ledgers | Finish both natural views,9000-case panel, runtime sessions and CPU scoring. Exact execution order comes from measured per-arm durations. No manual label repair. |
+| Days 26–28 | Run frozen source-cluster inference, produce claim-linked figures/tables and complete registry | All final outputs and denominator/cap coverage records must exist. Undefined/inconclusive outcomes remain visible. |
+| Days 29–30 | Review statistical interpretation, prior-work scope, artifact rights and manuscript reproducibility | Package complete evidence; label any unfinished mandatory cell and resulting scope limitation. |
+
+Early development work and final runs share the same 70-hour allowance and modeled training ledger; they are not counted twice. The rows do not assume that a four-day opening device window can perform every preparatory ASR job plus all model development. Jobs that are independent of freeze can move later, but the total and critical path still must fit. If code review or native adaptation takes longer than planned, device availability alone cannot rescue the month.
+
+### VI.6 Predeclared reductions and stop rules
+
+Before final outcomes, remove optional work in this order when calibration exceeds capacity: the remaining 21,000 generated model cases; full-test 50M/100M/T* re-evaluation; extra prompts/recognizers/export quantization sweeps; executable ConstDecoder integration beyond its cheap decision gate; objective ablations; B203/B316 scaling and all longer product/educational campaigns. The mandatory primary data/scoring contracts remain intact. If a removed item later motivates a claim, it needs a new budget and the corresponding inferential status.
+
+Do not save the month by dropping a final seed, shortening 150M after seeing quality, tuning acoustic independently, hiding failed cells, removing required ByT5, ignoring padding/backward semantics or switching to an easier output-dependent denominator. Do not lower the evidence bar or relax H1/H2 margins to obtain a publishable positive result.
+
+If the complete core still cannot fit after optional reductions, choose before final outcomes between a longer calendar and a clearly scoped implementation/pilot report. If source access, useful ByT5 adaptation, shared acoustic support, correct scorer behavior or sufficient statistical precision remains blocked, state the blocked claim explicitly. A result with valid broad bounds is publishable as limited evidence; it is not a reason to add human annotation against the zero-annotation constraint.
+
+The strongest feasible month outcome is a carefully bounded empirical comparison with complete run/output accounting, robust deterministic scoring and honest negative results. It does not establish universal scaling, production semantic safety, all-English coverage or an observed hardware capability until the corresponding experiments actually exist.
+
+
+## Part VII - Prospective manuscript outline v2
+
+### VII.1 Identity and contribution statement
+
+**Status: prospective outline, not a results manuscript.** No proposed model, scorer or benchmark has been implemented for this revision. Every result slot remains empty. The eventual manuscript should lead with a controlled empirical question and report what actually happens, including negative and inconclusive outcomes.
+
+Preferred working title: **Output Representation and the Repair–Preservation Tradeoff in ASR Transcript Restoration.** Literal alternative: **Reference-Error Repair and Error Introduction in Small ASR Restorers.** The first paragraph and abstract must define preservation in relation to released references; the title is not a promise of universal semantic fidelity. Do not revive FTR as an independently human-annotated resource or coin a metric acronym to imply novelty.
+
+The strongest prospective contribution is a matched A/B/C study with a closely controlled B/C representation-plus-renderer comparison. The acoustic replacement and native resource evidence may support a second contribution if they establish an informative result. The scorer and exact technical generator are methodology/artifacts with credited antecedents. A public resource claim requires an actual qualified release and a demonstrated distinction, not a planned file name. [M1-M6, T1-T4]
+
+The prospective manuscript is a public English ASR-restoration study motivated by LocalFlow. It does not depend on private owner history, product promotion, a 1B-token educational finish, cloud hardware or another human evaluator. Its scientific scope survives removal of every optional author example and model-based judge analysis.
+
+### VII.2 Abstract structure to complete after execution
+
+The abstract should use five compact moves, filled only from frozen-run records:
+
+1. **Problem:** reference restoration must repair recognizer errors while limiting errors introduced during correction; WER alone can hide compensating changes.
+2. **Design:** compare causal full text, encoder-decoder full text and sparse edit/copy at matched approximately 100M scale, 150M canonical downstream exposure and three seeds; name the adapted small-pretrained and task-matched instruction-model controls.
+3. **Evidence:** state the actual eligible natural cases, domains, recognizers and source groups; distinguish the actual generated model panel from the full generator pool; name the deterministic ambiguity/failure policy.
+4. **Results:** insert the actual H1/H2 effect, interval, utility and noninferiority status. If unsupported or inconclusive, say so. Include one resource finding only if native measurements support it. Do not insert a favorable expected number from the specification.
+5. **Limit:** state that automatic outcomes are reference-conditional and formal-suite-specific, not comprehensive human semantic judgments. Point to the actual public artifacts or identify release limits.
+
+The required result payload for drafting is empty:
+
+~~~json
+{
+  "actual_natural_population": null,
+  "actual_source_clusters": null,
+  "actual_stress_panel": null,
+  "H1_introduced_error_effect_and_bound": null,
+  "H1_repair_WER_and_utility_gates": null,
+  "H2_WER_and_preservation_gates": null,
+  "pretrained_control_result": null,
+  "native_resource_result": null,
+  "principal_limitation": null,
+  "release_identity": null,
+  "MEASURED_RESULT": {}
+}
+~~~
+
+### VII.3 Full main-text hierarchy
+
+#### 1. Introduction
+
+**1.1 Why restoration has two error directions.** Explain that a corrector can fix an ASR error, leave it unresolved, introduce a new error, or preserve an already correct word. A simple obvious triple can illustrate the distinction. Include the source-insertion case so readers do not equate all introduced errors with edits to previously correct tokens.
+
+**1.2 The experimental question.** State RQ1 as the main representation question, RQ2 as the fixed acoustic-channel intervention, and RQ3 as practical context. State the matched scale/exposure regime without suggesting every family has equal serial work or lifetime pretraining.
+
+**1.3 Contributions and boundaries.** List only contributions established by completed evidence. Explain the role of the deterministic scorer and stress artifacts as methods. Do not characterize zero new human labels as evidence that human semantic evaluation is unnecessary for every task. It is feasible because this paper chooses a narrower estimand.
+
+**1.4 Roadmap and evidence status.** Identify primary versus secondary analyses and the fixed-seed interpretation. If a gate failed, signal that limitation rather than hiding it in a late appendix.
+
+#### 2. Related work and the remaining empirical distinction
+
+**2.1 ASR correction and compact specialists.** Compare the task inputs, model lineage, training budget, recognizers, reference policies and evaluation of Gu et al., PATCorrect, FastCorrect/SoftCorrect, ConstDecoder, conservative filtering and other nearest work retained in Section 3. An implementation from scratch is not itself a scientific advance. [N1-N10]
+
+**2.2 Correction evaluation.** Credit I-measure for three-way evaluation, M2 for alternative edit decompositions, ERRANT for automatic extraction/classification, GLEU and CLEME/CLEME2.0 for related reference evaluation and overcorrection analysis. Define exactly why ordinary-WER-preserving count bounds are used here. Do not call the study's ratios official I-measure, M2 or CLEME scores. [M1-M6]
+
+**2.3 Existing ASR correction corpora.** Explain that public hypotheses, references and algorithmic error labels already exist in resources including HyPoradise, HypR and RED-ACE. Distinguish a fixed released-hypothesis diagnostic from the controlled recognizer experiment. Data repackaging is not an independent population or a novel annotation source. [D21-D25]
+
+**2.4 Acoustic generation and verifiable stress tests.** Credit prior TTS→ASR and synthetic-to-real work, CheckList-style behavioral tests, IFEval-style verifiable requirements and RULER-style exact values/bindings. The remaining claim concerns this controlled restoration comparison. [N1, N9, N16, T1-T4]
+
+The nearest-work comparison table may summarize the ten complete Section 3 cards. It must show information privileges and budget differences, not just a row of benchmark scores collected from incompatible protocols.
+
+#### 3. Task and reference policies
+
+**3.1 Input/output contract.** Define raw 1-best input, trusted task framing and `restore_reference` output. Every system sees the same source text. Audio, N-best, confidence scores, private context and latent targets remain unavailable to the corrector. C receives no gold literal mask.
+
+**3.2 Existing natural references.** Describe LibriSpeech-PC and SLUE-VoxCeleb's selected policies, released splits, automatic eligibility and source grouping. State all-released SLUE versus the official ASR-compatible subset clearly. Preserve source transcripts rather than rewriting them into intended prose. **Planned table: T01.** [D1-D2, D18-D19]
+
+**3.3 What reference correctness means.** Explain single-reference mismatch, accepted surface forms, punctuation/casing, contractions, Unicode and lexical versus literal scoring. No new per-case listening verifies the references. Natural repair means movement toward R; it is not proof the source made the answer inferable.
+
+**3.4 Product separation.** Briefly explain why LocalFlow's normalized/post-proposal intent-cleanup task has separate target, input and deployment gates. Keep product thresholds out of the natural primary conclusion.
+
+#### 4. Models and shared implementation
+
+**4.1 Exact architectures.** Present A100/B100/C101 counts and concise diagrams of the causal, encoder-decoder and sparse-edit output paths. State B/C backbone sharing and the 395,523 added edit/control parameters. Exact tensor formulas belong in an appendix.
+
+**4.2 C's event and renderer contract.** Define action/start/end/replacement sequence, teacher forcing, `1+R+3K` decoder positions and `R+K` vocabulary targets. Explain that untouched gaps are copied mechanically while learned edits can still be wrong. The renderer is constitutive; its effect is not a detachable guard.
+
+**4.3 Common numerical contracts.** Summarize random initialization, tied embeddings, 16,384 byte BPE, normalization/RoPE/GQA, correct masks, whole-update component loss normalization, FP32 accumulation, checkpoint/resume and qualified numerical precision.
+
+**4.4 Context and representability.** Show the 1,024-target/1,027-C-event counterexample to clarify why common rendered length does not imply common native eligibility. Report training representability and common handling; final failures remain in the population.
+
+**4.5 Baselines and information audit.** Document raw/DET, adapted ByT5-small, BF16 task-matched Qwen and the bounded ConstDecoder feasibility outcome. Record imported weight lineage, native tokenizer, training/adaptation allowance and surface limitations. A blocked published editor does not become a successful reproduction. **Planned table: T06.**
+
+#### 5. Training data and acoustic-channel intervention
+
+**5.1 Shared exposure and curriculum.** Define `paper_canonical_v2` from the clean anchor plus full target and explain why a source-length-dependent count would confound corruption channels. State 100M/40M/10M phases, 30/20/10/40 shares and continuous LR schedule. Report unique sources and repeats separately.
+
+**5.2 Text corruption.** Describe deterministic operations calibrated on development ASR, source-visible repair rules and identity/mixed coverage. Keep source split and target lineage fixed before augmentation.
+
+**5.3 TTS→Parakeet treatment.** Show written target, deterministic spoken rendering, synthesized audio and realized ASR hypothesis as separate objects. Explain the closed grammar, automatic signal/CTC screening, accepted common support, fixed retry/reserve policy and remaining target-realization uncertainty. A verifier's agreement is not human certification. [D11, T5]
+
+**5.4 Training versus formal stress generation.** Distinguish the channel training pool from the final exact stress suite. Their seeds, template families, values and split identities remain separate. **Planned table: T04.**
+
+**5.5 HPO and optimization adequacy.** Report all twelve 10M scratch probes, acoustic probe roles, B-text-selected common recipe, ByT5 tuning and blocked/failed attempts. Establish why 150M is a meaningful study point from development, without selecting a favorable final checkpoint.
+
+#### 6. Automatic evaluation and software validity
+
+**6.1 Endpoints.** Define ordinary WER/CER/exact scores, raw reference-error repair, introduced error count, valid-completion repair, all fixed denominators and equal-domain aggregation. Explain why repair/(repair+damage) is not standard edit precision when wrong-to-wrong edits occur. **Planned table: T02.**
+
+**6.2 Joint alignment.** Describe R/S and R/O optimal lattices, compatible seven-move triple graph, conditional S/O objective and all tied optima. Give the nonempty-feasible-set argument and the identity/conservation consequences. State that the algorithm specifies an operational decomposition, not recovered human word provenance.
+
+**6.3 Ambiguity, computational caps and failures.** Distinguish source-consensus masks, output-local availability, total count bounds, ordinary-WER coverage and exact joint computational coverage. Show the conservative cap envelope. Explain valid prefix, missing/invalid C, explicit abstention and completion-gated repair. No difficult output disappears.
+
+**6.4 Scorer verification.** Report actual finite fixture, exhaustive 3,375-triple, property/metamorphic and independent-parity results after implementation. State what those tests establish and what they cannot establish about real reference truth. Release every general defect/fix fixture. No required human labeling or listening validation exists.
+
+**6.5 Natural literal subset.** Describe strict deterministic extraction, source/reference-only eligibility, unique occurrence/context, exact allowed forms and fixed denominators. Report categories with zero eligible instances rather than silently expanding them. **Planned table: T11.**
+
+**6.6 Exact technical stress suite.** Describe 25 categories, 30,000 generated pool, 9,000 mandatory model panel, three grouped views and source-visible unique-recovery witnesses. Define full structural parsing, per-field success, mixed joint success and complete target conformance. Include the inverse-rule baseline and distinguish formal task success from natural ASR efficacy. **Planned figure/table: F07/T12.**
+
+#### 7. Experimental protocol and statistics
+
+**7.1 Fixed run roster.** State twelve scratch final runs, three ByT5 adaptation seeds, one Qwen identity, 150M primary endpoints and all development budgets. Explain exact pairing and failures. Main tests do not select the best of three seeds.
+
+**7.2 Sealed data and inference.** Document source-only structural eligibility, source/reference masks, model/prompt/renderer freeze and separate final artifact freeze. Save 50M/100M snapshots but keep their MVP quality analysis on development data. A full sealed matched-time or intermediate roster requires a separately frozen compute expansion.
+
+**7.3 Primary estimands.** Explain the equal-domain mean of corpus ratios for introduced errors, completed repair and WER; fixed three-run mean; all-case denominators; and why it is not an ensemble or a deployment frequency.
+
+**7.4 H1/H2 decision rules.** Present every component and practical target. H1 must pass introduced-error superiority, completed-repair NI, WER NI and B/C utility versus DET/raw. H2 must pass WER superiority and introduced-error NI. Explain Bonferroni across two joint claims and intersection-union within each. Proposed margins require development justification before execution, not post-result adjustment.
+
+**7.5 Identification and sampling uncertainty.** Show least-favorable count-bound contrasts and separate source-cluster intervals, the actual grouping hierarchy/crossed sensitivity, fixed bootstrap seed and failure conventions. No intervals assume words, recognizers or synthetic variants are independent natural cases.
+
+**7.6 Precision and missingness.** Report actual source errors, words, source groups, coverage and identification widths. Explain zero denominators, sparse/degenerate variance and incomplete training cells. A large automatic n does not automatically make a 0.1pp introduced-error effect resolvable.
+
+#### 8. Results — populate only from completed records
+
+**8.1 Scorer and population accounting first.** Before model ranking, report actual eligible natural cases, references, errors, groups, exact-lattice coverage, ambiguity widths and software qualification. Readers need these to interpret H1/H2. **T01/T02.**
+
+**8.2 Representation and H1.** Show every seed and the fixed mean; raw and completed repair; introduced-error bounds; WER/CER; all H1/utility components and failures. A scatterplot uses repair versus introduced errors with uncertainty ranges, not a single optimistic alignment point. If gates fail, report the tradeoff or inconclusiveness. **F01/T03.**
+
+**8.3 Acoustic channel and H2.** Show both endpoints, each natural domain, source acceptance/yield and full generation cost. Report any scope lost to automatic screening. A selected support result cannot imply all TTS text is faithful or all real ASR errors are repairable. **F02/T04.**
+
+**8.4 Common guard attribution.** Compare identical cached bare proposals with the same guard off/on. Show coverage, valid completion, repair loss and introduced-error change. Separate full fallback-inclusive delivery; no Qwen correction is attributed to C or B. **F03/T05.**
+
+**8.5 Pretrained and deterministic context.** Compare ByT5/Qwen/raw/DET under exact task, precision and exposure identities. Mark a budget-limited comparator and any blocked published editor. A native latency advantage is not an equal-lifetime-compute claim. **F04/T06.**
+
+**8.6 Second recognizer.** Report the same audio, unchanged correctors and input-specific source-error/literal masks. This is transfer between two specified recognizers, with correlated audio provenance. **T07.**
+
+**8.7 Literals and exact technical behavior.** Keep natural literal rates and generated formal scores in separate tables/panels. Show clean, repair and mixed behavior, structural failures, inverse baseline and all category coverage. Include all generated groups selected before outputs; do not expand after finding a weak category. **T11/F07/T12.**
+
+#### 9. Native resources and execution feasibility
+
+**9.1 Correctness and BENCH-00.** Report the actual device/software, masks, backward path, five warmups, one hundred complete updates, thermal window and resume evidence. Calculated FLOPs remain modeled, not measured device operations. **T09/F06.**
+
+**9.2 Training and inference cost.** Include HPO, data creation, acoustic screening, public recognition, all model outputs, scorer CPU, statistics, checkpointing, failed/repeated work and load/compile time. Name the measured batch and request distribution. A median token speed cannot substitute for complete-request p95 or total evaluation time.
+
+**9.3 Solo schedule reality.** Report actual active researcher hours separately from unattended device and CPU hours after execution. Planned favorable scenarios are not retroactive measurements. Discuss whether 30 days was achieved only if a real start/end and workload ledger exists. No human-labeling effort is hidden in a generic review total.
+
+**9.4 Optional equal-time and quantized views.** Include only pre-budgeted, actually executed views and their separate precision/data identities. Their absence does not invalidate the primary equal-exposure comparison.
+
+#### 10. Discussion and limitations
+
+Discuss what output representation plausibly explains and what remains coupled to it: C heads, loss, action grammar, output length and renderer all change together. Common guard attribution is narrower than pure architecture identification. Explain optimization adequacy and the limited training-seed population.
+
+Discuss reference defects/policy, underidentified natural repair, literal extraction limits, conditional alignment interpretation, computational interval fallback, source clustering, automatic TTS screening errors, formal grammar artifacts, deterministic inverse strength, missing natural domains, unknown pretrained exposure and device specificity. The narrow evidence is not a semantic safety certificate or LocalFlow default-promotion result.
+
+If optional AI analysis was actually run, present it only as model-based verdicts with exact models/prompts, blinding, order, disagreement, contamination and cost. It never supplies primary truth or rescues an ambiguous deterministic result. The core discussion must remain valid if that entire supplement is removed.
+
+#### 11. Reproducibility, rights and release
+
+Identify the frozen protocol and amendments, source license/access boundaries, permitted reference/hypothesis payloads, acquisition recipes, model lineages, scorer/generator code, normalization tables, seeds, manifests, exact tests and output records. An accessible upstream recipe may be the correct release form for constrained audio. No private LocalFlow database is required.
+
+Report the clean-environment reconstruction status. A second human evaluator is not a requirement; the author can run a fresh environment with a separately authored program/oracle. Distinguish executable reconstruction from independently replicated scientific conclusions.
+
+#### 12. Conclusion
+
+Answer the tested representation and channel questions at their actual budgets and populations. State supported, falsified or inconclusive status without rebranding a failed joint gate as a win. Recommend a next experiment only when the residual uncertainty or observed cost justifies it. Keep product or larger-model decisions conditional on their own evidence.
+
+### VII.4 Appendix plan
+
+| Appendix | Complete contents and purpose |
+|---|---|
+| A — Architecture/math | All model dimensions, tensor counts, tying, initialization, masks, RoPE/GQA/RMSNorm/SwiGLU and worked parameter formulas |
+| B — Training and correctness | Whole-update C losses, token ledgers, context overflow, optimizer/schedule, V0–V10 checks, checkpoint/resume and all HPO attempts |
+| C — Scorer algorithm | Exact normalization/scanner, pair/triple recurrences, conditional optimum proofs, source masks, bounds and complexity/cap policy |
+| D — Software qualification | Finite fixtures, property/metamorphic configuration, exhaustive oracle domain, independent implementation parity and defect ledger |
+| E — Natural population | Source/reference policies, exact split/asset hashes, grouping, automatic eligibility, overlap/contamination, official-score sensitivities and rights |
+| F — Technical stress | All 25 categories, templates/lexicons/operators, latent schema, occurrence/binding semantics, recoverability witnesses, seeds, parser and panel selection |
+| G — Acoustic construction | Written/spoken/audio/source lineage, TTS/CTC/Parakeet versions, acceptance/retries/yield, common support and complete construction cost |
+| H — Full outcomes | Every seed/model/domain/recognizer output-status and metric table, identification bounds, denominator/coverage counts and negative results |
+| I — Statistics | Exact cluster resampling/jackknife implementation, zero/sparse conventions, power assumptions, seed sensitivity and all registered deviations |
+| J — Native execution | Hardware/runtime manifests, BENCH sessions, thermal traces, load/prefill/decode/render timing, memory and cost accounting |
+| K — Optional extensions | Only executed size/objective/Tstar/precision or AI-judge analyses; each distinct from the primary family |
+| L — Product/education boundary | LocalFlow motivation, unchanged integration contract, MODEL-1 learning role and the separate conditional deployment gates |
+
+### VII.5 Planned figure and table inventory
+
+No plot below contains invented results. Create a figure only when its required record exists; use explicit missing/failed cells when a planned experiment did not complete.
+
+| ID | Planned content | Linked claim and required interpretation |
+|---|---|---|
+| F01 | A/B/C repair versus introduced-word-error frontier, all seeds and identification/sampling uncertainty | H1/S-AB; fixed natural populations and ratio denominators |
+| F02 | B-text/B-acoustic paired WER and introduced-error effects by domain | H2; both joint gates and accepted-support scope |
+| F03 | Common guard effects on cached proposals, repair and introduced errors with coverage | S-GUARD; renderer remains in C, fallback separate |
+| F04 | Quality/resource frontier of scratch, ByT5 and Qwen | S-PRE; actual precision, exposure, completion and request latency |
+| F05 | B-family size/exposure curves | S-SCALE; stretch only, no absent-grid size claim |
+| F06 | Sustained full-update and inference/resource traces | S-MAC; actual device sessions and boundaries |
+| F07 | Exact technical clean/repair/mixed field outcomes and structural failures | S-STRESS; 9,000 evaluated panel versus 30,000 pool explicitly separated |
+| T01 | Natural population, references, grouping, rights and eligibility | Actual natural case/word/error/source counts, no invented achieved n |
+| T02 | Scorer definitions, verification results, ambiguity and computational coverage | S-VALID; software correctness and remaining reference-policy limits |
+| T03 | All H1 components and utility gates, all seeds and fixed mean | H1; introduced-error superiority alone is insufficient |
+| T04 | H2 quality, construction yield, repetition and full data/training cost | H2; no hidden extra acoustic tuning or teacher targets |
+| T05 | Bare/guard/full output status, coverage, repair and error counts | S-GUARD; no fallback attribution to the student |
+| T06 | Model/checkpoint/tokenizer/input/precision/exposure identities and practical outcomes | S-PRE; imported pretraining and blocked ConstDecoder visible |
+| T07 | Same-audio Parakeet/Whisper transfer and input-specific denominators | S-EXT; one external recognizer only |
+| T08 | Same-family size grid | S-SCALE; stretch only |
+| T09 | BENCH-00, memory, decoding and full cost configuration/results | S-MAC; modeled and measured columns distinguished |
+| T10 | Objective ablation | S-OBJ; stretch only |
+| T11 | Natural automatic literal eligibility/coverage/retention/repair/corruption | S-LITERAL; narrow exact subset, no global semantic rate |
+| T12 | Generated category/group/panel inventory, inverse baseline and exact-field results | S-STRESS; grouped finite formal population |
+
+### VII.6 Claim-readiness check before submission
+
+A headline claim must map to its frozen claim card, complete run/denominator record, least-favorable alignment treatment, effect size/uncertainty and actual population. A benchmark/artifact assertion must map to an existing qualified release. A timing claim must map to a measured full boundary. A negative finding must distinguish inadequate implementation/optimization from a valid tested limitation.
+
+Specifically check that no natural semantic-harm language is inferred from lexical ratios; no source error is called inferable merely because the reference supplies it; no TTS target is called acoustically certified from recognizer agreement; no 9,000-case result is described as a 30,000-case census; no pooled natural/synthetic rate appears; no final checkpoint or ambiguity rule was selected after seeing outcomes; and no optional author/judge component becomes essential to the conclusion.
+
+If a joint hypothesis fails, the manuscript can still be useful when it reports an informative, qualified tradeoff. If the scorer, public references, comparator or budget adequacy remains invalid, release a bounded engineering/learning report with those limits. A completed outline does not satisfy PUB-GATE 5–7 or guarantee venue acceptance.
+
+
+## Working glossary
+
+| Term | Meaning in this specification |
+|---|---|
+| ASR / TTS | Automatic speech recognition / text-to-speech; source recognizer and optional synthetic speech generator |
+| BPE / model token | Byte-pair encoding / a discrete model input-output unit, not necessarily a word |
+| MHA / GQA / KV | Multi-head attention / grouped-query attention / attention keys and values |
+| RoPE / RMSNorm | Rotary position embeddings / root-mean-square normalization |
+| FFN / SwiGLU | Feed-forward sublayer / learned multiplicative gate using SiLU |
+| CE / EOS | Cross-entropy loss / end-of-sequence marker |
+| BF16 / FP32 / Q8 / Q4 | Working floating-point formats / approximately 8-bit or 4-bit quantized weights with extra scales/metadata |
+| AdamW / warmup | Optimizer with gradient/squared-gradient moments and separate weight decay / gradual initial learning-rate increase |
+| TFLOP/s / p95 | Trillions of floating-point operations per second / 95th-percentile request latency |
+| R / S / O | Designated reference / raw ASR source / scored rendered output in the evaluation chapters |
+| K / R in C serialization | Number of edits / replacement lexical-model tokens in that local architecture formula; distinct from reference R in scoring |
+| WER / CER | Unit-cost word / Unicode-scalar edit errors divided by corresponding reference count under the named policy |
+| Raw repair / introduced error | Operational error-count transitions over the conditional-optimum reference triple; repair minus introduced equals source minus output error distance |
+| Completed repair / Q | Raw repair credited only to valid complete calls; source-error denominator remains fixed |
+| D / W | Introduced errors/reference words / WER in the statistical chapters; each natural primary is an equal-domain mean of corpus ratios |
+| Identification interval | Lower/upper values allowed by the declared alignment rule or computational envelope; distinct from sampling uncertainty |
+| Source-cluster interval | Statistical uncertainty over comparable source groups under declared dependence assumptions, conditional on the fitted runs |
+| Source consensus mask | Reference/source-only invariant occurrence/status map, frozen before candidate outputs |
+| Scalar / grapheme / UTF-8 byte | A Unicode code point excluding surrogates / displayed-character cluster / encoded byte; distinct coordinate and scoring units |
+| Literal | A form admitted by the frozen exact extractor; not a manually certified semantic entity |
+| G / T in generated scoring | Whole-output structural grammar allowing wrong slot values / target language restricting required field values and relations |
+| Latent group | Shared generated content family carrying clean/repair/mixed views; variants are not independent natural examples |
+| DEV / calibration / final | Inspected development evidence / threshold selection for a fixed candidate / sealed final evaluation |
+| Bare / guard / full | Trained output with constitutive renderer / common extra validation / complete fallback delivery |
+| CADR / NCS | Retired manual paper endpoint names retained only when discussing v1.1 history |
+| UER / CPFR | Separate conditional product unwanted-edit / catastrophic-preservation-failure rates, with explicit denominators and qualification limits |
+
+
+## References and evidence index
+
+FACT references identify published or repository evidence. Access was checked during the October 2026 design review; this does not establish future artifact availability or permission beyond the cited terms. R/S/N/D/ST labels from earlier versions are retained. D18–D25 extend the data audit; M labels cover focused correction metrics, A labels scorer precedents/technical standards, and T labels generated testing and screening. Repeated source identities across labels are explicit cross-references, not additional independent works. The current protocol requires no new human annotation; ST5 remains historical background only.
+
+### Pinned LocalFlow repository evidence
+
+- **R1. Configuration and audit identity:** [config.py at audited commit](https://github.com/scalinity/LocalFlow/blob/77d2368025a7fb057e447d711b94a3c230d7b308/localflow/config.py); [audited commit](https://github.com/scalinity/LocalFlow/commit/77d2368025a7fb057e447d711b94a3c230d7b308).
+- **R2. Current qualification status:** [STATUS.json](https://github.com/scalinity/LocalFlow/blob/77d2368025a7fb057e447d711b94a3c230d7b308/docs/v2/STATUS.json).
+- **R3. Current model loading/rendering/generation:** [cleanup/model.py](https://github.com/scalinity/LocalFlow/blob/77d2368025a7fb057e447d711b94a3c230d7b308/localflow/v2/cleanup/model.py).
+- **R4. Engine, permitted inputs, normalization and protection:** [cleanup/engine.py](https://github.com/scalinity/LocalFlow/blob/77d2368025a7fb057e447d711b94a3c230d7b308/localflow/v2/cleanup/engine.py); [cleanup contract](https://github.com/scalinity/LocalFlow/blob/77d2368025a7fb057e447d711b94a3c230d7b308/docs/v2/contracts/cleanup.md); [normalizer](https://github.com/scalinity/LocalFlow/blob/77d2368025a7fb057e447d711b94a3c230d7b308/localflow/v2/normalize/engine.py).
+- **R5. Application/worker integration and replay:** [app.py](https://github.com/scalinity/LocalFlow/blob/77d2368025a7fb057e447d711b94a3c230d7b308/localflow/app.py); [worker.py](https://github.com/scalinity/LocalFlow/blob/77d2368025a7fb057e447d711b94a3c230d7b308/localflow/v2/worker.py); [candidate adapter](https://github.com/scalinity/LocalFlow/blob/77d2368025a7fb057e447d711b94a3c230d7b308/scripts/v2/cleanup_candidate_adapter.py).
+- **R6. Export semantics and eligibility:** [curation/export.py](https://github.com/scalinity/LocalFlow/blob/77d2368025a7fb057e447d711b94a3c230d7b308/localflow/v2/curation/export.py); [curation/evidence.py](https://github.com/scalinity/LocalFlow/blob/77d2368025a7fb057e447d711b94a3c230d7b308/localflow/v2/curation/evidence.py).
+- **R7. Annotation/split meaning and pending data:** [training_data.py](https://github.com/scalinity/LocalFlow/blob/77d2368025a7fb057e447d711b94a3c230d7b308/localflow/v2/training_data.py); [splits.py](https://github.com/scalinity/LocalFlow/blob/77d2368025a7fb057e447d711b94a3c230d7b308/localflow/v2/curation/splits.py); [corpus preparation inventory](https://github.com/scalinity/LocalFlow/blob/77d2368025a7fb057e447d711b94a3c230d7b308/docs/v2/benchmarks/m15-corpus-freeze-preparation.json).
+- **R8. Historical M07 diagnostic results and recorded model identities:** [M07/results.json](https://github.com/scalinity/LocalFlow/blob/77d2368025a7fb057e447d711b94a3c230d7b308/docs/v2/acceptance/M07/results.json).
+- **R9. Benchmark semantics and corpus gates:** [cleanup_benchmark.py](https://github.com/scalinity/LocalFlow/blob/77d2368025a7fb057e447d711b94a3c230d7b308/scripts/v2/cleanup_benchmark.py); [M15-A protocol](https://github.com/scalinity/LocalFlow/blob/77d2368025a7fb057e447d711b94a3c230d7b308/docs/v2/benchmarks/M15-A.md); [corpus freeze](https://github.com/scalinity/LocalFlow/blob/77d2368025a7fb057e447d711b94a3c230d7b308/docs/v2/benchmarks/M15-CORPUS-FREEZE.md).
+
+### Retained research and implementation sources
+
+- **S1. Apple:** [MacBook Pro technical specifications](https://www.apple.com/macbook-pro/specs/).
+- **S2. Apple ML Research:** [Exploring LLMs with MLX and the Neural Accelerators in the M5 GPU](https://machinelearning.apple.com/research/exploring-llms-mlx-m5). Inference findings are not full-training throughput measurements for the user's Mac.
+- **S3. MLX stable implementation:** [v0.32.3 Metal attention source](https://github.com/ml-explore/mlx/blob/v0.32.3/mlx/backend/metal/scaled_dot_product_attention.cpp).
+- **S4. MLX newer implementation:** [pinned Metal attention source](https://github.com/ml-explore/mlx/blob/0e3ff3643b1c3719f78814b98e0d222afbad867c/mlx/backend/metal/scaled_dot_product_attention.cpp); [SDPA API semantics](https://ml-explore.github.io/mlx/build/html/python/_autosummary/mlx.core.fast.scaled_dot_product_attention.html).
+- **S5. MLX optimizer:** [v0.32.3 Adam/AdamW source](https://github.com/ml-explore/mlx/blob/v0.32.3/python/mlx/optimizers/optimizers.py).
+- **S6. MLX execution/memory:** [quick start and lazy evaluation](https://ml-explore.github.io/mlx/build/html/usage/quick_start.html); [memory limit semantics](https://ml-explore.github.io/mlx/build/html/python/_autosummary/mlx.core.set_memory_limit.html); [checkpointing](https://ml-explore.github.io/mlx/build/html/python/_autosummary/mlx.core.checkpoint.html); [compilation](https://ml-explore.github.io/mlx/build/html/usage/compile.html).
+- **S7. Zhang and Sennrich:** [Root Mean Square Layer Normalization](https://arxiv.org/abs/1910.07467).
+- **S8. Su et al.:** [RoFormer: Enhanced Transformer with Rotary Position Embedding](https://arxiv.org/abs/2104.09864).
+- **S9. Shazeer:** [GLU Variants Improve Transformer](https://arxiv.org/abs/2002.05202).
+- **S10. Ainslie et al.:** [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](https://arxiv.org/abs/2305.13245). The attention design is relevant; this project does not use that paper's pretrained-weight conversion recipe.
+- **S11. Raffel et al.:** [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683).
+- **S12. Eldan and Li:** [TinyStories: How Small Can Language Models Be and Still Speak Coherent English?](https://arxiv.org/abs/2305.07759).
+- **S13. Hugging Face:** [SmolLM2-135M model card](https://huggingface.co/HuggingFaceTB/SmolLM2-135M).
+- **S14. Hugging Face:** [SmolLM2-360M model card](https://huggingface.co/HuggingFaceTB/SmolLM2-360M).
+- **S15. Malmi et al.:** [Encode, Tag, Realize: High-Precision Text Editing](https://aclanthology.org/D19-1510/).
+- **S16. Omelianchuk et al.:** [GECToR: Grammatical Error Correction](https://aclanthology.org/2020.bea-1.16/).
+- **S17. See et al.:** [Get To The Point: Summarization with Pointer-Generator Networks](https://aclanthology.org/P17-1099/).
+- **S18. SentencePiece:** [official implementation and normalization documentation](https://github.com/google/sentencepiece).
+- **S19. Xue et al.:** [ByT5: Towards a Token-Free Future with Pre-trained Byte-to-Byte Models](https://arxiv.org/abs/2105.13626).
+- **S20. TinyStories:** [official dataset card](https://huggingface.co/datasets/roneneldan/TinyStories).
+- **S21. FineWeb-Edu:** [official dataset card](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu).
+- **S22. SmolLM-Corpus:** [official dataset card](https://huggingface.co/datasets/HuggingFaceTB/smollm-corpus).
+- **S23. Kaplan et al.:** [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361).
+- **S24. Hoffmann et al.:** [Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556).
+- **S25. NIST:** [Binomial proportion confidence intervals](https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm).
+- **S26. Ma et al.:** [ASR Error Correction using Large Language Models](https://arxiv.org/abs/2409.09554).
+- **S27. Gu et al.:** [Levenshtein Transformer](https://arxiv.org/abs/1905.11006).
+
+### Nearest and supporting prior work
+
+- **N1.** Gu et al., *Revisiting ASR Error Correction with Specialized Models*. Initial preprint 2024; inspected arXiv v2, 2026-03-16. https://arxiv.org/html/2405.15216v2 ; version metadata: https://arxiv.org/abs/2405.15216 .
+- **N2.** Ziji Zhang et al., *PATCorrect: Non-autoregressive Phoneme-augmented Transformer for ASR Error Correction*. Interspeech 2023. https://arxiv.org/html/2302.05040v2 ; metadata: https://arxiv.org/abs/2302.05040 .
+- **N3.** Jingyuan Yang, Rongjun Li and Wei Peng, *ASR Error Correction with Constrained Decoding on Operation Prediction*. Interspeech 2022. https://www.isca-archive.org/interspeech_2022/yang22g_interspeech.html ; proceedings paper: https://www.isca-archive.org/interspeech_2022/yang22g_interspeech.pdf ; inspected arXiv version: https://arxiv.org/pdf/2208.04641 .
+- **N4.** Leng et al., *SoftCorrect: Error Correction with Soft Detection for Automatic Speech Recognition*. AAAI 37(11), 13034-13042, 2023. https://ojs.aaai.org/index.php/AAAI/article/view/26531 ; paper: https://ojs.aaai.org/index.php/AAAI/article/view/26531/26303 ; DOI: https://doi.org/10.1609/aaai.v37i11.26531 .
+- **N5.** Leng et al., *FastCorrect: Fast Error Correction with Edit Alignment for Automatic Speech Recognition*. NeurIPS 2021. https://proceedings.neurips.cc/paper/2021/hash/b597460c506e8e35fb0cc1c1905dd3bc-Abstract.html ; inspected version: https://arxiv.org/html/2105.03842v6 .
+- **N6.** Mallinson et al., *EdiT5: Semi-Autoregressive Text Editing with T5 Warm-Start*. Findings of EMNLP 2022. https://aclanthology.org/2022.findings-emnlp.156/ ; paper: https://aclanthology.org/2022.findings-emnlp.156.pdf .
+- **N7.** Dong, Wang, Yu et al., *Pronunciation guided copy and correction model for ASR error correction*. International Journal of Machine Learning and Cybernetics 15, 4787-4799, 2024. https://link.springer.com/article/10.1007/s13042-024-02191-7 ; author manuscript: https://assets-eu.researchsquare.com/files/rs-3746969/v1_covered_a78cec9f-c18f-43fd-a601-8a2b501da877.pdf?c=1718987966 .
+- **N8.** Udagawa et al., *Robust ASR Error Correction with Conservative Data Filtering*. EMNLP 2024 Industry Track, 256-266. https://aclanthology.org/2024.emnlp-industry.20/ ; paper: https://aclanthology.org/2024.emnlp-industry.20.pdf .
+- **N9.** Ghosh et al., *Failing Forward: Improving Generative Error Correction for ASR with Synthetic Data and Retrieval Augmentation*. Findings ACL 2025, 2466-2482. https://aclanthology.org/2025.findings-acl.125/ ; paper: https://aclanthology.org/2025.findings-acl.125.pdf .
+- **N10.** Huang, Yeh, Yang and Chen, *RCbench: Benchmarking Retrospective Clarification in ASR*. Machine Learning for Audio Workshop at ICML 2026, camera-ready. https://mlforaudioworkshop.github.io/accepted_submissions_2026/CameraReadys%204-83/4/CameraReady/ASR_icml2026_workshop_CameraReady_final.pdf . Advertised code URL, availability unverified: https://github.com/wwweiting/RCbench .
+- **N11.** Xue et al., *ByT5: Towards a Token-Free Future with Pre-trained Byte-to-Byte Models*. https://arxiv.org/abs/2105.13626 . This is also retained as v1 reference S19.
+- **N12.** Choshen and Abend, *Reference-less Measure of Faithfulness for Grammatical Error Correction*. NAACL 2018. https://aclanthology.org/N18-2020/ ; paper: https://aclanthology.org/N18-2020.pdf .
+- **N13.** Bryant, Felice and Briscoe, *Automatic Annotation and Evaluation of Error Types for Grammatical Error Correction*. ACL 2017. https://aclanthology.org/P17-1074/ ; paper: https://aclanthology.org/P17-1074.pdf .
+- **N14.** Kumar, Krishna, Ramakrishnan and Jyothi, *Post-ASR Correction in Hindi: Comparing Language Models and Large Language Models in Low-Resource Scenarios*. EACL 2026. https://aclanthology.org/2026.eacl-short.45/ ; paper: https://aclanthology.org/2026.eacl-short.45.pdf .
+- **N15.** Ma, Qian, Gales and Knill, *ASR Error Correction Using Large Language Models*. IEEE Transactions on Audio, Speech and Language Processing 33, 1389-1401, 2025. https://ieeexplore.ieee.org/document/10930744/ ; inspected paper: https://arxiv.org/html/2409.09554v2 . Also retained as v1 S26.
+- **N16.** Tang, Wang, Huang and Shang, *Full-text Error Correction for Chinese Speech Recognition with Large Language Model*. ICASSP 2025; inspected preprint: https://arxiv.org/html/2409.07790v2 .
+- **N17.** Shaomeng Yang et al., *Chain-of-Thought Distillation for ASR Error Correction with Multimodal Large Language Models*. APSIPA ASC 2025. https://www.apsipa.org/proceedings/2025/papers/APSIPA2025_P130.pdf ; IEEE record: https://ieeexplore.ieee.org/document/11249374/ .
+- **N18.** Mallinson et al., *FELIX: Flexible Text Editing Through Tagging and Insertion*. Findings of EMNLP 2020. https://aclanthology.org/2020.findings-emnlp.111/ ; paper: https://aclanthology.org/2020.findings-emnlp.111.pdf .
+- **N19.** Stahlberg and Kumar, *Seq2Edits: Sequence Transduction Using Span-level Edit Operations*. EMNLP 2020. https://aclanthology.org/2020.emnlp-main.418/ ; paper: https://aclanthology.org/2020.emnlp-main.418.pdf .
+
+### Public data and model documentation
+
+- **D1.** LibriSpeech-PC. [Official release and CC BY 4.0](https://www.openslr.org/145/); [Meister et al., ASRU 2023, construction/counts/PER](https://arxiv.org/html/2310.02943v1). Book alignment is described in Section 4; retained test counts are in Table 2.
+- **D2.** LibriSpeech. [Official release and license](https://www.openslr.org/12); [Panayotov et al., ICASSP 2015](https://www.danielpovey.com/files/2015_icassp_librispeech.pdf). Table 1 supplies original split speaker counts and the paper documents reference normalization.
+- **D3.** Earnings-22 references and fields . [Creator paper](https://arxiv.org/pdf/2203.15591); [official README](https://github.com/revdotcom/speech-datasets/blob/main/earnings22/README.md), checked blob `cd82b1af540fe9f315d229514bb03cadd4116068`; [updated journal publication linked by authors](https://czasopisma.uni.lodz.pl/research/article/view/21579).
+- **D4.** Earnings-22 actual license . [LICENSE.md](https://github.com/revdotcom/speech-datasets/blob/main/earnings22/LICENSE.md), checked blob `ee1ac25ffcc456761d35ac4abcb4c8f361a2fcc1`. Its explicit scope is transcripts and associated alignment text under CC BY-SA 4.0.
+- **D5.** SLUE . [Official data card and licensing](https://huggingface.co/datasets/asapp/slue); [Shon et al. primary paper](https://arxiv.org/html/2111.10367v3); [toolkit README](https://github.com/asappresearch/slue-toolkit/blob/main/README.md), checked blob `f0999204cc90a5e84569b85aff3c400c557895ac`. Its January 8, 2024 news item releases all test labels.
+- **D6.** GigaSpeech . [Official card including access agreement](https://huggingface.co/datasets/speechcolab/gigaspeech); [creator README](https://github.com/SpeechColab/GigaSpeech/blob/main/README.md), checked blob `db5f0a1d3c8c2484de7da89349b174c4cbf06e2d`; [primary paper](https://arxiv.org/abs/2106.06909).
+- **D7.** TED-LIUM 3 . [Official LIUM resource listing](https://lium.univ-lemans.fr/en/category/productions/softwares/page/2/); [Hernandez et al. paper](https://arxiv.org/abs/1805.04699). The listed release license is CC BY-NC-ND 3.0.
+- **D8.** Common Voice . [Official current dataset catalog](https://mozilladatacollective.com/organization/cmfh0j9o10006ns07jq45h7xk); [creator metadata repository](https://github.com/common-voice/cv-dataset/); [Ardila et al., LREC 2020](https://aclanthology.org/2020.lrec-1.520/). The English scripted 27.0 catalog declares CC0-1.0; exact acquisition/stewardship terms remain a pre-use check.
+- **D9.** HyPoradise . [Chen et al., NeurIPS 2023](https://arxiv.org/abs/2309.15701); [official project](https://github.com/Hypotheses-Paradise/Hypo2Trans); [data card](https://huggingface.co/datasets/PeacefulData/HyPoradise-v0); [separate data agreement, located but not extracted](https://github.com/Hypotheses-Paradise/Hypo2Trans/blob/main/HP_dataset_legal%20agreement.pdf).
+- **D10.** HypR . [Wang et al. paper](https://arxiv.org/abs/2309.09838); [official project](https://github.com/Alfred0622/HypR), checked README blob `1c8190a50434703867005fb1073ccb2310533ee6`; [LibriSpeech without-LM package](https://huggingface.co/datasets/ASR-HypR/LibriSpeech_withoutLM).
+- **D11.** Kokoro probe . [Official 82M model card](https://huggingface.co/hexgrad/Kokoro-82M); [voice IDs and limitations](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md).
+- **D12.** Whisper transfer probe . [Official Whisper-large-v3-turbo model card](https://huggingface.co/openai/whisper-large-v3-turbo); [official implementation/model table](https://github.com/openai/whisper).
+- **D13.** [ByT5-small model card](https://huggingface.co/google/byt5-small).
+- **D14.** Qwen, [Qwen3-4B-Instruct-2507 official model card](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507), architecture/use and Apache 2.0 declaration. Future runtime conversion and snapshot are separately qualified.
+- **D15.** GigaSpeech2 . [Official project](https://github.com/SpeechColab/GigaSpeech2). Language/task scope is checked; no blanket redistribution conclusion is drawn.
+- **D16.** LibriTTS . [Official release/license](https://www.openslr.org/60/); [Zen et al. primary paper](https://arxiv.org/abs/1904.02882).
+- **D17.** CALLHOME . [Original LDC catalog](https://catalog.ldc.upenn.edu/LDC97S42); [July 2026 second edition](https://catalog.ldc.upenn.edu/LDC2026S08), with its own release and split changes.
+
+### Statistical methods and historical annotation background
+
+- **ST1.** Dror, Baumer, Shlomov and Reichart (2018), *The Hitchhiker's Guide to Testing Statistical Significance in Natural Language Processing*: https://aclanthology.org/P18-1128/
+- **ST2.** Reimers and Gurevych (2017), *Reporting Score Distributions Makes a Difference: Performance Study of LSTM-networks for Sequence Tagging*: https://aclanthology.org/D17-1035/
+- **ST3.** Owen and Eckles, *Bootstrapping data arrays of arbitrary order*: https://arxiv.org/abs/1106.2125
+- **ST4.** Holm (1979), *A Simple Sequentially Rejective Multiple Test Procedure*, Scandinavian Journal of Statistics 6(2), 65-70: https://www.jstor.org/stable/4615733 ; primary paper inspected at https://www.ime.usp.br/~abe/lista/pdf4R8xPVzCnX.pdf
+- **ST5.** *Interrater Disagreement Resolution: A Systematic Procedure to Reach Consensus in Annotation Tasks* (2021): https://aclanthology.org/2021.humeval-1.15/
+
+
+
+### Updated public-data evidence
+
+- **D18.** SLUE official current dataset card and release notice: https://huggingface.co/datasets/asapp/slue/blob/main/README.md and https://github.com/asappresearch/slue-toolkit/blob/main/README.md . Card revision displayed `67f7da0`; full commit/content hashes must be pinned during later acquisition. HF exposes VoxCeleb fields `id`, `audio`, `speaker_id`, `normalized_text`, `start_second`, `end_second`; train/validation/test counts 5,777/1,454/3,553. Audio must be cropped using supplied times. All test labels were released 8 January 2024, superseding older withholding prose. Card declares CC BY 4.0 for VoxCeleb subset/transcription/times while retaining original-owner notices. Current file access requests contact-information agreement; no existing user access is assumed. Exact post-crop duration, current asset availability and post-eligibility counts remain future machine-inventory fields.
+
+- **D19.** Shon et al., *SLUE: New Benchmark Tasks for Spoken Language Understanding Evaluation on Natural Speech*, ICASSP 2022, paper v3: https://arxiv.org/html/2111.10367v3 . Table 1 gives VoxCeleb 12.8/3.2/7.8h. Section 3.2.2 gives 120/20/35 speakers and describes single-sided conversational interviewee snippets, not the absent interviewer's words. Table 3 lists 23 Mixed + 104 Disagreement test sentiment cases; the paper excludes these from official ASR too, giving 3,426 by subtraction. v1.2 deliberately evaluates all 3,553 structurally eligible released transcript rows and reports the original filter separately. No inference from sentiment uncertainty to transcription uncertainty is made.
+
+- **D20.** AMI Consortium official source/reference/split/license documentation: https://groups.inf.ed.ac.uk/ami/corpus/ ; https://groups.inf.ed.ac.uk/ami/corpus/transcription.shtml ; https://groups.inf.ed.ac.uk/ami/corpus/datasets.shtml ; https://groups.inf.ed.ac.uk/ami/download/ . About 100h meeting corpus, existing manual word-level transcripts, separately identified automatic annotations. The current official v1.6.2 download page states signals/transcription are CC BY 4.0 and records the 2017 license change. Scenario-only test comprises ES2004, ES2014, IS1009, TS3003, TS3007 across 20 meetings; full-corpus-ASR moves some series and is different. Old OpenSLR 16 advertises the older modified noncommercial license: https://openslr.org/16/ . AMI is a researched optional alternative, with exact channel/segmentation counts unqualified, not the frozen MVP replacement for SLUE.
+
+- **D21.** Chen et al., *HyPoradise*, NeurIPS 2023 Datasets and Benchmarks: https://arxiv.org/html/2309.15701v2 ; official repository https://github.com/Hypotheses-Paradise/Hypo2Trans ; separate agreement located at https://github.com/Hypotheses-Paradise/Hypo2Trans/blob/main/HP_dataset_legal%20agreement.pdf . Paper Table1 reports 316,881 train + 17,383 test = 334,264 pairs over nine source domains. It generates top-five lists from WavLM/Whisper beam decoding; these are utterance/reference pairs, not five independent natural observations. Paper version and released-card/file populations can differ. The separate agreement was not successfully extracted; underlying source permissions remain unresolved at the aggregate level. No blanket MIT relicense or exact current-file count is asserted.
+
+- **D22.** Wang, Lu and Chen, *HypR: A comprehensive study for ASR hypothesis revising with a reference corpus*, Interspeech 2024: https://arxiv.org/abs/2309.09838 ; https://www.isca-archive.org/interspeech_2024/wang24j_interspeech.pdf ; https://github.com/Alfred0622/HypR ; https://huggingface.co/datasets/ASR-HypR/LibriSpeech_withoutLM . Official schema includes `utt_id`, `ref`, `hyps`, attention/CTC scores, optional LM scores and overall scores; 50 hypotheses per utterance. The paper describes ESPnet Transformer CTC-attention recognition with/without LM. README allows academic use while deferring to underlying corpus licenses. Chosen test cardinality, first-best/PC intersection, revision and exact commercial/redistribution scope remain qualification fields. No extra candidates/scores enter this paper's corrector input.
+
+- **D23.** Gekhman et al., *RED-ACE: Robust Error Detection for ASR using Confidence Embeddings*, EMNLP 2022: https://aclanthology.org/2022.emnlp-main.180/ ; official Google dataset card https://huggingface.co/datasets/google/red_ace_asr_error_detection_and_correction/blob/main/README.md . Card revision displayed `a3d491c`, license CC BY 4.0. Contains LS `truth`, source ID/pool, Google `default`/`video` word hypotheses, confidences and binary minimum-edit-derived error labels. Those labels are algorithmic and hypothesis-word oriented, not human semantic annotation or all-optimal joint labels. A frozen `default` first-best/PC intersection is the preferred optional extra view; exact eligible count is unknown and no live Google API request is required. Legacy labels require matching normalization/reference before parity comparisons.
+
+- **D24.** Balaji Shankar et al., *CHSER: A Dataset and Case Study on Generative Speech Error Correction for Child ASR*, Interspeech 2025: https://www.isca-archive.org/interspeech_2025/balajishankar25_interspeech.pdf ; https://arxiv.org/abs/2505.18463 ; official repository https://github.com/balaji1312/CHSER . Paper reports about 200k child-speech pairs; repository says Whisper-base.en hypotheses with existing human-verified references. It contains source-specific data splits but a complete selected-source reuse/license audit was not established here. Optional future child-speech study, not mandatory data and not proof of natural adult dictation coverage.
+
+- **D25.** Official GenSEC SLT Task 1 pilot dataset card: https://huggingface.co/datasets/GenSEC-LLM/SLT-Task1-Post-ASR-Text-Correction/blob/main/README.md . It identifies HyPoradise as its source and publishes `hypothesis`, `transcription` and source metadata. Current structured metadata reports 240,924 train / 15,783 test while prose reports 281,082 / 16,108; no reconciled actual count is asserted. Its Apache badge cannot by itself resolve all upstream mixed-corpus rights. The repackaging is not independent evidence or new human-label provenance. Optional use requires exact-file inventory and rights qualification.
+
+### Focused correction-metric sources
+
+- **M1.** Mariano Felice and Ted Briscoe. 2015. *Towards a standard evaluation method for grammatical error detection and correction*. NAACL-HLT, reviewed, pp. 578–587. https://aclanthology.org/N15-1060/ ; authoritative PDF https://aclanthology.org/N15-1060.pdf Sections 2.2–2.3 and Table 6: exact three-way sum-of-pairs alignment and correction contingency outcomes; later sections define identity-relative improvement. This is direct prior art, not the proposed fixed source/reference population.
+
+- **M2.** Daniel Dahlmeier and Hwee Tou Ng. 2012. *Better Evaluation for Grammatical Error Correction*. NAACL-HLT, reviewed. https://aclanthology.org/N12-1067/ ; PDF https://aclanthology.org/N12-1067.pdf ; official scorer https://github.com/nusnlp/m2scorer Section 2: edit lattice and maximal gold-edit overlap. Official documentation: default beta 0.5, tokenization assumptions and insertion fixes. Name and pin the actual implementation.
+
+- **M3.** Christopher Bryant, Mariano Felice and Ted Briscoe. 2017. *Automatic Annotation and Evaluation of Error Types for Grammatical Error Correction*. ACL, reviewed, pp. 793–805. https://aclanthology.org/P17-1074/ ; PDF https://aclanthology.org/P17-1074.pdf ; official toolkit https://github.com/chrisjbryant/errant Sections 2–3 describe alignment, edit merging and classification. Official `errant_parallel` and `errant_compare` documentation supports automatic edit extraction/evaluation. Same paper as retained N13; M3 is a focused metric cross-reference, not an additional work.
+
+- **M4.** Courtney Napoles, Keisuke Sakaguchi, Matt Post and Joel Tetreault. 2015. *Ground Truth for Grammatical Error Correction Metrics*. ACL-IJCNLP, reviewed. https://aclanthology.org/P15-2097/ ; PDF https://aclanthology.org/P15-2097.pdf . Same authors, 2016. *GLEU Without Tuning*, author preprint https://arxiv.org/abs/1605.02592 ; official implementation https://github.com/cnap/gec-ranking The paper defines source-aware n-gram scoring. The authors' official repository recommends the 2016 untuned revision over the original implementation. Do not merge version-specific definitions.
+
+- **M5.** Ye et al. 2023. *CLEME: Debiasing Multi-reference Evaluation for Grammatical Error Correction*. EMNLP, reviewed, pp. 6174–6189. https://aclanthology.org/2023.emnlp-main.378/ ; PDF https://aclanthology.org/2023.emnlp-main.378.pdf ; official code https://github.com/THUKElab/CLEME Section 2.1: hypothesis/reference edits participate in consistent chunk construction. Dependent and independent multi-reference matching are distinct assumptions; neither establishes candidate-independent denominators.
+
+- **M6.** Ye et al. 2025. *CLEME2.0: Towards Interpretable Evaluation by Disentangling Edits for Grammatical Error Correction*. ACL main conference, reviewed, pp. 204–222. https://aclanthology.org/2025.acl-long.10/ ; PDF https://aclanthology.org/2025.acl-long.10.pdf ; official code https://github.com/THUKElab/CLEME Section 3 defines hit, wrong, under and over-correction. Its Over denominator is proposed edits. Separate the unweighted counts from model-weighted extensions. Cite this reviewed version, not only the earlier preprint.
+
+### Scorer technical and alignment sources
+
+- **A1.** Felice, M., and Briscoe, T. 2015. *Towards a standard evaluation method for grammatical error detection and correction*. [ACL paper](https://aclanthology.org/N15-1060/) and [PDF](https://aclanthology.org/N15-1060.pdf). Section 2.2 uses exact three-way sum-of-pairs dynamic programming; its chosen mismatch/gap costs are 3/2. Section 2.3 classifies token correction/detection outcomes and relates improvement to the do-nothing baseline. This precedes the project’s transition idea; it is not the fixed-unit-WER conditional alignment specified here.
+
+- **A2.** Dahlmeier, D., and Ng, H. T. 2012. *Better Evaluation for Grammatical Error Correction*. [ACL paper](https://aclanthology.org/N12-1067/) and [PDF](https://aclanthology.org/N12-1067.pdf). MaxMatch/M2 uses an edit lattice to find phrase-level system edits with maximum gold overlap, addressing nonunique edit decompositions. It reports edit precision/recall/F1; later use of F0.5 is not the original paper’s scoring formula.
+
+- **A3.** Bryant, C., Felice, M., and Briscoe, T. 2017. *Automatic Annotation and Evaluation of Error Types for Grammatical Error Correction*. [ACL paper](https://aclanthology.org/P17-1074/). ERRANT automatically extracts edits from parallel original/corrected sentences and classifies them using a rule-based error-type framework. Its linguistic edit analysis does not by itself establish exact technical-literal preservation or this scorer’s count bounds.
+
+- **A4.** Ye et al. 2023. *CLEME: Debiasing Multi-reference Evaluation for Grammatical Error Correction*. [ACL paper](https://aclanthology.org/2023.emnlp-main.378/) and [PDF](https://aclanthology.org/2023.emnlp-main.378.pdf). CLEME uses consistent chunks formed from hypothesis/reference edit relationships and addresses correction-dependence assumptions in multi-reference evaluation. Candidate-involved chunk boundaries are not a pre-output source-correct opportunity denominator.
+
+- **A5.** Ye et al. 2025. *CLEME2.0: Towards Interpretable Evaluation by Disentangling Edits for Grammatical Error Correction*. [ACL paper](https://aclanthology.org/2025.acl-long.10/) and [PDF](https://aclanthology.org/2025.acl-long.10.pdf). Sections 3.1–3.2 distinguish hit, wrong, under- and over-correction. Equation 4 divides unnecessary false-positive edits by all hypothesis corrected/dummy edits; this is not introduced errors divided by fixed source-correct words or reference words.
+
+- **A6.** NIST. *SCTK SCLITE documentation*. [Official repository documentation](https://github.com/usnistgov/SCTK/blob/master/doc/sclite.htm). The dynamic-programming section states default correct/insertion/deletion/substitution alignment weights 0/3/3/4 and describes alternative-reference handling. Therefore unconfigured SCLITE is not an exact alignment-parity oracle for a 0/1/1/1 unit-cost scorer.
+
+- **A7.** Unicode Consortium. [Unicode Standard Annex #15: Unicode Normalization Forms](https://www.unicode.org/reports/tr15/) and [Unicode 15.1.0 release](https://www.unicode.org/versions/Unicode15.1.0/). UAX #15 distinguishes normalization forms and specifies normalization conformance, including NormalizationTest.txt. Version-specific tables must be pinned; the project chooses 15.1.0 for its future lexical policy rather than silently inheriting the runtime’s latest tables.
+
+### Programmatic testing and acoustic-screening sources
+
+- **T1.** Marco Tulio Ribeiro, Tongshuang Wu, Carlos Guestrin and Sameer Singh. 2020. *Beyond Accuracy: Behavioral Testing of NLP Models with CheckList*. ACL, pp. 4902–4912. https://aclanthology.org/2020.acl-main.442/ ; authoritative PDF https://aclanthology.org/2020.acl-main.442.pdf ; DOI 10.18653/v1/2020.acl-main.442 Section 2 describes templates, lexicons, Cartesian-product instantiation and minimum-functionality, invariance and directional-expectation tests. Negation, entities and semantic-role distinctions are explicit examples. Template stress testing and minimal-pair testing are not new here. Its evaluated tasks and software-testing methodology do not establish a matched-budget ASR representation result.
+
+- **T2.** Jeffrey Zhou, Tianjian Lu, Swaroop Mishra, Siddhartha Brahma, Sujoy Basu, Yi Luan, Denny Zhou and Le Hou. 2023. *Instruction-Following Evaluation for Large Language Models*. https://arxiv.org/abs/2311.07911 ; PDF https://arxiv.org/pdf/2311.07911 ; official code https://github.com/google-research/google-research/tree/master/instruction_following_eval Section 2 defines programmatically verifiable instructions and strict/loose response checks. This is a direct precedent for deterministic evaluation of explicit requirements. Its original prompt-construction process includes manual checking and editing; therefore cite it as an automatic-scoring precedent, not proof of fully automatic corpus construction. Its strict-versus-loose discussion also shows why output normalization must be declared rather than changed to rescue a model.
+
+- **T3.** Cheng-Ping Hsieh, Simeng Sun, Samuel Kriman, Shantanu Acharya, Dima Rekesh, Fei Jia and Boris Ginsburg. 2024. *RULER: What's the Real Context Size of Your Long-Context Language Models?* https://arxiv.org/html/2404.06654v1 ; official repository https://github.com/hsiehjackson/RULER Sections 3.1–3.2 use synthetic key/value retrieval with words, numbers and UUIDs, multiple keys/values/queries, and chains of variable bindings. Generated exact values, distractors and relation-sensitive tests already exist. Retrieval/tracing under long context differs from full-transcript correction; its success does not certify preservation of a whole output.
+
+- **T4.** Iman Mirzadeh, Keivan Alizadeh, Hooman Shahrokhi, Oncel Tuzel, Samy Bengio and Mehrdad Farajtabar. 2024; revised 2025. *GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models*. https://arxiv.org/abs/2410.05229 ; inspected version v2, 27 August 2025 Symbolic templates support repeated instantiation and controlled numeric changes. This is another precedent for exact generated targets and template-conditioned evaluation. It is a mathematical-reasoning study, not evidence that an arbitrary corrupted ASR value is text-recoverable.
+
+- **T5.** Meta official model card, `facebook/wav2vec2-base-960h`. https://huggingface.co/facebook/wav2vec2-base-960h ; configuration https://huggingface.co/facebook/wav2vec2-base-960h/blob/main/config.json The card declares Apache 2.0, English LibriSpeech training/fine-tuning and 16 kHz audio input. The configuration identifies a CTC model. It is a provisional separate recognizer for screening clean TTS, subject to an exact checkpoint/runtime pin and local feasibility qualification. No local speed, memory, defect-detection accuracy or statistical independence is established by the card.
+
+
+## Part VIII - Change log from v1.1
+
+### VIII.1 Baseline and revision scope
+
+This change log follows the complete canonical specification, registry, scorer, stress-suite design, execution plan and manuscript outline. The revision continues the existing project rather than starting it again. The immutable v1.1 canonical source used for comparison has SHA-256 `4d49e112759621821885240ca95fe78c088ba56fb057fd5346f7e3a00b180924`. It remains a historical version; v1.2 is the current complete replacement design.
+
+The material new constraint is zero required repetitive human annotation or extra human evaluators for the MVP. Changes below follow from that constraint, its scientific consequences, or a concrete compute/validity defect exposed by the redesign. No experimental result, training run, final corpus or implementation was created during this specification task.
+
+### VIII.2 Every material design change and its reason
+
+| Area | v1.1 design | Canonical v1.2 replacement | Reason / practical consequence |
+|---|---|---|---|
+| Central thesis | Needed ASR correction versus damage to initially correct critical semantic atoms | Reference-error repair, introduced word errors and native cost from R/S/O under matched scale/exposure | Primary evidence is deterministically computable; semantic scope is narrowed honestly |
+| Headline contribution | Human FTR critical-preservation resource plus controlled comparison | Controlled representation evidence is primary; acoustic/resource evidence supports it; scorer/generator are methods unless distinct contribution is demonstrated | Human resource creation is incompatible with solo constraint; no fabricated replacement novelty |
+| Focused novelty audit | Broad ASR/edit/TTS audit and ten nearest-work cards | Retain those cards and all 17 component classifications; add I-measure, M2, ERRANT, GLEU, CLEME/CLEME2.0 and generated-test precedents; answer eight new novelty questions | Established methods already cover much of the proposed transition concept |
+| CADR | Manually defined critical-atom damage endpoint | Retired as a paper endpoint | No semantic atom labels are constructed |
+| NCS | Source-recoverable necessary-correction success with manual obligations/alternatives | Retired; completed-output source-error repair ratio plus WER/utility safeguards | Reference movement can be computed; natural text recoverability cannot be manually inferred case by case |
+| Natural transition denominator | Critical-case and needed-edit eligibility panels | Fixed reference-word count for introduced errors; fixed original minimum source-error count for repair | Avoid candidate-dependent denominators and recognize insertion errors in any region |
+| Alignment | Qualified source/output edit analysis with manual ambiguous-case fallback | R/S and R/O optimal lattices, compatible triple graph, conditional S/O optimum, all ties retained | Prevent contradictory independent tracebacks without claiming true occurrence provenance |
+| Alignment ambiguity | Independent review/adjudication and sensitivity | Unavailable local points, source-fixed subset intervals, complete-population aggregate bounds | No human or AI ambiguity rescue; coverage is observable evidence |
+| Computational limits | Automatic scorer could rely on later audits | Fixed deterministic pair/joint work budgets, exact fast paths, conservative analytic envelope, exact WER pending when needed | Prevent runtime difficulty from silently dropping hard or aggressive outputs |
+| Failure scoring | NCS failure and CADR missing-label sensitivity | Actual valid text/prefix or empty failure representation for raw lexical counts; zero completed repair for failed/capped outputs | A failed decoder cannot earn primary utility by deleting insertion errors |
+| Correct-source masks | Human critical-atom and recoverability maps | All-optimal R/S-only consensus masks, separately hashed before candidate outputs | Output does not construct its own easier source population |
+| Word/surface policy | Corpus references and general edit scoring | Explicit `lexical_eval_v1`, pinned Unicode tables/scanner; raw byte exact, scalar CER and literal grammar separated | Tokenization, contractions, punctuation, case and accepted forms become reproducible |
+| Natural critical content | Broad manually marked numbers/names/roles/polarity/clauses | Narrow deterministic literal extraction with unique source/reference occurrence and context | Exactness is retained where possible; universality is explicitly lost |
+| Literal coverage | Planned enriched 2,000-case panel | Actual eligible counts, extraction exclusions, source ambiguity, output ambiguity and fixed-denominator bounds | Zero-yield categories are valid outcomes; no annotation quota is filled |
+| Primary public data | Planned 2,500 LS-PC plus 2,500 Earnings22 windows | All 5,273 released LS-PC test rows plus all 3,553 released SLUE test-reference rows, nominal 8,826 | Existing split/reference structure avoids new segmentation/listening work |
+| SLUE population | Contingency if Earnings22 unusable | Main second domain; full released 3,553 primary, historical official-compatible 3,426 secondary | Sentiment disagreement does not automatically invalidate a released transcript |
+| Earnings22 | Required finance domain subject to rights and segmentation | Optional later finance extension | Concrete access/audio-rights/segmentation burden is removed from MVP |
+| Existing correction resources | HyPoradise/HypR audited as options | Reassessed with RED-ACE, CHSER and GenSEC; exact existing references/hypotheses/labels and rights boundaries recorded | Existing annotation is preferred to rebuilding labels; derived releases are not independent evidence |
+| Reference verification | Per-case new reference/atom checks and audio review | Reuse frozen existing official references directly; automatic structural checks only | Removes repeated labor and limits claims to the reference policy |
+| Broad human evaluation | 1,000 cases × three systems × two raters = 6,000 ratings plus adjudication | Removed from MVP | No second rater or adjudicator is required |
+| All-seed human audit | Critical/NCS manual exception and negative-audit queues across many outputs | Removed; software conformance and conservative deterministic bounds | Thousands of reviews are not renamed spot checks |
+| Author inspection | Part of a larger required evidence workflow | No quota; optional at most 25 development cases per scorer version for debugging only | Optional inspection cannot establish a headline quantitative result or final labels |
+| AI judging | Diagnostic possibility alongside required human evidence | Optional blinded multi-family model-based exploration, disabled by default | No human-equivalence claim, primary gold or tie adjudication; removable without weakening H1/H2 |
+| Scorer validity | Qualification against manual reference/atom/output labels | Obvious fixtures, properties, metamorphisms, exhaustive tiny triples, independently structured oracle/parity and generated conformance | Strong software evidence without an annotation team; reference truth remains separately limited |
+| Stress construction | Approximately 1,000 manually authored cases | Generator for 30,000 exact cases across 25 categories, typed latent records and three views | Larger reproducible formal evidence without repetitive authoring |
+| Stress inference | Smaller authored panel | Fixed balanced 9,000-case model panel across all sixteen model instances; remaining 21,000 inference stretch | Automatic labels are cheap, but model decoding has a real time cost |
+| Stress grouping | Authored challenge categories | 10,000 pool groups, 3,000 mandatory panel groups, shared clean/repair/mixed views and coarser constructor lineage | Variants do not create independent natural observations |
+| Stress repair truth | Known written target could appear to imply recoverability | Source-only inverse over all compatible public rules/templates; whole-target uniqueness where claimed | A hidden number/name/polarity cannot be inferred merely because the generator knows it |
+| Exact field scoring | Critical-string checks and annotated roles | Whole-output structural parse, occurrence/binding/multiplicity, finite target forms, separate field and whole-case conformance | Substring presence, swapped values and appended text cannot quietly pass |
+| Deterministic inverse | Not a central stress control | Include public grammar inverse with its diagnostic knowledge advantage | A neural model is not credited for inventing a task solved by a known generator inverse |
+| TTS target lineage | Clean seed, spoken form and manually checked actual speech | Exact written/spoken latent lineage plus automatic screening; no fabricated actual-speech truth field | Distinguishes intended target from what synthesis realized without a listening queue |
+| TTS acceptance | Source-first human recoverability and audio support audit | Closed spoken grammar, automatic signal/CTC checks, fixed retries/common support, explicit residual uncertainty | Algorithmic screen does not certify arbitrary pronunciation fidelity |
+| TTS scope | Broad categories potentially requiring human repair | Confirmatory intended-target policy on automatically qualified support; uncertain/underidentified cases diagnostic or excluded under frozen construction rules | Preserves H2 without turning it into an annotation project |
+| H1 | CADR superiority, NCS NI and human-defined usefulness | Introduced errors/reference words superiority; completed repair/source errors NI; WER NI; B/C repair utility over DET and WER utility over raw | Joint automatic gates prevent identity and aggressive-edit gaming |
+| H1 numeric units | Proposed 1pp case-CADR and 3pp case-NCS | Proposed 0.1pp word-introduction target, 3pp source-error-repair NI, 0.5pp WER NI, 5pp repair utility floor | New denominators require new practical justification, not relabeled old thresholds |
+| H2 | WER superiority and case-CADR NI | WER superiority with 0.5pp observed target; introduced-word-error NI within +0.1pp | Both components automatically measurable under matched channel treatment |
+| Domain weighting | Equal-domain WER plus separately weighted annotated endpoints | Equal-domain mean of corpus ratios for every natural primary endpoint; per-domain and pooled ratios secondary | Eliminates silent changes of population weights across gates |
+| Power planning | Binary enriched-panel/needed-case assumptions and manual eligibility | Actual word/error/source-block denominators, paired cluster-ratio variance and identification-width sensitivity | Larger automatic n is useful but does not manufacture independent speakers or precise small effects |
+| Statistical ambiguity | Human unresolved-label assignments | Least-favorable identified error/repair contrasts plus paired source-cluster uncertainty | Sampling uncertainty and alignment identification are separate, both retained |
+| Zero/sparse denominators | Human-panel adequacy and scorer-label caveats | Undefined corpus repair blocks that endpoint; zero-denominator resamples cannot be redrawn away; degenerate inference is inconclusive | No artificial zero variance, reweighting or optimistic imputation |
+| Three-seed reporting | Three final runs and conditional inference | Retained unchanged, with all-seed automatic scoring | Cases × seeds × recognizers do not increase independent n |
+| Intermediate/Tstar evaluation | Secondary checkpoint and measured-time quality views could imply another full final roster | Save 50M/100M/Tstar; development quality/cost views mandatory; extra sealed-test rosters only if budgeted before freeze | Avoids hiding hundreds of thousands of extra decode calls inside “learning curves” |
+| Total mandatory outputs | Human-review-heavy 5,000/2,000 panels | Nominal 282,432 natural plus 144,000 stress = 426,432 bare outputs; full-pool alternative 762,432 | Makes all-seed and two-recognizer decoding cost explicit |
+| One-month labor | Hundreds of potential annotation/review hours in addition to engineering | 110–150 active researcher-hour planning envelope, zero required annotation | Labor is removed by changing the claim and method, not by unrealistic rating speed |
+| One-month device budget | Training-centric sensitivity plus broad overhead | Separate training, data/TTS/ASR, all-model inference, CPU scorer/statistics and reserve | A favorable 4TF/s,0.5s/output case is 370.4 serialized hours, not a free-background-work promise |
+| Training-source and development decoding cost | Broad data/runtime allowances could hide required real-pair hypotheses and decoded quality checks | The 24h complete construction allowance includes selected real training/DEV/calibration Parakeet ASR; the 12h development/runtime allowance includes every registered decoded HPO/checkpoint/ByT5/Qwen check | Existing references are not cached hypotheses; 18h final ASR and 426,432 final outputs cannot pay these costs twice; all measured overruns are additive |
+| Availability window | Educational/research parallel path without a complete month queue | Provisional days 4–25 device window, day-7–8 freeze/readiness gate, final analysis/writing days; 352/440-hour scenarios | 370.4 hours fails 16h/day and only conditionally fits 20h/day; dependency timing still matters |
+| ConstDecoder budget | At-most-two-engineering-day feasibility gate | Retain outer gate; bounded early scan/probe and executable comparison only if code/task and local budget qualify | Prevents a published-method port from consuming the month; blocked status is explicit |
+| Publication gate 2 | Benchmark/human annotation validity | Automated evaluation validity: software correctness, reference rights, fixed eligibility, ambiguity/coverage, exact fixtures | No manual annotation gate survives in another chapter |
+| Publication gate 3 | Freeze includes human protocol | `paper_protocol_v2` freezes scorer, cap, normalization, generator/parser, masks, panel, runtime, statistics and failure rules | Final scoring cannot be redesigned after results |
+| Registry | `paper_protocol_v1` with raters, adjudication/agreement and manual audits | Full protocol v2, reusable record, empty result schema with scorer hashes/tests/parity/coverage/generator identities | All measured fields remain empty until future execution |
+| Manuscript | FTR annotation and required human audit | Controlled empirical study, deterministic validity, separate natural/formal results and scoped limitations | No unperformed human evidence is needed to write the primary result |
+| Product branch | Separate later cleanup/preservation/latency gates | Retained; broad UER/CPFR cannot be certified by the automatic paper scores | No automatic default promotion or hidden product annotation dependency enters MVP |
+| Final deliverable | Five-part v1.1 with forty canonical chapters | Eight required parts, forty full chapters, updated registry, normative scorer/stress/month/manuscript and this final change log | Full replacement, with explicit cross-links and evidence index |
+
+### VIII.3 Technical contracts deliberately preserved
+
+The revision retains MODEL-0 and the complete MODEL-1 educational program; random scratch initialization; A100/B100/C101 architecture definitions; all ten exact parameter configurations; the 395,523 C parameter addition; C's one-BOS action/boundary/replacement event sequence; `T_decoder=1+R+3K`, `T_vocab=R+K`; whole-update component denominators and END-EDIT inclusion; one FP32 accumulation path; the 22N pre-activation memory model; and the 1,024-target/1,027-event context counterexample.
+
+It retains the 16,384-token reversible byte-BPE arithmetic and reserved map, trusted task serialization, masks/cache/resume/correctness ladder, native BENCH-00 requirements, inspected MLX backward/mask caveat, three final seeds, 150M primary scratch endpoint, twelve 10M development probes, continuous 3M-warmup/cosine schedule, fixed data mixture, and B-acoustic's B-text-selected optimizer.
+
+It retains ByT5-small, task-matched Qwen, deterministic controls, bounded ConstDecoder feasibility, second-recognizer transfer, bare/guard/full separation, constitutive C renderer attribution, source grouping and contamination disclosure, `paper_canonical_v2` versus `product_canonical_v1`, failed-run/recovery ledgers, negative-result reporting, exact LocalFlow integration boundaries, conditional product size budgets and the optional same-family scaling grid. Changes to compute scope and evaluation views are explicit above; no valid mathematical contract was casually replaced.
+
+### VIII.4 What remains unresolved until implementation
+
+Actual scorer code correctness, source availability, exact hashes, structural eligibility, source-error totals, source clusters, literal yield, ambiguity/computational coverage, acoustic acceptance/diversity, native training/decoding/scoring speed, ByT5 adequacy, learning at 150M, statistical precision and the complete calendar remain unknown. They are future gates, not reasons to invent measurements in this specification.
+
+The design review can establish that the proposed contracts are coherent and no required annotation team remains. It cannot establish that the experiment will produce a positive result, fit a particular Mac or calendar, pass every software test, or merit a particular venue. Every `MEASURED_RESULT` field remains empty. The next action is the bounded development implementation in Section 40 only after separate implementation authorization; this specification task ends with the complete reviewable design.

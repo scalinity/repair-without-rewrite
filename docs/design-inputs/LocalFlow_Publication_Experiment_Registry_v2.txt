@@ -1,0 +1,716 @@
+## Part III - Publication experiment registry v2
+
+This is the complete copy-ready registry: a filled **draft** of `paper_protocol_v2`, a reusable per-experiment plan, and an empty post-execution schema. It records the intended experiment, not an executed preregistration or achieved software qualification. Actual source/model hashes, hardware settings, measured development adequacy and freeze signatures remain pending. Every field affecting final inference must be resolved before PUB-GATE 3; resulting weight/export hashes are recorded at the later artifact freeze before final inference.
+
+The protocol requires no additional humans. Independent program/oracle checks and clean-environment reconstruction are software verification that one researcher can perform with coding-agent assistance. Optional author inspection and optional model-based judging supply no primary labels and are not gate dependencies. Preserve the frozen record and append dated amendments; post-result estimand changes cannot become retrospective preregistration.
+
+```text
+PUBLICATION EXPERIMENT REGISTRY v2 — DRAFT, NO EXECUTION RECORD
+
+RECORD A: paper_protocol_v2
+
+IDENTITY AND STATUS
+  protocol_id: paper_protocol_v2
+  specification: LocalFlow From-Scratch Transformer Master Specification v1.2
+  draft_date_utc: 2026-10-04
+  owner: Daniel Escalante
+  status: DRAFT_AWAITING_PUB_GATE_3
+  design_review_record_and_hash: PENDING
+  freeze_timestamp_utc: null
+  frozen_protocol_sha256: null
+  registration_location: PENDING
+  external_registration: NONE_CLAIMED
+  affected_final_results_seen: false
+  final_training_started: false
+  publication_gates_passed: []
+  implementation_authorization: NOT_GRANTED_BY_THIS_SPECIFICATION
+  required_external_annotators: 0
+  required_second_human_raters: 0
+  required_human_adjudicators: 0
+  required_repetitive_author_labeling_hours: 0
+  required_listening_queues: 0
+  MEASURED_RESULT: {}
+
+SCOPE, THESIS AND INFORMATION CONTRACT
+  working_title: Output Representation and the Repair-Preservation Tradeoff
+    in ASR Transcript Restoration
+  task_id: restore_reference
+  thesis: At matched scale and downstream source exposure, measure how output
+    representation changes reference-error repair, introduced word errors
+    and native inference cost.
+  input: Raw pinned recognizer one-best text and common trusted task controls.
+  forbidden_extra_input: Audio; N-best; acoustic confidences; reference text;
+    hidden generated values; gold literal masks; owner context; judge verdicts.
+  target: Existing designated reference under frozen corpus lexical/surface policy;
+    preserve the spoken disfluency/self-correction sequence where referenced.
+  natural_claim_boundary: Reference-conditional error restoration, not all
+    permissible transcripts, text inferability or comprehensive semantic safety.
+  generated_claim_boundary: Exact formal grammar and source-visible recovery
+    conditions, not natural incidence or arbitrary hidden-value recovery.
+  separate_product_tasks: correction_proposals and cleanup; normalized and
+    post-proposal input boundaries; intent-cleaned target and separate lineage.
+  core_weight_lineage: Every scratch parameter randomly initialized, including
+    embeddings, encoder, decoder, pointers and classifiers.
+  nonclaims: No invention claim for scratch ASR correction, sparse editing,
+    copy rendering, source/reference/output transitions, overcorrection metrics,
+    TTS-to-ASR generation, exact behavioral tests or universal scaling laws.
+
+QUESTIONS AND CLAIM MAP
+  RQ1: Matched A/B/C representation, repair, introduced errors and output burden.
+  RQ2: Fixed text-to-acoustic corruption replacement on untouched real speech.
+  RQ3: Bounded pretrained/deterministic/native-resource comparison and transfer.
+  primary_contribution_candidate: Controlled empirical representation evidence.
+  supporting_contribution_candidate: Controlled acoustic and resource evidence.
+  methods_artifacts: Qualified deterministic scorer and exact technical generator;
+    no independent novelty claim assumed for either.
+  retired_claims: Human-annotated FTR resource; manual CADR; manual NCS;
+    mandatory human semantic audit.
+  H1: C101-text versus B100-text bare, introduced-error superiority plus
+    completed-repair/WER noninferiority and anti-identity usefulness.
+  H2: B100-acoustic versus B100-text bare, WER superiority plus introduced-error
+    noninferiority under fixed 40 percent replacement.
+  S-AB: Secondary causal/encoder-decoder family contrast.
+  S-GUARD: Common deterministic guard on identical cached bare proposals.
+  S-PRE: Adapted ByT5-small, task-matched Qwen and deterministic frontier.
+  S-EXT: Unchanged-model evaluation on frozen Whisper hypotheses.
+  S-STRESS: Exact generated clean/repair/mixed technical behavior.
+  S-MAC: Complete native training/inference/recovery/resource accounting.
+  S-LITERAL: Automatic source/reference-defined natural literal subset.
+  S-SCALE: Optional same-family B100/S203/S316 controlled study.
+  S-OBJ: Optional common-family objective study.
+  S-VALID: Deterministic scorer, generator and evaluation software qualification;
+    no semantic-gold or new-metric claim.
+  S-AI: Optional model-based semantic analysis; disabled for MVP by default;
+    separate optional analysis, not one of the 12 canonical claim cards.
+  all_claim_statuses: CANDIDATE_NOT_TESTED
+
+PRIMARY SCORER CONTRACT
+  specification_version: Part_IV_v1.2_normative
+  algorithm_id_and_version: reference_triple_v1
+  scorer_implementation_commit_and_sha256: PENDING
+  independent_oracle_implementation_sha256: PENDING
+  parity_batch: 500 preselected development triples, at most 64 lexical tokens per sequence;
+    zero unexplained count/mask/status/bound disagreements required.
+  deterministic_traversal: States ordered by (i+j+l,i,j,l); moves 111,110,101,011,100,010,001.
+  empty_result_policy: All actual qualification and metric fields remain null or empty.
+  dependency_lock_and_normalization_tables_sha256: PENDING
+  word_normalizer_id: lexical_eval_v1, Unicode 15.1.0 tables pinned
+  text_input: Strict UTF-8; immutable raw strings; NFC and pinned case-folding
+    for primary word scoring; finite apostrophe/hyphen mappings and scanner.
+  excluded_primary_normalizations: No spelling repair, inverse text normalization,
+    general number expansion, contraction expansion or semantic equivalence.
+  raw_byte_exact: Complete_valid AND exact complete UTF-8 strings.
+  normalized_exact: Complete_valid AND equality of primary lexical token sequences.
+  CER: Raw Unicode scalar-value edit distance preserving case/punctuation/spacing;
+    separate NFC-CER only if explicitly named and frozen.
+  n_i: Number of designated-reference lexical tokens.
+  eS_i: Unit-cost Levenshtein distance between reference and source.
+  eO_i: Unit-cost Levenshtein distance between reference and scored output text.
+  joint_alignment: R/S and R/O projections must each be minimum-edit paths.
+    Among compatible monotone triple paths minimize induced S/O edit cost.
+    Retain all ties at that conditional optimum. Do not require three
+    unrestricted pairwise optima to coexist. No native C actions are scorer inputs.
+  reference_column_repair: Source wrong/output correct relative to reference token.
+  reference_column_introduced: Source correct/output wrong relative to reference.
+  gap_column_repair: Source token with output gap, removing a source insertion.
+  gap_column_introduced: Output token with source gap, a new output insertion.
+  gap_column_both_tokens: Unresolved insertion, even when token values differ.
+  unresolved_change: Wrong-to-different-wrong reported as edited-but-unresolved.
+  raw_invariant: repair_i - introduced_i = eS_i - eO_i.
+  count_bounds: 0<=repair_i<=eS_i; 0<=introduced_i<=eO_i.
+  exact_intervals: Direct minimum/maximum counts over all conditional-optimum paths.
+  source_masks: R/S-all-optimal occurrence consensus only; computed and hashed
+    before candidate outputs, never narrowed using model output.
+  ambiguity_rule: Fine-grained point unavailable where correspondence/status
+    varies; original case stays in WER/CER/exact and aggregate bounded analysis.
+  output_consensus: Report unavailable local point and original-denominator
+    binary bounds; never divide headline metrics by candidate-specific coverage.
+  pair_lattice_cell_budget: 4000000 materialized cells per pair
+  joint_state_budget: 250000 reachable states
+  joint_edge_budget: 1750000 examined moves; deterministic work count, no wall-clock label cap
+  exact_fast_paths: Identity source/output, perfect reference/source/output cases and
+    exact graph pruning as proven in Part IV; no approximate tie rescue.
+  joint_cap_fallback: repair in [max(0, eS-eO), eS]; introduced in [max(0, eO-eS), eO].
+  unfinished_pair_distance: Pending evaluation failure until exact WER is obtained;
+    no row deletion or favorable imputation.
+  primary_completion_gate: repair_completed_i = raw_repair_i only for complete_valid;
+    otherwise 0. Preserve raw counts separately because conservation no longer applies
+    to completion-gated repair on failed calls.
+  output_failure_mapping: Valid full-text capped/timeout prefix scored as emitted;
+    invalid UTF-8, invalid/unrenderable C, missing output and no-prefix timeout
+    score an empty hypothesis. No partial C edits are fabricated into text.
+  genuine_empty_output: Valid completed empty string distinct from missing call.
+  capped_prefix_equal_reference: May score zero raw WER but completed repair remains 0.
+  explicit_abstention: Bare failure/empty scoring text; source-return delivery
+    is a separately labeled system view.
+  guard_rejection: Preserve bare output record; separately score delivered source.
+  allowed_equivalent_forms: Frozen finite forms only in the named literal/generated
+    scorer; no output-driven aliases or hidden general semantic matching.
+  scorer_output_schema_id_and_hash: score_record_v1; implementation schema hash PENDING
+
+PRIMARY RATIOS, WEIGHTS AND DECISION GATES
+  natural_domain_weights: LibriSpeech_PC = 0.5; full_released_SLUE_VoxCeleb = 0.5.
+  domain_WER: sum(eO_i)/sum(n_i).
+  domain_introduced_rate: sum(introduced_i)/sum(n_i), with count interval endpoints.
+  domain_completed_repair_rate: sum(repair_completed_i)/sum(eS_i), with bounds.
+  primary_aggregate: Equal-domain mean of each domain ratio, for ALL H1/H2 metrics.
+  secondary_aggregates: Each domain; pooled word-weighted WER/introduced errors;
+    pooled source-error-weighted completed repair; official-compatible subsets.
+  zero_denominator: Undefined with count recorded; do not silently drop a domain or
+    substitute 100 percent. Check source-error support feasibility on DEV before
+    PUB-GATE 3; run an output-blind final eS preflight before artifact freeze. If a
+    final domain has no source errors, the H1 repair claim is unavailable; do not
+    change domain weights. The resampling rule is in Section 25.
+  rate_units: Proportions stored; percentage-point differences displayed.
+  introduced_interpretation: New error units/reference word, including insertions
+    in already-wrong regions; not percent source-correct atoms damaged.
+  H1_direction: C101 minus B100-text.
+  H1_introduced_superiority: Fixed one-sided 97.5 percent upper bound < 0.
+  H1_practical_target: Least-favorable observed reduction >= 0.1 percentage point.
+  H1_completed_repair_NI: Fixed one-sided 97.5 percent lower bound > -3 percentage
+    points.
+  H1_WER_NI: Fixed one-sided 97.5 percent upper bound < +0.5 percentage point.
+  H1_utility_completed_repair: Both B100-text and C101 minus DET have observed gain >= 5
+    percentage points AND fixed one-sided 97.5 percent lower bound > 0.
+  H1_utility_WER: Both B100-text and C101 versus raw ASR have a fixed one-sided
+    97.5 percent upper WER-difference bound below zero; no result-dependent rule.
+  utility_family: Two fixed model-minus-DET repair contrasts with pointwise one-sided
+    97.5 percent lower bounds, all required under Section 25's interpretation gates;
+    no result-dependent method/confidence choice or separate utility-family claim.
+  H2_direction: B100-acoustic minus B100-text.
+  H2_WER_superiority: Fixed one-sided 97.5 percent upper bound < 0.
+  H2_practical_target: Observed equal-domain WER reduction >= 0.5 percentage point.
+  H2_introduced_NI: Fixed one-sided 97.5 percent upper bound < +0.1 percentage point.
+  margin_status: PROPOSED_NEW_UNITS_REQUIRING_DEVELOPMENT_JUSTIFICATION_AND_FREEZE.
+  practical_vs_statistical: Observed effect target is not a confidence bound
+    proving the effect exceeds that target; report both distinctly.
+  identity_rule: No edits cannot pass completed-repair utility beyond DET.
+  aggressive_rule: More raw repairs do not excuse introduced-error/WER gate failure.
+  missing_label_rule: No new semantic labels exist; deterministic ambiguity is
+    bounded computational identification, not a human adjudication backlog.
+
+NATURAL DATA AND SEALED POPULATIONS
+  nominal_final_cases: 8826 before frozen automatic structural exclusions.
+  LibriSpeech_PC: All released 2417 test-clean + 2856 test-other = 5273 reference rows.
+  SLUE_VoxCeleb: v0.2: all 3553 released test-reference rows, not only the official ASR
+    filter.
+  SLUE_official_ASR_secondary: 3426 rows after excluding 23 Mixed + 104 Disagreement
+    sentiment labels; sentiment ambiguity is not assumed transcript invalidity.
+  nominal_published_audio_hours: 17.95; actual cropped sum PENDING.
+  corpus_reference_policies: LS-PC official reference and lexical policy;
+    SLUE released normalized_text; punctuation/case primary diagnostics LS-PC only.
+  new_reference_verification: NONE_REQUIRED; no per-case listening or rewriting.
+  source_asset_revisions_license_hashes_and_access: PENDING.
+  source_case_split_content_and_cluster_manifest_sha256: PENDING.
+  eligibility: Frozen automatic structural checks; audio/text present and decodable;
+    reference nonempty for primary normalized scoring; stable ID; legal source use;
+    source-only context/windowing if needed shared across systems; exact counts/reasons.
+  no_candidate_dependent_exclusion: Difficulty, error burden, ambiguity, failed
+    output, low literal coverage or poor model score never removes final case.
+  exact_source_hypothesis_manifest_hashes: PENDING_PARakeet_and_Whisper.
+  source_grouping: LS speaker/book or connected source groups; SLUE speaker/video;
+    preserve original audio/source IDs and duplicate/overlap connected components.
+  disjoint_roles: Train; HPO development; calibration; sealed natural; sealed stress.
+  split_before_augmentation: All variants of source/document/template/latent group
+    stay together; freeze near-duplicate rules and source-family mappings.
+  pretrained_contamination: Known exposure recorded; unobservable upstream
+    training overlap remains unknown, never claimed absent.
+  Earnings22: Optional finance extension only; no MVP audio/reference task.
+  existing_pair_options: RED-ACE default/PC intersection is the preferred optional
+    historical diagnostic; HypR/HyPoradise/GenSEC require exact rights/file/split
+    qualification.
+  mixed_populations: Natural and synthetic never pooled into one frequency estimate.
+
+AUTOMATIC NATURAL CRITICAL-LITERAL SUBSET
+  extractor_id_version_and_sha256: critical_literal_extractor_v1; implementation hash PENDING.
+  categories: Integers; decimals; signed values; percentages; currency; dates/times;
+    versions; numeric model names; acronyms; uppercase/mixed identifiers; units;
+    URL/path/CLI forms where present; exact controlled-name dictionary if qualified.
+  eligibility: R/S-only deterministic extraction and invariant occurrence identity;
+    type/value/form policy fixed before output; no arbitrary semantic entity mapping.
+  repeated_values: Separate occurrence IDs, spans, gap/position binding and multiplicity.
+  eligible_count_and_extraction_coverage: EMPTY_UNTIL_EXECUTION.
+  outputs_to_report: Source-correct retention; source-wrong repair; introduced
+    corruption; unresolved output states; ambiguous extraction/alignment exclusions;
+    all original source-defined denominators and covered fraction.
+  prohibited_use: No oracle input; no manual resolution; no claim to cover all harm.
+
+GENERATED TECHNICAL SUITE
+  schema_id_version: technical_latent_v1
+  schema_sha256: PENDING
+  target_language_id: technical_target_language_v1
+  inverse_baseline_id: technical_inverse_v1
+  core_corruption_policy: qualified_core_v1
+  underdetermined_policy: underdetermined_diagnostic_v1; separate optional diagnostic population
+  generator_id_version: programmatic_stress_generator_v1
+  generator_implementation_and_lexicon_sha256: PENDING
+  parser_id_version_and_sha256: technical_structure_parser_v1; implementation hash PENDING
+  generator_seed_map: manifest 120012; partition 120101; values train 120201 / dev 120202 / test 120203;
+    corruption 120301; TTS 120401; noise 120402; panel 120501; domain-separated SHA-256
+  latent_group_id: Stable original template/seed-group identity shared by all views.
+  required_fields: case_id; template_id; field_name; occurrence_id; field_type;
+    canonical_value; surface_rendering; allowed_forms; source_span; reference_span;
+    expected_preservation_or_repair; corruption_operator; generation_seed;
+    binding/order/multiplicity; source_visible_recoverability_witness.
+  categories_count: 25; exact full category table and operators in Part V.
+  full_pool: 25 categories * 4 template cells * 100 groups * 3 views = 30000 cases.
+  views: clean_preservation; uniquely_recoverable_repair; mixedrepair_preservation.
+  mandatory_panel: 25 * 4 * 30 * 3 = 9000 cases, 3000 latent groups.
+  selection: First 30 groups per category/template cell by frozen source-only hash
+    order; keep all three views; manifest frozen before any candidate output.
+  full_pool_model_inference: STRETCH_UNLESS_BENCH_QUALIFIES_BEFORE_FREEZE.
+  remaining_pool_model_cases: 21000; no outcome-adaptive expansion.
+  exact_scoring: Whole-output structural parse; exact field-specific finite forms;
+    bindings/order/multiplicity retained; unconsumed text/ambiguous parse fails
+    structure-qualified field success and complete target conformance.
+  repair_identifiability: Target must be unique under visible source/corruption rules;
+    arbitrary hidden name/digit/polarity deletion is underidentified diagnostic-only.
+  inverse_rule_baseline: Required for the controlled generated task; a perfect inverse
+    may solve intended repair; neural superiority over the generator grammar is not a
+    claim.
+  stress_population: Formal templates/lexicons/corruption operators, not natural ASR.
+  statistics: Keep three views and all seeds nested within the latent group; disclose
+    shared constructor/template dependencies, not 30000 independent natural trials.
+  output_count_mandatory: 9000 * 16 = 144000 bare model outputs, before an extra
+    published comparator.
+
+MODEL, TOKENIZER AND BASELINE IDENTITIES
+  MODEL_0: 8621312 parameters, correctness ladder only.
+  MODEL_1_and_A100_dimensions: 14 layers, d = 768, 12 Q / 4 KV heads, head width 64,
+    SwiGLU width 2048; vocabulary 16384, tied embedding, RoPE, pre-RMSNorm; 100685568
+    parameters.
+  A100_lineage: Independent random conditional-restoration run; not MODEL-1 weights.
+  B100: 8 MHA encoder + 4 GQA decoder layers, d = 768, 12 Q / 4 decoder KV heads, SwiGLU
+    width 2048; exactly 100686336 parameters; bidirectional encoder/causal target with
+    cross-attention.
+  C101: B100 backbone + boundary pointers + three-way action classifier; exactly
+    101081859 parameters; 395523 extra, including 3 classifier biases.
+  C_event_contract: One BOS; action/start; start feedback; end; end feedback;
+    replacement tokens + END_EDIT; delimiter predicts next action; terminal END/ABSTAIN.
+  C_counts: T_decoder = 1 + R + 3K; T_vocab = R + K; K start labels; K end labels; K + 1
+    action labels.
+  C_loss: Whole-update component denominators from queued labels; each microbatch
+    contributes sum_k(lambda_k * S_jk / D_k); skip a component when D_k = 0; one FP32
+    accumulator; no additional division; END_EDIT included in the replacement
+    denominator; initially all lambda values = 1.
+  C_renderer: Constitutive source-byte copying of untouched gaps; invalid edit
+    sequence has no invented partial rendering; no extra guard credited to model.
+  tokenizer: Reversible byte BPE; 256 bytes + 64 reserved + 16064 merges = 16384.
+  tokenizer_reserved_map_trainer_config_sha256: PENDING; Section 11 is normative.
+  source_target_context: Initial 1024 source/control + 1024 full target including EOS; A
+    combined limit 2048; B/C streams qualified; C events independently qualified.
+  C_overflow_fixture: 1023 ordinary replacement tokens + one edit gives 1027 C
+    positions; common training eligibility/coalescing/qualified extension, no C-only
+    test drop.
+  random_init_and_initial_weight_hashes: PENDING_perarm_seed.
+  configs_actual_parameter_enumeration_and_hashes: PENDING.
+  final_weights_exports_precision_hashes: PENDING_AFTER_TRAINING_BEFORE_INFERENCE.
+  ASR_P: mlx-community/parakeet-tdt-0.6b-v3; recorded revision
+    ed2b7e8c15f9aaa0b5772e2efb986255eaef7e15; resolved bytes/runtime pin PENDING.
+  RAW: Identity of each recognizer's raw one-best text; no cleanup.
+  DET: Source-only frozen reference-task deterministic rules, version/hash PENDING; no
+    runtime access to reference or hidden generator target.
+  Qwen_paper: Qwen/Qwen3-4B-Instruct-2507; task-matched BF16; frozen prompt, greedy
+    decode, official weight revision, conversion and runtime hashes PENDING.
+  Qwen_product: Recorded mlx-community 4-bit checkpoint and current LocalFlow task;
+    separate later product comparison, not the paper BF16 control.
+  ByT5: google/byt5-small; native byte tokenizer; three adaptation seeds 1729, 2718,
+    31415; revision, weights, adapter implementation, context and budget qualification
+    PENDING.
+  ConstDecoder: Official code at recorded commit
+    b671d10d8c1f5379b9b0d68b78d16530878afa28; executable comparison requires
+    code/task compatibility AND a declared local budget before freeze. The outer
+    decision window is at most two engineering days: a 2-active-hour compatibility
+    scan, then at most 6 additional active hours and 2 device-hours for the
+    conditional integration probe specified in Part VI. A concrete blocked-budget
+    record is valid before freeze and makes no reproduced-result claim. Record
+    lexical uncased limits and separate costs; this does not replace ByT5 or become
+    free extra tuning.
+  learned_comparator_instances: 12 scratch + 3 ByT5 + 1 Qwen = 16, before conditional
+    ConstDecoder.
+  inference_states: bare; guard; full, never pooled.
+  guard_policy_hash: PENDING; common cached proposals, no oracle masks.
+  inference_config_permodel: PENDING: task framing, context, greedy decoding, stop rule,
+    maximum tokens/actions, timeouts, renderer, normalization, precision, abstention and
+    limits.
+
+TRAINING, EXPOSURE, HPO AND FAILURE CONTRACT
+  final_arms: A100 text; B100 text; C101 text; B100 acoustic.
+  final_seeds: 1729; 2718; 31415.
+  final_runs: 12.
+  HPO_seed: 42, never a final seed.
+  final_exposure_each: 150000000 paper_canonical_v2 exposures.
+  total_final_scratch: 1800000000 before update overshoot.
+  paper_canonical_v2: Fixed project-tokenizer count of trusted controls + clean spoken
+    rendering (or frozen existing official reference for real pairs) + full written
+    target; identical accounting anchor across corruption views, not extra model input.
+  product_canonical_v1: Normalized original source + full target + controls; separate
+    ledger.
+  educational_tokens: Processed language-model tokens, separate from paper/product.
+  actual_ledgers: Source bytes; native input; encoder; decoder; action; replacement;
+    valid loss; padding; generated tokens; copied bytes; updates; unique and repeated
+    sources.
+  curriculum: 100M light transduction + 40M task focused + 10M fresh preservation/hard
+    cases; restore_reference throughout.
+  phase_mixture: 30 percent identity/minimal; 20 percent verified rule compositions; 10
+    percent public real pairs; 40 percent matched corruption.
+  acoustic_replacement: Only 40 percent = 60M total exposures changes channel; the other
+    90M remain common.
+  HPO: 4 arms * 3 recipes * 10M = 12 trials, 120M planned exposures.
+  LR_candidates: 1e-4; 3e-4; 6e-4, symmetric development amendment only.
+  recipe_selection: A/B-text/C use their own three DEV recipes; B-acoustic reuses the
+    selected B-text optimizer, peak LR and full schedule; its 3 probes are
+    feasibility/sensitivity only.
+  acoustic_probe_failure: Amend the common B recipe and conduct comparable reruns before
+    freeze, or block H2; no acoustic-only rescue inside the channel claim; additional
+    cost reported.
+  optimizer: AdamW: beta1 = 0.9, beta2 = 0.95, epsilon = 1e-8, bias correction, matrix
+    decay = 0.1, zero norm decay, tied embedding updated once, global clip = 1.0.
+  precision: BF16 working weights/computation with FP32 master weights, moments and
+    gradient accumulation; actual mask/backward path qualified, not assumed from forward
+    performance.
+  paper_schedule: Continuous 150M clock; 3M linear warmup; cosine decay to 10 percent of
+    peak; no reset at 100M/140M; record update-boundary overshoot.
+  batch: Initial 32768 canonical anchors/update if BENCH qualified; actual microbatch,
+    accumulation, length buckets, padding and valid-loss denominators PENDING.
+  checkpoint: First complete update reaching 150M, with overshoot; no performance-based
+    early stopping.
+  checkpoint_snapshots: 50M/100M/150M saved; DEV learning curves mandatory.
+  sealed_intermediate_inference: STRETCH_ONLY_IF_PREFREEZE_BUDGETED.
+  numerical_failure: Nonfinite loss/gradient/state, corrupt checkpoint or exact-contract
+    failure; one replay from the last verified checkpoint with the same seed/recipe; a
+    repeat failure marks the run failed.
+  infrastructure_resume: Verified RNG/optimizer/data/LR state; lost/repeated work
+    logged.
+  seed_failures: Visible; no replacement seed; a two-run mean is not a completed
+    three-run mean.
+  material_bug: Document an amendment and symmetric rerun decision; no outcome-driven
+    rescue.
+  ByT5_tuning: Three adaptation recipes within a separate downstream allowance; intended
+    150M canonical exposures for each final seed; actual native/time feasibility
+    qualified.
+  ByT5_budget_caveat: Provisional allocation is not proof of adequacy; the budget-capped
+    view records actual exposure and cannot be called equal-data or converged.
+  matched_time_Tstar: PENDING from BENCH/pilots before outcomes; nearest completed
+    checkpoint <= cap; measured cost + DEV quality is MVP; sealed Tstar inference is
+    optional and budgeted.
+  learning_track: Full MODEL-1 program retained; 1B completion is not an MVP barrier.
+  product_ladder: S203: 600M; S316: 1.5B; S510: 2B under the product ledger, conditional
+    and not MVP.
+  stretch_size_grid: B100/S203/S316: same family, seeds and 50/100/150M grid; S203/S316
+    add six runs and 900M exposures; no automatic extension.
+
+TEXT, TTS AND ASR CONSTRUCTION
+  text_corruption_version_hash_and_errorprofile: PENDING from development only.
+  spoken_renderer_id_version_hash: technical_spoken_renderer_v1; implementation hash PENDING
+  target_lineage: Structured template -> written_target -> deterministic spoken
+    rendering -> TTS -> Parakeet; retain the latent record and hashes at every edge.
+  speech_truth_boundary: Written intention does not prove audio realization; no field
+    representing human-verified actual speech is fabricated.
+  confirmatory_spoken_scope: Frozen closed rendering grammar and qualified template
+    categories; unsupported pronunciations/values excluded by automatic construction
+    rules.
+  TTS_identity: Provisional hexgrad/Kokoro-82M v1.0; exact weights, voices, G2P, speed,
+    resampling and runtime hashes PENDING.
+  acoustic_screening: Frozen automatic signal/text checks and a separate recognizer
+    where qualified; agreement is screening, not acoustic certification or proof of
+    independence.
+  pilot_bound: 2000 training-only seeds * 2 voices * 2 conditions <= 8000 first-attempt
+    clips; 100-clip automatic RTF/yield probe; no human-label fidelity timing.
+  acceptance: Deterministic target/rendering/type/recoverability checks; fixed
+    cap/retry/reserve-seed order; no author manual judgment or listening.
+  common_support: Identical written/spoken target and accepted seed/variant intersection
+    in B-text/B-acoustic; rejected target lineage does not get rewritten in one arm.
+  no_error_selection: Preserve the frozen natural identity/no-error allowance; do not
+    keep drawing until only easy errorful outputs remain.
+  generation_cost: Proposed/accepted/rejected/retry counts; independent seed count;
+    audio duration; TTS/ASR/screening RTF; CPU/device/elapsed time; storage; memory;
+    currency.
+  repetition: Record exposures per independent seed; 8000 variants are not 8000 sources;
+    the 60M allocation needs development-supported diversity and a declared repetition
+    cap.
+  final_data_exposure: No final reference/audio in TTS seeds, prompts, tuning or ASR
+    error calibration.
+  teacher_additions: NONE in the primary channel contrast; LLM direct corruption/product
+    teachers are stretch work.
+
+AUTOMATED EVALUATION VALIDITY
+  required_fixture_suite_hash: PENDING_IMPLEMENTATION_OF_PART_IV_FIXTURES.
+  property_test_suite_version_hash: PENDING
+  property_random_seeds: 20261004; initial 10000 bounded trials proposed; test hash/result PENDING
+  metamorphic_suite_version_hash: PENDING
+  exhaustive_suite: All R/S/O triples over {a,b}, each length 0 through 3; independent
+    enumeration validates pair DAGs, the conditional optimum and count extrema.
+  independent_scorer_parity_protocol: Different program structure, a small oracle plus
+    frozen DEV batch; a standard edit library validates distance only unless it has the
+    same objective.
+  independent_scorer_parity_result: null
+  generated_conformance_suite_hash: PENDING
+  no_actual_test_claim: All software qualification results remain empty until execution.
+  exact_exclusion_and_ambiguity_ledger: PENDING_schema_and_future_records.
+  coverage_fields: All-case WER availability; R/S source-consensus words/errors; literal
+    extraction/eligibility; output local consensus; exact joint computational coverage;
+    cap counts; bound widths; invalid/missing/capped output counts.
+  candidate_blind_population: Source eligibility and denominators never use model
+    outputs.
+  DEV_feasibility: Exact scorer runtime/memory and worst-case bound widths qualified;
+    margins not changed after final results; broader ambiguity may block a positive
+    claim.
+  frozen_output_identity: Hashes for raw string, scored string, status, model and case;
+    no lost/deduplicated row without a declared mapping.
+  scorer_bug_rule: General reproducible fixture; version fix; all affected outputs
+    rescored; preserve the original; a post-outcome estimand change is exploratory
+    unless fresh confirmatory data are used.
+  optional_author_debugging: No quota; at most 25 DEV cases/scorer version if chosen;
+    creates no final labels, no headline validity and no expanding manual queue.
+  optional_AI_judges: DISABLED_BY_DEFAULT; removable from all primary claims/gates.
+  optional_AI_fields: Model/provider/snapshot/date; prompt/rubric hash; case and order
+    seed; blinded identity mapping; raw verdicts/uncertainty; family agreement;
+    failures; tokens/cost.
+  AI_restrictions: No human-label terminology; no primary gold; no ambiguity
+    adjudication; no final-judge training; contamination/family preference/prompt
+    dependence disclosed.
+
+STATISTICS AND UNCERTAINTY
+  primary_family: H1, H2; familywise alpha = 0.05.
+  fixed_component_bounds: One-sided 97.5 percent; Bonferroni across two joint claims;
+    intersection-union within each claim; no result-dependent bound/test selection.
+  descriptive_CI: Two-sided 95 percent, all per-seed estimates and seed spread.
+  point_identification: Interval-valued counts on fixed source-defined denominators.
+  adverse_contrast_for_error_upper: Treatment upper minus control lower.
+  adverse_contrast_for_repair_lower: Treatment lower minus control upper.
+  practical_gate_bounds: A proposed practical claim must also survive the
+    least-favorable alignment endpoint assignment; a convenient-path point may be
+    descriptive only.
+  cluster_unit: Original natural provenance group; within-corpus paired resampling;
+    carry all models/seeds/recognizer views and associated metadata as paired records.
+  crossed_groups: Speaker/book/video/source connected-component sensitivity; effective
+    cluster inventory and dominant groups reported.
+  synthetic_cluster: Latent group with all views, seeds and corruption variants;
+    template/constructor-conditioned interpretation, not independent natural n.
+  resampling_method: Paired domain-stratified source-cluster bootstrap, studentized when regular,
+    cluster-jackknife variance and generalized-inverse empirical quantiles; Section25
+    fixes sparse/zero-denominator/inconclusive conventions; implementation hash PENDING
+  bootstrap_replications: 20000.
+  bootstrap_seed: 20261004
+  statistics_implementation_version_hash: PENDING
+  variance_zero_sparse_failures: No arbitrary small variance or zero-width population
+    risk; insufficient clusters/denominators/variance yield inconclusive or
+    estimation-only status.
+  training_seed_estimand: Fixed mean of three completed runs, not an ensemble or
+    population inference over all possible training randomness.
+  n_not_multiplied: Cases * seeds * recognizers * synthetic variants are not independent
+    samples.
+  power_inputs: DEV-only source-error counts, paired differences, word lengths, cluster
+    moments, effective groups and identification widths; actual values PENDING.
+  power_claim: Planned 8826 does not guarantee power; words are not independent trials.
+  low_precision_response: Before freeze, extend independent support or the
+    calendar/amend scope; no human labels to improve coverage, no post-result margin
+    widening.
+  repeated_looks: Final 150M sealed test once; secondary checkpoints are DEV-only unless
+    an extra roster is registered; no selection of the best test checkpoint.
+  optional_p_values: Only valid predeclared joint p-values; secondary Holm tests cannot
+    override gates.
+  natural_synthetic_separation: Never pool numerators, denominators, prevalence or
+    independent n.
+
+NATIVE RESOURCE AND ONE-MONTH PLAN
+  intended_machine: Apple Silicon M5 Pro 48GB; actual SKU/OS/power mode/memory/runtime
+    PENDING.
+  BENCH_00: 5 warmup + 100 timed complete updates; 32768 nominal canonical
+    anchors/update; representative actual reader/masks/loss; 20-minute thermal test;
+    20-step resume check.
+  memory_contract: 18N persistent + 4N microgradient = 22N before activation/temporary
+    costs.
+  backend: Inspected MLX 0.32.3 reference; qualify the actual backward/mask path and any
+    newer version; no forward-only timing or wrong-mask speed claim.
+  final_scratch_FLOPs: 1.1024757504e18, modeled arithmetic, not measurement.
+  HPO_FLOPs: 0.07349838336e18, modeled.
+  total_scratch_FLOPs: 1.17597413376e18, modeled.
+  provisional_ByT5_FLOP_envelope: 1e18, not a verified requirement or guaranteed
+    adequacy.
+  combined_training_hours_scenarios: 604.4/151.1/75.6 at assumed 1/4/8 TFLOP per second.
+  natural_bare_outputs: 8826 * 2 * 16 = 282432 nominal.
+  mandatory_stress_bare_outputs: 9000 * 16 = 144000.
+  total_bare_outputs: 426432 before a conditional published comparator.
+  full30k_stress_alternative_total: 762432; pre-freeze-budgeted stretch only.
+  inference_time_scenario: At an assumed weighted 0.5 s/output: 59.2 h mandatory or
+    105.9 h full pool; actual per-family/native/context/caching speeds PENDING.
+  other_device_envelopes: 16 h correctness/BENCH; 24 h TTS, synthetic and real
+    training/development/calibration ASR, screening and retries; 18 h final public
+    Parakeet/Whisper ASR; 12 h decoded development checks plus runtime/guard
+    measurement. Enumerate HPO, 50M/100M/150M/Tstar, ByT5 and bounded Qwen prompt
+    checks on the frozen common development panel. These are additional to final
+    output counts. All are provisional allowances; measured overrun adds cost or
+    blocks the calendar.
+  favorable_base_hours: 280.3 device h; with 25 percent reserve, 350.4 device h;
+    excludes CPU scoring/bootstrap/setup; not a measured forecast.
+  CPU_scoring_bootstrap_setup_hours: 16 base CPU h + 25 percent reserve = 20 h.
+  serialized_total_hours: 350.4 device h + 20 CPU h = 370.4 h.
+  calendar_gate: The 22 availability days are provisionally days 4-25, INCLUDING
+    pre-freeze BENCH/HPO, not 22 days after the day 7-8 readiness gate. Final days
+    support analysis/writing. At 16 h/day the window provides 352 h; at 20 h/day it
+    provides 440 h. The 370.4 h serialized scenario does not fit 352 h but fits
+    440 h. A single Mac serializes heavy tasks.
+  active_human_target: 110 to 150 h, including coding-agent direction/review, setup,
+    software verification, operations, analysis, figures and writing; annotation 0 h.
+  human_device_parallelism: No free CPU overlap is assumed. CPU documentation/analysis
+    may overlap a GPU job only if measured interference is acceptable; one researcher
+    attention budget and one GPU queue.
+  final_BENCH_schedule_formula: Measured training + TTS + ASR + all-model decode + CPU
+    scorer/bootstrap/setup + runtime + IO + recovery reserve <= available serialized
+    hours; replace assumed terms before freeze.
+  stretch_to_protect_month: Educational 1B finish; larger sizes; extra HPO; full 30k
+    inference; sealed Tstar/intermediate inference; objectives; judges; quantization
+    sweeps; extra audio/domains/recognizers; product promotion; cloud.
+  failed_month_gate: Longer schedule or pre-outcome protocol amendment; no hidden
+    weak-seed drop.
+  external_costs: No spending authorized; current tariffs and optional cloud costs
+    separate.
+
+RELEASE, PROVENANCE AND PUBLICATION GATES
+  asset_manifest: Origin URL/ID; revision; retrieval date; content/license hash;
+    permitted use; exact redistribution scope; attribution; access requirements per
+    asset.
+  release_classes: Authorized payload; upstream acquisition recipe; restricted/private
+    material excluded.
+  model_lineage: Scratch/pretrained/adapted/teacher-generated lineages separate.
+  code_lineage: Commit, dirty diff, dependency lock, build/runtime/patch hashes.
+  public_artifacts: Owned model/scorer/generator code after implementation; all configs;
+    tokenizer; eligible weights; existing reference/ASR recipes; latents/fixtures;
+    manifests; frozen protocol; all run/failure logs; per-case bounds; figure inputs.
+  historical_product_material: Not required to reproduce the paper; no assumed private
+    corpus.
+  PUB_GATE_1: Focused novelty audit and precise controlled empirical distinction.
+  PUB_GATE_2: Automated evaluation validity: software tests, reference/rights,
+    deterministic eligibility, ambiguity/coverage/caps, exact generator conformance, no
+    manual dependency.
+  PUB_GATE_3: Development adequacy and full protocol/scope/budget/statistics freeze.
+  PUB_GATE_4: Completed natural and external-recognizer evidence with actual
+    populations.
+  PUB_GATE_5: Every claim supported, falsified or inconclusive with
+    scope/effect/uncertainty.
+  PUB_GATE_6: Clean-environment automated reconstruction/release or precisely disclosed
+    limits.
+  PUB_GATE_7: Manuscript, evidence, limitations, negative outcomes and release agree.
+  gate_statuses: All PENDING; none passed by writing this specification.
+
+PLANNED FIGURES, TABLES AND EXAMPLES
+  figure_table_manifest: Part VII and Section 20 are authoritative for planned IDs.
+  required_views: Representation repair versus introduced error; H1/H2 component bounds;
+    scorer coverage/identification widths; natural/synthetic results separate; exact
+    mixed fields; pretrained/runtime frontier; guard attribution; second recognizer;
+    cost/thermal data.
+  example_rule: Frozen hash/stratum selection from permitted outputs; show failures,
+    ambiguous alignments and counterexamples; qualitative examples are not incidence
+    estimates.
+  no_result_graphs: No fabricated points, placeholder estimates or simulated findings
+    presented as experiment results; planned figure descriptions only.
+
+AMENDMENTS AND GOVERNANCE
+  amendment_fields: ID; UTC date; author; old/new hashes; exact change/reason; affected
+    claims, data/runs; development basis; results access; cost/calendar impact;
+    confirmation status.
+  legitimate_prefreeze_reasons: Access/rights; reference policy; scorer correctness;
+    insufficient precision; runtime compatibility; inadequate learning/comparator
+    budget.
+  post_result_changes: Disclosed deviation or exploration; original analysis retained; a
+    new confirmatory claim requires newly sealed appropriate evidence.
+  claim_status_options: CANDIDATE_NOT_TESTED; BLOCKED; ESTIMATION_ONLY;
+    SUPPORTED_WITHIN_SCOPE; FALSIFIED; INCONCLUSIVE; EXPLORATORY; WITHDRAWN.
+  invariant_claim_rules: All joint gates required; identity is not useful repair; a
+    failed seed is not dropped; the copy renderer is not semantic proof; fallback is not
+    student credit; zero failures is not zero risk; nonsignificance is not equivalence;
+    a three-run mean is not an ensemble.
+  freeze_blockers: Resolve every field affecting
+    data/scoring/eligibility/normalization/tuning/identity/stopping/inference/statistics/decoding
+    budget before affected results.
+  MEASURED_RESULT: {}
+
+RECORD B: REUSABLE PER-EXPERIMENT PLAN — COPY FOR EACH EXPERIMENT
+
+  experiment_id: PENDING
+  title_purpose_and_decision: PENDING
+  protocol_id_version_hash: paper_protocol_v2 / PENDING_FROZEN_HASH
+  classification: CONFIRMATORY / SECONDARY / DEVELOPMENT / ENGINEERING / STRETCH
+  status: DRAFT_NOT_STARTED
+  mandatory_for_MVP: PENDING
+  linked_claims_RQs_and_exact_prospective_claim: PENDING
+  intervention_control_and_information_advantage_audit: PENDING
+  population_identity: NATURAL / PROGRAMMATIC_STRESS / DEVELOPMENT / PRODUCT
+  source_case_split_cluster_manifest_hashes: PENDING
+  reference_policy_normalizer_and_eligibility_hashes: PENDING
+  source_rights_release_scope_attribution: PENDING
+  source_only_denominators_and_fixed_masks_hash: PENDING
+  natural_vs_synthetic_weights_and_nonpooling: PENDING
+  planned_n_words_sourceerrors_clusters_and_DEVprecision_basis: PENDING
+  scorer_algorithm_version_implementation_hash: PENDING
+  ambiguity_policy_caps_fallback_and_coverage_fields: PENDING
+  transition_definitions_denominators_failure_mapping: PENDING
+  literal_extractor_version_hash: PENDING_OR_NOT_APPLICABLE
+  latent_schema_generator_parser_version_hashes: PENDING_OR_NOT_APPLICABLE
+  generation_seeds_grouping_witnesses_panel_manifest_hash: PENDING_OR_NOT_APPLICABLE
+  fixture_property_metamorphic_exhaustive_suite_hashes: PENDING
+  independent_scorer_parity_protocol_and_result_ref: PENDING
+  model_run_ids_lineage_config_initial_weights_tokenizer_hashes: PENDING
+  seeds_roles_pairing: PENDING
+  HPO_budget_recipes_selection_source_and_full_trial_register: PENDING
+  canonical_version_exposure_unique_sources_repetitions: PENDING
+  actual_native_encoder_decoder_action_loss_padding_output_ledgers: PENDING
+  optimizer_precision_accumulation_schedule_mask_backend: PENDING
+  primary_checkpoint_stop_failure_retry_and_resume_rules: PENDING
+  matched_parameter_data_time_views_and_limits: PENDING
+  inference_prompt_context_greedy_stops_caps_renderer_guard_fallback: PENDING
+  hardware_runtime_dependency_commit_dirty_state: PENDING
+  timing_materialization_load_warmup_residency_interference: PENDING
+  primary_estimand_ratio_weights_direction_and_joint_components: PENDING
+  practical_margin_effect_target_and_fixed_statistical_gate: PENDING
+  uncertainty_identification_bounds_clusters_seeds_multiplicity: PENDING
+  missingness_zero_denominators_sparse_events_and_ambiguity: PENDING
+  exact_exclusion_ambiguity_failure_coverage_output_schema: PENDING
+  falsification_inconclusive_and_undertrained_response: PENDING
+  active_human_hours_and_device_CPU_elapsed_cost_budget: PENDING
+  repetitive_human_labeling_requirement: NONE
+  optional_AI_model_prompt_orderseed_version_cost: DISABLED_OR_SEPARATE_PLAN
+  planned_figures_tables_percase_artifacts_release_paths: PENDING
+  nonselective_reporting_and_negative_result_plan: PENDING
+  inherited_overrides_with_reason: PENDING
+  review_freeze_timestamps_hash_and_affected_results_access: PENDING
+  amendment_ids: []
+  MEASURED_RESULT: {}
+
+RECORD C: EMPTY POST-EXECUTION RESULT SCHEMA
+
+  experiment_id_and_frozen_plan_hash: PENDING_AFTER_EXECUTION
+  schema_required_fields:
+    Actual UTC start/end; attempt/run/seed IDs; complete/failed/resumed status;
+    exact code/config/data/model/tokenizer/scorer/generator/runtime hashes;
+    start/end checkpoint and export identities; unique cases/sources/clusters;
+    actual reference words/source errors, all fixed denominators; exclusion-reason counts;
+    source/output ambiguity counts; literal-extraction coverage; exact joint coverage;
+    cap/fallback counts; count-interval widths; invalid/missing/empty/truncated outputs;
+    expected fixture/property/metamorphic/exhaustive checks and actual test results;
+    independent parity result and any discrepancy fixture; generator conformance;
+    canonical exposure/update overshoot; native/input/encoder/decoder/action/
+    replacement/loss/padding/output tokens; copied bytes; serial steps; repeated work;
+    generation proposed/accepted/rejected/retry counts; independent-seed yield;
+    TTS/ASR/screening audio hours/RTF; CPU/device/elapsed/load/compile/checkpoint/
+    inference/scoring time; human active hours; storage; memory; currency; energy if measured;
+    primary ratio intervals, adverse paired differences, statistical component bounds,
+    effect CIs, all per-seed values, seed spread, cluster inventory, resampling identity;
+    separate natural and formal-stress results; literal eligibility/retention/
+    repair/corruption/unresolved counts; raw versus completion-gated repair;
+    secondary guards/full fallback/transfer/native-cost results; all failures;
+    optional model-based judge identities/prompts/raw verdicts/uncertainty/cost;
+    amendments/deviations with chronology and results access; figure/table/source/
+    per-case/log hashes; release permissions; claim statuses and remaining limits;
+    clean-environment reconstruction record and unresolved reproduction blockers.
+  MEASURED_RESULT: {}
+  output_artifacts: []
+  claim_decisions: []
+  release_verification: {}
+
+END OF COMPLETE TEMPLATE
+```
+
+A completed run, a supported claim and a reproducible release are separate statuses. A valid negative experiment may complete the scientific purpose; a favorable estimate with unresolved scorer validity or incomplete controls may not. Actual cost includes generation, evaluation, failed attempts and repeated work. The empty result schema does not certify any planned gate or expected count.

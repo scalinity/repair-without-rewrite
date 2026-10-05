@@ -1,0 +1,12 @@
+.claude/
+.codex/
+.agent/
+.agents/
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+checkpoints/*
+!checkpoints/.gitkeep
+exports/*
+!exports/.gitkeep
