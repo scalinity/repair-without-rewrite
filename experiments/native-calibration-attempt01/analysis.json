@@ -1,0 +1,57 @@
+{
+  "classification": "DERIVED_GEOMETRY_STATS_NOT_CAMPAIGN_PROJECTION",
+  "raw_updates_sha256": "548a641245df23d03cf1ac21482433058d069f490b554e521f11d0da1c2036b0",
+  "window_convention": "first/last 300 seconds of cumulative update timers, excluding JSON/I/O gaps; whole completed updates; p95 index floor(0.95*n)",
+  "timed": {
+    "updates": 100,
+    "update_seconds": 22.81786033901153,
+    "updates_per_second": 4.382531863823828,
+    "serialized_fixture_tokens_per_second": 4487.7126285556,
+    "valid_labels_per_second": 4470.182501100304,
+    "p50_update_seconds": 0.22826714550319593,
+    "p95_update_seconds": 0.2336577920068521
+  },
+  "thermal": {
+    "updates": 5190,
+    "update_seconds": 1199.836527283289,
+    "updates_per_second": 4.325589263190191,
+    "serialized_fixture_tokens_per_second": 4429.403405506756,
+    "valid_labels_per_second": 4412.101048453996,
+    "p50_update_seconds": 0.22935089549719123,
+    "p95_update_seconds": 0.2437850420101313
+  },
+  "first_5_update_minutes": {
+    "updates": 1289,
+    "update_seconds": 299.840085724878,
+    "updates_per_second": 4.298958215956281,
+    "serialized_fixture_tokens_per_second": 4402.133213139232,
+    "valid_labels_per_second": 4384.937380275407,
+    "p50_update_seconds": 0.22988237500248943,
+    "p95_update_seconds": 0.24652541600516997
+  },
+  "last_5_update_minutes": {
+    "updates": 1317,
+    "update_seconds": 300.07728105697606,
+    "updates_per_second": 4.388869411776427,
+    "serialized_fixture_tokens_per_second": 4494.202277659061,
+    "valid_labels_per_second": 4476.646800011955,
+    "p50_update_seconds": 0.2276354580098996,
+    "p95_update_seconds": 0.2322920409933431
+  },
+  "last_vs_first_update_seconds_ratio": 0.9795138138357702,
+  "training_phase_max_mlx_allocation_bytes": 2888425680,
+  "warmup_first_seconds": 0.5048840829986148,
+  "total_logged_updates": 5295,
+  "total_logged_fixture_tokens": 5422080,
+  "original_unlogged_continuation_updates": 40,
+  "additional_original_continuation_tokens": 40960,
+  "unavailable": [
+    "continuous temperature/fan/power",
+    "process peak RSS",
+    "pressure/swap delta",
+    "measured GPU utilization",
+    "representative dataset reader",
+    "natural lengths",
+    "32k nominal update geometry"
+  ]
+}

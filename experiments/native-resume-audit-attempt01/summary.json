@@ -1,0 +1,19 @@
+{
+  "additional_complete_updates": 40,
+  "additional_processed_fixture_tokens": 40960,
+  "all_tensor_digests_exact": true,
+  "distinct_process_ids": true,
+  "dtype_inventory_exact": true,
+  "end_state_exact": true,
+  "exact_20_step_count": true,
+  "finished_utc": "2026-10-05T05:50:36.263774+00:00",
+  "limitations": [
+    "same four fixed random blocks; no data-reader/random augmentation exercised",
+    "digest equality establishes bitwise equality only on this pinned backend/hardware",
+    "audit elapsed time includes per-step state receipts; not a throughput benchmark"
+  ],
+  "parameter_count": 100685568,
+  "start_state_exact": true,
+  "status": "PASS_FRESH_PROCESS_20_UPDATE_RESUME",
+  "trajectory_mismatches": []
+}

@@ -1,0 +1,113 @@
+{
+  "identity": {
+    "started_utc": "2026-10-05T05:53:40.220393+00:00",
+    "classification": "BOUNDED_RANDOM_WEIGHT_COMPLETE_UPDATE_SAMPLES",
+    "code_commit": "35f856f0f2ea8699a012dc039a7fc531e2452d2e",
+    "dirty_state": [
+      " M docs/reports/STRESS_GENERATOR_FOUNDATION.md",
+      " M docs/reviews/BENCH_INDEPENDENT_REVIEW.md",
+      "?? docs/reports/BC_10M_DEVELOPMENT_PROBES.md",
+      "?? docs/reports/raw/bc_native_samples_attempt01.txt",
+      "?? docs/reports/raw/byt5_native_attempt01.txt",
+      "?? docs/reports/raw/native_calibration_attempt01.txt",
+      "?? docs/reports/raw/native_resume_audit_attempt01.txt",
+      "?? docs/reports/raw/public_audio_acquisition_attempt01.txt",
+      "?? docs/reports/raw/stress_independent_final_attempt01.txt",
+      "?? docs/reports/raw/stress_independent_final_receipt.json",
+      "?? experiments/manifests/asr_tts_probe/",
+      "?? experiments/manifests/public_audio_development/",
+      "?? experiments/manifests/public_byt5_probe_attempt01.json",
+      "?? experiments/native-calibration-attempt01/",
+      "?? experiments/native-resume-audit-attempt01/"
+    ],
+    "seed": 42,
+    "dtype": "bfloat16 working; float32 master/moments/accumulator",
+    "backend": "transparent reference with FP32 score/softmax",
+    "warmups": 5,
+    "timed_updates": 20,
+    "microbatches_per_update": 1,
+    "LR": 0.0003,
+    "source_padding_positions": 8,
+    "source_masks": "real bool key masks retained",
+    "gate_sha256": "0c4330d193329a819028256ed1761ea065ad24b5c39abff22357a32352d89f7f",
+    "code_hashes": {
+      "benchmarks/bc_native_samples.py": "8f13fe206f107b10a776bfd519a903117f723b27fea031e8e757ab5cd59df230",
+      "src/models/bc.py": "d58022e956b3adbd8d6a1c635ef9a7774efbd83aa5f8d8d65643c8f2d53be067",
+      "src/models/edits.py": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+      "src/models/core.py": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+      "src/models/training.py": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5"
+    },
+    "TF32": "0",
+    "final_10M_or_campaign_projection": false,
+    "concurrent_accelerator_work_allowed": false
+  },
+  "recipes": [
+    {
+      "recipe_id": "00_B100_s64_K0_R0",
+      "mean_update_seconds": 0.11488063540164148,
+      "p50_update_seconds": 0.1149093125059153,
+      "p95_update_seconds": 0.11602682499942603,
+      "timed_updates": 20,
+      "timed_seconds": 2.2976127080328297,
+      "synthetic_byte_canonical_anchors_per_second": 1122.9046527205817,
+      "peak_allocation_bytes": 2551766247,
+      "classification": "SHORT_SYNTHETIC_SAMPLE_NOT_CAMPAIGN_RATE"
+    },
+    {
+      "recipe_id": "01_B100_s256_K0_R0",
+      "mean_update_seconds": 0.12479754795131157,
+      "p50_update_seconds": 0.12462783350201789,
+      "p95_update_seconds": 0.1261132184008602,
+      "timed_updates": 20,
+      "timed_seconds": 2.4959509590262314,
+      "synthetic_byte_canonical_anchors_per_second": 4110.657688564053,
+      "peak_allocation_bytes": 2551762087,
+      "classification": "SHORT_SYNTHETIC_SAMPLE_NOT_CAMPAIGN_RATE"
+    },
+    {
+      "recipe_id": "02_C101_s256_K0_R0",
+      "mean_update_seconds": 0.1189243124514178,
+      "p50_update_seconds": 0.11884975000430131,
+      "p95_update_seconds": 0.11987643539250711,
+      "timed_updates": 20,
+      "timed_seconds": 2.378486249028356,
+      "synthetic_byte_canonical_anchors_per_second": 4296.850572154878,
+      "peak_allocation_bytes": 2551288311,
+      "classification": "SHORT_SYNTHETIC_SAMPLE_NOT_CAMPAIGN_RATE"
+    },
+    {
+      "recipe_id": "03_C101_s256_K1_R1",
+      "mean_update_seconds": 0.12640136450208955,
+      "p50_update_seconds": 0.1260072084987769,
+      "p95_update_seconds": 0.1275018916516274,
+      "timed_updates": 20,
+      "timed_seconds": 2.5280272900417913,
+      "synthetic_byte_canonical_anchors_per_second": 4042.6778778290213,
+      "peak_allocation_bytes": 2628655673,
+      "classification": "SHORT_SYNTHETIC_SAMPLE_NOT_CAMPAIGN_RATE"
+    },
+    {
+      "recipe_id": "04_C101_s256_K8_R8",
+      "mean_update_seconds": 0.16233486884884768,
+      "p50_update_seconds": 0.1615385624972987,
+      "p95_update_seconds": 0.16729451280261856,
+      "timed_updates": 20,
+      "timed_seconds": 3.246697376976954,
+      "synthetic_byte_canonical_anchors_per_second": 3147.814167243387,
+      "peak_allocation_bytes": 3041815867,
+      "classification": "SHORT_SYNTHETIC_SAMPLE_NOT_CAMPAIGN_RATE"
+    },
+    {
+      "recipe_id": "05_C101_s256_K8_R64",
+      "mean_update_seconds": 0.20412528320084675,
+      "p50_update_seconds": 0.20295010399422608,
+      "p95_update_seconds": 0.2093236441090994,
+      "timed_updates": 20,
+      "timed_seconds": 4.082505664016935,
+      "synthetic_byte_canonical_anchors_per_second": 3052.0472046914747,
+      "peak_allocation_bytes": 3041847995,
+      "classification": "SHORT_SYNTHETIC_SAMPLE_NOT_CAMPAIGN_RATE"
+    }
+  ],
+  "finished_utc": "2026-10-05T05:54:04.538444+00:00"
+}

@@ -1,0 +1,25 @@
+{"segment": "timed", "updates": 20}
+{"segment": "timed", "updates": 40}
+{"segment": "timed", "updates": 60}
+{"segment": "timed", "updates": 80}
+{"segment": "timed", "updates": 100}
+{"segment": "thermal", "elapsed_seconds": 60.114362541993614, "updates": 250}
+{"segment": "thermal", "elapsed_seconds": 120.26245258300332, "updates": 505}
+{"segment": "thermal", "elapsed_seconds": 180.33136920799734, "updates": 767}
+{"segment": "thermal", "elapsed_seconds": 240.53654683299828, "updates": 1030}
+{"segment": "thermal", "elapsed_seconds": 300.6096102080046, "updates": 1292}
+{"segment": "thermal", "elapsed_seconds": 360.68422845800524, "updates": 1554}
+{"segment": "thermal", "elapsed_seconds": 420.7820836669998, "updates": 1816}
+{"segment": "thermal", "elapsed_seconds": 480.88453825000033, "updates": 2067}
+{"segment": "thermal", "elapsed_seconds": 540.9917724580009, "updates": 2316}
+{"segment": "thermal", "elapsed_seconds": 600.9942555000016, "updates": 2566}
+{"segment": "thermal", "elapsed_seconds": 661.2209770829941, "updates": 2829}
+{"segment": "thermal", "elapsed_seconds": 721.2308219580009, "updates": 3091}
+{"segment": "thermal", "elapsed_seconds": 781.3591963329964, "updates": 3354}
+{"segment": "thermal", "elapsed_seconds": 841.5576951249968, "updates": 3617}
+{"segment": "thermal", "elapsed_seconds": 901.5854544169997, "updates": 3880}
+{"segment": "thermal", "elapsed_seconds": 961.7167490830034, "updates": 4145}
+{"segment": "thermal", "elapsed_seconds": 1021.8370385830058, "updates": 4410}
+{"segment": "thermal", "elapsed_seconds": 1081.9832290829945, "updates": 4674}
+{"segment": "thermal", "elapsed_seconds": 1142.1802115419996, "updates": 4937}
+{"status": "PASS_GEOMETRY_THERMAL_RESUME", "initialization_seconds": 0.051169875005143695, "parameter_count": 100685568, "timed_updates": 100, "timed_seconds": 22.81786033901153, "timed_mean_seconds": 0.2281786033901153, "timed_median_seconds": 0.22826714550319593, "thermal_updates": 5190, "thermal_wall_seconds": 1200.1615420419985, "thermal_update_seconds": 1199.836527283289, "thermal_tokens_per_second": 4429.403405506756, "peak_memory_bytes": 4499394776, "checkpoint_seconds": 1.2202628329978324, "load_resume_seconds": 1.0926359589939239, "checkpoint_hashes": {"arrays.npz": "753f962ed5676e4ba6347577e373b4fe93831390e0e006574bfe21ab477e4bce", "metadata.json": "ebe11e4ce1c3b4d7b5e89363abdda2068b46aaf80dc69c59d09f17f140b2a521"}, "resume_20_updates_max_abs_parameter": 0.0, "resume_20_updates_max_abs_moment": 0.0, "final_thermal": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded\n", "finished_utc": "2026-10-05T05:48:24.462171+00:00", "limitations": ["no representative public-data length distribution", "no B/C throughput or event density", "no ByT5/Qwen/ASR/TTS native timing", "no campaign calendar projection justified"]}

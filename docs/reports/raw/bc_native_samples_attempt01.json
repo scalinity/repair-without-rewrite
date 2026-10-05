@@ -1,0 +1,94 @@
+{
+  "classification": "BOUNDED_BF16_NATIVE_COMPLETE_UPDATE_COST_NOT_CAMPAIGN_OR_QUALITY",
+  "recorded_utc": "2026-10-05T05:56:29.290288+00:00",
+  "experiment_path": "experiments/manifests/stress_bc_native_samples_attempt01",
+  "exit_code": 0,
+  "total_complete_updates": 150,
+  "timed_complete_updates": 120,
+  "all_losses_and_gradient_norms_finite": true,
+  "manifest_entries_verified": 16,
+  "manifest_sha256": "345e9bdc995c819c12d8cb9a1711d2dbc3569b9c27eed1e052565c0e3719c873",
+  "stdout_path": "docs/reports/raw/bc_native_samples_attempt01.txt",
+  "stdout_sha256": "44213e1af64d45c16479f69120994111569f316e3087f37c3112372fd11cc075",
+  "summary_sha256": "9afb3219399947bd2b883c5bd4cccba531e7e24139968ad18c6ef8a5329b26ec",
+  "code_hashes_match_initial_snapshot": true,
+  "bc_gate_sha256_matches": true,
+  "recipes": [
+    {
+      "recipe_id": "00_B100_s64_K0_R0",
+      "source_nonpadding_positions": 64,
+      "source_padding_positions": 8,
+      "decoder_positions": 64,
+      "vocabulary": 64,
+      "K": 0,
+      "R": 0,
+      "synthetic_byte_canonical_anchors": 129,
+      "exact_parameter_count": 100686336
+    },
+    {
+      "recipe_id": "01_B100_s256_K0_R0",
+      "source_nonpadding_positions": 256,
+      "source_padding_positions": 8,
+      "decoder_positions": 256,
+      "vocabulary": 256,
+      "K": 0,
+      "R": 0,
+      "synthetic_byte_canonical_anchors": 513,
+      "exact_parameter_count": 100686336
+    },
+    {
+      "recipe_id": "02_C101_s256_K0_R0",
+      "source_nonpadding_positions": 256,
+      "source_padding_positions": 8,
+      "decoder_positions": 1,
+      "vocabulary": 0,
+      "K": 0,
+      "R": 0,
+      "synthetic_byte_canonical_anchors": 511,
+      "exact_parameter_count": 101081859
+    },
+    {
+      "recipe_id": "03_C101_s256_K1_R1",
+      "source_nonpadding_positions": 256,
+      "source_padding_positions": 8,
+      "decoder_positions": 5,
+      "vocabulary": 2,
+      "K": 1,
+      "R": 1,
+      "synthetic_byte_canonical_anchors": 511,
+      "exact_parameter_count": 101081859
+    },
+    {
+      "recipe_id": "04_C101_s256_K8_R8",
+      "source_nonpadding_positions": 256,
+      "source_padding_positions": 8,
+      "decoder_positions": 33,
+      "vocabulary": 16,
+      "K": 8,
+      "R": 8,
+      "synthetic_byte_canonical_anchors": 511,
+      "exact_parameter_count": 101081859
+    },
+    {
+      "recipe_id": "05_C101_s256_K8_R64",
+      "source_nonpadding_positions": 256,
+      "source_padding_positions": 8,
+      "decoder_positions": 89,
+      "vocabulary": 72,
+      "K": 8,
+      "R": 64,
+      "synthetic_byte_canonical_anchors": 623,
+      "exact_parameter_count": 101081859
+    }
+  ],
+  "decode_status_ledger": {
+    "B100_capped_at32": 4,
+    "C101_abstained_at1": 2,
+    "C101_completed_renderer_outputs": 0,
+    "all_calls": 6
+  },
+  "raw_complete_boundary_flag_interpretation": "outer callable boundary was timed; this does not establish every branch executed. Both C calls abstained before renderer; generic raw flag is qualified by this actual status ledger.",
+  "neural_quality_or_B_vs_C_greedy_speedup": "NOT_ESTABLISHED",
+  "pre_10M_admission": "BLOCKED",
+  "campaign_projection_or_final_probes": false
+}

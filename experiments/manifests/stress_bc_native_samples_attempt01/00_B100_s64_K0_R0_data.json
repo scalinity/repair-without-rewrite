@@ -1,0 +1,57 @@
+{
+  "model": "B100",
+  "source_nonpadding_positions": 64,
+  "source_padding_positions": 8,
+  "source_padded_positions": 72,
+  "source_bytes": 62,
+  "target_bytes": 63,
+  "synthetic_byte_canonical_anchors": 129,
+  "canonical_anchor_definition": "2 trusted source controls + clean reference bytes + full target bytes + EOS",
+  "tokenizer_status": "base-byte DEVELOPMENT accounting; 16k trained BPE not frozen",
+  "source": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "target": "baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "K": 0,
+  "R": 0,
+  "vocabulary": 64,
+  "decoder_positions": 64,
+  "actions": 0,
+  "pointers": 0,
+  "replacement_ordinary": 0,
+  "delimiters": 0,
+  "recipe_id": "00_B100_s64_K0_R0",
+  "model_config": {
+    "vocab_size": 16384,
+    "width": 768,
+    "encoder_layers": 8,
+    "decoder_layers": 4,
+    "q_heads": 12,
+    "kv_heads": 4,
+    "ffn_width": 2048,
+    "max_context": 1024
+  },
+  "exact_parameter_count": 100686336,
+  "initial_weight_sha256": "e2513aeab2cda671aae19feb5df15b5dd2463ebf4875a9001c4142fefffa7958",
+  "optimizer_policy": {
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "epsilon": 1e-08,
+    "weight_decay": 0.1,
+    "clip_norm": 1.0
+  },
+  "actual_dtype_inventory": {
+    "master": [
+      "mlx.core.float32"
+    ],
+    "moment_m": [
+      "mlx.core.float32"
+    ],
+    "moment_v": [
+      "mlx.core.float32"
+    ],
+    "accumulator": [
+      "mlx.core.float32"
+    ],
+    "working": "mlx.core.bfloat16",
+    "loss_and_sensitive_reductions": "mlx.core.float32"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "config_sha256": "133e2fc83dd98c6319d31c6c7c7a8de6048d35839d8ea1e24ccf4d81727de375",
+  "core_sha256": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+  "git_commit": "b252ce004ef807a97cdd37da45fec8987d4165c6",
+  "git_dirty": " M docs/reviews/GENERATOR_INDEPENDENT_REVIEW.md\n M tests/data/test_generator_independent_review.py\n?? benchmarks/bc_native_samples.py\n?? configs/stress_development.json\n?? docs/reports/BC_10M_DEVELOPMENT_PROBES.md\n?? docs/reports/BC_CORRECTNESS_REPORT.md\n?? docs/reports/STRESS_GENERATOR_FOUNDATION.md\n?? docs/reports/raw/bc_final_gate.json\n?? docs/reports/raw/bc_final_input_binding_receipt.json\n?? docs/reports/raw/bc_mechanics_attempt01.json\n?? docs/reports/raw/bc_mechanics_attempt01.txt\n?? docs/reports/raw/bc_mechanics_final_attempt01.txt\n?? docs/reports/raw/bc_prior_input_binding_validation.json\n?? docs/reports/raw/bc_source_binding_pure_attempt01.txt\n?? docs/reports/raw/bc_source_binding_pure_attempt02.txt\n?? docs/reports/raw/bc_source_binding_pure_attempt03.txt\n?? docs/reports/raw/bc_source_binding_review.json\n?? docs/reports/raw/native_calibration_attempt01.txt\n?? docs/reports/raw/native_resume_audit_attempt01.txt\n?? docs/reports/raw/public_audio_acquisition_attempt01.txt\n?? docs/reports/raw/stress_bundle_split_green.txt\n?? docs/reports/raw/stress_bundle_split_red.txt\n?? docs/reports/raw/stress_cpu_final_attempt01.txt\n?? experiments/manifests/asr_tts_probe/\n?? experiments/manifests/public_audio_development/\n?? experiments/manifests/stress_bc_exact_overfit_attempt02/\n?? experiments/manifests/stress_bc_exact_overfit_development/\n?? experiments/manifests/stress_foundation_20261005T051039Z/\n?? experiments/manifests/stress_foundation_20261005T051948Z/\n?? experiments/manifests/stress_split_repair_20261005T054436Z/\n?? experiments/native-calibration-attempt01/\n?? src/generation/\n?? src/models/bc.py\n?? src/models/edits.py\n?? tests/data/test_generator.py\n?? tests/models/test_bc.py\n?? tests/models/test_edits.py\n",
+  "manifest_sha256": "3aa2c43abed3ef36e13bee9ce608b341afa4be4f40936238ca76c146116e65b2",
+  "parent_benchmark": "/local/research/repair-without-rewrite/experiments/native-calibration-attempt01",
+  "parent_provenance_sha256": "406fe81176e10973eb6f9a664527c2d32c6ef3fa29fe11e1ff26c0caacb66314",
+  "parent_summary_sha256": "f221bde39abc9df55d821054649565ae37733054811776b66cd1bdf01dfd0a6a",
+  "python": "3.12.15 (main, Sep 30 2026, 22:04:19) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "runtime_lock_sha256": "e75b50786f73f24295d832126ded45906dab774e3f94f6967cff7a5ee7ddcfb0",
+  "same_fixed_batches_in_original_order": true,
+  "schema": "bench_resume_fresh_process_v1",
+  "scope": "fresh-process resume of random-token geometry; full BENCH-00 remains unqualified",
+  "script_sha256": "cd79d3b7dac46053f24659188e9076772cd02d7f899f1879eae902af04019b67",
+  "seed": 42,
+  "source_checkpoint": "/local/research/repair-without-rewrite/checkpoints/native-calibration-attempt01/bench-end",
+  "source_checkpoint_hashes": {
+    "arrays.npz": "753f962ed5676e4ba6347577e373b4fe93831390e0e006574bfe21ab477e4bce",
+    "metadata.json": "ebe11e4ce1c3b4d7b5e89363abdda2068b46aaf80dc69c59d09f17f140b2a521"
+  },
+  "started_utc": "2026-10-05T05:50:22.528359+00:00",
+  "training_sha256": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5",
+  "updates_per_process": 20
+}

@@ -1,0 +1,86 @@
+{
+  "dtype_inventory": {
+    "accumulator": [
+      "mlx.core.float32"
+    ],
+    "master": [
+      "mlx.core.float32"
+    ],
+    "moment_m": [
+      "mlx.core.float32"
+    ],
+    "moment_v": [
+      "mlx.core.float32"
+    ],
+    "working": "mlx.core.bfloat16"
+  },
+  "finished_utc": "2026-10-05T05:50:29.903766+00:00",
+  "load_and_initialization_seconds": 1.1186885839997558,
+  "parameter_count": 100685568,
+  "peak_mlx_memory_bytes": 2888422608,
+  "process_id": 75890,
+  "start_state": {
+    "acc_denominator": 0,
+    "acc_microbatches": 0,
+    "data_cursor": 21180,
+    "data_order": [],
+    "identities": {
+      "config": "133e2fc83dd98c6319d31c6c7c7a8de6048d35839d8ea1e24ccf4d81727de375",
+      "data": "3aa2c43abed3ef36e13bee9ce608b341afa4be4f40936238ca76c146116e65b2"
+    },
+    "loss_sum": 0.0,
+    "optimizer_policy": {
+      "beta1": 0.9,
+      "beta2": 0.95,
+      "clip_norm": 1.0,
+      "epsilon": 1e-08,
+      "weight_decay": 0.1
+    },
+    "optimizer_step": 5295,
+    "pending_tokens": 0,
+    "phase": "BENCH00_GEOMETRY_NOT_FINAL_TRAINING",
+    "processed_tokens": 5422080,
+    "rng_sha256": "b10a5c8b3b7ffbd3fcbaae232ffc330c3c36b0d7c2e42cf45ac0ba7aa34c7180",
+    "schedule": {
+      "floor_fraction": 0.1,
+      "peak_lr": 0.0003,
+      "planned_tokens": 150000000,
+      "warmup_fraction": 0.02
+    }
+  },
+  "state": {
+    "acc_denominator": 0,
+    "acc_microbatches": 0,
+    "data_cursor": 21260,
+    "data_order": [],
+    "identities": {
+      "config": "133e2fc83dd98c6319d31c6c7c7a8de6048d35839d8ea1e24ccf4d81727de375",
+      "data": "3aa2c43abed3ef36e13bee9ce608b341afa4be4f40936238ca76c146116e65b2"
+    },
+    "loss_sum": 0.0,
+    "optimizer_policy": {
+      "beta1": 0.9,
+      "beta2": 0.95,
+      "clip_norm": 1.0,
+      "epsilon": 1e-08,
+      "weight_decay": 0.1
+    },
+    "optimizer_step": 5315,
+    "pending_tokens": 0,
+    "phase": "BENCH00_GEOMETRY_NOT_FINAL_TRAINING",
+    "processed_tokens": 5442560,
+    "rng_sha256": "b10a5c8b3b7ffbd3fcbaae232ffc330c3c36b0d7c2e42cf45ac0ba7aa34c7180",
+    "schedule": {
+      "floor_fraction": 0.1,
+      "peak_lr": 0.0003,
+      "planned_tokens": 150000000,
+      "warmup_fraction": 0.02
+    }
+  },
+  "tensor_digests": {
+    "accumulator": "54d12321bc4bc4fc485b3d43f6393548e8fea1a7957d062fee78ab11761b1de6",
+    "moment_m": "cb1fc1efd4d9c70e52bd80cfa786b1c5fc17886dfac5ac4984ec71a94f068d1b",
+    "moment_v": "ee00f3d2243cd0bfc03fe698f0a975d8149367918ee8daefd5917780b121f3cd",
+    "parameters": "f276ff3441a98daf7dec6c046cab32116c57bd40667cf0139981f517f24e1071"
+  }
+}

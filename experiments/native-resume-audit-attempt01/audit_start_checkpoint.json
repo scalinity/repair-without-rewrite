@@ -1,0 +1,38 @@
+{
+  "bytes": 1611202315,
+  "checkpoint_seconds": 1.056280707998667,
+  "hashes": {
+    "arrays.npz": "753f962ed5676e4ba6347577e373b4fe93831390e0e006574bfe21ab477e4bce",
+    "metadata.json": "ebe11e4ce1c3b4d7b5e89363abdda2068b46aaf80dc69c59d09f17f140b2a521"
+  },
+  "path": "/local/research/repair-without-rewrite/checkpoints/native-resume-audit-attempt01/audit-start",
+  "state": {
+    "acc_denominator": 0,
+    "acc_microbatches": 0,
+    "data_cursor": 21180,
+    "data_order": [],
+    "identities": {
+      "config": "133e2fc83dd98c6319d31c6c7c7a8de6048d35839d8ea1e24ccf4d81727de375",
+      "data": "3aa2c43abed3ef36e13bee9ce608b341afa4be4f40936238ca76c146116e65b2"
+    },
+    "loss_sum": 0.0,
+    "optimizer_policy": {
+      "beta1": 0.9,
+      "beta2": 0.95,
+      "clip_norm": 1.0,
+      "epsilon": 1e-08,
+      "weight_decay": 0.1
+    },
+    "optimizer_step": 5295,
+    "pending_tokens": 0,
+    "phase": "BENCH00_GEOMETRY_NOT_FINAL_TRAINING",
+    "processed_tokens": 5422080,
+    "rng_sha256": "b10a5c8b3b7ffbd3fcbaae232ffc330c3c36b0d7c2e42cf45ac0ba7aa34c7180",
+    "schedule": {
+      "floor_fraction": 0.1,
+      "peak_lr": 0.0003,
+      "planned_tokens": 150000000,
+      "warmup_fraction": 0.02
+    }
+  }
+}

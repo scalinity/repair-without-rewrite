@@ -1,0 +1,1125 @@
+[
+  {
+    "name": "embedding",
+    "shape": [
+      16384,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 12582912
+  },
+  {
+    "name": "layers.0.attention_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.0.attention.q.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.0.attention.k.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.0.attention.v.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.0.attention.o.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.0.ffn_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.0.ffn.gate.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.0.ffn.up.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.0.ffn.down.weight",
+    "shape": [
+      768,
+      2048
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.1.attention_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.1.attention.q.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.1.attention.k.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.1.attention.v.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.1.attention.o.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.1.ffn_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.1.ffn.gate.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.1.ffn.up.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.1.ffn.down.weight",
+    "shape": [
+      768,
+      2048
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.2.attention_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.2.attention.q.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.2.attention.k.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.2.attention.v.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.2.attention.o.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.2.ffn_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.2.ffn.gate.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.2.ffn.up.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.2.ffn.down.weight",
+    "shape": [
+      768,
+      2048
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.3.attention_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.3.attention.q.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.3.attention.k.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.3.attention.v.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.3.attention.o.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.3.ffn_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.3.ffn.gate.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.3.ffn.up.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.3.ffn.down.weight",
+    "shape": [
+      768,
+      2048
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.4.attention_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.4.attention.q.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.4.attention.k.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.4.attention.v.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.4.attention.o.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.4.ffn_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.4.ffn.gate.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.4.ffn.up.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.4.ffn.down.weight",
+    "shape": [
+      768,
+      2048
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.5.attention_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.5.attention.q.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.5.attention.k.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.5.attention.v.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.5.attention.o.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.5.ffn_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.5.ffn.gate.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.5.ffn.up.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.5.ffn.down.weight",
+    "shape": [
+      768,
+      2048
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.6.attention_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.6.attention.q.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.6.attention.k.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.6.attention.v.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.6.attention.o.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.6.ffn_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.6.ffn.gate.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.6.ffn.up.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.6.ffn.down.weight",
+    "shape": [
+      768,
+      2048
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.7.attention_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.7.attention.q.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.7.attention.k.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.7.attention.v.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.7.attention.o.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.7.ffn_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.7.ffn.gate.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.7.ffn.up.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.7.ffn.down.weight",
+    "shape": [
+      768,
+      2048
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.8.attention_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.8.attention.q.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.8.attention.k.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.8.attention.v.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.8.attention.o.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.8.ffn_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.8.ffn.gate.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.8.ffn.up.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.8.ffn.down.weight",
+    "shape": [
+      768,
+      2048
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.9.attention_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.9.attention.q.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.9.attention.k.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.9.attention.v.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.9.attention.o.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.9.ffn_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.9.ffn.gate.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.9.ffn.up.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.9.ffn.down.weight",
+    "shape": [
+      768,
+      2048
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.10.attention_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.10.attention.q.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.10.attention.k.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.10.attention.v.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.10.attention.o.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.10.ffn_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.10.ffn.gate.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.10.ffn.up.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.10.ffn.down.weight",
+    "shape": [
+      768,
+      2048
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.11.attention_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.11.attention.q.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.11.attention.k.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.11.attention.v.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.11.attention.o.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.11.ffn_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.11.ffn.gate.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.11.ffn.up.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.11.ffn.down.weight",
+    "shape": [
+      768,
+      2048
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.12.attention_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.12.attention.q.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.12.attention.k.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.12.attention.v.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.12.attention.o.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.12.ffn_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.12.ffn.gate.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.12.ffn.up.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.12.ffn.down.weight",
+    "shape": [
+      768,
+      2048
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.13.attention_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.13.attention.q.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.13.attention.k.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.13.attention.v.weight",
+    "shape": [
+      256,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 196608
+  },
+  {
+    "name": "layers.13.attention.o.weight",
+    "shape": [
+      768,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 589824
+  },
+  {
+    "name": "layers.13.ffn_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  },
+  {
+    "name": "layers.13.ffn.gate.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.13.ffn.up.weight",
+    "shape": [
+      2048,
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "layers.13.ffn.down.weight",
+    "shape": [
+      768,
+      2048
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 1572864
+  },
+  {
+    "name": "final_norm.weight",
+    "shape": [
+      768
+    ],
+    "dtype": "mlx.core.float32",
+    "count": 768
+  }
+]

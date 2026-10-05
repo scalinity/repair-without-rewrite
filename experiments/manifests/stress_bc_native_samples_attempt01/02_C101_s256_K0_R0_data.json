@@ -1,0 +1,63 @@
+{
+  "model": "C101",
+  "source_nonpadding_positions": 256,
+  "source_padding_positions": 8,
+  "source_padded_positions": 264,
+  "source_bytes": 254,
+  "target_bytes": 254,
+  "synthetic_byte_canonical_anchors": 511,
+  "canonical_anchor_definition": "2 trusted source controls + clean reference bytes + full target bytes + EOS",
+  "tokenizer_status": "base-byte DEVELOPMENT accounting; 16k trained BPE not frozen",
+  "source": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "target": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "K": 0,
+  "R": 0,
+  "component_denominators": {
+    "action": 1,
+    "start": 0,
+    "end": 0,
+    "vocabulary": 0
+  },
+  "decoder_positions": 1,
+  "actions": 1,
+  "pointers": 0,
+  "replacement_ordinary": 0,
+  "delimiters": 0,
+  "vocabulary": 0,
+  "recipe_id": "02_C101_s256_K0_R0",
+  "model_config": {
+    "vocab_size": 16384,
+    "width": 768,
+    "encoder_layers": 8,
+    "decoder_layers": 4,
+    "q_heads": 12,
+    "kv_heads": 4,
+    "ffn_width": 2048,
+    "max_context": 1024
+  },
+  "exact_parameter_count": 101081859,
+  "initial_weight_sha256": "c3eac5492cc4b8bcf069b4e8a9f633a3ead863a014802a4e92dcd0690648a4eb",
+  "optimizer_policy": {
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "epsilon": 1e-08,
+    "weight_decay": 0.1,
+    "clip_norm": 1.0
+  },
+  "actual_dtype_inventory": {
+    "master": [
+      "mlx.core.float32"
+    ],
+    "moment_m": [
+      "mlx.core.float32"
+    ],
+    "moment_v": [
+      "mlx.core.float32"
+    ],
+    "accumulator": [
+      "mlx.core.float32"
+    ],
+    "working": "mlx.core.bfloat16",
+    "loss_and_sensitive_reductions": "mlx.core.float32"
+  }
+}
