@@ -1,0 +1,44 @@
+[
+  {
+    "id": "synthetic_train_01",
+    "provenance": "deterministically constructed development path fixture; check occurrence is source-visible witness; not the frozen stress population",
+    "reference": "A=15; verify A=15; B=20.",
+    "role": "train",
+    "source": "A=16; verify A=15; B=20."
+  },
+  {
+    "id": "synthetic_train_02",
+    "provenance": "deterministically constructed development path fixture; check occurrence is source-visible witness; not the frozen stress population",
+    "reference": "A=37; verify A=37; B=22.",
+    "role": "train",
+    "source": "A=38; verify A=37; B=22."
+  },
+  {
+    "id": "synthetic_train_03",
+    "provenance": "deterministically constructed development path fixture; check occurrence is source-visible witness; not the frozen stress population",
+    "reference": "A=48; verify A=48; B=31.",
+    "role": "train",
+    "source": "A=49; verify A=48; B=31."
+  },
+  {
+    "id": "synthetic_train_04",
+    "provenance": "deterministically constructed development path fixture; check occurrence is source-visible witness; not the frozen stress population",
+    "reference": "A=63; verify A=63; B=44.",
+    "role": "train",
+    "source": "A=64; verify A=63; B=44."
+  },
+  {
+    "id": "synthetic_hpo_development_01",
+    "provenance": "deterministically constructed development path fixture; check occurrence is source-visible witness; not the frozen stress population",
+    "reference": "A=26; verify A=26; B=18.",
+    "role": "hpo_development",
+    "source": "A=27; verify A=26; B=18."
+  },
+  {
+    "id": "synthetic_hpo_development_02",
+    "provenance": "deterministically constructed development path fixture; check occurrence is source-visible witness; not the frozen stress population",
+    "reference": "A=54; verify A=54; B=29.",
+    "role": "hpo_development",
+    "source": "A=55; verify A=54; B=29."
+  }
+]

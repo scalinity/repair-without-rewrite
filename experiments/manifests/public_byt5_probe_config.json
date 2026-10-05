@@ -1,0 +1,20 @@
+{
+  "batch_size": 2,
+  "canonical_exposure_count": null,
+  "canonical_exposure_status": "not priced by project tokenizer; native path workload only",
+  "data_path": "experiments/manifests/public_byt5_probe_data.json",
+  "data_sha256": "6b2b40deba5cb21afa2528fb06514069c3b1c631204f40ca71e16f7a4aaf5bca",
+  "decode_max_new_tokens": 64,
+  "development_seed": 120101,
+  "device": "mps",
+  "freeze_status": "DEVELOPMENT_PROBE_NOT_PROTOCOL_FREEZE",
+  "learning_rate": 0.0001,
+  "model_config_sha256": "7845fb21b320f3fa05392ce151143502cf08729c8c89732da3293615885d3e83",
+  "revision": "68377bdc18a2ffec8a0533fef03b1c513a4dd49d",
+  "scope": "SYNTHETIC_DEVELOPMENT_PATH_ONLY",
+  "source_capacity": 64,
+  "target_capacity": 64,
+  "training_wall_seconds_cap": 180,
+  "updates": 10,
+  "weight_sha256": "5c5aaf56299d6f2d4eaadad550a40765198828ead4d74f0a15f91cbe0961931a"
+}
