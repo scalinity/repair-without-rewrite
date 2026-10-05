@@ -66,3 +66,45 @@ def test_digit_isolation_and_trusted_framing():
     assert tokenizer.decode(framed["source"].ids) == "restore_reference"
     with pytest.raises(ValueError):
         ByteBPE.train(["a"], 1)
+
+
+@pytest.mark.parametrize("token_id", [65.0, True, "65", [], 257, -1, 16384])
+def test_literal_decoding_rejects_noncanonical_or_control_ids(token_id):
+    with pytest.raises(ValueError):
+        ByteBPE().decode_bytes([token_id])
+
+
+@pytest.mark.parametrize("task_id", [308.0, 308.5, False, "308", 257, 264, 319, 16384, -1])
+def test_trusted_framing_rejects_invalid_control_injection(task_id):
+    with pytest.raises(ValueError):
+        frame_source(ByteBPE(), "<BOS> restore_reference <EDIT>", task_id)
+
+
+@pytest.mark.parametrize("pair", [(97.0, 98), (97, 98.0), (True, 98), (97, False)])
+def test_merges_reject_noninteger_symbols(pair):
+    with pytest.raises(ValueError):
+        ByteBPE([pair])
+
+
+@pytest.mark.parametrize("merge_count", [True, 1.0, "1"])
+def test_trainer_rejects_noninteger_merge_count(merge_count):
+    with pytest.raises(ValueError):
+        ByteBPE.train(["abc"], merge_count)
+
+
+@pytest.mark.parametrize("policy", ["false", 0, 1, None])
+def test_digit_isolation_rejects_nonboolean_policy(policy):
+    with pytest.raises(ValueError):
+        ByteBPE(digit_isolation=policy)
+
+
+@pytest.mark.parametrize("key,value", [("vocab_size", 321.0), ("digit_isolation", "false"),
+                                       ("merges", [[97.0, 98]])])
+def test_artifact_rejects_noncanonical_scalar_types(tmp_path, key, value):
+    ByteBPE([(97, 98)]).save(tmp_path, "synthetic_development_fixture")
+    artifact_path = tmp_path / "tokenizer.json"
+    artifact = json.loads(artifact_path.read_text())
+    artifact[key] = value
+    artifact_path.write_text(json.dumps(artifact))
+    with pytest.raises(ValueError):
+        ByteBPE.load(tmp_path)

@@ -46,12 +46,14 @@ def _replace(tokens, pair, replacement):
 
 class ByteBPE:
     def __init__(self, merges=(), *, digit_isolation=False):
+        if type(digit_isolation) is not bool:
+            raise ValueError("digit isolation must be a boolean")
         self.merges = tuple(tuple(p) for p in merges)
         self.digit_isolation = digit_isolation
         self.byte_map = {i: bytes([i]) for i in range(256)}
         self.ranks = {}
         for rank, pair in enumerate(self.merges):
-            if len(pair) != 2 or any(v not in self.byte_map for v in pair) or pair in self.ranks:
+            if len(pair) != 2 or any(type(v) is not int or v not in self.byte_map for v in pair) or pair in self.ranks:
                 raise ValueError("invalid or duplicate BPE merge")
             self.ranks[pair] = rank
             self.byte_map[320+rank] = self.byte_map[pair[0]]+self.byte_map[pair[1]]
@@ -93,7 +95,12 @@ class ByteBPE:
 
     def decode_bytes(self, ids):
         try:
-            return b"".join(self.byte_map[i] for i in ids)
+            pieces = []
+            for token_id in ids:
+                if type(token_id) is not int:
+                    raise ValueError("literal token IDs must be integers")
+                pieces.append(self.byte_map[token_id])
+            return b"".join(pieces)
         except KeyError as error:
             raise ValueError("reserved or unknown ID in literal byte decoding") from error
 
@@ -114,7 +121,7 @@ class ByteBPE:
 
     @classmethod
     def train(cls, texts, merge_count, *, digit_isolation=False):
-        if not 0 <= merge_count <= 16064:
+        if type(merge_count) is not int or not 0 <= merge_count <= 16064:
             raise ValueError("merge count outside canonical vocabulary")
         tokenizer = cls(digit_isolation=digit_isolation)
         sequences = [segment for text in texts for segment in tokenizer._segments(text.encode("utf-8"))]
@@ -149,14 +156,14 @@ class ByteBPE:
         if artifact["schema"] != "localflow_byte_bpe_v1" or specials != {str(k): v for k, v in SPECIAL_TOKENS.items()}:
             raise ValueError("tokenizer schema/reserved-map mismatch")
         tokenizer = cls(artifact["merges"], digit_isolation=artifact["digit_isolation"])
-        if artifact["vocab_size"] != tokenizer.vocab_size or artifact["byte_map_hex"] != {str(k): v.hex() for k, v in tokenizer.byte_map.items()}:
+        if type(artifact["vocab_size"]) is not int or artifact["vocab_size"] != tokenizer.vocab_size or artifact["byte_map_hex"] != {str(k): v.hex() for k, v in tokenizer.byte_map.items()}:
             raise ValueError("tokenizer byte map or vocabulary mismatch")
         return tokenizer
 
 
 def frame_source(tokenizer, text, task_id=RESTORE_REFERENCE):
     """Trusted development serializer; literal strings never allocate control IDs."""
-    if task_id not in (260, 261, 262, 263, 308):
+    if type(task_id) is not int or task_id not in (260, 261, 262, 263, 308):
         raise ValueError("unsupported trusted task")
     source = tokenizer.source(text)
     return {"version": "dev_source_frame_v1_not_frozen", "ids": [BOS, task_id, SEP, *source.ids, EOS],
