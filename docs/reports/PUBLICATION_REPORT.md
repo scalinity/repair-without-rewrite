@@ -1,6 +1,6 @@
 # Owner-authorized public repository publication
 
-Status at this audit commit: **PREPUBLICATION CHECKS PASS; no remote created or pushed yet.** The owner explicitly requested public GitHub publication as `repair-without-rewrite` with the exact title and subtitle in the README. This overrides the earlier no-remote authorization boundary for publication only. Final experimental boundaries remain unchanged.
+Status: **PUBLISHED PUBLICLY.** The owner explicitly requested public GitHub publication as `repair-without-rewrite` with the exact title and subtitle in the README. This overrides the earlier no-remote authorization boundary for publication only. Final experimental boundaries remain unchanged.
 
 ## Classification before redaction
 
@@ -19,3 +19,11 @@ The public clone passed all 180 tests in 19.42 seconds using the existing pinned
 The complete prepublication scan has 971 history flags and 969 current-tree flags. The initial 970 findings are independently classified above. The single additional flag is numeric/block-geometry prose in the session report, not a credential; its original line is preserved in the private owner archive. Current-tree flags were matched to those reviewed files/lines. Thus scanner exit codes remain nonzero for documented false positives; the report does not invent a zero-flag scan. No broad allowlist was introduced. Final rewritten-history/current-tree scanning precedes the first push.
 
 No build, model run, secret grant, production change or final experimental authorization is included. Remote branch/tree/visibility verification and final publication outcome are appended only after they occur.
+
+## Actual publication outcome
+
+MEASURED RESULT: [scalinity/repair-without-rewrite](https://github.com/scalinity/repair-without-rewrite) was created public on `main` and the audited initial tip `83cd5fb5156a2c748bd1913d2c60981041a29ec9` pushed successfully. GitHub API returned `visibility=public`, exact owner-specified subtitle as description, and default branch `main`. Remote branch SHA matched that local tip; initial published tree was `de82d9dbc949a54b566a7a766c93f49c8b665091`. The complete final-candidate history/tree scans retained 971/969 flags, with zero additional unclassified history flags; every current-tree flagged line matched a classified original line exactly.
+
+The publication-only audit commit was `83cd5fb`. This outcome receipt is a later commit, so its own final HEAD is verified in the private owner closure record rather than written as a self-referential digest. The remote and local final tip/clean state, canonical hashes, production boundary and private archive checksums are rechecked after the receipt push and local synchronization. Only sanitized `main` is published; original private ancestry is retained in the external Git bundle, not an exposed remote branch.
+
+The public repository contains implementation, immutable design inputs, failures and qualification reports. Local assets and private provenance remain excluded. No repository-wide reuse license was selected by the owner; public visibility alone does not grant one. The research disposition remains `FOUNDATION_REPAIR_REQUIRED`.
