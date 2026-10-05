@@ -1,0 +1,32 @@
+{
+  "device": "CPU only",
+  "elapsed_seconds": 0.0007566249987576157,
+  "finished_utc": "2026-10-05T06:04:55.608502+00:00",
+  "geometry": {
+    "hop": 5,
+    "n_fft": 20,
+    "window": 20
+  },
+  "phase_domain_source": "kokoro.istftnet.Generator uses torch.sin for predicted phase",
+  "phase_range": [
+    -1,
+    1
+  ],
+  "rows": [
+    {
+      "allclose_atol_rtol_1e-4": false,
+      "frames": 20,
+      "max_abs": 0.07036969810724258,
+      "real_rms": 0.05715293437242508,
+      "reference_rms": 0.060103803873062134
+    },
+    {
+      "allclose_atol_rtol_1e-4": false,
+      "frames": 128,
+      "max_abs": 0.08409649133682251,
+      "real_rms": 0.06741266697645187,
+      "reference_rms": 0.07778752595186234
+    }
+  ],
+  "status": "FAIL_ORIGINAL_PATH_EQUIVALENCE"
+}

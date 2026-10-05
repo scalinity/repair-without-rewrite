@@ -19,7 +19,7 @@ MEASURED RESULT: The required unimplemented fixture run produced 21 failures wit
 | Equal-domain primary aggregation | PASS | Fixed 0.5/0.5 weights with exact rational ledgers; unavailable domain cannot be dropped or reweighted; pooled ratios labelled secondary |
 | Independent review | PASS for reviewed arithmetic | [Review and preserved resolved finding](../reviews/SCORER_INDEPENDENT_REVIEW.md) |
 | Natural literal extraction and full population schema/statistics | NOT QUALIFIED | No natural literal denominators, typed anchor matching, paired cluster uncertainty or sealed upstream identities yet |
-| Actual natural alignment coverage and H1 identification | NOT MEASURED | No qualified ASR/reference development population has been generated |
+| Actual natural alignment coverage and H1 identification | PARTIAL, NOT QUALIFIED | Twelve source-only DEV hypotheses measured; two pathological ASR rows cap joint computation. RAW identity is not candidate-output or final precision qualification |
 
 The tiny oracle enumerates complete paths and never calls optimized alignment code. The larger development oracle uses a dense lexicographic prefix recurrence; the scorer instead traverses independently built pair lattices and a conditional joint DAG. The canonical cyclic a/b/c example has conditional S/O cost 4 although unrestricted pair distance is 2, with repair/introduction 2 each. Completion-gated repair intentionally does not satisfy raw conservation on failed calls.
 
@@ -46,3 +46,9 @@ Current reviewed identities:
 - `uv.lock`: `e75b50786f73f24295d832126ded45906dab774e3f94f6967cff7a5ee7ddcfb0`
 
 PROPOSED NEXT ACTION: Qualify the source/reference development contract, generate raw development hypotheses, then run a separately preselected natural parity/coverage batch. Retain every cap, ambiguity, invalid output and unavailable region.
+
+## Subsequent real-source development audit
+
+MEASURED RESULT: [Dual-field RAW source audit](../../experiments/public-dev-source-score-attempt02/summary.json) scored all12 output-blind, book/project-closed DEV hypotheses under both provisional reference fields (24records). Both policies have198reference lexical tokens/eS3094; two repeated-unknown ASR outputs dominate3090errors. Each field has10 finished exact joint results and2joint-state caps at250,000 states. All identity totals remain exactly repair0/introduction0; capped local correspondence is not recovered. Maximum completed graph edges33 excludes capped graphs. Lexical agreement here does not settle formatted-target semantics. No source-error-free row is excluded; the SLUE equal-domain endpoint remains undefined.
+
+The traced/exported audit took128.260990s, traced peak326,243,099bytes/RSS683,229,184bytes. CPU tests/coding could overlap, so this is a selected workload cost rather than a full-campaign rate. Attempt01's ordinary-JSON writer failed on set fields; its original traceback/empty output/provenance is retained. Attempt02 uses the independently tested deterministic serializer. [Speech diagnostics](ASR_TTS_NATIVE_PROBE.md) stop representative ASR construction pending backend repair; current hypothesis identities/errors remain observations of the pinned path, not original NVIDIA/NeMo equivalence or representative H1 adequacy.

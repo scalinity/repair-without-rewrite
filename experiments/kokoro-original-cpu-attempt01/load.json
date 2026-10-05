@@ -1,0 +1,15 @@
+{
+  "cpu_threads": 4,
+  "device": "cpu",
+  "disable_complex": false,
+  "load_materialized_seconds": 0.8958696670015343,
+  "memory": {
+    "device": "cpu",
+    "process_peak_rss_bytes": 1382809600
+  },
+  "parameter_count": 81810022,
+  "parameter_dtypes": [
+    "torch.float32"
+  ],
+  "runtime_import_seconds": 1.9126801249949494
+}

@@ -1,0 +1,15 @@
+{
+  "device": "mps:0",
+  "disable_complex": true,
+  "load_materialized_seconds": 1.4439352500048699,
+  "memory": {
+    "mps_current_allocated_bytes": 327259904,
+    "mps_driver_allocated_bytes": 1250361344,
+    "process_peak_rss_bytes": 1370587136
+  },
+  "parameter_count": 81810022,
+  "parameter_dtypes": [
+    "torch.float32"
+  ],
+  "runtime_import_seconds": 16.909118540992495
+}

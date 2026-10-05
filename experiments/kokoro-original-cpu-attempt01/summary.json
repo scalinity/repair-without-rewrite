@@ -1,0 +1,17 @@
+{
+  "calls": 2,
+  "completed": 2,
+  "finished_utc": "2026-10-05T06:08:25.330236+00:00",
+  "first_call_seconds": 0.30105408300005365,
+  "generated_audio_seconds": 6.275,
+  "interpretation": "2 intended-text timing probes; waveform content/quality and acoustic truth unverified",
+  "load_materialized_seconds": 0.8958696670015343,
+  "memory": {
+    "device": "cpu",
+    "process_peak_rss_bytes": 1536311296
+  },
+  "runtime_import_seconds": 1.9126801249949494,
+  "second_call_seconds": 0.26676733400381636,
+  "status": "COMPLETED_BOUNDED_TTS_PROBE",
+  "total_process_wall_seconds": 3.558657375004259
+}

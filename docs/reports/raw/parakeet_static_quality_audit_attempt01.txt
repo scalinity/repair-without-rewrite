@@ -1,0 +1,154 @@
+CPU/static audit only. Original calls andhypotheses are retained unchanged.
+{
+  "geometry_formulas": {
+    "encoder_frames": "apply (length+1)//2 three times",
+    "frame_count": "(samples +512 -400 +160)//160",
+    "last_exclusive_index": "(frame_count-1)*160 +512"
+  },
+  "input_hashes": {
+    "exports/parakeet-ed2b7e8c15f9aaa0b5772e2efb986255eaef7e15/config.json": "f320f1292511f34ec47f513755fe20fd01dbfc09a925d42730e66059a6e1ef4c",
+    "experiments/parakeet-book-closed-attempt01/calls.jsonl": "5c00d66b2c6a1abe67b2d0f76de7fde938645e1f3621882a75c70c8b381632c6",
+    "experiments/parakeet-book-closed-attempt01/summary.json": "9e0a3f055f7693b8fa1ced618bb1e12f393c917b5e1082a201428751e8d0b126",
+    "experiments/public-dev-source-score-attempt02/summary.json": "18e614773c32e5749bdd588cd1d3fbae2b6d0871c761f5d7c9ff441c07013305",
+    "exports/asr-tts-probe-venv/lib/python3.12/site-packages/parakeet_mlx/audio.py": "88ea1d5210b3ff42ad31322691a4f6cbda7e6a3b281931b95ce6b954bcf89751",
+    "exports/asr-tts-probe-venv/lib/python3.12/site-packages/parakeet_mlx/conformer.py": "a3291f158dac4a203d7565a031f14585aba9eadc75de2f06cac62a48da4cd362",
+    "exports/asr-tts-probe-venv/lib/python3.12/site-packages/parakeet_mlx/parakeet.py": "2a4208b051ed20356908848c76080ebee7df4a554be91fc338fbe6747b19fccb",
+    "exports/asr-tts-probe-venv/lib/python3.12/site-packages/parakeet_mlx/rnnt.py": "474d4896be99fa5b93c47198f2bd6da5160eaa691a50c8e2827baf7ccc1132d9"
+  },
+  "per_case": [
+    {
+      "aligned_token_count": 56,
+      "case_id": "5536-43358-0006",
+      "computed_encoder_frames": 131,
+      "computed_logmel_frames": 1042,
+      "nonfinite_alignment_confidences": 0,
+      "source_samples": 166560,
+      "strided_view_elements_beyond_logical_waveform": 0,
+      "zero_duration_escape_pattern_matches": false
+    },
+    {
+      "aligned_token_count": 8,
+      "case_id": "8288-274162-0010",
+      "computed_encoder_frames": 30,
+      "computed_logmel_frames": 236,
+      "nonfinite_alignment_confidences": 0,
+      "source_samples": 37600,
+      "strided_view_elements_beyond_logical_waveform": 0,
+      "zero_duration_escape_pattern_matches": false
+    },
+    {
+      "aligned_token_count": 23,
+      "case_id": "3752-4944-0048",
+      "computed_encoder_frames": 61,
+      "computed_logmel_frames": 484,
+      "nonfinite_alignment_confidences": 0,
+      "source_samples": 77280,
+      "strided_view_elements_beyond_logical_waveform": 0,
+      "zero_duration_escape_pattern_matches": false
+    },
+    {
+      "aligned_token_count": 610,
+      "case_id": "4572-112381-0006",
+      "computed_encoder_frames": 61,
+      "computed_logmel_frames": 486,
+      "nonfinite_alignment_confidences": 610,
+      "source_samples": 77520,
+      "strided_view_elements_beyond_logical_waveform": 80,
+      "zero_duration_escape_pattern_matches": true
+    },
+    {
+      "aligned_token_count": 25,
+      "case_id": "3081-166546-0007",
+      "computed_encoder_frames": 71,
+      "computed_logmel_frames": 567,
+      "nonfinite_alignment_confidences": 0,
+      "source_samples": 90480,
+      "strided_view_elements_beyond_logical_waveform": 80,
+      "zero_duration_escape_pattern_matches": false
+    },
+    {
+      "aligned_token_count": 420,
+      "case_id": "251-118436-0004",
+      "computed_encoder_frames": 42,
+      "computed_logmel_frames": 334,
+      "nonfinite_alignment_confidences": 420,
+      "source_samples": 53200,
+      "strided_view_elements_beyond_logical_waveform": 80,
+      "zero_duration_escape_pattern_matches": true
+    },
+    {
+      "aligned_token_count": 27,
+      "case_id": "6599-38591-0009",
+      "computed_encoder_frames": 61,
+      "computed_logmel_frames": 486,
+      "nonfinite_alignment_confidences": 0,
+      "source_samples": 77520,
+      "strided_view_elements_beyond_logical_waveform": 80,
+      "zero_duration_escape_pattern_matches": false
+    },
+    {
+      "aligned_token_count": 46,
+      "case_id": "3000-15664-0005",
+      "computed_encoder_frames": 106,
+      "computed_logmel_frames": 847,
+      "nonfinite_alignment_confidences": 0,
+      "source_samples": 135360,
+      "strided_view_elements_beyond_logical_waveform": 0,
+      "zero_duration_escape_pattern_matches": false
+    },
+    {
+      "aligned_token_count": 21,
+      "case_id": "116-288047-0021",
+      "computed_encoder_frames": 49,
+      "computed_logmel_frames": 385,
+      "nonfinite_alignment_confidences": 0,
+      "source_samples": 61360,
+      "strided_view_elements_beyond_logical_waveform": 80,
+      "zero_duration_escape_pattern_matches": false
+    },
+    {
+      "aligned_token_count": 29,
+      "case_id": "6841-88291-0010",
+      "computed_encoder_frames": 59,
+      "computed_logmel_frames": 472,
+      "nonfinite_alignment_confidences": 0,
+      "source_samples": 75280,
+      "strided_view_elements_beyond_logical_waveform": 80,
+      "zero_duration_escape_pattern_matches": false
+    },
+    {
+      "aligned_token_count": 61,
+      "case_id": "8842-304647-0004",
+      "computed_encoder_frames": 128,
+      "computed_logmel_frames": 1017,
+      "nonfinite_alignment_confidences": 0,
+      "source_samples": 162480,
+      "strided_view_elements_beyond_logical_waveform": 80,
+      "zero_duration_escape_pattern_matches": false
+    },
+    {
+      "aligned_token_count": 29,
+      "case_id": "5694-64038-0014",
+      "computed_encoder_frames": 54,
+      "computed_logmel_frames": 430,
+      "nonfinite_alignment_confidences": 0,
+      "source_samples": 68640,
+      "strided_view_elements_beyond_logical_waveform": 0,
+      "zero_duration_escape_pattern_matches": false
+    }
+  ],
+  "receipt_path": "experiments/parakeet-book-closed-attempt01/static_quality_audit.json",
+  "receipt_sha256": "67078100e3fa17d047e07e308254744e780062a8e333b5abccfa90360d5e1ce1",
+  "summary": {
+    "api_calls_completed_including_repeats": 14,
+    "development_cases": 12,
+    "logical_strided_bounds_defect_cases": 7,
+    "new_model_calls": 0,
+    "nonfinite_confidence_cases": 2,
+    "pure_unk_failure_cases": 2,
+    "source_errors_each_policy": 3094,
+    "source_quality_status": "NOT_QUALIFIED_STOPPED",
+    "source_reference_words_each_policy": 198,
+    "wer_ratio_each_policy": 15.626262626262626
+  }
+}

@@ -1,5 +1,7 @@
 # Independent native calibration review
 
+**Current disposition:** measured random-token geometry completed; supplemental full-state fresh-process resume passed for that fixture. Full representative BENCH-00 remains unqualified (BENCH-R01). The historical pending snapshot and narrow original-runner finding below are preserved, with the completion follow-up recording scoped BENCH-R02 closure.
+
 Reviewer: MODEL-0/shared-core owner reviewing the independently written `benchmarks/native_calibration.py`. This is independent review of the runner and evidence accounting, not independent review of the shared training implementation authored by the reviewer. No model was loaded and no accelerator work ran for this review.
 
 ## Snapshot and disposition

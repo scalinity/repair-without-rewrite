@@ -1,0 +1,28 @@
+{
+  "arm": "kokoro",
+  "explicit_compile_calls": false,
+  "git_commit": "179843909b61bb2e375995e2b520f8ee9536b309",
+  "git_dirty": " M docs/reports/PUBLIC_SOURCE_QUALIFICATION.md\n?? docs/reports/BC_10M_DEVELOPMENT_PROBES.md\n?? docs/reports/raw/kokoro_native_attempt01.txt\n?? docs/reports/raw/public_audio_acquisition_attempt01.txt\n?? docs/reports/raw/public_audio_inventory_attempt02.txt\n?? experiments/manifests/public_audio_development/\n",
+  "initial_power": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=REDACTED_BATTERY_IDENTIFIER)\t80%; AC attached; not charging present: true\n",
+  "initial_thermal": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded\n",
+  "input_verification_seconds": 0.11842491698917001,
+  "manifest_sha256": "96f902c5f5b4eb1b03706b5ea6bda4246aa0ec27bfd466a0c8a02b91ce9b3667",
+  "memory_policy": "process peak RSS; device allocator metrics separately",
+  "network_during_calls": "HF/transformers offline; all model/voice/G2P assets local",
+  "platform": "macOS-27.2-arm64-arm-64bit",
+  "python": "3.12.15 (main, Sep 30 2026, 22:04:19) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "runtime_wheels_sha256": "463870f599260dee757e423c3997e0ae4856d952a219c3685cd874d45eb93350",
+  "script_sha256": "0300c7730bc75f0d93dfe26f8a6f3e04599d3e99594fc2ff78386e7ac73cc74d",
+  "seed": 42,
+  "started_utc": "2026-10-05T06:01:13.384918+00:00",
+  "versions": {
+    "en-core-web-sm": "3.8.0",
+    "kokoro": "0.9.4",
+    "misaki": "0.9.4",
+    "mlx": "0.32.3",
+    "numpy": "2.2.6",
+    "parakeet-mlx": "0.5.2",
+    "soundfile": "0.13.1",
+    "torch": "2.8.0"
+  }
+}

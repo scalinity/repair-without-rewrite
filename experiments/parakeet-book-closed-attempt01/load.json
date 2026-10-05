@@ -1,0 +1,16 @@
+{
+  "device": "Device(gpu, 0)",
+  "load_materialized_seconds": 2.586989125004038,
+  "memory": {
+    "mlx_active_bytes": 1295794632,
+    "mlx_cache_bytes": 605233308,
+    "mlx_peak_bytes": 1749250504,
+    "process_peak_rss_bytes": 996556800
+  },
+  "metal_available": true,
+  "parameter_count": 627052166,
+  "runtime_import_seconds": 0.7080527919897577,
+  "weight_dtypes": [
+    "mlx.core.bfloat16"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "development_aggregate_RTF": 0.03783887393838319,
+  "development_attempts": 12,
+  "development_audio_hours": 0.018806944444444446,
+  "development_audio_seconds": 67.705,
+  "development_completed": 12,
+  "development_elapsed_seconds": 2.561880959998234,
+  "development_target_quota": 20,
+  "finished_utc": "2026-10-05T06:19:02.307869+00:00",
+  "first_call_seconds": 1.5206871249974938,
+  "interpretation": "preselected public DEV speakers; source errors scored separately under both supplied text policies",
+  "load_materialized_seconds": 2.586989125004038,
+  "memory": {
+    "mlx_active_bytes": 1295796236,
+    "mlx_cache_bytes": 2202478336,
+    "mlx_peak_bytes": 2248335928,
+    "process_peak_rss_bytes": 1008386048
+  },
+  "microprobe_calls": 2,
+  "runtime_import_seconds": 0.7080527919897577,
+  "second_call_seconds": 0.11622529200394638,
+  "status": "COMPLETED_BOUNDED_DEV_PROBE",
+  "total_attempted_audio_seconds_including_repeats": 80.465,
+  "total_process_wall_seconds": 8.579619208001532
+}

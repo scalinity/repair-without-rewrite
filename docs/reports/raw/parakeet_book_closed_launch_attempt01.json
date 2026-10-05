@@ -1,0 +1,10 @@
+{
+  "MLX_ENABLE_TF32": "0",
+  "command": "MLX_ENABLE_TF32=0 exports/asr-tts-probe-venv/bin/python -m benchmarks.asr_tts_native_probe --manifest experiments/manifests/asr_tts_probe/asr_book_closed_config.json --out experiments/parakeet-book-closed-attempt01 --arm parakeet",
+  "config_sha256": "5e574a5e33bc09d56201702e55a9e6f0f1e7fd11bf1e42669885ee71ead0c8ba",
+  "git_commit": "6d52a2d141d36087f9b670020e6143797884d3da",
+  "git_dirty": " M docs/reports/ASR_TTS_NATIVE_PROBE.md\n M docs/reviews/BENCH_INDEPENDENT_REVIEW.md\n?? benchmarks/kokoro_stft_parity.py\n?? benchmarks/public_dev_source_score.py\n?? docs/reports/BC_10M_DEVELOPMENT_PROBES.md\n?? docs/reports/BENCH00_NATIVE_CALIBRATION.md\n?? docs/reports/raw/kokoro_native_attempt01.txt\n?? docs/reports/raw/kokoro_original_cpu_attempt01.txt\n?? docs/reports/raw/kokoro_stft_cpu_domain_attempt02.txt\n?? docs/reports/raw/kokoro_stft_parity_attempt01.txt\n?? experiments/kokoro-native-attempt01/\n?? experiments/kokoro-original-cpu-attempt01/\n",
+  "scope": "exclusive native accelerator slot, exactly 12 preselected HPO development clips plus 2 initial repeats",
+  "script_sha256": "a9d89a6451efdc0214d80c1f4f908b5c99a4a8ecd7af1941927f349ee2b3a7c0",
+  "started_utc": "2026-10-05T06:18:53.560775+00:00"
+}

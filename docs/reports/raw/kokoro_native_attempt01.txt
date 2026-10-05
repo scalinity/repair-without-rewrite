@@ -1,0 +1,11 @@
+/local/research/repair-without-rewrite/exports/asr-tts-probe-venv/lib/python3.12/site-packages/num2words/lang_PT_BR.py:142: SyntaxWarning: invalid escape sequence '\w'
+  if re.match('.*{} e \w*ento'.format(ext), result):
+/local/research/repair-without-rewrite/exports/asr-tts-probe-venv/lib/python3.12/site-packages/num2words/lang_PT_BR.py:170: SyntaxWarning: invalid escape sequence '\s'
+  result = re.sub('\s+', ' ', result)
+/local/research/repair-without-rewrite/exports/asr-tts-probe-venv/lib/python3.12/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  warnings.warn(
+/local/research/repair-without-rewrite/exports/asr-tts-probe-venv/lib/python3.12/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+{"arm": "kokoro", "ordinal": 0, "status": "COMPLETED"}
+{"arm": "kokoro", "ordinal": 1, "status": "COMPLETED"}
+{"calls": 2, "completed": 2, "finished_utc": "2026-10-05T06:01:38.815859+00:00", "first_call_seconds": 6.0948317919974215, "generated_audio_seconds": 6.275, "interpretation": "2 intended-text timing probes; waveform content/quality and acoustic truth unverified", "load_materialized_seconds": 1.4439352500048699, "memory": {"mps_current_allocated_bytes": 587208192, "mps_driver_allocated_bytes": 1374519296, "process_peak_rss_bytes": 1452736512}, "runtime_import_seconds": 16.909118540992495, "second_call_seconds": 0.9253357090055943, "status": "COMPLETED_BOUNDED_TTS_PROBE", "total_process_wall_seconds": 25.554521416997886}

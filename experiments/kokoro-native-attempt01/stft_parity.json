@@ -1,0 +1,52 @@
+{
+  "elapsed_seconds": 0.07733791599457618,
+  "finished_utc": "2026-10-05T06:02:29.288239+00:00",
+  "geometry": {
+    "filter_length": 20,
+    "hop_length": 5,
+    "win_length": 20
+  },
+  "results": [
+    {
+      "frames": 20,
+      "official_real_CPU_rms": 0.08903365582227707,
+      "official_real_CPU_vs_MPS_max_abs": 4.470348358154297e-08,
+      "original_complex_CPU_rms": 0.10750061273574829,
+      "original_complex_CPU_vs_official_real_CPU_max_abs": 0.07164622843265533,
+      "original_path_allclose_atol_rtol_1e-4": false,
+      "selected_real_CPU_vs_MPS_allclose_atol_rtol_1e-4": true,
+      "shape_custom": [
+        1,
+        1,
+        95
+      ],
+      "shape_reference": [
+        1,
+        1,
+        95
+      ]
+    },
+    {
+      "frames": 128,
+      "official_real_CPU_rms": 0.09611178189516068,
+      "official_real_CPU_vs_MPS_max_abs": 5.960464477539063e-08,
+      "original_complex_CPU_rms": 0.11868387460708618,
+      "original_complex_CPU_vs_official_real_CPU_max_abs": 0.10423019528388977,
+      "original_path_allclose_atol_rtol_1e-4": false,
+      "selected_real_CPU_vs_MPS_allclose_atol_rtol_1e-4": true,
+      "shape_custom": [
+        1,
+        1,
+        635
+      ],
+      "shape_reference": [
+        1,
+        1,
+        635
+      ]
+    }
+  ],
+  "scope": "isolated inverse STFT on fixed tensors, not whole generated waveform equivalence",
+  "seed": 42,
+  "status": "FAIL_ORIGINAL_PATH_EQUIVALENCE"
+}

@@ -1,0 +1,109 @@
+{
+  "classification": "PUBLIC_DEV_SOURCE_COUNTS_RAW_IDENTITY_ONLY_NOT_FINAL",
+  "elapsed_seconds": 128.26098975000787,
+  "joint_scope_limit": "O=S identity cannot establish candidate-output ambiguity or H1 precision",
+  "literal_extractor_and_cluster_bootstrap": "NOT_QUALIFIED",
+  "no_source_error_free_exclusions": true,
+  "policies": {
+    "text": {
+      "aggregate_pooled_dev_only": {
+        "completed_repair": [
+          0,
+          0
+        ],
+        "completed_repair_rate": [
+          0.0,
+          0.0
+        ],
+        "introduced": [
+          0,
+          0
+        ],
+        "introduced_rate": [
+          0.0,
+          0.0
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 3094,
+        "reference_words": 198,
+        "repair": [
+          0,
+          0
+        ],
+        "source_errors": 3094,
+        "wer": 15.626262626262626
+      },
+      "alignment_status_counts": {
+        "closed_form_point": 2,
+        "exact_point": 10
+      },
+      "cap_cases": 2,
+      "max_joint_edges": 33,
+      "max_joint_states": 250000,
+      "max_repair_bound_width": 0,
+      "point_repair_counts": 12,
+      "population_complete": true,
+      "preselected_cases": 12,
+      "scored_cases": 12,
+      "source_consensus_counts": {
+        "correct": 176,
+        "error": 22
+      },
+      "source_unavailable_cases": []
+    },
+    "text_raw": {
+      "aggregate_pooled_dev_only": {
+        "completed_repair": [
+          0,
+          0
+        ],
+        "completed_repair_rate": [
+          0.0,
+          0.0
+        ],
+        "introduced": [
+          0,
+          0
+        ],
+        "introduced_rate": [
+          0.0,
+          0.0
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 3094,
+        "reference_words": 198,
+        "repair": [
+          0,
+          0
+        ],
+        "source_errors": 3094,
+        "wer": 15.626262626262626
+      },
+      "alignment_status_counts": {
+        "closed_form_point": 2,
+        "exact_point": 10
+      },
+      "cap_cases": 2,
+      "max_joint_edges": 33,
+      "max_joint_states": 250000,
+      "max_repair_bound_width": 0,
+      "point_repair_counts": 12,
+      "population_complete": true,
+      "preselected_cases": 12,
+      "scored_cases": 12,
+      "source_consensus_counts": {
+        "correct": 176,
+        "error": 22
+      },
+      "source_unavailable_cases": []
+    }
+  },
+  "primary_equal_domain_endpoint": null,
+  "primary_unavailable_reason": "SLUE unavailable; do not reweight registered0.5/0.5 domains",
+  "process_peak_rss_bytes_macos": 683229184,
+  "python_traced_peak_bytes": 326243099,
+  "records_sha256": "5145552f9cb9c8637237429a4b844ba9bf34a762815a104d6202f79ba86deece",
+  "selected_audio_seconds": 67.705,
+  "selected_cases": 12,
+  "selected_groups": 12
+}
