@@ -124,34 +124,41 @@ def kokoro(config, out):
     from kokoro import KModel, KPipeline
     imported = time.perf_counter() - then
     spec = config["kokoro"]
-    if not torch.backends.mps.is_available():
+    device = spec["device"]
+    if device not in ("mps", "cpu"):
+        raise ValueError("unsupported predeclared Kokoro device")
+    if device == "mps" and not torch.backends.mps.is_available():
         raise RuntimeError("MPS unavailable; CPU rate will not be mislabeled as this MPS path")
+    if device == "cpu":
+        torch.set_num_threads(spec["cpu_threads"])
+    synchronize = torch.mps.synchronize if device == "mps" else lambda: None
     assets = {Path(a["path"]).name: a["path"] for a in spec["assets"]}
     torch.manual_seed(config["seed"])
     then = time.perf_counter()
     # The official library offers this real-valued STFT implementation for
     # backends without complex operators; record its selection explicitly.
     model = KModel(repo_id=spec["repository"], config=assets["config.json"],
-                   model=assets["kokoro-v1_0.pth"], disable_complex=spec["disable_complex"]).to("mps").eval()
+                   model=assets["kokoro-v1_0.pth"], disable_complex=spec["disable_complex"]).to(device).eval()
     pipeline = KPipeline(lang_code=spec["lang_code"], repo_id=spec["repository"], model=model, trf=False)
     voice = torch.load(assets["af_heart.pt"], map_location="cpu", weights_only=True)
     pipeline.voices[spec["voice"]] = voice
     if pipeline.g2p.fallback is None:
         raise RuntimeError("English OOD phoneme fallback unavailable; do not silently skip words")
-    torch.mps.synchronize()
+    synchronize()
     load = time.perf_counter() - then
-    memory = lambda: {"mps_current_allocated_bytes": torch.mps.current_allocated_memory(),
+    memory = lambda: ({"mps_current_allocated_bytes": torch.mps.current_allocated_memory(),
                       "mps_driver_allocated_bytes": torch.mps.driver_allocated_memory(), **rss_peak()}
+                     if device == "mps" else {"device": "cpu", **rss_peak()})
     write_json(out / "load.json", {"runtime_import_seconds": imported, "load_materialized_seconds": load,
         "device": str(model.device), "parameter_count": sum(p.numel() for p in model.parameters()),
         "parameter_dtypes": sorted({str(p.dtype) for p in model.parameters()}),
-        "disable_complex": spec["disable_complex"], "memory": memory()})
+        "disable_complex": spec["disable_complex"], "cpu_threads": torch.get_num_threads(), "memory": memory()})
     rows = []
     audio_out = Path("exports/asr-tts-generated") / out.name
     audio_out.mkdir(parents=True, exist_ok=False)
     with (out / "calls.jsonl").open("w", buffering=1) as stream:
         for ordinal, text in enumerate(spec["intended_texts"]):
-            torch.mps.synchronize()
+            synchronize()
             then = time.perf_counter()
             row = {"ordinal": ordinal, "intended_text": text,
                    "intended_text_sha256": hashlib.sha256(text.encode()).hexdigest(),
@@ -159,7 +166,7 @@ def kokoro(config, out):
             try:
                 with torch.inference_mode():
                     pieces = list(pipeline(text, voice=spec["voice"], speed=spec["speed"]))
-                torch.mps.synchronize()
+                synchronize()
                 audio = np.concatenate([piece.audio.numpy() for piece in pieces])
                 if not audio.size or not np.isfinite(audio).all():
                     raise ValueError("empty/nonfinite generated waveform")
@@ -174,7 +181,7 @@ def kokoro(config, out):
                            write_and_hash_seconds=time.perf_counter() - save_start,
                            real_time_factor=elapsed / row["audio_seconds"])
             except Exception as error:
-                torch.mps.synchronize()
+                synchronize()
                 elapsed = time.perf_counter() - then
                 row.update(status="FAILED", error_type=type(error).__name__, error=str(error), traceback=traceback.format_exc())
             row["elapsed_seconds"] = elapsed
