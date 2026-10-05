@@ -15,6 +15,7 @@ import tracemalloc
 
 from src.scoring.records import Output, aggregate, prepare_source, score_output
 from src.scoring.text import POLICY_HASH
+from src.scoring.triple import serialize
 
 
 def sha(path):
@@ -71,7 +72,7 @@ def main():
                     output_view='RAW_identity', reference_policy_id=field + '_DEVELOPMENT_UNFROZEN',
                     recognizer_view='parakeet_ed2b7e8', cluster_ids=[case['source_group_id']],
                     source_field_policy_frozen=False)
-                stream.write(json.dumps(record, sort_keys=True) + '\n')
+                stream.write(serialize(record) + '\n')
                 scored.append(record)
             policies[field] = {'preselected_cases': len(rows), 'scored_cases': len(scored),
                 'source_unavailable_cases': failures, 'population_complete': not failures,
