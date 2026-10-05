@@ -1,0 +1,32 @@
+{
+  "source_attempt": "byt5-natural-adaptation-attempt02",
+  "ignored_summary_sha256": "c0ee9ba6b47c7d2ac6e4b71ea563333fcf468579e090d582e1f80707a5ed6b60",
+  "summary": {
+    "updates": 600,
+    "canonical_anchors": 124102,
+    "native_source_tokens": 341222,
+    "native_supervised_tokens": 295080,
+    "wall_seconds_including_panels": 381.2680435420043,
+    "training_rows": 1024,
+    "dev_rows": 24,
+    "valid_completions": 24,
+    "pre_adaptation_panel_seconds": 68.75897758299834,
+    "source_errors": 20,
+    "output_errors": 22,
+    "useful_cases": 0,
+    "damaged_cases": 2,
+    "parameter_dtype": "FP32",
+    "optimizer_state_dtypes": [
+      "torch.float32"
+    ],
+    "peak_rss_bytes": 7800586240,
+    "checkpoint_sha256": "4a99dd6504c2ecbdc96928da3c812bba0394a3972e72adff25dc802ff2dd9722"
+  },
+  "public_scope": "payload-free measured counts; original complete provenance and payloads remain ignored",
+  "artifact_hashes": {
+    "provenance.json": "cf83d1bff5fcb7b9508386d6d9f6879fa67d3c23e615446d4b09eef2c2773cc1",
+    "initial_identity.json": "6ecc1d8336ed3fd930c5601b1229f96dff1b9d9e584839550037569083c7011d",
+    "steps.jsonl": "f3b8695922a98c1c986d727197fbaccdf46e455fae8576229347736f7bf8be29",
+    "outputs.jsonl": "06eefe36d128c491ca2f1a81fae6323b7223147a097184df45c11d09a7a7e2c4"
+  }
+}
