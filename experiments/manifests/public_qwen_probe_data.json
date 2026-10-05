@@ -1,0 +1,16 @@
+[
+  {
+    "id": "synthetic_hpo_development_01",
+    "provenance": "deterministically constructed development path fixture; check occurrence is source-visible witness; not the frozen stress population",
+    "reference": "A=26; verify A=26; B=18.",
+    "role": "hpo_development",
+    "source": "A=27; verify A=26; B=18."
+  },
+  {
+    "id": "synthetic_hpo_development_02",
+    "provenance": "deterministically constructed development path fixture; check occurrence is source-visible witness; not the frozen stress population",
+    "reference": "A=54; verify A=54; B=29.",
+    "role": "hpo_development",
+    "source": "A=55; verify A=54; B=29."
+  }
+]
