@@ -1,0 +1,170 @@
+{
+  "alignment_version": "lexical-projected-codepoint-all-optimal-edge-consensus-v2",
+  "ambiguous_optimal_edit_edges": 1336,
+  "class_pairs": [
+    {
+      "class_pair": "SS",
+      "group_count": 3,
+      "record_count": 3,
+      "source_group_ids": [
+        "2a2849c599be04c0f82895a35efe23bf73614f5a2268ffa2909f555c7a8245da",
+        "a272b9c5107747ae37e57765f764c032c634fc46445b300a8d191fbb0e8dff8a",
+        "afb6b5161ac2136ab9c6047097e36e8e07a0ce997ebd8b5865d7ebbb4aa7b2fa"
+      ],
+      "supported": false,
+      "weight": 0
+    },
+    {
+      "class_pair": "SD",
+      "group_count": 9,
+      "record_count": 11,
+      "source_group_ids": [
+        "02525810adf71cd23b461eb43b17e613f35d1b16f491536930186a3bbd9e322d",
+        "1854c5968901bc60b272a944cb18e307bff116a50396ddf778742693966a2a63",
+        "1e56217b159faade1fc238d6b4ed47c35649f06eaa78a20bba22eb56f1356455",
+        "4259d482789033ae7105f527abaafa017e8a2b322de3f0b2c3214c678280e568",
+        "57720e15b600dd9497fff86746440514c25c7a2dd4fe171eb7c7d4bc9dccbfc9",
+        "8cae3fbbb913f0f079a0cf07d17df51097731dabf3fb9abc7bfb20fb889babd4",
+        "a272b9c5107747ae37e57765f764c032c634fc46445b300a8d191fbb0e8dff8a",
+        "afb6b5161ac2136ab9c6047097e36e8e07a0ce997ebd8b5865d7ebbb4aa7b2fa",
+        "d79026d1058a0864e9f16d886877faad7551531cb0a942b6007693d0d434af2c"
+      ],
+      "supported": true,
+      "weight": 11
+    },
+    {
+      "class_pair": "SI",
+      "group_count": 6,
+      "record_count": 7,
+      "source_group_ids": [
+        "33ef0d0f68b45f17996cd8f8c7e529c37bbb4602c73826d70f7d75fc48dba2c2",
+        "57720e15b600dd9497fff86746440514c25c7a2dd4fe171eb7c7d4bc9dccbfc9",
+        "91a06c42088875b9b873c6bfc930c45932189c18487fbea14dae51de696732c4",
+        "a272b9c5107747ae37e57765f764c032c634fc46445b300a8d191fbb0e8dff8a",
+        "a5921260564bca954e0fb2f54d50d22aa963de6eb44ac39d4ab49e39f3e99ab2",
+        "abe3f470398173d4cc55de01f494bd8f5df3568b4c0eedb62f9858542487dfe9"
+      ],
+      "supported": true,
+      "weight": 7
+    },
+    {
+      "class_pair": "DD",
+      "group_count": 12,
+      "record_count": 16,
+      "source_group_ids": [
+        "1854c5968901bc60b272a944cb18e307bff116a50396ddf778742693966a2a63",
+        "1a4a1152e6bee046910f41588c5758be15dcef21d068953f4a7d567d217119d3",
+        "399f0ba023f9ea7591d0399d46d049b9d4f2d6c06b826b5729701780d685c4a6",
+        "46e5b4638ecf98b466e88d32ba2c6c4889a0dd4fd71e4159a76864a10782ceab",
+        "473a7f164e82572f3048b5a5fead56a274618840adb126f07eec1745592f99ae",
+        "6066955b926beb74af6860ba61b2db591641ea5bc6bdea5bad60abb755ffe029",
+        "63f2383172fe0f88a41c5ab2d80e11d6a804c68abbd94ff8e60a795698091238",
+        "9a617f07bc7ff9ca80cf9d4c8a3deb615ae46b9badbc75a2c15f67ee52fa71d8",
+        "a272b9c5107747ae37e57765f764c032c634fc46445b300a8d191fbb0e8dff8a",
+        "a5921260564bca954e0fb2f54d50d22aa963de6eb44ac39d4ab49e39f3e99ab2",
+        "c46820318c2faf9112eaf5fb4f65fadd8778ad96c2029f73324c7d8b50096870",
+        "d3b7ea0e7fc919a2e80d506700c221258ea2603ea85aa53e488245dc38ec7cb0"
+      ],
+      "supported": true,
+      "weight": 16
+    },
+    {
+      "class_pair": "DI",
+      "group_count": 7,
+      "record_count": 8,
+      "source_group_ids": [
+        "1854c5968901bc60b272a944cb18e307bff116a50396ddf778742693966a2a63",
+        "1a4a1152e6bee046910f41588c5758be15dcef21d068953f4a7d567d217119d3",
+        "473a7f164e82572f3048b5a5fead56a274618840adb126f07eec1745592f99ae",
+        "56784d7ccb214125c4638d43546047979632183d392f1d4d1c9795d74b9c0578",
+        "57720e15b600dd9497fff86746440514c25c7a2dd4fe171eb7c7d4bc9dccbfc9",
+        "9a617f07bc7ff9ca80cf9d4c8a3deb615ae46b9badbc75a2c15f67ee52fa71d8",
+        "a5921260564bca954e0fb2f54d50d22aa963de6eb44ac39d4ab49e39f3e99ab2"
+      ],
+      "supported": true,
+      "weight": 8
+    },
+    {
+      "class_pair": "II",
+      "group_count": 5,
+      "record_count": 5,
+      "source_group_ids": [
+        "02525810adf71cd23b461eb43b17e613f35d1b16f491536930186a3bbd9e322d",
+        "57720e15b600dd9497fff86746440514c25c7a2dd4fe171eb7c7d4bc9dccbfc9",
+        "8cbbf75d91dbe00bb354f3dac49db36bce659565c79ed9b3e345bc25f1c02c0c",
+        "986e42581310b09f1e960575831bf38beb5fdcaf3b0e21d2bdf438de9aa2d028",
+        "a272b9c5107747ae37e57765f764c032c634fc46445b300a8d191fbb0e8dff8a"
+      ],
+      "supported": true,
+      "weight": 5
+    }
+  ],
+  "concentration_alarms": {
+    "entry_strict_majority": false,
+    "largest_entry_weight": 33,
+    "separator_only_weight": 50,
+    "separator_strict_majority": false,
+    "total_weight": 229
+  },
+  "consensus_occurrences": 364,
+  "distance_distribution": {
+    "0": 690,
+    "1": 103,
+    "10": 1,
+    "11": 2,
+    "12": 2,
+    "13": 1,
+    "17": 1,
+    "2": 117,
+    "21": 1,
+    "3": 42,
+    "4": 40,
+    "5": 11,
+    "6": 7,
+    "7": 2,
+    "8": 2,
+    "9": 2
+  },
+  "excluded_calibration_records": 96,
+  "generated_population": "NOT_CONSTRUCTED",
+  "groups": 48,
+  "input_train_hashes_sha256": "96ad9bee197bb1710175c426dda396f8cfa5abdf3d2d9de91b07fd3421f99240",
+  "lexical_positive_groups": 47,
+  "lexical_positive_records": 334,
+  "lexical_zero_records": 690,
+  "measurement_wall_seconds": 25.67354279200663,
+  "old_raw_table_sha256_after": "5df3800d7a29e370abdce36bd489989482d5d878765612b5a14a4b2cab1fc310",
+  "omitted_unit_edit_mass": 511,
+  "operations": {
+    "deletion": 106,
+    "insertion": 74,
+    "substitution": 49
+  },
+  "possible_optimal_edit_edges": 1700,
+  "private_alignment_audit_sha256": "943f3b8041ddfae89b3a3cf2a6aec4db6299e5e2b1d3c6557d59e48732f6e3b0",
+  "profile_table_sha256": "bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87",
+  "profile_version": "development_lexical_corruption_v2",
+  "projected_unit_edit_mass": 875,
+  "raw_zero_records": 182,
+  "reader": "NOT_QUALIFIED",
+  "records": 1024,
+  "records_with_ambiguous_edits": 169,
+  "records_with_multiple_optimal_paths": 169,
+  "retained_occurrences": 229,
+  "scientific_stop_triggered": false,
+  "severity_P0": {
+    "0": 0,
+    "1": 334,
+    "2": 0
+  },
+  "severity_P1_P2": {
+    "0": 0,
+    "1": 103,
+    "2": 231
+  },
+  "severity_denominator": 334,
+  "status": "PROFILE_ESTIMATED_GENERATED_QUALIFICATION_PENDING",
+  "support_rejected_occurrences": 135,
+  "supported_entries": 20,
+  "unsupported_entries": 221
+}

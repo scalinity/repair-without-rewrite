@@ -1,0 +1,31 @@
+{
+  "alignment_version": "lexical-projected-codepoint-all-optimal-edge-consensus-v2",
+  "canonical_source_sha256": "94746ef2c223f9f461d5dc92378961813e8f9377fe89fd5166dd9d6097ced746",
+  "code_hashes": {
+    "benchmarks/lexical_corruption_profile_v2.py": "1a56224abf4477b4b8b9392396058e3a2d0d12995c044c429aa636b632243980",
+    "src/data/development_reader.py": "24f61cb4a8245831b112fd2a25aa26e332e1cea6526d1e6ddd69f25d7a2ad3f5",
+    "src/data/empirical_corruption.py": "df4caf02e33aa529e4018f73b1bd72d916f81df475063029790ade83485ec2f3",
+    "src/data/lexical_corruption_v2.py": "99636542963ea16a3cf81ef4978833b4eb1fe8651cef52c6e194c2eaa1e3f7ce",
+    "src/scoring/text.py": "4db62c3238c830ec25faf979beb656dcc7b882f0843b318d973934b4f340111d",
+    "tests/data/test_lexical_corruption_v2.py": "bf989a5674b123c2d2cc87b48b8b94230adad463cbb7e145dd6cdebd9d206771"
+  },
+  "decision_sha256": "267fc5e4aae08b54cfe879395aef47e1e61c128ea1fc8c6ba27ccc310b685339",
+  "head": "ab8fe9578ec335d7abb20fd2b39dbe3e162e1868",
+  "measurement_sha256": "72c6d0f6ea6d2189c22d544f4831f8b3bd04253003f08aae12ba62ad6e559d1e",
+  "neural_execution": "NONE",
+  "pair_file_sha256": "ce4a170a086afee430085c4e6f665e8af58b8c68091afc27f10ee403c81951d8",
+  "preserved_raw_table_sha256": "5df3800d7a29e370abdce36bd489989482d5d878765612b5a14a4b2cab1fc310",
+  "profile_version": "development_lexical_corruption_v2",
+  "registry_sha256": "596932dd91e0b108936c3a7a80245f4f44df5cfeac4f13d6fda8cfb30412cfe0",
+  "role_manifest_sha256": "56c5889d952c83120267ea92b4aaf8bcec63dff61a34e83ce531c9be97b3eb98",
+  "runtime": {
+    "MLX_ENABLE_TF32": "0",
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "python": "3.12.15"
+  },
+  "seed": "NONE: deterministic exhaustive TRAIN profile estimation",
+  "six_probe_slots_consumed": 0,
+  "status": "PROFILE_ESTIMATED_GENERATED_QUALIFICATION_PENDING",
+  "supply_receipt_sha256": "d0b1de70c2d2a7c7bbc7ad711a4d771fa91a22ef399651b0482aaeeee7616842",
+  "tokenizer_sha256": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca"
+}

@@ -1,0 +1,21 @@
+{
+  "MLX_ENABLE_TF32": "0",
+  "approved_v1_decision_ancestor": true,
+  "exit_code": 0,
+  "file_hashes": {
+    "configs/tokenizer_development/tokenizer.json": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+    "docs/design-inputs/EXTRACTED_CANONICAL_SOURCE.md": "94746ef2c223f9f461d5dc92378961813e8f9377fe89fd5166dd9d6097ced746",
+    "docs/design-inputs/LocalFlow_Publication_Experiment_Registry_v2.txt": "596932dd91e0b108936c3a7a80245f4f44df5cfeac4f13d6fda8cfb30412cfe0",
+    "pyproject.toml": "c874d351acb3e0ff55fc3fe85be04ff594b23f8c135f24877a1e27e43487776a",
+    "src/data/empirical_corruption.py": "df4caf02e33aa529e4018f73b1bd72d916f81df475063029790ade83485ec2f3",
+    "tests/data/test_empirical_corruption.py": "5e55a4044c32e846d1623d414590ab3162c4022e5df27a414c92a56a12781378"
+  },
+  "head": "1b114ff485a2a59051bf7a2e39acec5774fd35a1",
+  "local_head_equals_remote_main_at_start": true,
+  "output_capture_kind": "summary transcribed from actual execution tool output; no standalone process log was captured",
+  "pytest_elapsed_seconds": 23.34,
+  "pytest_summary": "275 passed in 23.34s",
+  "scope": "integrated baseline correctness suite before v2 persistence or implementation; no registered probe/BENCH updates",
+  "status": "PASS",
+  "working_tree_clean_at_start": true
+}
