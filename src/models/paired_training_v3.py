@@ -231,6 +231,27 @@ def forward_probe(trainer, row):
     return hashlib.sha256(np.asarray(value.astype(mx.float32)).tobytes()).hexdigest()
 
 
+def validate_checkpoint_clock(meta):
+    for key in ("optimizer_step", "committed_exposure", "pending_charge", "completed_microbatches", "accumulator_microbatches"):
+        if type(meta[key]) is not int or meta[key] < 0:
+            raise ValueError("checkpoint clock counter must be a nonnegative integer")
+    if (meta["optimizer_step"] == 0) != (meta["committed_exposure"] == 0):
+        raise ValueError("checkpoint optimizer/exposure clock mismatch")
+    if meta["enforce_complete_target"] and meta["committed_exposure"] < meta["optimizer_step"] * 32768:
+        raise ValueError("checkpoint optimizer step exceeds completed canonical exposure")
+    endpoint = meta["committed_exposure"] + meta["pending_charge"]
+    reader = meta["reader_state"] or {}
+    if "exposure" in reader:
+        if type(reader["exposure"]) is not int or reader["exposure"] != endpoint:
+            raise ValueError("checkpoint shared reader/exposure clock mismatch")
+    if "immutable_benchmark_queue_selector" in reader:
+        charges = reader["immutable_benchmark_queue_selector"]["phase_charges"]
+        if any(type(value) is not int or value < 0 for value in charges.values()) or sum(charges.values()) != endpoint:
+            raise ValueError("checkpoint BENCH reader/exposure clock mismatch")
+    if not math.isfinite(meta["loss"]):
+        raise ValueError("checkpoint loss is nonfinite")
+
+
 def save_paired_checkpoint(trainer, destination, probe_row):
     destination = Path(destination)
     destination.parent.mkdir(parents=True, exist_ok=True)
@@ -263,6 +284,7 @@ def save_paired_checkpoint(trainer, destination, probe_row):
         "shapes": {key: list(value.shape) for key, value in arrays.items()},
         "dtypes": {key: str(value.dtype) for key, value in arrays.items()},
         "probe_variant_id": probe_row["variant_id"], "forward_probe_sha256": forward_probe(trainer, probe_row)}
+    validate_checkpoint_clock(meta)
     (temporary / "metadata.json").write_text(json.dumps(meta, sort_keys=True, indent=2, allow_nan=False) + "\n")
     manifest = {name: file_hash(temporary / name) for name in ("arrays.npz", "metadata.json")}
     (temporary / "COMPLETE.json").write_text(json.dumps(manifest, sort_keys=True) + "\n")
@@ -286,6 +308,7 @@ def load_paired_checkpoint(trainer, source, rows):
         "microbatch_size": trainer.microbatch_size, "enforce_complete_target": trainer.enforce_complete_target}
     if any(meta[key] != value for key, value in expected.items()):
         raise ValueError("checkpoint configuration identity mismatch")
+    validate_checkpoint_clock(meta)
     shapes = trainer.arrays()
     with np.load(source / "arrays.npz", allow_pickle=False) as saved:
         if set(saved.files) != set(shapes):

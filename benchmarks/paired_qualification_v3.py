@@ -216,12 +216,12 @@ def preflight(destination, arm, mode, identities):
     return value
 
 
-def resume_control(arm):
+def resume_control(arm, attempt=1):
     import mlx.core as mx
     from src.models.paired_training_v3 import save_paired_checkpoint
     rows, ledger, updates, reader, data_ids = common()
     identities = runtime_identities(data_ids)
-    out = ROOT / f"resume-{arm}-control-attempt01"
+    out = ROOT / f"resume-{arm}-control-attempt{attempt:02d}"
     preflight(out, arm, "EXACT_32768_UPDATE_RESUME_CONTROL_NOT_PROBE", identities)
     trainer = create_trainer(arm, identities)
     q0 = exact_queue(rows, ledger, updates[0], reader)
@@ -263,15 +263,15 @@ def resume_control(arm):
         "first_complete_update_sha256": sha(out / "first-complete-update.json"), "probe_slots": 0})
 
 
-def resume_replay(arm, kind):
+def resume_replay(arm, kind, attempt=1):
     from src.models.paired_training_v3 import load_paired_checkpoint
     rows, ledger, updates, reader, data_ids = common()
     identities = runtime_identities(data_ids)
-    control = ROOT / f"resume-{arm}-control-attempt01"
+    control = ROOT / f"resume-{arm}-control-attempt{attempt:02d}"
     expected = [json.loads(line) for line in (control / "controls.jsonl").read_text().splitlines()]
     if len(expected) != 21 or not (control / "control-complete.json").exists():
         raise ValueError("complete uninterrupted reference missing")
-    out = ROOT / f"resume-{arm}-{kind}-cold-attempt01"
+    out = ROOT / f"resume-{arm}-{kind}-cold-attempt{attempt:02d}"
     preflight(out, arm, "COLD_BOUNDARY_OR_MID_REPLAY_NOT_PROBE", identities)
     trainer = create_trainer(arm, identities)
     begin = time.perf_counter()
@@ -407,18 +407,18 @@ def evaluation_timing(trainer, panel, out, label):
     return summary
 
 
-def bench(arm):
+def bench(arm, attempt=1):
     import mlx.core as mx
     import numpy as np
     from src.models.paired_training_v3 import save_paired_checkpoint
     for kind in ("boundary", "mid"):
-        summary = json.loads((ROOT / f"resume-{arm}-{kind}-cold-attempt01/summary.json").read_text())
+        summary = json.loads((ROOT / f"resume-{arm}-{kind}-cold-attempt{attempt:02d}/summary.json").read_text())
         if summary["status"] != "PASS_EXACT_COLD_RESUME" or summary["matched_complete_updates"] != 21:
             raise ValueError("exact-model cold resume gate blocks BENCH")
     begin_startup = time.perf_counter()
     rows, ledger, updates, _, data_ids = common()
     identities = runtime_identities(data_ids)
-    out = ROOT / f"bench-{arm}-attempt01"
+    out = ROOT / f"bench-{arm}-attempt{attempt:02d}"
     preflight(out, arm, "BENCH_00_EXACT_MODEL_APPROVED_READER_NONZERO_PILOT_CLOCK_NOT_PROBE", identities)
     trainer = create_trainer(arm, identities)
     startup_seconds = time.perf_counter() - begin_startup
@@ -522,7 +522,7 @@ def bench(arm):
         "updates_sha256": sha(out / "updates.jsonl"), "no_failures": True, "probe_slots": 0,
         "scope": "performance/update qualification only; no probe LR selection or viability inference"}
     write(out / "summary.json", summary)
-    write(SAFE / f"bench-{arm}.attempt01.json", {key: value for key, value in summary.items()
+    write(SAFE / f"bench-{arm}.attempt{attempt:02d}.json", {key: value for key, value in summary.items()
         if key not in ("initial_evaluation", "final_evaluation")})
     print(json.dumps({"arm": arm, "status": summary["status"], "timed_updates": 100,
         "sustained_seconds": sustained_wall, "conservative_anchors_per_second": conservative}), flush=True)
@@ -533,15 +533,18 @@ def main():
     parser.add_argument("mode", choices=("prepare", "resume-control", "resume-cold", "bench"))
     parser.add_argument("--arm", choices=("B100", "C101"))
     parser.add_argument("--kind", choices=("boundary", "mid"))
+    parser.add_argument("--attempt", type=int, default=1)
     args = parser.parse_args()
+    if args.attempt < 1 or (args.mode == "prepare" and args.attempt != 1):
+        parser.error("positive qualification attempt required; prepared pilot inputs remain attempt01")
     if args.mode == "prepare":
         prepare()
     elif args.mode == "resume-control" and args.arm:
-        resume_control(args.arm)
+        resume_control(args.arm, args.attempt)
     elif args.mode == "resume-cold" and args.arm and args.kind:
-        resume_replay(args.arm, args.kind)
+        resume_replay(args.arm, args.kind, args.attempt)
     elif args.mode == "bench" and args.arm:
-        bench(args.arm)
+        bench(args.arm, args.attempt)
     else:
         parser.error("arm and cold-resume kind required")
 

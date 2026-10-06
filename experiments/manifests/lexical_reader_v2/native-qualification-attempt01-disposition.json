@@ -1,0 +1,13 @@
+{
+  "B100_boundary_cold": "PASS_EXACT_COLD_RESUME_PRE_REPAIR",
+  "B100_mid_cold": "PASS_EXACT_COLD_RESUME_PRE_REPAIR",
+  "C101_attempt01": "DELIBERATELY_TERMINATED_TO_FREEZE_CORRECTED_CODE",
+  "C101_complete_control_updates": 2,
+  "C101_process_exit_code": 143,
+  "last_C101_committed_exposure": 65616,
+  "original_attempts_retained": true,
+  "reason": "Independent review found inconsistent rehashed checkpoint exposure-clock metadata was not rejected. Training mathematics unchanged. Repeat exact-model controls and all cold paths under attempt02.",
+  "scientific_design_changed": false,
+  "six_probe_slots_consumed": 0,
+  "status": "SUPERSEDED_NATIVE_QUALIFICATION_CODE_REPAIR"
+}

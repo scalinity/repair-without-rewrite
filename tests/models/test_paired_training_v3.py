@@ -12,6 +12,7 @@ from src.models.bc import B100, C101
 from src.models.core import EncoderDecoderConfig
 from src.models.paired_training_v3 import (
     PairedTrainer, file_hash, load_paired_checkpoint, queue_denominators, save_paired_checkpoint,
+    validate_checkpoint_clock,
 )
 from src.models.tokenizer import ByteBPE
 
@@ -109,11 +110,12 @@ def rehash(directory):
         for name in ("arrays.npz", "metadata.json")}, sort_keys=True) + "\n")
 
 
-@pytest.mark.parametrize("corruption", ("bytes", "dtype", "nonfinite", "queue_charge", "partition", "identity"))
+@pytest.mark.parametrize("corruption", ("bytes", "dtype", "nonfinite", "queue_charge", "partition", "identity",
+    "committed_clock", "reader_clock", "negative_clock", "noninteger_clock", "optimizer_clock"))
 def test_corrupted_checkpoint_is_rejected(tmp_path, corruption):
     rows = fixture_rows()
     instance = trainer("C101")
-    instance.begin(queue(rows), {"cursor": 4})
+    instance.begin(queue(rows), {"cursor": 4, "exposure": 42})
     instance.microstep()
     path = tmp_path / "checkpoint"
     save_paired_checkpoint(instance, path, rows[0])
@@ -134,12 +136,66 @@ def test_corrupted_checkpoint_is_rejected(tmp_path, corruption):
             meta["queue"][0]["canonical_charge"] += 1
         elif corruption == "partition":
             meta["partition"][0][1] += 1
-        else:
+        elif corruption == "identity":
             meta["identities"]["ledger"] = "wrong"
+        elif corruption == "committed_clock":
+            meta["committed_exposure"] += 1
+        elif corruption == "reader_clock":
+            meta["reader_state"]["exposure"] += 1
+        elif corruption == "negative_clock":
+            meta["committed_exposure"] = -1
+        elif corruption == "noninteger_clock":
+            meta["pending_charge"] = 42.0
+        elif corruption == "optimizer_clock":
+            meta["optimizer_step"] = 1
         (path / "metadata.json").write_text(json.dumps(meta))
         rehash(path)
     with pytest.raises(ValueError):
         load_paired_checkpoint(trainer("C101"), path, {row["variant_id"]: row for row in rows})
+
+
+def test_benchmark_reader_clock_is_preserved_and_inconsistent_rehash_rejected(tmp_path):
+    rows = fixture_rows()
+    instance = trainer("B100")
+    instance.update(queue(rows), {"immutable_benchmark_queue_selector": {"phase_charges": {"P0": 42}}})
+    path = tmp_path / "bench-boundary"
+    save_paired_checkpoint(instance, path, rows[0])
+    lookup = {row["variant_id"]: row for row in rows}
+    load_paired_checkpoint(trainer("B100"), path, lookup)
+    meta = json.loads((path / "metadata.json").read_text())
+    meta["reader_state"]["immutable_benchmark_queue_selector"]["phase_charges"]["P0"] += 1
+    (path / "metadata.json").write_text(json.dumps(meta))
+    rehash(path)
+    with pytest.raises(ValueError, match="BENCH reader/exposure clock"):
+        load_paired_checkpoint(trainer("B100"), path, lookup)
+
+
+@pytest.mark.parametrize("mid_update", (False, True))
+def test_positive_committed_clock_change_rejected_at_boundary_and_mid_update(tmp_path, mid_update):
+    rows = fixture_rows()
+    instance = trainer("C101")
+    instance.update(queue(rows), {"exposure": 42})
+    if mid_update:
+        instance.begin(queue(rows, 1), {"exposure": 84})
+        instance.microstep()
+    path = tmp_path / "positive-clock"
+    save_paired_checkpoint(instance, path, rows[0])
+    meta = json.loads((path / "metadata.json").read_text())
+    meta["committed_exposure"] += 1
+    (path / "metadata.json").write_text(json.dumps(meta))
+    rehash(path)
+    with pytest.raises(ValueError, match="shared reader/exposure clock"):
+        load_paired_checkpoint(trainer("C101"), path, {row["variant_id"]: row for row in rows})
+
+
+def test_positive_optimizer_step_cannot_exceed_completed_32768_queues():
+    meta = {"optimizer_step": 1, "committed_exposure": 32815, "pending_charge": 0,
+        "completed_microbatches": 0, "accumulator_microbatches": 0, "enforce_complete_target": True,
+        "reader_state": {"exposure": 32815}, "loss": 0.}
+    validate_checkpoint_clock(meta)
+    meta["optimizer_step"] = 2
+    with pytest.raises(ValueError, match="step exceeds completed canonical exposure"):
+        validate_checkpoint_clock(meta)
 
 
 def test_missing_or_changed_accepted_row_stops_without_replacement():
