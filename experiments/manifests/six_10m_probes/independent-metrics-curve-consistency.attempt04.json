@@ -1,0 +1,20 @@
+{
+  "LR_selection_generated": false,
+  "cause": "Reviewer command assumed the attempt03 curve key spelling also held in attempt02",
+  "claim_kind": "FACT",
+  "cpu_only": true,
+  "disposition": "INDEPENDENT_REVIEW_COMMAND_SCHEMA_ERROR_RETRY_REQUIRED",
+  "error": "KeyError: 'evaluation_sha256'",
+  "failed_expression": "c['evaluation_sha256']==sha(epath)",
+  "passed_frozen_score_audit_receipts": [
+    "independent-metrics.attempt26.json",
+    "independent-metrics.attempt27.json"
+  ],
+  "phase": "Prior completed endpoint review receipt schema reconciliation, after new C3 raw score/update/resource assertions",
+  "reconstruction_complete": false,
+  "reviewed_head": "fb9f0cdfc4cda3d04784111f17baa1ddd12f3591",
+  "schema": "six10m_independent_curve_consistency_diagnostic_v1",
+  "scientific_outputs_modified": false,
+  "scope": "C101-seed42-lr3e-04 CPU-only metric review; no scientific defect",
+  "source_config_scorer_modified": false
+}

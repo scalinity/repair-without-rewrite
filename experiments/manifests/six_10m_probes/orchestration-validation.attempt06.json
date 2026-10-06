@@ -1,0 +1,44 @@
+{
+  "disposition": "ORCHESTRATION_REALIGNMENT_VISUALLY_VERIFIED",
+  "layout_changed": false,
+  "observations": [
+    {
+      "appearance": "light",
+      "progress": "4 of 6trial training runs complete. Four slots consumed; two remain.",
+      "scrollWidth": 1280,
+      "strips": 14,
+      "width": 1280
+    },
+    {
+      "appearance": "light",
+      "progress": "4 of 6trial training runs complete. Four slots consumed; two remain.",
+      "scrollWidth": 390,
+      "strips": 14,
+      "width": 390
+    },
+    {
+      "appearance": "dark",
+      "progress": "4 of 6trial training runs complete. Four slots consumed; two remain.",
+      "scrollWidth": 1280,
+      "strips": 14,
+      "width": 1280
+    },
+    {
+      "appearance": "dark",
+      "progress": "4 of 6trial training runs complete. Four slots consumed; two remain.",
+      "scrollWidth": 390,
+      "strips": 14,
+      "width": 390
+    }
+  ],
+  "page": "ORCHESTRATION.html",
+  "page_sha256": "dad9c8e01e475191c58cfc82786a1300ae0082ec14156a4b6a58b75149e2e79d",
+  "restored_appearance": "light",
+  "scientific_slots_completed": 4,
+  "scientific_slots_unstarted": 2,
+  "screenshots_written_to_disk": false,
+  "source_head": "fb9f0cdfc4cda3d04784111f17baa1ddd12f3591",
+  "temporary_phone_tab_closed": true,
+  "utc_unix": 1791280874.7307231,
+  "viewer_resized": false
+}

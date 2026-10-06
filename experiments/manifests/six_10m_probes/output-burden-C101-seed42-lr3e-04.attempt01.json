@@ -1,0 +1,820 @@
+{
+  "collector_sha256": "ccbcf2dc0f737dc29d0ec0edb1ea9d0b4a12e1089414322e349fd2365c7c6ec7",
+  "disposition": "EXISTING_OUTPUT_BURDEN_RECORDED",
+  "evaluations": [
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 0,
+        "last_ordinal": -1,
+        "nominal": 0,
+        "update": 0
+      },
+      "by_population": {
+        "generated": {
+          "alignment_status_counts": {
+            "exact_point": 288
+          },
+          "cases": 288,
+          "decoder_positions": {
+            "count": 288,
+            "maximum": 256,
+            "median": 256.0,
+            "minimum": 1,
+            "sum": 39558
+          },
+          "decoder_status_counts": {
+            "abstained": 52,
+            "completed": 82,
+            "invalid_or_capped": 154
+          },
+          "edit_events_for_available_programs": {
+            "count": 134,
+            "maximum": 0,
+            "median": 0.0,
+            "minimum": 0,
+            "sum": 0
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 206,
+          "missing_outputs": 206,
+          "output_words": {
+            "count": 288,
+            "maximum": 37,
+            "median": 0.0,
+            "minimum": 0,
+            "sum": 1549
+          },
+          "program_unavailable_cases": 154,
+          "reference_words": {
+            "count": 288,
+            "maximum": 32,
+            "median": 15.0,
+            "minimum": 8,
+            "sum": 4896
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "scoring_status_counts": {
+            "completed": 288
+          },
+          "source_output_word_distance": {
+            "count": 288,
+            "maximum": 37,
+            "median": 12.0,
+            "minimum": 0,
+            "sum": 3527
+          },
+          "source_words": {
+            "count": 288,
+            "maximum": 37,
+            "median": 15.5,
+            "minimum": 8,
+            "sum": 5076
+          }
+        },
+        "natural": {
+          "alignment_status_counts": {
+            "exact_point": 108
+          },
+          "cases": 108,
+          "decoder_positions": {
+            "count": 108,
+            "maximum": 256,
+            "median": 256.0,
+            "minimum": 1,
+            "sum": 18978
+          },
+          "decoder_status_counts": {
+            "abstained": 26,
+            "completed": 8,
+            "invalid_or_capped": 74
+          },
+          "edit_events_for_available_programs": {
+            "count": 34,
+            "maximum": 0,
+            "median": 0.0,
+            "minimum": 0,
+            "sum": 0
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 100,
+          "missing_outputs": 100,
+          "output_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 0.0,
+            "minimum": 0,
+            "sum": 168
+          },
+          "program_unavailable_cases": 74,
+          "reference_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2270
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "scoring_status_counts": {
+            "completed": 108
+          },
+          "source_output_word_distance": {
+            "count": 108,
+            "maximum": 36,
+            "median": 20.5,
+            "minimum": 0,
+            "sum": 2098
+          },
+          "source_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2266
+          }
+        }
+      },
+      "evaluation_receipt": "experiments/manifests/six_10m_probes/evaluation-C101-seed42-lr3e-04-update000.attempt01.json",
+      "evaluation_sha256": "ed4e28c239f19e32639ddf41e9262afecadf0775e93d233c02dd96e21734bfc8",
+      "output_path": "exports/six-10m-probes/C101-seed42-lr3e-04/attempt01/evaluation-update000.jsonl",
+      "output_sha256": "6ddd3ae2f56bbe6adad821ab57ac42d8a38e2a97d1725b3556c5e3020c10e41e"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 1017149,
+        "last_ordinal": 13838,
+        "nominal": 1000000,
+        "update": 31
+      },
+      "by_population": {
+        "generated": {
+          "alignment_status_counts": {
+            "exact_point": 288
+          },
+          "cases": 288,
+          "decoder_positions": {
+            "count": 288,
+            "maximum": 256,
+            "median": 5.0,
+            "minimum": 1,
+            "sum": 4264
+          },
+          "decoder_status_counts": {
+            "completed": 281,
+            "invalid_or_capped": 7
+          },
+          "edit_events_for_available_programs": {
+            "count": 281,
+            "maximum": 45,
+            "median": 1,
+            "minimum": 0,
+            "sum": 462
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 7,
+          "missing_outputs": 7,
+          "output_words": {
+            "count": 288,
+            "maximum": 47,
+            "median": 14.0,
+            "minimum": 0,
+            "sum": 4606
+          },
+          "program_unavailable_cases": 7,
+          "reference_words": {
+            "count": 288,
+            "maximum": 32,
+            "median": 15.0,
+            "minimum": 8,
+            "sum": 4896
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "scoring_status_counts": {
+            "completed": 288
+          },
+          "source_output_word_distance": {
+            "count": 288,
+            "maximum": 28,
+            "median": 2.0,
+            "minimum": 0,
+            "sum": 1014
+          },
+          "source_words": {
+            "count": 288,
+            "maximum": 37,
+            "median": 15.5,
+            "minimum": 8,
+            "sum": 5076
+          }
+        },
+        "natural": {
+          "alignment_status_counts": {
+            "exact_point": 108
+          },
+          "cases": 108,
+          "decoder_positions": {
+            "count": 108,
+            "maximum": 1,
+            "median": 1.0,
+            "minimum": 1,
+            "sum": 108
+          },
+          "decoder_status_counts": {
+            "completed": 108
+          },
+          "edit_events_for_available_programs": {
+            "count": 108,
+            "maximum": 0,
+            "median": 0.0,
+            "minimum": 0,
+            "sum": 0
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 0,
+          "missing_outputs": 0,
+          "output_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2266
+          },
+          "program_unavailable_cases": 0,
+          "reference_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2270
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "scoring_status_counts": {
+            "completed": 108
+          },
+          "source_output_word_distance": {
+            "count": 108,
+            "maximum": 0,
+            "median": 0.0,
+            "minimum": 0,
+            "sum": 0
+          },
+          "source_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2266
+          }
+        }
+      },
+      "evaluation_receipt": "experiments/manifests/six_10m_probes/evaluation-C101-seed42-lr3e-04-update031.attempt01.json",
+      "evaluation_sha256": "b7631a06fd2f89c461b1afb7afbbe0a7217e63dc74927c0c6b7a0500a4acde98",
+      "output_path": "exports/six-10m-probes/C101-seed42-lr3e-04/attempt01/evaluation-update031.jsonl",
+      "output_sha256": "a0026748a5f19365b53b14988bbf888a6ac54112c98ff6fa90c1337127bdfeff"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 3018478,
+        "last_ordinal": 41095,
+        "nominal": 3000000,
+        "update": 92
+      },
+      "by_population": {
+        "generated": {
+          "alignment_status_counts": {
+            "exact_point": 288
+          },
+          "cases": 288,
+          "decoder_positions": {
+            "count": 288,
+            "maximum": 256,
+            "median": 5.0,
+            "minimum": 1,
+            "sum": 9344
+          },
+          "decoder_status_counts": {
+            "completed": 264,
+            "invalid_or_capped": 24
+          },
+          "edit_events_for_available_programs": {
+            "count": 264,
+            "maximum": 14,
+            "median": 1.0,
+            "minimum": 0,
+            "sum": 558
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 24,
+          "missing_outputs": 24,
+          "output_words": {
+            "count": 288,
+            "maximum": 37,
+            "median": 13.0,
+            "minimum": 0,
+            "sum": 4168
+          },
+          "program_unavailable_cases": 24,
+          "reference_words": {
+            "count": 288,
+            "maximum": 32,
+            "median": 15.0,
+            "minimum": 8,
+            "sum": 4896
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "scoring_status_counts": {
+            "completed": 288
+          },
+          "source_output_word_distance": {
+            "count": 288,
+            "maximum": 32,
+            "median": 2.0,
+            "minimum": 0,
+            "sum": 1518
+          },
+          "source_words": {
+            "count": 288,
+            "maximum": 37,
+            "median": 15.5,
+            "minimum": 8,
+            "sum": 5076
+          }
+        },
+        "natural": {
+          "alignment_status_counts": {
+            "exact_point": 108
+          },
+          "cases": 108,
+          "decoder_positions": {
+            "count": 108,
+            "maximum": 9,
+            "median": 1.0,
+            "minimum": 1,
+            "sum": 160
+          },
+          "decoder_status_counts": {
+            "completed": 108
+          },
+          "edit_events_for_available_programs": {
+            "count": 108,
+            "maximum": 2,
+            "median": 0.0,
+            "minimum": 0,
+            "sum": 13
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 0,
+          "missing_outputs": 0,
+          "output_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2259
+          },
+          "program_unavailable_cases": 0,
+          "reference_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2270
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "scoring_status_counts": {
+            "completed": 108
+          },
+          "source_output_word_distance": {
+            "count": 108,
+            "maximum": 4,
+            "median": 0.0,
+            "minimum": 0,
+            "sum": 18
+          },
+          "source_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2266
+          }
+        }
+      },
+      "evaluation_receipt": "experiments/manifests/six_10m_probes/evaluation-C101-seed42-lr3e-04-update092.attempt01.json",
+      "evaluation_sha256": "d0436d70753e56850cf318f739ebf3f56868ad73a5e953dffac028741ccc0082",
+      "output_path": "exports/six-10m-probes/C101-seed42-lr3e-04/attempt01/evaluation-update092.jsonl",
+      "output_sha256": "60c1528f0e5c6a9d30c54492ce4aab46c546f9cb42ec0a5be83ead497cff1ebb"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 6693230,
+        "last_ordinal": 91100,
+        "nominal": 6666667,
+        "update": 204
+      },
+      "by_population": {
+        "generated": {
+          "alignment_status_counts": {
+            "exact_point": 288
+          },
+          "cases": 288,
+          "decoder_positions": {
+            "count": 288,
+            "maximum": 35,
+            "median": 5.0,
+            "minimum": 1,
+            "sum": 1924
+          },
+          "decoder_status_counts": {
+            "completed": 288
+          },
+          "edit_events_for_available_programs": {
+            "count": 288,
+            "maximum": 7,
+            "median": 1.0,
+            "minimum": 0,
+            "sum": 388
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 0,
+          "missing_outputs": 0,
+          "output_words": {
+            "count": 288,
+            "maximum": 34,
+            "median": 15.0,
+            "minimum": 6,
+            "sum": 4864
+          },
+          "program_unavailable_cases": 0,
+          "reference_words": {
+            "count": 288,
+            "maximum": 32,
+            "median": 15.0,
+            "minimum": 8,
+            "sum": 4896
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "scoring_status_counts": {
+            "completed": 288
+          },
+          "source_output_word_distance": {
+            "count": 288,
+            "maximum": 22,
+            "median": 2.0,
+            "minimum": 0,
+            "sum": 672
+          },
+          "source_words": {
+            "count": 288,
+            "maximum": 37,
+            "median": 15.5,
+            "minimum": 8,
+            "sum": 5076
+          }
+        },
+        "natural": {
+          "alignment_status_counts": {
+            "exact_point": 108
+          },
+          "cases": 108,
+          "decoder_positions": {
+            "count": 108,
+            "maximum": 25,
+            "median": 1.0,
+            "minimum": 1,
+            "sum": 292
+          },
+          "decoder_status_counts": {
+            "completed": 108
+          },
+          "edit_events_for_available_programs": {
+            "count": 108,
+            "maximum": 5,
+            "median": 0.0,
+            "minimum": 0,
+            "sum": 41
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 0,
+          "missing_outputs": 0,
+          "output_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2254
+          },
+          "program_unavailable_cases": 0,
+          "reference_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2270
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "scoring_status_counts": {
+            "completed": 108
+          },
+          "source_output_word_distance": {
+            "count": 108,
+            "maximum": 5,
+            "median": 0.0,
+            "minimum": 0,
+            "sum": 48
+          },
+          "source_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2266
+          }
+        }
+      },
+      "evaluation_receipt": "experiments/manifests/six_10m_probes/evaluation-C101-seed42-lr3e-04-update204.attempt01.json",
+      "evaluation_sha256": "3e11d4e1950a3039c204dfb45e5bddbeb0bce0b5fe2f2a225b4666206678a191",
+      "output_path": "exports/six-10m-probes/C101-seed42-lr3e-04/attempt01/evaluation-update204.jsonl",
+      "output_sha256": "dd7ff5e1c9f92485a491ba7f23d23e8989c66783caca33f4bfe9208d0b42e6bd"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 9350642,
+        "last_ordinal": 127234,
+        "nominal": 9333334,
+        "update": 285
+      },
+      "by_population": {
+        "generated": {
+          "alignment_status_counts": {
+            "exact_point": 288
+          },
+          "cases": 288,
+          "decoder_positions": {
+            "count": 288,
+            "maximum": 40,
+            "median": 9.0,
+            "minimum": 1,
+            "sum": 2685
+          },
+          "decoder_status_counts": {
+            "completed": 288
+          },
+          "edit_events_for_available_programs": {
+            "count": 288,
+            "maximum": 7,
+            "median": 2.0,
+            "minimum": 0,
+            "sum": 572
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 0,
+          "missing_outputs": 0,
+          "output_words": {
+            "count": 288,
+            "maximum": 34,
+            "median": 15.0,
+            "minimum": 8,
+            "sum": 4910
+          },
+          "program_unavailable_cases": 0,
+          "reference_words": {
+            "count": 288,
+            "maximum": 32,
+            "median": 15.0,
+            "minimum": 8,
+            "sum": 4896
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "scoring_status_counts": {
+            "completed": 288
+          },
+          "source_output_word_distance": {
+            "count": 288,
+            "maximum": 18,
+            "median": 2.0,
+            "minimum": 0,
+            "sum": 704
+          },
+          "source_words": {
+            "count": 288,
+            "maximum": 37,
+            "median": 15.5,
+            "minimum": 8,
+            "sum": 5076
+          }
+        },
+        "natural": {
+          "alignment_status_counts": {
+            "exact_point": 108
+          },
+          "cases": 108,
+          "decoder_positions": {
+            "count": 108,
+            "maximum": 15,
+            "median": 1.0,
+            "minimum": 1,
+            "sum": 288
+          },
+          "decoder_status_counts": {
+            "completed": 108
+          },
+          "edit_events_for_available_programs": {
+            "count": 108,
+            "maximum": 3,
+            "median": 0.0,
+            "minimum": 0,
+            "sum": 42
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 0,
+          "missing_outputs": 0,
+          "output_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2231
+          },
+          "program_unavailable_cases": 0,
+          "reference_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2270
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "scoring_status_counts": {
+            "completed": 108
+          },
+          "source_output_word_distance": {
+            "count": 108,
+            "maximum": 11,
+            "median": 0.0,
+            "minimum": 0,
+            "sum": 77
+          },
+          "source_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2266
+          }
+        }
+      },
+      "evaluation_receipt": "experiments/manifests/six_10m_probes/evaluation-C101-seed42-lr3e-04-update285.attempt01.json",
+      "evaluation_sha256": "f0de22103298a210aba98b606f6c9df94fe792c7ae80eedee89937a5e2e4db55",
+      "output_path": "exports/six-10m-probes/C101-seed42-lr3e-04/attempt01/evaluation-update285.jsonl",
+      "output_sha256": "0c3c71a8b1521bb1e8e22286bed536defaa3e222e2b70a9df73933cd6ed5ea3d"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "by_population": {
+        "generated": {
+          "alignment_status_counts": {
+            "exact_point": 288
+          },
+          "cases": 288,
+          "decoder_positions": {
+            "count": 288,
+            "maximum": 26,
+            "median": 5.0,
+            "minimum": 1,
+            "sum": 1994
+          },
+          "decoder_status_counts": {
+            "completed": 288
+          },
+          "edit_events_for_available_programs": {
+            "count": 288,
+            "maximum": 6,
+            "median": 1.0,
+            "minimum": 0,
+            "sum": 439
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 0,
+          "missing_outputs": 0,
+          "output_words": {
+            "count": 288,
+            "maximum": 35,
+            "median": 15.0,
+            "minimum": 8,
+            "sum": 4982
+          },
+          "program_unavailable_cases": 0,
+          "reference_words": {
+            "count": 288,
+            "maximum": 32,
+            "median": 15.0,
+            "minimum": 8,
+            "sum": 4896
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "scoring_status_counts": {
+            "completed": 288
+          },
+          "source_output_word_distance": {
+            "count": 288,
+            "maximum": 7,
+            "median": 1.0,
+            "minimum": 0,
+            "sum": 417
+          },
+          "source_words": {
+            "count": 288,
+            "maximum": 37,
+            "median": 15.5,
+            "minimum": 8,
+            "sum": 5076
+          }
+        },
+        "natural": {
+          "alignment_status_counts": {
+            "exact_point": 108
+          },
+          "cases": 108,
+          "decoder_positions": {
+            "count": 108,
+            "maximum": 21,
+            "median": 1.0,
+            "minimum": 1,
+            "sum": 270
+          },
+          "decoder_status_counts": {
+            "completed": 108
+          },
+          "edit_events_for_available_programs": {
+            "count": 108,
+            "maximum": 4,
+            "median": 0.0,
+            "minimum": 0,
+            "sum": 35
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 0,
+          "missing_outputs": 0,
+          "output_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2230
+          },
+          "program_unavailable_cases": 0,
+          "reference_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2270
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "scoring_status_counts": {
+            "completed": 108
+          },
+          "source_output_word_distance": {
+            "count": 108,
+            "maximum": 11,
+            "median": 0.0,
+            "minimum": 0,
+            "sum": 66
+          },
+          "source_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2266
+          }
+        }
+      },
+      "evaluation_receipt": "experiments/manifests/six_10m_probes/evaluation-C101-seed42-lr3e-04-update305.attempt01.json",
+      "evaluation_sha256": "f6e2283521a28c0fc80bf94640580f9b1c0942c862fc48a5b9ce7c49a8037d57",
+      "output_path": "exports/six-10m-probes/C101-seed42-lr3e-04/attempt01/evaluation-update305.jsonl",
+      "output_sha256": "5544eca1039510edbc4df706e5779165462ff420b643db5f4a6b4833a04598ba"
+    }
+  ],
+  "no_new_inference": true,
+  "no_rescoring": true,
+  "recipe_id": "C101-seed42-lr3e-04",
+  "source_head": "fb9f0cdfc4cda3d04784111f17baa1ddd12f3591"
+}
