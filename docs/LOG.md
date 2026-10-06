@@ -88,3 +88,13 @@ Times are local (EDT, UTC−4). Entries 1–5 were backfilled on 2026-10-05 from
 - **Evidence:** independent reconstruction of 134,591 presentations, 305 queues, 13 saves, six evaluation maps and 396 panel IDs. Replay/storage/capped-correspondence regression tests pass. The original 63-character ledger digest mismatch and explicit correction to the actual 64-character digest are both retained. The failed non-recipe inspection helper is retained; it performed no neural work.
 - **Orchestration:** authorization complete, pre-run execution checks and step 6 eligibility/serial accelerator lane realigned without changing layout. Light/dark checks pass at 1,280px and 390px with no overflow or viewer resize. Counts retain their stated authorized-checkpoint scope until the next freeze realignment.
 - **Left undone:** campaign manifest freeze/publication, all six scientific recipes and outcome review; all final/sealed/150M/A100/H2/protocol/cloud/production work. No scientific design choice changed.
+
+## 10 · 2026-10-06 01:13 EDT · prospective six-recipe campaign freeze
+
+- **Base:** `1ad1ea1f0313d548e8af6cfaf75d5ff87fee6feb`; clean source after publication of execution qualification.
+- **Step:** freeze all six authorized unstarted recipes before scientific execution.
+- **Changed:** campaign manifest, `docs/reports/SIX_10M_CAMPAIGN_FREEZE.md`, progress page and publication receipt.
+- **Disposition:** `SIX_RECIPES_AUTHORIZED_UNSTARTED`. Slots started: 0.
+- **Evidence:** manifest SHA-256 `43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3`; fresh B/C seed-42 parameter counts and hashes; all source/config/data/panel bindings and common endpoint maps verified. All six statuses are `AUTHORIZED_UNSTARTED`.
+- **Orchestration:** pre-run source/as-of record and qualification counts realigned to `1ad1ea1`; freeze state and next serial execution step recorded; no layout change.
+- **Left undone:** all six scientific recipes, evaluations and post-run independent selection; all final/sealed/150M/A100/H2/protocol/cloud/production work.

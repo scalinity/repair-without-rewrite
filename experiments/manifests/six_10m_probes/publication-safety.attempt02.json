@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-06T05:14:39.346945+00:00",
+  "source_commit": "1ad1ea1f0313d548e8af6cfaf75d5ff87fee6feb",
+  "files": {
+    "experiments/manifests/six_10m_probes/campaign-freeze.attempt01.json": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+    "experiments/manifests/six_10m_probes/orchestration-visual.attempt02.json": "2325e790a5ed8e40fea437e6fb681f077844128ca4d1fadc86b9ed40443ea26f",
+    "docs/reports/SIX_10M_CAMPAIGN_FREEZE.md": "d9f79647ddbf8eb2cfa96ae8514ec0f757817e859e7068a572c25ef0f81a0437",
+    "docs/LOG.md": "72f2e9794514aa43d94de61198a64672c77bfe5dc8d33a6e221848a47e0b6e09",
+    "ORCHESTRATION.html": "3d24a733a51417e504b55ed39b2b712ffa217313077c1646a3d3a94317232913"
+  },
+  "hits": [],
+  "disposition": "PASS"
+}

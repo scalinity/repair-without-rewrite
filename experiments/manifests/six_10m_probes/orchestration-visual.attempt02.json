@@ -1,0 +1,33 @@
+{
+  "page_sha256": "3d24a733a51417e504b55ed39b2b712ffa217313077c1646a3d3a94317232913",
+  "checks": [
+    {
+      "appearance": "light",
+      "viewport_width": 1280,
+      "document_scroll_width": 1280,
+      "overflow": false
+    },
+    {
+      "appearance": "light",
+      "viewport_width": 390,
+      "document_scroll_width": 390,
+      "overflow": false
+    },
+    {
+      "appearance": "dark",
+      "viewport_width": 1280,
+      "document_scroll_width": 1280,
+      "overflow": false
+    },
+    {
+      "appearance": "dark",
+      "viewport_width": 390,
+      "document_scroll_width": 390,
+      "overflow": false
+    }
+  ],
+  "viewer_resized": false,
+  "phone_tab_closed": true,
+  "screenshots_saved": false,
+  "disposition": "PASS"
+}
