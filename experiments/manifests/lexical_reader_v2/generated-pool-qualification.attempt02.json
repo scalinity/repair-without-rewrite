@@ -1,0 +1,1145 @@
+{
+  "accepted_index_sha256": "84a16552648f6984f7b1e6298668c616a21a0e5f697986fcaabf9da4ba5bd877",
+  "accepted_pool_sha256": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+  "accepted_variant_count": 42020,
+  "base_count": 8404,
+  "base_index_sha256": "2ee2112f34b991c19325064409393b50bd65c8c980cbddd5f6dfc362d657abb1",
+  "empty_required_strata": [],
+  "max_examined_states": 11,
+  "probe_slots": 0,
+  "profile_sha256": "bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87",
+  "proposal_audit_sha256": "f0ea1d3a851368853c85222a58b6602065bd9026b3f3b6391210cc8d11a85c9b",
+  "proposal_count": 18321,
+  "proposal_reasons": {
+    "accepted": 16808,
+    "ambiguous": 642,
+    "lexical_effect_failed": 871
+  },
+  "realized_reader_concentration": "UNMEASURED",
+  "required_strata": [
+    {
+      "accepted": 300,
+      "category": "signs_numerical",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "signs_numerical",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "signs_numerical",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "signs_numerical",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "signs_numerical",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "signs_numerical",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "signs_numerical",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "signs_numerical",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "signs_numerical",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "signs_numerical",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "signs_numerical",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "signs_numerical",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "signs_numerical",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "signs_numerical",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "signs_numerical",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "signs_numerical",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "signs_numerical",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "signs_numerical",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "signs_numerical",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "signs_numerical",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 1,
+      "category": "negation",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 1,
+      "category": "negation",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 1,
+      "category": "negation",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 1,
+      "category": "negation",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 1,
+      "category": "negation",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 1,
+      "category": "negation",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 1,
+      "category": "negation",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 1,
+      "category": "negation",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 1,
+      "category": "negation",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 1,
+      "category": "negation",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 1,
+      "category": "negation",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 1,
+      "category": "negation",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 1,
+      "category": "negation",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 1,
+      "category": "negation",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 1,
+      "category": "negation",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 1,
+      "category": "negation",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 1,
+      "category": "negation",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 1,
+      "category": "negation",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 1,
+      "category": "negation",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 1,
+      "category": "negation",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "versions",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "versions",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "versions",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "versions",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "versions",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "versions",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "versions",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "versions",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "versions",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "versions",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "versions",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "versions",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "versions",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "versions",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "versions",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "versions",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "versions",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "versions",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "versions",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "versions",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "paths",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "paths",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "paths",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "paths",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "paths",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "paths",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "paths",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "paths",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "paths",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "paths",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "paths",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "paths",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "paths",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "paths",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "paths",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "paths",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "paths",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "paths",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "paths",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "paths",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "identifiers",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "identifiers",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "identifiers",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "identifiers",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "identifiers",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "identifiers",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "identifiers",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "identifiers",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "identifiers",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "identifiers",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "identifiers",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "identifiers",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "identifiers",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "identifiers",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "identifiers",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "identifiers",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "identifiers",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "identifiers",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "identifiers",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "identifiers",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "units_quantities",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "units_quantities",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "units_quantities",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "units_quantities",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "units_quantities",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "units_quantities",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "units_quantities",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "units_quantities",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "units_quantities",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "units_quantities",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "units_quantities",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "units_quantities",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "units_quantities",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "units_quantities",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "units_quantities",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "units_quantities",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "units_quantities",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "units_quantities",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "units_quantities",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "units_quantities",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "repeated_literals",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "repeated_literals",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "repeated_literals",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "repeated_literals",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "repeated_literals",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "repeated_literals",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "repeated_literals",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "repeated_literals",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "repeated_literals",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "repeated_literals",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "repeated_literals",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "repeated_literals",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "repeated_literals",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "repeated_literals",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "repeated_literals",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "repeated_literals",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "repeated_literals",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "repeated_literals",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "repeated_literals",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "repeated_literals",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "multiple_bindings",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "multiple_bindings",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "multiple_bindings",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "multiple_bindings",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "multiple_bindings",
+      "cell": 0,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "multiple_bindings",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "multiple_bindings",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "multiple_bindings",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "multiple_bindings",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "multiple_bindings",
+      "cell": 1,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "multiple_bindings",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "multiple_bindings",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "multiple_bindings",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "multiple_bindings",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "multiple_bindings",
+      "cell": 2,
+      "unavailable": 0,
+      "view": "empirical2"
+    },
+    {
+      "accepted": 300,
+      "category": "multiple_bindings",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "clean"
+    },
+    {
+      "accepted": 300,
+      "category": "multiple_bindings",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "mixed"
+    },
+    {
+      "accepted": 300,
+      "category": "multiple_bindings",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "two"
+    },
+    {
+      "accepted": 300,
+      "category": "multiple_bindings",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "empirical1"
+    },
+    {
+      "accepted": 300,
+      "category": "multiple_bindings",
+      "cell": 3,
+      "unavailable": 0,
+      "view": "empirical2"
+    }
+  ],
+  "scientific_stop_triggered": false,
+  "source_only_unique_inverse_required": true,
+  "status": "GENERATED_POOL_QUALIFIED_READER_PENDING",
+  "wall_seconds": 448.0285337920068
+}

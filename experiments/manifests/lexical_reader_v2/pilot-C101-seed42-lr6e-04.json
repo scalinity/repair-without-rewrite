@@ -1,0 +1,165 @@
+{
+  "LR_clock": {
+    "clock": "completed update canonical endpoint clamped at10M",
+    "decay": "continuous cosine",
+    "floor_fraction": 0.1,
+    "phase_resets": false,
+    "warmup": 200000
+  },
+  "actual_stop_endpoint": {
+    "canonical_exposure": 10007223,
+    "last_ordinal": 134590,
+    "nominal": 10000000,
+    "update": 305
+  },
+  "arm": "C101",
+  "checkpoint_policy": "routine complete optimizer boundaries; interruption after completed microbatch",
+  "clip_update_clear": "once per complete queue",
+  "data_identities": {
+    "configs/tokenizer_development/tokenizer.json": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+    "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": "bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87",
+    "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": "d9b91d1193d6175e1b6185ff48153478881320867b4e0c722f5799f9c2739fcc",
+    "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": "97c137bcef4170350ef5db133ad4954151e7417b67aa38bfbdbdae0d650b7f1f",
+    "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+    "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": "d391197b246ce17512d9d2f293544623180eb539602897c6264f83a387d50713",
+    "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f"
+  },
+  "development_panel_sha256": "5043ed60d6ce8f891ee8e30255fabaa40fcac37b0a043c1a85dd88178832ce4e",
+  "evaluation_endpoints": [
+    {
+      "canonical_exposure": 0,
+      "last_ordinal": -1,
+      "nominal": 0,
+      "update": 0
+    },
+    {
+      "canonical_exposure": 1017149,
+      "last_ordinal": 13838,
+      "nominal": 1000000,
+      "update": 31
+    },
+    {
+      "canonical_exposure": 3018478,
+      "last_ordinal": 41095,
+      "nominal": 3000000,
+      "update": 92
+    },
+    {
+      "canonical_exposure": 6693230,
+      "last_ordinal": 91100,
+      "nominal": 6666667,
+      "update": 204
+    },
+    {
+      "canonical_exposure": 9350642,
+      "last_ordinal": 127234,
+      "nominal": 9333334,
+      "update": 285
+    },
+    {
+      "canonical_exposure": 10007223,
+      "last_ordinal": 134590,
+      "nominal": 10000000,
+      "update": 305
+    }
+  ],
+  "master_moments_accumulation": "float32",
+  "nominal_exposure": 10000000,
+  "peak_lr": 0.0006,
+  "phase_absolute_ends": [
+    6666667,
+    9333334,
+    10000000
+  ],
+  "phase_assignment": "starting cumulative presentation exposure; whole presentation; no update flush",
+  "phase_nominal_exposures": [
+    6666667,
+    2666667,
+    666666
+  ],
+  "probe_slot_consumed": false,
+  "recipe_status": "CONFIGURED_UNSTARTED_UNAUTHORIZED",
+  "save_endpoints": [
+    {
+      "canonical_exposure": 0,
+      "last_ordinal": -1,
+      "nominal": 0,
+      "update": 0
+    },
+    {
+      "canonical_exposure": 1017149,
+      "last_ordinal": 13838,
+      "nominal": 1000000,
+      "update": 31
+    },
+    {
+      "canonical_exposure": 2001130,
+      "last_ordinal": 27230,
+      "nominal": 2000000,
+      "update": 61
+    },
+    {
+      "canonical_exposure": 3018478,
+      "last_ordinal": 41095,
+      "nominal": 3000000,
+      "update": 92
+    },
+    {
+      "canonical_exposure": 4002553,
+      "last_ordinal": 54485,
+      "nominal": 4000000,
+      "update": 122
+    },
+    {
+      "canonical_exposure": 5019821,
+      "last_ordinal": 68330,
+      "nominal": 5000000,
+      "update": 153
+    },
+    {
+      "canonical_exposure": 6004173,
+      "last_ordinal": 81721,
+      "nominal": 6000000,
+      "update": 183
+    },
+    {
+      "canonical_exposure": 6693230,
+      "last_ordinal": 91100,
+      "nominal": 6666667,
+      "update": 204
+    },
+    {
+      "canonical_exposure": 7021296,
+      "last_ordinal": 95556,
+      "nominal": 7000000,
+      "update": 214
+    },
+    {
+      "canonical_exposure": 8005412,
+      "last_ordinal": 108974,
+      "nominal": 8000000,
+      "update": 244
+    },
+    {
+      "canonical_exposure": 9022609,
+      "last_ordinal": 122797,
+      "nominal": 9000000,
+      "update": 275
+    },
+    {
+      "canonical_exposure": 9350642,
+      "last_ordinal": 127234,
+      "nominal": 9333334,
+      "update": 285
+    },
+    {
+      "canonical_exposure": 10007223,
+      "last_ordinal": 134590,
+      "nominal": 10000000,
+      "update": 305
+    }
+  ],
+  "seed": 42,
+  "update_target": 32768,
+  "working_dtype": "bfloat16"
+}

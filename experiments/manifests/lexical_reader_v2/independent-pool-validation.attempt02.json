@@ -1,0 +1,29 @@
+{
+  "accepted_rows_checked": 42020,
+  "checks_sha256": "32335a9c083edfda615f1a8295bf8a852d13f5e095c06f15e157aa95ccfa1565",
+  "comparison_failures": [],
+  "elapsed_seconds": 29.208477,
+  "empty_required_strata": [],
+  "independent_oracle_sha256": "54c87817e7c8d3f1962f08f5f907336dec36625348c2bb471db1d3b78965b22e",
+  "loaded_mlx": false,
+  "loaded_torch": false,
+  "max_accepted_inverse_states": 3,
+  "pool_checker_sha256": "2e2ade806892931cc5b1a8f65449b6214984352a0b1334c9f3877547e85bde44",
+  "pool_preflight_sha256": "4f9cdc7fea9aae495198159f18ac0df1b82760b4dc7c21831d8ab6b20d1bf8b4",
+  "pool_sha256": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+  "scope": "complete accepted pool inversion and lineage; no reader or realized-presentation admission",
+  "status": "PASS",
+  "subject_sha256": "bc5fef652aa73b90f659be83d39d3a16ad4099c037e962463ad96924f5f04f4d",
+  "summary_sha256": "a969c68805edac1be61023e43551b677ac96564369a8e0dbe32c02a7f7f46a1b",
+  "table_sha256": "bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87",
+  "unique_base_ids": 8404,
+  "unique_target_hashes": 8404,
+  "unique_variant_ids": 42020,
+  "view_counts": {
+    "clean": 8404,
+    "empirical1": 8404,
+    "empirical2": 8404,
+    "mixed": 8404,
+    "two": 8404
+  }
+}
