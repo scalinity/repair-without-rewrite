@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "Agg_PNG_in_memory_save": true,
+    "Agg_SVG_in_memory_save": true,
+    "accelerator_runtime_absent": true,
+    "partial_figures_refused_before_output_creation": true,
+    "syntax_AST_parse": true
+  },
+  "disposition": "REPORTING_LIBRARY_PREPARATION_PASS_SIX_OUTCOMES_PENDING",
+  "helpers_sha256": {
+    "benchmarks/six_10m_descriptive.py": "0170a031d2f5f4798692ea3ab5a39d4aa8dc7cd727e5fa0162b13ed3bae68f61",
+    "benchmarks/six_10m_figures.py": "d5a3a7c588a59997f719ac084d8201a3a2a49604ce9151c7015f763c71976618"
+  },
+  "python": "3.12.15",
+  "runtime": "exports/six-10m-plot-runtime",
+  "schema": "six_10m_reporting_library_review_v1",
+  "scientific_figures_generated": false,
+  "source_head": "7f207c1956253823113dc6e0ddbd115574aab928",
+  "test_scope": "Empty in-memory library figure only; no experiment curves or plot files produced.",
+  "versions": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.3",
+    "pillow": "12.3.0"
+  }
+}

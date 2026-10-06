@@ -1,0 +1,26 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "-m",
+    "benchmarks.six_10m_campaign",
+    "run",
+    "--recipe",
+    "B100-seed42-lr3e-04"
+  ],
+  "child_cpu_system_s": 1142.5556,
+  "child_cpu_user_s": 528.122652,
+  "device_kernel_time": "UNMEASURED",
+  "disposition": "SERIAL_RECIPE_LAUNCH_RECORDED",
+  "environment_override": {
+    "MLX_ENABLE_TF32": "0"
+  },
+  "exit_code": 0,
+  "finish_unix": 1791274636.2413938,
+  "launch_to_exit_wall_s": 2259.75870680809,
+  "launch_unix": 1791272376.482687,
+  "log_path": "exports/six-10m-B100-lr3e-04.attempt01.log",
+  "log_sha256": "df59e7a7fcda2df35ddfdc63c785e2130fd8a399c7d5d21c274d562b4eed1ff9",
+  "recipe_id": "B100-seed42-lr3e-04",
+  "source_dirty_status_at_launch": "",
+  "source_head": "7f207c1956253823113dc6e0ddbd115574aab928"
+}

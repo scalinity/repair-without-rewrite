@@ -1,0 +1,119 @@
+{
+  "collector_sha256": "ccbcf2dc0f737dc29d0ec0edb1ea9d0b4a12e1089414322e349fd2365c7c6ec7",
+  "completed_run_resource_checks": [
+    {
+      "recipe": "B100-seed42-lr1e-04",
+      "updates": 305,
+      "whole_recipe_update_sequence_covered": true
+    },
+    {
+      "recipe": "C101-seed42-lr1e-04",
+      "updates": 305,
+      "whole_recipe_update_sequence_covered": true
+    },
+    {
+      "recipe": "B100-seed42-lr3e-04",
+      "updates": 305,
+      "whole_recipe_update_sequence_covered": true
+    }
+  ],
+  "disposition": "DESCRIPTIVE_COLLECTION_PREPARATION_PASS",
+  "existing_endpoint_checks": [
+    {
+      "matched_decoder_positions": true,
+      "recipe": "B100-seed42-lr1e-04",
+      "update": 0
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "B100-seed42-lr1e-04",
+      "update": 31
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "B100-seed42-lr1e-04",
+      "update": 92
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "B100-seed42-lr1e-04",
+      "update": 204
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "B100-seed42-lr1e-04",
+      "update": 285
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "B100-seed42-lr1e-04",
+      "update": 305
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "C101-seed42-lr1e-04",
+      "update": 0
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "C101-seed42-lr1e-04",
+      "update": 31
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "C101-seed42-lr1e-04",
+      "update": 92
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "C101-seed42-lr1e-04",
+      "update": 204
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "C101-seed42-lr1e-04",
+      "update": 285
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "C101-seed42-lr1e-04",
+      "update": 305
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "B100-seed42-lr3e-04",
+      "update": 0
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "B100-seed42-lr3e-04",
+      "update": 31
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "B100-seed42-lr3e-04",
+      "update": 92
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "B100-seed42-lr3e-04",
+      "update": 204
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "B100-seed42-lr3e-04",
+      "update": 285
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "B100-seed42-lr3e-04",
+      "update": 305
+    }
+  ],
+  "no_new_inference": true,
+  "no_rescoring": true,
+  "partial_campaign_refused": true,
+  "previous_receipt": "experiments/manifests/six_10m_probes/descriptive-collection-preparation.attempt01.json",
+  "previous_receipt_sha256": "e6f2b2fce2fa83d07ab1fb2c13a1a8fcc200f4d9307b66b44bd54c64424a3ad5",
+  "source_head": "7f207c1956253823113dc6e0ddbd115574aab928"
+}

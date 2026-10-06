@@ -1,0 +1,71 @@
+{
+  "collector_sha256": "6f59bf3d3de42ec1ff8c76e0f5d61a016dcbc990cfa96e648ac47afc02c5384d",
+  "completed_run_resource_checks": 2,
+  "disposition": "DESCRIPTIVE_COLLECTION_PREPARATION_PASS",
+  "existing_endpoint_checks": [
+    {
+      "matched_decoder_positions": true,
+      "recipe": "B100-seed42-lr1e-04",
+      "update": 0
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "B100-seed42-lr1e-04",
+      "update": 31
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "B100-seed42-lr1e-04",
+      "update": 92
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "B100-seed42-lr1e-04",
+      "update": 204
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "B100-seed42-lr1e-04",
+      "update": 285
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "B100-seed42-lr1e-04",
+      "update": 305
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "C101-seed42-lr1e-04",
+      "update": 0
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "C101-seed42-lr1e-04",
+      "update": 31
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "C101-seed42-lr1e-04",
+      "update": 92
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "C101-seed42-lr1e-04",
+      "update": 204
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "C101-seed42-lr1e-04",
+      "update": 285
+    },
+    {
+      "matched_decoder_positions": true,
+      "recipe": "C101-seed42-lr1e-04",
+      "update": 305
+    }
+  ],
+  "no_new_inference": true,
+  "no_rescoring": true,
+  "partial_campaign_refused": true,
+  "source_head": "7f207c1956253823113dc6e0ddbd115574aab928"
+}
