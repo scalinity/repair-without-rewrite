@@ -1,0 +1,1384 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Repair Without Rewrite Orchestration</title>
+<meta name="description" content="Where the Repair Without Rewrite paper stands, what runs next on which model, and the ideas behind it in plain words.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --shell:#F5F4F1; --canvas:#FCFCFB; --surface:#F8F7F4; --stone:#EFEBE3; --hover:#EAE5DC;
+  --ink:#1A1A1A; --ink-2:#4F4B45; --ink-3:#736E67;
+  --hair:#E4DFD6; --hair-2:#D2CABD;
+  --teal:#195C5D; --teal-wash:#E7F0EE;
+  --lav:#7A4A9E; --lav-wash:#FBF2FF;
+  --ochre:#8A5410; --ochre-wash:#F7EEDF;
+  --m-codex:#008A7A; --m-astra:#8A4FB3; --m-stop:#B06A12; --m-you:#3A3733;
+  --shadow:0 1px 2px rgba(60,48,30,.05), 0 10px 28px -16px rgba(60,48,30,.18);
+  --serif:"Newsreader","Iowan Old Style",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+  --r-lg:16px; --r-md:10px; --r-sm:6px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --shell:#141311; --canvas:#1A1917; --surface:#211F1C; --stone:#282521; --hover:#302C27;
+    --ink:#F3F0EA; --ink-2:#AAA59D; --ink-3:#908B83;
+    --hair:#34312C; --hair-2:#454038;
+    --teal:#55AAA4; --teal-wash:#1C2826;
+    --lav:#C58AE5; --lav-wash:#2C2231;
+    --ochre:#D9A35C; --ochre-wash:#2B2319;
+    --m-codex:#12A08F; --m-astra:#A46CCB; --m-stop:#B97E2A; --m-you:#D8D3CB;
+    --shadow:0 1px 2px rgba(0,0,0,.35), 0 12px 32px -16px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --shell:#141311; --canvas:#1A1917; --surface:#211F1C; --stone:#282521; --hover:#302C27;
+  --ink:#F3F0EA; --ink-2:#AAA59D; --ink-3:#908B83;
+  --hair:#34312C; --hair-2:#454038;
+  --teal:#55AAA4; --teal-wash:#1C2826;
+  --lav:#C58AE5; --lav-wash:#2C2231;
+  --ochre:#D9A35C; --ochre-wash:#2B2319;
+  --m-codex:#12A08F; --m-astra:#A46CCB; --m-stop:#B97E2A; --m-you:#D8D3CB;
+  --shadow:0 1px 2px rgba(0,0,0,.35), 0 12px 32px -16px rgba(0,0,0,.6);
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:76px}
+@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--shell);color:var(--ink);font:16px/1.55 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-wrap:break-word}
+a{color:var(--teal);text-underline-offset:3px;text-decoration-thickness:1px}
+code,.mono{font-family:var(--mono);font-size:.86em}
+p{margin:0 0 1em}
+h1,h2,h3{margin:0;font-weight:500}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
+.visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* top bar */
+.topbar{position:sticky;top:0;z-index:30;background:var(--shell);border-bottom:1px solid var(--hair)}
+@supports (backdrop-filter:blur(8px)){.topbar{background:color-mix(in srgb,var(--shell) 86%,transparent);backdrop-filter:saturate(1.1) blur(12px)}}
+.topbar-in{max-width:1280px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:16px}
+.wordmark{font-family:var(--serif);font-size:19px;letter-spacing:-.005em;white-space:nowrap;color:var(--ink);text-decoration:none}
+.wordmark span{color:var(--ink-3);font-style:italic}
+.asof{margin-left:auto;font-size:13px;color:var(--ink-3);white-space:nowrap}
+.asof code{color:var(--ink-2)}
+.theme-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--hair-2);background:var(--canvas);border-radius:999px;padding:5px 11px;font-size:13px;color:var(--ink-2);cursor:pointer}
+.theme-btn:hover{background:var(--hover)}
+.theme-btn svg{width:14px;height:14px}
+.topnav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding:0 16px 8px;max-width:1280px;margin:0 auto}
+.topnav::-webkit-scrollbar{display:none}
+.topnav a{flex:none;font-size:13px;color:var(--ink-2);text-decoration:none;padding:4px 10px;border-radius:999px}
+.topnav a:hover{background:var(--hover)}
+@media (min-width:1100px){.topnav{display:none}.topbar-in{padding:12px 32px}}
+@media (max-width:620px){.asof{display:none}.theme-btn{margin-left:auto}}
+
+/* page grid */
+.page{max-width:1280px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:minmax(0,1fr)}
+@media (min-width:1100px){.page{grid-template-columns:176px minmax(0,1fr);column-gap:40px;padding:0 32px}}
+@media (min-width:1280px){.page{column-gap:56px;padding:0 40px}.topbar-in{padding:12px 40px}}
+.rail{display:none}
+@media (min-width:1100px){
+  .rail{display:block;position:sticky;top:78px;align-self:start;padding-top:40px}
+  .rail ol{list-style:none;margin:0;padding:0;border-left:1px solid var(--hair)}
+  .rail a{display:block;padding:5px 0 5px 14px;margin-left:-1px;border-left:2px solid transparent;font-size:13.5px;color:var(--ink-3);text-decoration:none;line-height:1.35}
+  .rail a:hover{color:var(--ink)}
+  .rail a[aria-current="true"]{color:var(--ink);border-left-color:var(--teal)}
+  .rail .rail-foot{margin-top:24px;font-size:12px;color:var(--ink-3);line-height:1.5}
+}
+main{min-width:0}
+
+/* sections */
+.sec{display:grid;grid-template-columns:minmax(0,1fr);column-gap:44px;padding:64px 0;border-top:1px solid var(--hair)}
+@media (min-width:900px){.sec{grid-template-columns:minmax(0,680px) minmax(190px,1fr)}}
+.sec-head{grid-column:1}
+.sec-head h2{font-family:var(--sans);font-size:26px;line-height:1.2;letter-spacing:-.012em;font-weight:600;margin-bottom:10px}
+.sec-head .lede{color:var(--ink-2);font-size:17px;line-height:1.55;max-width:62ch}
+.wide{grid-column:1/-1;min-width:0}
+.colmain{grid-column:1;min-width:0}
+.note{grid-column:1;margin:18px 0 0;padding:2px 0 2px 16px;border-left:2px solid var(--lav);font-family:var(--serif);font-style:italic;font-size:16.5px;line-height:1.5;color:var(--ink-2)}
+.note b{display:block;font-style:normal;font-weight:500;font-size:13px;font-family:var(--sans);color:var(--lav);margin-bottom:4px}
+@media (min-width:900px){.note{grid-column:2;grid-row:1;margin:4px 0 0;align-self:start}}
+.src{display:block;margin-top:10px;font-size:12.5px;color:var(--ink-3);line-height:1.45}
+.src code{font-size:12px;color:var(--ink-3);word-break:break-word}
+.subhead{font-size:15px;font-weight:600;margin:40px 0 12px}
+
+/* hero */
+.hero{padding:56px 0 64px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);column-gap:44px}
+@media (min-width:900px){.hero-grid{grid-template-columns:minmax(0,680px) minmax(190px,1fr)}}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(31px,4.6vw,48px);line-height:1.1;letter-spacing:-.018em;margin-bottom:22px;max-width:20ch}
+.hero .intro{font-size:18px;line-height:1.6;color:var(--ink-2);max-width:58ch}
+.hero .intro em{font-family:var(--serif);font-size:1.06em;line-height:1;color:var(--ink)}
+
+.proof{grid-column:1/-1;margin-top:36px;background:var(--canvas);border:1px solid var(--hair);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:28px 28px 22px}
+@media (max-width:620px){.proof{padding:20px 16px 16px}}
+.proof-rows{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px 18px;align-items:baseline}
+.rowlabel{font-size:13px;color:var(--ink-3);white-space:nowrap}
+@media (max-width:620px){.proof-rows{grid-template-columns:minmax(0,1fr);gap:2px}.rowlabel{margin-top:10px}}
+.sentence{font-family:var(--serif);font-size:21px;line-height:1.7;display:flex;flex-wrap:wrap;column-gap:.32em}
+@media (max-width:620px){.sentence{font-size:18px}}
+.tok{position:relative;white-space:nowrap}
+.tok.bad{text-decoration:underline wavy var(--m-stop);text-decoration-thickness:1.5px;text-underline-offset:5px}
+.tok.fixed{text-decoration:underline solid var(--m-codex);text-decoration-thickness:2px;text-underline-offset:5px}
+.tok.harm{text-decoration:underline wavy var(--m-stop);text-decoration-thickness:1.5px;text-underline-offset:5px}
+.tok.copied{color:var(--ink-3)}
+.mark{position:relative;display:inline-block}
+.mark del{color:var(--ink-3);text-decoration:line-through;text-decoration-color:var(--m-stop);text-decoration-thickness:2px}
+.mark ins{position:absolute;left:50%;bottom:calc(100% - .42em);transform:translateX(-50%);text-decoration:none;font-style:italic;font-size:.8em;line-height:1;white-space:nowrap;color:var(--teal)}
+#outC{padding-top:.95em;line-height:2.3}
+@media (prefers-reduced-motion: no-preference){
+  .typed{animation:typein .32s ease-out both;animation-delay:calc(var(--i) * 45ms)}
+  .mark ins{animation:inkin .45s ease-out both}
+}
+@keyframes typein{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
+@keyframes inkin{from{opacity:0}to{opacity:1}}
+
+.picker{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 4px;align-items:center}
+.picker .lbl{font-size:14px;color:var(--ink-2);margin-right:4px}
+.seg{border:1px solid var(--hair-2);background:var(--surface);border-radius:999px;padding:6px 13px;font-size:14px;cursor:pointer;color:var(--ink-2)}
+.seg:hover{background:var(--hover)}
+.seg[aria-pressed="true"]{background:var(--ink);color:var(--canvas);border-color:var(--ink)}
+
+.twin{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin-top:20px}
+@media (min-width:760px){.twin{grid-template-columns:1fr 1fr}}
+.out{border:1px solid var(--hair);border-radius:var(--r-md);padding:16px 16px 14px;background:var(--surface)}
+.out h3{font-size:15px;font-weight:600;margin-bottom:2px}
+.out .how{font-size:13.5px;color:var(--ink-3);margin-bottom:8px}
+.out .sentence{font-size:19px;min-height:2.4em}
+.program{margin:10px 0 12px;font-family:var(--mono);font-size:12.5px;line-height:1.6;color:var(--ink-2);background:var(--canvas);border:1px solid var(--hair);border-radius:var(--r-sm);padding:7px 9px;overflow-wrap:anywhere;white-space:pre-wrap}
+.squares{display:flex;flex-wrap:wrap;gap:3px;min-height:14px}
+.sq{width:12px;height:12px;border-radius:3px;background:var(--hair-2)}
+.sq.w{background:var(--ink-2)}
+.sq.e{background:var(--ink-3)}
+.sq.a{background:var(--m-codex)}
+.sq.p{background:transparent;border:2px solid var(--m-codex)}
+.sq.r{background:var(--ink-2)}
+.sq.end{background:var(--ink)}
+.count{font-size:14px;color:var(--ink-2);margin-top:8px}
+.count b{font-family:var(--serif);font-size:22px;font-weight:500;color:var(--ink);margin-right:4px}
+.sqkey{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;color:var(--ink-3);margin-top:8px}
+.sqkey span{display:inline-flex;align-items:center;gap:5px}
+.sqkey .sq{width:10px;height:10px}
+
+.slider{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:18px;font-size:14px;color:var(--ink-2)}
+.slider input{accent-color:var(--teal);width:min(260px,100%)}
+.slider output{font-family:var(--serif);font-size:18px;color:var(--ink);min-width:2ch}
+
+.score{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--hair);border:1px solid var(--hair);border-radius:var(--r-md);overflow:hidden;margin-top:20px}
+@media (max-width:620px){.score{grid-template-columns:1fr}}
+.score > div{background:var(--canvas);padding:12px 14px}
+.score .k{font-size:13px;color:var(--ink-3)}
+.score .v{font-family:var(--serif);font-size:26px;line-height:1.2}
+.score .eq{font-size:14px;color:var(--ink-2);line-height:1.45}
+.score .eq code{font-size:12.5px}
+.scen-note{margin:14px 0 0;font-size:15px;color:var(--ink-2);max-width:72ch}
+.caption{font-size:12.5px;color:var(--ink-3);margin-top:14px;line-height:1.5}
+
+/* route */
+.route{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));position:relative}
+.route::before{content:"";position:absolute;left:6.25%;right:6.25%;top:15px;height:2px;background:var(--hair-2)}
+.route .progress{position:absolute;left:6.25%;top:15px;height:2px;background:var(--m-codex);width:calc((100% - 12.5%) * 2 / 7)}
+.station{position:relative;text-align:center}
+.station button{all:unset;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px;width:100%;padding:0 4px 6px;border-radius:8px}
+.station button:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.dot{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:600;background:var(--canvas);border:2px solid var(--hair-2);color:var(--ink-3);position:relative;z-index:1}
+.station[data-s="done"] .dot{background:var(--m-codex);border-color:var(--m-codex);color:#fff}
+.station[data-s="stop"] .dot{border-color:var(--m-stop);color:var(--ochre);background:var(--ochre-wash)}
+.station[data-s="stop"] .dot::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:1.5px dashed var(--m-stop);opacity:.7}
+.station .st-l{font-size:13px;line-height:1.3;color:var(--ink-2);max-width:12ch}
+.station button[aria-pressed="true"] .st-l{color:var(--ink);font-weight:600}
+.station button[aria-pressed="true"] .dot{box-shadow:0 0 0 4px var(--stone)}
+@media (max-width:760px){
+  .route{grid-template-columns:minmax(0,1fr);gap:0}
+  .route::before{left:15px;right:auto;top:16px;bottom:16px;width:2px;height:auto}
+  .route .progress{left:15px;top:16px;width:2px;height:calc((100% - 32px) * 2 / 7)}
+  .station{text-align:left}
+  .station button{flex-direction:row;gap:14px;padding:6px 0}
+  .station .st-l{max-width:none;font-size:14.5px}
+}
+.st-detail{margin-top:22px;background:var(--canvas);border:1px solid var(--hair);border-radius:var(--r-md);padding:18px 20px}
+.st-detail h3{font-size:17px;font-weight:600;margin-bottom:6px}
+.st-detail .state{font-size:13px;color:var(--ink-3);margin-bottom:8px}
+.st-detail p{color:var(--ink-2);margin-bottom:.6em}
+
+.here{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;margin-top:44px;padding:26px 0 0;border-top:1px dashed var(--hair-2)}
+@media (min-width:760px){.here{grid-template-columns:200px minmax(0,1fr)}}
+.bigfig{font-family:var(--serif);font-size:64px;line-height:1;letter-spacing:-.02em}
+.bigfig small{display:block;font-family:var(--sans);font-size:14px;letter-spacing:0;color:var(--ink-2);margin-top:10px;line-height:1.4}
+.here h3{font-family:var(--serif);font-weight:400;font-size:25px;line-height:1.25;margin-bottom:10px}
+.here p{color:var(--ink-2)}
+.flag{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--ochre);background:var(--ochre-wash);border-radius:999px;padding:3px 11px 3px 9px;margin-bottom:12px}
+.flag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--m-stop)}
+
+/* bar chart */
+.chart{margin-top:22px;background:var(--canvas);border:1px solid var(--hair);border-radius:var(--r-md);padding:18px 20px 14px;position:relative}
+.chart h3{font-size:15px;font-weight:600;margin-bottom:2px}
+.chart .sub{font-size:13.5px;color:var(--ink-3);margin-bottom:14px}
+.bars{display:grid;grid-template-columns:minmax(96px,auto) minmax(0,1fr) auto;gap:9px 12px;align-items:center;position:relative}
+.bars .bl{font-size:14px;color:var(--ink-2);white-space:nowrap}
+.bars .track{height:22px;display:flex;align-items:center;cursor:default}
+.bars .bar{height:14px;border-radius:0 4px 4px 0;background:var(--ink-2);min-width:3px}
+.bars .track:hover .bar,.bars .track:focus .bar{background:var(--ink)}
+.bars .bv{font-size:13.5px;color:var(--ink-2);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.bracket{grid-column:2/4;margin-top:4px;border-top:1.5px solid var(--m-stop);padding-top:6px;font-size:13.5px;color:var(--ochre)}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--canvas);font-size:12.5px;line-height:1.4;padding:7px 10px;border-radius:7px;max-width:260px;opacity:0;transition:opacity .12s;z-index:5}
+.tip.on{opacity:1}
+.chart details{margin-top:12px;font-size:13.5px;color:var(--ink-2)}
+.chart summary{cursor:pointer;color:var(--ink-3)}
+table.data{border-collapse:collapse;width:100%;font-size:13.5px;margin-top:8px}
+table.data th,table.data td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--hair)}
+table.data td.n{text-align:right;font-variant-numeric:tabular-nums}
+
+/* checklist */
+.check{list-style:none;margin:16px 0 0;padding:0;border-top:1px solid var(--hair)}
+.check li{display:grid;grid-template-columns:28px minmax(0,1fr) 112px;gap:4px 14px;padding:14px 0;border-bottom:1px solid var(--hair);align-items:baseline}
+@media (max-width:620px){.check li{grid-template-columns:28px minmax(0,1fr)}.check .verdict{grid-column:2}}
+.check .letter{font-family:var(--serif);font-size:18px;color:var(--ink-3)}
+.check .q{font-weight:600;font-size:15px}
+.check .ev{grid-column:2;font-size:14px;color:var(--ink-2)}
+@media (min-width:621px){.check .ev{grid-column:2/3}}
+.verdict{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:500;justify-self:start}
+.vglyph{width:11px;height:11px;border-radius:50%;flex:none}
+.v-yes .vglyph{background:var(--m-codex)}
+.v-part .vglyph{background:linear-gradient(90deg,var(--m-codex) 50%,transparent 50%);border:1.5px solid var(--m-codex)}
+.v-no .vglyph{border:1.5px solid var(--ink-3)}
+.v-stop .vglyph{border:1.5px solid var(--m-stop);background:var(--ochre-wash)}
+.v-unk .vglyph{border:1.5px dashed var(--ink-3)}
+
+/* strips */
+.filters{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;margin:22px 0 14px}
+.filters .lbl{font-size:13.5px;color:var(--ink-3);margin-right:2px}
+.toggle{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--ink-2);margin-left:6px;cursor:pointer}
+.toggle input{accent-color:var(--teal);width:16px;height:16px;margin:0}
+.strips{list-style:none;margin:0;padding:0;border-top:1px solid var(--hair-2)}
+.strip{border-bottom:1px solid var(--hair)}
+.strip[hidden]{display:none}
+.strip details > summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:40px minmax(0,1fr) 190px 92px 118px;gap:6px 16px;padding:16px 8px 16px 0;align-items:start;border-radius:6px}
+.strip details > summary::-webkit-details-marker{display:none}
+.strip details > summary:hover{background:var(--surface)}
+.strip details[open] > summary{background:var(--surface)}
+.s-num{font-family:var(--serif);font-size:24px;line-height:1;color:var(--ink-3);text-align:right;padding-top:1px}
+.strip[data-state="now"] .s-num{color:var(--ink)}
+.s-title{font-weight:600;font-size:15.5px;line-height:1.35}
+.s-tech{font-size:13.5px;color:var(--ink-3);line-height:1.45;margin-top:3px}
+.s-who{display:flex;flex-direction:column;gap:3px;font-size:13.5px;padding-top:2px}
+.who{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;color:var(--ink-2)}
+.who i{width:9px;height:9px;border-radius:2px;flex:none}
+.who.astra i{background:var(--m-astra)}
+.who.codex i{background:var(--m-codex)}
+.who.you i{background:transparent;border:1.5px solid var(--m-you)}
+.who b{font-weight:600;color:var(--ink)}
+.s-needs{font-size:13px;color:var(--ink-3);padding-top:3px;line-height:1.4}
+.s-needs b{display:block;font-weight:500;color:var(--ink-2)}
+.s-state{display:flex;flex-direction:column;gap:5px;align-items:flex-start;padding-top:2px}
+.badge{font-size:12.5px;border-radius:999px;padding:2px 9px;border:1px solid var(--hair-2);color:var(--ink-2);max-width:100%}
+.badge.now{background:var(--teal-wash);border-color:transparent;color:var(--teal)}
+.badge.hold{background:var(--lav-wash);border-color:transparent;color:var(--lav)}
+.badge.done{border-style:dashed;color:var(--ink-3)}
+.strip[data-state="done"] .s-title{color:var(--ink-2)}
+.oneway{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;color:var(--ochre);white-space:nowrap}
+.oneway svg{width:14px;height:14px}
+.s-body{padding:4px 8px 22px 56px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:8px 32px}
+.s-body .plain{font-family:var(--serif);font-size:17px;line-height:1.55;color:var(--ink)}
+.s-body h4{font-size:13px;font-weight:600;color:var(--ink-3);margin:0 0 3px}
+.s-body .facts p{font-size:14px;color:var(--ink-2);margin-bottom:12px}
+@media (max-width:900px){
+  .strip details > summary{grid-template-columns:32px minmax(0,1fr) auto;padding-right:4px}
+  .s-who{grid-column:2;flex-direction:row;flex-wrap:wrap;gap:4px 14px}
+  .s-needs{grid-column:2}
+  .s-state{grid-column:3;grid-row:1}
+  .s-body{padding-left:48px;grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:520px){
+  .strip details > summary{grid-template-columns:28px minmax(0,1fr)}
+  .s-state{grid-column:2;grid-row:auto;flex-direction:row;flex-wrap:wrap}
+  .s-body{padding-left:0}
+}
+.parked{margin-top:26px;padding:16px 18px;background:var(--surface);border-radius:var(--r-md);font-size:14px;color:var(--ink-2)}
+.parked h3{font-size:14.5px;font-weight:600;color:var(--ink);margin-bottom:6px}
+.parked ul{margin:0;padding-left:18px}
+
+/* eligibility */
+.elig{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;margin-top:22px}
+@media (min-width:760px){.elig{grid-template-columns:1fr 1fr}}
+.elig > div{background:var(--canvas);border:1px solid var(--hair);border-radius:var(--r-md);padding:16px 18px}
+.elig h3{font-size:14.5px;font-weight:600;margin-bottom:8px}
+.elig .nums{font-family:var(--serif);font-size:30px;line-height:1.1;margin-bottom:8px;letter-spacing:.01em}
+.elig p{font-size:14px;color:var(--ink-2);margin:0}
+
+/* lanes */
+.lanes{margin-top:26px;display:grid;grid-template-columns:116px repeat(var(--phases,6),minmax(0,1fr));border:1px solid var(--hair);border-radius:var(--r-md);overflow:hidden;background:var(--hair);gap:1px}
+.lanes > div{background:var(--canvas);padding:8px 7px;min-height:52px}
+.lanes .lh{background:var(--surface);font-size:12.5px;color:var(--ink-3);display:flex;align-items:flex-end;padding-bottom:6px}
+.lanes .ln{background:var(--surface);font-size:13px;font-weight:600;display:flex;flex-direction:column;justify-content:center;gap:2px}
+.lanes .ln small{font-weight:400;color:var(--ink-3);font-size:12px;line-height:1.3}
+.chip{display:flex;align-items:center;gap:6px;font-size:12.5px;line-height:1.25;padding:5px 7px;border-radius:7px;background:var(--surface);border:1px solid var(--hair);margin-bottom:4px}
+.chip b{font-family:var(--serif);font-weight:500;font-size:15px}
+.chip.astra{border-left:3px solid var(--m-astra)}
+.chip.codex{border-left:3px solid var(--m-codex)}
+.chip.you{border-left:3px solid var(--m-you)}
+.chip.rev{border-style:dashed;border-left-style:solid;color:var(--ink-2)}
+.lane-key{font-size:12.5px;color:var(--ink-3);margin-top:8px}
+@media (max-width:980px){
+  .lanes{grid-template-columns:minmax(0,1fr);background:none;border:0;gap:12px}
+  .lanes .lh,.lanes .ln{display:none}
+  .lanes .phase{border:1px solid var(--hair);border-radius:var(--r-md);padding:12px 14px!important}
+  .lanes .phase-title{display:block!important;font-size:13px;font-weight:600;color:var(--ink-2);margin-bottom:6px}
+  .lanes .cell-lab{display:block!important;font-size:12px;color:var(--ink-3);margin:6px 0 3px}
+  .lanes > div.cell{display:none}
+}
+.phase-title,.cell-lab{display:none}
+.lanes > div.phase{display:none}
+@media (max-width:980px){.lanes > div.phase{display:block}}
+
+.overlap{width:100%;border-collapse:collapse;margin-top:12px;font-size:14px}
+.overlap th,.overlap td{text-align:left;vertical-align:top;padding:10px 10px 10px 0;border-bottom:1px solid var(--hair)}
+.overlap th{font-size:12.5px;font-weight:500;color:var(--ink-3)}
+.overlap td:first-child{white-space:nowrap;font-family:var(--serif);font-size:16px;padding-right:14px}
+.overlap .vd{white-space:nowrap;font-weight:600;padding-right:14px}
+.vd.ok{color:var(--teal)}
+.vd.no{color:var(--ochre)}
+.vd.hold{color:var(--lav)}
+.overlap td:last-child{color:var(--ink-2)}
+@media (max-width:620px){
+  .overlap thead{display:none}
+  .overlap tr{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;padding:10px 0;border-bottom:1px solid var(--hair)}
+  .overlap td{border:0;padding:0}
+  .overlap td:last-child{grid-column:1/-1}
+}
+
+/* allocation */
+.rule{margin-top:20px;display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+@media (min-width:760px){.rule{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.rule > div{border-top:2px solid var(--hair-2);padding-top:10px;font-size:14px;color:var(--ink-2)}
+.rule > div.ra{border-top-color:var(--m-astra)}
+.rule > div.rr{border-top-color:var(--m-astra);border-top-style:dashed}
+.rule > div.rc{border-top-color:var(--m-codex)}
+.rule h3{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:4px}
+.matrix-wrap{margin-top:26px;background:var(--canvas);border:1px solid var(--hair);border-radius:var(--r-md);padding:6px 6px 0}
+table.matrix{border-collapse:collapse;width:100%;font-size:14px}
+.matrix th{font-size:12.5px;font-weight:500;color:var(--ink-3);text-align:center;padding:10px 6px;vertical-align:bottom;line-height:1.3}
+.matrix th:first-child,.matrix td:first-child{text-align:left}
+.matrix td{padding:9px 6px;border-top:1px solid var(--hair);text-align:center;vertical-align:middle}
+.matrix tr.row{cursor:default}
+.matrix tr.row:hover td,.matrix tr.row:focus-within td,.matrix tr.row.on td{background:var(--surface)}
+.matrix .u{display:flex;gap:10px;align-items:baseline}
+.matrix .u b{font-family:var(--serif);font-weight:500;font-size:16px;color:var(--ink-3);min-width:20px;text-align:right}
+.matrix .u span{line-height:1.3}
+.crit{display:inline-block;width:13px;height:13px;border-radius:50%;border:1.5px solid var(--hair-2);vertical-align:middle}
+.crit.y{background:var(--ink-2);border-color:var(--ink-2)}
+.crit.na{border-style:dotted}
+.alloc{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;font-weight:500;font-size:13.5px}
+.alloc i{width:11px;height:11px;border-radius:3px}
+.alloc.a i{background:var(--m-astra)}
+.alloc.r i{background:transparent;border:2px dashed var(--m-astra)}
+.alloc.c i{background:var(--m-codex)}
+.alloc.y i{background:transparent;border:1.5px solid var(--m-you)}
+.why{min-height:3.2em;padding:12px 12px 14px;font-size:14px;color:var(--ink-2);border-top:1px solid var(--hair)}
+@media (max-width:620px){.matrix-wrap{padding:4px 4px 0}table.matrix{table-layout:fixed}.matrix th:first-child{width:36%}.matrix th:last-child{width:24%}.matrix .u{gap:6px}.matrix .u span{font-size:13px}.matrix th{font-size:11.5px;padding:8px 2px}.matrix td{padding:8px 2px}.alloc{font-size:12.5px;white-space:normal;text-align:left;align-items:flex-start}.alloc i{margin-top:3px;flex:none}}
+.stack{display:flex;gap:2px;height:28px;margin-top:22px;border-radius:6px;overflow:hidden}
+.stack div{display:flex;align-items:center;padding:0 9px;font-size:12.5px;color:#fff;white-space:nowrap;overflow:hidden}
+.stack .a{background:var(--m-astra)}
+.stack .r{background:var(--canvas);border:2px dashed var(--m-astra);color:var(--ink);border-radius:0}
+.stack .c{background:var(--m-codex)}
+.stack .y{background:var(--canvas);border:1.5px solid var(--m-you);color:var(--ink)}
+.stack-legend{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:13px;color:var(--ink-2);margin-top:8px}
+
+/* loop */
+.loop{list-style:none;margin:22px 0 0;padding:0;counter-reset:step;position:relative}
+.loop li{position:relative;padding:0 0 22px 52px;counter-increment:step}
+.loop li::before{content:counter(step);position:absolute;left:0;top:-2px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:17px;background:var(--canvas);border:1.5px solid var(--hair-2);color:var(--ink-2)}
+.loop li::after{content:"";position:absolute;left:16px;top:32px;bottom:2px;width:1.5px;background:var(--hair-2)}
+.loop li:last-child::after{display:none}
+.loop h3{font-size:15.5px;font-weight:600;margin-bottom:3px}
+.loop p{font-size:14.5px;color:var(--ink-2);margin:0}
+.loop .src{margin-top:4px}
+.loopback{display:flex;align-items:center;gap:10px;margin:0 0 0 2px;font-size:14px;color:var(--teal)}
+.loopback svg{width:28px;height:28px;flex:none}
+
+/* handover */
+.anat{margin-top:24px;display:grid;grid-template-columns:minmax(0,1fr)}
+.slip{background:var(--canvas);border:1px solid var(--hair);border-radius:var(--r-md);box-shadow:var(--shadow);overflow:hidden}
+.slip-bar{display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid var(--hair);background:var(--surface);font-size:13px;color:var(--ink-3)}
+.copy{margin-left:auto;border:1px solid var(--hair-2);background:var(--canvas);border-radius:999px;padding:5px 12px;font-size:13px;cursor:pointer;color:var(--ink)}
+.copy:hover{background:var(--hover)}
+.part{display:grid;grid-template-columns:150px minmax(0,1fr);gap:4px 20px;padding:14px 16px;border-bottom:1px solid var(--hair)}
+.part:last-child{border-bottom:0}
+.part .pl{font-size:13px;font-weight:600;color:var(--lav);line-height:1.35}
+.part .pl small{display:block;font-weight:400;color:var(--ink-3);font-size:12.5px;margin-top:4px}
+.part .pt{font-size:14px;line-height:1.55;color:var(--ink);white-space:pre-wrap;overflow-wrap:anywhere}
+@media (max-width:700px){.part{grid-template-columns:minmax(0,1fr)}}
+
+/* evidence */
+.ledger{list-style:none;margin:20px 0 0;padding:0;border-top:1px solid var(--hair-2)}
+.ledger li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4px 28px;padding:16px 0;border-bottom:1px solid var(--hair)}
+@media (max-width:700px){.ledger li{grid-template-columns:minmax(0,1fr)}}
+.ledger h3{font-size:15.5px;font-weight:600;margin-bottom:3px}
+.ledger .caught{font-size:14.5px;color:var(--ink-2)}
+.ledger .cost{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--ink-2);line-height:1.5}
+.record{margin-top:28px;font-size:15px;color:var(--ink-2);max-width:68ch}
+.record b{font-family:var(--serif);font-weight:500;font-size:19px;color:var(--ink)}
+
+/* threads */
+.threads{width:100%;border-collapse:collapse;margin-top:18px;font-size:14px}
+.threads th{font-size:12.5px;font-weight:500;color:var(--ink-3);text-align:left;padding:8px 10px 8px 0;border-bottom:1px solid var(--hair-2)}
+.threads td{padding:11px 10px 11px 0;border-bottom:1px solid var(--hair);vertical-align:top}
+.threads td:first-child{font-weight:500;color:var(--ink)}
+.threads td:nth-child(2){color:var(--ink-2)}
+.threads .own{white-space:nowrap}
+.threads .own a{font-family:var(--serif);font-size:16px;text-decoration:none;border-bottom:1px solid var(--hair-2);color:var(--ink)}
+.threads .own a:hover{border-bottom-color:var(--teal)}
+@media (max-width:620px){
+  .threads thead{display:none}
+  .threads tr{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:10px 0;border-bottom:1px solid var(--hair)}
+  .threads td{border:0;padding:0}
+  .threads td:nth-child(2){grid-column:1/-1;grid-row:2}
+  .threads .own{grid-column:2;grid-row:1}
+}
+
+/* grading */
+.rubric{list-style:none;margin:20px 0 0;padding:0}
+.rubric li{border-bottom:1px solid var(--hair)}
+.rubric label{display:grid;grid-template-columns:22px minmax(0,1fr);gap:12px;padding:12px 4px;cursor:pointer;align-items:start}
+.rubric input{accent-color:var(--teal);width:17px;height:17px;margin:2px 0 0}
+.rubric .rt{font-weight:600;font-size:15px}
+.rubric .rd{display:block;font-size:14px;color:var(--ink-2);margin-top:2px}
+.rubric .rd code{font-size:12.5px}
+.grade{margin-top:18px;display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;padding:14px 18px;background:var(--canvas);border:1px solid var(--hair);border-radius:var(--r-md)}
+.grade .g-n{font-family:var(--serif);font-size:30px;line-height:1}
+.grade .g-t{font-size:15px;color:var(--ink-2);flex:1 1 260px}
+.grade button{border:1px solid var(--hair-2);background:var(--surface);border-radius:999px;padding:5px 12px;font-size:13px;cursor:pointer}
+
+/* glossary */
+.gloss{display:grid;grid-template-columns:minmax(0,1fr);gap:0 36px;margin:20px 0 0}
+@media (min-width:760px){.gloss{grid-template-columns:1fr 1fr}}
+.gloss div{padding:11px 0;border-bottom:1px solid var(--hair);break-inside:avoid}
+.gloss dt{font-weight:600;font-size:15px}
+.gloss dd{margin:2px 0 0;font-size:14px;color:var(--ink-2)}
+.term{all:unset;cursor:help;border-bottom:1px dotted var(--ink-3);color:inherit}
+.term:hover{border-bottom-color:var(--teal);color:var(--ink)}
+.term:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:2px}
+.pop{position:absolute;z-index:40;max-width:300px;background:var(--canvas);color:var(--ink);border:1px solid var(--hair-2);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:14px;line-height:1.5;display:none}
+.pop.on{display:block}
+.pop b{display:block;margin-bottom:3px}
+
+/* change log */
+.timeline{list-style:none;margin:20px 0 0;padding:0}
+.timeline li{display:grid;grid-template-columns:156px minmax(0,1fr);position:relative;padding-bottom:22px}
+.timeline li::before{content:"";position:absolute;left:150px;top:5px;width:9px;height:9px;border-radius:50%;background:var(--shell);border:2px solid var(--hair-2)}
+.timeline li::after{content:"";position:absolute;left:156px;top:20px;bottom:2px;width:1.5px;background:var(--hair)}
+.timeline li:first-child::before{background:var(--m-codex);border-color:var(--m-codex)}
+.timeline li:last-child::after{display:none}
+.t-when{font-size:13.5px;color:var(--ink-3);text-align:right;padding-right:26px;line-height:1.4}
+.t-when code{display:block;font-size:12px;margin-top:3px;color:var(--ink-3)}
+.t-what{padding-left:24px;min-width:0}
+.t-what h3{font-size:15.5px;font-weight:600;margin-bottom:3px}
+.t-what p{font-size:14.5px;color:var(--ink-2);margin:0 0 6px}
+.t-disp{font-family:var(--mono);font-size:12px;color:var(--ink-3);overflow-wrap:anywhere}
+.t-disp.stop{color:var(--ochre)}
+.t-disp.go{color:var(--teal)}
+@media (max-width:620px){
+  .timeline li{grid-template-columns:minmax(0,1fr);padding-left:22px}
+  .timeline li::before{left:0}
+  .timeline li::after{left:6px}
+  .t-when{text-align:left;padding-right:0;margin-bottom:4px}
+  .t-what{padding-left:0}
+}
+footer{border-top:1px solid var(--hair);padding:36px 0 64px;font-size:13.5px;color:var(--ink-3);display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+@media (min-width:900px){footer{grid-template-columns:minmax(0,680px) minmax(190px,1fr);column-gap:44px}}
+footer p{margin:0 0 .6em;max-width:72ch}
+footer code{font-size:12px}
+@media print{.topbar,.rail,.filters,.copy,.theme-btn{display:none}.strip details{display:block}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="wordmark" href="#top">Repair Without Rewrite <span>orchestration</span></a>
+    <span class="asof">Record as of <code>28298ad</code>, 5 Oct 2026</span>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Change appearance">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="5.5"/><path d="M8 2.5v11" /><path d="M8 2.5a5.5 5.5 0 0 1 0 11z" fill="currentColor" stroke="none"/></svg>
+      <span id="themeLabel">Auto</span>
+    </button>
+  </div>
+  <nav class="topnav" aria-label="Sections">
+    <a href="#top">Two ways to fix</a><a href="#where">Where it is</a><a href="#next">Next steps</a><a href="#together">Side by side</a><a href="#who">Who does what</a><a href="#loop">Session loop</a><a href="#handover">Handover</a><a href="#evidence">Why stops matter</a><a href="#threads">Open questions</a><a href="#grading">Grading</a><a href="#words">Words</a><a href="#log">Log</a>
+  </nav>
+</header>
+
+<div class="page">
+  <aside class="rail" aria-label="Sections">
+    <ol>
+      <li><a href="#top">Two ways to fix a transcript</a></li>
+      <li><a href="#where">Where the paper is</a></li>
+      <li><a href="#next">What runs next</a></li>
+      <li><a href="#together">What can run side by side</a></li>
+      <li><a href="#who">Who does each job</a></li>
+      <li><a href="#loop">How a session goes</a></li>
+      <li><a href="#handover">Handing work on</a></li>
+      <li><a href="#evidence">Why the stops matter</a></li>
+      <li><a href="#threads">Open questions</a></li>
+      <li><a href="#grading">Grading a new model</a></li>
+      <li><a href="#words">Words used here</a></li>
+      <li><a href="#log">Change log</a></li>
+    </ol>
+    <p class="rail-foot">Every figure on this page comes from the research repository at commit <code>28298ad</code>. Each one names its file.</p>
+  </aside>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="top" aria-labelledby="h-top">
+  <div class="hero-grid">
+    <div class="colmain">
+      <h1 id="h-top">When a transcript has one wrong word, should the fix retype the whole sentence, or just mark the word?</h1>
+      <p class="intro">That question is the paper. <em>Repair Without Rewrite</em> compares two small AI models that correct <button class="term" data-t="asr">speech-to-text</button> transcripts. <button class="term" data-t="b100">B100</button> writes the whole corrected sentence. <button class="term" data-t="c101">C101</button> writes only a list of edits and lets a copier keep everything else exactly as it was. This page shows how far the paper has got, what runs next, and the ideas on the way.</p>
+    </div>
+    <aside class="note"><b>In plain words</b>A proofreader doesn't retype your essay to fix a typo. They mark the one word. The paper asks whether that habit is better for AI too: fewer new mistakes, and less work.</aside>
+
+    <div class="proof" id="proof" aria-labelledby="h-proof">
+      <h2 id="h-proof" class="visually-hidden">Try it: two ways to fix a transcript</h2>
+      <div class="proof-rows">
+        <span class="rowlabel">What was said</span>
+        <div class="sentence" id="rowR"></div>
+        <span class="rowlabel">What the recognizer typed</span>
+        <div class="sentence" id="rowS"></div>
+      </div>
+
+      <div class="picker" role="group" aria-label="What did the corrector do?">
+        <span class="lbl">What did the corrector do?</span>
+        <button class="seg" type="button" data-scen="fix" aria-pressed="true">Fixed the mistake</button>
+        <button class="seg" type="button" data-scen="copy" aria-pressed="false">Left it alone</button>
+        <button class="seg" type="button" data-scen="mixed" aria-pressed="false">Fixed one, broke one</button>
+        <button class="seg" type="button" data-scen="harm" aria-pressed="false">Broke a correct word</button>
+      </div>
+
+      <div class="twin">
+        <div class="out">
+          <h3>B100 retypes everything</h3>
+          <div class="how">Every word comes out of the model, even the ones that were already right.</div>
+          <div class="sentence" id="outB" aria-live="polite"></div>
+          <div class="program" id="progB"></div>
+          <div class="squares" id="sqB" aria-hidden="true"></div>
+          <div class="count" id="cntB"></div>
+          <div class="sqkey"><span><i class="sq w"></i>a word it writes</span><span><i class="sq end"></i>"done"</span></div>
+        </div>
+        <div class="out">
+          <h3>C101 writes only the edits</h3>
+          <div class="how">Grey words are copied byte-for-byte by the <button class="term" data-t="renderer">renderer</button>; the model never touches them.</div>
+          <div class="sentence" id="outC" aria-live="polite"></div>
+          <div class="program" id="progC"></div>
+          <div class="squares" id="sqC" aria-hidden="true"></div>
+          <div class="count" id="cntC"></div>
+          <div class="sqkey"><span><i class="sq a"></i>"edit here"</span><span><i class="sq p"></i>start / end pointer</span><span><i class="sq r"></i>replacement word</span><span><i class="sq end"></i>"done"</span></div>
+        </div>
+      </div>
+
+      <div class="slider">
+        <label for="len">Pretend the sentence is</label>
+        <input id="len" type="range" min="6" max="60" value="6" step="1" aria-describedby="lenHelp">
+        <output id="lenOut" for="len">6</output><span>words long</span>
+        <span id="lenHelp" class="visually-hidden">Adds imagined correct words. B100's work grows with length; C101's depends only on the edits.</span>
+      </div>
+
+      <div class="score" aria-live="polite">
+        <div><div class="k"><button class="term" data-t="repaired">Repaired errors</button></div><div class="v" id="vRep">1</div></div>
+        <div><div class="k"><button class="term" data-t="introduced">Introduced errors</button></div><div class="v" id="vInt">0</div></div>
+        <div><div class="k">The scorer's balance check</div><div class="eq" id="vEq"></div></div>
+      </div>
+      <p class="scen-note" id="scenNote"></p>
+      <p class="caption">An illustration of the mechanism, using the repository's own worked example (<code>docs/reviews/FRONTIER_READER_CURRICULUM_DECISION_V1.md</code>, section D). It is not a result: no trial run has happened yet. One square per word keeps it simple; real models count sub-word tokens. C101's count follows the contract <code>1 + R + 3K</code> for K edits with R replacement tokens (<code>docs/design-inputs/KICKOFF_PROMPT.txt</code>, phase C).</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHERE -->
+<section class="sec" id="where" aria-labelledby="h-where">
+  <div class="sec-head">
+    <h2 id="h-where">Where the paper is</h2>
+    <p class="lede">Eight stations from plan to manuscript. The foundation is built and the training reader is implemented. The paper sits just before its first trial training run, finishing the reader's qualification.</p>
+  </div>
+  <aside class="note"><b>In plain words</b>Think of it as a lab that has built and tested its instruments, rebuilt its practice material after the first version proved to be mostly punctuation, and is now checking the machine that hands that material out.</aside>
+
+  <div class="wide">
+    <ol class="route" id="route">
+      <span class="progress" aria-hidden="true"></span>
+    </ol>
+    <div class="st-detail" id="stDetail" aria-live="polite"></div>
+    <span class="src">Route from the specification's milestone map (<code>docs/design-inputs/EXTRACTED_CANONICAL_SOURCE.md</code>, section 33.1) and the seven publication gates (same file, "PUB-GATE 1–7"). All seven gates are still pending; none passes by being written down.</span>
+  </div>
+
+  <div class="wide">
+    <div class="here">
+      <div class="bigfig">0 of 6<small>trial training runs started. Every one of the six slots is untouched.</small></div>
+      <div>
+        <span class="flag">Qualifying the training reader</span>
+        <h3>The practice mistakes were rebuilt around real word errors, and the reader that serves them is being checked.</h3>
+        <p>The first measured profile of the recognizer's mistakes was 92.05% punctuation, capital letters and spacing. Training on it might have taught the models to restore quote marks rather than fix misheard words, so the <button class="term" data-t="frontier">frontier reviewer</button> chose a lexical-first profile instead (decision v2). That profile, the reader that feeds both models identical examples, and the full-size training step are now built, with 372 tests passing.</p>
+        <p>Before any trial run, the reader has to survive being stopped and resumed mid-update. A C101 resume failure was reproduced and repaired. The third qualification attempt decides whether the six trials can be admitted (admission V4).</p>
+        <span class="src">From <code>docs/reviews/FRONTIER_CORRUPTION_PROFILE_DECISION_V2.md</code>, <code>docs/reports/LEXICAL_CORRUPTION_PROFILE_V2_QUALIFICATION.md</code> and <code>experiments/manifests/lexical_reader_v2/integrated-component-order-repair-validation.attempt01.json</code>. Admission V4 was in progress at <code>28298ad</code>.</span>
+      </div>
+    </div>
+
+    <div class="chart" id="profileChart">
+      <h3>Why the first profile was replaced</h3>
+      <div class="sub">Retained weight in the first training corruption table, 2,113 occurrences, since replaced by the lexical-first profile</div>
+      <div class="bars" id="bars"></div>
+      <div class="tip" id="barTip" role="status"></div>
+      <details><summary>See as a table</summary>
+        <table class="data"><thead><tr><th>Kind of change</th><th class="n">Occurrences</th><th class="n">Share</th></tr></thead>
+        <tbody><tr><td>Punctuation</td><td class="n">1,372</td><td class="n">64.93%</td></tr><tr><td>Capital letters only</td><td class="n">525</td><td class="n">24.85%</td></tr><tr><td>Spacing</td><td class="n">48</td><td class="n">2.27%</td></tr><tr><td>Other characters</td><td class="n">168</td><td class="n">7.95%</td></tr></tbody></table>
+      </details>
+      <span class="src">Measured, <code>docs/reports/EMPIRICAL_CORRUPTION_PROFILE_QUALIFICATION.md</code>, "Actual retained composition". Table hash <code>5df3800d…fc310</code>.</span>
+    </div>
+  </div>
+
+  <div class="wide">
+    <h3 class="subhead">The eight foundation questions</h3>
+    <p class="src" style="margin-top:-6px">The kickoff asked eight questions, lettered A to H, to be answered "with artifacts rather than prose". Here is where each answer stands.</p>
+    <ol class="check" id="checklist"></ol>
+  </div>
+</section>
+
+<!-- NEXT -->
+<section class="sec" id="next" aria-labelledby="h-next">
+  <div class="sec-head">
+    <h2 id="h-next">What runs next, in order</h2>
+    <p class="lede">Every remaining unit of work, from the current stop to submission. Open a step to read it in plain words, see what it produces, and find the file it comes from.</p>
+  </div>
+  <aside class="note"><b>In plain words</b>The arrow mark means a step can't be taken back. Those are where the plan slows down on purpose: once a trial slot or a sealed test set is used, it's gone.</aside>
+
+  <div class="wide">
+    <div class="filters" role="group" aria-label="Filter steps">
+      <span class="lbl">Show steps for</span>
+      <button class="seg" type="button" data-f="all" aria-pressed="true">Everyone</button>
+      <button class="seg" type="button" data-f="astra" aria-pressed="false">Astra</button>
+      <button class="seg" type="button" data-f="codex" aria-pressed="false">Codex</button>
+      <button class="seg" type="button" data-f="you" aria-pressed="false">You</button>
+      <label class="toggle"><input type="checkbox" id="onlyOneWay"> Only steps that can't be undone</label>
+    </div>
+    <ol class="strips" id="strips"></ol>
+    <div class="parked">
+      <h3>Parked as stretch work, so the focused plan can fit</h3>
+      <ul>
+        <li>The acoustic arm (H2, B100-acoustic) and the A100 final arm.</li>
+        <li>The broad 25-category stress roster, and Whisper transfer for every comparison model.</li>
+        <li>Larger models (about 203M and 316M), extra prompts, quantization sweeps, product integration.</li>
+      </ul>
+      <span class="src">From the accepted review finding F02 (<code>docs/reviews/Independent_Pre_Implementation_Review_v1_2_Accepted_Findings.md</code>) and <code>docs/design-inputs/KICKOFF_PROMPT.txt</code>, section 2. Confirming this scope belongs to step 9.</span>
+    </div>
+  </div>
+</section>
+
+<!-- TOGETHER -->
+<section class="sec" id="together" aria-labelledby="h-together">
+  <div class="sec-head">
+    <h2 id="h-together">What can run side by side</h2>
+    <p class="lede">The dependency graph says what is <em>allowed</em> to start. The Mac, the files and the release order say what <em>should</em>. They aren't the same list.</p>
+  </div>
+  <aside class="note"><b>In plain words</b>The Mac has one accelerator, like a kitchen with one oven. Things that bake must queue. Reading, reviewing and checking can happen at the counter while something bakes.</aside>
+
+  <div class="wide">
+    <div class="elig">
+      <div>
+        <h3>The graph allows these now</h3>
+        <div class="nums">2, 4, 7, 8</div>
+        <p>None of them waits on another unfinished step. Step 4 is already running.</p>
+      </div>
+      <div>
+        <h3>These should start now</h3>
+        <div class="nums">2, and half of 8</div>
+        <p>Step 7 still needs a new ByT5 recipe. Decision v2 didn't cover it, so it needs its own frontier question, then the accelerator once step 4 finishes. Step 8's scoring half can start beside step 4 in its own worktree. Its stress-panel half waits until the reader's qualification lands, because that work may still touch the shared generator.</p>
+      </div>
+    </div>
+
+    <div class="lanes" id="lanes" role="table" aria-label="Lanes of work in order"></div>
+    <p class="lane-key">Columns show order, not time, because nothing has been priced yet. Dashed chips are reviews. Select a chip to open its step.</p>
+
+    <h3 class="subhead">Pairs worth checking before running two things at once</h3>
+    <table class="overlap">
+      <thead><tr><th>Steps</th><th>Verdict</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>2 + anything</td><td class="vd ok">Together</td><td>Nothing shared. It happens on your Hugging Face account, not in the repository.</td></tr>
+        <tr><td>4 + 8, scoring half</td><td class="vd ok">Together, own worktree</td><td>Attempt 03 runs on the accelerator; scoring work lives in <code>src/scoring/</code> and only needs the CPU. The root session makes the commits (<code>AGENTS.md</code>).</td></tr>
+        <tr><td>4 + 8, stress panel</td><td class="vd no">Not together</td><td>The reader's qualification may still change the shared generator, <code>src/generation/stress.py</code>.</td></tr>
+        <tr><td>4 + 7</td><td class="vd no">Not together</td><td>Both need the accelerator. <code>AGENTS.md</code> forbids concurrent accelerator work, and a second job would distort the timing that step 4 exists to measure.</td></tr>
+        <tr><td>5 + 7</td><td class="vd ok">Together</td><td>Step 5 is a written decision and your approval. The accelerator sits idle while it waits, which makes it the natural slot for the ByT5 run.</td></tr>
+        <tr><td>6 + anything</td><td class="vd no">Accelerator: never</td><td>The six runs go one after another. Reviewers that only use the CPU may overlap them (<code>docs/reports/PAIRED_READER_BENCH_SESSION_REPORT.md</code>).</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- WHO -->
+<section class="sec" id="who" aria-labelledby="h-who">
+  <div class="sec-head">
+    <h2 id="h-who">Who does each job</h2>
+    <p class="lede">The frontier model is scarce, so it goes where a mistake would cost most, not to whatever feels most important. Three questions decide it.</p>
+  </div>
+  <aside class="note"><b>In plain words</b>You wouldn't ask a senior architect to lay bricks. You'd ask them to draw what nobody has drawn before, and to check the plans before the concrete is poured.</aside>
+
+  <div class="wide">
+    <div class="rule">
+      <div class="ra"><h3>Astra writes it</h3>There is no precedent in the repo to copy, and later work will build on the answer.</div>
+      <div class="rr"><h3>Astra reviews it</h3>A precedent exists, but later work inherits the result, or it can't be undone. Codex writes; Astra reads the packet. Reviewing costs far less than writing, and that's how the quota stretches.</div>
+      <div class="rc"><h3>Codex alone</h3>Faithful building or measuring against a decision that is already fixed. The project's independent reviewer agents re-check it.</div>
+    </div>
+
+    <div class="matrix-wrap">
+      <table class="matrix" id="matrix">
+        <thead><tr><th scope="col">Step</th><th scope="col">No precedent to copy</th><th scope="col">Later work inherits it</th><th scope="col">Can't be undone</th><th scope="col">So it goes to</th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <div class="why" id="why" aria-live="polite">Hover or focus a row to see the reasoning.</div>
+    </div>
+    <div class="stack" id="stack" aria-hidden="true"></div>
+    <div class="stack-legend" id="stackLegend"></div>
+    <span class="src">Roles come from the record: Astra wrote the binding decision (<code>docs/reviews/FRONTIER_READER_CURRICULUM_DECISION_V1.md</code>), Codex receives the handoff (same file, section L), and GPT-6 Pro did the one outside review before any code (<code>docs/design-inputs/PACKAGE_README.md</code>). The yes/no marks per step are this page's judgement, applying the rule above.</span>
+  </div>
+</section>
+
+<!-- LOOP -->
+<section class="sec" id="loop" aria-labelledby="h-loop">
+  <div class="sec-head">
+    <h2 id="h-loop">How one working session goes</h2>
+    <p class="lede">Each session in the record follows the same seven moves. They're drawn from the session that committed <code>da8dc18</code> and <code>1b114ff</code>.</p>
+  </div>
+  <aside class="note"><b>In plain words</b>Check you're starting from the right place, write down the decision before acting on it, do the hardest part first, keep every failed try, and stop at the line you agreed on.</aside>
+
+  <div class="colmain">
+    <ol class="loop">
+      <li><h3>Check the starting point</h3><p>Local and remote must match, the tree must be clean, and the full test suite must pass again before anything changes: 259 tests at the start, 275 at the end.</p><span class="src"><code>docs/reports/FRONTIER_READER_IMPLEMENTATION_SESSION_REPORT.md</code></span></li>
+      <li><h3>Record the decision before the code</h3><p>Astra's decision was saved word for word and committed on its own, at <code>bd882ce</code>, before a line of implementation. So it's provable that the rules came before the results.</p><span class="src">Same report, "Handoff and prospective evidence"</span></li>
+      <li><h3>Build the riskiest piece first</h3><p>The session began with the corruption profile, the piece most likely to fail, so later work couldn't quietly assume it.</p><span class="src"><code>docs/reports/PAIRED_MIXED_READER_QUALIFICATION_V2.md</code></span></li>
+      <li><h3>Measure, and keep every attempt</h3><p>Results land in files named <code>attempt01</code>, <code>attempt02</code> and so on. A failed check is preserved next to the one that passed, never overwritten.</p><span class="src"><code>experiments/manifests/</code></span></li>
+      <li><h3>Re-check through a separate path</h3><p>An independent reviewer rebuilt every alignment and reproduced the exact table bytes with code of its own, rather than re-running the implementer's code.</p><span class="src"><code>docs/reviews/EMPIRICAL_CORRUPTION_PROFILE_INDEPENDENT_REVIEW.md</code></span></li>
+      <li><h3>Stop at the first agreed line</h3><p>The surface-dominated profile met a condition you had named in advance, so the session stopped instead of filtering, reweighting or inventing a substitute.</p><span class="src"><code>docs/reports/BC_10M_PROBE_ADMISSION_DECISION_V3.md</code></span></li>
+      <li><h3>Report, scan, publish by name</h3><p>One disposition word at the end, a publication-safety scan, files staged by name, then a push.</p><span class="src"><code>experiments/manifests/frontier_reader/publication-safety.attempt01.json</code></span></li>
+    </ol>
+    <div class="loopback"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M22 9a9 9 0 1 0 1.5 7"/><path d="M22 4v5h-5"/></svg>Then back to step 1, once you have authorized the next unit.</div>
+  </div>
+</section>
+
+<!-- HANDOVER -->
+<section class="sec" id="handover" aria-labelledby="h-handover">
+  <div class="sec-head">
+    <h2 id="h-handover">Handing work to the next session</h2>
+    <p class="lede">A fresh session remembers nothing, so the prompt has to carry the evidence, not just the topic. Here is the anatomy, filled in for step 1. That prompt was sent and answered with decision v2 at <code>ab8fe95</code>, so it stays as the worked example; the next one is written when admission V4 lands.</p>
+  </div>
+  <aside class="note"><b>In plain words</b>"Look into the punctuation thing" makes the next reader rediscover everything. "92% of the weight is punctuation, here's the file, decide X" lets them decide.</aside>
+
+  <div class="wide anat">
+    <div class="slip">
+      <div class="slip-bar"><span>Prompt for step 1, for Astra (sent; answered at ab8fe95)</span><button class="copy" id="copyBtn" type="button">Copy prompt</button></div>
+      <div id="prompt"></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVIDENCE -->
+<section class="sec" id="evidence" aria-labelledby="h-evidence">
+  <div class="sec-head">
+    <h2 id="h-evidence">Why the stops are worth it</h2>
+    <p class="lede">This project asks for patience: stop at the agreed lines, keep failures, don't let the implementer make scientific calls. The record shows what that has caught so far.</p>
+  </div>
+  <aside class="note"><b>In plain words</b>Each of these was found before it could spoil a result. Every one would have looked like progress if nobody had checked.</aside>
+
+  <div class="wide">
+    <ol class="ledger">
+      <li><div><h3>Practice mistakes that weren't word mistakes</h3><p class="caught">92.05% of the corruption table was punctuation, capitals and spacing. The single biggest entry, deleting a double quote, was 20.49% of all weight.</p><span class="src"><code>docs/reports/EMPIRICAL_CORRUPTION_PROFILE_QUALIFICATION.md</code></span></div><p class="cost">Caught before the training mix existed. Forty per cent of every trial run's practice would have been built from it.</p></li>
+      <li><div><h3>A reader recipe with gaps</h3><p class="caught">The approved shares (30/20/10/40) didn't say how examples are built, reused or counted. The implementer refused to fill those gaps itself.</p><span class="src"><code>docs/reports/BC_10M_PROBE_ADMISSION_DECISION_V2.md</code></span></div><p class="cost">Astra then wrote twelve sections of exact rules (A to L). Zero trial slots were spent finding out.</p></li>
+      <li><div><h3>Lower loss, broken output</h3><p class="caught">On the first tiny memorization test, B100 produced capped repetitions and C101 damaged an example that needed no change, even though the training loss fell. A longer, gentler rehearsal reached 4 of 4.</p><span class="src"><code>docs/reports/BC_CORRECTNESS_REPORT.md</code></span></div><p class="cost">This is why the plan judges models by complete outputs, never by loss alone.</p></li>
+      <li><div><h3>A speech recognizer typing nonsense</h3><p class="caught">Two of twelve clips came back as long strings of <code>&lt;unk&gt;</code>. Those two produced 3,090 of the 3,094 source errors. The cause was traced to a frame-bound defect and repaired.</p><span class="src"><code>docs/reports/FOUNDATION_GO_NO_GO.md</code>, question 16; <code>docs/reports/PARAKEET_SOURCE_PATH_REPAIR.md</code></span></div><p class="cost">Left alone, that would have made the "real" mistakes almost entirely garbage from two clips.</p></li>
+      <li><div><h3>A comparison model that only tidies up</h3><p class="caught">ByT5 produced valid output on 24 of 24 requests and made 0 useful corrections.</p><span class="src"><code>docs/reports/BYT5_DEVELOPMENT_ADAPTATION.md</code></span></div><p class="cost">A weak opponent would make either new model look good. It stays marked REPAIR_REQUIRED instead.</p></li>
+      <li><div><h3>Failures kept in plain sight</h3><p class="caught">Five scorer qualification attempts are kept on disk. A speech-synthesis path that failed its parity check stays in the record next to the path that worked.</p><span class="src"><code>docs/reports/scorer_qualification_attempt01.txt</code> to <code>05</code>; <code>docs/reports/ASR_TTS_NATIVE_PROBE.md</code></span></div><p class="cost">A reviewer can see what was tried, not just what worked.</p></li>
+      <li><div><h3>A resume that didn't quite resume</h3><p class="caught">Stopping C101 mid-update and restarting it from disk failed to reproduce the uninterrupted run. The cause was the order in which its loss components were reduced; it was reproduced, repaired and re-qualified. Inconsistent checkpoint clocks are now rejected outright.</p><span class="src">Commits <code>04f3bec</code> and <code>28298ad</code>; <code>experiments/manifests/lexical_reader_v2/</code></span></div><p class="cost">Caught before a single trial run. Each trial resumes many times, so a silent drift would have touched every result.</p></li>
+    </ol>
+    <p class="record">The record behind these: <b>42</b> commits, <b>34</b> reports, <b>16</b> independent reviews and <b>372</b> passing tests, with no final training, sealed test or protocol freeze touched. <span class="src">Counted from <code>git</code> at <code>28298ad</code>; tests from <code>experiments/manifests/lexical_reader_v2/integrated-component-order-repair-validation.attempt01.json</code>.</span></p>
+  </div>
+</section>
+
+<!-- THREADS -->
+<section class="sec" id="threads" aria-labelledby="h-threads">
+  <div class="sec-head">
+    <h2 id="h-threads">Open questions, and which step settles each</h2>
+    <p class="lede">Nothing here is forgotten; each has an owner. Select a step number to jump to it.</p>
+  </div>
+  <aside class="note"><b>In plain words</b>F01, F02 and F03 are the three findings from the outside review. They must be settled before the plan is frozen, not before work starts.</aside>
+  <div class="wide">
+    <table class="threads">
+      <thead><tr><th>Question</th><th>Where it stands</th><th>Settled by</th></tr></thead>
+      <tbody id="threadRows"></tbody>
+    </table>
+    <span class="src">Assembled from <code>docs/reports/FOUNDATION_GO_NO_GO.md</code>, <code>docs/reviews/PROSPECTIVE_AMENDMENTS.md</code> and <code>docs/reports/BC_10M_PROBE_ADMISSION_DECISION_V3.md</code>.</span>
+  </div>
+</section>
+
+<!-- GRADING -->
+<section class="sec" id="grading" aria-labelledby="h-grading">
+  <div class="sec-head">
+    <h2 id="h-grading">Grading a new model's work</h2>
+    <p class="lede">When you try a new model on a step, hold its report against the standard the record already sets. The latest profile report is the benchmark: it meets all ten.</p>
+  </div>
+  <aside class="note"><b>In plain words</b>A good report doesn't just sound careful. Its numbers add up, its failures are on the page, and it stops where it was told to.</aside>
+  <div class="colmain">
+    <ol class="rubric" id="rubric"></ol>
+    <div class="grade"><span class="g-n" id="gN">0 / 10</span><span class="g-t" id="gT">Tick what the report does.</span><button type="button" id="gReset">Clear</button></div>
+    <span class="src">Benchmark: <code>docs/reports/EMPIRICAL_CORRUPTION_PROFILE_QUALIFICATION.md</code>. Criteria drawn from <code>docs/design-inputs/KICKOFF_PROMPT.txt</code>, sections 13, 15 and 16, and <code>AGENTS.md</code>.</span>
+  </div>
+</section>
+
+<!-- WORDS -->
+<section class="sec" id="words" aria-labelledby="h-words">
+  <div class="sec-head">
+    <h2 id="h-words">Words used here</h2>
+    <p class="lede">Dotted words anywhere on the page open these definitions in place.</p>
+  </div>
+  <div class="wide"><dl class="gloss" id="gloss"></dl></div>
+</section>
+
+<!-- LOG: realignment adds the newest step at the top of this list; full entries go in docs/LOG.md (newest last). -->
+<section class="sec" id="log" aria-labelledby="h-log">
+  <div class="sec-head">
+    <h2 id="h-log">Change log</h2>
+    <p class="lede">Every completed step, newest first. The full entries, with each file changed and each receipt, are in <a href="docs/LOG.md"><code>docs/LOG.md</code></a>.</p>
+  </div>
+  <aside class="note"><b>In plain words</b>A lab notebook: what was done, when, and what it decided. Nothing is erased. A correction is added as a new entry.</aside>
+  <div class="wide">
+    <ol class="timeline">
+      <li><div class="t-when">5 Oct, 22:50<code>base 28298ad</code></div><div class="t-what"><h3>Repository conventions, step log and this page</h3><p>Research conventions written into AGENTS.md, CLAUDE.md made to import them, the step log started, and this page realigned and published with the repository.</p><span class="t-disp">documentation only</span></div></li>
+      <li><div class="t-when">5 Oct, 20:25–22:02<code>ab8fe95…28298ad</code></div><div class="t-what"><h3>Word-level practice mistakes; reader built</h3><p>Decision v2 chose a lexical-first corruption profile. The profile, the mixed reader and the full-size training step were implemented, and two resume defects were repaired. 372 tests pass; admission V4 is in progress.</p><span class="t-disp go">CORRUPTION_PROFILE_REVISION_AUTHORIZED</span></div></li>
+      <li><div class="t-when">5 Oct, 19:32–19:45<code>bd882ce…1b114ff</code></div><div class="t-what"><h3>Reader rules decided; first mistake profile measured</h3><p>Decision v1 bound the reader's recipe. Its measured profile was 92.05% punctuation, capitals and spacing, so the line stopped for review.</p><span class="t-disp stop">FRONTIER_MODEL_REVIEW_REQUIRED</span></div></li>
+      <li><div class="t-when">5 Oct, 16:35<code>f456121, 928fd03</code></div><div class="t-what"><h3>Reader recipe found incomplete</h3><p>Independent audits showed the approved shares didn't say how examples are built, reused or counted.</p><span class="t-disp stop">FRONTIER_MODEL_REVIEW_REQUIRED</span></div></li>
+      <li><div class="t-when">5 Oct, 06:28–06:29<code>2fad2b1…f24712e</code></div><div class="t-what"><h3>Foundation repaired</h3><p>Speech-recognizer path repaired, training data closed against leaks, tokenizer trained, real-data convergence passed; ByT5 still needs repair.</p><span class="t-disp stop">FOUNDATION_REPAIR_REQUIRED</span></div></li>
+      <li><div class="t-when">5 Oct, 00:59–02:52<code>9217cb1…c81d08f</code></div><div class="t-what"><h3>Foundation built and published</h3><p>Scorer, model math, both models' mechanics, data sources and comparison models built and checked; the repository went public.</p><span class="t-disp stop">FOUNDATION_REPAIR_REQUIRED</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <p>Figures come from this repository at commit <code>28298ad</code> (<code>github.com/scalinity/repair-without-rewrite</code>). Each section names its source file. Step order, concurrency verdicts and model allocation are this page's judgements, built from those files.</p>
+    <p>Realign this page after every completed step, as <code>AGENTS.md</code> requires: check it against the newest <code>docs/reports/BC_10M_PROBE_ADMISSION_DECISION_V*.md</code>, <code>docs/reviews/PROSPECTIVE_AMENDMENTS.md</code> and <code>git log</code>, not against memory, and add the step to the change log.</p>
+  </div>
+  <div><p>This page is part of the repository's public record. The full step history is in <code>docs/LOG.md</code>.</p></div>
+</footer>
+
+</main>
+</div>
+
+<div class="pop" id="pop" role="dialog" aria-modal="false"></div>
+
+<script>
+(function(){
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* ---------- theme ---------- */
+const root = document.documentElement;
+const order = ['auto','light','dark'];
+let theme = 'auto';
+try { theme = localStorage.getItem('rwr-theme') || 'auto'; } catch(e) {}
+function applyTheme(){
+  if (theme === 'auto') delete root.dataset.theme; else root.dataset.theme = theme;
+  $('#themeLabel').textContent = theme[0].toUpperCase() + theme.slice(1);
+}
+applyTheme();
+$('#themeBtn').addEventListener('click', () => {
+  theme = order[(order.indexOf(theme) + 1) % order.length];
+  try { localStorage.setItem('rwr-theme', theme); } catch(e) {}
+  applyTheme();
+});
+
+/* ---------- glossary ---------- */
+const GLOSS = {
+  asr:["Speech recognizer (ASR)","Software that turns speech into text. Here it's Parakeet, run locally on the Mac. Its output is the 'source' the correctors try to fix."],
+  reference:["Reference (R)","The released, human-made transcript of what was said. It's the answer key."],
+  source:["Source (S)","What the speech recognizer typed. It may contain mistakes."],
+  output:["Output (O)","What a corrector produces from the source."],
+  repaired:["Repaired error","A word the recognizer got wrong that the corrector put right."],
+  introduced:["Introduced error","A new mistake the corrector made, often on a word that was already right. The paper counts these separately from repairs, because one can hide the other in a total."],
+  wer:["WER (word error rate)","Mistakes divided by the number of words in the reference. Lower is better."],
+  b100:["B100","The full-rewrite model: an encoder–decoder Transformer with exactly 100,686,336 trainable parameters that writes the whole corrected transcript."],
+  c101:["C101","The edit model: the same backbone as B100 plus pointer and action heads, 101,081,859 parameters. It writes a list of edits, and a renderer copies everything else."],
+  renderer:["Renderer","A plain, deterministic program that applies C101's edits and copies every untouched part of the source byte for byte. It checks the edit list is legal first."],
+  model0:["MODEL-0","A small 8,621,312-parameter model used to prove the shared Transformer math is right before the big models were trusted."],
+  probe:["Trial run (10M probe)","A short training run of 10 million exposures, used to check that a model learns at all and to pick a learning speed. Six exist: three per model."],
+  exposure:["Exposure (canonical anchor)","The unit of training material, counted identically for both models so neither gets more practice."],
+  lr:["Learning rate (LR)","How big a step the model takes each time it learns. The trial runs try 1e-4, 3e-4 and 6e-4."],
+  seed:["Seed","The number that fixes the random starting point. Final runs use 1729, 2718 and 31415, so luck can be separated from skill."],
+  reader:["Reader","The part that feeds training examples to both models in exactly the same order and amounts, so the comparison stays fair."],
+  frontier:["Frontier review","Sending a scientific judgement call to the scarce, strongest model (Astra) rather than letting the implementer decide."],
+  astra:["Astra","The frontier reviewer in this project's record. It writes the binding scientific decisions, such as the reader and curriculum decision."],
+  codex:["Codex","The implementation agent. It writes the code, runs tests and measurements, and drafts the reports."],
+  pubgate:["PUB-GATE","One of seven publication checkpoints: novelty, evaluation validity, freeze, external validity, claim support, reproducibility and manuscript readiness. All are pending."],
+  freeze:["Protocol freeze","Locking every rule of the experiment before the final runs, so the results can't steer the method. PUB-GATE 3."],
+  sealed:["Sealed test","Evaluation data kept untouched until the very end and used exactly once."],
+  lspc:["LibriSpeech-PC","A public audiobook speech dataset with punctuated, capitalized references. One of the two real-speech domains."],
+  slue:["SLUE-VoxCeleb","The second real-speech dataset. It's gated behind a sign-up on Hugging Face, so it currently has 0 rows locally."],
+  byt5:["ByT5-small","An existing pretrained model, adapted as a comparison so the new models aren't only compared with each other."],
+  qwen:["Qwen3-4B","A larger pretrained model used as a frozen, prompted comparison."],
+  bench:["BENCH","A timing benchmark on the Mac: how fast a complete training step really runs, sustained, with real memory and heat."],
+  h1:["H1","The paper's main hypothesis: C101 introduces fewer new errors than B100 without giving up useful repair. H2 (acoustic input) is parked as stretch."]
+};
+const pop = $('#pop');
+let popFor = null;
+function closePop(){ pop.classList.remove('on'); popFor = null; }
+function openPop(btn){
+  const g = GLOSS[btn.dataset.t]; if (!g) return;
+  pop.innerHTML = '<b>' + esc(g[0]) + '</b>' + esc(g[1]);
+  pop.classList.add('on');
+  const r = btn.getBoundingClientRect();
+  const w = Math.min(300, window.innerWidth - 32);
+  pop.style.maxWidth = w + 'px';
+  let left = r.left + window.scrollX;
+  left = Math.max(16, Math.min(left, window.scrollX + window.innerWidth - w - 16));
+  pop.style.left = left + 'px';
+  pop.style.top = (r.bottom + window.scrollY + 8) + 'px';
+  popFor = btn;
+}
+document.addEventListener('click', e => {
+  const t = e.target.closest('.term');
+  if (t) { e.preventDefault(); popFor === t ? closePop() : openPop(t); return; }
+  if (!e.target.closest('#pop')) closePop();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closePop(); });
+window.addEventListener('resize', closePop);
+
+const gl = $('#gloss');
+Object.keys(GLOSS).forEach(k => {
+  const d = document.createElement('div');
+  d.innerHTML = '<dt>' + esc(GLOSS[k][0]) + '</dt><dd>' + esc(GLOSS[k][1]) + '</dd>';
+  gl.appendChild(d);
+});
+
+/* ---------- hero proof strip ---------- */
+const R = ["Primary","integer:","1100;","Backup","integer:","1100."];
+const S = ["Primary","integer:","l100;","Backup","integer:","1100."];
+const SCEN = {
+  fix:{O:["Primary","integer:","1100;","Backup","integer:","1100."],
+       note:"Both reach the right sentence. B100 retyped all six words to get there; C101 wrote one edit and let the renderer copy the rest."},
+  copy:{O:S.slice(),
+       note:"Doing nothing can't create a new mistake, but it fixes nothing either. B100 still retypes every word just to copy them; C101 writes a single “done”."},
+  mixed:{O:["Primary","integer:","1100;","Backup","integer:","1000."],
+       note:"One fix and one new mistake cancel out in the total, which is exactly why the paper counts them separately. Notice C101 writes more here than B100: editing isn't automatically cheaper."},
+  harm:{O:["Primary","integer:","l100;","Backup","integer:","l100."],
+       note:"The corrector copied the mistake onto a word that was right. The scorer records one introduced error, and the sentence ends up worse than the recognizer left it."}
+};
+function lev(a,b){
+  const m=a.length,n=b.length; let prev=Array.from({length:n+1},(_,j)=>j);
+  for(let i=1;i<=m;i++){ const cur=[i]; for(let j=1;j<=n;j++){ cur[j]=Math.min(prev[j]+1,cur[j-1]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1)); } prev=cur; }
+  return prev[n];
+}
+function renderPlain(el, toks, cls){ el.innerHTML = toks.map((t,i)=>'<span class="tok '+(cls?cls(i):'')+'">'+esc(t)+'</span>').join(''); }
+renderPlain($('#rowR'), R);
+renderPlain($('#rowS'), S, i => S[i]!==R[i] ? 'bad' : '');
+let scen = 'fix';
+function sq(cls,n){ return Array.from({length:n},()=>'<i class="sq '+cls+'"></i>').join(''); }
+function drawHero(){
+  const O = SCEN[scen].O;
+  const N = +$('#len').value;
+  // B output
+  $('#outB').innerHTML = O.map((t,i)=>{
+    let c = 'typed';
+    if (S[i]!==R[i] && O[i]===R[i]) c += ' fixed';
+    else if (O[i]!==R[i]) c += ' harm';
+    return '<span class="tok '+c+'" style="--i:'+i+'">'+esc(t)+'</span>';
+  }).join('');
+  $('#progB').textContent = '"' + O.join(' ') + '"  done';
+  const bCount = N + 1;
+  $('#sqB').innerHTML = sq('w', N) + sq('end', 1);
+  $('#cntB').innerHTML = '<b>'+bCount+'</b>positions written';
+  // C output
+  const edits = [];
+  $('#outC').innerHTML = O.map((t,i)=>{
+    if (t===S[i]) return '<span class="tok copied">'+esc(t)+'</span>';
+    edits.push(i);
+    return '<span class="tok mark"><del>'+esc(S[i])+'</del><ins>'+esc(t)+'</ins></span>';
+  }).join('');
+  const K = edits.length, Rk = K;
+  $('#progC').textContent = edits.map(i => 'edit word ' + (i+1) + ' to "' + O[i] + '"').concat('done').join('\n');
+  $('#sqC').innerHTML = edits.map(()=> sq('a',1)+sq('p',2)+sq('r',1)).join('') + sq('end',1);
+  const cCount = 1 + Rk + 3*K;
+  $('#cntC').innerHTML = '<b>'+cCount+'</b>positions written <span style="color:var(--ink-3)">(1 + '+Rk+' + 3×'+K+')</span>';
+  // score
+  let rep=0,intr=0;
+  for (let i=0;i<R.length;i++){ const sW=S[i]!==R[i], oW=O[i]!==R[i]; if (sW && !oW) rep++; if (!sW && oW) intr++; }
+  const dRS = lev(R,S), dRO = lev(R,O);
+  $('#vRep').textContent = rep; $('#vInt').textContent = intr;
+  $('#vEq').innerHTML = 'Repaired − introduced = <b>'+(rep-intr)+'</b>.<br>Recognizer’s mistakes ('+dRS+') − output’s mistakes ('+dRO+') = <b>'+(dRS-dRO)+'</b>. They always agree.';
+  $('#scenNote').textContent = SCEN[scen].note;
+}
+$$('#proof .seg').forEach(b => b.addEventListener('click', () => {
+  scen = b.dataset.scen;
+  $$('#proof .seg').forEach(x => x.setAttribute('aria-pressed', String(x===b)));
+  drawHero();
+}));
+$('#len').addEventListener('input', e => { $('#lenOut').textContent = e.target.value; drawHero(); });
+drawHero();
+
+/* ---------- route ---------- */
+const STATIONS = [
+  {t:"Plan and outside review", s:"done", st:"Done",
+   d:["The full plan (master specification v1.2) and the experiment registry were written, then reviewed by an outside model, GPT-6 Pro, before any code. Verdict: AUTHORIZE BOUNDED FOUNDATION ONLY, with no blockers and three findings (F01 to F03) to settle before the freeze."],
+   src:"docs/design-inputs/PACKAGE_README.md; docs/reviews/Independent_Pre_Implementation_Review_v1_2_Accepted_Findings.md"},
+  {t:"Build and check the foundation", s:"done", st:"Done in scope, with repairs; three items still open",
+   d:["Every instrument the experiment stands on was built and checked: the scorer, the model math, both models' mechanics, the real-speech data and the comparison models. The first readiness report said FOUNDATION_REPAIR_REQUIRED. A repair session then fixed the speech-recognizer path, closed data leaks, trained the tokenizer and passed the real-data convergence test.",
+      "Publication gates 1 (novelty) and 2 (evaluation validity) are worked on here, and both are still pending. Open: ByT5 (step 7), SLUE access (step 2) and scoring precision (step 8)."],
+   src:"docs/reports/FOUNDATION_GO_NO_GO.md; docs/reports/FOUNDATION_REPAIR_SESSION_REPORT.md"},
+  {t:"Six trial runs", s:"stop", st:"Here: qualifying the training reader before admission",
+   d:["Six short trainings, three per model, to check each can learn useful correction and to pick a learning rate. None has started; their six configurations are written. The machine that feeds them examples needed decisions twice: its recipe had gaps (V2), then the measured mistakes proved to be mostly punctuation (V3). Decision v2 chose a lexical-first profile, and the reader is now built. Its third qualification attempt, after a repaired C101 resume failure, decides admission V4."],
+   src:"docs/reviews/FRONTIER_CORRUPTION_PROFILE_DECISION_V2.md; experiments/manifests/lexical_reader_v2/"},
+  {t:"Freeze the plan", s:"todo", st:"Not started. PUB-GATE 3",
+   d:["Lock every rule (claims, scores, margins, seeds, baselines, budgets, stop rules, statistics) before the final training, so the results can't steer the method. After this, any change is a new experiment, not an edit."],
+   src:"docs/design-inputs/EXTRACTED_CANONICAL_SOURCE.md, PUB-GATE 3"},
+  {t:"Final training", s:"todo", st:"Not started",
+   d:["The real training: B100 and C101, each with three fixed seeds (1729, 2718, 31415), at 150 million exposures. That's six runs in the focused plan, which isn't frozen yet."],
+   src:"docs/design-inputs/KICKOFF_PROMPT.txt, section 2 (F02)"},
+  {t:"Final exam, once", s:"todo", st:"Not started",
+   d:["Score every model a single time on sealed real-speech test sets never used in development, plus the compact stress panel and the comparison models. A second recognizer (Whisper) is added if the cost fits."],
+   src:"docs/design-inputs/EXTRACTED_CANONICAL_SOURCE.md, R-M14-S"},
+  {t:"Check the claims", s:"todo", st:"Not started. PUB-GATEs 4 to 6",
+   d:["Does the result hold on real speech and another recognizer? Is every sentence in the abstract backed by a number with its uncertainty? Can a clean machine rebuild it all automatically?"],
+   src:"docs/design-inputs/EXTRACTED_CANONICAL_SOURCE.md, PUB-GATE 4–6"},
+  {t:"Write it up", s:"todo", st:"Not started. PUB-GATE 7",
+   d:["Related work, results, limitations and negative findings must agree with the released evidence. If the hypothesis fails, the paper says so rather than being rewritten as a success."],
+   src:"docs/design-inputs/EXTRACTED_CANONICAL_SOURCE.md, PUB-GATE 7"}
+];
+const route = $('#route');
+STATIONS.forEach((st,i)=>{
+  const li = document.createElement('li');
+  li.className = 'station'; li.dataset.s = st.s;
+  li.innerHTML = '<button type="button" aria-pressed="false" aria-controls="stDetail"><span class="dot">'+(i+1)+'</span><span class="st-l">'+esc(st.t)+'</span></button>';
+  li.querySelector('button').addEventListener('click', () => pickStation(i));
+  route.appendChild(li);
+});
+function pickStation(i){
+  $$('.station button', route).forEach((b,j)=> b.setAttribute('aria-pressed', String(i===j)));
+  const st = STATIONS[i];
+  $('#stDetail').innerHTML = '<h3>'+(i+1)+'. '+esc(st.t)+'</h3><div class="state">'+esc(st.st)+'</div>' + st.d.map(p=>'<p>'+esc(p)+'</p>').join('') + '<span class="src">Source: <code>'+esc(st.src)+'</code></span>';
+}
+pickStation(2);
+
+/* ---------- profile bars ---------- */
+const BARS = [
+  ["Punctuation",1372,64.9314,"Largest single entry: deleting a double quote, 433 occurrences in 212 records."],
+  ["Capital letters",525,24.8462,"Only the case of a letter differs."],
+  ["Spacing",48,2.2717,"Whitespace and word-boundary changes."],
+  ["Other characters",168,7.9508,"Everything else. The only part that could be a misheard word."]
+];
+const bars = $('#bars'); const tip = $('#barTip');
+BARS.forEach(b=>{
+  bars.insertAdjacentHTML('beforeend','<span class="bl">'+b[0]+'</span><span class="track" tabindex="0" aria-label="'+b[0]+': '+b[1].toLocaleString()+' occurrences, '+b[2].toFixed(2)+'%"><span class="bar" style="width:'+(b[2]/64.9314*100)+'%"></span></span><span class="bv">'+b[1].toLocaleString()+' &nbsp;'+b[2].toFixed(1)+'%</span>');
+});
+bars.insertAdjacentHTML('beforeend','<span></span><span class="bracket">Punctuation, capitals and spacing together: 92.05%</span>');
+$$('.track', bars).forEach((t,i)=>{
+  const show = () => {
+    const b = BARS[i];
+    tip.innerHTML = '<b>'+b[0]+'</b>: '+b[1].toLocaleString()+' of 2,113 ('+b[2].toFixed(2)+'%)<br>'+esc(b[3]);
+    const cr = $('#profileChart').getBoundingClientRect(), tr = t.getBoundingClientRect();
+    tip.style.left = Math.max(8, Math.min(tr.left - cr.left + 8, cr.width - 270)) + 'px';
+    tip.style.top = (tr.bottom - cr.top + 6) + 'px';
+    tip.classList.add('on');
+  };
+  const hide = () => tip.classList.remove('on');
+  t.addEventListener('mouseenter', show); t.addEventListener('focus', show);
+  t.addEventListener('mouseleave', hide); t.addEventListener('blur', hide);
+});
+
+/* ---------- foundation checklist ---------- */
+const CHECK = [
+  ["A","Can the scorer be built correctly and checked independently?","v-yes","Yes, for development","Passes 3,375 exhaustive tiny cases and 10,000 fixed-seed trials. Extracting numbers and names from real speech, and honest error bars, are still to do.","docs/reports/SCORER_FOUNDATION_REPORT.md"],
+  ["B","Is the shared model math right?","v-yes","Yes","MODEL-0 matches its exact 8,621,312 parameters and passes the full V0 to V8 ladder, including convergence on 10,002,432 real inputs.","docs/reports/MODEL0_CORRECTNESS_REPORT.md; docs/reports/MODEL0_V6_REAL_SHARD.md"],
+  ["C","Do B100 and C101 work mechanically?","v-yes","Yes, in scope","Exact counts 100,686,336 and 101,081,859. Both memorized 4 of 4 tiny pairs after the first recipe failed. That's memorization, not correction.","docs/reports/BC_CORRECTNESS_REPORT.md"],
+  ["D","What can the Mac actually sustain?","v-part","Partly","A 20-minute sustained run held 4.325589 updates per second on fixed test blocks. The full-size training step is built and in its third qualification attempt; its timing isn't committed yet.","docs/reports/BENCH00_NATIVE_CALIBRATION.md; experiments/manifests/lexical_reader_v2/"],
+  ["E","Can B100 and C101 learn useful correction?","v-stop","Not run yet","0 of 6 trial runs. Their six configurations are written; admission V4 is the gate.","experiments/manifests/lexical_reader_v2/pilot-*-seed42-*.json"],
+  ["F","Is ByT5 a credible opponent?","v-no","Not yet","24 of 24 outputs valid, 0 useful corrections. Marked REPAIR_REQUIRED.","docs/reports/BYT5_DEVELOPMENT_ADAPTATION.md"],
+  ["G","Is the real-speech data usable?","v-part","Partly","LibriSpeech-PC: 1,024 training pairs in 48 groups admitted. SLUE: 0 rows; access answers HTTP 401 until you sign up.","docs/reports/TRAINING_SUPPLY_QUALIFICATION.md; docs/reports/SLUE_ACCESS_ACTION_REQUIRED.md"],
+  ["H","Does the focused plan fit a month?","v-unk","Unknown","Can't be priced until a full-size step is timed (step 4).","docs/reports/BC_10M_PROBE_COST_PROJECTION.md; docs/reports/FOUNDATION_GO_NO_GO.md, question 18"]
+];
+$('#checklist').innerHTML = CHECK.map(c => '<li><span class="letter">'+c[0]+'</span><span class="q">'+esc(c[1])+'</span><span class="verdict '+c[2]+'"><i class="vglyph"></i>'+esc(c[3])+'</span><span class="ev">'+esc(c[4])+'<span class="src"><code>'+esc(c[5])+'</code></span></span></li>').join('');
+
+/* ---------- strips ---------- */
+const ONEWAY_SVG = '<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 7h8"/><path d="M7 4l3 3-3 3"/><path d="M12 3v8"/></svg>';
+const W = (role, verb) => ({role, verb});
+const STEPS = [
+  {n:1, t:"Decide what the practice mistakes should look like", tech:"Frontier decision on the surface-dominated TRAIN corruption profile for the 40% matched-corruption channel", who:[W('astra','writes'),W('you','approves')], needs:[], ow:false, state:'done', badge:'Done: decision v2',
+   plain:"Training copies the kinds of mistakes the recognizer really makes. 92% of those turned out to be punctuation, capitals and spacing rather than wrong words. Someone has to decide whether that is what the models should practise on, or whether it's a side effect of how the reference was written down. It's a judgement call, so it goes to the frontier reviewer.",
+   produces:"A new decision record, saved word for word as the next frontier decision document, with amendment text and a handoff that ends “do not run the six probes yet”.",
+   stop:"If the evidence contradicts the fixed B100/C101 architecture or objectives, issue ARCHITECTURE_OR_CORE_PROTOCOL_REVIEW_REQUIRED rather than amending them.",
+   src:"docs/reports/BC_10M_PROBE_ADMISSION_DECISION_V3.md, question 38; docs/reports/EMPIRICAL_CORRUPTION_PROFILE_QUALIFICATION.md"},
+  {n:2, t:"Request access to the second speech dataset", tech:"SLUE-VoxCeleb on Hugging Face (asapp/slue): accept the conditions on your own account", who:[W('you','does it')], needs:[], ow:false, outward:true, state:'now', badge:'Start now',
+   plain:"One of the two real-speech test sets sits behind a sign-up form. Only you can accept its terms; the agent is not allowed to. Until then the paper's main score can't be computed, because it averages the two datasets equally.",
+   produces:"Access on your Hugging Face account. The agent then checks permission and downloads the pinned files.",
+   stop:"It shares your contact details with the dataset owner. Read the conditions first. Never paste credentials into chat, reports or git.",
+   src:"docs/reports/SLUE_ACCESS_ACTION_REQUIRED.md"},
+  {n:3, t:"Finish building the training reader", tech:"Generated base manifest, spoken renderer, channels, source-only union inverse, serializer, deficit scheduler, presentation ledger, long dry run, paired-consumption ledger, mid-update checkpoints", who:[W('codex','writes')], needs:[1], ow:false, state:'done', badge:'Built; in qualification',
+   plain:"The reader feeds both models exactly the same examples in exactly the same amounts, so the comparison stays fair. Its recipe is fixed by step 1 and the earlier decision; this step builds it and proves it with tests.",
+   produces:"Reader code plus every test in section J of the frontier decision, and a dry-run ledger showing both models consume identical presentations.",
+   stop:"If a required category, cell, view or severity pool comes out empty, admission is blocked. Don't redistribute its weight.",
+   src:"docs/reviews/FRONTIER_READER_CURRICULUM_DECISION_V1.md, section J; docs/reports/PAIRED_MIXED_READER_QUALIFICATION_V2.md"},
+  {n:4, t:"Time a full-size training step and price the six runs", tech:"32,768-anchor complete-update BENCH: 5 warmups, 100 timed updates, a 20-minute sustained segment, boundary and mid-update cold resume; cost = 1.25 × (3T_B + 3T_C + shared costs)", who:[W('codex','runs')], needs:[3], ow:false, accel:true, state:'now', badge:'In progress: attempt 03',
+   plain:"Nobody knows yet how long one trial run takes on the Mac. Earlier timings used tiny examples, and the project refuses to scale those up and call it a forecast.",
+   produces:"Measured update rates, memory and heat for both models, verified resume, and a priced total for all six runs with a 25% reserve.",
+   stop:"No smaller update target. If 32,768 anchors proves impractical, return the measurements for review.",
+   src:"docs/reports/PAIRED_COMPLETE_UPDATE_BENCH_V2.md; docs/reports/BC_10M_PROBE_COST_PROJECTION.md"},
+  {n:5, t:"Decide whether the six trial runs may start", tech:"Admission decision V4: every admission question answered with reader/config hashes, matched-consumption evidence, resume results and measured cost", who:[W('codex','drafts'),W('astra','reviews'),W('you','approves')], needs:[3,4], ow:true, owText:"Approving releases a one-way step", state:'wait', badge:'Drafting V4',
+   plain:"A checklist that says, with evidence, that everything the trial runs depend on is ready. Your yes is what unlocks step 6, so it's worth a second reader.",
+   produces:"BC_10M_PROBE_ADMISSION_DECISION_V4, ending in one disposition, and your explicit authorization.",
+   stop:"Any unmeasured item means the answer is no. An equality claimed over zero rows is not a pass.",
+   src:"docs/reviews/FRONTIER_READER_CURRICULUM_DECISION_V1.md, section L"},
+  {n:6, t:"Run the six trial trainings", tech:"B100 and C101 × peak LR 1e-4, 3e-4, 6e-4; seed 42; 10M canonical exposures in three phases (6,666,667 / 2,666,667 / 666,666); one LR chosen per model at the 10M endpoint only", who:[W('codex','runs'),W('astra','reviews the outcome')], needs:[5], ow:true, owText:"Uses up all six trial slots", accel:true, state:'later', badge:'Later',
+   plain:"Each model gets three short runs at different learning speeds. The point isn't to crown a winner. It's to see whether either model learns to fix real mistakes without wrecking correct words, or just learns to copy.",
+   produces:"Loss curves, outputs at 0, 1M, 3M and the phase ends, and one learning rate selected for each model by a fixed rule.",
+   stop:"If neither model has an eligible recipe, the current 150M campaign is abandoned. That says nothing final about either architecture. No extra trial is allowed.",
+   src:"docs/reviews/FRONTIER_READER_CURRICULUM_DECISION_V1.md, section E"},
+  {n:7, t:"Make the comparison models fair opponents", tech:"Declare and run a diagnostic ByT5-small recipe (two prior recipes: 24/24 valid, 0 useful corrections); freeze a development Qwen3-4B prompt using DEV data only", who:[W('astra','writes the recipe'),W('codex','runs')], needs:[], ow:false, accel:true, state:'hold', badge:'Allowed; hold',
+   plain:"The paper also compares the new models with existing pretrained ones. ByT5 currently gives tidy output but never fixes a word, so it isn't a fair opponent yet. Its one change at the end of training was also only case and punctuation, the same effect step 1 is deciding about.",
+   produces:"A credible adapted ByT5 with a disclosed budget, or a clear record that it can't be made credible, plus a frozen development Qwen prompt.",
+   stop:"Don't call three weak seeds a credible comparison just because they finished.",
+   src:"docs/reports/BYT5_DEVELOPMENT_ADAPTATION.md; docs/reports/COMPARATOR_AND_PRIOR_WORK_QUALIFICATION.md"},
+  {n:8, t:"Sharpen the scorekeeping for real speech", tech:"Natural literal extraction, typed-anchor matching, population/join schemas, paired cluster bootstrap; generate and qualify the 2,400-case stress panel (semantic families, near-duplicates)", who:[W('codex','writes'),W('astra','reviews')], needs:[], ow:false, state:'hold', badge:'Partly allowed',
+   plain:"The scorer already counts fixes and new mistakes correctly in tests. It still needs to handle numbers, names and code words in real speech, and to put honest error bars on the totals so a small difference isn't over-read.",
+   produces:"Qualified literal and statistical machinery, and a generated but not yet frozen 2,400-case stress panel.",
+   stop:"No manual rescue of ambiguous alignments. Unavailable stays unavailable.",
+   src:"docs/reports/FOUNDATION_GO_NO_GO.md, questions 1, 3 and 23; docs/reports/NATURAL_NONIDENTITY_SCORER_QUALIFICATION.md"},
+  {n:9, t:"Review whether the plan is worth locking", tech:"Integrate F01–F03; justify the 150M endpoint from learning curves; focused H1 roster; full cost ledger with 25% reserve; keep H2/A100 as stretch or not; FOUNDATION_GO_NO_GO v2", who:[W('astra','writes'),W('codex','compiles evidence')], needs:[2,6,7,8], ow:false, state:'later', badge:'Later',
+   plain:"Look at everything the trials showed and decide whether the full experiment is worth running as planned, smaller, or not at all. A no here is a legitimate outcome.",
+   produces:"A readiness report ending in one of four dispositions, and a recommendation to you about the freeze.",
+   stop:"Don't freeze automatically. Don't start final runs automatically.",
+   src:"docs/design-inputs/KICKOFF_PROMPT.txt, section 12; docs/reviews/PROSPECTIVE_AMENDMENTS.md"},
+  {n:10, t:"Freeze the experiment plan", tech:"Freeze paper_protocol_v2 (PUB-GATE 3): claims, endpoints, margins, seeds 1729/2718/31415, baselines, budgets, stop rules, scorer/generator versions, statistics", who:[W('you','approve'),W('astra','reviews')], needs:[9], ow:true, owText:"After this, a change is a new experiment", state:'later', badge:'Later',
+   plain:"Like sealing your predictions in an envelope before the match. It's what makes the eventual result trustworthy, because the rules can no longer bend to fit it.",
+   produces:"A versioned, hashed protocol.",
+   stop:"No outcome-driven change after this point.",
+   src:"docs/design-inputs/EXTRACTED_CANONICAL_SOURCE.md, PUB-GATE 3"},
+  {n:11, t:"Train the final models", tech:"B100-text and C101-text × final seeds 1729, 2718, 31415 at 150M canonical exposures (focused H1 core)", who:[W('codex','runs'),W('astra','reviews the launch')], needs:[10], ow:true, owText:"Final seeds can't be rerun for a better number", accel:true, state:'later', badge:'Later',
+   plain:"The real training: three runs per model from different random starting points, so luck can be told apart from skill.",
+   produces:"Six trained models and every log, failures included.",
+   stop:"Never replace a failed final seed or drop a weak one.",
+   src:"docs/design-inputs/KICKOFF_PROMPT.txt, sections 1, 2 and 15"},
+  {n:12, t:"Lock the trained models and their settings", tech:"Artifact freeze: final weight, package and threshold hashes; apply the registered guards; qualify the runtime; final calibration (R-M11, R-M12)", who:[W('codex','runs'),W('astra','reviews')], needs:[11], ow:true, owText:"Hashes recorded before the final exam", state:'later', badge:'Later',
+   plain:"Fingerprint exactly what will sit the final exam, so nobody can swap in a better copy afterwards.",
+   produces:"A second freeze record, separate from the protocol freeze.",
+   stop:"Final weights don't exist when the protocol is frozen; this is a distinct event.",
+   src:"docs/design-inputs/EXTRACTED_CANONICAL_SOURCE.md, section 33"},
+  {n:13, t:"Run the final exam, exactly once", tech:"R-M14-S: sealed LibriSpeech-PC and SLUE, compact stress panel, RAW/DET/ByT5/Qwen comparators, B/C-only Whisper transfer if affordable", who:[W('codex','runs'),W('astra','reviews')], needs:[12], ow:true, owText:"Sealed test data is used once", accel:true, state:'later', badge:'Later',
+   plain:"Every model meets the sealed test data for the first and only time. Whatever comes out is the result, good or bad.",
+   produces:"Final scores with real counts, uncertainty and every failure.",
+   stop:"No second look, no choosing the best checkpoint on test data.",
+   src:"docs/design-inputs/EXTRACTED_CANONICAL_SOURCE.md, R-M14-S"},
+  {n:14, t:"Check every claim and write the paper", tech:"PUB-GATEs 4–7: external validity, claim support, clean-environment reproducibility, manuscript readiness", who:[W('astra','writes claims and limits'),W('codex','packages the rebuild'),W('you','approve submission')], needs:[13], ow:false, outward:true, state:'later', badge:'Later',
+   plain:"Make sure every sentence in the paper points to a number, the failures are reported too, and someone else's clean machine can rebuild it all.",
+   produces:"The manuscript, or a narrower project report if the planned result isn't supported.",
+   stop:"A failed hypothesis is reported as failed, not rewritten as success.",
+   src:"docs/design-inputs/EXTRACTED_CANONICAL_SOURCE.md, PUB-GATE 4–7"}
+];
+const NAME = {astra:'Astra', codex:'Codex', you:'You'};
+const strips = $('#strips');
+STEPS.forEach(s=>{
+  const li = document.createElement('li');
+  li.className = 'strip'; li.id = 'step-'+s.n; li.dataset.state = s.state;
+  li.dataset.roles = s.who.map(w=>w.role).join(' '); li.dataset.ow = s.ow ? '1' : '0';
+  const who = s.who.map(w=>'<span class="who '+w.role+'"><i></i><b>'+NAME[w.role]+'</b> '+esc(w.verb)+'</span>').join('');
+  const needs = s.needs.length ? '<b>Needs</b>'+s.needs.map(n=>'step '+n).join(', ') : '<b>Needs</b>nothing unfinished';
+  const flags = (s.ow ? '<span class="oneway">'+ONEWAY_SVG+'One-way</span>' : '') + (s.outward ? '<span class="oneway">'+ONEWAY_SVG+'Goes outside</span>' : '') + (s.accel ? '<span class="who" style="font-size:12.5px;color:var(--ink-3)">Uses the accelerator</span>' : '');
+  const badgeCls = s.state==='now' ? 'now' : (s.state==='hold' ? 'hold' : (s.state==='done' ? 'done' : ''));
+  li.innerHTML = '<details><summary><span class="s-num">'+s.n+'</span><span><span class="s-title">'+esc(s.t)+'</span><span class="s-tech" style="display:block">'+esc(s.tech)+'</span></span><span class="s-who">'+who+'</span><span class="s-needs">'+needs+'</span><span class="s-state"><span class="badge '+badgeCls+'">'+esc(s.badge)+'</span>'+flags+'</span></summary>'
+    + '<div class="s-body"><p class="plain">'+esc(s.plain)+'</p><div class="facts"><h4>What it produces</h4><p>'+esc(s.produces)+'</p><h4>'+(s.ow ? 'Why it is one-way, and when to stop' : 'Stop if')+'</h4><p>'+(s.ow ? esc(s.owText)+'. ' : '')+esc(s.stop)+'</p><h4>Source</h4><p class="src" style="margin:0"><code>'+esc(s.src)+'</code></p></div></div></details>';
+  strips.appendChild(li);
+});
+let fRole = 'all';
+function applyFilter(){
+  const ow = $('#onlyOneWay').checked;
+  $$('.strip', strips).forEach(li=>{
+    const okRole = fRole==='all' || li.dataset.roles.split(' ').includes(fRole);
+    const okOw = !ow || li.dataset.ow==='1';
+    li.hidden = !(okRole && okOw);
+  });
+}
+$$('.filters .seg').forEach(b=> b.addEventListener('click', ()=>{
+  fRole = b.dataset.f;
+  $$('.filters .seg').forEach(x=> x.setAttribute('aria-pressed', String(x===b)));
+  applyFilter();
+}));
+$('#onlyOneWay').addEventListener('change', applyFilter);
+$$('.strip details').forEach((d,i)=>{ if (i===0) d.open = true; });
+
+/* ---------- lanes ---------- */
+const LANES = [
+  ['you','You','approvals and access'],
+  ['astra','Astra','decisions and reviews'],
+  ['accel','Accelerator','one job at a time'],
+  ['cpu','Codex on the CPU','overlaps freely']
+];
+const PHASES = [
+  {t:'Now', c:{you:[[2,'SLUE']], accel:[[4,'Attempt 03']], cpu:[[5,'Draft V4'],[8,'Scoring']]}},
+  {t:'Admission', c:{you:[[5,'Approve']], astra:[[5,'Review',1],[7,'Recipe']], accel:[[7,'ByT5']], cpu:[[8,'Panel']]}},
+  {t:'Trials', c:{accel:[[6,'Six runs']], astra:[[6,'Review',1]]}},
+  {t:'Pre-freeze', c:{astra:[[9,'Decide']], cpu:[[9,'Evidence']], you:[[10,'Freeze']]}},
+  {t:'Final', c:{accel:[[11,'Train'],[12,'Lock'],[13,'Exam']], astra:[[11,'Review',1]]}},
+  {t:'Paper', c:{astra:[[14,'Claims']], cpu:[[14,'Rebuild']], you:[[14,'Submit']]}}
+];
+const roleOf = {you:'you', astra:'astra', accel:'codex', cpu:'codex'};
+function chip(lane, c){ return '<a class="chip '+roleOf[lane]+(c[2]?' rev':'')+'" href="#step-'+c[0]+'" style="text-decoration:none;color:inherit"><b>'+c[0]+'</b>'+esc(c[1])+'</a>'; }
+const lanes = $('#lanes');
+let html = '<div class="lh" role="columnheader">Lane</div>' + PHASES.map(p=>'<div class="lh" role="columnheader">'+esc(p.t)+'</div>').join('');
+LANES.forEach(l=>{
+  html += '<div class="ln" role="rowheader">'+esc(l[1])+'<small>'+esc(l[2])+'</small></div>';
+  PHASES.forEach(p=>{ html += '<div class="cell" role="cell">'+(p.c[l[0]]||[]).map(c=>chip(l[0],c)).join('')+'</div>'; });
+});
+PHASES.forEach(p=>{
+  html += '<div class="phase"><span class="phase-title">'+esc(p.t)+'</span>' + LANES.filter(l=>p.c[l[0]]).map(l=>'<span class="cell-lab">'+esc(l[1])+'</span>'+p.c[l[0]].map(c=>chip(l[0],c)).join('')).join('') + '</div>';
+});
+lanes.innerHTML = html;
+lanes.style.setProperty('--phases', PHASES.length);
+
+/* ---------- allocation matrix ---------- */
+// [step, short name, noPrecedent, inherits, oneWay, alloc, why]
+const ALLOC = [
+  [1,'Practice-mistake decision (done)',1,1,0,'a','A new scientific choice with no precedent; the reader, the trials and the paper’s claim boundary all inherit it.'],
+  [2,'SLUE access','na','na','na','y','Your own agreement on your own account. Outside the rule: no model may accept it for you.'],
+  [3,'Build the reader (built)',0,0,0,'c','Fully bound by the frontier decision; independent reviewer agents check fidelity. Its result is judged at step 5.'],
+  [4,'Time and price',0,0,0,'c','A measurement with an existing harness. The numbers are re-checked by an independent agent; the judgement on them happens at steps 5 and 9.'],
+  [5,'Admission decision',0,1,1,'r','Three earlier admission decisions are the precedent, but it unlocks the first one-way step. That sits near the line, so Astra reviews rather than writes.'],
+  [6,'Six trial runs',0,1,1,'r','The recipe and the selection rule are fixed in advance, but the slots can’t be reused and the final campaign inherits the chosen learning rates.'],
+  [7,'Comparison models',1,1,0,'a','Two ByT5 recipes failed; the next one is a new scientific choice the record says needs its own declaration.'],
+  [8,'Scorekeeping',0,1,0,'r','The specification defines the methods, but the final statistics inherit them.'],
+  [9,'Readiness review',1,1,0,'a','A judgement about scope, adequacy and cost with nothing to copy. Everything after the freeze inherits it.'],
+  [10,'Freeze',0,1,1,'r','The draft registry is the precedent; the freeze itself can’t be undone. You approve.'],
+  [11,'Final training',0,1,1,'r','Fixed by the frozen protocol, but final seeds can’t be rerun.'],
+  [12,'Lock models',0,1,1,'r','Mechanical, but it fixes what sits the final exam.'],
+  [13,'Final exam',0,1,1,'r','Fixed procedure, used exactly once.'],
+  [14,'Claims and paper',1,1,0,'a','Prose claims and limitations have no precedent; the published paper inherits every word.']
+];
+const ALABEL = {a:'Astra writes', r:'Astra reviews', c:'Codex alone', y:'You'};
+const crit = v => v==='na' ? '<span class="crit na" title="Not applicable"></span><span class="visually-hidden">not applicable</span>' : (v ? '<span class="crit y"></span><span class="visually-hidden">yes</span>' : '<span class="crit"></span><span class="visually-hidden">no</span>');
+const tb = $('#matrix tbody');
+ALLOC.forEach(r=>{
+  const tr = document.createElement('tr'); tr.className = 'row'; tr.tabIndex = 0;
+  tr.innerHTML = '<td><span class="u"><b>'+r[0]+'</b><span>'+esc(r[1])+'</span></span></td><td>'+crit(r[2])+'</td><td>'+crit(r[3])+'</td><td>'+crit(r[4])+'</td><td><span class="alloc '+r[5]+'"><i></i>'+ALABEL[r[5]]+'</span></td>';
+  const show = () => { $$('#matrix tr.row').forEach(x=>x.classList.remove('on')); tr.classList.add('on'); $('#why').innerHTML = '<b>Step '+r[0]+'.</b> '+esc(r[6]); };
+  tr.addEventListener('mouseenter', show); tr.addEventListener('focus', show); tr.addEventListener('click', show);
+  tb.appendChild(tr);
+});
+const counts = {a:0,r:0,c:0,y:0}; ALLOC.forEach(r=>counts[r[5]]++);
+$('#stack').innerHTML = ['a','r','c','y'].map(k=>'<div class="'+k+'" style="flex:'+counts[k]+'">'+counts[k]+'</div>').join('');
+$('#stackLegend').innerHTML = ['a','r','c','y'].map(k=>'<span class="alloc '+k+'" style="font-weight:400"><i></i>'+ALABEL[k]+': '+counts[k]+' of 14</span>').join('');
+
+/* ---------- handover prompt ---------- */
+const PARTS = [
+  ['Identity and scope','The task, the absolute path, the one line that never changes',
+`You are the frontier scientific reviewer for "Repair Without Rewrite", a controlled comparison of full-transcript generation (B100, 100,686,336 parameters) and compact source-relative editing (C101, 101,081,859 parameters) for correcting speech-recognizer transcripts. Repository: https://github.com/scalinity/repair-without-rewrite at commit 1b114ff (also checked out locally). Your task: decide how the 40% matched-corruption training channel should treat the measured TRAIN empirical corruption profile, and write that decision as a prospective DEVELOPMENT authorization record.`],
+  ['What else is in flight','Who owns which paths; an explicit refusal of the next thing',
+`No implementation session is running; the last one stopped with FRONTIER_MODEL_REVIEW_REQUIRED (docs/reports/BC_10M_PROBE_ADMISSION_DECISION_V3.md). Your answer is one decision document, which the next implementation session records verbatim as docs/reviews/FRONTIER_READER_CURRICULUM_DECISION_V2.md. You change no code, test, manifest or earlier report. Do not admit the six seed-42 10M probes and do not design the complete-update BENCH; both belong to later sessions.`],
+  ['Startup order','What to read, in order, before deciding',
+`1. docs/reports/EMPIRICAL_CORRUPTION_PROFILE_QUALIFICATION.md: the measurement and the implementer's three candidate choices.
+2. docs/reviews/EMPIRICAL_CORRUPTION_PROFILE_INDEPENDENT_REVIEW.md: the independent reconstruction.
+3. docs/reviews/FRONTIER_READER_CURRICULUM_DECISION_V1.md, sections B (D1–D20), E and I: the contract you are amending.
+4. experiments/manifests/frontier_reader/empirical-profile-table.attempt01.json: the table, hash 5df3800d7a29e370abdce36bd489989482d5d878765612b5a14a4b2cab1fc310.
+5. docs/reviews/PROSPECTIVE_AMENDMENTS.md, entry "Foundation repair development decisions": the designation of LS-PC text_raw as the DEVELOPMENT restore_reference target.
+6. docs/reports/BYT5_DEVELOPMENT_ADAPTATION.md: only for the optional question below.`],
+  ['Settle, don’t inherit','The evidence that lets you decide, not just the topic',
+`The retained weight is 92.0492% surface effects: punctuation 1,372, case 525, whitespace 48, other characters 168, of 2,113. The largest entry, deleting a double quote, is 433 occurrences (20.4922%). 508 of 842 raw-different TRAIN records are lexically identical under lexical_eval_v1. Decide whether this is recognizer behaviour worth training on, or an artifact of scoring raw recognizer output against the formatted text_raw reference, and name the evidence that decides it.
+The three options in the profile report are suggestions, not a menu. If your answer reaches back to the text_raw designation, say so explicitly, because that changes the reference policy for every later unit, not only this channel.
+State whether the H1 claim boundary (repaired versus introduced reference-error units) changes under your choice.
+Optional: ByT5's adapted recipe made exclusively case/punctuation changes and no useful lexical correction (REPAIR_REQUIRED). If your decision bears on it, say whether a diagnostic ByT5 recipe belongs in the same record; bind it fully or leave it out.`],
+  ['Constraints','What stays fixed, and why',
+`Keep fixed: B100/C101 architectures, objectives and C event/renderer semantics; the DEVELOPMENT tokenizer (16,384 entries, b125551f…ace6ca); 30/20/10/40 channel totals; 32,768 canonical anchors per update; six LR slots (1e-4, 3e-4, 6e-4 per arm, seed 42); final seeds 1729, 2718, 31415. If the evidence contradicts one of these, issue ARCHITECTURE_OR_CORE_PROTOCOL_REVIEW_REQUIRED with the causal analysis instead of amending it.
+No final or sealed data, no new human annotation or listening, no invented confusion lists or generic noise. Unsupported strata stay blocked rather than renormalized, because silent reweighting would change the treatment both models are compared under.
+Label every numerical policy as a prospective scientific judgement, because no measurement selects it.`],
+  ['Verification','How each check is reported',
+`Cite each figure by repository path at commit 1b114ff, and mark every statement as measured, calculated or judgement.
+Give the implementer an exact required-test table in the form of V1 section J. A requirement without a test is not a requirement.`],
+  ['Close-out','Numbered, ending with what must print last',
+`1. Decision summary with one disposition.
+2. Exact changed contract text, and an explicit list of what stays fixed.
+3. Prospective amendment text, ready to append to docs/reviews/PROSPECTIVE_AMENDMENTS.md.
+4. A Codex handoff section ending "DO NOT RUN THE SIX 10M PROBES YET."
+5. Print the disposition token last.`]
+];
+$('#prompt').innerHTML = PARTS.map(p=>'<div class="part"><div class="pl">'+esc(p[0])+'<small>'+esc(p[1])+'</small></div><div class="pt">'+esc(p[2])+'</div></div>').join('');
+const promptText = PARTS.map(p=>p[2]).join('\n\n');
+$('#copyBtn').addEventListener('click', async ()=>{
+  const b = $('#copyBtn');
+  try { await navigator.clipboard.writeText(promptText); b.textContent = 'Copied'; }
+  catch(e){
+    const ta = document.createElement('textarea'); ta.value = promptText; document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); b.textContent = 'Copied'; } catch(_) { b.textContent = 'Select and copy manually'; }
+    ta.remove();
+  }
+  setTimeout(()=> b.textContent = 'Copy prompt', 1800);
+});
+
+/* ---------- threads ---------- */
+const THREADS = [
+  ['How to treat punctuation-heavy practice mistakes','Settled: lexical-first profile (decision v2, ab8fe95)',[1]],
+  ['SLUE access; the equal-weight main score is undefined without it','HTTP 401, 0 rows',[2]],
+  ['Reader qualification and proof both models see the same examples','Not built',[3]],
+  ['What one trial run really costs','Unpriced',[4]],
+  ['Does either model learn useful correction, or collapse into copying?','Not run',[6]],
+  ['Is 150M exposures enough for the final runs?','Unknown until learning curves exist',[6,9]],
+  ['A credible ByT5, and a development Qwen prompt','ByT5 REPAIR_REQUIRED; Qwen tried on 2 synthetic requests',[7]],
+  ['Numbers and names in real speech; error bars that respect clusters','Not qualified',[8]],
+  ['The 2,400-case stress panel','Proposed, not generated or frozen',[8]],
+  ['F01: position against the closest prior work (ICASSP 2025)','Predecessor verified; integrate before the freeze',[9]],
+  ['F02: a focused roster and a measured calendar','Provisional',[4,9]],
+  ['F03: legitimate empty references in the registry','Works in development; registry not reconciled',[9]],
+  ['Do H2 (acoustic) and A100 stay as stretch?','Stretch for now',[9]],
+  ['Is Whisper transfer affordable?','No timing yet',[4,9]],
+  ['Which LibriSpeech-PC field the final paper scores against','text_raw designated for development only',[1,10]],
+  ['Parakeet preprocessing versus NVIDIA’s original','Narrowed, repaired runtime; disclosed limit',[14]]
+];
+$('#threadRows').innerHTML = THREADS.map(t=>'<tr><td>'+esc(t[0])+'</td><td>'+esc(t[1])+'</td><td class="own">'+t[2].map(n=>'<a href="#step-'+n+'">'+n+'</a>').join(', ')+'</td></tr>').join('');
+$$('a[href^="#step-"]').forEach(a=> a.addEventListener('click', ()=>{
+  const li = document.querySelector(a.getAttribute('href'));
+  if (li) { li.hidden = false; const d = li.querySelector('details'); if (d) d.open = true; }
+}));
+
+/* ---------- grading ---------- */
+const RUBRIC = [
+  ['Starts from a verified base','Local equals remote, the tree is clean, and the baseline test count is reproduced before any change (259, then 275).'],
+  ['Every number points to a file','A measured claim without an on-disk artifact doesn’t count. “No result should exist only in a chat message.”'],
+  ['Keeps failed attempts','Numbered attempt files sit side by side; nothing is overwritten or quietly retried.'],
+  ['Labels what kind of claim each is','Measured, calculated, inferred, assumed and unpriced are kept apart.'],
+  ['The arithmetic reconciles','For example, 3,089 = 759 + 217 + 2,113 in the profile report.'],
+  ['Refuses empty passes','“Equality over zero rows is not PASS.” Unmeasured is reported as unmeasured.'],
+  ['Stops at the boundary','No trial slot, final seed, sealed data, freeze, cloud spend or production change without authorization.'],
+  ['Leaves scientific calls to the frontier reviewer','No invented thresholds, no filtering or reweighting to make a gate pass.'],
+  ['Gets an independent check through a separate path','The reviewer doesn’t simply rerun the code it is meant to validate.'],
+  ['Ends with exactly one disposition','A single permitted word, such as FRONTIER_MODEL_REVIEW_REQUIRED, printed last.']
+];
+$('#rubric').innerHTML = RUBRIC.map((r,i)=>'<li><label><input type="checkbox" data-i="'+i+'"><span><span class="rt">'+esc(r[0])+'</span><span class="rd">'+esc(r[1])+'</span></span></label></li>').join('');
+function grade(){
+  const n = $$('#rubric input:checked').length;
+  $('#gN').textContent = n + ' / 10';
+  $('#gT').textContent = n===10 ? 'Meets the standard the record sets.' : n>=8 ? 'Close. Send it back for the unticked items before trusting it.' : n===0 ? 'Tick what the report does.' : 'Not yet. This needs another pass before anything depends on it.';
+}
+$('#rubric').addEventListener('change', grade);
+$('#gReset').addEventListener('click', ()=>{ $$('#rubric input').forEach(i=>i.checked=false); grade(); });
+
+/* ---------- rail highlight ---------- */
+const links = $$('.rail a');
+const secs = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+if ('IntersectionObserver' in window){
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(en=>{
+      if (en.isIntersecting){
+        links.forEach(a=> a.setAttribute('aria-current', String(a.getAttribute('href')==='#'+en.target.id)));
+      }
+    });
+  }, {rootMargin:'-30% 0px -60% 0px'});
+  secs.forEach(s=> io.observe(s));
+}
+})();
+</script>
+</body>
+</html>

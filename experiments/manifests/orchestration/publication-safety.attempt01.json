@@ -1,0 +1,54 @@
+{
+  "purpose": "pre-push publication-safety scan for the repository-conventions / step-log / orchestration-page entry (docs/LOG.md entry 6)",
+  "scanned_at": "2026-10-05T23:30:45-04:00",
+  "remote_main_before_push": "1b114ff485a2a59051bf7a2e39acec5774fd35a1",
+  "local_head_before_entry_commit": "28298ad886aa321882aa0530a18421e7d4e3553e",
+  "scope": {
+    "unpushed_commits_included_in_push": [
+      "28298ad",
+      "04f3bec",
+      "c7d612f",
+      "22ac7b3",
+      "ab8fe95"
+    ],
+    "files_changed_in_unpushed_commits": 45,
+    "added_lines_scanned": 1510551,
+    "added_bytes_scanned": 61003825,
+    "entry_files_full_text": {
+      "AGENTS.md": "85e8bcb3bf5cbf7c41553c6d3ee20a325b8383b5434f577b1c0e1cb565c2c2c6",
+      "CLAUDE.md": "a45214f78887c67c18a913c3a322c93f3cadb06301eae7e439811a4f64d3a0b9",
+      "docs/LOG.md": "9187401786a96e84907efc3eafa2d1c1f6864c0bba1f94528508ae31a10e240e",
+      "ORCHESTRATION.html": "0df7c8cfa8ede0fa23013b7ab38beb848c79328d4c902bd2db8dc868e74b7ebb"
+    }
+  },
+  "checks": [
+    "private_key",
+    "aws_key",
+    "github_token",
+    "openai_anthropic_key",
+    "huggingface_token",
+    "slack_token",
+    "secret_assignment",
+    "abs_home_path",
+    "email",
+    "owner_name",
+    "session_url",
+    "private_ip"
+  ],
+  "hits": {
+    "total": 0,
+    "real_values": 0,
+    "fixture_values": 0,
+    "pattern_constructing_code": 0
+  },
+  "positive_control": "planted samples were detected for abs_home_path, email, openai_anthropic_key, secret_assignment and owner_name",
+  "large_files": [
+    {
+      "path": "experiments/manifests/lexical_reader_v2/generated-accepted-index.attempt02.json",
+      "bytes": 55538124,
+      "note": "over GitHub's 50 MB recommendation, under its 100 MB limit; 42,020 records of hashes, counts and stable IDs; a 400-record field audit found no free-text payload"
+    }
+  ],
+  "staging": "by name only; the running session's uncommitted files were not staged",
+  "result": "PASS"
+}
