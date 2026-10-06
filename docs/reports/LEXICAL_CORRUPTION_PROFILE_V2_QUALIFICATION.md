@@ -1,6 +1,6 @@
 # Lexical corruption profile v2 qualification — 2026-10-05
 
-**PROFILE ESTIMATION QUALIFIED; GENERATED POOL AND READER ADMISSION PENDING.** The approved `development_lexical_corruption_v2` was implemented without a new scientific choice. Neither retained-table strict-majority alarm fires. No generated-pool, complete reader, paired consumption, update/resume or BENCH PASS follows from this result.
+**PROFILE QUALIFIED; complete reader, native updates, all cold resumes and full BENCH independently qualify under `28298ad`.** The approved `development_lexical_corruption_v2` was implemented without a new scientific choice. Retained-table, complete-reader and actual per-arm BENCH strict-majority alarms are all false. The [V4 admission](BC_10M_PROBE_ADMISSION_DECISION_V4.md) authorizes the six future DEVELOPMENT probes; zero slots have been consumed.
 
 The approved [frontier decision](../reviews/FRONTIER_CORRUPTION_PROFILE_DECISION_V2.md) and its exact amendment were separately committed at `ab8fe95` before implementation, on verified clean local/published `1b114ff485a2a59051bf7a2e39acec5774fd35a1`. The required baseline reproduced: **275 passed in 23.34s**, `MLX_ENABLE_TF32=0`; [baseline receipt](../../experiments/manifests/lexical_reader_v2/baseline-validation.attempt01.json).
 
@@ -37,7 +37,7 @@ Uncapped projected-distance distribution, numerically ordered:
 
 `{0: 690, 1: 103, 2: 117, 3: 42, 4: 40, 5: 11, 6: 7, 7: 2, 8: 2, 9: 2, 10: 1, 11: 2, 12: 2, 13: 1, 17: 1, 21: 1}`
 
-The 40% channel has **K=0 weight zero**. P0 has K=1 weight 1. P1/P2 have **K=1: 103/334 (30.8383%); K=2: 231/334 (69.1617%)**. These pre-support probabilities are canonical-exposure weights, not natural prevalence or matched WER. Raw-zero prevalence remains 182/1,024; lexical-zero prevalence remains 690/1,024.
+The 40% channel has **K=0 weight zero**. P0 has K=1 weight 1. P1/P2 have **K=1: 103/334 (30.8383%); K=2: 231/334 (69.1617%)**. These pre-support probabilities are canonical-exposure weights, not natural prevalence or matched WER. Raw-zero prevalence remains 182/ 1,024; lexical-zero prevalence remains 690/ 1,024.
 
 Class-pair weights/support (records/groups): **SS 0 (3/3, unsupported), SD 11 (11/9), SI 7 (7/6), DD 16 (16/12), DI 8 (8/7), II 5 (5/5)**. No unsupported SS composition is admitted. The old 85 literal-pair entries are not an active revised relation.
 
@@ -53,4 +53,10 @@ The [independent checker/review](../reviews/LEXICAL_CORRUPTION_PROFILE_V2_INDEPE
 
 The old raw table is separately reconstructed by the independent checker and remains byte-identical at **`5df3800d7a29e370abdce36bd489989482d5d878765612b5a14a4b2cab1fc310`**. It remains labeled **raw TRAIN reference-to-recognizer surface differences under the repaired Parakeet development runtime**.
 
-The new table hash identifies an estimator output, not a full renderer/proposal/pool/reader freeze. Realized edit concentration, category/cell/severity availability and exact inversion remain dependent gates. Targeted estimator validation: **22 passed in 2.60s**. No model, BENCH, registered probe slot, final training, sealed candidate inference or protocol freeze occurred during profile estimation.
+The new table hash identifies an estimator output. Subsequent full generated qualification admits **42,020 views from 8,404 bases**, including **16,808 empirical variants**, with no empty required category/cell/severity stratum. Independent source-only inverse checking reproduced all accepted views. Pool SHA-256 is `dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc`.
+
+The complete frozen CPU reader has **134,591 presentations / 10,007,223 canonical exposures**. Each applied empirical edit is weighted by its presentation's canonical charge: total edit weight **4,926,142**, largest entry **994,303 (20.1842%)**, separator-only insertion/deletion **996,183 (20.2224%)**. Neither realized strict-majority alarm fires; no empirical accepted view is lexically neutral. See [reader qualification v3](PAIRED_MIXED_READER_QUALIFICATION_V3.md) and its complete machine-readable ledger summaries for proposal, reuse and composition details.
+
+Targeted estimator validation: **22 passed in 2.60s**. Integrated pre-neural validation: **347 passed in 34.57s**. No registered probe slot, final training, sealed candidate inference or protocol freeze occurred. Exact-model qualification controls are separate from the six scientific recipes.
+
+LEXICAL_CORRUPTION_PROFILE_V2_QUALIFIED

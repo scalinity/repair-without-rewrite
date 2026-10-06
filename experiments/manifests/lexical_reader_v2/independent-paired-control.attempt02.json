@@ -1,0 +1,49 @@
+{
+  "B100_independent_receipt_sha256": "72947ee12132b0011c28f11cf5da51b29bf8ada62c92b52ecc571822d249a2da",
+  "C101_independent_receipt_sha256": "c01e8bc2d385fbfa963cef1da63a999f1a7c22c578142ab7094867c8ac88acf3",
+  "checker_sha256": "1e122c3e73998e4b7f69a5629e93eca20b58567a9eb074d72d4706e34a279789",
+  "compared_common_consumption_sha256": "6598378992da371f7d6de0c28326e662f3bda20bd5392bca480ad017dcc5a41e",
+  "elapsed_seconds": 0.257591,
+  "individually_audited_arm_totals": {
+    "B100": {
+      "actual_exposure": 721724,
+      "actual_rows_checked": 9825,
+      "complete_updates_checked": 22
+    },
+    "C101": {
+      "actual_exposure": 721724,
+      "actual_rows_checked": 9825,
+      "complete_updates_checked": 22
+    }
+  },
+  "individually_audited_unpaired_suffix": {
+    "B100": {
+      "canonical_exposure": 0,
+      "complete_updates": 0,
+      "rows": 0
+    },
+    "C101": {
+      "canonical_exposure": 0,
+      "complete_updates": 0,
+      "rows": 0
+    }
+  },
+  "ledger_sha256": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f",
+  "loaded_mlx": false,
+  "loaded_torch": false,
+  "mode": "control",
+  "model_execution": "NONE",
+  "native_attempt": 2,
+  "native_head": "04f3bec60ce957d85b26df65d5a7e2966608242d",
+  "paired_canonical_exposure": 721724,
+  "paired_complete_updates": 22,
+  "paired_native_rows": 9825,
+  "paired_phase_channel_exposure": {
+    "channel/empirical": 288692,
+    "channel/identity_minimal": 216547,
+    "channel/natural": 72151,
+    "channel/rules": 144334,
+    "phase/P0": 721724
+  },
+  "status": "PAIRED_ACTUAL_NATIVE_CONSUMPTION_REPRODUCED_FOR_EXACT_COMMON_PREFIX"
+}

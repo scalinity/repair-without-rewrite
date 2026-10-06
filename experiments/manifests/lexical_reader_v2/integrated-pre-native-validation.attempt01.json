@@ -1,0 +1,13 @@
+{
+  "implementation_commit": "c7d612f",
+  "log_sha256": "84fb074b7d6a2e2b0e6a7407a54d20366cf1edc93c6a1c7793277ab0da955fb1",
+  "runtime_environment": {
+    "MLX_ENABLE_TF32": "0"
+  },
+  "scope": "INTEGRATED_PRE_NATIVE_QUALIFICATION",
+  "six_probe_slots_consumed": 0,
+  "status": "PASS",
+  "tests_failed": 0,
+  "tests_passed": 347,
+  "wall_seconds": 34.57
+}

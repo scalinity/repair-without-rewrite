@@ -1,0 +1,252 @@
+{
+  "accepted_sha256": {
+    "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+    "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": "d391197b246ce17512d9d2f293544623180eb539602897c6264f83a387d50713"
+  },
+  "actual_exposure": 721724,
+  "actual_rows_checked": 9825,
+  "arm": "B100",
+  "bench_details": null,
+  "capture_sha256": {
+    "exports/lexical-reader-v2/resume-B100-control-attempt03/controls.jsonl": "47c39366208e5411b8f7e7c245d26192301d7249d1c16661bffb1d113424f26a",
+    "exports/lexical-reader-v2/resume-B100-control-attempt03/first-complete-update.json": "dc4e37a9859daad9b84f50149926685a43122e3a9f5553dc5c9b88e9e546302b"
+  },
+  "checker_sha256": "c92923eac9f9129216bf7234c8dd1459816ceaf191484f9f0fbccb0c5ab478a2",
+  "complete_updates_checked": 22,
+  "elapsed_seconds": 4.210751,
+  "independent_BPE_checker_sha256": "e9b44d9eaf919e20c3ebd7d8f7b624175b5cbaa036879720a5e661608619064f",
+  "ledger_sha256": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f",
+  "loaded_mlx": false,
+  "loaded_torch": false,
+  "microbatch_size": 16,
+  "mode": "control",
+  "model_execution": "NONE",
+  "native_attempt": 3,
+  "native_preflight_sha256": "ec42f96b067e25845fba29ac24d6fda1d0ea300e359559cc921e1a32e16224e7",
+  "queue_results": [
+    {
+      "canonical_charge": 32815,
+      "common_update_index": 0,
+      "cumulative_native_exposure": 32815,
+      "first_ordinal": 0,
+      "last_ordinal": 443,
+      "native_rows_checked": 444,
+      "status": "PASS",
+      "update": 1
+    },
+    {
+      "canonical_charge": 32801,
+      "common_update_index": 1,
+      "cumulative_native_exposure": 65616,
+      "first_ordinal": 444,
+      "last_ordinal": 889,
+      "native_rows_checked": 446,
+      "status": "PASS",
+      "update": 2
+    },
+    {
+      "canonical_charge": 32784,
+      "common_update_index": 2,
+      "cumulative_native_exposure": 98400,
+      "first_ordinal": 890,
+      "last_ordinal": 1336,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 3
+    },
+    {
+      "canonical_charge": 32800,
+      "common_update_index": 3,
+      "cumulative_native_exposure": 131200,
+      "first_ordinal": 1337,
+      "last_ordinal": 1784,
+      "native_rows_checked": 448,
+      "status": "PASS",
+      "update": 4
+    },
+    {
+      "canonical_charge": 32812,
+      "common_update_index": 4,
+      "cumulative_native_exposure": 164012,
+      "first_ordinal": 1785,
+      "last_ordinal": 2224,
+      "native_rows_checked": 440,
+      "status": "PASS",
+      "update": 5
+    },
+    {
+      "canonical_charge": 32813,
+      "common_update_index": 5,
+      "cumulative_native_exposure": 196825,
+      "first_ordinal": 2225,
+      "last_ordinal": 2675,
+      "native_rows_checked": 451,
+      "status": "PASS",
+      "update": 6
+    },
+    {
+      "canonical_charge": 32887,
+      "common_update_index": 6,
+      "cumulative_native_exposure": 229712,
+      "first_ordinal": 2676,
+      "last_ordinal": 3123,
+      "native_rows_checked": 448,
+      "status": "PASS",
+      "update": 7
+    },
+    {
+      "canonical_charge": 32802,
+      "common_update_index": 7,
+      "cumulative_native_exposure": 262514,
+      "first_ordinal": 3124,
+      "last_ordinal": 3571,
+      "native_rows_checked": 448,
+      "status": "PASS",
+      "update": 8
+    },
+    {
+      "canonical_charge": 32768,
+      "common_update_index": 8,
+      "cumulative_native_exposure": 295282,
+      "first_ordinal": 3572,
+      "last_ordinal": 4021,
+      "native_rows_checked": 450,
+      "status": "PASS",
+      "update": 9
+    },
+    {
+      "canonical_charge": 32811,
+      "common_update_index": 9,
+      "cumulative_native_exposure": 328093,
+      "first_ordinal": 4022,
+      "last_ordinal": 4465,
+      "native_rows_checked": 444,
+      "status": "PASS",
+      "update": 10
+    },
+    {
+      "canonical_charge": 32782,
+      "common_update_index": 10,
+      "cumulative_native_exposure": 360875,
+      "first_ordinal": 4466,
+      "last_ordinal": 4913,
+      "native_rows_checked": 448,
+      "status": "PASS",
+      "update": 11
+    },
+    {
+      "canonical_charge": 32838,
+      "common_update_index": 11,
+      "cumulative_native_exposure": 393713,
+      "first_ordinal": 4914,
+      "last_ordinal": 5358,
+      "native_rows_checked": 445,
+      "status": "PASS",
+      "update": 12
+    },
+    {
+      "canonical_charge": 32773,
+      "common_update_index": 12,
+      "cumulative_native_exposure": 426486,
+      "first_ordinal": 5359,
+      "last_ordinal": 5801,
+      "native_rows_checked": 443,
+      "status": "PASS",
+      "update": 13
+    },
+    {
+      "canonical_charge": 32886,
+      "common_update_index": 13,
+      "cumulative_native_exposure": 459372,
+      "first_ordinal": 5802,
+      "last_ordinal": 6248,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 14
+    },
+    {
+      "canonical_charge": 32768,
+      "common_update_index": 14,
+      "cumulative_native_exposure": 492140,
+      "first_ordinal": 6249,
+      "last_ordinal": 6695,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 15
+    },
+    {
+      "canonical_charge": 32817,
+      "common_update_index": 15,
+      "cumulative_native_exposure": 524957,
+      "first_ordinal": 6696,
+      "last_ordinal": 7132,
+      "native_rows_checked": 437,
+      "status": "PASS",
+      "update": 16
+    },
+    {
+      "canonical_charge": 32813,
+      "common_update_index": 16,
+      "cumulative_native_exposure": 557770,
+      "first_ordinal": 7133,
+      "last_ordinal": 7580,
+      "native_rows_checked": 448,
+      "status": "PASS",
+      "update": 17
+    },
+    {
+      "canonical_charge": 32768,
+      "common_update_index": 17,
+      "cumulative_native_exposure": 590538,
+      "first_ordinal": 7581,
+      "last_ordinal": 8034,
+      "native_rows_checked": 454,
+      "status": "PASS",
+      "update": 18
+    },
+    {
+      "canonical_charge": 32796,
+      "common_update_index": 18,
+      "cumulative_native_exposure": 623334,
+      "first_ordinal": 8035,
+      "last_ordinal": 8477,
+      "native_rows_checked": 443,
+      "status": "PASS",
+      "update": 19
+    },
+    {
+      "canonical_charge": 32817,
+      "common_update_index": 19,
+      "cumulative_native_exposure": 656151,
+      "first_ordinal": 8478,
+      "last_ordinal": 8927,
+      "native_rows_checked": 450,
+      "status": "PASS",
+      "update": 20
+    },
+    {
+      "canonical_charge": 32784,
+      "common_update_index": 20,
+      "cumulative_native_exposure": 688935,
+      "first_ordinal": 8928,
+      "last_ordinal": 9377,
+      "native_rows_checked": 450,
+      "status": "PASS",
+      "update": 21
+    },
+    {
+      "canonical_charge": 32789,
+      "common_update_index": 21,
+      "cumulative_native_exposure": 721724,
+      "first_ordinal": 9378,
+      "last_ordinal": 9824,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 22
+    }
+  ],
+  "status": "ARM_ACTUAL_NATIVE_CONSUMPTION_REPRODUCED_PAIR_COMPARISON_PENDING",
+  "tokenizer_sha256": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+  "unique_accepted_variants_checked": 7012,
+  "update_index_sha256": "97c137bcef4170350ef5db133ad4954151e7417b67aa38bfbdbdae0d650b7f1f"
+}

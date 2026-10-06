@@ -1,0 +1,8 @@
+{
+  "candidate_inference": false,
+  "cases": 396,
+  "panel_sha256": "5043ed60d6ce8f891ee8e30255fabaa40fcac37b0a043c1a85dd88178832ce4e",
+  "six_probe_slots_consumed": 0,
+  "status": "PASS_EXACT_FROZEN_PANEL_RECONSTRUCTION",
+  "wall_seconds": 2.999699292005971
+}

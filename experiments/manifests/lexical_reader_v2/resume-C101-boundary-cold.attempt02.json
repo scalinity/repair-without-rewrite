@@ -1,0 +1,13 @@
+{
+  "arm": "C101",
+  "boundary_next_twenty_plus_one": true,
+  "checkpoint_manifest_sha256": "50a32e677ef7be64293ad7c4bceac30cfc96c0cba700f677a5c4485c8a77184c",
+  "controls_sha256": "c072aa470cabda7d4cf2620b334f7c055a7b50ae895df843f7905c766b08e684",
+  "kind": "boundary",
+  "load_seconds": 1.4990912920038681,
+  "matched_complete_updates": 21,
+  "matches_sha256": "42147499eb24b14ada477923963f424c8cc61c46f420997e7f42da145d36f844",
+  "pending_completion_plus_next_twenty": false,
+  "probe_slots": 0,
+  "status": "PASS_EXACT_COLD_RESUME"
+}

@@ -1,0 +1,61 @@
+{
+  "B100_independent_receipt_sha256": "91c5b457ae8d78973276111f0bfe2c740bca9cda4d76a2d4fc11430560fa9656",
+  "C101_independent_receipt_sha256": "d9615b2ad4f58ec758d5acac59ed52d326e2f430471448d4e3b77a8e271b518c",
+  "checker_sha256": "47be5c94b8392559cace9ec2641d8382c32c1950467610a6793006c0c56af4a8",
+  "compared_common_consumption_sha256": "6598378992da371f7d6de0c28326e662f3bda20bd5392bca480ad017dcc5a41e",
+  "elapsed_seconds": 0.273399,
+  "individually_audited_arm_totals": {
+    "B100": {
+      "actual_exposure": 721724,
+      "actual_rows_checked": 9825,
+      "complete_updates_checked": 22
+    },
+    "C101": {
+      "actual_exposure": 721724,
+      "actual_rows_checked": 9825,
+      "complete_updates_checked": 22
+    }
+  },
+  "individually_audited_unpaired_suffix": {
+    "B100": {
+      "all_suffix_rows_independently_checked_against_selector": true,
+      "canonical_exposure": 0,
+      "complete_updates": 0,
+      "final_arm_canonical_endpoint": 721724,
+      "first_update": null,
+      "last_update": null,
+      "phase_channel_exposure": {},
+      "rows": 0,
+      "starts_after_common_canonical_endpoint": 721724
+    },
+    "C101": {
+      "all_suffix_rows_independently_checked_against_selector": true,
+      "canonical_exposure": 0,
+      "complete_updates": 0,
+      "final_arm_canonical_endpoint": 721724,
+      "first_update": null,
+      "last_update": null,
+      "phase_channel_exposure": {},
+      "rows": 0,
+      "starts_after_common_canonical_endpoint": 721724
+    }
+  },
+  "ledger_sha256": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f",
+  "loaded_mlx": false,
+  "loaded_torch": false,
+  "mode": "control",
+  "model_execution": "NONE",
+  "native_attempt": 3,
+  "native_head": "28298ad886aa321882aa0530a18421e7d4e3553e",
+  "paired_canonical_exposure": 721724,
+  "paired_complete_updates": 22,
+  "paired_native_rows": 9825,
+  "paired_phase_channel_exposure": {
+    "channel/empirical": 288692,
+    "channel/identity_minimal": 216547,
+    "channel/natural": 72151,
+    "channel/rules": 144334,
+    "phase/P0": 721724
+  },
+  "status": "PAIRED_ACTUAL_NATIVE_CONSUMPTION_REPRODUCED_FOR_EXACT_COMMON_PREFIX"
+}

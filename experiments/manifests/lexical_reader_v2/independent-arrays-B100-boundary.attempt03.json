@@ -1,0 +1,28 @@
+{
+  "FP32_model_parameters": 100686336,
+  "accumulator_nonzero_values": 0,
+  "arm": "B100",
+  "array_inventory": 525,
+  "arrays_sha256": "80bd14ebfa457c077aa8bd6ef7be7c30860f057dc4e6d186e20e862585860ce2",
+  "boundary_guard_audit": {
+    "altered_checkpoint_written_or_loaded": false,
+    "isolated_pure_CPU_guard_results": {
+      "counter": "REJECTED",
+      "gradient": "REJECTED",
+      "loss": "REJECTED"
+    },
+    "model_execution": "NONE",
+    "status": "REVIEWED_BOUNDARY_ACCUMULATOR_INCONSISTENCIES_REJECTED"
+  },
+  "checker_sha256": "575263785bf1aeb6ef300b06882f223b3860d0d8eab695bd95c9a253df1be240",
+  "checkpoint_manifest_sha256": "011710521f8be0796f6ddd6cf054d759efa32eda4be504ae2f1265fb7da797ed",
+  "elapsed_seconds": 1.802061,
+  "kind": "boundary",
+  "loaded_mlx": false,
+  "loaded_torch": false,
+  "metadata_sha256": "6c646d89ea6fa3507cd2c84029391aee66d4d911a13ed1c265644d8d397974d6",
+  "model_execution": "NONE",
+  "native_attempt": 3,
+  "reviewed_trainer_sha256": "53737be25e1a8d2210ed18f35250ffdb7b8fe66f7cd7dde3873fabd630f8f119",
+  "status": "VALID_SERIALIZED_CHECKPOINT_ARRAYS_INDEPENDENTLY_VERIFIED"
+}

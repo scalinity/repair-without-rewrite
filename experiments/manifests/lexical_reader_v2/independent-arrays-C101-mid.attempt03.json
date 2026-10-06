@@ -1,0 +1,19 @@
+{
+  "FP32_model_parameters": 101081859,
+  "accumulator_nonzero_values": 101070226,
+  "arm": "C101",
+  "array_inventory": 549,
+  "arrays_sha256": "4c06d64ae0fd3caf7cdde86c5a650f260b025598adc678428aaf506121872bbc",
+  "boundary_guard_audit": null,
+  "checker_sha256": "575263785bf1aeb6ef300b06882f223b3860d0d8eab695bd95c9a253df1be240",
+  "checkpoint_manifest_sha256": "ba768601c6d03adc0ef1c3b022fabbd136bf2816e8a3a2d1055677d6315b582c",
+  "elapsed_seconds": 1.584378,
+  "kind": "mid",
+  "loaded_mlx": false,
+  "loaded_torch": false,
+  "metadata_sha256": "0bd246d144a18b7c36074da2d4d6888b192467212e08ca39004b45c5b8a98dc0",
+  "model_execution": "NONE",
+  "native_attempt": 3,
+  "reviewed_trainer_sha256": "53737be25e1a8d2210ed18f35250ffdb7b8fe66f7cd7dde3873fabd630f8f119",
+  "status": "VALID_SERIALIZED_CHECKPOINT_ARRAYS_INDEPENDENTLY_VERIFIED"
+}

@@ -1,0 +1,1910 @@
+{
+  "accepted_sha256": {
+    "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+    "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": "d391197b246ce17512d9d2f293544623180eb539602897c6264f83a387d50713"
+  },
+  "actual_exposure": 5938207,
+  "actual_rows_checked": 79827,
+  "arm": "C101",
+  "bench_details": {
+    "actual_exposure_clock_continues_across_all_segments": true,
+    "final_selector_cursors": {
+      "P0": 120,
+      "P1": 48,
+      "P2": 13
+    },
+    "final_selector_phase_charges": {
+      "P0": 3943223,
+      "P1": 1583849,
+      "P2": 411135
+    },
+    "independently_reconstructed_segment_work": {
+      "sustained": {
+        "canonical_charge": 2493348,
+        "complete_updates": 76,
+        "decoder_event_positions": 371983,
+        "decoder_padding": 0,
+        "examples": 33540,
+        "padded_decoder_positions": 371983,
+        "padded_source_positions": 1890301,
+        "source_padding": 569704,
+        "source_positions": 1320597
+      },
+      "timed": {
+        "canonical_charge": 3280852,
+        "complete_updates": 100,
+        "decoder_event_positions": 489282,
+        "decoder_padding": 0,
+        "examples": 44107,
+        "padded_decoder_positions": 489282,
+        "padded_source_positions": 2492092,
+        "source_padding": 754239,
+        "source_positions": 1737853
+      },
+      "warmup": {
+        "canonical_charge": 164007,
+        "complete_updates": 5,
+        "decoder_event_positions": 24038,
+        "decoder_padding": 0,
+        "examples": 2180,
+        "padded_decoder_positions": 24038,
+        "padded_source_positions": 124552,
+        "source_padding": 37875,
+        "source_positions": 86677
+      }
+    },
+    "original_phase_charges_by_segment": {
+      "sustained": {
+        "P0": 1673166,
+        "P1": 656049,
+        "P2": 164133
+      },
+      "timed": {
+        "P0": 2165365,
+        "P1": 885768,
+        "P2": 229719
+      },
+      "warmup": {
+        "P0": 104692,
+        "P1": 42032,
+        "P2": 17283
+      }
+    },
+    "phase_interpretation": "original frozen presentation phase; not phase inferred from BENCH exposure clock"
+  },
+  "capture_sha256": {
+    "exports/lexical-reader-v2/bench-C101-attempt03/bench-config.json": "6a76659790098fab1a6444a7cb67b4ab66c2895484fb2f02ed01133e9bafcedb",
+    "exports/lexical-reader-v2/bench-C101-attempt03/final/COMPLETE.json": "c3bd6ee398c5463726442d6af5e309e4e5c9de2cfd9b0288649535988359be76",
+    "exports/lexical-reader-v2/bench-C101-attempt03/initial/COMPLETE.json": "0c77df8eb5f24d294cc4142031c9f6c75ed6ba9dcfeb7f6238600f6c42426d63",
+    "exports/lexical-reader-v2/bench-C101-attempt03/summary.json": "e2f133aea732ab93e00abcc77861d84786307e4d1584f6e1a83135aa169e711d",
+    "exports/lexical-reader-v2/bench-C101-attempt03/updates.jsonl": "4591a87e8c695b744e8b4421fbd8dca6f7ddc07ce554e55666c9ca7cbfb41a2f"
+  },
+  "checker_sha256": "c92923eac9f9129216bf7234c8dd1459816ceaf191484f9f0fbccb0c5ab478a2",
+  "complete_updates_checked": 181,
+  "elapsed_seconds": 14.064246,
+  "independent_BPE_checker_sha256": "e9b44d9eaf919e20c3ebd7d8f7b624175b5cbaa036879720a5e661608619064f",
+  "ledger_sha256": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f",
+  "loaded_mlx": false,
+  "loaded_torch": false,
+  "microbatch_size": 4,
+  "mode": "bench",
+  "model_execution": "NONE",
+  "native_attempt": 3,
+  "native_preflight_sha256": "3fc888a3f0cbf3a40d432f6acba247db06bc7e361b3760856d95ced5d1b9654f",
+  "queue_results": [
+    {
+      "canonical_charge": 32815,
+      "common_update_index": 0,
+      "cumulative_native_exposure": 32815,
+      "first_ordinal": 0,
+      "last_ordinal": 443,
+      "native_rows_checked": 444,
+      "status": "PASS",
+      "update": 1
+    },
+    {
+      "canonical_charge": 32796,
+      "common_update_index": 203,
+      "cumulative_native_exposure": 65611,
+      "first_ordinal": 90657,
+      "last_ordinal": 91100,
+      "native_rows_checked": 444,
+      "status": "PASS",
+      "update": 2
+    },
+    {
+      "canonical_charge": 32801,
+      "common_update_index": 1,
+      "cumulative_native_exposure": 98412,
+      "first_ordinal": 444,
+      "last_ordinal": 889,
+      "native_rows_checked": 446,
+      "status": "PASS",
+      "update": 3
+    },
+    {
+      "canonical_charge": 32811,
+      "common_update_index": 284,
+      "cumulative_native_exposure": 131223,
+      "first_ordinal": 126836,
+      "last_ordinal": 127234,
+      "native_rows_checked": 399,
+      "status": "PASS",
+      "update": 4
+    },
+    {
+      "canonical_charge": 32784,
+      "common_update_index": 2,
+      "cumulative_native_exposure": 164007,
+      "first_ordinal": 890,
+      "last_ordinal": 1336,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 5
+    },
+    {
+      "canonical_charge": 32800,
+      "common_update_index": 3,
+      "cumulative_native_exposure": 196807,
+      "first_ordinal": 1337,
+      "last_ordinal": 1784,
+      "native_rows_checked": 448,
+      "status": "PASS",
+      "update": 6
+    },
+    {
+      "canonical_charge": 32773,
+      "common_update_index": 204,
+      "cumulative_native_exposure": 229580,
+      "first_ordinal": 91101,
+      "last_ordinal": 91548,
+      "native_rows_checked": 448,
+      "status": "PASS",
+      "update": 7
+    },
+    {
+      "canonical_charge": 32812,
+      "common_update_index": 4,
+      "cumulative_native_exposure": 262392,
+      "first_ordinal": 1785,
+      "last_ordinal": 2224,
+      "native_rows_checked": 440,
+      "status": "PASS",
+      "update": 8
+    },
+    {
+      "canonical_charge": 32813,
+      "common_update_index": 5,
+      "cumulative_native_exposure": 295205,
+      "first_ordinal": 2225,
+      "last_ordinal": 2675,
+      "native_rows_checked": 451,
+      "status": "PASS",
+      "update": 9
+    },
+    {
+      "canonical_charge": 32830,
+      "common_update_index": 205,
+      "cumulative_native_exposure": 328035,
+      "first_ordinal": 91549,
+      "last_ordinal": 91991,
+      "native_rows_checked": 443,
+      "status": "PASS",
+      "update": 10
+    },
+    {
+      "canonical_charge": 32887,
+      "common_update_index": 6,
+      "cumulative_native_exposure": 360922,
+      "first_ordinal": 2676,
+      "last_ordinal": 3123,
+      "native_rows_checked": 448,
+      "status": "PASS",
+      "update": 11
+    },
+    {
+      "canonical_charge": 32856,
+      "common_update_index": 285,
+      "cumulative_native_exposure": 393778,
+      "first_ordinal": 127235,
+      "last_ordinal": 127599,
+      "native_rows_checked": 365,
+      "status": "PASS",
+      "update": 12
+    },
+    {
+      "canonical_charge": 32802,
+      "common_update_index": 7,
+      "cumulative_native_exposure": 426580,
+      "first_ordinal": 3124,
+      "last_ordinal": 3571,
+      "native_rows_checked": 448,
+      "status": "PASS",
+      "update": 13
+    },
+    {
+      "canonical_charge": 32768,
+      "common_update_index": 8,
+      "cumulative_native_exposure": 459348,
+      "first_ordinal": 3572,
+      "last_ordinal": 4021,
+      "native_rows_checked": 450,
+      "status": "PASS",
+      "update": 14
+    },
+    {
+      "canonical_charge": 32792,
+      "common_update_index": 206,
+      "cumulative_native_exposure": 492140,
+      "first_ordinal": 91992,
+      "last_ordinal": 92441,
+      "native_rows_checked": 450,
+      "status": "PASS",
+      "update": 15
+    },
+    {
+      "canonical_charge": 32811,
+      "common_update_index": 9,
+      "cumulative_native_exposure": 524951,
+      "first_ordinal": 4022,
+      "last_ordinal": 4465,
+      "native_rows_checked": 444,
+      "status": "PASS",
+      "update": 16
+    },
+    {
+      "canonical_charge": 32782,
+      "common_update_index": 10,
+      "cumulative_native_exposure": 557733,
+      "first_ordinal": 4466,
+      "last_ordinal": 4913,
+      "native_rows_checked": 448,
+      "status": "PASS",
+      "update": 17
+    },
+    {
+      "canonical_charge": 32783,
+      "common_update_index": 207,
+      "cumulative_native_exposure": 590516,
+      "first_ordinal": 92442,
+      "last_ordinal": 92886,
+      "native_rows_checked": 445,
+      "status": "PASS",
+      "update": 18
+    },
+    {
+      "canonical_charge": 32838,
+      "common_update_index": 11,
+      "cumulative_native_exposure": 623354,
+      "first_ordinal": 4914,
+      "last_ordinal": 5358,
+      "native_rows_checked": 445,
+      "status": "PASS",
+      "update": 19
+    },
+    {
+      "canonical_charge": 32773,
+      "common_update_index": 12,
+      "cumulative_native_exposure": 656127,
+      "first_ordinal": 5359,
+      "last_ordinal": 5801,
+      "native_rows_checked": 443,
+      "status": "PASS",
+      "update": 20
+    },
+    {
+      "canonical_charge": 32886,
+      "common_update_index": 13,
+      "cumulative_native_exposure": 689013,
+      "first_ordinal": 5802,
+      "last_ordinal": 6248,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 21
+    },
+    {
+      "canonical_charge": 32818,
+      "common_update_index": 208,
+      "cumulative_native_exposure": 721831,
+      "first_ordinal": 92887,
+      "last_ordinal": 93338,
+      "native_rows_checked": 452,
+      "status": "PASS",
+      "update": 22
+    },
+    {
+      "canonical_charge": 32768,
+      "common_update_index": 14,
+      "cumulative_native_exposure": 754599,
+      "first_ordinal": 6249,
+      "last_ordinal": 6695,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 23
+    },
+    {
+      "canonical_charge": 32817,
+      "common_update_index": 15,
+      "cumulative_native_exposure": 787416,
+      "first_ordinal": 6696,
+      "last_ordinal": 7132,
+      "native_rows_checked": 437,
+      "status": "PASS",
+      "update": 24
+    },
+    {
+      "canonical_charge": 32862,
+      "common_update_index": 209,
+      "cumulative_native_exposure": 820278,
+      "first_ordinal": 93339,
+      "last_ordinal": 93785,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 25
+    },
+    {
+      "canonical_charge": 32813,
+      "common_update_index": 16,
+      "cumulative_native_exposure": 853091,
+      "first_ordinal": 7133,
+      "last_ordinal": 7580,
+      "native_rows_checked": 448,
+      "status": "PASS",
+      "update": 26
+    },
+    {
+      "canonical_charge": 32837,
+      "common_update_index": 286,
+      "cumulative_native_exposure": 885928,
+      "first_ordinal": 127600,
+      "last_ordinal": 127967,
+      "native_rows_checked": 368,
+      "status": "PASS",
+      "update": 27
+    },
+    {
+      "canonical_charge": 32768,
+      "common_update_index": 17,
+      "cumulative_native_exposure": 918696,
+      "first_ordinal": 7581,
+      "last_ordinal": 8034,
+      "native_rows_checked": 454,
+      "status": "PASS",
+      "update": 28
+    },
+    {
+      "canonical_charge": 32796,
+      "common_update_index": 18,
+      "cumulative_native_exposure": 951492,
+      "first_ordinal": 8035,
+      "last_ordinal": 8477,
+      "native_rows_checked": 443,
+      "status": "PASS",
+      "update": 29
+    },
+    {
+      "canonical_charge": 32770,
+      "common_update_index": 210,
+      "cumulative_native_exposure": 984262,
+      "first_ordinal": 93786,
+      "last_ordinal": 94232,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 30
+    },
+    {
+      "canonical_charge": 32817,
+      "common_update_index": 19,
+      "cumulative_native_exposure": 1017079,
+      "first_ordinal": 8478,
+      "last_ordinal": 8927,
+      "native_rows_checked": 450,
+      "status": "PASS",
+      "update": 31
+    },
+    {
+      "canonical_charge": 32784,
+      "common_update_index": 20,
+      "cumulative_native_exposure": 1049863,
+      "first_ordinal": 8928,
+      "last_ordinal": 9377,
+      "native_rows_checked": 450,
+      "status": "PASS",
+      "update": 32
+    },
+    {
+      "canonical_charge": 32806,
+      "common_update_index": 211,
+      "cumulative_native_exposure": 1082669,
+      "first_ordinal": 94233,
+      "last_ordinal": 94672,
+      "native_rows_checked": 440,
+      "status": "PASS",
+      "update": 33
+    },
+    {
+      "canonical_charge": 32789,
+      "common_update_index": 21,
+      "cumulative_native_exposure": 1115458,
+      "first_ordinal": 9378,
+      "last_ordinal": 9824,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 34
+    },
+    {
+      "canonical_charge": 32826,
+      "common_update_index": 22,
+      "cumulative_native_exposure": 1148284,
+      "first_ordinal": 9825,
+      "last_ordinal": 10271,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 35
+    },
+    {
+      "canonical_charge": 32827,
+      "common_update_index": 23,
+      "cumulative_native_exposure": 1181111,
+      "first_ordinal": 10272,
+      "last_ordinal": 10717,
+      "native_rows_checked": 446,
+      "status": "PASS",
+      "update": 36
+    },
+    {
+      "canonical_charge": 32833,
+      "common_update_index": 212,
+      "cumulative_native_exposure": 1213944,
+      "first_ordinal": 94673,
+      "last_ordinal": 95120,
+      "native_rows_checked": 448,
+      "status": "PASS",
+      "update": 37
+    },
+    {
+      "canonical_charge": 32834,
+      "common_update_index": 24,
+      "cumulative_native_exposure": 1246778,
+      "first_ordinal": 10718,
+      "last_ordinal": 11159,
+      "native_rows_checked": 442,
+      "status": "PASS",
+      "update": 38
+    },
+    {
+      "canonical_charge": 32830,
+      "common_update_index": 25,
+      "cumulative_native_exposure": 1279608,
+      "first_ordinal": 11160,
+      "last_ordinal": 11602,
+      "native_rows_checked": 443,
+      "status": "PASS",
+      "update": 39
+    },
+    {
+      "canonical_charge": 32799,
+      "common_update_index": 213,
+      "cumulative_native_exposure": 1312407,
+      "first_ordinal": 95121,
+      "last_ordinal": 95556,
+      "native_rows_checked": 436,
+      "status": "PASS",
+      "update": 40
+    },
+    {
+      "canonical_charge": 32851,
+      "common_update_index": 26,
+      "cumulative_native_exposure": 1345258,
+      "first_ordinal": 11603,
+      "last_ordinal": 12049,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 41
+    },
+    {
+      "canonical_charge": 32794,
+      "common_update_index": 287,
+      "cumulative_native_exposure": 1378052,
+      "first_ordinal": 127968,
+      "last_ordinal": 128334,
+      "native_rows_checked": 367,
+      "status": "PASS",
+      "update": 42
+    },
+    {
+      "canonical_charge": 32806,
+      "common_update_index": 27,
+      "cumulative_native_exposure": 1410858,
+      "first_ordinal": 12050,
+      "last_ordinal": 12496,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 43
+    },
+    {
+      "canonical_charge": 32782,
+      "common_update_index": 28,
+      "cumulative_native_exposure": 1443640,
+      "first_ordinal": 12497,
+      "last_ordinal": 12946,
+      "native_rows_checked": 450,
+      "status": "PASS",
+      "update": 44
+    },
+    {
+      "canonical_charge": 32807,
+      "common_update_index": 214,
+      "cumulative_native_exposure": 1476447,
+      "first_ordinal": 95557,
+      "last_ordinal": 96001,
+      "native_rows_checked": 445,
+      "status": "PASS",
+      "update": 45
+    },
+    {
+      "canonical_charge": 32859,
+      "common_update_index": 29,
+      "cumulative_native_exposure": 1509306,
+      "first_ordinal": 12947,
+      "last_ordinal": 13389,
+      "native_rows_checked": 443,
+      "status": "PASS",
+      "update": 46
+    },
+    {
+      "canonical_charge": 32810,
+      "common_update_index": 30,
+      "cumulative_native_exposure": 1542116,
+      "first_ordinal": 13390,
+      "last_ordinal": 13838,
+      "native_rows_checked": 449,
+      "status": "PASS",
+      "update": 47
+    },
+    {
+      "canonical_charge": 32799,
+      "common_update_index": 215,
+      "cumulative_native_exposure": 1574915,
+      "first_ordinal": 96002,
+      "last_ordinal": 96442,
+      "native_rows_checked": 441,
+      "status": "PASS",
+      "update": 48
+    },
+    {
+      "canonical_charge": 32825,
+      "common_update_index": 31,
+      "cumulative_native_exposure": 1607740,
+      "first_ordinal": 13839,
+      "last_ordinal": 14288,
+      "native_rows_checked": 450,
+      "status": "PASS",
+      "update": 49
+    },
+    {
+      "canonical_charge": 32776,
+      "common_update_index": 32,
+      "cumulative_native_exposure": 1640516,
+      "first_ordinal": 14289,
+      "last_ordinal": 14737,
+      "native_rows_checked": 449,
+      "status": "PASS",
+      "update": 50
+    },
+    {
+      "canonical_charge": 32850,
+      "common_update_index": 33,
+      "cumulative_native_exposure": 1673366,
+      "first_ordinal": 14738,
+      "last_ordinal": 15182,
+      "native_rows_checked": 445,
+      "status": "PASS",
+      "update": 51
+    },
+    {
+      "canonical_charge": 32798,
+      "common_update_index": 216,
+      "cumulative_native_exposure": 1706164,
+      "first_ordinal": 96443,
+      "last_ordinal": 96895,
+      "native_rows_checked": 453,
+      "status": "PASS",
+      "update": 52
+    },
+    {
+      "canonical_charge": 32826,
+      "common_update_index": 34,
+      "cumulative_native_exposure": 1738990,
+      "first_ordinal": 15183,
+      "last_ordinal": 15627,
+      "native_rows_checked": 445,
+      "status": "PASS",
+      "update": 53
+    },
+    {
+      "canonical_charge": 32825,
+      "common_update_index": 35,
+      "cumulative_native_exposure": 1771815,
+      "first_ordinal": 15628,
+      "last_ordinal": 16070,
+      "native_rows_checked": 443,
+      "status": "PASS",
+      "update": 54
+    },
+    {
+      "canonical_charge": 32788,
+      "common_update_index": 217,
+      "cumulative_native_exposure": 1804603,
+      "first_ordinal": 96896,
+      "last_ordinal": 97348,
+      "native_rows_checked": 453,
+      "status": "PASS",
+      "update": 55
+    },
+    {
+      "canonical_charge": 32819,
+      "common_update_index": 36,
+      "cumulative_native_exposure": 1837422,
+      "first_ordinal": 16071,
+      "last_ordinal": 16508,
+      "native_rows_checked": 438,
+      "status": "PASS",
+      "update": 56
+    },
+    {
+      "canonical_charge": 32820,
+      "common_update_index": 288,
+      "cumulative_native_exposure": 1870242,
+      "first_ordinal": 128335,
+      "last_ordinal": 128702,
+      "native_rows_checked": 368,
+      "status": "PASS",
+      "update": 57
+    },
+    {
+      "canonical_charge": 32803,
+      "common_update_index": 37,
+      "cumulative_native_exposure": 1903045,
+      "first_ordinal": 16509,
+      "last_ordinal": 16958,
+      "native_rows_checked": 450,
+      "status": "PASS",
+      "update": 58
+    },
+    {
+      "canonical_charge": 32830,
+      "common_update_index": 38,
+      "cumulative_native_exposure": 1935875,
+      "first_ordinal": 16959,
+      "last_ordinal": 17407,
+      "native_rows_checked": 449,
+      "status": "PASS",
+      "update": 59
+    },
+    {
+      "canonical_charge": 32805,
+      "common_update_index": 218,
+      "cumulative_native_exposure": 1968680,
+      "first_ordinal": 97349,
+      "last_ordinal": 97794,
+      "native_rows_checked": 446,
+      "status": "PASS",
+      "update": 60
+    },
+    {
+      "canonical_charge": 32847,
+      "common_update_index": 39,
+      "cumulative_native_exposure": 2001527,
+      "first_ordinal": 17408,
+      "last_ordinal": 17856,
+      "native_rows_checked": 449,
+      "status": "PASS",
+      "update": 61
+    },
+    {
+      "canonical_charge": 32772,
+      "common_update_index": 40,
+      "cumulative_native_exposure": 2034299,
+      "first_ordinal": 17857,
+      "last_ordinal": 18303,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 62
+    },
+    {
+      "canonical_charge": 32855,
+      "common_update_index": 219,
+      "cumulative_native_exposure": 2067154,
+      "first_ordinal": 97795,
+      "last_ordinal": 98244,
+      "native_rows_checked": 450,
+      "status": "PASS",
+      "update": 63
+    },
+    {
+      "canonical_charge": 32784,
+      "common_update_index": 41,
+      "cumulative_native_exposure": 2099938,
+      "first_ordinal": 18304,
+      "last_ordinal": 18747,
+      "native_rows_checked": 444,
+      "status": "PASS",
+      "update": 64
+    },
+    {
+      "canonical_charge": 32831,
+      "common_update_index": 42,
+      "cumulative_native_exposure": 2132769,
+      "first_ordinal": 18748,
+      "last_ordinal": 19197,
+      "native_rows_checked": 450,
+      "status": "PASS",
+      "update": 65
+    },
+    {
+      "canonical_charge": 32773,
+      "common_update_index": 43,
+      "cumulative_native_exposure": 2165542,
+      "first_ordinal": 19198,
+      "last_ordinal": 19647,
+      "native_rows_checked": 450,
+      "status": "PASS",
+      "update": 66
+    },
+    {
+      "canonical_charge": 32812,
+      "common_update_index": 220,
+      "cumulative_native_exposure": 2198354,
+      "first_ordinal": 98245,
+      "last_ordinal": 98691,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 67
+    },
+    {
+      "canonical_charge": 32776,
+      "common_update_index": 44,
+      "cumulative_native_exposure": 2231130,
+      "first_ordinal": 19648,
+      "last_ordinal": 20084,
+      "native_rows_checked": 437,
+      "status": "PASS",
+      "update": 68
+    },
+    {
+      "canonical_charge": 32774,
+      "common_update_index": 45,
+      "cumulative_native_exposure": 2263904,
+      "first_ordinal": 20085,
+      "last_ordinal": 20532,
+      "native_rows_checked": 448,
+      "status": "PASS",
+      "update": 69
+    },
+    {
+      "canonical_charge": 32789,
+      "common_update_index": 221,
+      "cumulative_native_exposure": 2296693,
+      "first_ordinal": 98692,
+      "last_ordinal": 99138,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 70
+    },
+    {
+      "canonical_charge": 32800,
+      "common_update_index": 46,
+      "cumulative_native_exposure": 2329493,
+      "first_ordinal": 20533,
+      "last_ordinal": 20982,
+      "native_rows_checked": 450,
+      "status": "PASS",
+      "update": 71
+    },
+    {
+      "canonical_charge": 32801,
+      "common_update_index": 289,
+      "cumulative_native_exposure": 2362294,
+      "first_ordinal": 128703,
+      "last_ordinal": 129072,
+      "native_rows_checked": 370,
+      "status": "PASS",
+      "update": 72
+    },
+    {
+      "canonical_charge": 32772,
+      "common_update_index": 47,
+      "cumulative_native_exposure": 2395066,
+      "first_ordinal": 20983,
+      "last_ordinal": 21431,
+      "native_rows_checked": 449,
+      "status": "PASS",
+      "update": 73
+    },
+    {
+      "canonical_charge": 32771,
+      "common_update_index": 48,
+      "cumulative_native_exposure": 2427837,
+      "first_ordinal": 21432,
+      "last_ordinal": 21874,
+      "native_rows_checked": 443,
+      "status": "PASS",
+      "update": 74
+    },
+    {
+      "canonical_charge": 32799,
+      "common_update_index": 222,
+      "cumulative_native_exposure": 2460636,
+      "first_ordinal": 99139,
+      "last_ordinal": 99583,
+      "native_rows_checked": 445,
+      "status": "PASS",
+      "update": 75
+    },
+    {
+      "canonical_charge": 32798,
+      "common_update_index": 49,
+      "cumulative_native_exposure": 2493434,
+      "first_ordinal": 21875,
+      "last_ordinal": 22328,
+      "native_rows_checked": 454,
+      "status": "PASS",
+      "update": 76
+    },
+    {
+      "canonical_charge": 32789,
+      "common_update_index": 50,
+      "cumulative_native_exposure": 2526223,
+      "first_ordinal": 22329,
+      "last_ordinal": 22769,
+      "native_rows_checked": 441,
+      "status": "PASS",
+      "update": 77
+    },
+    {
+      "canonical_charge": 32794,
+      "common_update_index": 223,
+      "cumulative_native_exposure": 2559017,
+      "first_ordinal": 99584,
+      "last_ordinal": 100027,
+      "native_rows_checked": 444,
+      "status": "PASS",
+      "update": 78
+    },
+    {
+      "canonical_charge": 32778,
+      "common_update_index": 51,
+      "cumulative_native_exposure": 2591795,
+      "first_ordinal": 22770,
+      "last_ordinal": 23219,
+      "native_rows_checked": 450,
+      "status": "PASS",
+      "update": 79
+    },
+    {
+      "canonical_charge": 32780,
+      "common_update_index": 52,
+      "cumulative_native_exposure": 2624575,
+      "first_ordinal": 23220,
+      "last_ordinal": 23672,
+      "native_rows_checked": 453,
+      "status": "PASS",
+      "update": 80
+    },
+    {
+      "canonical_charge": 32789,
+      "common_update_index": 53,
+      "cumulative_native_exposure": 2657364,
+      "first_ordinal": 23673,
+      "last_ordinal": 24113,
+      "native_rows_checked": 441,
+      "status": "PASS",
+      "update": 81
+    },
+    {
+      "canonical_charge": 32768,
+      "common_update_index": 224,
+      "cumulative_native_exposure": 2690132,
+      "first_ordinal": 100028,
+      "last_ordinal": 100476,
+      "native_rows_checked": 449,
+      "status": "PASS",
+      "update": 82
+    },
+    {
+      "canonical_charge": 32816,
+      "common_update_index": 54,
+      "cumulative_native_exposure": 2722948,
+      "first_ordinal": 24114,
+      "last_ordinal": 24559,
+      "native_rows_checked": 446,
+      "status": "PASS",
+      "update": 83
+    },
+    {
+      "canonical_charge": 32789,
+      "common_update_index": 55,
+      "cumulative_native_exposure": 2755737,
+      "first_ordinal": 24560,
+      "last_ordinal": 24997,
+      "native_rows_checked": 438,
+      "status": "PASS",
+      "update": 84
+    },
+    {
+      "canonical_charge": 32816,
+      "common_update_index": 225,
+      "cumulative_native_exposure": 2788553,
+      "first_ordinal": 100477,
+      "last_ordinal": 100922,
+      "native_rows_checked": 446,
+      "status": "PASS",
+      "update": 85
+    },
+    {
+      "canonical_charge": 32796,
+      "common_update_index": 56,
+      "cumulative_native_exposure": 2821349,
+      "first_ordinal": 24998,
+      "last_ordinal": 25437,
+      "native_rows_checked": 440,
+      "status": "PASS",
+      "update": 86
+    },
+    {
+      "canonical_charge": 32807,
+      "common_update_index": 290,
+      "cumulative_native_exposure": 2854156,
+      "first_ordinal": 129073,
+      "last_ordinal": 129447,
+      "native_rows_checked": 375,
+      "status": "PASS",
+      "update": 87
+    },
+    {
+      "canonical_charge": 32787,
+      "common_update_index": 57,
+      "cumulative_native_exposure": 2886943,
+      "first_ordinal": 25438,
+      "last_ordinal": 25882,
+      "native_rows_checked": 445,
+      "status": "PASS",
+      "update": 88
+    },
+    {
+      "canonical_charge": 32794,
+      "common_update_index": 58,
+      "cumulative_native_exposure": 2919737,
+      "first_ordinal": 25883,
+      "last_ordinal": 26327,
+      "native_rows_checked": 445,
+      "status": "PASS",
+      "update": 89
+    },
+    {
+      "canonical_charge": 32822,
+      "common_update_index": 226,
+      "cumulative_native_exposure": 2952559,
+      "first_ordinal": 100923,
+      "last_ordinal": 101366,
+      "native_rows_checked": 444,
+      "status": "PASS",
+      "update": 90
+    },
+    {
+      "canonical_charge": 32783,
+      "common_update_index": 59,
+      "cumulative_native_exposure": 2985342,
+      "first_ordinal": 26328,
+      "last_ordinal": 26775,
+      "native_rows_checked": 448,
+      "status": "PASS",
+      "update": 91
+    },
+    {
+      "canonical_charge": 32828,
+      "common_update_index": 60,
+      "cumulative_native_exposure": 3018170,
+      "first_ordinal": 26776,
+      "last_ordinal": 27230,
+      "native_rows_checked": 455,
+      "status": "PASS",
+      "update": 92
+    },
+    {
+      "canonical_charge": 32845,
+      "common_update_index": 227,
+      "cumulative_native_exposure": 3051015,
+      "first_ordinal": 101367,
+      "last_ordinal": 101819,
+      "native_rows_checked": 453,
+      "status": "PASS",
+      "update": 93
+    },
+    {
+      "canonical_charge": 32858,
+      "common_update_index": 61,
+      "cumulative_native_exposure": 3083873,
+      "first_ordinal": 27231,
+      "last_ordinal": 27681,
+      "native_rows_checked": 451,
+      "status": "PASS",
+      "update": 94
+    },
+    {
+      "canonical_charge": 32789,
+      "common_update_index": 62,
+      "cumulative_native_exposure": 3116662,
+      "first_ordinal": 27682,
+      "last_ordinal": 28123,
+      "native_rows_checked": 442,
+      "status": "PASS",
+      "update": 95
+    },
+    {
+      "canonical_charge": 32837,
+      "common_update_index": 63,
+      "cumulative_native_exposure": 3149499,
+      "first_ordinal": 28124,
+      "last_ordinal": 28574,
+      "native_rows_checked": 451,
+      "status": "PASS",
+      "update": 96
+    },
+    {
+      "canonical_charge": 32776,
+      "common_update_index": 228,
+      "cumulative_native_exposure": 3182275,
+      "first_ordinal": 101820,
+      "last_ordinal": 102266,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 97
+    },
+    {
+      "canonical_charge": 32874,
+      "common_update_index": 64,
+      "cumulative_native_exposure": 3215149,
+      "first_ordinal": 28575,
+      "last_ordinal": 29028,
+      "native_rows_checked": 454,
+      "status": "PASS",
+      "update": 98
+    },
+    {
+      "canonical_charge": 32789,
+      "common_update_index": 65,
+      "cumulative_native_exposure": 3247938,
+      "first_ordinal": 29029,
+      "last_ordinal": 29473,
+      "native_rows_checked": 445,
+      "status": "PASS",
+      "update": 99
+    },
+    {
+      "canonical_charge": 32818,
+      "common_update_index": 229,
+      "cumulative_native_exposure": 3280756,
+      "first_ordinal": 102267,
+      "last_ordinal": 102710,
+      "native_rows_checked": 444,
+      "status": "PASS",
+      "update": 100
+    },
+    {
+      "canonical_charge": 32878,
+      "common_update_index": 66,
+      "cumulative_native_exposure": 3313634,
+      "first_ordinal": 29474,
+      "last_ordinal": 29919,
+      "native_rows_checked": 446,
+      "status": "PASS",
+      "update": 101
+    },
+    {
+      "canonical_charge": 32804,
+      "common_update_index": 291,
+      "cumulative_native_exposure": 3346438,
+      "first_ordinal": 129448,
+      "last_ordinal": 129808,
+      "native_rows_checked": 361,
+      "status": "PASS",
+      "update": 102
+    },
+    {
+      "canonical_charge": 32833,
+      "common_update_index": 67,
+      "cumulative_native_exposure": 3379271,
+      "first_ordinal": 29920,
+      "last_ordinal": 30361,
+      "native_rows_checked": 442,
+      "status": "PASS",
+      "update": 103
+    },
+    {
+      "canonical_charge": 32777,
+      "common_update_index": 68,
+      "cumulative_native_exposure": 3412048,
+      "first_ordinal": 30362,
+      "last_ordinal": 30814,
+      "native_rows_checked": 453,
+      "status": "PASS",
+      "update": 104
+    },
+    {
+      "canonical_charge": 32811,
+      "common_update_index": 230,
+      "cumulative_native_exposure": 3444859,
+      "first_ordinal": 102711,
+      "last_ordinal": 103155,
+      "native_rows_checked": 445,
+      "status": "PASS",
+      "update": 105
+    },
+    {
+      "canonical_charge": 32825,
+      "common_update_index": 69,
+      "cumulative_native_exposure": 3477684,
+      "first_ordinal": 30815,
+      "last_ordinal": 31255,
+      "native_rows_checked": 441,
+      "status": "PASS",
+      "update": 106
+    },
+    {
+      "canonical_charge": 32880,
+      "common_update_index": 70,
+      "cumulative_native_exposure": 3510564,
+      "first_ordinal": 31256,
+      "last_ordinal": 31700,
+      "native_rows_checked": 445,
+      "status": "PASS",
+      "update": 107
+    },
+    {
+      "canonical_charge": 32768,
+      "common_update_index": 231,
+      "cumulative_native_exposure": 3543332,
+      "first_ordinal": 103156,
+      "last_ordinal": 103602,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 108
+    },
+    {
+      "canonical_charge": 32809,
+      "common_update_index": 71,
+      "cumulative_native_exposure": 3576141,
+      "first_ordinal": 31701,
+      "last_ordinal": 32156,
+      "native_rows_checked": 456,
+      "status": "PASS",
+      "update": 109
+    },
+    {
+      "canonical_charge": 32780,
+      "common_update_index": 72,
+      "cumulative_native_exposure": 3608921,
+      "first_ordinal": 32157,
+      "last_ordinal": 32594,
+      "native_rows_checked": 438,
+      "status": "PASS",
+      "update": 110
+    },
+    {
+      "canonical_charge": 32890,
+      "common_update_index": 73,
+      "cumulative_native_exposure": 3641811,
+      "first_ordinal": 32595,
+      "last_ordinal": 33045,
+      "native_rows_checked": 451,
+      "status": "PASS",
+      "update": 111
+    },
+    {
+      "canonical_charge": 32836,
+      "common_update_index": 232,
+      "cumulative_native_exposure": 3674647,
+      "first_ordinal": 103603,
+      "last_ordinal": 104051,
+      "native_rows_checked": 449,
+      "status": "PASS",
+      "update": 112
+    },
+    {
+      "canonical_charge": 32859,
+      "common_update_index": 74,
+      "cumulative_native_exposure": 3707506,
+      "first_ordinal": 33046,
+      "last_ordinal": 33490,
+      "native_rows_checked": 445,
+      "status": "PASS",
+      "update": 113
+    },
+    {
+      "canonical_charge": 32774,
+      "common_update_index": 75,
+      "cumulative_native_exposure": 3740280,
+      "first_ordinal": 33491,
+      "last_ordinal": 33941,
+      "native_rows_checked": 451,
+      "status": "PASS",
+      "update": 114
+    },
+    {
+      "canonical_charge": 32788,
+      "common_update_index": 233,
+      "cumulative_native_exposure": 3773068,
+      "first_ordinal": 104052,
+      "last_ordinal": 104501,
+      "native_rows_checked": 450,
+      "status": "PASS",
+      "update": 115
+    },
+    {
+      "canonical_charge": 32812,
+      "common_update_index": 76,
+      "cumulative_native_exposure": 3805880,
+      "first_ordinal": 33942,
+      "last_ordinal": 34384,
+      "native_rows_checked": 443,
+      "status": "PASS",
+      "update": 116
+    },
+    {
+      "canonical_charge": 32817,
+      "common_update_index": 292,
+      "cumulative_native_exposure": 3838697,
+      "first_ordinal": 129809,
+      "last_ordinal": 130181,
+      "native_rows_checked": 373,
+      "status": "PASS",
+      "update": 117
+    },
+    {
+      "canonical_charge": 32852,
+      "common_update_index": 77,
+      "cumulative_native_exposure": 3871549,
+      "first_ordinal": 34385,
+      "last_ordinal": 34836,
+      "native_rows_checked": 452,
+      "status": "PASS",
+      "update": 118
+    },
+    {
+      "canonical_charge": 32809,
+      "common_update_index": 78,
+      "cumulative_native_exposure": 3904358,
+      "first_ordinal": 34837,
+      "last_ordinal": 35279,
+      "native_rows_checked": 443,
+      "status": "PASS",
+      "update": 119
+    },
+    {
+      "canonical_charge": 32807,
+      "common_update_index": 234,
+      "cumulative_native_exposure": 3937165,
+      "first_ordinal": 104502,
+      "last_ordinal": 104945,
+      "native_rows_checked": 444,
+      "status": "PASS",
+      "update": 120
+    },
+    {
+      "canonical_charge": 32808,
+      "common_update_index": 79,
+      "cumulative_native_exposure": 3969973,
+      "first_ordinal": 35280,
+      "last_ordinal": 35726,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 121
+    },
+    {
+      "canonical_charge": 32818,
+      "common_update_index": 80,
+      "cumulative_native_exposure": 4002791,
+      "first_ordinal": 35727,
+      "last_ordinal": 36175,
+      "native_rows_checked": 449,
+      "status": "PASS",
+      "update": 122
+    },
+    {
+      "canonical_charge": 32859,
+      "common_update_index": 235,
+      "cumulative_native_exposure": 4035650,
+      "first_ordinal": 104946,
+      "last_ordinal": 105392,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 123
+    },
+    {
+      "canonical_charge": 32823,
+      "common_update_index": 81,
+      "cumulative_native_exposure": 4068473,
+      "first_ordinal": 36176,
+      "last_ordinal": 36620,
+      "native_rows_checked": 445,
+      "status": "PASS",
+      "update": 124
+    },
+    {
+      "canonical_charge": 32820,
+      "common_update_index": 82,
+      "cumulative_native_exposure": 4101293,
+      "first_ordinal": 36621,
+      "last_ordinal": 37071,
+      "native_rows_checked": 451,
+      "status": "PASS",
+      "update": 125
+    },
+    {
+      "canonical_charge": 32820,
+      "common_update_index": 83,
+      "cumulative_native_exposure": 4134113,
+      "first_ordinal": 37072,
+      "last_ordinal": 37514,
+      "native_rows_checked": 443,
+      "status": "PASS",
+      "update": 126
+    },
+    {
+      "canonical_charge": 32811,
+      "common_update_index": 236,
+      "cumulative_native_exposure": 4166924,
+      "first_ordinal": 105393,
+      "last_ordinal": 105826,
+      "native_rows_checked": 434,
+      "status": "PASS",
+      "update": 127
+    },
+    {
+      "canonical_charge": 32791,
+      "common_update_index": 84,
+      "cumulative_native_exposure": 4199715,
+      "first_ordinal": 37515,
+      "last_ordinal": 37956,
+      "native_rows_checked": 442,
+      "status": "PASS",
+      "update": 128
+    },
+    {
+      "canonical_charge": 32805,
+      "common_update_index": 85,
+      "cumulative_native_exposure": 4232520,
+      "first_ordinal": 37957,
+      "last_ordinal": 38410,
+      "native_rows_checked": 454,
+      "status": "PASS",
+      "update": 129
+    },
+    {
+      "canonical_charge": 32796,
+      "common_update_index": 237,
+      "cumulative_native_exposure": 4265316,
+      "first_ordinal": 105827,
+      "last_ordinal": 106278,
+      "native_rows_checked": 452,
+      "status": "PASS",
+      "update": 130
+    },
+    {
+      "canonical_charge": 32799,
+      "common_update_index": 86,
+      "cumulative_native_exposure": 4298115,
+      "first_ordinal": 38411,
+      "last_ordinal": 38865,
+      "native_rows_checked": 455,
+      "status": "PASS",
+      "update": 131
+    },
+    {
+      "canonical_charge": 32775,
+      "common_update_index": 293,
+      "cumulative_native_exposure": 4330890,
+      "first_ordinal": 130182,
+      "last_ordinal": 130547,
+      "native_rows_checked": 366,
+      "status": "PASS",
+      "update": 132
+    },
+    {
+      "canonical_charge": 32778,
+      "common_update_index": 87,
+      "cumulative_native_exposure": 4363668,
+      "first_ordinal": 38866,
+      "last_ordinal": 39311,
+      "native_rows_checked": 446,
+      "status": "PASS",
+      "update": 133
+    },
+    {
+      "canonical_charge": 32768,
+      "common_update_index": 88,
+      "cumulative_native_exposure": 4396436,
+      "first_ordinal": 39312,
+      "last_ordinal": 39756,
+      "native_rows_checked": 445,
+      "status": "PASS",
+      "update": 134
+    },
+    {
+      "canonical_charge": 32789,
+      "common_update_index": 238,
+      "cumulative_native_exposure": 4429225,
+      "first_ordinal": 106279,
+      "last_ordinal": 106725,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 135
+    },
+    {
+      "canonical_charge": 32791,
+      "common_update_index": 89,
+      "cumulative_native_exposure": 4462016,
+      "first_ordinal": 39757,
+      "last_ordinal": 40201,
+      "native_rows_checked": 445,
+      "status": "PASS",
+      "update": 136
+    },
+    {
+      "canonical_charge": 32812,
+      "common_update_index": 90,
+      "cumulative_native_exposure": 4494828,
+      "first_ordinal": 40202,
+      "last_ordinal": 40644,
+      "native_rows_checked": 443,
+      "status": "PASS",
+      "update": 137
+    },
+    {
+      "canonical_charge": 32780,
+      "common_update_index": 239,
+      "cumulative_native_exposure": 4527608,
+      "first_ordinal": 106726,
+      "last_ordinal": 107182,
+      "native_rows_checked": 457,
+      "status": "PASS",
+      "update": 138
+    },
+    {
+      "canonical_charge": 32790,
+      "common_update_index": 91,
+      "cumulative_native_exposure": 4560398,
+      "first_ordinal": 40645,
+      "last_ordinal": 41095,
+      "native_rows_checked": 451,
+      "status": "PASS",
+      "update": 139
+    },
+    {
+      "canonical_charge": 32806,
+      "common_update_index": 92,
+      "cumulative_native_exposure": 4593204,
+      "first_ordinal": 41096,
+      "last_ordinal": 41539,
+      "native_rows_checked": 444,
+      "status": "PASS",
+      "update": 140
+    },
+    {
+      "canonical_charge": 32841,
+      "common_update_index": 93,
+      "cumulative_native_exposure": 4626045,
+      "first_ordinal": 41540,
+      "last_ordinal": 41991,
+      "native_rows_checked": 452,
+      "status": "PASS",
+      "update": 141
+    },
+    {
+      "canonical_charge": 32782,
+      "common_update_index": 240,
+      "cumulative_native_exposure": 4658827,
+      "first_ordinal": 107183,
+      "last_ordinal": 107633,
+      "native_rows_checked": 451,
+      "status": "PASS",
+      "update": 142
+    },
+    {
+      "canonical_charge": 32777,
+      "common_update_index": 94,
+      "cumulative_native_exposure": 4691604,
+      "first_ordinal": 41992,
+      "last_ordinal": 42433,
+      "native_rows_checked": 442,
+      "status": "PASS",
+      "update": 143
+    },
+    {
+      "canonical_charge": 32775,
+      "common_update_index": 95,
+      "cumulative_native_exposure": 4724379,
+      "first_ordinal": 42434,
+      "last_ordinal": 42877,
+      "native_rows_checked": 444,
+      "status": "PASS",
+      "update": 144
+    },
+    {
+      "canonical_charge": 32792,
+      "common_update_index": 241,
+      "cumulative_native_exposure": 4757171,
+      "first_ordinal": 107634,
+      "last_ordinal": 108087,
+      "native_rows_checked": 454,
+      "status": "PASS",
+      "update": 145
+    },
+    {
+      "canonical_charge": 32853,
+      "common_update_index": 96,
+      "cumulative_native_exposure": 4790024,
+      "first_ordinal": 42878,
+      "last_ordinal": 43322,
+      "native_rows_checked": 445,
+      "status": "PASS",
+      "update": 146
+    },
+    {
+      "canonical_charge": 32854,
+      "common_update_index": 294,
+      "cumulative_native_exposure": 4822878,
+      "first_ordinal": 130548,
+      "last_ordinal": 130909,
+      "native_rows_checked": 362,
+      "status": "PASS",
+      "update": 147
+    },
+    {
+      "canonical_charge": 32804,
+      "common_update_index": 97,
+      "cumulative_native_exposure": 4855682,
+      "first_ordinal": 43323,
+      "last_ordinal": 43766,
+      "native_rows_checked": 444,
+      "status": "PASS",
+      "update": 148
+    },
+    {
+      "canonical_charge": 32823,
+      "common_update_index": 98,
+      "cumulative_native_exposure": 4888505,
+      "first_ordinal": 43767,
+      "last_ordinal": 44210,
+      "native_rows_checked": 444,
+      "status": "PASS",
+      "update": 149
+    },
+    {
+      "canonical_charge": 32833,
+      "common_update_index": 242,
+      "cumulative_native_exposure": 4921338,
+      "first_ordinal": 108088,
+      "last_ordinal": 108531,
+      "native_rows_checked": 444,
+      "status": "PASS",
+      "update": 150
+    },
+    {
+      "canonical_charge": 32777,
+      "common_update_index": 99,
+      "cumulative_native_exposure": 4954115,
+      "first_ordinal": 44211,
+      "last_ordinal": 44659,
+      "native_rows_checked": 449,
+      "status": "PASS",
+      "update": 151
+    },
+    {
+      "canonical_charge": 32793,
+      "common_update_index": 100,
+      "cumulative_native_exposure": 4986908,
+      "first_ordinal": 44660,
+      "last_ordinal": 45106,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 152
+    },
+    {
+      "canonical_charge": 32773,
+      "common_update_index": 243,
+      "cumulative_native_exposure": 5019681,
+      "first_ordinal": 108532,
+      "last_ordinal": 108974,
+      "native_rows_checked": 443,
+      "status": "PASS",
+      "update": 153
+    },
+    {
+      "canonical_charge": 32810,
+      "common_update_index": 101,
+      "cumulative_native_exposure": 5052491,
+      "first_ordinal": 45107,
+      "last_ordinal": 45553,
+      "native_rows_checked": 447,
+      "status": "PASS",
+      "update": 154
+    },
+    {
+      "canonical_charge": 32803,
+      "common_update_index": 102,
+      "cumulative_native_exposure": 5085294,
+      "first_ordinal": 45554,
+      "last_ordinal": 45999,
+      "native_rows_checked": 446,
+      "status": "PASS",
+      "update": 155
+    },
+    {
+      "canonical_charge": 32802,
+      "common_update_index": 103,
+      "cumulative_native_exposure": 5118096,
+      "first_ordinal": 46000,
+      "last_ordinal": 46444,
+      "native_rows_checked": 445,
+      "status": "PASS",
+      "update": 156
+    },
+    {
+      "canonical_charge": 32803,
+      "common_update_index": 244,
+      "cumulative_native_exposure": 5150899,
+      "first_ordinal": 108975,
+      "last_ordinal": 109419,
+      "native_rows_checked": 445,
+      "status": "PASS",
+      "update": 157
+    },
+    {
+      "canonical_charge": 32815,
+      "common_update_index": 104,
+      "cumulative_native_exposure": 5183714,
+      "first_ordinal": 46445,
+      "last_ordinal": 46898,
+      "native_rows_checked": 454,
+      "status": "PASS",
+      "update": 158
+    },
+    {
+      "canonical_charge": 32787,
+      "common_update_index": 105,
+      "cumulative_native_exposure": 5216501,
+      "first_ordinal": 46899,
+      "last_ordinal": 47338,
+      "native_rows_checked": 440,
+      "status": "PASS",
+      "update": 159
+    },
+    {
+      "canonical_charge": 32831,
+      "common_update_index": 245,
+      "cumulative_native_exposure": 5249332,
+      "first_ordinal": 109420,
+      "last_ordinal": 109863,
+      "native_rows_checked": 444,
+      "status": "PASS",
+      "update": 160
+    },
+    {
+      "canonical_charge": 32788,
+      "common_update_index": 106,
+      "cumulative_native_exposure": 5282120,
+      "first_ordinal": 47339,
+      "last_ordinal": 47784,
+      "native_rows_checked": 446,
+      "status": "PASS",
+      "update": 161
+    },
+    {
+      "canonical_charge": 32890,
+      "common_update_index": 295,
+      "cumulative_native_exposure": 5315010,
+      "first_ordinal": 130910,
+      "last_ordinal": 131286,
+      "native_rows_checked": 377,
+      "status": "PASS",
+      "update": 162
+    },
+    {
+      "canonical_charge": 32769,
+      "common_update_index": 107,
+      "cumulative_native_exposure": 5347779,
+      "first_ordinal": 47785,
+      "last_ordinal": 48229,
+      "native_rows_checked": 445,
+      "status": "PASS",
+      "update": 163
+    },
+    {
+      "canonical_charge": 32774,
+      "common_update_index": 108,
+      "cumulative_native_exposure": 5380553,
+      "first_ordinal": 48230,
+      "last_ordinal": 48683,
+      "native_rows_checked": 454,
+      "status": "PASS",
+      "update": 164
+    },
+    {
+      "canonical_charge": 32802,
+      "common_update_index": 246,
+      "cumulative_native_exposure": 5413355,
+      "first_ordinal": 109864,
+      "last_ordinal": 110307,
+      "native_rows_checked": 444,
+      "status": "PASS",
+      "update": 165
+    },
+    {
+      "canonical_charge": 32793,
+      "common_update_index": 109,
+      "cumulative_native_exposure": 5446148,
+      "first_ordinal": 48684,
+      "last_ordinal": 49121,
+      "native_rows_checked": 438,
+      "status": "PASS",
+      "update": 166
+    },
+    {
+      "canonical_charge": 32804,
+      "common_update_index": 110,
+      "cumulative_native_exposure": 5478952,
+      "first_ordinal": 49122,
+      "last_ordinal": 49569,
+      "native_rows_checked": 448,
+      "status": "PASS",
+      "update": 167
+    },
+    {
+      "canonical_charge": 32787,
+      "common_update_index": 247,
+      "cumulative_native_exposure": 5511739,
+      "first_ordinal": 110308,
+      "last_ordinal": 110753,
+      "native_rows_checked": 446,
+      "status": "PASS",
+      "update": 168
+    },
+    {
+      "canonical_charge": 32789,
+      "common_update_index": 111,
+      "cumulative_native_exposure": 5544528,
+      "first_ordinal": 49570,
+      "last_ordinal": 50011,
+      "native_rows_checked": 442,
+      "status": "PASS",
+      "update": 169
+    },
+    {
+      "canonical_charge": 32825,
+      "common_update_index": 112,
+      "cumulative_native_exposure": 5577353,
+      "first_ordinal": 50012,
+      "last_ordinal": 50454,
+      "native_rows_checked": 443,
+      "status": "PASS",
+      "update": 170
+    },
+    {
+      "canonical_charge": 32825,
+      "common_update_index": 113,
+      "cumulative_native_exposure": 5610178,
+      "first_ordinal": 50455,
+      "last_ordinal": 50905,
+      "native_rows_checked": 451,
+      "status": "PASS",
+      "update": 171
+    },
+    {
+      "canonical_charge": 32818,
+      "common_update_index": 248,
+      "cumulative_native_exposure": 5642996,
+      "first_ordinal": 110754,
+      "last_ordinal": 111204,
+      "native_rows_checked": 451,
+      "status": "PASS",
+      "update": 172
+    },
+    {
+      "canonical_charge": 32841,
+      "common_update_index": 114,
+      "cumulative_native_exposure": 5675837,
+      "first_ordinal": 50906,
+      "last_ordinal": 51353,
+      "native_rows_checked": 448,
+      "status": "PASS",
+      "update": 173
+    },
+    {
+      "canonical_charge": 32807,
+      "common_update_index": 115,
+      "cumulative_native_exposure": 5708644,
+      "first_ordinal": 51354,
+      "last_ordinal": 51792,
+      "native_rows_checked": 439,
+      "status": "PASS",
+      "update": 174
+    },
+    {
+      "canonical_charge": 32797,
+      "common_update_index": 249,
+      "cumulative_native_exposure": 5741441,
+      "first_ordinal": 111205,
+      "last_ordinal": 111638,
+      "native_rows_checked": 434,
+      "status": "PASS",
+      "update": 175
+    },
+    {
+      "canonical_charge": 32814,
+      "common_update_index": 116,
+      "cumulative_native_exposure": 5774255,
+      "first_ordinal": 51793,
+      "last_ordinal": 52241,
+      "native_rows_checked": 449,
+      "status": "PASS",
+      "update": 176
+    },
+    {
+      "canonical_charge": 32797,
+      "common_update_index": 296,
+      "cumulative_native_exposure": 5807052,
+      "first_ordinal": 131287,
+      "last_ordinal": 131649,
+      "native_rows_checked": 363,
+      "status": "PASS",
+      "update": 177
+    },
+    {
+      "canonical_charge": 32820,
+      "common_update_index": 117,
+      "cumulative_native_exposure": 5839872,
+      "first_ordinal": 52242,
+      "last_ordinal": 52681,
+      "native_rows_checked": 440,
+      "status": "PASS",
+      "update": 178
+    },
+    {
+      "canonical_charge": 32768,
+      "common_update_index": 118,
+      "cumulative_native_exposure": 5872640,
+      "first_ordinal": 52682,
+      "last_ordinal": 53132,
+      "native_rows_checked": 451,
+      "status": "PASS",
+      "update": 179
+    },
+    {
+      "canonical_charge": 32797,
+      "common_update_index": 250,
+      "cumulative_native_exposure": 5905437,
+      "first_ordinal": 111639,
+      "last_ordinal": 112090,
+      "native_rows_checked": 452,
+      "status": "PASS",
+      "update": 180
+    },
+    {
+      "canonical_charge": 32770,
+      "common_update_index": 119,
+      "cumulative_native_exposure": 5938207,
+      "first_ordinal": 53133,
+      "last_ordinal": 53578,
+      "native_rows_checked": 446,
+      "status": "PASS",
+      "update": 181
+    }
+  ],
+  "status": "ARM_ACTUAL_NATIVE_CONSUMPTION_REPRODUCED_PAIR_COMPARISON_PENDING",
+  "tokenizer_sha256": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+  "unique_accepted_variants_checked": 23181,
+  "update_index_sha256": "97c137bcef4170350ef5db133ad4954151e7417b67aa38bfbdbdae0d650b7f1f"
+}

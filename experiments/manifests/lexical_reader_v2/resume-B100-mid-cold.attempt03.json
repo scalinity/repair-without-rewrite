@@ -1,0 +1,13 @@
+{
+  "arm": "B100",
+  "boundary_next_twenty_plus_one": false,
+  "checkpoint_manifest_sha256": "44325d277385a00b7ca945faff1c717e9f772aed3aa8ca47a9c21370bbc0132c",
+  "controls_sha256": "47c39366208e5411b8f7e7c245d26192301d7249d1c16661bffb1d113424f26a",
+  "kind": "mid",
+  "load_seconds": 1.1079819169826806,
+  "matched_complete_updates": 21,
+  "matches_sha256": "c8fe9c05fd9bf8380aa1e4ba8c5293fe8aff5b3db6e971ec7a862cc24d08a9b6",
+  "pending_completion_plus_next_twenty": true,
+  "probe_slots": 0,
+  "status": "PASS_EXACT_COLD_RESUME"
+}

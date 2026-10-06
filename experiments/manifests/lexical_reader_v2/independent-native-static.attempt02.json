@@ -1,0 +1,14 @@
+{
+  "counterexamples": [
+    "committed exposure 32816 vs reader 32815",
+    "optimizer step 2 vs committed exposure 32815 with enforced queue minimum32768"
+  ],
+  "files": {
+    "benchmarks/paired_qualification_v3.py": "4e483b69a62c1aa20a55ba0a157989f14be61b62f8380ea897d1dbc9cc6f0d08",
+    "src/models/paired_training_v3.py": "682455dba111458eee905f1bc41525e96f2485275b37a779b749435f650eb4f9",
+    "tests/models/test_paired_training_v3.py": "91ce0187bb76858aeddb161943af77b9c27fbc738dc2e21de60198532ff8cd9f"
+  },
+  "limitations": "No altered native checkpoint loaded by this CPU audit; final cold replay remains separately required.",
+  "native_head": "04f3bec60ce957d85b26df65d5a7e2966608242d",
+  "status": "CONCRETE_CLOCK_REJECTION_GAPS_CLOSED_BY_STATIC_INSPECTION"
+}

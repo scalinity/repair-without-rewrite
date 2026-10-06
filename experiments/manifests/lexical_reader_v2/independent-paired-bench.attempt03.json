@@ -1,0 +1,71 @@
+{
+  "B100_independent_receipt_sha256": "2f3a663587a1b6eb65e075daf32fc713d77219f37f880adba80c80795b892a0e",
+  "C101_independent_receipt_sha256": "0ddc4fb1d0bb92bf34d44e610e6721a519b0504c63789017e3f0c50743afd0ac",
+  "checker_sha256": "47be5c94b8392559cace9ec2641d8382c32c1950467610a6793006c0c56af4a8",
+  "compared_common_consumption_sha256": "12db94ef41b2b77c9382bfc72a2b0a100703a06626bf73a20dfd85cd97e26cf0",
+  "elapsed_seconds": 2.861356,
+  "individually_audited_arm_totals": {
+    "B100": {
+      "actual_exposure": 11910268,
+      "actual_rows_checked": 160109,
+      "complete_updates_checked": 363
+    },
+    "C101": {
+      "actual_exposure": 5938207,
+      "actual_rows_checked": 79827,
+      "complete_updates_checked": 181
+    }
+  },
+  "individually_audited_unpaired_suffix": {
+    "B100": {
+      "all_suffix_rows_independently_checked_against_selector": true,
+      "canonical_exposure": 5972061,
+      "complete_updates": 182,
+      "final_arm_canonical_endpoint": 11910268,
+      "first_update": 182,
+      "last_update": 363,
+      "phase_channel_exposure": {
+        "channel/empirical": 2389017,
+        "channel/identity_minimal": 1791443,
+        "channel/natural": 597043,
+        "channel/rules": 1194558,
+        "phase/P0": 3976668,
+        "phase/P1": 1584074,
+        "phase/P2": 411319
+      },
+      "rows": 80282,
+      "starts_after_common_canonical_endpoint": 5938207
+    },
+    "C101": {
+      "all_suffix_rows_independently_checked_against_selector": true,
+      "canonical_exposure": 0,
+      "complete_updates": 0,
+      "final_arm_canonical_endpoint": 5938207,
+      "first_update": null,
+      "last_update": null,
+      "phase_channel_exposure": {},
+      "rows": 0,
+      "starts_after_common_canonical_endpoint": 5938207
+    }
+  },
+  "ledger_sha256": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f",
+  "loaded_mlx": false,
+  "loaded_torch": false,
+  "mode": "bench",
+  "model_execution": "NONE",
+  "native_attempt": 3,
+  "native_head": "28298ad886aa321882aa0530a18421e7d4e3553e",
+  "paired_canonical_exposure": 5938207,
+  "paired_complete_updates": 181,
+  "paired_native_rows": 79827,
+  "paired_phase_channel_exposure": {
+    "channel/empirical": 2375280,
+    "channel/identity_minimal": 1781511,
+    "channel/natural": 593920,
+    "channel/rules": 1187496,
+    "phase/P0": 3943223,
+    "phase/P1": 1583849,
+    "phase/P2": 411135
+  },
+  "status": "PAIRED_ACTUAL_NATIVE_CONSUMPTION_REPRODUCED_FOR_EXACT_COMMON_PREFIX"
+}

@@ -1,0 +1,42 @@
+# Lexical reader implementation and admission qualification — 2026-10-05
+
+**COMPLETE: profile, generated pools, full CPU/native reader, all exact cold resumes, both full BENCH runs, independent fairness and measured cost qualify. V4 admits the six future DEVELOPMENT probes; zero slots consumed.** No six seed-42 scientific recipe has started. This session implements the preserved frontier decisions without changing B100/C101 architecture, event/pointer semantics, information, objectives, weights, renderer, allocation, exposure serialization, phase schedule, LR grid or primary hypothesis.
+
+## Starting state and prospective authorization
+
+Clean local and published main both matched `1b114ff485a2a59051bf7a2e39acec5774fd35a1`, with required ancestry verified. The baseline independently reran under `MLX_ENABLE_TF32=0`: **275 passed in 23.34s**. The [Frontier Corruption-Profile Decision v2](../reviews/FRONTIER_CORRUPTION_PROFILE_DECISION_V2.md) was preserved verbatim and its prospective amendment appended in a separate prior commit `ab8fe95`. The new development scientific treatment was implemented only after that record existed.
+
+## Completed implementation
+
+- `22ac7b3`: approved projected lexical profile, exact ambiguity/support/severity/class-pair diagnostics and separate independent reproduction.
+- `c7d612f`: complete generated realization/union inverse, full four-channel reader, canonical serializer, deterministic scheduler, 10M dry ledger, six unstarted configs, frozen DEVELOPMENT panel, actual complete native updates and atomic boundary/mid checkpoint qualification.
+- `04f3bec`: reject inconsistent exposure/optimizer clocks on checkpoint save/load. This repair preserves training mathematics and freezes the corrected native qualification identity.
+- `28298ad`: restore original C component reduction order after checkpoint JSON serialization; reject residual empty-boundary gradients/counters/loss. This is the final native implementation freeze for fresh attempt03.
+
+Production and independent estimators reproduce **690 lexical-zero / 334 lexical-positive** records, **20 retained entries / 229 weighted occurrences**, every group omission and complete serialized table hash `bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87`. The old raw table remains byte-identical. Both retained-table concentration triggers are false.
+
+All **42,020 accepted generated views / 8,404 bases**, including **16,808 empirical variants**, satisfy required strata and complete source-only unique inversion. No unavailable/capped pool proposal is hidden. Every empirical accepted view changes lexically. The full independently reproduced CPU ledger contains **134,591 presentations / 10,007,223 canonical exposures / 305 planned complete updates**. Realized whole-reader equality, repair, repetition and channel shares are reported in [reader qualification](PAIRED_MIXED_READER_QUALIFICATION_V3.md). Both realized-reader edit-concentration triggers are false.
+
+Historical attempt02 native controls finish **22 whole updates / 9,825 actual rows / 721,724 canonical exposures per arm**. Independent actual tensor/event/pointer and B/C ordered comparison passes every row and boundary. B100's two cold paths and C101 boundary each match 21 complete updates exactly. C101 mid fails at update2; attempt02 supplies no final admission gate after repair. All six native qualification calls repeated as attempt03 and pass. Frozen-code controls do not consume one of the six scientific recipe slots.
+
+## Preserved failures and corrected attempts
+
+Earlier generated-pool and independent-checker implementation failures remain in ignored exports with their original logs. They are reported in the [independent profile review](../reviews/LEXICAL_CORRUPTION_PROFILE_V2_INDEPENDENT_REVIEW.md) and [fairness audit](PAIRED_READER_FAIRNESS_AUDIT_V3.md). Completed generated/reader attempt02 is used for qualification; failed or stale partial outputs supply no admission PASS.
+
+Historical native attempt01 predates the checkpoint clock repair. Its B100 valid reference/replays remain historical evidence; C101 was deliberately terminated after two updates to freeze the repair and retains partial files. Neither supplies the corrected-code final gate. A separate independent cold-evidence checker initially assumed boundary capture was empty; the actual saved metadata retains the completed capture. The failed checker is preserved; the corrected checker compares that capture with its uninterrupted first update. No native mismatch was concealed or tolerance relaxed.
+
+C101 attempt02 mid-cold failure is reproduced in a separate diagnostic. All pending saved/loaded arrays and initial accumulated loss are identical. Checkpoint JSON sorts component keys to action/end/start/vocabulary, while original queued normalization iterates action/start/end/vocabulary. This changes FP32 reduction/autodiff order; update2 loss changes from 14.96543151512742 to 14.965431524440646 and 410 array leaves differ. The repaired loader validates counts then reconstructs the original-order denominator object. Independent review separately finds and closes nonzero empty-boundary accumulator counter/array/loss gaps. All failure files and diagnostic import-failure logs remain preserved; no tolerance is relaxed.
+
+## Verification and remaining close-out
+
+Integrated pre-native tests: **347 passed in 34.57s**. After clock rejection repairs: **356 passed in 35.85s**. After component-order/boundary-gradient repair, including seven cost-accounting tests and nine additional checkpoint regressions: **372 passed in 35.35s**; targeted checkpoint tests: **32 passed in 5.04s**. Final post-qualification integrated suite: **372 passed in 33.25s**, TF32 disabled; [receipt](../../experiments/manifests/lexical_reader_v2/integrated-final-validation.attempt03.json). Historical checks above are distinct.
+
+Full native BENCH completes five warmups and 100 timed updates per arm, plus B 258 sustained updates in 1,202.824593s and C 76 in 1,200.279867s. Conservative rates are B 7,037.941399 and C 2,044.193293 canonical anchors/sec. Independent review checks all B 363 / 160,109 actual rows and C 181 / 79,827; all 181 common queues match. B 182 extra queues / 80,282 rows are independently audited and explicitly unmatched. All four boundary/mid cold processes match 21 complete updates 2–22 exactly. Every per-arm/per-segment entry and separator alarm is false. Initial/final checkpoint array inventories and immutable code/data/runtime bindings pass. [BENCH](PAIRED_COMPLETE_UPDATE_BENCH_V3.md), [fairness](PAIRED_READER_FAIRNESS_AUDIT_V3.md), and [closure receipt](../../experiments/manifests/lexical_reader_v2/independent-bench-closure.attempt03.json).
+
+The measured cost projects one B recipe 1.208923h and one C 1.791672h before reserve; all six **11.442153h serialized with one 25% reserve**, including all 13 deduplicated saves, six 396-case evaluations, startup/load, shared construction and one interruption allowance per recipe. Future intermediate decode changes, extra interruptions and the final paper campaign remain unpriced. [Cost v2](BC_10M_PROBE_COST_PROJECTION_V2.md) separates MEASURED/CALCULATED/ASSUMED/UNPRICED. [V4](BC_10M_PROBE_ADMISSION_DECISION_V4.md) answers all 53 required questions and ends with AUTHORIZE_10M_BC_DEVELOPMENT_PROBES.
+
+No final/sealed candidate inference, final-seed training, cloud spending, human annotation queue, production LocalFlow change or `paper_protocol_v2` freeze occurs. All six recipes remain configured, unstarted and unauthorized. Admission qualifies. Publish the exact qualification checkpoint and stop; actual probes belong to a separately authorized new session.
+
+The separate documentation commit `e4b2eb4` landed during native qualification, preserving the eight frozen runtime-source identities. It adds public orchestration and append-only log rules. The orchestration realignment follows this qualification commit in the next documentation commit, with light/dark/phone validation recorded there. Source text, full native captures, checkpoints, raw evaluation outputs and failed attempts remain ignored private exports; only named safe source/tests/reports/manifests are staged. Publication follows the explicit qualification-checkpoint instruction, superseding the repository's default ban within this scope only.
+
+AUTHORIZE_10M_BC_DEVELOPMENT_PROBES

@@ -1,0 +1,78 @@
+{
+  "arm": "C101",
+  "bench_consumed_canonical_exposure": 5938207,
+  "complete_bench_updates": 181,
+  "conservative_sustained_anchors_per_second": 2044.1932927973103,
+  "final_save_seconds": 1.7053052920091432,
+  "first_sustained_quartile_anchors_per_second": 2058.217330160767,
+  "initial_save_seconds": 1.5649356250069104,
+  "last_sustained_quartile_anchors_per_second": 2044.1932927973103,
+  "no_failures": true,
+  "peak_mlx_allocation_bytes": 3365844548,
+  "peak_process_rss_bytes_macos": 5131649024,
+  "phase_charges_by_segment": {
+    "sustained": {
+      "P0": 1673166,
+      "P1": 656049,
+      "P2": 164133
+    },
+    "timed": {
+      "P0": 2165365,
+      "P1": 885768,
+      "P2": 229719
+    },
+    "warmup": {
+      "P0": 104692,
+      "P1": 42032,
+      "P2": 17283
+    }
+  },
+  "probe_slots": 0,
+  "scope": "performance/update qualification only; no probe LR selection or viability inference",
+  "startup_seconds": 2.4994712080224417,
+  "status": "BENCH_00_COMPLETE_FAIRNESS_REVIEW_PENDING",
+  "sustained": {
+    "accumulation_seconds": 43.66381218589959,
+    "canonical_anchors_per_second": 2077.3055253957077,
+    "canonical_charge": 2493348,
+    "complete_updates": 76,
+    "decoder_event_positions": 371983,
+    "decoder_padding": 0,
+    "examples_per_second": 27.943482948137216,
+    "forward_backward_seconds": 1142.08801720888,
+    "mean_update_seconds": 15.772165807067818,
+    "median_update_seconds": 15.856314167001983,
+    "native_positions_per_second": 1410.1544534394184,
+    "optimizer_seconds": 7.013195839972468,
+    "p95_update_seconds": 16.781269562998204,
+    "reader_seconds": 0.5762582581664901,
+    "source_padding": 569704,
+    "source_positions": 1320597,
+    "synchronization_seconds": 0.42175166361266747,
+    "wall_seconds": 1200.2798671250057
+  },
+  "system_snapshot_sha256": "7ba5ad9098609b1ab3d1eb8b5499487ef7f37ddf5f5e2c74ec5e22c10b421b47",
+  "throughput_drift_ratio": 0.9931863184912737,
+  "timed": {
+    "accumulation_seconds": 57.21835291679599,
+    "canonical_anchors_per_second": 2071.25675984284,
+    "canonical_charge": 3280852,
+    "complete_updates": 100,
+    "decoder_event_positions": 489282,
+    "decoder_padding": 0,
+    "examples_per_second": 27.845487058358056,
+    "forward_backward_seconds": 1506.9603662714944,
+    "mean_update_seconds": 15.817666448820674,
+    "median_update_seconds": 15.940482041507494,
+    "native_positions_per_second": 1406.027587904783,
+    "optimizer_seconds": 9.23732191984891,
+    "p95_update_seconds": 16.672571731571225,
+    "reader_seconds": 0.7932130625995342,
+    "source_padding": 754239,
+    "source_positions": 1737853,
+    "synchronization_seconds": 0.506943025655346,
+    "wall_seconds": 1583.9909679999982
+  },
+  "updates_sha256": "4591a87e8c695b744e8b4421fbd8dca6f7ddc07ce554e55666c9ca7cbfb41a2f",
+  "warmups": 5
+}

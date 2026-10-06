@@ -1,0 +1,22 @@
+{
+  "arm": "C101",
+  "compared_keys": [
+    "loss",
+    "canonical_charge",
+    "committed_canonical_exposure",
+    "lr",
+    "denominators",
+    "presentation_ids",
+    "state_sha256_after_update2",
+    "reader_state_sha256_after_update2"
+  ],
+  "complete_updates": 22,
+  "historical_attempt": 2,
+  "historical_controls_sha256": "c072aa470cabda7d4cf2620b334f7c055a7b50ae895df843f7905c766b08e684",
+  "mismatches": [],
+  "new_attempt": 3,
+  "new_controls_sha256": "1b2b90b8dac49d4a34048d9ee10654bb575f2d3ce219127c8ad33e2d33f3d616",
+  "scientific_recipe_slots_consumed": 0,
+  "scope": "CONTROL_CONTINUITY_CHECK_NOT_COLD_RESUME_OR_MODEL_QUALITY",
+  "status": "EXACT_UNINTERRUPTED_CONTROL_TRAJECTORY_PRESERVED"
+}

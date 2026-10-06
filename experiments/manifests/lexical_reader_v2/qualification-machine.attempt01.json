@@ -1,0 +1,7 @@
+{
+  "architecture": "arm64",
+  "cpu": "Apple M5 Pro",
+  "logical_cpus": 18,
+  "os": "27.2",
+  "physical_memory_bytes": 51539607552
+}

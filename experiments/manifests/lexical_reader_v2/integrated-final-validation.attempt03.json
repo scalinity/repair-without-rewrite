@@ -1,0 +1,12 @@
+{
+  "TF32": "0",
+  "native_implementation_commit": "28298ad886aa321882aa0530a18421e7d4e3553e",
+  "passed": 372,
+  "probe_slots_consumed": 0,
+  "reported_seconds": 33.25,
+  "scope": "FINAL_IMPLEMENTATION_SUITE_AFTER_ALL_NATIVE_QUALIFICATION_NOT_PROBE_EXECUTION",
+  "status": "PASS_COMPLETE_INTEGRATED_SUITE",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "48a5c5230d7e28e4a96c2a4a51e0ef56ce115d20e476524a3e979d6de88e5531",
+  "wall_seconds": 33.61749750000308
+}

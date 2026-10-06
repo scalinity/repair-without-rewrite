@@ -1,0 +1,115 @@
+{
+  "ASSUMED": [
+    "sustained and per-case initial/final decode timing envelopes apply to all three LR recipes",
+    "one planned interruption per recipe with a successful atomic save/load, one complete update replay,30seconds restart allowance",
+    "scratch shared construction is repeated once even when frozen private artifacts are already present",
+    "one initial load charged conservatively although seed42 recipes start fresh"
+  ],
+  "CALCULATED": [
+    "actual whole-update10M endpoint divided by sustained rate",
+    "13deduplicated saves and6evaluation endpoints per recipe",
+    "one-B and one-C component sums",
+    "three recipes per arm plus shared costs, then25% reserve"
+  ],
+  "MEASURED": [
+    "complete BENCH pipeline and conservative sustained rates",
+    "initial/final396-case decode and scorer timings",
+    "atomic save/readback and cold loads",
+    "startup and frozen pool/profile/ledger/panel construction",
+    "initial control warmup timing including diagnostic hashing"
+  ],
+  "UNPRICED": [
+    "unmeasured decode-latency changes at future intermediate checkpoints beyond the observed envelope",
+    "additional interruptions or unsaved crash recovery beyond the one-update allowance",
+    "final150M training, baselines, sealed evaluation and paper production"
+  ],
+  "all_six_seconds_before_reserve": 32953.400504574776,
+  "all_six_seconds_with_25_percent_reserve": 41191.75063071847,
+  "identities": {
+    "experiments/manifests/lexical_reader_v2/generated-pool-qualification.attempt02.json": "a969c68805edac1be61023e43551b677ac96564369a8e0dbe32c02a7f7f46a1b",
+    "experiments/manifests/lexical_reader_v2/lexical-profile-measurement.attempt01.json": "72c6d0f6ea6d2189c22d544f4831f8b3bd04253003f08aae12ba62ad6e559d1e",
+    "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": "d9b91d1193d6175e1b6185ff48153478881320867b4e0c722f5799f9c2739fcc",
+    "experiments/manifests/lexical_reader_v2/panel-preparation-timing.attempt01.json": "e01e94319774fbc199773e45d10de5b28336f788465669238014f6246bdc3336",
+    "experiments/manifests/lexical_reader_v2/pilot-B100-seed42-lr3e-04.json": "dd3e81dbe349ab21aba9fdca5ab3fb8ed16dac79e8f385a1b53f66ac10395338",
+    "experiments/manifests/lexical_reader_v2/pilot-C101-seed42-lr3e-04.json": "a877ffe8149c92468b77f2bef4d4bbb863dffb072ad8e57ac4ffb24500cd3687",
+    "exports/lexical-reader-v2/bench-B100-attempt03/summary.json": "24b66f6f6ae3f3d6f61021faefbf06ee1d6b4bef67e201c357bb0661bee20015",
+    "exports/lexical-reader-v2/bench-C101-attempt03/summary.json": "e2f133aea732ab93e00abcc77861d84786307e4d1584f6e1a83135aa169e711d",
+    "exports/lexical-reader-v2/resume-B100-boundary-cold-attempt03/summary.json": "fcd7ef74cebb2d1c3d9d5d8685db57b2a3ea8ba18e5168a295783a8ba54edb36",
+    "exports/lexical-reader-v2/resume-B100-control-attempt03/control-complete.json": "41a8c273d73474d7c4aaf8eb752db67d384d2357f39c02a3d50f78d8b2ab34e7",
+    "exports/lexical-reader-v2/resume-B100-control-attempt03/controls.jsonl": "47c39366208e5411b8f7e7c245d26192301d7249d1c16661bffb1d113424f26a",
+    "exports/lexical-reader-v2/resume-B100-control-attempt03/first-complete-update.json": "dc4e37a9859daad9b84f50149926685a43122e3a9f5553dc5c9b88e9e546302b",
+    "exports/lexical-reader-v2/resume-B100-mid-cold-attempt03/summary.json": "87801c575b60f93214455fbe31dcc3bbe956783a91215a4303d79dd1889a93f8",
+    "exports/lexical-reader-v2/resume-C101-boundary-cold-attempt03/summary.json": "9f7e0e032c5547e56e174fa98a7522883dc86894fad9c3f494a1f4a6f88025c0",
+    "exports/lexical-reader-v2/resume-C101-control-attempt03/control-complete.json": "ae78d4feb264710f752fdc4af9c3177272c2ec6abf1a72e5fca44327be0cf907",
+    "exports/lexical-reader-v2/resume-C101-control-attempt03/controls.jsonl": "1b2b90b8dac49d4a34048d9ee10654bb575f2d3ce219127c8ad33e2d33f3d616",
+    "exports/lexical-reader-v2/resume-C101-control-attempt03/first-complete-update.json": "b8f16b49bdb1f706d2c4b273c91d3385118d4f92dca75d445fce0636d0ad01f3",
+    "exports/lexical-reader-v2/resume-C101-mid-cold-attempt03/summary.json": "526f930efac5fc3b72537baa8180b03865e7f5e693ac45c1fd2621e518282819"
+  },
+  "paper_protocol_v2_frozen": false,
+  "per_arm": {
+    "B100": {
+      "actual_exposure": 10007223,
+      "components_seconds": {
+        "evaluation_decode_seconds": 2563.011098826828,
+        "evaluation_panel_overhead_seconds": 40.06758669769624,
+        "evaluation_scorer_seconds": 247.62315146124456,
+        "initial_load_seconds": 1.1832042080059182,
+        "measured_initial_control_excess_seconds": 9.62125971967621,
+        "one_interruption_recovery_allowance_seconds": 38.022540139834405,
+        "reader_data_model_startup_seconds": 2.5325147080002353,
+        "routine_atomic_saves_seconds": 28.16476867100573,
+        "training_after_warmup_at_sustained_rate_seconds": 1393.4789229778548,
+        "training_warmup_at_sustained_rate_seconds": 28.41740058277159
+      },
+      "conservative_sustained_anchors_per_second": 7037.9413985265255,
+      "evaluation_cases": 396,
+      "evaluation_endpoints": 6,
+      "measured_decode_envelope_seconds_per_panel": 427.168516471138,
+      "measured_load_seconds": 1.1832042080059182,
+      "measured_panel_overhead_seconds": 6.677931116282707,
+      "measured_save_seconds_per_endpoint": 2.166520667000441,
+      "measured_scorer_envelope_seconds_per_panel": 41.27052524354076,
+      "one_recipe_seconds_before_reserve": 4352.122447992918,
+      "one_recipe_seconds_with_25_percent_reserve": 5440.1530599911475,
+      "save_endpoints": 13
+    },
+    "C101": {
+      "actual_exposure": 10007223,
+      "components_seconds": {
+        "evaluation_decode_seconds": 1465.817987329443,
+        "evaluation_panel_overhead_seconds": 0.8044731491245329,
+        "evaluation_scorer_seconds": 7.727314565330744,
+        "initial_load_seconds": 1.6833222919958644,
+        "measured_initial_control_excess_seconds": 4.403233925294444,
+        "one_interruption_recovery_allowance_seconds": 49.476636538870935,
+        "reader_data_model_startup_seconds": 2.4994712080224417,
+        "routine_atomic_saves_seconds": 22.16896879611886,
+        "training_after_warmup_at_sustained_rate_seconds": 4797.600615634357,
+        "training_warmup_at_sustained_rate_seconds": 97.83810596810855
+      },
+      "conservative_sustained_anchors_per_second": 2044.1932927973103,
+      "evaluation_cases": 396,
+      "evaluation_endpoints": 6,
+      "measured_decode_envelope_seconds_per_panel": 244.3029978882405,
+      "measured_load_seconds": 1.6833222919958644,
+      "measured_panel_overhead_seconds": 0.13407885818742216,
+      "measured_save_seconds_per_endpoint": 1.7053052920091432,
+      "measured_scorer_envelope_seconds_per_panel": 1.2878857608884573,
+      "one_recipe_seconds_before_reserve": 6450.0201294066665,
+      "one_recipe_seconds_with_25_percent_reserve": 8062.525161758333,
+      "save_endpoints": 13
+    }
+  },
+  "qualification_attempt": 3,
+  "reader_accounting": "native reader/pack/capture costs are included in sustained pipeline; scratch CPU construction is shared once",
+  "reserve_fraction": 0.25,
+  "scope": "SERIALIZED_M5_PRO_SIX_FUTURE_DEVELOPMENT_RECIPES_NOT_FINAL_PAPER_FORECAST",
+  "shared_one_time_components_seconds": {
+    "frozen_DEVELOPMENT_panel_construction_seconds": 2.999699292005971,
+    "full_10M_CPU_ledger_seconds": 70.27099650001037,
+    "generated_accepted_pool_seconds": 448.0285337920068,
+    "profile_measurement_seconds": 25.67354279200663
+  },
+  "six_probe_slots_consumed": 0,
+  "warmup_accounting": "200k LR warmup is included in recipe exposure; five BENCH warmups are not added as extra training"
+}

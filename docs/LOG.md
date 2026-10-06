@@ -54,3 +54,14 @@ Times are local (EDT, UTC−4). Entries 1–5 were backfilled on 2026-10-05 from
 - **Orchestration:** step 1 marked done (decision v2); step 3 implemented; step 4 in progress; counts updated to 42 commits, 34 reports, 16 independent reviews, 372 passing tests.
 - **Published:** committed on `main` (no branch, so no merge) and pushed while the attempt-03 qualification session was still running. Only this entry's files were staged, by name; that session's uncommitted work was left untouched. The push also published its five unpushed commits (`ab8fe95`…`28298ad`), so the publication-safety scan covered the whole push range: `experiments/manifests/orchestration/publication-safety.attempt01.json`.
 - **Left undone:** realign the orchestration page again when admission V4 is committed.
+
+## 7 · 2026-10-06 00:20 · lexical reader and paired qualification close-out
+
+- **Base:** `e4b2eb4`; native code freeze `28298ad`.
+- **Step:** finish lexical profile/reader qualification, full native BENCH, independent fairness, cost and admission V4.
+- **Changed:** seven required reports, retained safe attempt receipts and final validation, complete-native aggregate and six-probe cost calculator, plus seven cost-accounting tests. The separate conventions commit is preserved; all eight frozen runtime-source hashes remain unchanged.
+- **Disposition:** `AUTHORIZE_10M_BC_DEVELOPMENT_PROBES`. Final suite: 372 passed in 33.25s, TF32 disabled. Six probe slots used: 0.
+- **Evidence:** all four cold resumes match 21 complete updates 2–22 exactly; B 5/100/258 BENCH (1,202.824593s sustained), C 5/100/76 (1,200.279867s). Independent review checks all 181 shared queues and all 182 additional B queues; all per-segment concentration alarms are false. Conservative rates B 7,037.941399 / C 2,044.193293 anchors/sec. All-six forecast 11.442153h including one 25% reserve; final-paper campaign remains unpriced.
+- **Failures retained:** attempt01 clock rejection gaps; attempt02 C-mid JSON reduction-order failure; independent-checker and generator failures. The current code makes all exact attempt03 gates pass without tolerance relaxation.
+- **Orchestration:** realignment follows in the next documentation commit against this qualification record, with light/dark/phone checks. The page is clean and has no other worktree checkout.
+- **Left undone:** all six actual 10M recipes, learned-quality/LR selection, final 150M/final seeds, sealed inference, protocol freeze, cloud/production changes and unrelated units 7/8. Actual scientific runs require an explicitly authorized NEW session.

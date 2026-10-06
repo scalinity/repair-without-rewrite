@@ -1,0 +1,28 @@
+{
+  "FP32_model_parameters": 101081859,
+  "accumulator_nonzero_values": 0,
+  "arm": "C101",
+  "array_inventory": 549,
+  "arrays_sha256": "97e6dfe2b5c51d056834da4880abe8172f916b6c8946a7a198efe00a693eb864",
+  "boundary_rejection_gap": {
+    "altered_checkpoint_written_or_loaded": false,
+    "finite_accumulator_value_gap": "rehashed nonzero FP32 acc value with zero boundary counter passes shape/dtype/finite checks and masked forward, then contaminates next accumulation",
+    "guard_result": "passes nonnegative/canonical-reader clock validation",
+    "loader_boundary_condition": "omits accumulator_microbatches and accumulator values",
+    "model_execution": "NONE",
+    "mutation": "actual boundary accumulator_microbatches 0 to1 with no pending queue",
+    "next_begin_result": "unfinished common queue rejection because restored accumulator_microbatches1",
+    "status": "STATIC_REJECTION_GAP_CONFIRMED_WITH_PURE_METADATA_GUARD"
+  },
+  "checker_sha256": "03874c776c52683631e0442d57f6653e7d2b0cc480123fc39efef78c3ef0305c",
+  "checkpoint_manifest_sha256": "50a32e677ef7be64293ad7c4bceac30cfc96c0cba700f677a5c4485c8a77184c",
+  "elapsed_seconds": 1.565253,
+  "kind": "boundary",
+  "loaded_mlx": false,
+  "loaded_torch": false,
+  "metadata_sha256": "f8183d1f0e6ed1e3dd993552047db2d096b28efe6cceb4651c97f0413f699f31",
+  "model_execution": "NONE",
+  "native_attempt": 2,
+  "reviewed_trainer_sha256": "682455dba111458eee905f1bc41525e96f2485275b37a779b749435f650eb4f9",
+  "status": "VALID_SERIALIZED_CHECKPOINT_ARRAYS_INDEPENDENTLY_VERIFIED"
+}

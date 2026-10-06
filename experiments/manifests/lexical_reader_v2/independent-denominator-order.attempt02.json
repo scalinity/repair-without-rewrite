@@ -1,0 +1,44 @@
+{
+  "JSON_loaded_component_order": [
+    "action",
+    "end",
+    "start",
+    "vocabulary"
+  ],
+  "boundary_loss": 14.96543151512742,
+  "denominator_counts_identical": true,
+  "elapsed_seconds": 0.861776,
+  "identities": {
+    "checker_sha256": "1f14e921ab343d4d2da370b5335111287a2faefab52594b2234f16b280a4de61",
+    "diagnostic_comparison_sha256": "15a338e347c06ff38b91935488fc043c0ec7d8b7d142654599254f9f7cee3d46",
+    "diagnostic_pending_state_sha256": "d9f757247800b9b19d6d47fe9c0f5afa6bab94ed12b0c52bfb67ca7a4a1524ed",
+    "frozen_trainer_snapshot_sha256": "682455dba111458eee905f1bc41525e96f2485275b37a779b749435f650eb4f9",
+    "metadata_sha256": "e5b92e422e846b6898ef543f420a029ea7d4998449f70aa3b4ea7907ac126407"
+  },
+  "loaded_mid_loss": 14.965431524440646,
+  "loaded_mlx": false,
+  "loaded_torch": false,
+  "model_execution": "NONE",
+  "native_attempt": 2,
+  "pending_arrays_loss_exact_before_continuation": true,
+  "post_update2_differing_array_leaves": 410,
+  "queue_presentations": 446,
+  "repair_assessment": "After count/queue validation, restoring a fresh original-order denominator object preserves all counts, weights and approved objective code; native attempt03 exact replay is still required.",
+  "reviewed_head": "04f3bec60ce957d85b26df65d5a7e2966608242d",
+  "runtime_original_component_order": [
+    "action",
+    "start",
+    "end",
+    "vocabulary"
+  ],
+  "status": "SERIALIZATION_COMPONENT_ORDER_MISMATCH_INDEPENDENTLY_REPRODUCED",
+  "whole_queue_denominators": {
+    "B": 14534,
+    "C": {
+      "action": 1131,
+      "end": 685,
+      "start": 685,
+      "vocabulary": 3103
+    }
+  }
+}

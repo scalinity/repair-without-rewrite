@@ -1,0 +1,11 @@
+{
+  "independent_model_execution": "NONE",
+  "interpretation": "Native exact replay failure; valid uninterrupted consumption and boundary replay remain separate historical passes. No BENCH qualification follows this failure. Exact root cause still under diagnosis.",
+  "matches_file_exists": false,
+  "native_attempt": 2,
+  "native_head": "04f3bec60ce957d85b26df65d5a7e2966608242d",
+  "raw_stderr_sha256": "8919a5acc85778864fd5dab8221f46065da177de77961d1d51fdaff93b55447c",
+  "reported_error": "ValueError: cold resume differs from uninterrupted control at update 2",
+  "status": "NATIVE_C101_MID_COLD_FAIL_AT_UPDATE2",
+  "summary_file_exists": false
+}

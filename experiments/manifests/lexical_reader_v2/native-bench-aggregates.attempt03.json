@@ -1,0 +1,2306 @@
+{
+  "accepted_generated_sha256": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+  "arms": {
+    "B100": {
+      "segments": {
+        "all": {
+          "channel_charge": {
+            "empirical": 4764297,
+            "identity_minimal": 3572954,
+            "natural": 1190963,
+            "rules": 2382054
+          },
+          "charge_weighted_edit_entries": [
+            {
+              "key": [
+                "deletion",
+                " ",
+                ""
+              ],
+              "weight": 958779
+            },
+            {
+              "key": [
+                "deletion",
+                "d",
+                ""
+              ],
+              "weight": 301716
+            },
+            {
+              "key": [
+                "deletion",
+                "e",
+                ""
+              ],
+              "weight": 1179580
+            },
+            {
+              "key": [
+                "deletion",
+                "i",
+                ""
+              ],
+              "weight": 128302
+            },
+            {
+              "key": [
+                "deletion",
+                "s",
+                ""
+              ],
+              "weight": 167230
+            },
+            {
+              "key": [
+                "deletion",
+                "u",
+                ""
+              ],
+              "weight": 92618
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                " "
+              ],
+              "weight": 226800
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "a"
+              ],
+              "weight": 362157
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "d"
+              ],
+              "weight": 338186
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "e"
+              ],
+              "weight": 427269
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "s"
+              ],
+              "weight": 210354
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "u"
+              ],
+              "weight": 243073
+            },
+            {
+              "key": [
+                "substitution",
+                "a",
+                "e"
+              ],
+              "weight": 66952
+            },
+            {
+              "key": [
+                "substitution",
+                "a",
+                "i"
+              ],
+              "weight": 51986
+            },
+            {
+              "key": [
+                "substitution",
+                "e",
+                "a"
+              ],
+              "weight": 200484
+            },
+            {
+              "key": [
+                "substitution",
+                "e",
+                "i"
+              ],
+              "weight": 474894
+            },
+            {
+              "key": [
+                "substitution",
+                "i",
+                "e"
+              ],
+              "weight": 132256
+            },
+            {
+              "key": [
+                "substitution",
+                "i",
+                "y"
+              ],
+              "weight": 138301
+            },
+            {
+              "key": [
+                "substitution",
+                "o",
+                "a"
+              ],
+              "weight": 165316
+            }
+          ],
+          "complete_updates": 363,
+          "component_decision_scope": "B_target_EOS executed only by B; C components executed only by C; both queue counts retained",
+          "component_decisions": {
+            "B_target_EOS": 5290765,
+            "C_action": 412548,
+            "C_end": 252439,
+            "C_start": 252439,
+            "C_vocabulary": 1110746
+          },
+          "edit_mass": 5866253,
+          "equality_charge": {
+            "lexical_equal": 3021799,
+            "lexical_repair": 8888469,
+            "raw_equal": 2442097,
+            "raw_repair": 9468171
+          },
+          "maximum_entry_keys": [
+            [
+              "deletion",
+              "e",
+              ""
+            ]
+          ],
+          "maximum_entry_weight": 1179580,
+          "phase_charge": {
+            "P0": 7919891,
+            "P1": 3167923,
+            "P2": 822454
+          },
+          "separator_only_alarm": false,
+          "separator_only_weight": 1185579,
+          "single_entry_alarm": false,
+          "update_distributions": {
+            "canonical_charge": {
+              "maximum": 32950,
+              "mean": 32810.65564738292,
+              "median": 32806,
+              "minimum": 32768,
+              "p95": 32869.9,
+              "sum": 11910268
+            },
+            "decoder_event_positions": {
+              "maximum": 15010,
+              "mean": 14575.110192837466,
+              "median": 14546,
+              "minimum": 14502,
+              "p95": 14940.4,
+              "sum": 5290765
+            },
+            "decoder_padding": {
+              "maximum": 18669,
+              "mean": 7670.9586776859505,
+              "median": 6977,
+              "minimum": 6274,
+              "p95": 16677.899999999998,
+              "sum": 2784558
+            },
+            "examples": {
+              "maximum": 457,
+              "mean": 441.07162534435264,
+              "median": 446,
+              "minimum": 361,
+              "p95": 454.0,
+              "sum": 160109
+            },
+            "loss": {
+              "maximum": 9.851723745465279,
+              "mean": 1.3184064383848506,
+              "median": 0.7431898638606071,
+              "minimum": 0.10567151824943721,
+              "p95": 4.393047118186945,
+              "sum": 478.58153713370075
+            },
+            "microsteps": {
+              "maximum": 29,
+              "mean": 27.975206611570247,
+              "median": 28,
+              "minimum": 23,
+              "p95": 29.0,
+              "sum": 10155
+            },
+            "overshoot": {
+              "maximum": 182,
+              "mean": 42.65564738292011,
+              "median": 38,
+              "minimum": 0,
+              "p95": 101.89999999999998,
+              "sum": 15484
+            },
+            "source_padding": {
+              "maximum": 22504,
+              "mean": 15348.26997245179,
+              "median": 15052,
+              "minimum": 13485,
+              "p95": 20132.999999999993,
+              "sum": 5571422
+            },
+            "source_positions": {
+              "maximum": 17528,
+              "mean": 17378.30578512397,
+              "median": 17373,
+              "minimum": 17173,
+              "p95": 17485.0,
+              "sum": 6308325
+            },
+            "wall_seconds": {
+              "maximum": 7.769180541014066,
+              "mean": 4.512372720396671,
+              "median": 4.468246499978704,
+              "minimum": 2.291197167010978,
+              "p95": 6.058972550011821,
+              "sum": 1637.9912975039915
+            }
+          },
+          "view_charge": {
+            "empirical:empirical1": 3662341,
+            "empirical:empirical2": 1101956,
+            "identity_minimal:identity": 1786302,
+            "identity_minimal:mixed": 1786652,
+            "natural:natural": 1190963,
+            "rules:clean": 479412,
+            "rules:mixed": 1584277,
+            "rules:two": 318365
+          }
+        },
+        "sustained": {
+          "channel_charge": {
+            "empirical": 3386343,
+            "identity_minimal": 2539372,
+            "natural": 846550,
+            "rules": 1693144
+          },
+          "charge_weighted_edit_entries": [
+            {
+              "key": [
+                "deletion",
+                " ",
+                ""
+              ],
+              "weight": 680351
+            },
+            {
+              "key": [
+                "deletion",
+                "d",
+                ""
+              ],
+              "weight": 214297
+            },
+            {
+              "key": [
+                "deletion",
+                "e",
+                ""
+              ],
+              "weight": 837312
+            },
+            {
+              "key": [
+                "deletion",
+                "i",
+                ""
+              ],
+              "weight": 90300
+            },
+            {
+              "key": [
+                "deletion",
+                "s",
+                ""
+              ],
+              "weight": 120044
+            },
+            {
+              "key": [
+                "deletion",
+                "u",
+                ""
+              ],
+              "weight": 66438
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                " "
+              ],
+              "weight": 161983
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "a"
+              ],
+              "weight": 257182
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "d"
+              ],
+              "weight": 238907
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "e"
+              ],
+              "weight": 304459
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "s"
+              ],
+              "weight": 149361
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "u"
+              ],
+              "weight": 170166
+            },
+            {
+              "key": [
+                "substitution",
+                "a",
+                "e"
+              ],
+              "weight": 48067
+            },
+            {
+              "key": [
+                "substitution",
+                "a",
+                "i"
+              ],
+              "weight": 36474
+            },
+            {
+              "key": [
+                "substitution",
+                "e",
+                "a"
+              ],
+              "weight": 142697
+            },
+            {
+              "key": [
+                "substitution",
+                "e",
+                "i"
+              ],
+              "weight": 337380
+            },
+            {
+              "key": [
+                "substitution",
+                "i",
+                "e"
+              ],
+              "weight": 94776
+            },
+            {
+              "key": [
+                "substitution",
+                "i",
+                "y"
+              ],
+              "weight": 97272
+            },
+            {
+              "key": [
+                "substitution",
+                "o",
+                "a"
+              ],
+              "weight": 116961
+            }
+          ],
+          "complete_updates": 258,
+          "component_decision_scope": "B_target_EOS executed only by B; C components executed only by C; both queue counts retained",
+          "component_decisions": {
+            "B_target_EOS": 3760357,
+            "C_action": 293309,
+            "C_end": 179487,
+            "C_start": 179487,
+            "C_vocabulary": 789617
+          },
+          "edit_mass": 4164427,
+          "equality_charge": {
+            "lexical_equal": 2146321,
+            "lexical_repair": 6319088,
+            "raw_equal": 1734719,
+            "raw_repair": 6730690
+          },
+          "maximum_entry_keys": [
+            [
+              "deletion",
+              "e",
+              ""
+            ]
+          ],
+          "maximum_entry_weight": 837312,
+          "phase_charge": {
+            "P0": 5649834,
+            "P1": 2240123,
+            "P2": 575452
+          },
+          "separator_only_alarm": false,
+          "separator_only_weight": 842334,
+          "single_entry_alarm": false,
+          "update_distributions": {
+            "canonical_charge": {
+              "maximum": 32950,
+              "mean": 32811.66279069767,
+              "median": 32807.0,
+              "minimum": 32768,
+              "p95": 32872.2,
+              "sum": 8465409
+            },
+            "decoder_event_positions": {
+              "maximum": 15010,
+              "mean": 14575.027131782947,
+              "median": 14546.0,
+              "minimum": 14502,
+              "p95": 14941.0,
+              "sum": 3760357
+            },
+            "decoder_padding": {
+              "maximum": 18669,
+              "mean": 7648.403100775194,
+              "median": 6966.5,
+              "minimum": 6274,
+              "p95": 16602.149999999998,
+              "sum": 1973288
+            },
+            "examples": {
+              "maximum": 457,
+              "mean": 441.17054263565893,
+              "median": 446.0,
+              "minimum": 361,
+              "p95": 454.0,
+              "sum": 113822
+            },
+            "loss": {
+              "maximum": 2.2416719682514668,
+              "mean": 0.5781647837616166,
+              "median": 0.30986152356490493,
+              "minimum": 0.10567151824943721,
+              "p95": 1.6955030621960747,
+              "sum": 149.1665142104971
+            },
+            "microsteps": {
+              "maximum": 29,
+              "mean": 27.984496124031008,
+              "median": 28.0,
+              "minimum": 23,
+              "p95": 29.0,
+              "sum": 7220
+            },
+            "overshoot": {
+              "maximum": 182,
+              "mean": 43.66279069767442,
+              "median": 39.0,
+              "minimum": 0,
+              "p95": 104.19999999999982,
+              "sum": 11265
+            },
+            "source_padding": {
+              "maximum": 22504,
+              "mean": 15350.077519379845,
+              "median": 15074.5,
+              "minimum": 13485,
+              "p95": 19967.849999999988,
+              "sum": 3960320
+            },
+            "source_positions": {
+              "maximum": 17528,
+              "mean": 17379.0503875969,
+              "median": 17374.0,
+              "minimum": 17173,
+              "p95": 17485.0,
+              "sum": 4483795
+            },
+            "wall_seconds": {
+              "maximum": 7.769180541014066,
+              "mean": 4.654426435252531,
+              "median": 4.600620020995848,
+              "minimum": 2.5109724999929313,
+              "p95": 6.19124353295192,
+              "sum": 1200.842020295153
+            }
+          },
+          "view_charge": {
+            "empirical:empirical1": 2608259,
+            "empirical:empirical2": 778084,
+            "identity_minimal:identity": 1269700,
+            "identity_minimal:mixed": 1269672,
+            "natural:natural": 846550,
+            "rules:clean": 339973,
+            "rules:mixed": 1127996,
+            "rules:two": 225175
+          }
+        },
+        "timed": {
+          "channel_charge": {
+            "empirical": 1312338,
+            "identity_minimal": 984377,
+            "natural": 328006,
+            "rules": 656131
+          },
+          "charge_weighted_edit_entries": [
+            {
+              "key": [
+                "deletion",
+                " ",
+                ""
+              ],
+              "weight": 264055
+            },
+            {
+              "key": [
+                "deletion",
+                "d",
+                ""
+              ],
+              "weight": 82631
+            },
+            {
+              "key": [
+                "deletion",
+                "e",
+                ""
+              ],
+              "weight": 326113
+            },
+            {
+              "key": [
+                "deletion",
+                "i",
+                ""
+              ],
+              "weight": 35954
+            },
+            {
+              "key": [
+                "deletion",
+                "s",
+                ""
+              ],
+              "weight": 45688
+            },
+            {
+              "key": [
+                "deletion",
+                "u",
+                ""
+              ],
+              "weight": 25655
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                " "
+              ],
+              "weight": 62667
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "a"
+              ],
+              "weight": 100378
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "d"
+              ],
+              "weight": 94892
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "e"
+              ],
+              "weight": 116055
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "s"
+              ],
+              "weight": 58618
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "u"
+              ],
+              "weight": 69528
+            },
+            {
+              "key": [
+                "substitution",
+                "a",
+                "e"
+              ],
+              "weight": 18001
+            },
+            {
+              "key": [
+                "substitution",
+                "a",
+                "i"
+              ],
+              "weight": 14346
+            },
+            {
+              "key": [
+                "substitution",
+                "e",
+                "a"
+              ],
+              "weight": 54914
+            },
+            {
+              "key": [
+                "substitution",
+                "e",
+                "i"
+              ],
+              "weight": 130950
+            },
+            {
+              "key": [
+                "substitution",
+                "i",
+                "e"
+              ],
+              "weight": 36453
+            },
+            {
+              "key": [
+                "substitution",
+                "i",
+                "y"
+              ],
+              "weight": 38887
+            },
+            {
+              "key": [
+                "substitution",
+                "o",
+                "a"
+              ],
+              "weight": 46006
+            }
+          ],
+          "complete_updates": 100,
+          "component_decision_scope": "B_target_EOS executed only by B; C components executed only by C; both queue counts retained",
+          "component_decisions": {
+            "B_target_EOS": 1457488,
+            "C_action": 113667,
+            "C_end": 69560,
+            "C_start": 69560,
+            "C_vocabulary": 306055
+          },
+          "edit_mass": 1621791,
+          "equality_charge": {
+            "lexical_equal": 830235,
+            "lexical_repair": 2450617,
+            "raw_equal": 669416,
+            "raw_repair": 2611436
+          },
+          "maximum_entry_keys": [
+            [
+              "deletion",
+              "e",
+              ""
+            ]
+          ],
+          "maximum_entry_weight": 326113,
+          "phase_charge": {
+            "P0": 2165365,
+            "P1": 885768,
+            "P2": 229719
+          },
+          "separator_only_alarm": false,
+          "separator_only_weight": 326722,
+          "single_entry_alarm": false,
+          "update_distributions": {
+            "canonical_charge": {
+              "maximum": 32887,
+              "mean": 32808.52,
+              "median": 32804.5,
+              "minimum": 32768,
+              "p95": 32859.15,
+              "sum": 3280852
+            },
+            "decoder_event_positions": {
+              "maximum": 14977,
+              "mean": 14574.88,
+              "median": 14547.0,
+              "minimum": 14509,
+              "p95": 14935.4,
+              "sum": 1457488
+            },
+            "decoder_padding": {
+              "maximum": 18042,
+              "mean": 7722.92,
+              "median": 7015.0,
+              "minimum": 6461,
+              "p95": 17342.7,
+              "sum": 772292
+            },
+            "examples": {
+              "maximum": 455,
+              "mean": 441.07,
+              "median": 447.0,
+              "minimum": 361,
+              "p95": 453.0,
+              "sum": 44107
+            },
+            "loss": {
+              "maximum": 7.660025119781494,
+              "mean": 2.868723136173212,
+              "median": 2.3113079331815243,
+              "minimum": 1.8200635192915797,
+              "p95": 6.261221544630825,
+              "sum": 286.8723136173212
+            },
+            "microsteps": {
+              "maximum": 29,
+              "mean": 27.98,
+              "median": 28.0,
+              "minimum": 23,
+              "p95": 29.0,
+              "sum": 2798
+            },
+            "overshoot": {
+              "maximum": 119,
+              "mean": 40.52,
+              "median": 36.5,
+              "minimum": 0,
+              "p95": 91.14999999999999,
+              "sum": 4052
+            },
+            "source_padding": {
+              "maximum": 21372,
+              "mean": 15349.55,
+              "median": 15012.5,
+              "minimum": 13485,
+              "p95": 20183.699999999997,
+              "sum": 1534955
+            },
+            "source_positions": {
+              "maximum": 17528,
+              "mean": 17378.53,
+              "median": 17374.0,
+              "minimum": 17202,
+              "p95": 17493.0,
+              "sum": 1737853
+            },
+            "wall_seconds": {
+              "maximum": 6.823879542003851,
+              "mean": 4.181509074998612,
+              "median": 4.155780582994339,
+              "minimum": 2.5917587500007357,
+              "p95": 5.610713788954308,
+              "sum": 418.1509074998612
+            }
+          },
+          "view_charge": {
+            "empirical:empirical1": 1002885,
+            "empirical:empirical2": 309453,
+            "identity_minimal:identity": 492019,
+            "identity_minimal:mixed": 492358,
+            "natural:natural": 328006,
+            "rules:clean": 128292,
+            "rules:mixed": 436978,
+            "rules:two": 90861
+          }
+        },
+        "warmup": {
+          "channel_charge": {
+            "empirical": 65616,
+            "identity_minimal": 49205,
+            "natural": 16407,
+            "rules": 32779
+          },
+          "charge_weighted_edit_entries": [
+            {
+              "key": [
+                "deletion",
+                " ",
+                ""
+              ],
+              "weight": 14373
+            },
+            {
+              "key": [
+                "deletion",
+                "d",
+                ""
+              ],
+              "weight": 4788
+            },
+            {
+              "key": [
+                "deletion",
+                "e",
+                ""
+              ],
+              "weight": 16155
+            },
+            {
+              "key": [
+                "deletion",
+                "i",
+                ""
+              ],
+              "weight": 2048
+            },
+            {
+              "key": [
+                "deletion",
+                "s",
+                ""
+              ],
+              "weight": 1498
+            },
+            {
+              "key": [
+                "deletion",
+                "u",
+                ""
+              ],
+              "weight": 525
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                " "
+              ],
+              "weight": 2150
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "a"
+              ],
+              "weight": 4597
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "d"
+              ],
+              "weight": 4387
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "e"
+              ],
+              "weight": 6755
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "s"
+              ],
+              "weight": 2375
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "u"
+              ],
+              "weight": 3379
+            },
+            {
+              "key": [
+                "substitution",
+                "a",
+                "e"
+              ],
+              "weight": 884
+            },
+            {
+              "key": [
+                "substitution",
+                "a",
+                "i"
+              ],
+              "weight": 1166
+            },
+            {
+              "key": [
+                "substitution",
+                "e",
+                "a"
+              ],
+              "weight": 2873
+            },
+            {
+              "key": [
+                "substitution",
+                "e",
+                "i"
+              ],
+              "weight": 6564
+            },
+            {
+              "key": [
+                "substitution",
+                "i",
+                "e"
+              ],
+              "weight": 1027
+            },
+            {
+              "key": [
+                "substitution",
+                "i",
+                "y"
+              ],
+              "weight": 2142
+            },
+            {
+              "key": [
+                "substitution",
+                "o",
+                "a"
+              ],
+              "weight": 2349
+            }
+          ],
+          "complete_updates": 5,
+          "component_decision_scope": "B_target_EOS executed only by B; C components executed only by C; both queue counts retained",
+          "component_decisions": {
+            "B_target_EOS": 72920,
+            "C_action": 5572,
+            "C_end": 3392,
+            "C_start": 3392,
+            "C_vocabulary": 15074
+          },
+          "edit_mass": 80035,
+          "equality_charge": {
+            "lexical_equal": 45243,
+            "lexical_repair": 118764,
+            "raw_equal": 37962,
+            "raw_repair": 126045
+          },
+          "maximum_entry_keys": [
+            [
+              "deletion",
+              "e",
+              ""
+            ]
+          ],
+          "maximum_entry_weight": 16155,
+          "phase_charge": {
+            "P0": 104692,
+            "P1": 42032,
+            "P2": 17283
+          },
+          "separator_only_alarm": false,
+          "separator_only_weight": 16523,
+          "single_entry_alarm": false,
+          "update_distributions": {
+            "canonical_charge": {
+              "maximum": 32815,
+              "mean": 32801.4,
+              "median": 32801,
+              "minimum": 32784,
+              "p95": 32814.2,
+              "sum": 164007
+            },
+            "decoder_event_positions": {
+              "maximum": 14759,
+              "mean": 14584,
+              "median": 14542,
+              "minimum": 14534,
+              "p95": 14716.0,
+              "sum": 72920
+            },
+            "decoder_padding": {
+              "maximum": 11632,
+              "mean": 7795.6,
+              "median": 6965,
+              "minimum": 6656,
+              "p95": 10706.8,
+              "sum": 38978
+            },
+            "examples": {
+              "maximum": 447,
+              "mean": 436,
+              "median": 444,
+              "minimum": 399,
+              "p95": 446.8,
+              "sum": 2180
+            },
+            "loss": {
+              "maximum": 9.851723745465279,
+              "mean": 8.508541861176491,
+              "median": 8.237357929348946,
+              "minimum": 7.535972520709038,
+              "p95": 9.656883627176285,
+              "sum": 42.542709305882454
+            },
+            "microsteps": {
+              "maximum": 28,
+              "mean": 27.4,
+              "median": 28,
+              "minimum": 25,
+              "p95": 28.0,
+              "sum": 137
+            },
+            "overshoot": {
+              "maximum": 47,
+              "mean": 33.4,
+              "median": 33,
+              "minimum": 16,
+              "p95": 46.2,
+              "sum": 167
+            },
+            "source_padding": {
+              "maximum": 16536,
+              "mean": 15229.4,
+              "median": 15017,
+              "minimum": 14243,
+              "p95": 16308.2,
+              "sum": 76147
+            },
+            "source_positions": {
+              "maximum": 17364,
+              "mean": 17335.4,
+              "median": 17349,
+              "minimum": 17269,
+              "p95": 17363.6,
+              "sum": 86677
+            },
+            "wall_seconds": {
+              "maximum": 5.582194791990332,
+              "mean": 3.7996739417954815,
+              "median": 3.5716850829776376,
+              "minimum": 2.291197167010978,
+              "p95": 5.3683163585898,
+              "sum": 18.998369708977407
+            }
+          },
+          "view_charge": {
+            "empirical:empirical1": 51197,
+            "empirical:empirical2": 14419,
+            "identity_minimal:identity": 24583,
+            "identity_minimal:mixed": 24622,
+            "natural:natural": 16407,
+            "rules:clean": 11147,
+            "rules:mixed": 19303,
+            "rules:two": 2329
+          }
+        }
+      },
+      "updates_sha256": "91a1b332e4e089ff76a04055a93189b4b50849bd84dc33f9da8874dae64594b4"
+    },
+    "C101": {
+      "segments": {
+        "all": {
+          "channel_charge": {
+            "empirical": 2375280,
+            "identity_minimal": 1781511,
+            "natural": 593920,
+            "rules": 1187496
+          },
+          "charge_weighted_edit_entries": [
+            {
+              "key": [
+                "deletion",
+                " ",
+                ""
+              ],
+              "weight": 478873
+            },
+            {
+              "key": [
+                "deletion",
+                "d",
+                ""
+              ],
+              "weight": 151740
+            },
+            {
+              "key": [
+                "deletion",
+                "e",
+                ""
+              ],
+              "weight": 591840
+            },
+            {
+              "key": [
+                "deletion",
+                "i",
+                ""
+              ],
+              "weight": 62328
+            },
+            {
+              "key": [
+                "deletion",
+                "s",
+                ""
+              ],
+              "weight": 84357
+            },
+            {
+              "key": [
+                "deletion",
+                "u",
+                ""
+              ],
+              "weight": 45695
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                " "
+              ],
+              "weight": 111438
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "a"
+              ],
+              "weight": 178180
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "d"
+              ],
+              "weight": 162990
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "e"
+              ],
+              "weight": 212931
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "s"
+              ],
+              "weight": 104815
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "u"
+              ],
+              "weight": 122719
+            },
+            {
+              "key": [
+                "substitution",
+                "a",
+                "e"
+              ],
+              "weight": 32765
+            },
+            {
+              "key": [
+                "substitution",
+                "a",
+                "i"
+              ],
+              "weight": 27747
+            },
+            {
+              "key": [
+                "substitution",
+                "e",
+                "a"
+              ],
+              "weight": 98384
+            },
+            {
+              "key": [
+                "substitution",
+                "e",
+                "i"
+              ],
+              "weight": 237567
+            },
+            {
+              "key": [
+                "substitution",
+                "i",
+                "e"
+              ],
+              "weight": 68823
+            },
+            {
+              "key": [
+                "substitution",
+                "i",
+                "y"
+              ],
+              "weight": 70193
+            },
+            {
+              "key": [
+                "substitution",
+                "o",
+                "a"
+              ],
+              "weight": 82790
+            }
+          ],
+          "complete_updates": 181,
+          "component_decision_scope": "B_target_EOS executed only by B; C components executed only by C; both queue counts retained",
+          "component_decisions": {
+            "B_target_EOS": 2637942,
+            "C_action": 205670,
+            "C_end": 125843,
+            "C_start": 125843,
+            "C_vocabulary": 553790
+          },
+          "edit_mass": 2926175,
+          "equality_charge": {
+            "lexical_equal": 1507324,
+            "lexical_repair": 4430883,
+            "raw_equal": 1217994,
+            "raw_repair": 4720213
+          },
+          "maximum_entry_keys": [
+            [
+              "deletion",
+              "e",
+              ""
+            ]
+          ],
+          "maximum_entry_weight": 591840,
+          "phase_charge": {
+            "P0": 3943223,
+            "P1": 1583849,
+            "P2": 411135
+          },
+          "separator_only_alarm": false,
+          "separator_only_weight": 590311,
+          "single_entry_alarm": false,
+          "update_distributions": {
+            "canonical_charge": {
+              "maximum": 32890,
+              "mean": 32807.77348066298,
+              "median": 32804,
+              "minimum": 32768,
+              "p95": 32859.0,
+              "sum": 5938207
+            },
+            "decoder_event_positions": {
+              "maximum": 5232,
+              "mean": 4891.176795580111,
+              "median": 4922,
+              "minimum": 3841,
+              "p95": 5153.0,
+              "sum": 885303
+            },
+            "decoder_padding": {
+              "maximum": 0,
+              "mean": 0,
+              "median": 0,
+              "minimum": 0,
+              "p95": 0.0,
+              "sum": 0
+            },
+            "examples": {
+              "maximum": 457,
+              "mean": 441.03314917127074,
+              "median": 446,
+              "minimum": 361,
+              "p95": 454.0,
+              "sum": 79827
+            },
+            "loss": {
+              "maximum": 19.428628124296665,
+              "mean": 2.232477031229535,
+              "median": 1.1172656355824984,
+              "minimum": 0.5654239785371828,
+              "p95": 8.356654865667224,
+              "sum": 404.07834265254576
+            },
+            "microsteps": {
+              "maximum": 115,
+              "mean": 110.64088397790056,
+              "median": 112,
+              "minimum": 91,
+              "p95": 114.0,
+              "sum": 20026
+            },
+            "overshoot": {
+              "maximum": 122,
+              "mean": 39.773480662983424,
+              "median": 36,
+              "minimum": 0,
+              "p95": 91.0,
+              "sum": 7199
+            },
+            "source_padding": {
+              "maximum": 11972,
+              "mean": 7523.85635359116,
+              "median": 7255,
+              "minimum": 6621,
+              "p95": 10688.0,
+              "sum": 1361818
+            },
+            "source_positions": {
+              "maximum": 17528,
+              "mean": 17376.39226519337,
+              "median": 17369,
+              "minimum": 17173,
+              "p95": 17480.0,
+              "sum": 3145127
+            },
+            "wall_seconds": {
+              "maximum": 18.237591250013793,
+              "mean": 15.792523855730494,
+              "median": 15.917309040989494,
+              "minimum": 12.650064749992453,
+              "p95": 16.763954583992017,
+              "sum": 2858.4468178872194
+            }
+          },
+          "view_charge": {
+            "empirical:empirical1": 1824385,
+            "empirical:empirical2": 550895,
+            "identity_minimal:identity": 890694,
+            "identity_minimal:mixed": 890817,
+            "natural:natural": 593920,
+            "rules:clean": 238898,
+            "rules:mixed": 789431,
+            "rules:two": 159167
+          }
+        },
+        "sustained": {
+          "channel_charge": {
+            "empirical": 997326,
+            "identity_minimal": 747929,
+            "natural": 249507,
+            "rules": 498586
+          },
+          "charge_weighted_edit_entries": [
+            {
+              "key": [
+                "deletion",
+                " ",
+                ""
+              ],
+              "weight": 200445
+            },
+            {
+              "key": [
+                "deletion",
+                "d",
+                ""
+              ],
+              "weight": 64321
+            },
+            {
+              "key": [
+                "deletion",
+                "e",
+                ""
+              ],
+              "weight": 249572
+            },
+            {
+              "key": [
+                "deletion",
+                "i",
+                ""
+              ],
+              "weight": 24326
+            },
+            {
+              "key": [
+                "deletion",
+                "s",
+                ""
+              ],
+              "weight": 37171
+            },
+            {
+              "key": [
+                "deletion",
+                "u",
+                ""
+              ],
+              "weight": 19515
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                " "
+              ],
+              "weight": 46621
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "a"
+              ],
+              "weight": 73205
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "d"
+              ],
+              "weight": 63711
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "e"
+              ],
+              "weight": 90121
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "s"
+              ],
+              "weight": 43822
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "u"
+              ],
+              "weight": 49812
+            },
+            {
+              "key": [
+                "substitution",
+                "a",
+                "e"
+              ],
+              "weight": 13880
+            },
+            {
+              "key": [
+                "substitution",
+                "a",
+                "i"
+              ],
+              "weight": 12235
+            },
+            {
+              "key": [
+                "substitution",
+                "e",
+                "a"
+              ],
+              "weight": 40597
+            },
+            {
+              "key": [
+                "substitution",
+                "e",
+                "i"
+              ],
+              "weight": 100053
+            },
+            {
+              "key": [
+                "substitution",
+                "i",
+                "e"
+              ],
+              "weight": 31343
+            },
+            {
+              "key": [
+                "substitution",
+                "i",
+                "y"
+              ],
+              "weight": 29164
+            },
+            {
+              "key": [
+                "substitution",
+                "o",
+                "a"
+              ],
+              "weight": 34435
+            }
+          ],
+          "complete_updates": 76,
+          "component_decision_scope": "B_target_EOS executed only by B; C components executed only by C; both queue counts retained",
+          "component_decisions": {
+            "B_target_EOS": 1107534,
+            "C_action": 86431,
+            "C_end": 52891,
+            "C_start": 52891,
+            "C_vocabulary": 232661
+          },
+          "edit_mass": 1224349,
+          "equality_charge": {
+            "lexical_equal": 631846,
+            "lexical_repair": 1861502,
+            "raw_equal": 510616,
+            "raw_repair": 1982732
+          },
+          "maximum_entry_keys": [
+            [
+              "deletion",
+              "e",
+              ""
+            ]
+          ],
+          "maximum_entry_weight": 249572,
+          "phase_charge": {
+            "P0": 1673166,
+            "P1": 656049,
+            "P2": 164133
+          },
+          "separator_only_alarm": false,
+          "separator_only_weight": 247066,
+          "single_entry_alarm": false,
+          "update_distributions": {
+            "canonical_charge": {
+              "maximum": 32890,
+              "mean": 32807.21052631579,
+              "median": 32804.0,
+              "minimum": 32768,
+              "p95": 32859.0,
+              "sum": 2493348
+            },
+            "decoder_event_positions": {
+              "maximum": 5232,
+              "mean": 4894.513157894737,
+              "median": 4928.5,
+              "minimum": 3931,
+              "p95": 5156.0,
+              "sum": 371983
+            },
+            "decoder_padding": {
+              "maximum": 0,
+              "mean": 0,
+              "median": 0.0,
+              "minimum": 0,
+              "p95": 0.0,
+              "sum": 0
+            },
+            "examples": {
+              "maximum": 457,
+              "mean": 441.3157894736842,
+              "median": 445.0,
+              "minimum": 362,
+              "p95": 454.0,
+              "sum": 33540
+            },
+            "loss": {
+              "maximum": 1.9424426249606768,
+              "mean": 0.8432535114224023,
+              "median": 0.8270048878011949,
+              "minimum": 0.5654239785371828,
+              "p95": 1.0360442492589357,
+              "sum": 64.08726686810257
+            },
+            "microsteps": {
+              "maximum": 115,
+              "mean": 110.69736842105263,
+              "median": 112.0,
+              "minimum": 91,
+              "p95": 114.0,
+              "sum": 8413
+            },
+            "overshoot": {
+              "maximum": 122,
+              "mean": 39.21052631578947,
+              "median": 36.0,
+              "minimum": 0,
+              "p95": 91.0,
+              "sum": 2980
+            },
+            "source_padding": {
+              "maximum": 11972,
+              "mean": 7496.105263157895,
+              "median": 7238.5,
+              "minimum": 6621,
+              "p95": 10628.25,
+              "sum": 569704
+            },
+            "source_positions": {
+              "maximum": 17508,
+              "mean": 17376.276315789473,
+              "median": 17369.0,
+              "minimum": 17173,
+              "p95": 17468.0,
+              "sum": 1320597
+            },
+            "wall_seconds": {
+              "maximum": 17.300581207993673,
+              "mean": 15.772165807067818,
+              "median": 15.856314167001983,
+              "minimum": 12.705338416999439,
+              "p95": 16.781269562998204,
+              "sum": 1198.6846013371542
+            }
+          },
+          "view_charge": {
+            "empirical:empirical1": 770303,
+            "empirical:empirical2": 227023,
+            "identity_minimal:identity": 374092,
+            "identity_minimal:mixed": 373837,
+            "natural:natural": 249507,
+            "rules:clean": 99459,
+            "rules:mixed": 333150,
+            "rules:two": 65977
+          }
+        },
+        "timed": {
+          "channel_charge": {
+            "empirical": 1312338,
+            "identity_minimal": 984377,
+            "natural": 328006,
+            "rules": 656131
+          },
+          "charge_weighted_edit_entries": [
+            {
+              "key": [
+                "deletion",
+                " ",
+                ""
+              ],
+              "weight": 264055
+            },
+            {
+              "key": [
+                "deletion",
+                "d",
+                ""
+              ],
+              "weight": 82631
+            },
+            {
+              "key": [
+                "deletion",
+                "e",
+                ""
+              ],
+              "weight": 326113
+            },
+            {
+              "key": [
+                "deletion",
+                "i",
+                ""
+              ],
+              "weight": 35954
+            },
+            {
+              "key": [
+                "deletion",
+                "s",
+                ""
+              ],
+              "weight": 45688
+            },
+            {
+              "key": [
+                "deletion",
+                "u",
+                ""
+              ],
+              "weight": 25655
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                " "
+              ],
+              "weight": 62667
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "a"
+              ],
+              "weight": 100378
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "d"
+              ],
+              "weight": 94892
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "e"
+              ],
+              "weight": 116055
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "s"
+              ],
+              "weight": 58618
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "u"
+              ],
+              "weight": 69528
+            },
+            {
+              "key": [
+                "substitution",
+                "a",
+                "e"
+              ],
+              "weight": 18001
+            },
+            {
+              "key": [
+                "substitution",
+                "a",
+                "i"
+              ],
+              "weight": 14346
+            },
+            {
+              "key": [
+                "substitution",
+                "e",
+                "a"
+              ],
+              "weight": 54914
+            },
+            {
+              "key": [
+                "substitution",
+                "e",
+                "i"
+              ],
+              "weight": 130950
+            },
+            {
+              "key": [
+                "substitution",
+                "i",
+                "e"
+              ],
+              "weight": 36453
+            },
+            {
+              "key": [
+                "substitution",
+                "i",
+                "y"
+              ],
+              "weight": 38887
+            },
+            {
+              "key": [
+                "substitution",
+                "o",
+                "a"
+              ],
+              "weight": 46006
+            }
+          ],
+          "complete_updates": 100,
+          "component_decision_scope": "B_target_EOS executed only by B; C components executed only by C; both queue counts retained",
+          "component_decisions": {
+            "B_target_EOS": 1457488,
+            "C_action": 113667,
+            "C_end": 69560,
+            "C_start": 69560,
+            "C_vocabulary": 306055
+          },
+          "edit_mass": 1621791,
+          "equality_charge": {
+            "lexical_equal": 830235,
+            "lexical_repair": 2450617,
+            "raw_equal": 669416,
+            "raw_repair": 2611436
+          },
+          "maximum_entry_keys": [
+            [
+              "deletion",
+              "e",
+              ""
+            ]
+          ],
+          "maximum_entry_weight": 326113,
+          "phase_charge": {
+            "P0": 2165365,
+            "P1": 885768,
+            "P2": 229719
+          },
+          "separator_only_alarm": false,
+          "separator_only_weight": 326722,
+          "single_entry_alarm": false,
+          "update_distributions": {
+            "canonical_charge": {
+              "maximum": 32887,
+              "mean": 32808.52,
+              "median": 32804.5,
+              "minimum": 32768,
+              "p95": 32859.15,
+              "sum": 3280852
+            },
+            "decoder_event_positions": {
+              "maximum": 5231,
+              "mean": 4892.82,
+              "median": 4926.0,
+              "minimum": 3841,
+              "p95": 5146.35,
+              "sum": 489282
+            },
+            "decoder_padding": {
+              "maximum": 0,
+              "mean": 0,
+              "median": 0.0,
+              "minimum": 0,
+              "p95": 0.0,
+              "sum": 0
+            },
+            "examples": {
+              "maximum": 455,
+              "mean": 441.07,
+              "median": 447.0,
+              "minimum": 361,
+              "p95": 453.0,
+              "sum": 44107
+            },
+            "loss": {
+              "maximum": 19.428628124296665,
+              "mean": 2.6708717445704178,
+              "median": 1.5672054472379386,
+              "minimum": 0.8603113788981318,
+              "p95": 7.815114102885126,
+              "sum": 267.0871744570418
+            },
+            "microsteps": {
+              "maximum": 114,
+              "mean": 110.67,
+              "median": 112.0,
+              "minimum": 91,
+              "p95": 114.0,
+              "sum": 11067
+            },
+            "overshoot": {
+              "maximum": 119,
+              "mean": 40.52,
+              "median": 36.5,
+              "minimum": 0,
+              "p95": 91.14999999999999,
+              "sum": 4052
+            },
+            "source_padding": {
+              "maximum": 11831,
+              "mean": 7542.39,
+              "median": 7260.5,
+              "minimum": 6763,
+              "p95": 11121.75,
+              "sum": 754239
+            },
+            "source_positions": {
+              "maximum": 17528,
+              "mean": 17378.53,
+              "median": 17374.0,
+              "minimum": 17202,
+              "p95": 17493.0,
+              "sum": 1737853
+            },
+            "wall_seconds": {
+              "maximum": 18.237591250013793,
+              "mean": 15.817666448820674,
+              "median": 15.940482041507494,
+              "minimum": 12.650064749992453,
+              "p95": 16.672571731571225,
+              "sum": 1581.7666448820673
+            }
+          },
+          "view_charge": {
+            "empirical:empirical1": 1002885,
+            "empirical:empirical2": 309453,
+            "identity_minimal:identity": 492019,
+            "identity_minimal:mixed": 492358,
+            "natural:natural": 328006,
+            "rules:clean": 128292,
+            "rules:mixed": 436978,
+            "rules:two": 90861
+          }
+        },
+        "warmup": {
+          "channel_charge": {
+            "empirical": 65616,
+            "identity_minimal": 49205,
+            "natural": 16407,
+            "rules": 32779
+          },
+          "charge_weighted_edit_entries": [
+            {
+              "key": [
+                "deletion",
+                " ",
+                ""
+              ],
+              "weight": 14373
+            },
+            {
+              "key": [
+                "deletion",
+                "d",
+                ""
+              ],
+              "weight": 4788
+            },
+            {
+              "key": [
+                "deletion",
+                "e",
+                ""
+              ],
+              "weight": 16155
+            },
+            {
+              "key": [
+                "deletion",
+                "i",
+                ""
+              ],
+              "weight": 2048
+            },
+            {
+              "key": [
+                "deletion",
+                "s",
+                ""
+              ],
+              "weight": 1498
+            },
+            {
+              "key": [
+                "deletion",
+                "u",
+                ""
+              ],
+              "weight": 525
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                " "
+              ],
+              "weight": 2150
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "a"
+              ],
+              "weight": 4597
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "d"
+              ],
+              "weight": 4387
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "e"
+              ],
+              "weight": 6755
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "s"
+              ],
+              "weight": 2375
+            },
+            {
+              "key": [
+                "insertion",
+                "",
+                "u"
+              ],
+              "weight": 3379
+            },
+            {
+              "key": [
+                "substitution",
+                "a",
+                "e"
+              ],
+              "weight": 884
+            },
+            {
+              "key": [
+                "substitution",
+                "a",
+                "i"
+              ],
+              "weight": 1166
+            },
+            {
+              "key": [
+                "substitution",
+                "e",
+                "a"
+              ],
+              "weight": 2873
+            },
+            {
+              "key": [
+                "substitution",
+                "e",
+                "i"
+              ],
+              "weight": 6564
+            },
+            {
+              "key": [
+                "substitution",
+                "i",
+                "e"
+              ],
+              "weight": 1027
+            },
+            {
+              "key": [
+                "substitution",
+                "i",
+                "y"
+              ],
+              "weight": 2142
+            },
+            {
+              "key": [
+                "substitution",
+                "o",
+                "a"
+              ],
+              "weight": 2349
+            }
+          ],
+          "complete_updates": 5,
+          "component_decision_scope": "B_target_EOS executed only by B; C components executed only by C; both queue counts retained",
+          "component_decisions": {
+            "B_target_EOS": 72920,
+            "C_action": 5572,
+            "C_end": 3392,
+            "C_start": 3392,
+            "C_vocabulary": 15074
+          },
+          "edit_mass": 80035,
+          "equality_charge": {
+            "lexical_equal": 45243,
+            "lexical_repair": 118764,
+            "raw_equal": 37962,
+            "raw_repair": 126045
+          },
+          "maximum_entry_keys": [
+            [
+              "deletion",
+              "e",
+              ""
+            ]
+          ],
+          "maximum_entry_weight": 16155,
+          "phase_charge": {
+            "P0": 104692,
+            "P1": 42032,
+            "P2": 17283
+          },
+          "separator_only_alarm": false,
+          "separator_only_weight": 16523,
+          "single_entry_alarm": false,
+          "update_distributions": {
+            "canonical_charge": {
+              "maximum": 32815,
+              "mean": 32801.4,
+              "median": 32801,
+              "minimum": 32784,
+              "p95": 32814.2,
+              "sum": 164007
+            },
+            "decoder_event_positions": {
+              "maximum": 5021,
+              "mean": 4807.6,
+              "median": 4868,
+              "minimum": 4365,
+              "p95": 5000.6,
+              "sum": 24038
+            },
+            "decoder_padding": {
+              "maximum": 0,
+              "mean": 0,
+              "median": 0,
+              "minimum": 0,
+              "p95": 0.0,
+              "sum": 0
+            },
+            "examples": {
+              "maximum": 447,
+              "mean": 436,
+              "median": 444,
+              "minimum": 399,
+              "p95": 446.8,
+              "sum": 2180
+            },
+            "loss": {
+              "maximum": 17.28481255285442,
+              "mean": 14.58078026548028,
+              "median": 14.829562652856112,
+              "minimum": 11.7840894497931,
+              "p95": 16.91316058933735,
+              "sum": 72.9039013274014
+            },
+            "microsteps": {
+              "maximum": 112,
+              "mean": 109.2,
+              "median": 111,
+              "minimum": 100,
+              "p95": 112.0,
+              "sum": 546
+            },
+            "overshoot": {
+              "maximum": 47,
+              "mean": 33.4,
+              "median": 33,
+              "minimum": 16,
+              "p95": 46.2,
+              "sum": 167
+            },
+            "source_padding": {
+              "maximum": 9034,
+              "mean": 7575,
+              "median": 7219,
+              "minimum": 7135,
+              "p95": 8685.8,
+              "sum": 37875
+            },
+            "source_positions": {
+              "maximum": 17364,
+              "mean": 17335.4,
+              "median": 17349,
+              "minimum": 17269,
+              "p95": 17363.6,
+              "sum": 86677
+            },
+            "wall_seconds": {
+              "maximum": 16.004578874999424,
+              "mean": 15.599114333599573,
+              "median": 15.934806417004438,
+              "minimum": 14.253909582999768,
+              "p95": 15.99398126679589,
+              "sum": 77.99557166799787
+            }
+          },
+          "view_charge": {
+            "empirical:empirical1": 51197,
+            "empirical:empirical2": 14419,
+            "identity_minimal:identity": 24583,
+            "identity_minimal:mixed": 24622,
+            "natural:natural": 16407,
+            "rules:clean": 11147,
+            "rules:mixed": 19303,
+            "rules:two": 2329
+          }
+        }
+      },
+      "updates_sha256": "4591a87e8c695b744e8b4421fbd8dca6f7ddc07ce554e55666c9ca7cbfb41a2f"
+    }
+  },
+  "implementation_commit": "28298ad886aa321882aa0530a18421e7d4e3553e",
+  "probe_slots_consumed": 0,
+  "scope": "ACTUAL_NATIVE_QUALIFICATION_AGGREGATES_NOT_SCIENTIFIC_PROBE_RESULTS"
+}
