@@ -252,6 +252,17 @@ def validate_checkpoint_clock(meta):
         raise ValueError("checkpoint loss is nonfinite")
 
 
+def validate_checkpoint_accumulator(meta, arrays):
+    if meta["accumulator_microbatches"] != meta["completed_microbatches"]:
+        raise ValueError("checkpoint completed/accumulated microbatches differ")
+    if not meta["queue"] and (meta["pending_charge"] or meta["completed_microbatches"]
+            or meta["denominators"] or meta["partition"] or meta["loss"]):
+        raise ValueError("checkpoint boundary has pending state")
+    if meta["accumulator_microbatches"] == 0 and any(
+            np.any(value) for key, value in arrays.items() if key.startswith("acc::")):
+        raise ValueError("checkpoint empty accumulator has nonzero gradients")
+
+
 def save_paired_checkpoint(trainer, destination, probe_row):
     destination = Path(destination)
     destination.parent.mkdir(parents=True, exist_ok=True)
@@ -285,6 +296,7 @@ def save_paired_checkpoint(trainer, destination, probe_row):
         "dtypes": {key: str(value.dtype) for key, value in arrays.items()},
         "probe_variant_id": probe_row["variant_id"], "forward_probe_sha256": forward_probe(trainer, probe_row)}
     validate_checkpoint_clock(meta)
+    validate_checkpoint_accumulator(meta, arrays)
     (temporary / "metadata.json").write_text(json.dumps(meta, sort_keys=True, indent=2, allow_nan=False) + "\n")
     manifest = {name: file_hash(temporary / name) for name in ("arrays.npz", "metadata.json")}
     (temporary / "COMPLETE.json").write_text(json.dumps(manifest, sort_keys=True) + "\n")
@@ -321,7 +333,9 @@ def load_paired_checkpoint(trainer, source, rows):
                     or list(array.shape) != meta["shapes"][key] or str(array.dtype) != meta["dtypes"][key]
                     or not np.isfinite(array).all()):
                 raise ValueError("checkpoint shape/dtype/finite-state mismatch")
-            arrays[key] = mx.array(array)
+            arrays[key] = array
+    validate_checkpoint_accumulator(meta, arrays)
+    arrays = {key: mx.array(value) for key, value in arrays.items()}
     trainer.model.update(tree_unflatten([(key.removeprefix("model::"), value) for key, value in arrays.items() if key.startswith("model::")]))
     for prefix, destination in (("m", trainer.optimizer.m), ("v", trainer.optimizer.v), ("acc", trainer.accumulator.values)):
         for key in destination:
@@ -338,15 +352,18 @@ def load_paired_checkpoint(trainer, source, rows):
     trainer.queue = [{**item, "row": rows[item["variant_id"]]} for item in meta["queue"]]
     if trainer.queue:
         validate_queue(trainer.queue)
+        reconstructed_denominators = queue_denominators(trainer.queue)
         expected_partition = [(offset, min(offset + trainer.microbatch_size, len(trainer.queue)))
             for offset in range(0, len(trainer.queue), trainer.microbatch_size)]
-        if (queue_denominators(trainer.queue) != trainer.denominators
+        if (reconstructed_denominators != trainer.denominators
                 or sum(item["canonical_charge"] for item in trainer.queue) != trainer.pending_charge
                 or trainer.completed_microbatches != trainer.accumulator.microbatches
                 or not 0 <= trainer.completed_microbatches <= len(trainer.partition)
                 or trainer.partition != expected_partition
                 or not math.isfinite(trainer.loss)):
             raise ValueError("checkpoint common queue objective mismatch")
+        # JSON key sorting must not change the approved component reduction order.
+        trainer.denominators = reconstructed_denominators
     elif trainer.pending_charge or trainer.completed_microbatches or trainer.denominators or trainer.partition:
         raise ValueError("checkpoint boundary has pending state")
     random.setstate(_tuples(meta["python_rng"]))

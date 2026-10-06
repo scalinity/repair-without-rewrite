@@ -1,0 +1,24 @@
+{
+  "BENCH_started": false,
+  "all_original_files_preserved": true,
+  "diagnostic_comparison_sha256": "15a338e347c06ff38b91935488fc043c0ec7d8b7d142654599254f9f7cee3d46",
+  "failed_gate": "C101_mid_cold_update2",
+  "failure_log_sha256": "8919a5acc85778864fd5dab8221f46065da177de77961d1d51fdaff93b55447c",
+  "final_admission_gate": false,
+  "implementation_commit": "04f3bec60ce957d85b26df65d5a7e2966608242d",
+  "native_attempt": 2,
+  "next_native_attempt": 3,
+  "pending_state_comparison_sha256": "d9f757247800b9b19d6d47fe9c0f5afa6bab94ed12b0c52bfb67ca7a4a1524ed",
+  "repair": "reconstruct validated original action/start/end/vocabulary denominator order; reject nonempty gradients/counters at empty boundaries",
+  "root_cause": "sorted JSON changes C component dictionary order; FP32 reduction/autodiff graph changes after mid restore",
+  "scientific_design_changed": false,
+  "six_probe_slots_consumed": 0,
+  "status": "SUPERSEDED_NATIVE_QUALIFICATION_CODE_REPAIR",
+  "valid_historical_results": {
+    "B100_boundary_cold_matched_updates": 21,
+    "B100_control_updates": 22,
+    "B100_mid_cold_matched_updates": 21,
+    "C101_boundary_cold_matched_updates": 21,
+    "C101_control_updates": 22
+  }
+}

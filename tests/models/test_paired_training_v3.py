@@ -110,6 +110,62 @@ def rehash(directory):
         for name in ("arrays.npz", "metadata.json")}, sort_keys=True) + "\n")
 
 
+def test_cold_mid_restore_keeps_original_c_component_reduction_order(tmp_path):
+    rows = fixture_rows()
+    control = trainer("C101", microbatch=3)
+    control.update(queue(rows), {"exposure": 42})
+    control.begin(queue(rows, 1), {"exposure": 84})
+    control.microstep()
+    path = tmp_path / "ordered-component-checkpoint"
+    save_paired_checkpoint(control, path, rows[0])
+    saved = json.loads((path / "metadata.json").read_text())
+    assert list(saved["denominators"]["C"]) == ["action", "end", "start", "vocabulary"]
+    resumed = trainer("C101", microbatch=3)
+    load_paired_checkpoint(resumed, path, {row["variant_id"]: row for row in rows})
+    assert list(resumed.denominators["C"]) == ["action", "start", "end", "vocabulary"]
+    for instance in (control, resumed):
+        while instance.completed_microbatches < len(instance.partition):
+            instance.microstep()
+    a, b = control.finish(), resumed.finish()
+    assert a["loss"] == b["loss"]
+    assert control.state_hash() == resumed.state_hash()
+
+
+@pytest.mark.parametrize("arm", ("B100", "C101"))
+@pytest.mark.parametrize("corruption", ("accumulator_counter", "accumulator_array", "saved_loss"))
+def test_rehashed_boundary_cannot_carry_unqueued_gradient_state(tmp_path, arm, corruption):
+    rows = fixture_rows()
+    instance = trainer(arm)
+    instance.update(queue(rows), {"exposure": 42})
+    path = tmp_path / "boundary"
+    save_paired_checkpoint(instance, path, rows[0])
+    if corruption == "accumulator_array":
+        with np.load(path / "arrays.npz", allow_pickle=False) as data:
+            arrays = {key: data[key] for key in data.files}
+        key = next(key for key in arrays if key.startswith("acc::"))
+        arrays[key].flat[0] = 1.
+        np.savez(path / "arrays.npz", **arrays)
+    else:
+        meta = json.loads((path / "metadata.json").read_text())
+        meta["accumulator_microbatches" if corruption == "accumulator_counter" else "loss"] = 1
+        (path / "metadata.json").write_text(json.dumps(meta))
+    rehash(path)
+    with pytest.raises(ValueError, match="microbatches differ|pending state|nonzero gradients"):
+        load_paired_checkpoint(trainer(arm), path, {row["variant_id"]: row for row in rows})
+
+
+@pytest.mark.parametrize("arm", ("B100", "C101"))
+def test_atomic_save_rejects_nonzero_empty_gradient_accumulator(tmp_path, arm):
+    rows = fixture_rows()
+    instance = trainer(arm)
+    key = next(iter(instance.accumulator.values))
+    instance.accumulator.values[key] = mx.ones_like(instance.accumulator.values[key])
+    destination = tmp_path / "invalid-boundary"
+    with pytest.raises(ValueError, match="nonzero gradients"):
+        save_paired_checkpoint(instance, destination, rows[0])
+    assert not destination.exists()
+
+
 @pytest.mark.parametrize("corruption", ("bytes", "dtype", "nonfinite", "queue_charge", "partition", "identity",
     "committed_clock", "reader_clock", "negative_clock", "noninteger_clock", "optimizer_clock"))
 def test_corrupted_checkpoint_is_rejected(tmp_path, corruption):

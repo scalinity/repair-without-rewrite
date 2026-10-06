@@ -1,0 +1,18 @@
+{
+  "log_sha256": "b22e61d072f86604c8a977933352b15b1f9a7eacb1c33e6a5a647511245ef400",
+  "native_attempt03_required": true,
+  "paired_trainer_sha256": "53737be25e1a8d2210ed18f35250ffdb7b8fe66f7cd7dde3873fabd630f8f119",
+  "runtime_environment": {
+    "MLX_ENABLE_TF32": "0"
+  },
+  "scientific_design_changed": false,
+  "scope": "INTEGRATED_COMPONENT_ORDER_AND_EMPTY_ACCUMULATOR_REPAIR",
+  "six_probe_slots_consumed": 0,
+  "status": "PASS",
+  "targeted_log_sha256": "a037dad6006b827c151a5dfb05ffd8d6c39c3e80842e167b60248373a5452543",
+  "targeted_model_tests": 32,
+  "targeted_model_wall_seconds": 5.04,
+  "tests_failed": 0,
+  "tests_passed": 372,
+  "wall_seconds": 35.35
+}
