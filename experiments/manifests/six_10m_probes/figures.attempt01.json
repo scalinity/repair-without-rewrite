@@ -1,0 +1,15 @@
+{
+  "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+  "disposition": "CURRENT_150M_CAMPAIGN_NOT_ADMISSIBLE",
+  "figure_helper_sha256": "d5a3a7c588a59997f719ac084d8201a3a2a49604ce9151c7015f763c71976618",
+  "figures_sha256": {
+    "docs/reports/figures/SIX_10M_GENERATED_CURVES.png": "b0a70d7911d8509d714c0e177886f046a52474af4a381760037d677083899b14",
+    "docs/reports/figures/SIX_10M_GENERATED_CURVES.svg": "0bca1a7fff13396eba7aa1b92fb574e425b1ac16f738539ab9f63562e3d4f37a",
+    "docs/reports/figures/SIX_10M_IDENTITY_FAILURE_CURVES.png": "4dd0b9af9e237ed3660d411f9d6da296b3391ad4bde39e217c8001d6dd485437",
+    "docs/reports/figures/SIX_10M_IDENTITY_FAILURE_CURVES.svg": "daa9f1121fab35e6404543b949f48568c1c04a247658d77372aab9d387290487",
+    "docs/reports/figures/SIX_10M_NATURAL_CURVES.png": "8c0df6fea2a704d317c20e89d6454957f4f96d81b48ad6617fd973b2aa6d469a",
+    "docs/reports/figures/SIX_10M_NATURAL_CURVES.svg": "d2f2d6cf6092b28f6eea11f577c1e9c892fd9988b7b88d1223e7585e5a467912"
+  },
+  "tables_path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+  "tables_sha256": "fd06cd8a86edbcc37cc3642363d28929efc380622bfe485422318071b6c766bf"
+}

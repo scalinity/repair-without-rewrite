@@ -3,6 +3,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+import textwrap
 
 import matplotlib
 matplotlib.use("Agg")
@@ -25,23 +26,24 @@ def setup():
 
 
 def canvas(title):
-    fig, axes = plt.subplots(2, 3, figsize=(12.8, 7.4), sharex=True)
+    fig, axes = plt.subplots(2, 3, figsize=(12.8, 8.0), sharex=True)
     fig.suptitle(title, fontsize=15, x=0.06, ha="left", y=0.97)
-    fig.subplots_adjust(left=0.07, right=0.98, top=0.86, bottom=0.16, hspace=0.38, wspace=0.27)
+    fig.subplots_adjust(left=0.07, right=0.98, top=0.86, bottom=0.20, hspace=0.38, wspace=0.27)
     for axis in axes.flat:
         axis.grid(axis="y")
         axis.set_axisbelow(True)
         axis.set_xticks([0, 1.017149, 3.018478, 6.693230, 9.350642, 10.007223])
-        axis.set_xticklabels(["0", "1.02", "3.02", "6.69", "9.35", "10.01"])
+        axis.set_xticklabels(["0", "1.02", "3.02", "6.69", "9.35", "10.01"], rotation=45, ha="right")
     for axis in axes[-1]:
         axis.set_xlabel("Actual canonical exposures (millions)")
     return fig, axes
 
 
 def save(fig, directory, stem, caption, files):
+    caption = "\n".join(textwrap.fill(line, width=140) for line in caption.splitlines())
     fig.text(0.06, 0.045, caption, ha="left", va="bottom", fontsize=8, color="#736E67")
     for suffix in ("svg", "png"):
-        path = directory / f"{stem}.{suffix}"
+        path = directory / f"{stem}_V2.{suffix}"
         if path.exists():
             raise ValueError(f"figure already exists: {path}")
         fig.savefig(path, dpi=180, metadata={"Creator": "Repair Without Rewrite", "Date": None} if suffix == "svg" else None)

@@ -1,0 +1,15 @@
+{
+  "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+  "disposition": "CURRENT_150M_CAMPAIGN_NOT_ADMISSIBLE",
+  "figure_helper_sha256": "8f4b06f918fd28151a56de73a6f8154167979a48db978a5899023e64aeef3a9c",
+  "figures_sha256": {
+    "docs/reports/figures/SIX_10M_GENERATED_CURVES_V2.png": "ca6bde26b3b472f269fe5513c18257646e506f617a930594f16c1ea059b7fb26",
+    "docs/reports/figures/SIX_10M_GENERATED_CURVES_V2.svg": "eab451a0e2d185b4fdc972384362355b0586d9f3d2c73d50ec2bb7e860f14697",
+    "docs/reports/figures/SIX_10M_IDENTITY_FAILURE_CURVES_V2.png": "8411b2cebf417783f3f4e47df2a7f94e556de18543b2c6242433b74c6e06ddcb",
+    "docs/reports/figures/SIX_10M_IDENTITY_FAILURE_CURVES_V2.svg": "4a9b56af73f148d227a0682ca4a20c49d2fc9b57f11da685b4ce5888814347c4",
+    "docs/reports/figures/SIX_10M_NATURAL_CURVES_V2.png": "9becb12f3068cd4a3bc2c9cdab3f090acc1ab001fbc05dd32aa583766bd4b6c0",
+    "docs/reports/figures/SIX_10M_NATURAL_CURVES_V2.svg": "b5c2d7d8914f077dfbd3625321f5385855581ace82cec821d1ef20eb5052263e"
+  },
+  "tables_path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+  "tables_sha256": "fd06cd8a86edbcc37cc3642363d28929efc380622bfe485422318071b6c766bf"
+}

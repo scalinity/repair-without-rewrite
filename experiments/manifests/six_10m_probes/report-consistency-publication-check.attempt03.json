@@ -1,0 +1,20 @@
+{
+  "absolute_personal_identifiers_found": false,
+  "correction_scope": "Summary labels its public report-consistency receipt attempt02; counts, decisions and scientific hashes unchanged",
+  "disposition": "PASS",
+  "independent_report_receipt_sha256": "1d14c687aa955d01758c365552c10b42cd68450d2f125778471c5f4fa49c379b",
+  "inspected_files_sha256": {
+    "docs/reports/10M_LEARNING_CURVE_ANALYSIS.md": "255440e5bb3ec98b2a29036263c2cc4dfa315f3fc04f017a721680f012249e36",
+    "docs/reports/B100_10M_LR_SELECTION.md": "c4b761e3e46e4bcbbbf86fd8cb5979a8f66ecaf89c8e3edbe726f3e9eac2f035",
+    "docs/reports/C101_10M_LR_SELECTION.md": "f9760024bf02bef1ae50fef8f1e2ff56b31fa0ca07db06188c56f4a4c1fa1422",
+    "docs/reports/POST_10M_DEVELOPMENT_DECISION.md": "54ca2e02ce1110a6de82ce31e018b780174a721a2f569e52a50604c0f4af5db9",
+    "docs/reports/SIX_10M_PROBE_CAMPAIGN.md": "5aee0ebf5ae5d21ad0f15cbe604a7dfc8fad4c1279165fa8a8b0091a00b7d7d8",
+    "docs/reports/SIX_10M_PROBE_INDEPENDENT_REVIEW.md": "dc18b11df60cc6c9cacd9f32f8ee977342b1d59d8e9972accf72f750815997c0",
+    "docs/reviews/SIX_10M_REPORT_CONSISTENCY_INDEPENDENT_REVIEW.md": "a02ad9cfa29e0ad4ed7fd63feffdc6a571334a6f187b90528455c301eaed03ad"
+  },
+  "no_scientific_artifact_changed": true,
+  "previous_publication_check_sha256": "dae139473ed87fc28fa81c23d7a686a3ad0a7abc23b86d62b63717763e064502",
+  "previous_summary_bytes_preserved_sha256": "06082a61c97b48cd40679f82c18295755ce190fc697e7394daec3e7922ae9890",
+  "relative_links_resolved": 41,
+  "six_required_report_tokens_match": true
+}

@@ -1,0 +1,41 @@
+{
+  "change_scope": "DISPLAY_ONLY: rotate exposure tick labels, wrap captions, increase canvas and bottom margin, additive V2 filenames. Numeric values, series, scales and denominators unchanged.",
+  "corrected_receipt": {
+    "path": "experiments/manifests/six_10m_probes/figures.attempt02.json",
+    "sha256": "e37c806329dddca1d3e35191407b1fcc2c5f6fd5860e57cb2741d082026cd695"
+  },
+  "disposition": "FIGURE_VISUAL_PASS",
+  "original_figure_bytes_retained": true,
+  "original_receipt": {
+    "path": "experiments/manifests/six_10m_probes/figures.attempt01.json",
+    "sha256": "b107c1f12cb1e9f7f6a6aff123a0f030a80c94b31024a4b4c97971c7997ee693"
+  },
+  "retained_receipt_preparation_failure": {
+    "path": "exports/six-10m-figure-visual-failed.attempt01.json",
+    "reason": "Path-valued receipt field could not serialize; empty attempted receipt retained.",
+    "scope": "REPORTING_DRAFT_ONLY",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "source_sha256": "8f4b06f918fd28151a56de73a6f8154167979a48db978a5899023e64aeef3a9c",
+  "tables_sha256": "fd06cd8a86edbcc37cc3642363d28929efc380622bfe485422318071b6c766bf",
+  "visual_checks": [
+    {
+      "caption_visible": true,
+      "labels_readable": true,
+      "path": "docs/reports/figures/SIX_10M_GENERATED_CURVES_V2.png",
+      "sha256": "ca6bde26b3b472f269fe5513c18257646e506f617a930594f16c1ea059b7fb26"
+    },
+    {
+      "caption_visible": true,
+      "labels_readable": true,
+      "path": "docs/reports/figures/SIX_10M_IDENTITY_FAILURE_CURVES_V2.png",
+      "sha256": "8411b2cebf417783f3f4e47df2a7f94e556de18543b2c6242433b74c6e06ddcb"
+    },
+    {
+      "caption_visible": true,
+      "labels_readable": true,
+      "path": "docs/reports/figures/SIX_10M_NATURAL_CURVES_V2.png",
+      "sha256": "9becb12f3068cd4a3bc2c9cdab3f090acc1ab001fbc05dd32aa583766bd4b6c0"
+    }
+  ]
+}

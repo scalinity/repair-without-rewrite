@@ -1,0 +1,28 @@
+{
+  "affected_files": {
+    "docs/reports/figures/SIX_10M_GENERATED_CURVES.svg": 1343,
+    "docs/reports/figures/SIX_10M_GENERATED_CURVES_V2.svg": 1343,
+    "docs/reports/figures/SIX_10M_IDENTITY_FAILURE_CURVES.svg": 1316,
+    "docs/reports/figures/SIX_10M_IDENTITY_FAILURE_CURVES_V2.svg": 1316,
+    "docs/reports/figures/SIX_10M_NATURAL_CURVES.svg": 1480,
+    "docs/reports/figures/SIX_10M_NATURAL_CURVES_V2.svg": 1480
+  },
+  "disposition": "GENERATED_SVG_WHITESPACE_EXPLAINED",
+  "explanation": "Matplotlib emits trailing spaces in multiline SVG path attributes. All reported whitespace findings are in generated SVGs. Original and V2 bytes are retained unchanged; reviewer-bound series coordinates and scientific values remain unchanged.",
+  "full_check_exit_code": 2,
+  "generated_svg_trailing_whitespace_lines": 8278,
+  "non_svg_check_exit_code": 0,
+  "retained_diagnostic": {
+    "path": "exports/six-10m-publication-whitespace.attempt01.log",
+    "sha256": "455871985d5a84ff907afe892125a965f3f2ee2fa50facb7ae39a77618c24aa9"
+  },
+  "scope": "PUBLICATION_FORMATTING_ONLY",
+  "svg_hashes": {
+    "docs/reports/figures/SIX_10M_GENERATED_CURVES.svg": "0bca1a7fff13396eba7aa1b92fb574e425b1ac16f738539ab9f63562e3d4f37a",
+    "docs/reports/figures/SIX_10M_GENERATED_CURVES_V2.svg": "eab451a0e2d185b4fdc972384362355b0586d9f3d2c73d50ec2bb7e860f14697",
+    "docs/reports/figures/SIX_10M_IDENTITY_FAILURE_CURVES.svg": "daa9f1121fab35e6404543b949f48568c1c04a247658d77372aab9d387290487",
+    "docs/reports/figures/SIX_10M_IDENTITY_FAILURE_CURVES_V2.svg": "4a9b56af73f148d227a0682ca4a20c49d2fc9b57f11da685b4ce5888814347c4",
+    "docs/reports/figures/SIX_10M_NATURAL_CURVES.svg": "d2f2d6cf6092b28f6eea11f577c1e9c892fd9988b7b88d1223e7585e5a467912",
+    "docs/reports/figures/SIX_10M_NATURAL_CURVES_V2.svg": "b5c2d7d8914f077dfbd3625321f5385855581ace82cec821d1ef20eb5052263e"
+  }
+}

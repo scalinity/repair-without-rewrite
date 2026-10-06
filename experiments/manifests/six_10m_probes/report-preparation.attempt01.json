@@ -1,0 +1,17 @@
+{
+  "artifacts": {
+    "exports/six-10m-build-reports.attempt01.py": "ad2600eeee2732c71c21d7749d5fe0edf93380c8607a1f442101e7fb64c21bef",
+    "exports/six-10m-report-drafts-attempt01/10M_LEARNING_CURVE_ANALYSIS.md": "507dfaac5f8078a5ba36cc396beefb451093eba854ddfd2cf35815af144432fb",
+    "exports/six-10m-report-drafts-attempt01/B100_10M_LR_SELECTION.md": "c4b761e3e46e4bcbbbf86fd8cb5979a8f66ecaf89c8e3edbe726f3e9eac2f035",
+    "exports/six-10m-report-drafts-attempt01/C101_10M_LR_SELECTION.md": "f9760024bf02bef1ae50fef8f1e2ff56b31fa0ca07db06188c56f4a4c1fa1422",
+    "exports/six-10m-report-render.attempt01.log": "097012c6a93767b41344144b042a2ddf8e28ceac32e44e1bfbb994bf8483820d"
+  },
+  "disposition": "REPORT_DRAFT_PREPARATION_REPAIRED",
+  "problem": "Timing display assumed C101 1e-4 used the B100 first-run clock schema. The C101 clock records exact outer wall_seconds.",
+  "recipe_replay": false,
+  "resolution": "Render three existing clock receipt schemas explicitly; preserve first B exit-time bound.",
+  "scientific_results_changed": false,
+  "scope": "REPORTING_DRAFT_ONLY",
+  "slots_consumed": 6,
+  "status": "RETAINED_FAILED_DRAFT"
+}

@@ -1,0 +1,27 @@
+{
+  "claim_kind": "FACT",
+  "cpu_only": true,
+  "current_reporting_hashes": {
+    "benchmarks/six_10m_descriptive.py": "ccbcf2dc0f737dc29d0ec0edb1ea9d0b4a12e1089414322e349fd2365c7c6ec7",
+    "benchmarks/six_10m_figures.py": "8f4b06f918fd28151a56de73a6f8154167979a48db978a5899023e64aeef3a9c"
+  },
+  "disposition": "INDEPENDENT_REPORTING_SOURCE_BINDING_REVIEW_REQUIRED",
+  "error": "AssertionError: qualified helper/library source binding",
+  "frozen_metric_checker_sha256": "ed901a5fd0619975edc072351d2cf0ce480237ee16cc0bc4c7ed88bce9a63a8a",
+  "new_final_decision_receipt_published": false,
+  "phase": "Final reporting-source binding, after all6curve/native update/cap/denominator assertions and independent endpoint eligibility/ranking comparisons",
+  "plot_library_bound_hashes": {
+    "benchmarks/six_10m_descriptive.py": "0170a031d2f5f4798692ea3ab5a39d4aa8dc7cd727e5fa0162b13ed3bae68f61",
+    "benchmarks/six_10m_figures.py": "d5a3a7c588a59997f719ac084d8201a3a2a49604ce9151c7015f763c71976618"
+  },
+  "reconstruction_complete": false,
+  "reporting_preparation_bound_hashes": {
+    "benchmarks/six_10m_descriptive.py": "ccbcf2dc0f737dc29d0ec0edb1ea9d0b4a12e1089414322e349fd2365c7c6ec7",
+    "benchmarks/six_10m_figures.py": "d5a3a7c588a59997f719ac084d8201a3a2a49604ce9151c7015f763c71976618"
+  },
+  "reviewed_head": "1f398126de6f869f03f39c368a1bec08759b3013",
+  "schema": "six10m_independent_final_review_diagnostic_v1",
+  "scientific_source_or_outputs_modified_by_reviewer": false,
+  "scope": "CPU-only final metric review command; scientific outcome artifacts unchanged by this reviewer",
+  "source_of_error": "A final reporting helper differs from the retained earlier preparation binding; inspect current reporting change before final source reconciliation"
+}

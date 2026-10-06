@@ -1,0 +1,27 @@
+{
+  "disposition": "CURRENT_150M_CAMPAIGN_NOT_ADMISSIBLE",
+  "inference_performed": false,
+  "input_hashes": {
+    "experiments/manifests/six_10m_probes/campaign-freeze.attempt01.json": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+    "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json": "fd06cd8a86edbcc37cc3642363d28929efc380622bfe485422318071b6c766bf",
+    "experiments/manifests/six_10m_probes/endpoint-selection.attempt01.json": "5d385e5760853992d7eb0c448cfc390352cab36a2e302ff6cb5995e99ef8bdfa",
+    "experiments/manifests/six_10m_probes/figures.attempt02.json": "e37c806329dddca1d3e35191407b1fcc2c5f6fd5860e57cb2741d082026cd695",
+    "experiments/manifests/six_10m_probes/final-validation.attempt02.json": "fa82e258030889ce025ab72dab21fc6516219309fa5ba7cca888d1160cd59958"
+  },
+  "render_log": {
+    "path": "exports/six-10m-report-render.attempt02.log",
+    "sha256": "5ce8e391980e9624d75e497f7eb72d212639e21fb2c7c62d36a493b511531496"
+  },
+  "renderer": {
+    "path": "exports/six-10m-build-reports.py",
+    "sha256": "edb6d0107943648647283ffc9554828dbe30e4de3c50407aa458a081d4e58733"
+  },
+  "report_hashes": {
+    "docs/reports/10M_LEARNING_CURVE_ANALYSIS.md": "255440e5bb3ec98b2a29036263c2cc4dfa315f3fc04f017a721680f012249e36",
+    "docs/reports/B100_10M_LR_SELECTION.md": "c4b761e3e46e4bcbbbf86fd8cb5979a8f66ecaf89c8e3edbe726f3e9eac2f035",
+    "docs/reports/C101_10M_LR_SELECTION.md": "f9760024bf02bef1ae50fef8f1e2ff56b31fa0ca07db06188c56f4a4c1fa1422",
+    "docs/reports/POST_10M_DEVELOPMENT_DECISION.md": "54ca2e02ce1110a6de82ce31e018b780174a721a2f569e52a50604c0f4af5db9",
+    "docs/reports/SIX_10M_PROBE_CAMPAIGN.md": "5aee0ebf5ae5d21ad0f15cbe604a7dfc8fad4c1279165fa8a8b0091a00b7d7d8"
+  },
+  "scoring_performed": false
+}

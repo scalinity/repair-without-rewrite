@@ -1,0 +1,58 @@
+{
+  "appearance_restored": "light",
+  "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+  "completed_recipes": 6,
+  "content_counts": {
+    "final_tests": 379,
+    "finalized_reports": 48,
+    "independent_review_records": 22,
+    "source_history_commits": 53
+  },
+  "content_counts_scope": "Published native-evidence history at 18afad5; report/review files include this finalized campaign publication.",
+  "disposition": "ORCHESTRATION_REALIGNMENT_VERIFIED",
+  "layout_changed": false,
+  "observations": [
+    {
+      "displayed_complete_count": "6 of 6",
+      "document_scroll_width": 1280,
+      "horizontal_overflow": false,
+      "strips": 14,
+      "theme": "light",
+      "window_width": 1280
+    },
+    {
+      "displayed_complete_count": "6 of 6",
+      "document_scroll_width": 390,
+      "horizontal_overflow": false,
+      "strips": 14,
+      "theme": "light",
+      "window_width": 390
+    },
+    {
+      "displayed_complete_count": "6 of 6",
+      "document_scroll_width": 1280,
+      "horizontal_overflow": false,
+      "strips": 14,
+      "theme": "dark",
+      "window_width": 1280
+    },
+    {
+      "displayed_complete_count": "6 of 6",
+      "document_scroll_width": 390,
+      "horizontal_overflow": false,
+      "strips": 14,
+      "theme": "dark",
+      "window_width": 390
+    }
+  ],
+  "page_sha256": "13cc4883d84e0043d6be1d965730a6dc0e539f4574ea47705766f9967ebe5f57",
+  "phone_tabs_closed": true,
+  "reviewed_head": "18afad540772c4bee3b5aadbce811b3e9b24b550",
+  "screenshots_saved": false,
+  "selected_lrs": {
+    "B100": null,
+    "C101": null
+  },
+  "unstarted_recipes": 0,
+  "viewer_resized": false
+}

@@ -1,0 +1,39 @@
+{
+  "checks": {
+    "all6axes_frozen_actual_exposure_ticks": true,
+    "both_SVG_PNG_exports_with_additive_V2_names": true,
+    "current_source_AST": true,
+    "isolated_Agg_import": true,
+    "no_accelerator_imports": true,
+    "rotation_and_taller_canvas": true
+  },
+  "disposition": "INDEPENDENT_REPORTING_DISPLAY_CORRECTION_REVIEWED",
+  "fixture_outputs": [
+    {
+      "bytes": 107907,
+      "fixture_name": "display-review_V2.svg",
+      "sha256": "fc45b44bbafb951cbfe962a8a5498d7e17d00f82da62c3758d7b0b003ee0f956"
+    },
+    {
+      "bytes": 148732,
+      "fixture_name": "display-review_V2.png",
+      "sha256": "f69667b18f4b37c815aa60642d4757bc86dba9cbe0915c71ca1c54f081f523fb"
+    }
+  ],
+  "fixture_scope": "Blank display fixture only; temporary ignored files removed after successful export checks; no experimental scores or comparative inference generated",
+  "helpers_sha256": {
+    "benchmarks/six_10m_descriptive.py": "ccbcf2dc0f737dc29d0ec0edb1ea9d0b4a12e1089414322e349fd2365c7c6ec7",
+    "benchmarks/six_10m_figures.py": "8f4b06f918fd28151a56de73a6f8154167979a48db978a5899023e64aeef3a9c"
+  },
+  "previous_library_review_sha256": "79194730ffab0da560dbd3e43e491b973755b89a4bc67b721c9308ec16684066",
+  "reviewed_diff": "Only import textwrap, taller figure/margins, x tick rotation, caption line wrapping and additive _V2 output names; scoring, selected data, denominators, axes scales, bound interpretation and recipe membership checks unchanged",
+  "runtime": {
+    "backend": "Agg",
+    "matplotlib": "3.11.2",
+    "python": "3.12.15"
+  },
+  "schema": "six10m_independent_reporting_display_review_v1",
+  "scientific_figures_generated": false,
+  "source_binding_diagnostic_preserved": "experiments/manifests/six_10m_probes/independent-metrics-final-review-preparation.attempt01.json",
+  "source_head": "1f398126de6f869f03f39c368a1bec08759b3013"
+}
