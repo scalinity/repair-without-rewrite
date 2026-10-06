@@ -51,3 +51,19 @@ Compress the pilot into 6,666,667 / 2,666,667 / 666,666 nominal exposures. P2 ge
 Retain 32,768 canonical anchors per optimizer update and the common final complete-update overshoot. Permit mid-update checkpoints only with complete queued range, offsets, gradients, whole-update denominators, pending charge, model/optimizer, RNG and reader state; qualify actual cold restoration.
 
 B100/C101 architectures, objectives, C event/renderer semantics, tokenizer, optimizer/clipping, final seeds and H1 attribution remain unchanged. This amendment authorizes faithful reader implementation, tests and complete-update BENCH qualification. It does not authorize the six probes, final training, final inference or protocol freeze. After successful qualification, issue a new admission decision and stop for owner authorization.
+
+### DEVELOPMENT corruption-profile revision v2
+
+At reviewed checkpoint `1b114ff485a2a59051bf7a2e39acec5774fd35a1`, before any result from the six seed-42 10M probes, the frontier scientific review authorizes `development_lexical_corruption_v2`.
+
+The raw estimator was correctly implemented. Its table, SHA-256 `5df3800d7a29e370abdce36bd489989482d5d878765612b5a14a4b2cab1fc310`, remains unchanged as a diagnostic of raw TRAIN reference-to-recognizer surface differences under the repaired Parakeet development runtime.
+
+The revised profile estimates unit-cost codepoint edits after serializing the unchanged `lexical_eval_v1` token sequence with single ASCII spaces. All 1,024 frozen TRAIN pairs contribute once. Retain only edits unanimous across every optimal alignment, with at least five distinct records and three source groups; weight supported entries by consensus occurrences. Two-operation dependence is estimated at the six unordered S/D/I class pairs, with the same support floor and supporting-record weights.
+
+The 40% channel is conditional on lexical error: no zero-operation sampling. P0 applies one operation. P1/P2 use the empirical distribution of projected codepoint distance capped at two, conditional on positive distance. Two-operation variants affect distinct fields. Exact unnormalized sources, spoken anchors, written targets, and objectives remain unchanged.
+
+Generated candidates require lexical effect and unique complete source-only inversion under the full permitted relation. The existing 50-proposal and 500-state bounds remain. Empty required strata or the concentration alarms in Frontier Corruption-Profile Decision v2 block admission.
+
+The 30/20/10/40 allocation, other channels, models, representation/renderer, tokenizer, optimization, accounting, scheduler, update target, probe schedule, LR grid, checkpoints, final seeds, and H1 attribution remain fixed.
+
+New profile and construction hashes await measurement and independent reproduction. No final result has been seen or used; no probe slot has been consumed. Reader admission and owner authorization remain pending. `paper_protocol_v2` is not frozen.
