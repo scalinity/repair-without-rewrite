@@ -1,0 +1,345 @@
+{
+  "LR_selection_performed": true,
+  "arms": {
+    "B100": {
+      "eligible_ranking": [],
+      "ineligible_recipes": [
+        "B100-seed42-lr1e-04",
+        "B100-seed42-lr3e-04",
+        "B100-seed42-lr6e-04"
+      ],
+      "selected_peak_lr": null,
+      "selected_recipe": null
+    },
+    "C101": {
+      "eligible_ranking": [],
+      "ineligible_recipes": [
+        "C101-seed42-lr1e-04",
+        "C101-seed42-lr3e-04",
+        "C101-seed42-lr6e-04"
+      ],
+      "selected_peak_lr": null,
+      "selected_recipe": null
+    }
+  },
+  "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+  "disposition": "CURRENT_150M_CAMPAIGN_NOT_ADMISSIBLE",
+  "endpoint_selection_receipt": "experiments/manifests/six_10m_probes/endpoint-selection.attempt01.json",
+  "endpoint_selection_sha256": "5d385e5760853992d7eb0c448cfc390352cab36a2e302ff6cb5995e99ef8bdfa",
+  "final_campaign_decision_performed": true,
+  "recipes": [
+    {
+      "arm": "B100",
+      "eligibility_criteria": {
+        "completed_natural_repair_lower_positive": true,
+        "completed_natural_repair_lower_support_at_least_two_groups": true,
+        "generated_genuine_required_repair_completed": false,
+        "natural_WER_strictly_below_RAW": false,
+        "prescribed_completion_resolved": true
+      },
+      "eligible": false,
+      "endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "failed_criteria": [
+        "natural_WER_strictly_below_RAW",
+        "generated_genuine_required_repair_completed"
+      ],
+      "final_parameter_sha256": "c50b13888a96f011dc9242afe42fa3dd84a86a42554d670e495b5a4b3b92da0f",
+      "initial_parameter_sha256": "2739837ff4ad4ff26475dca5a37608d9c46a1c7ff34f8778f24eadb18b8e8044",
+      "numerical_replays": 0,
+      "peak_lr": 0.0001,
+      "rank_values": {
+        "RAW_WER": {
+          "denominator": 1135,
+          "numerator": 32
+        },
+        "WER": {
+          "denominator": 1135,
+          "numerator": 1104
+        },
+        "completed_natural_repair_lower": 6,
+        "generated_mixed_success": 0,
+        "introduced_rate_upper": {
+          "denominator": 227,
+          "numerator": 215
+        },
+        "natural_invalid_or_incomplete": 0,
+        "peak_lr": {
+          "denominator": 10000,
+          "numerator": 1
+        }
+      },
+      "recipe_id": "B100-seed42-lr1e-04",
+      "recipe_wall_seconds": 2117.4588170051575,
+      "status": "COMPLETED",
+      "terminal_receipt": "experiments/manifests/six_10m_probes/recipe-B100-seed42-lr1e-04.attempt01.json",
+      "terminal_sha256": "d48414902ca0ba042bd12348ed6aa157775e53467522010af97ebe053c9a032e"
+    },
+    {
+      "arm": "C101",
+      "eligibility_criteria": {
+        "completed_natural_repair_lower_positive": false,
+        "completed_natural_repair_lower_support_at_least_two_groups": false,
+        "generated_genuine_required_repair_completed": true,
+        "natural_WER_strictly_below_RAW": false,
+        "prescribed_completion_resolved": true
+      },
+      "eligible": false,
+      "endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "failed_criteria": [
+        "natural_WER_strictly_below_RAW",
+        "completed_natural_repair_lower_positive",
+        "completed_natural_repair_lower_support_at_least_two_groups"
+      ],
+      "final_parameter_sha256": "6b7c29788836ee96c2a0a5eadf91363ee4dada52003b81310617284b51f03ba1",
+      "initial_parameter_sha256": "9671ba3aaf0afb9fe22302fe140512db7bdf7e31f4d9e439bc13c75edafc2ff1",
+      "numerical_replays": 0,
+      "peak_lr": 0.0001,
+      "rank_values": {
+        "RAW_WER": {
+          "denominator": 1135,
+          "numerator": 32
+        },
+        "WER": {
+          "denominator": 2270,
+          "numerator": 121
+        },
+        "completed_natural_repair_lower": 0,
+        "generated_mixed_success": 32,
+        "introduced_rate_upper": {
+          "denominator": 2270,
+          "numerator": 57
+        },
+        "natural_invalid_or_incomplete": 0,
+        "peak_lr": {
+          "denominator": 10000,
+          "numerator": 1
+        }
+      },
+      "recipe_id": "C101-seed42-lr1e-04",
+      "recipe_wall_seconds": 5360.392530918121,
+      "status": "COMPLETED",
+      "terminal_receipt": "experiments/manifests/six_10m_probes/recipe-C101-seed42-lr1e-04.attempt01.json",
+      "terminal_sha256": "a2a4200d1c9438d58870d81a7ba21fd8860cadd2da82384ee9157e2578ce02b0"
+    },
+    {
+      "arm": "B100",
+      "eligibility_criteria": {
+        "completed_natural_repair_lower_positive": true,
+        "completed_natural_repair_lower_support_at_least_two_groups": true,
+        "generated_genuine_required_repair_completed": false,
+        "natural_WER_strictly_below_RAW": false,
+        "prescribed_completion_resolved": true
+      },
+      "eligible": false,
+      "endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "failed_criteria": [
+        "natural_WER_strictly_below_RAW",
+        "generated_genuine_required_repair_completed"
+      ],
+      "final_parameter_sha256": "2adea1f910d549abdce3e3d8819454cfce4b21193600f7bd07ac7db1408fc023",
+      "initial_parameter_sha256": "2739837ff4ad4ff26475dca5a37608d9c46a1c7ff34f8778f24eadb18b8e8044",
+      "numerical_replays": 0,
+      "peak_lr": 0.0003,
+      "rank_values": {
+        "RAW_WER": {
+          "denominator": 1135,
+          "numerator": 32
+        },
+        "WER": {
+          "denominator": 1135,
+          "numerator": 1292
+        },
+        "completed_natural_repair_lower": 2,
+        "generated_mixed_success": 0,
+        "introduced_rate_upper": {
+          "denominator": 1135,
+          "numerator": 1261
+        },
+        "natural_invalid_or_incomplete": 0,
+        "peak_lr": {
+          "denominator": 10000,
+          "numerator": 3
+        }
+      },
+      "recipe_id": "B100-seed42-lr3e-04",
+      "recipe_wall_seconds": 2255.1000287532806,
+      "status": "COMPLETED",
+      "terminal_receipt": "experiments/manifests/six_10m_probes/recipe-B100-seed42-lr3e-04.attempt01.json",
+      "terminal_sha256": "8c33eeae2a055806ca9c1c03985def5de080aab17fb70034903fda7db7d0dd17"
+    },
+    {
+      "arm": "C101",
+      "eligibility_criteria": {
+        "completed_natural_repair_lower_positive": false,
+        "completed_natural_repair_lower_support_at_least_two_groups": false,
+        "generated_genuine_required_repair_completed": true,
+        "natural_WER_strictly_below_RAW": false,
+        "prescribed_completion_resolved": true
+      },
+      "eligible": false,
+      "endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "failed_criteria": [
+        "natural_WER_strictly_below_RAW",
+        "completed_natural_repair_lower_positive",
+        "completed_natural_repair_lower_support_at_least_two_groups"
+      ],
+      "final_parameter_sha256": "a3c2ec251f86e7b87f67f7d71b7ff6b9f460000c9f4c28640cbec8c297388450",
+      "initial_parameter_sha256": "9671ba3aaf0afb9fe22302fe140512db7bdf7e31f4d9e439bc13c75edafc2ff1",
+      "numerical_replays": 0,
+      "peak_lr": 0.0003,
+      "rank_values": {
+        "RAW_WER": {
+          "denominator": 1135,
+          "numerator": 32
+        },
+        "WER": {
+          "denominator": 1135,
+          "numerator": 64
+        },
+        "completed_natural_repair_lower": 0,
+        "generated_mixed_success": 42,
+        "introduced_rate_upper": {
+          "denominator": 1135,
+          "numerator": 32
+        },
+        "natural_invalid_or_incomplete": 0,
+        "peak_lr": {
+          "denominator": 10000,
+          "numerator": 3
+        }
+      },
+      "recipe_id": "C101-seed42-lr3e-04",
+      "recipe_wall_seconds": 5544.691852807999,
+      "status": "COMPLETED",
+      "terminal_receipt": "experiments/manifests/six_10m_probes/recipe-C101-seed42-lr3e-04.attempt01.json",
+      "terminal_sha256": "3efd9050161ba75ad08fd05dcb23cba52d19cb13705447290cd2ee373503fc94"
+    },
+    {
+      "arm": "B100",
+      "eligibility_criteria": {
+        "completed_natural_repair_lower_positive": true,
+        "completed_natural_repair_lower_support_at_least_two_groups": true,
+        "generated_genuine_required_repair_completed": false,
+        "natural_WER_strictly_below_RAW": false,
+        "prescribed_completion_resolved": true
+      },
+      "eligible": false,
+      "endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "failed_criteria": [
+        "natural_WER_strictly_below_RAW",
+        "generated_genuine_required_repair_completed"
+      ],
+      "final_parameter_sha256": "f76f3542fc688eac39669c4ef5f8e4b11ce440296728edbcc38f5e9775e93cfa",
+      "initial_parameter_sha256": "2739837ff4ad4ff26475dca5a37608d9c46a1c7ff34f8778f24eadb18b8e8044",
+      "numerical_replays": 0,
+      "peak_lr": 0.0006,
+      "rank_values": {
+        "RAW_WER": {
+          "denominator": 1135,
+          "numerator": 32
+        },
+        "WER": {
+          "denominator": 1135,
+          "numerator": 1332
+        },
+        "completed_natural_repair_lower": 2,
+        "generated_mixed_success": 0,
+        "introduced_rate_upper": {
+          "denominator": 1135,
+          "numerator": 1301
+        },
+        "natural_invalid_or_incomplete": 0,
+        "peak_lr": {
+          "denominator": 5000,
+          "numerator": 3
+        }
+      },
+      "recipe_id": "B100-seed42-lr6e-04",
+      "recipe_wall_seconds": 2468.490536928177,
+      "status": "COMPLETED",
+      "terminal_receipt": "experiments/manifests/six_10m_probes/recipe-B100-seed42-lr6e-04.attempt01.json",
+      "terminal_sha256": "34f81ffa79f14164a4646c7054058988a1beac8385b668452d668ab0476cde3d"
+    },
+    {
+      "arm": "C101",
+      "eligibility_criteria": {
+        "completed_natural_repair_lower_positive": false,
+        "completed_natural_repair_lower_support_at_least_two_groups": false,
+        "generated_genuine_required_repair_completed": true,
+        "natural_WER_strictly_below_RAW": false,
+        "prescribed_completion_resolved": true
+      },
+      "eligible": false,
+      "endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "failed_criteria": [
+        "natural_WER_strictly_below_RAW",
+        "completed_natural_repair_lower_positive",
+        "completed_natural_repair_lower_support_at_least_two_groups"
+      ],
+      "final_parameter_sha256": "cbce2f5f843dc55e6cc32856bf611690e2cd9a2b4cee240bf3e059ea8815904f",
+      "initial_parameter_sha256": "9671ba3aaf0afb9fe22302fe140512db7bdf7e31f4d9e439bc13c75edafc2ff1",
+      "numerical_replays": 0,
+      "peak_lr": 0.0006,
+      "rank_values": {
+        "RAW_WER": {
+          "denominator": 1135,
+          "numerator": 32
+        },
+        "WER": {
+          "denominator": 2270,
+          "numerator": 109
+        },
+        "completed_natural_repair_lower": 0,
+        "generated_mixed_success": 30,
+        "introduced_rate_upper": {
+          "denominator": 454,
+          "numerator": 9
+        },
+        "natural_invalid_or_incomplete": 0,
+        "peak_lr": {
+          "denominator": 5000,
+          "numerator": 3
+        }
+      },
+      "recipe_id": "C101-seed42-lr6e-04",
+      "recipe_wall_seconds": 5382.778655052185,
+      "status": "COMPLETED",
+      "terminal_receipt": "experiments/manifests/six_10m_probes/recipe-C101-seed42-lr6e-04.attempt01.json",
+      "terminal_sha256": "096aa401acbebc815e8ce93255235da9c9f871c7177756b69ae871044514d057"
+    }
+  ],
+  "scientific_slots_completed": 6,
+  "scientific_slots_consumed": 6,
+  "scientific_slots_unstarted": 0,
+  "source_head": "1f398126de6f869f03f39c368a1bec08759b3013"
+}
