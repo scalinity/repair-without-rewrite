@@ -1,0 +1,109 @@
+{
+  "disposition": "AVAILABLE_OUTPUT_BURDEN_RECORDED",
+  "measurements": [
+    {
+      "decoder_positions": {
+        "generated": 73728,
+        "natural": 27648
+      },
+      "evaluation": "evaluation-update000.jsonl",
+      "generated_cases": 288,
+      "generated_empty_output_cases": 0,
+      "natural_cases": 108,
+      "natural_empty_lexical_output_cases": 3,
+      "natural_empty_output_cases": 0,
+      "natural_output_words": 20769,
+      "natural_reference_words": 2270,
+      "natural_source_output_distance": 21776,
+      "natural_source_words": 2266,
+      "sha256": "2a03c9f5e34107fe5cedd00c500672959d2332e48494d1f681d471e268554894"
+    },
+    {
+      "decoder_positions": {
+        "generated": 8811,
+        "natural": 678
+      },
+      "evaluation": "evaluation-update031.jsonl",
+      "generated_cases": 288,
+      "generated_empty_output_cases": 0,
+      "natural_cases": 108,
+      "natural_empty_lexical_output_cases": 0,
+      "natural_empty_output_cases": 0,
+      "natural_output_words": 188,
+      "natural_reference_words": 2270,
+      "natural_source_output_distance": 2266,
+      "natural_source_words": 2266,
+      "sha256": "bff090840bc3594736170be65a99ebf0521552578f770d73a5a238b85fb627c6"
+    },
+    {
+      "decoder_positions": {
+        "generated": 10793,
+        "natural": 1233
+      },
+      "evaluation": "evaluation-update092.jsonl",
+      "generated_cases": 288,
+      "generated_empty_output_cases": 0,
+      "natural_cases": 108,
+      "natural_empty_lexical_output_cases": 0,
+      "natural_empty_output_cases": 0,
+      "natural_output_words": 905,
+      "natural_reference_words": 2270,
+      "natural_source_output_distance": 2247,
+      "natural_source_words": 2266,
+      "sha256": "d6d307d57d46febe3f05bd42b46047d2f5c9f9583bb725f5df94a72446efff49"
+    },
+    {
+      "decoder_positions": {
+        "generated": 10820,
+        "natural": 1958
+      },
+      "evaluation": "evaluation-update204.jsonl",
+      "generated_cases": 288,
+      "generated_empty_output_cases": 0,
+      "natural_cases": 108,
+      "natural_empty_lexical_output_cases": 0,
+      "natural_empty_output_cases": 0,
+      "natural_output_words": 1012,
+      "natural_reference_words": 2270,
+      "natural_source_output_distance": 2211,
+      "natural_source_words": 2266,
+      "sha256": "0fb9d9bcb3daf3f0a0c30e56c4e6b45a80ed4f3eafd16dd79ffa213db3ac955f"
+    },
+    {
+      "decoder_positions": {
+        "generated": 11165,
+        "natural": 1789
+      },
+      "evaluation": "evaluation-update285.jsonl",
+      "generated_cases": 288,
+      "generated_empty_output_cases": 0,
+      "natural_cases": 108,
+      "natural_empty_lexical_output_cases": 0,
+      "natural_empty_output_cases": 0,
+      "natural_output_words": 986,
+      "natural_reference_words": 2270,
+      "natural_source_output_distance": 2213,
+      "natural_source_words": 2266,
+      "sha256": "99dd05682a834903722e32b55a292cfac4681a4d86a285ff09de3c317e3f5455"
+    },
+    {
+      "decoder_positions": {
+        "generated": 11409,
+        "natural": 1736
+      },
+      "evaluation": "evaluation-update305.jsonl",
+      "generated_cases": 288,
+      "generated_empty_output_cases": 0,
+      "natural_cases": 108,
+      "natural_empty_lexical_output_cases": 0,
+      "natural_empty_output_cases": 0,
+      "natural_output_words": 1014,
+      "natural_reference_words": 2270,
+      "natural_source_output_distance": 2208,
+      "natural_source_words": 2266,
+      "sha256": "c6f7bb7297102130bea26ca840db873ba4ccb12187a997fb33f4cd92739d0d95"
+    }
+  ],
+  "recipe_id": "B100-seed42-lr1e-04",
+  "scope": "Descriptive output burden from unchanged frozen scorer records; no eligibility metric or scientific treatment changed"
+}

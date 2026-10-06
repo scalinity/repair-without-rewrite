@@ -1,0 +1,121 @@
+{
+  "LR_selection_performed": false,
+  "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+  "disposition": "TWO_PRESCRIBED_ENDPOINTS_RECORDED_FOUR_RECIPES_PENDING",
+  "final_campaign_decision_performed": false,
+  "recipes": [
+    {
+      "arm": "B100",
+      "eligibility_criteria": {
+        "completed_natural_repair_lower_positive": true,
+        "completed_natural_repair_lower_support_at_least_two_groups": true,
+        "generated_genuine_required_repair_completed": false,
+        "natural_WER_strictly_below_RAW": false,
+        "prescribed_completion_resolved": true
+      },
+      "eligible": false,
+      "evaluation_receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr1e-04-update305.attempt01.json",
+      "evaluation_sha256": "c503c389706dd8f99b959fd035a188bf30a9b2fb1b2310dd1686d9a69a76a0ff",
+      "failed_criteria": [
+        "natural_WER_strictly_below_RAW",
+        "generated_genuine_required_repair_completed"
+      ],
+      "initial_parameter_sha256_observed": "2739837ff4ad4ff26475dca5a37608d9c46a1c7ff34f8778f24eadb18b8e8044",
+      "peak_lr": 0.0001,
+      "rank_values": {
+        "RAW_WER": {
+          "denominator": 1135,
+          "numerator": 32
+        },
+        "WER": {
+          "denominator": 1135,
+          "numerator": 1104
+        },
+        "completed_natural_repair_lower": 6,
+        "generated_mixed_success": 0,
+        "introduced_rate_upper": {
+          "denominator": 227,
+          "numerator": 215
+        },
+        "natural_invalid_or_incomplete": 0,
+        "peak_lr": {
+          "denominator": 10000,
+          "numerator": 1
+        }
+      },
+      "recipe_id": "B100-seed42-lr1e-04",
+      "status": "COMPLETED",
+      "terminal_receipt": "experiments/manifests/six_10m_probes/recipe-B100-seed42-lr1e-04.attempt01.json",
+      "terminal_sha256": "d48414902ca0ba042bd12348ed6aa157775e53467522010af97ebe053c9a032e"
+    },
+    {
+      "arm": "C101",
+      "eligibility_criteria": {
+        "completed_natural_repair_lower_positive": false,
+        "completed_natural_repair_lower_support_at_least_two_groups": false,
+        "generated_genuine_required_repair_completed": true,
+        "natural_WER_strictly_below_RAW": false,
+        "prescribed_completion_resolved": true
+      },
+      "eligible": false,
+      "evaluation_receipt": "experiments/manifests/six_10m_probes/evaluation-C101-seed42-lr1e-04-update305.attempt01.json",
+      "evaluation_sha256": "5ce28986506c5583b5a48e3387294dc576e4ac51371d51306cf1542077add213",
+      "failed_criteria": [
+        "natural_WER_strictly_below_RAW",
+        "completed_natural_repair_lower_positive",
+        "completed_natural_repair_lower_support_at_least_two_groups"
+      ],
+      "initial_parameter_sha256_observed": "9671ba3aaf0afb9fe22302fe140512db7bdf7e31f4d9e439bc13c75edafc2ff1",
+      "peak_lr": 0.0001,
+      "rank_values": {
+        "RAW_WER": {
+          "denominator": 1135,
+          "numerator": 32
+        },
+        "WER": {
+          "denominator": 2270,
+          "numerator": 121
+        },
+        "completed_natural_repair_lower": 0,
+        "generated_mixed_success": 32,
+        "introduced_rate_upper": {
+          "denominator": 2270,
+          "numerator": 57
+        },
+        "natural_invalid_or_incomplete": 0,
+        "peak_lr": {
+          "denominator": 10000,
+          "numerator": 1
+        }
+      },
+      "recipe_id": "C101-seed42-lr1e-04",
+      "status": "COMPLETED",
+      "terminal_receipt": "experiments/manifests/six_10m_probes/recipe-C101-seed42-lr1e-04.attempt01.json",
+      "terminal_sha256": "a2a4200d1c9438d58870d81a7ba21fd8860cadd2da82384ee9157e2578ce02b0"
+    },
+    {
+      "initial_parameter_sha256_observed": null,
+      "recipe_id": "B100-seed42-lr3e-04",
+      "status": "AUTHORIZED_UNSTARTED"
+    },
+    {
+      "initial_parameter_sha256_observed": null,
+      "recipe_id": "C101-seed42-lr3e-04",
+      "status": "AUTHORIZED_UNSTARTED"
+    },
+    {
+      "initial_parameter_sha256_observed": null,
+      "recipe_id": "B100-seed42-lr6e-04",
+      "status": "AUTHORIZED_UNSTARTED"
+    },
+    {
+      "initial_parameter_sha256_observed": null,
+      "recipe_id": "C101-seed42-lr6e-04",
+      "status": "AUTHORIZED_UNSTARTED"
+    }
+  ],
+  "remaining_authorized_unstarted": 4,
+  "schema": "six10m_campaign_progress_v1",
+  "slots_consumed": 2,
+  "terminal_recipes": 2
+}

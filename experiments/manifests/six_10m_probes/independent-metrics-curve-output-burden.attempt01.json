@@ -1,0 +1,524 @@
+{
+  "LR_selection_performed": false,
+  "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+  "claim_kind": "MEASURED_RESULT",
+  "count_definition": "Scored output words are frozen scorer output_words, including its registered failure mapping; exact raw empty string and null counts are reported separately. Completion uses complete_valid. All retained rows are counted.",
+  "curve_consistency_receipt_sha256": "d6041d50097d4a87fc550370929f79ca21042779a7d77cb21c96f645e712e9ec",
+  "descriptive_inference": null,
+  "disposition": "AVAILABLE_OUTPUT_BURDEN_RECONSTRUCTED_SIX_OUTCOMES_PENDING",
+  "endpoints": [
+    {
+      "endpoint": {
+        "canonical_exposure": 0,
+        "last_ordinal": -1,
+        "nominal": 0,
+        "update": 0
+      },
+      "output_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/evaluation-update000.jsonl",
+      "output_sha256": "2a03c9f5e34107fe5cedd00c500672959d2332e48494d1f681d471e268554894",
+      "populations": {
+        "generated": {
+          "cases": 288,
+          "complete_zero_scored_words_cases": 0,
+          "incomplete_zero_scored_words_cases": 6,
+          "raw_empty_output_cases": 0,
+          "raw_missing_output_cases": 5,
+          "scored_output_word_count_histogram": {
+            "0": 6,
+            "1": 87,
+            "16": 1,
+            "77": 1,
+            "98": 1,
+            "147": 3,
+            "176": 1,
+            "188": 1,
+            "233": 1,
+            "256": 77,
+            "257": 3,
+            "299": 1,
+            "443": 1,
+            "458": 1,
+            "464": 1,
+            "488": 1,
+            "502": 1,
+            "512": 86,
+            "513": 3,
+            "714": 1,
+            "744": 2,
+            "768": 8
+          },
+          "scored_output_word_count_max": 768,
+          "scored_output_word_count_min": 0,
+          "scored_output_word_count_sum": 78370,
+          "zero_scored_words_cases": 6
+        },
+        "natural": {
+          "cases": 108,
+          "complete_zero_scored_words_cases": 0,
+          "incomplete_zero_scored_words_cases": 3,
+          "raw_empty_output_cases": 0,
+          "raw_missing_output_cases": 3,
+          "scored_output_word_count_histogram": {
+            "0": 3,
+            "1": 43,
+            "6": 1,
+            "7": 1,
+            "12": 1,
+            "40": 1,
+            "136": 1,
+            "243": 1,
+            "256": 27,
+            "257": 5,
+            "262": 1,
+            "324": 1,
+            "491": 1,
+            "512": 20,
+            "768": 1
+          },
+          "scored_output_word_count_max": 768,
+          "scored_output_word_count_min": 0,
+          "scored_output_word_count_sum": 20769,
+          "zero_scored_words_cases": 3
+        }
+      },
+      "recipe_id": "B100-seed42-lr1e-04"
+    },
+    {
+      "endpoint": {
+        "canonical_exposure": 1017149,
+        "last_ordinal": 13838,
+        "nominal": 1000000,
+        "update": 31
+      },
+      "output_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/evaluation-update031.jsonl",
+      "output_sha256": "bff090840bc3594736170be65a99ebf0521552578f770d73a5a238b85fb627c6",
+      "populations": {
+        "generated": {
+          "cases": 288,
+          "complete_zero_scored_words_cases": 0,
+          "incomplete_zero_scored_words_cases": 0,
+          "raw_empty_output_cases": 0,
+          "raw_missing_output_cases": 0,
+          "scored_output_word_count_histogram": {
+            "6": 11,
+            "7": 44,
+            "8": 36,
+            "9": 21,
+            "10": 5,
+            "11": 52,
+            "12": 59,
+            "13": 12,
+            "14": 12,
+            "15": 2,
+            "16": 34
+          },
+          "scored_output_word_count_max": 16,
+          "scored_output_word_count_min": 6,
+          "scored_output_word_count_sum": 3079,
+          "zero_scored_words_cases": 0
+        },
+        "natural": {
+          "cases": 108,
+          "complete_zero_scored_words_cases": 0,
+          "incomplete_zero_scored_words_cases": 0,
+          "raw_empty_output_cases": 0,
+          "raw_missing_output_cases": 0,
+          "scored_output_word_count_histogram": {
+            "1": 71,
+            "2": 27,
+            "3": 4,
+            "6": 2,
+            "7": 2,
+            "12": 1,
+            "13": 1
+          },
+          "scored_output_word_count_max": 13,
+          "scored_output_word_count_min": 1,
+          "scored_output_word_count_sum": 188,
+          "zero_scored_words_cases": 0
+        }
+      },
+      "recipe_id": "B100-seed42-lr1e-04"
+    },
+    {
+      "endpoint": {
+        "canonical_exposure": 3018478,
+        "last_ordinal": 41095,
+        "nominal": 3000000,
+        "update": 92
+      },
+      "output_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/evaluation-update092.jsonl",
+      "output_sha256": "d6d307d57d46febe3f05bd42b46047d2f5c9f9583bb725f5df94a72446efff49",
+      "populations": {
+        "generated": {
+          "cases": 288,
+          "complete_zero_scored_words_cases": 0,
+          "incomplete_zero_scored_words_cases": 0,
+          "raw_empty_output_cases": 0,
+          "raw_missing_output_cases": 0,
+          "scored_output_word_count_histogram": {
+            "7": 3,
+            "8": 10,
+            "9": 23,
+            "10": 16,
+            "11": 31,
+            "12": 35,
+            "13": 41,
+            "14": 20,
+            "15": 35,
+            "16": 43,
+            "17": 7,
+            "18": 3,
+            "19": 14,
+            "20": 7
+          },
+          "scored_output_word_count_max": 20,
+          "scored_output_word_count_min": 7,
+          "scored_output_word_count_sum": 3834,
+          "zero_scored_words_cases": 0
+        },
+        "natural": {
+          "cases": 108,
+          "complete_zero_scored_words_cases": 0,
+          "incomplete_zero_scored_words_cases": 0,
+          "raw_empty_output_cases": 0,
+          "raw_missing_output_cases": 0,
+          "scored_output_word_count_histogram": {
+            "1": 15,
+            "2": 16,
+            "3": 7,
+            "4": 6,
+            "5": 3,
+            "6": 6,
+            "7": 8,
+            "8": 6,
+            "9": 6,
+            "10": 8,
+            "11": 2,
+            "12": 4,
+            "13": 4,
+            "14": 3,
+            "15": 3,
+            "17": 2,
+            "18": 2,
+            "19": 1,
+            "20": 1,
+            "22": 2,
+            "23": 1,
+            "32": 1,
+            "107": 1
+          },
+          "scored_output_word_count_max": 107,
+          "scored_output_word_count_min": 1,
+          "scored_output_word_count_sum": 905,
+          "zero_scored_words_cases": 0
+        }
+      },
+      "recipe_id": "B100-seed42-lr1e-04"
+    },
+    {
+      "endpoint": {
+        "canonical_exposure": 6693230,
+        "last_ordinal": 91100,
+        "nominal": 6666667,
+        "update": 204
+      },
+      "output_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/evaluation-update204.jsonl",
+      "output_sha256": "0fb9d9bcb3daf3f0a0c30e56c4e6b45a80ed4f3eafd16dd79ffa213db3ac955f",
+      "populations": {
+        "generated": {
+          "cases": 288,
+          "complete_zero_scored_words_cases": 0,
+          "incomplete_zero_scored_words_cases": 0,
+          "raw_empty_output_cases": 0,
+          "raw_missing_output_cases": 0,
+          "scored_output_word_count_histogram": {
+            "2": 3,
+            "4": 1,
+            "5": 1,
+            "7": 6,
+            "8": 9,
+            "9": 22,
+            "10": 19,
+            "11": 27,
+            "12": 33,
+            "13": 25,
+            "14": 22,
+            "15": 36,
+            "16": 37,
+            "17": 10,
+            "18": 7,
+            "19": 10,
+            "20": 16,
+            "21": 2,
+            "23": 1,
+            "27": 1
+          },
+          "scored_output_word_count_max": 27,
+          "scored_output_word_count_min": 2,
+          "scored_output_word_count_sum": 3873,
+          "zero_scored_words_cases": 0
+        },
+        "natural": {
+          "cases": 108,
+          "complete_zero_scored_words_cases": 0,
+          "incomplete_zero_scored_words_cases": 0,
+          "raw_empty_output_cases": 0,
+          "raw_missing_output_cases": 0,
+          "scored_output_word_count_histogram": {
+            "1": 1,
+            "2": 4,
+            "3": 3,
+            "4": 5,
+            "5": 14,
+            "6": 11,
+            "7": 12,
+            "8": 7,
+            "9": 9,
+            "10": 9,
+            "11": 7,
+            "12": 2,
+            "13": 5,
+            "14": 4,
+            "15": 4,
+            "16": 1,
+            "17": 1,
+            "18": 2,
+            "20": 2,
+            "21": 2,
+            "29": 2,
+            "36": 1
+          },
+          "scored_output_word_count_max": 36,
+          "scored_output_word_count_min": 1,
+          "scored_output_word_count_sum": 1012,
+          "zero_scored_words_cases": 0
+        }
+      },
+      "recipe_id": "B100-seed42-lr1e-04"
+    },
+    {
+      "endpoint": {
+        "canonical_exposure": 9350642,
+        "last_ordinal": 127234,
+        "nominal": 9333334,
+        "update": 285
+      },
+      "output_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/evaluation-update285.jsonl",
+      "output_sha256": "99dd05682a834903722e32b55a292cfac4681a4d86a285ff09de3c317e3f5455",
+      "populations": {
+        "generated": {
+          "cases": 288,
+          "complete_zero_scored_words_cases": 0,
+          "incomplete_zero_scored_words_cases": 0,
+          "raw_empty_output_cases": 0,
+          "raw_missing_output_cases": 0,
+          "scored_output_word_count_histogram": {
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "5": 1,
+            "7": 6,
+            "8": 9,
+            "9": 18,
+            "10": 18,
+            "11": 27,
+            "12": 30,
+            "13": 18,
+            "14": 25,
+            "15": 32,
+            "16": 50,
+            "17": 9,
+            "19": 17,
+            "20": 24,
+            "67": 1
+          },
+          "scored_output_word_count_max": 67,
+          "scored_output_word_count_min": 2,
+          "scored_output_word_count_sum": 4014,
+          "zero_scored_words_cases": 0
+        },
+        "natural": {
+          "cases": 108,
+          "complete_zero_scored_words_cases": 0,
+          "incomplete_zero_scored_words_cases": 0,
+          "raw_empty_output_cases": 0,
+          "raw_missing_output_cases": 0,
+          "scored_output_word_count_histogram": {
+            "2": 4,
+            "3": 5,
+            "4": 12,
+            "5": 8,
+            "6": 8,
+            "7": 12,
+            "8": 10,
+            "9": 7,
+            "10": 11,
+            "11": 4,
+            "12": 2,
+            "13": 7,
+            "14": 1,
+            "15": 4,
+            "16": 2,
+            "17": 4,
+            "20": 1,
+            "21": 3,
+            "22": 1,
+            "25": 1,
+            "27": 1
+          },
+          "scored_output_word_count_max": 27,
+          "scored_output_word_count_min": 2,
+          "scored_output_word_count_sum": 986,
+          "zero_scored_words_cases": 0
+        }
+      },
+      "recipe_id": "B100-seed42-lr1e-04"
+    },
+    {
+      "endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "output_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/evaluation-update305.jsonl",
+      "output_sha256": "c6f7bb7297102130bea26ca840db873ba4ccb12187a997fb33f4cd92739d0d95",
+      "populations": {
+        "generated": {
+          "cases": 288,
+          "complete_zero_scored_words_cases": 0,
+          "incomplete_zero_scored_words_cases": 0,
+          "raw_empty_output_cases": 0,
+          "raw_missing_output_cases": 0,
+          "scored_output_word_count_histogram": {
+            "8": 9,
+            "9": 18,
+            "10": 18,
+            "11": 24,
+            "12": 27,
+            "13": 27,
+            "14": 28,
+            "15": 38,
+            "16": 45,
+            "17": 18,
+            "19": 18,
+            "20": 18
+          },
+          "scored_output_word_count_max": 20,
+          "scored_output_word_count_min": 8,
+          "scored_output_word_count_sum": 4043,
+          "zero_scored_words_cases": 0
+        },
+        "natural": {
+          "cases": 108,
+          "complete_zero_scored_words_cases": 0,
+          "incomplete_zero_scored_words_cases": 0,
+          "raw_empty_output_cases": 0,
+          "raw_missing_output_cases": 0,
+          "scored_output_word_count_histogram": {
+            "2": 4,
+            "3": 6,
+            "4": 8,
+            "5": 14,
+            "6": 8,
+            "7": 9,
+            "8": 10,
+            "9": 7,
+            "10": 3,
+            "11": 6,
+            "12": 7,
+            "13": 4,
+            "14": 4,
+            "15": 2,
+            "16": 3,
+            "17": 2,
+            "18": 4,
+            "19": 2,
+            "21": 2,
+            "26": 1,
+            "27": 2
+          },
+          "scored_output_word_count_max": 27,
+          "scored_output_word_count_min": 2,
+          "scored_output_word_count_sum": 1014,
+          "zero_scored_words_cases": 0
+        }
+      },
+      "recipe_id": "B100-seed42-lr1e-04"
+    },
+    {
+      "endpoint": {
+        "canonical_exposure": 0,
+        "last_ordinal": -1,
+        "nominal": 0,
+        "update": 0
+      },
+      "output_path": "exports/six-10m-probes/C101-seed42-lr1e-04/attempt01/evaluation-update000.jsonl",
+      "output_sha256": "0787afb463ecfda3cb56de237ac8c24cda369119878ea4efae0f475a6cafccbc",
+      "populations": {
+        "generated": {
+          "cases": 288,
+          "complete_zero_scored_words_cases": 0,
+          "incomplete_zero_scored_words_cases": 206,
+          "raw_empty_output_cases": 0,
+          "raw_missing_output_cases": 206,
+          "scored_output_word_count_histogram": {
+            "0": 206,
+            "9": 3,
+            "10": 3,
+            "11": 1,
+            "12": 10,
+            "13": 3,
+            "14": 3,
+            "15": 8,
+            "16": 21,
+            "17": 1,
+            "20": 3,
+            "21": 2,
+            "25": 1,
+            "28": 17,
+            "31": 2,
+            "34": 2,
+            "37": 2
+          },
+          "scored_output_word_count_max": 37,
+          "scored_output_word_count_min": 0,
+          "scored_output_word_count_sum": 1549,
+          "zero_scored_words_cases": 206
+        },
+        "natural": {
+          "cases": 108,
+          "complete_zero_scored_words_cases": 0,
+          "incomplete_zero_scored_words_cases": 100,
+          "raw_empty_output_cases": 0,
+          "raw_missing_output_cases": 100,
+          "scored_output_word_count_histogram": {
+            "0": 100,
+            "7": 1,
+            "13": 1,
+            "17": 1,
+            "22": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "37": 1
+          },
+          "scored_output_word_count_max": 37,
+          "scored_output_word_count_min": 0,
+          "scored_output_word_count_sum": 168,
+          "zero_scored_words_cases": 100
+        }
+      },
+      "recipe_id": "C101-seed42-lr1e-04"
+    }
+  ],
+  "future_scientific_decision": null,
+  "reviewed_head": "5f75e483c68281105330e29820878aafd91a15b2",
+  "schema": "six_10m_partial_output_burden_v1",
+  "scope": {
+    "B100-seed42-lr1e-04": "all six frozen endpoints",
+    "C101-seed42-lr1e-04": "exposure zero only",
+    "completed_evaluations": 7
+  }
+}

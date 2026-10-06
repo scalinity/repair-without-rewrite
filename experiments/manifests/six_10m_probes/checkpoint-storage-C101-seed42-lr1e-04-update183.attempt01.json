@@ -1,0 +1,21 @@
+{
+  "accelerator_used": false,
+  "arrays_sha256": "01420396e1eb537f58a23ae7c3dc97b634eec4b37c7f37a80e9798769c21e6b3",
+  "checkpoint": "exports/six-10m-probes/C101-seed42-lr1e-04/attempt01/checkpoint-update183",
+  "disposition": "EXACT_CHECKPOINT_BYTES_PRESERVED",
+  "helper_sha256": "cf0d37f3cef3318b4efb0350d898cd5ae2d651c96de8790aab8ceac50938a9b0",
+  "logical_bytes": 1617471512,
+  "method": "verified copy; aligned all-zero F_PUNCHHOLE; SHA and full NPZ CRC readback; atomic same-path replacement",
+  "native_complete_sha256": "f424f8054ffbe79496a4aadf3f6cb56a63be5941e601c06f2dc7ec97ce513c47",
+  "native_source_changed": false,
+  "npz_entries_crc_verified": 549,
+  "physical_bytes_after": 1213673472,
+  "physical_bytes_before": 1571815424,
+  "schema": "six10m_exact_checkpoint_storage_v1",
+  "scientific_treatment_changed": false,
+  "source_commit": "5f75e483c68281105330e29820878aafd91a15b2",
+  "utc_unix": 1791269814.345338,
+  "verified_zero_bytes": 403800064,
+  "verified_zero_runs": 106,
+  "wall_seconds": 3.7433922500058543
+}

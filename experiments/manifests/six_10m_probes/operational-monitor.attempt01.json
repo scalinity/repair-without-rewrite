@@ -1,0 +1,13 @@
+{
+  "accelerator_used": false,
+  "disposition": "OPERATIONAL_MONITOR_RECORDED",
+  "monitor_path": "exports/six-10m-live-status.py",
+  "monitor_sha256": "9736a2ccd3c1d8fab1f12fc19d4976f5890756949790f54d2335a4ed224d8643",
+  "purpose": "Bounded progress, failure and storage monitoring; invoke existing qualified exact-byte storage helper only on COMPLETE-published checkpoints without prior storage receipts",
+  "schema": "six10m_operational_monitor_v1",
+  "scientific_source_changed": false,
+  "source_commit": "5f75e483c68281105330e29820878aafd91a15b2",
+  "storage_helper": "benchmarks/six_10m_storage.py",
+  "storage_helper_sha256": "cf0d37f3cef3318b4efb0350d898cd5ae2d651c96de8790aab8ceac50938a9b0",
+  "utc_unix": 1791268458.633981
+}

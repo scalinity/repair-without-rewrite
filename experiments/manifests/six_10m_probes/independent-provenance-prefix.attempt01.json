@@ -1,0 +1,93 @@
+{
+  "MLX_imported": false,
+  "Torch_imported": false,
+  "accelerator_used": false,
+  "all_projection_rows_equal": true,
+  "all_six_terminal_outcomes_available": false,
+  "campaign_artifacts_changed": false,
+  "canonical_exposure": 5019821,
+  "checker_path": "benchmarks/six_10m_provenance_independent.py",
+  "checker_sha256": "b07b2343be430726a50e5585683e5d9752e4c41420a8763d179865e92930ca6a",
+  "disposition": "C101_PUBLISHED_PREFIX_PROVENANCE_VERIFIED_CAMPAIGN_PENDING",
+  "first_update": 1,
+  "last_presentation_ordinal": 68330,
+  "last_update": 153,
+  "presentations_compared": 68331,
+  "raw_prefix_binding_method": "SHA-256 of exact binary readline bytes for updates1 through last_update inclusive; immutable completed prefix retained in append-only native log; no hash claim on the live suffix",
+  "raw_prefixes": [
+    {
+      "observed_structure_sha256": "0e1f6f0d7a63babe62c1385ccc8273542aaf1fb6008a9ea92ea91224003d4264",
+      "path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/updates.jsonl",
+      "prefix_update_rows": 153,
+      "raw_prefix_bytes": 81800222,
+      "raw_prefix_sha256": "6a7cf38f4ceb3a4933841a4ae0c9d1678e073f836b1b2902fa24309f55cf58cc",
+      "recipe_id": "B100-seed42-lr1e-04"
+    },
+    {
+      "observed_structure_sha256": "81c2d1a7d0ae5d34470bd4481e178c9f7e6228830d4e86ec2ab81e4c34b21a3e",
+      "path": "exports/six-10m-probes/C101-seed42-lr1e-04/attempt01/updates.jsonl",
+      "prefix_update_rows": 153,
+      "raw_prefix_bytes": 126689644,
+      "raw_prefix_sha256": "694bbc87a608635d01335fbd2f9b0e67f54e32a5ef43389e2f604403698795ee",
+      "recipe_id": "C101-seed42-lr1e-04"
+    }
+  ],
+  "review_scope": "B100/C101 1e-4 common scientific presentation prefix through C latest audited published checkpoint; later live appends excluded",
+  "schema": "six10m_independent_raw_prefix_binding_v1",
+  "scientific_projection_encoding": "one compact sort_keys JSON object plus newline per consumed presentation; UTF-8",
+  "scientific_projection_fields": [
+    "presentation_id",
+    "variant_id",
+    "canonical_charge",
+    "channel",
+    "phase",
+    "source_sha256",
+    "target_sha256",
+    "anchor_sha256",
+    "cumulative_canonical_exposure"
+  ],
+  "scientific_projection_sha256": "9383dcb94f55da7c7d97e76f2e7cd09c793d3881acd4512036829bfb1df0d389",
+  "shared_checkpoint_cursors": [
+    {
+      "canonical_exposure": 0,
+      "last_ordinal": -1,
+      "reader_state_sha256": "d2900bef1ccd94a9b90f84b407e7de93364dc2ef3ddbc27d843ee1442330807d",
+      "update": 0
+    },
+    {
+      "canonical_exposure": 1017149,
+      "last_ordinal": 13838,
+      "reader_state_sha256": "ca6480525192cf1318b9e4bce6a7ac37d28665f905951d28106211a47c22cafd",
+      "update": 31
+    },
+    {
+      "canonical_exposure": 2001130,
+      "last_ordinal": 27230,
+      "reader_state_sha256": "da3aa4fc50bb66c97addc81136710f1c3f97df5ec8e8ae90144cbbece7d82148",
+      "update": 61
+    },
+    {
+      "canonical_exposure": 3018478,
+      "last_ordinal": 41095,
+      "reader_state_sha256": "bba81faf93713cdb78d9589e19c1c60932462050e5fe81048042070dd6fcc1f1",
+      "update": 92
+    },
+    {
+      "canonical_exposure": 4002553,
+      "last_ordinal": 54485,
+      "reader_state_sha256": "5fffdc88051b81623bdcabc0e06bcbe7f41fc950348be2dd5b3ba62a5c39009e",
+      "update": 122
+    },
+    {
+      "canonical_exposure": 5019821,
+      "last_ordinal": 68330,
+      "reader_state_sha256": "074547907f1d244f59d0241cca6108fc278e2f6694a1f6b09f5e9b1b805e5616",
+      "update": 153
+    }
+  ],
+  "source_config_checker_changed": false,
+  "source_review_path": "experiments/manifests/six_10m_probes/independent-provenance.attempt05.json",
+  "source_review_sha256": "3bb7224a69b8886dafa9e710e8a09aaac4b1a4177069db6d6910a37c9faae404",
+  "terminal_outcomes": 1,
+  "utc": "2026-10-06T06:52:48.655957+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "accelerator_used": false,
+  "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+  "dependency_lock_changed": false,
+  "disposition": "ISOLATED_CPU_PLOTTING_RUNTIME_READY",
+  "environment": "exports/six-10m-plot-runtime",
+  "purpose": "Produce requested descriptive scientific learning-curve artifacts after all six outcomes resolve",
+  "python": "3.12.15",
+  "schema": "six10m_plotting_runtime_v1",
+  "source_commit": "5f75e483c68281105330e29820878aafd91a15b2",
+  "training_runtime_changed": false,
+  "utc_unix": 1791266991.8861902,
+  "versions": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.3",
+    "pillow": "12.3.0"
+  }
+}

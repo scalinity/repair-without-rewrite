@@ -1,0 +1,536 @@
+{
+  "accelerator_runtime_imported": false,
+  "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+  "controlling_selection": {
+    "adoption_path": "docs/reviews/PROSPECTIVE_AMENDMENTS.md",
+    "adoption_sha256": "a4b11308d006e110124fafecbcd84cfcacc4a299a8c577a1cea9e7b6b7035e61",
+    "aggregation": "Pooled failure-inclusive corpus WER over the 108 frozen LS-PC DEVELOPMENT natural pairs; natural/generated denominators separate",
+    "eligibility_quote": "Natural failure-inclusive WER is strictly below RAW.",
+    "final_primary": "The final equal-domain LS-PC/SLUE H1 primary is a later scientific endpoint; SLUE is absent from this approved pilot panel.",
+    "lines": [
+      438,
+      479
+    ],
+    "path": "docs/reviews/FRONTIER_READER_CURRICULUM_DECISION_V1.md",
+    "ranking_quote": "lowest natural WER;",
+    "scope_quote": "These are DEVELOPMENT viability screens, not H1 significance or final-paper acceptance gates.",
+    "sha256": "7089ef96c847623b01c3d3d54f179e3e2477b8239bdad9cc4a79998d6418043b"
+  },
+  "cpu_only": true,
+  "decision": {
+    "ranking": null,
+    "selected_LR": null,
+    "status": "PREPARATION_OR_SINGLE_EVALUATION_NO_SELECTION"
+  },
+  "disposition": "AVAILABLE_EVALUATIONS_RECONSTRUCTED_SIX_OUTCOMES_PENDING",
+  "elapsed_seconds": 2.211013207997894,
+  "evaluation_reconstructions": [
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 0,
+        "last_ordinal": -1,
+        "nominal": 0,
+        "update": 0
+      },
+      "bounded_dense_oracle_envelope_checks": 0,
+      "bounded_dense_oracle_exact_checks": 372,
+      "canonical_rescore_sha256": "7b971190ad02aa469731f4c31a6e8651f2cb62e530f85eab5acabc9eaeb54534",
+      "canonical_score_records_reproduced": 396,
+      "generated": {
+        "by_category_view": {
+          "identifiers:clean_preservation": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "abstained": 4,
+              "invalid_or_capped": 8
+            }
+          },
+          "identifiers:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "abstained": 2,
+              "invalid_or_capped": 10
+            }
+          },
+          "identifiers:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "abstained": 1,
+              "invalid_or_capped": 11
+            }
+          },
+          "multiple_bindings:clean_preservation": {
+            "cases": 12,
+            "complete": 5,
+            "conformant": 5,
+            "invalid_or_incomplete": 7,
+            "preserve_denominator": 24,
+            "preserved_fields": 10,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "abstained": 6,
+              "completed": 5,
+              "invalid_or_capped": 1
+            }
+          },
+          "multiple_bindings:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 8,
+            "conformant": 0,
+            "invalid_or_incomplete": 4,
+            "preserve_denominator": 12,
+            "preserved_fields": 8,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "abstained": 3,
+              "completed": 8,
+              "invalid_or_capped": 1
+            }
+          },
+          "multiple_bindings:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 7,
+            "conformant": 0,
+            "invalid_or_incomplete": 5,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "abstained": 1,
+              "completed": 7,
+              "invalid_or_capped": 4
+            }
+          },
+          "negation:clean_preservation": {
+            "cases": 12,
+            "complete": 3,
+            "conformant": 3,
+            "invalid_or_incomplete": 9,
+            "preserve_denominator": 24,
+            "preserved_fields": 6,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "abstained": 6,
+              "completed": 3,
+              "invalid_or_capped": 3
+            }
+          },
+          "negation:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 6,
+            "conformant": 0,
+            "invalid_or_incomplete": 6,
+            "preserve_denominator": 12,
+            "preserved_fields": 6,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 6,
+              "invalid_or_capped": 6
+            }
+          },
+          "negation:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 4,
+            "conformant": 0,
+            "invalid_or_incomplete": 8,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "abstained": 5,
+              "completed": 4,
+              "invalid_or_capped": 3
+            }
+          },
+          "paths:clean_preservation": {
+            "cases": 12,
+            "complete": 3,
+            "conformant": 3,
+            "invalid_or_incomplete": 9,
+            "preserve_denominator": 24,
+            "preserved_fields": 6,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "abstained": 4,
+              "completed": 3,
+              "invalid_or_capped": 5
+            }
+          },
+          "paths:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 2,
+            "conformant": 0,
+            "invalid_or_incomplete": 10,
+            "preserve_denominator": 12,
+            "preserved_fields": 2,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 2,
+              "invalid_or_capped": 10
+            }
+          },
+          "paths:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 5,
+            "conformant": 0,
+            "invalid_or_incomplete": 7,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 5,
+              "invalid_or_capped": 7
+            }
+          },
+          "repeated_literals:clean_preservation": {
+            "cases": 12,
+            "complete": 1,
+            "conformant": 1,
+            "invalid_or_incomplete": 11,
+            "preserve_denominator": 24,
+            "preserved_fields": 2,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "abstained": 7,
+              "completed": 1,
+              "invalid_or_capped": 4
+            }
+          },
+          "repeated_literals:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 1,
+            "conformant": 0,
+            "invalid_or_incomplete": 11,
+            "preserve_denominator": 12,
+            "preserved_fields": 1,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "abstained": 5,
+              "completed": 1,
+              "invalid_or_capped": 6
+            }
+          },
+          "repeated_literals:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 1,
+            "conformant": 0,
+            "invalid_or_incomplete": 11,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "abstained": 2,
+              "completed": 1,
+              "invalid_or_capped": 9
+            }
+          },
+          "signs_numerical:clean_preservation": {
+            "cases": 12,
+            "complete": 7,
+            "conformant": 7,
+            "invalid_or_incomplete": 5,
+            "preserve_denominator": 24,
+            "preserved_fields": 14,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 7,
+              "invalid_or_capped": 5
+            }
+          },
+          "signs_numerical:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 4,
+            "conformant": 0,
+            "invalid_or_incomplete": 8,
+            "preserve_denominator": 12,
+            "preserved_fields": 4,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 4,
+              "invalid_or_capped": 8
+            }
+          },
+          "signs_numerical:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 1,
+            "conformant": 0,
+            "invalid_or_incomplete": 11,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 1,
+              "invalid_or_capped": 11
+            }
+          },
+          "units_quantities:clean_preservation": {
+            "cases": 12,
+            "complete": 9,
+            "conformant": 9,
+            "invalid_or_incomplete": 3,
+            "preserve_denominator": 24,
+            "preserved_fields": 18,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "abstained": 3,
+              "completed": 9
+            }
+          },
+          "units_quantities:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 7,
+            "conformant": 0,
+            "invalid_or_incomplete": 5,
+            "preserve_denominator": 12,
+            "preserved_fields": 7,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "abstained": 3,
+              "completed": 7,
+              "invalid_or_capped": 2
+            }
+          },
+          "units_quantities:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 7,
+            "conformant": 0,
+            "invalid_or_incomplete": 5,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 7,
+              "invalid_or_capped": 5
+            }
+          },
+          "versions:clean_preservation": {
+            "cases": 12,
+            "complete": 1,
+            "conformant": 1,
+            "invalid_or_incomplete": 11,
+            "preserve_denominator": 24,
+            "preserved_fields": 2,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 1,
+              "invalid_or_capped": 11
+            }
+          },
+          "versions:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "invalid_or_capped": 12
+            }
+          },
+          "versions:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "invalid_or_capped": 12
+            }
+          }
+        },
+        "by_view": {
+          "clean_preservation": {
+            "cases": 96,
+            "complete": 29,
+            "conformant": 29,
+            "invalid_or_incomplete": 67,
+            "preserve_denominator": 192,
+            "preserved_fields": 58,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "abstained": 30,
+              "completed": 29,
+              "invalid_or_capped": 37
+            }
+          },
+          "mixed_repair_preservation": {
+            "cases": 96,
+            "complete": 28,
+            "conformant": 0,
+            "invalid_or_incomplete": 68,
+            "preserve_denominator": 96,
+            "preserved_fields": 28,
+            "repair_denominator": 96,
+            "repaired_fields": 0,
+            "status_counts": {
+              "abstained": 13,
+              "completed": 28,
+              "invalid_or_capped": 55
+            }
+          },
+          "uniquely_recoverable_repair": {
+            "cases": 96,
+            "complete": 25,
+            "conformant": 0,
+            "invalid_or_incomplete": 71,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 192,
+            "repaired_fields": 0,
+            "status_counts": {
+              "abstained": 9,
+              "completed": 25,
+              "invalid_or_capped": 62
+            }
+          }
+        },
+        "cases": 288,
+        "complete": 82,
+        "decoder_invalid_or_incomplete": 206,
+        "invalid_or_incomplete": 206,
+        "mixed_success": 0,
+        "required_repair_cases_completed": 0,
+        "required_repair_fields_completed": 0,
+        "structure_invalid": 206,
+        "whole_case_conformance": 29
+      },
+      "independent_edit_distance_checks": 1188,
+      "introduced_upper_rational": {
+        "denominator": 1135,
+        "numerator": 1024
+      },
+      "natural": {
+        "RAW_WER": 0.028193832599118944,
+        "completed_repair": [
+          0,
+          0
+        ],
+        "completed_repair_rate": [
+          0.0,
+          0.0
+        ],
+        "introduced": [
+          2048,
+          2048
+        ],
+        "introduced_rate": [
+          0.9022026431718062,
+          0.9022026431718062
+        ],
+        "introduced_width": 0,
+        "invalid_or_incomplete": 100,
+        "output_errors": 2108,
+        "reference_words": 2270,
+        "repair": [
+          4,
+          4
+        ],
+        "repair_support_source_groups_lower": [],
+        "repair_support_source_groups_upper": [],
+        "repair_width": 0,
+        "scorer_caps": 0,
+        "source_byte_identity": 8,
+        "source_correct_counts": 2210,
+        "source_correct_damage_bounds": [
+          2048,
+          2048
+        ],
+        "source_correct_preservation_coverage": {
+          "covered_cases": 108,
+          "covered_correct_counts": 2210,
+          "covered_damage_bounds": [
+            2048,
+            2048
+          ],
+          "covered_preserved_bounds": [
+            162,
+            162
+          ],
+          "unavailable_cases": 0
+        },
+        "source_correct_preserved_bounds": [
+          162,
+          162
+        ],
+        "source_errors": 64,
+        "source_lexical_identity": 8,
+        "status_counts": {
+          "abstained": 26,
+          "completed": 8,
+          "invalid_or_capped": 74
+        },
+        "target_byte_exact": 3,
+        "target_lexical_exact": 5,
+        "wer": 0.9286343612334802
+      },
+      "nominal_endpoint": 0,
+      "output_path": "exports/six-10m-probes/C101-seed42-lr1e-04/attempt01/evaluation-update000.jsonl",
+      "output_sha256": "0787afb463ecfda3cb56de237ac8c24cda369119878ea4efae0f475a6cafccbc",
+      "raw_wer_rational": {
+        "denominator": 1135,
+        "numerator": 32
+      },
+      "receipt_path": "experiments/manifests/six_10m_probes/evaluation-C101-seed42-lr1e-04-update000.attempt01.json",
+      "receipt_sha256": "4e4f51bdecab33559bdfeed86fb4e1ef771e9932e2d63ef5a1eddb018b2497ab",
+      "recipe_id": "C101-seed42-lr1e-04",
+      "wer_rational": {
+        "denominator": 1135,
+        "numerator": 1054
+      }
+    }
+  ],
+  "generated_cases": 288,
+  "natural_cases": 108,
+  "panel_cases": 396,
+  "panel_ordered_ids_sha256": "18fbfdb99442d18719f490999f5cb624c8fc8c9c7293883352c4d2d651e23694",
+  "panel_sha256": "5043ed60d6ce8f891ee8e30255fabaa40fcac37b0a043c1a85dd88178832ce4e",
+  "review_source_sha256": "ed901a5fd0619975edc072351d2cf0ce480237ee16cc0bc4c7ed88bce9a63a8a",
+  "reviewed_head": "5f75e483c68281105330e29820878aafd91a15b2",
+  "schema": "six_10m_independent_metrics_v1"
+}

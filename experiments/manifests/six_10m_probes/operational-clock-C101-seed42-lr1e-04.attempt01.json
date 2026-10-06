@@ -1,0 +1,25 @@
+{
+  "MLX_ENABLE_TF32": "0",
+  "child_argv": [
+    ".venv/bin/python",
+    "-m",
+    "benchmarks.six_10m_campaign",
+    "run",
+    "--recipe",
+    "C101-seed42-lr1e-04"
+  ],
+  "child_cpu_system_seconds": 942.134848,
+  "child_cpu_user_seconds": 1875.383256,
+  "clock_origin": "parent process immediately before child launch",
+  "device_kernel_seconds": "UNMEASURED",
+  "dirty_status_at_launch": "",
+  "disposition": "RECIPE_LAUNCH_WALL_CLOCK_PRESERVED",
+  "exit_code": 0,
+  "finish_unix": 1791271847.0535831,
+  "launch_unix": 1791266483.168884,
+  "log_path": "exports/six-10m-C101-lr1e-04.attempt01.log",
+  "log_sha256": "6019af05fb883033ba016de7608b2e6c3e4269845f97e305fb2c3096d8ed991b",
+  "recipe_id": "C101-seed42-lr1e-04",
+  "source_commit": "5f75e483c68281105330e29820878aafd91a15b2",
+  "wall_seconds": 5363.884699106216
+}

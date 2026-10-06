@@ -1,0 +1,30 @@
+{
+  "desktop": {
+    "appearances": [
+      "light",
+      "dark"
+    ],
+    "scroll_width": 1280,
+    "width": 1280
+  },
+  "disposition": "ORCHESTRATION_REALIGNMENT_VERIFIED",
+  "layout_changed": false,
+  "page_sha256": "1ec4d6db8991082116e99f8ac0a9dbafc0bc5f894896648cf6429c2c275cbbf1",
+  "phone": {
+    "appearances": [
+      "light",
+      "dark"
+    ],
+    "scroll_width": 390,
+    "width": 390
+  },
+  "screenshots_saved_to_disk": false,
+  "slot_count": {
+    "completed": 2,
+    "started": 2,
+    "unstarted": 4
+  },
+  "source_head": "5f75e483c68281105330e29820878aafd91a15b2",
+  "strips": 14,
+  "viewer_resized": false
+}
