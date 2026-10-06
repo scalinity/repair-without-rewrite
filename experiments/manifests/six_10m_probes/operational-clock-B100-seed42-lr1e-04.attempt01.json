@@ -1,0 +1,16 @@
+{
+  "clock_origin": "log file birth immediately before child launch",
+  "completed_receipt_unix": 1791265831.8955312,
+  "device_kernel_seconds": "UNMEASURED",
+  "disposition": "RECIPE_LAUNCH_WALL_CLOCK_BOUND_PRESERVED",
+  "exit_code": 0,
+  "exit_wall_seconds_upper_bound": 2134.8576011657715,
+  "first_exit_observed_unix": 1791265846.652815,
+  "internal_attempt_wall_seconds": 2114.0832372499863,
+  "internal_recipe_wall_seconds": 2117.4588170051575,
+  "launch_unix": 1791263711.795214,
+  "log_path": "exports/six-10m-B100-lr1e-04.attempt01.log",
+  "log_sha256": "e6ba41f3f4a6372b4981ba503d07c4052a86405cc1daf262b1aac5cce6479e08",
+  "recipe_id": "B100-seed42-lr1e-04",
+  "wall_seconds_to_completion_receipt": 2120.1003172397614
+}

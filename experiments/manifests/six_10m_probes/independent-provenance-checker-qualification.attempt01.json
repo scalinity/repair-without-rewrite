@@ -1,0 +1,26 @@
+{
+  "MLX_imported": false,
+  "Torch_imported": false,
+  "accelerator_used": false,
+  "all_six_provenance_review": "PENDING_TERMINAL_OUTCOMES",
+  "campaign_artifacts_changed": false,
+  "checker_path": "benchmarks/six_10m_provenance_independent.py",
+  "checker_sha256": "b07b2343be430726a50e5585683e5d9752e4c41420a8763d179865e92930ca6a",
+  "disposition": "CPU_PROVENANCE_CHECKER_PREPARED_CAMPAIGN_REVIEW_PENDING",
+  "native_model_constructed": false,
+  "partial_execution_receipt": "experiments/manifests/six_10m_probes/independent-provenance.attempt03.json",
+  "schema": "six10m_provenance_checker_cpu_qualification_v1",
+  "synthetic_check_count": 8,
+  "synthetic_checks": [
+    "reader_valid_one_row",
+    "reader_wrong_offset_rejected",
+    "reader_wrong_deficit_total_rejected",
+    "reader_wrong_phase_rejected",
+    "tensor_hash_inventory_and_zero_accumulator",
+    "nonfinite_verified_tensor_rejected",
+    "C_structural_trace_without_model_construction",
+    "C_corrupt_target_binding_rejected"
+  ],
+  "temporary_fixture_directory": "exports/storage-checks/provenance-fixtures-attempt01",
+  "utc": "2026-10-06T05:43:18.042122+00:00"
+}

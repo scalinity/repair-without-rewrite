@@ -1,0 +1,51 @@
+{
+  "78_checkpoint_bytes_if_all_used_this_measured_B_dense_footprint": 94294007808,
+  "MLX_imported": false,
+  "NPZ_arrays_independently_compared": 525,
+  "accelerator_used": false,
+  "all_accumulators_zero": true,
+  "all_arrays_shape_dtype_finite": true,
+  "all_zero_arrays_by_prefix": {
+    "acc": 131,
+    "m": 0,
+    "model": 0,
+    "rng": 0,
+    "v": 0
+  },
+  "array_elements_by_prefix": {
+    "acc": 100686336,
+    "m": 100686336,
+    "model": 100686336,
+    "rng": 2,
+    "v": 100686336
+  },
+  "arrays_sha256": "5c675dd2c8ed99ad6cbb702dc74319c4176c34ab37066eaeb735aaef1886a8b6",
+  "canonical_exposure": 1017149,
+  "compacted_copy_physical_bytes": 1208897536,
+  "copied_checkpoint": "exports/storage-checks/six10m-helper-dense-attempt01/checkpoint-update031",
+  "disposition": "EXACT_BYTE_DENSE_CHECKPOINT_STORAGE_CPU_QUALIFIED",
+  "free_volume_bytes_at_measurement": 103912378368,
+  "helper_path": "benchmarks/six_10m_storage.py",
+  "helper_receipt": "experiments/manifests/six_10m_probes/independent-provenance-storage-helper.attempt02.json",
+  "helper_sha256": "cf0d37f3cef3318b4efb0350d898cd5ae2d651c96de8790aab8ceac50938a9b0",
+  "logical_bytes": 1611136656,
+  "native_COMPLETE_and_metadata_identical": true,
+  "optimizer_step": 31,
+  "original_campaign_artifacts_changed_by_reviewer": false,
+  "parameter_sha256_reconstructed": "1f7baaa92be43c727be10d4e344e678664c4cc987f9a5cb5919f1639bd55ca79",
+  "physical_bytes_saved": 368619520,
+  "projection_excludes": [
+    "C101-specific size difference",
+    "earlier initial saves with larger savings",
+    "raw logs/evaluation artifacts",
+    "failed states/replay saves",
+    "transient copy headroom",
+    "unrelated volume changes"
+  ],
+  "projection_label": "CALCULATION using measured B100 update031 only; C101 and later update footprints remain UNMEASURED",
+  "same_logical_NPZ_bytes": true,
+  "schema": "six10m_dense_storage_independent_qualification_v1",
+  "source_checkpoint": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/checkpoint-update031",
+  "source_physical_bytes": 1577517056,
+  "utc": "2026-10-06T05:30:17.392358+00:00"
+}

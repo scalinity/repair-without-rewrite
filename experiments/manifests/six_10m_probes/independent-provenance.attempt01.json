@@ -1,0 +1,13 @@
+{
+  "MLX_imported": false,
+  "Torch_imported": false,
+  "accelerator_used": false,
+  "checker_path": "benchmarks/six_10m_provenance_independent.py",
+  "checker_sha256": "5733eb92d2158a179f66d30f9fffc82b8572decd8c43666fb55e8b67a0188e6b",
+  "disposition": "PROVENANCE_RECONSTRUCTION_FAILED",
+  "error": "checkpoint treatment mismatch",
+  "error_type": "ValueError",
+  "metric_selection_reproduction": "SEPARATE_REVIEW_NOT_PERFORMED_HERE",
+  "schema": "six10m_independent_provenance_v1",
+  "utc": "2026-10-06T05:38:13.808989+00:00"
+}

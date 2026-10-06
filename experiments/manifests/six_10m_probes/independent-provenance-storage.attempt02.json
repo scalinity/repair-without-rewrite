@@ -1,0 +1,33 @@
+{
+  "NPY_shape_dtype_finite_checks": true,
+  "NPZ_arrays_independently_compared": 525,
+  "accelerator_used": false,
+  "allocated_bytes_saved": 129171456,
+  "checkpoint_replaced": false,
+  "copy_allocated_bytes": 1331167232,
+  "copy_flags": 0,
+  "copy_logical_bytes": 1611136656,
+  "copy_sha256": "488d3ba292f0df45420d6920d25591b1e65c07e149c0b3fdddd4159b8bf3df82",
+  "disposition": "EXACT_BYTES_PRESERVED_TRANSPARENT_COMPRESSION_NOT_APPLIED",
+  "documentation": "Installed macOS ditto(1): --hfsCompression on HFS+/APFS if appropriate",
+  "extended_attribute_names": [
+    "com.apple.provenance"
+  ],
+  "free_bytes_after_test_copy": 123451895808,
+  "initial_parameter_sha256_reconstructed": "2739837ff4ad4ff26475dca5a37608d9c46a1c7ff34f8778f24eadb18b8e8044",
+  "later_checkpoint_compression_ratio": "UNMEASURED",
+  "method": "ditto --hfsCompression --nocache to new copy outside campaign; repeat verification only",
+  "original_unchanged": true,
+  "prior_receipt": "experiments/manifests/six_10m_probes/independent-provenance-storage.attempt01.json",
+  "same_logical_bytes": true,
+  "same_path_native_load_semantics": "INFERENCE: identical logical bytes and full NumPy readback preserve normal byte/NPZ reads; no MLX native load executed",
+  "schema": "six10m_independent_storage_diagnostic_v2",
+  "source_allocated_bytes": 1460338688,
+  "source_logical_bytes": 1611136656,
+  "source_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/checkpoint-update000/arrays.npz",
+  "source_sha256": "488d3ba292f0df45420d6920d25591b1e65c07e149c0b3fdddd4159b8bf3df82",
+  "storage_conclusion": "ditto did not apply filesystem compression; measured physical reduction is modest and does not establish a capacity remedy",
+  "temporary_copy_path": "exports/storage-checks/six10m-transparent-compression-attempt01/arrays.npz",
+  "transparent_compression_applied": false,
+  "utc": "2026-10-06T05:21:36.966758+00:00"
+}

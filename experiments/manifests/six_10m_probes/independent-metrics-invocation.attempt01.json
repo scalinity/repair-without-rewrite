@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "disposition": "REVIEWER_INVOCATION_FAILURE_PRESERVED",
+  "exit_code": 2,
+  "log_path": "exports/six-10m-metrics-endpoint-B100-lr1e-04.attempt01.log",
+  "log_sha256": "a06a7543c8473214aa2cdf8c87982702eebfab9c327ec9b7c56a52d5204cacab",
+  "neural_work_performed": false,
+  "operation": "CPU independent endpoint scorer invocation",
+  "reason": "CLI audit mode is positional; --mode rejected before artifact evaluation",
+  "scientific_recipe_replay": false
+}

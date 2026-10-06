@@ -1,0 +1,1351 @@
+{
+  "attempt": 1,
+  "attempt_wall_seconds": 2114.0832372499863,
+  "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+  "checkpoints": [
+    {
+      "arm": "B100",
+      "canonical_exposure": 0,
+      "checkpoint_complete_sha256": "8da35220157cd15f2ebef9875b6365ece818bc8168638f96974c460629c9b3a2",
+      "checkpoint_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/checkpoint-update000",
+      "failure_state": "NONE",
+      "last_ordinal": -1,
+      "last_update_metrics": null,
+      "lr": {
+        "floor_fraction": 0.1,
+        "peak": 0.0001,
+        "planned_exposure": 10000000,
+        "warmup": 200000
+      },
+      "nominal": 0,
+      "optimizer_sha256": {
+        "m": "b802af61a659f72d0d32361def122bb499f82201fcd5f2d8bc5c64bd10471627",
+        "v": "75ecf1fed0d101eff29c8aa272873e877b9de2872c0167b1f1bed1581abf98fa"
+      },
+      "parameter_sha256": "2739837ff4ad4ff26475dca5a37608d9c46a1c7ff34f8778f24eadb18b8e8044",
+      "peak_lr": 0.0001,
+      "phase": null,
+      "recipe_id": "B100-seed42-lr1e-04",
+      "runtime_identities": {
+        "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+        "code": {
+          "benchmarks/paired_qualification_v3.py": "4e483b69a62c1aa20a55ba0a157989f14be61b62f8380ea897d1dbc9cc6f0d08",
+          "src/data/mixed_reader_v3.py": "c9e74b42cb6c6d8985649d35844963a3e7ea8e0428924a847645d2c11550ee8e",
+          "src/models/bc.py": "d58022e956b3adbd8d6a1c635ef9a7774efbd83aa5f8d8d65643c8f2d53be067",
+          "src/models/core.py": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+          "src/models/edits.py": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+          "src/models/paired_training_v3.py": "53737be25e1a8d2210ed18f35250ffdb7b8fe66f7cd7dde3873fabd630f8f119",
+          "src/models/tokenizer.py": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+          "src/models/training.py": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5"
+        },
+        "data": {
+          "configs/tokenizer_development/tokenizer.json": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+          "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": "bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": "d9b91d1193d6175e1b6185ff48153478881320867b4e0c722f5799f9c2739fcc",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": "97c137bcef4170350ef5db133ad4954151e7417b67aa38bfbdbdae0d650b7f1f",
+          "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": "d391197b246ce17512d9d2f293544623180eb539602897c6264f83a387d50713",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f"
+        },
+        "recipe_config_sha256": "8226cfeb5321a62e13ec6a36bd0139ddd24b6d661a618dd499b7492c05b20941",
+        "runtime": {
+          "TF32": "0",
+          "mlx": "0.32.3",
+          "numpy": "2.2.6",
+          "platform": "macOS-27.2-arm64-arm-64bit",
+          "python": "3.12.15"
+        }
+      },
+      "seed": 42,
+      "storage": {
+        "logical_bytes": 1611136656,
+        "logical_bytes_preserved": true,
+        "physical_bytes": 1460338688,
+        "sha256": "488d3ba292f0df45420d6920d25591b1e65c07e149c0b3fdddd4159b8bf3df82"
+      },
+      "update": 0
+    },
+    {
+      "arm": "B100",
+      "canonical_exposure": 1017149,
+      "checkpoint_complete_sha256": "99d40afe373d0705ca7bc6f90f50123807d22ebfdc98ae464c2b52c9fed5211f",
+      "checkpoint_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/checkpoint-update031",
+      "failure_state": "NONE",
+      "last_ordinal": 13838,
+      "last_update_metrics": {
+        "MLX_peak_bytes": 3405990502,
+        "accumulation_seconds": 0.1507259969948791,
+        "arm": "B100",
+        "canonical_charge": 32810,
+        "committed_canonical_exposure": 1017149,
+        "component_losses": {
+          "target_EOS": 3.2290985465515405
+        },
+        "component_measurement": "native training total only",
+        "component_monitor_seconds": 0.0,
+        "decoder_event_positions": 14557,
+        "decoder_padding": 7269,
+        "denominators": {
+          "B": 14557,
+          "C": {
+            "action": 1137,
+            "end": 688,
+            "start": 688,
+            "vocabulary": 3081
+          }
+        },
+        "examples": 449,
+        "forward_backward_seconds": 2.9882282480830327,
+        "gradient_norm": 7.573785305023193,
+        "loss": 3.2290985465515405,
+        "lr": 9.846486080397198e-05,
+        "microsteps": 29,
+        "native_update_wall_seconds": 3.3641238340060227,
+        "optimizer_seconds": 0.16443212499143556,
+        "overshoot": 42,
+        "padded_decoder_positions": 21826,
+        "padded_source_positions": 31996,
+        "phase": "P0",
+        "process_peak_rss_bytes": 6990381056,
+        "reader_seconds": 0.007119581976439804,
+        "source_padding": 14637,
+        "source_positions": 17359,
+        "synchronization_seconds": 0.0011964600125793368,
+        "update": 31,
+        "update_wall_seconds": 3.37722950000898
+      },
+      "lr": {
+        "floor_fraction": 0.1,
+        "peak": 0.0001,
+        "planned_exposure": 10000000,
+        "warmup": 200000
+      },
+      "nominal": 1000000,
+      "optimizer_sha256": {
+        "m": "2c9de12e5ece9923a24b9dc832bd0d3c2cf4c9b2e3db4d4329711ae29cd25d7d",
+        "v": "d452baea52b1fc2e2194643c14541aa478a728a993da35a0c33b678a5971ec4a"
+      },
+      "parameter_sha256": "1f7baaa92be43c727be10d4e344e678664c4cc987f9a5cb5919f1639bd55ca79",
+      "peak_lr": 0.0001,
+      "phase": "P0",
+      "recipe_id": "B100-seed42-lr1e-04",
+      "runtime_identities": {
+        "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+        "code": {
+          "benchmarks/paired_qualification_v3.py": "4e483b69a62c1aa20a55ba0a157989f14be61b62f8380ea897d1dbc9cc6f0d08",
+          "src/data/mixed_reader_v3.py": "c9e74b42cb6c6d8985649d35844963a3e7ea8e0428924a847645d2c11550ee8e",
+          "src/models/bc.py": "d58022e956b3adbd8d6a1c635ef9a7774efbd83aa5f8d8d65643c8f2d53be067",
+          "src/models/core.py": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+          "src/models/edits.py": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+          "src/models/paired_training_v3.py": "53737be25e1a8d2210ed18f35250ffdb7b8fe66f7cd7dde3873fabd630f8f119",
+          "src/models/tokenizer.py": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+          "src/models/training.py": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5"
+        },
+        "data": {
+          "configs/tokenizer_development/tokenizer.json": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+          "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": "bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": "d9b91d1193d6175e1b6185ff48153478881320867b4e0c722f5799f9c2739fcc",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": "97c137bcef4170350ef5db133ad4954151e7417b67aa38bfbdbdae0d650b7f1f",
+          "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": "d391197b246ce17512d9d2f293544623180eb539602897c6264f83a387d50713",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f"
+        },
+        "recipe_config_sha256": "8226cfeb5321a62e13ec6a36bd0139ddd24b6d661a618dd499b7492c05b20941",
+        "runtime": {
+          "TF32": "0",
+          "mlx": "0.32.3",
+          "numpy": "2.2.6",
+          "platform": "macOS-27.2-arm64-arm-64bit",
+          "python": "3.12.15"
+        }
+      },
+      "seed": 42,
+      "storage": {
+        "logical_bytes": 1611136656,
+        "logical_bytes_preserved": true,
+        "physical_bytes": 1577517056,
+        "sha256": "5c675dd2c8ed99ad6cbb702dc74319c4176c34ab37066eaeb735aaef1886a8b6"
+      },
+      "update": 31
+    },
+    {
+      "arm": "B100",
+      "canonical_exposure": 2001130,
+      "checkpoint_complete_sha256": "86ad2c61847f769d5125791211bea7769887ce986921ed98df8d3c96412d4ee5",
+      "checkpoint_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/checkpoint-update061",
+      "failure_state": "NONE",
+      "last_ordinal": 27230,
+      "last_update_metrics": {
+        "MLX_peak_bytes": 3405990502,
+        "accumulation_seconds": 0.14826078896294348,
+        "arm": "B100",
+        "canonical_charge": 32828,
+        "committed_canonical_exposure": 2001130,
+        "component_losses": {
+          "target_EOS": 2.147950129583478
+        },
+        "component_measurement": "native training total only",
+        "component_monitor_seconds": 0.0,
+        "decoder_event_positions": 14532,
+        "decoder_padding": 7447,
+        "denominators": {
+          "B": 14532,
+          "C": {
+            "action": 1153,
+            "end": 698,
+            "start": 698,
+            "vocabulary": 3097
+          }
+        },
+        "examples": 455,
+        "forward_backward_seconds": 4.103526413964573,
+        "gradient_norm": 5.2627434730529785,
+        "loss": 2.147950129583478,
+        "lr": 9.270506947108591e-05,
+        "microsteps": 29,
+        "native_update_wall_seconds": 4.482941666996339,
+        "optimizer_seconds": 0.17861787500442006,
+        "overshoot": 60,
+        "padded_decoder_positions": 21979,
+        "padded_source_positions": 32905,
+        "phase": "P0",
+        "process_peak_rss_bytes": 6990381056,
+        "reader_seconds": 0.004140417033340782,
+        "source_padding": 15525,
+        "source_positions": 17380,
+        "synchronization_seconds": 0.0014240839518606663,
+        "update": 61,
+        "update_wall_seconds": 4.495948916010093
+      },
+      "lr": {
+        "floor_fraction": 0.1,
+        "peak": 0.0001,
+        "planned_exposure": 10000000,
+        "warmup": 200000
+      },
+      "nominal": 2000000,
+      "optimizer_sha256": {
+        "m": "61057b54b9278be244f840ff45f47c0a7a9b2cbbb3d990605a03b3dc74bf0b53",
+        "v": "e05f7f76e70081a24a49007bfa8b853649d12bd5f82dc73bb2b2492a6321f541"
+      },
+      "parameter_sha256": "b2d9506f1ea014aba01db8068daadae1950fdbf5bfe2de7f33df3bd12fe7034e",
+      "peak_lr": 0.0001,
+      "phase": "P0",
+      "recipe_id": "B100-seed42-lr1e-04",
+      "runtime_identities": {
+        "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+        "code": {
+          "benchmarks/paired_qualification_v3.py": "4e483b69a62c1aa20a55ba0a157989f14be61b62f8380ea897d1dbc9cc6f0d08",
+          "src/data/mixed_reader_v3.py": "c9e74b42cb6c6d8985649d35844963a3e7ea8e0428924a847645d2c11550ee8e",
+          "src/models/bc.py": "d58022e956b3adbd8d6a1c635ef9a7774efbd83aa5f8d8d65643c8f2d53be067",
+          "src/models/core.py": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+          "src/models/edits.py": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+          "src/models/paired_training_v3.py": "53737be25e1a8d2210ed18f35250ffdb7b8fe66f7cd7dde3873fabd630f8f119",
+          "src/models/tokenizer.py": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+          "src/models/training.py": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5"
+        },
+        "data": {
+          "configs/tokenizer_development/tokenizer.json": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+          "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": "bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": "d9b91d1193d6175e1b6185ff48153478881320867b4e0c722f5799f9c2739fcc",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": "97c137bcef4170350ef5db133ad4954151e7417b67aa38bfbdbdae0d650b7f1f",
+          "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": "d391197b246ce17512d9d2f293544623180eb539602897c6264f83a387d50713",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f"
+        },
+        "recipe_config_sha256": "8226cfeb5321a62e13ec6a36bd0139ddd24b6d661a618dd499b7492c05b20941",
+        "runtime": {
+          "TF32": "0",
+          "mlx": "0.32.3",
+          "numpy": "2.2.6",
+          "platform": "macOS-27.2-arm64-arm-64bit",
+          "python": "3.12.15"
+        }
+      },
+      "seed": 42,
+      "storage": {
+        "logical_bytes": 1611136656,
+        "logical_bytes_preserved": true,
+        "physical_bytes": 1575485440,
+        "sha256": "2e9bc311fd1c8d207d359d5e2f62b0eacdab8b0a47b983dd634face8fa3a0428"
+      },
+      "update": 61
+    },
+    {
+      "arm": "B100",
+      "canonical_exposure": 3018478,
+      "checkpoint_complete_sha256": "6ce2f8250a48b96c9f497bb218550039f305925c31bda9c8a2d3d632d3c10ea7",
+      "checkpoint_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/checkpoint-update092",
+      "failure_state": "NONE",
+      "last_ordinal": 41095,
+      "last_update_metrics": {
+        "MLX_peak_bytes": 3405990502,
+        "accumulation_seconds": 0.15038725099293515,
+        "arm": "B100",
+        "canonical_charge": 32790,
+        "committed_canonical_exposure": 3018478,
+        "component_losses": {
+          "target_EOS": 1.8008463336154819
+        },
+        "component_measurement": "native training total only",
+        "component_monitor_seconds": 0.0,
+        "decoder_event_positions": 14540,
+        "decoder_padding": 6954,
+        "denominators": {
+          "B": 14540,
+          "C": {
+            "action": 1141,
+            "end": 690,
+            "start": 690,
+            "vocabulary": 3083
+          }
+        },
+        "examples": 451,
+        "forward_backward_seconds": 2.8747105030633975,
+        "gradient_norm": 1.4430230855941772,
+        "loss": 1.8008463336154819,
+        "lr": 8.284814685084075e-05,
+        "microsteps": 29,
+        "native_update_wall_seconds": 3.308222958003171,
+        "optimizer_seconds": 0.1801421670243144,
+        "overshoot": 22,
+        "padded_decoder_positions": 21494,
+        "padded_source_positions": 32655,
+        "phase": "P0",
+        "process_peak_rss_bytes": 6990381056,
+        "reader_seconds": 0.003390076890354976,
+        "source_padding": 15334,
+        "source_positions": 17321,
+        "synchronization_seconds": 0.0012897499836981297,
+        "update": 92,
+        "update_wall_seconds": 3.3644631250062957
+      },
+      "lr": {
+        "floor_fraction": 0.1,
+        "peak": 0.0001,
+        "planned_exposure": 10000000,
+        "warmup": 200000
+      },
+      "nominal": 3000000,
+      "optimizer_sha256": {
+        "m": "f4408e0843fb1f5c3f3c8e43994a83fe988dad025ae2ba204e2ef5d0a6fa64cf",
+        "v": "2e6f90dff9ce8634d2e3690023c95230bfd377526d76fd8168b769b59fcd2ff8"
+      },
+      "parameter_sha256": "3496957acd2ed0113720cdfe8a24e35808cd9ab024297eb71f5445ca00d027bb",
+      "peak_lr": 0.0001,
+      "phase": "P0",
+      "recipe_id": "B100-seed42-lr1e-04",
+      "runtime_identities": {
+        "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+        "code": {
+          "benchmarks/paired_qualification_v3.py": "4e483b69a62c1aa20a55ba0a157989f14be61b62f8380ea897d1dbc9cc6f0d08",
+          "src/data/mixed_reader_v3.py": "c9e74b42cb6c6d8985649d35844963a3e7ea8e0428924a847645d2c11550ee8e",
+          "src/models/bc.py": "d58022e956b3adbd8d6a1c635ef9a7774efbd83aa5f8d8d65643c8f2d53be067",
+          "src/models/core.py": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+          "src/models/edits.py": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+          "src/models/paired_training_v3.py": "53737be25e1a8d2210ed18f35250ffdb7b8fe66f7cd7dde3873fabd630f8f119",
+          "src/models/tokenizer.py": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+          "src/models/training.py": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5"
+        },
+        "data": {
+          "configs/tokenizer_development/tokenizer.json": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+          "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": "bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": "d9b91d1193d6175e1b6185ff48153478881320867b4e0c722f5799f9c2739fcc",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": "97c137bcef4170350ef5db133ad4954151e7417b67aa38bfbdbdae0d650b7f1f",
+          "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": "d391197b246ce17512d9d2f293544623180eb539602897c6264f83a387d50713",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f"
+        },
+        "recipe_config_sha256": "8226cfeb5321a62e13ec6a36bd0139ddd24b6d661a618dd499b7492c05b20941",
+        "runtime": {
+          "TF32": "0",
+          "mlx": "0.32.3",
+          "numpy": "2.2.6",
+          "platform": "macOS-27.2-arm64-arm-64bit",
+          "python": "3.12.15"
+        }
+      },
+      "seed": 42,
+      "storage": {
+        "logical_bytes": 1611136656,
+        "logical_bytes_preserved": true,
+        "physical_bytes": 1577517056,
+        "sha256": "82c74d156a5608d2566281efca85a84ab517d690d368b652188c679cd60fe7de"
+      },
+      "update": 92
+    },
+    {
+      "arm": "B100",
+      "canonical_exposure": 4002553,
+      "checkpoint_complete_sha256": "091c45364b47f0c18bb143935eff1efd3a5dbe759827738b055159cf6b6bdffd",
+      "checkpoint_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/checkpoint-update122",
+      "failure_state": "NONE",
+      "last_ordinal": 54485,
+      "last_update_metrics": {
+        "MLX_peak_bytes": 3405990502,
+        "accumulation_seconds": 0.15145958197535947,
+        "arm": "B100",
+        "canonical_charge": 32804,
+        "committed_canonical_exposure": 4002553,
+        "component_losses": {
+          "target_EOS": 1.554087571799755
+        },
+        "component_measurement": "native training total only",
+        "component_monitor_seconds": 0.0,
+        "decoder_event_positions": 14542,
+        "decoder_padding": 7616,
+        "denominators": {
+          "B": 14542,
+          "C": {
+            "action": 1133,
+            "end": 678,
+            "start": 678,
+            "vocabulary": 3056
+          }
+        },
+        "examples": 455,
+        "forward_backward_seconds": 3.033440624974901,
+        "gradient_norm": 2.3384602069854736,
+        "loss": 1.554087571799755,
+        "lr": 7.05068596173623e-05,
+        "microsteps": 29,
+        "native_update_wall_seconds": 3.346207166003296,
+        "optimizer_seconds": 0.11288037500344217,
+        "overshoot": 36,
+        "padded_decoder_positions": 22158,
+        "padded_source_positions": 32719,
+        "phase": "P0",
+        "process_peak_rss_bytes": 6990381056,
+        "reader_seconds": 0.0025932890130206943,
+        "source_padding": 15368,
+        "source_positions": 17351,
+        "synchronization_seconds": 0.0012388310569804162,
+        "update": 122,
+        "update_wall_seconds": 3.3568394999892917
+      },
+      "lr": {
+        "floor_fraction": 0.1,
+        "peak": 0.0001,
+        "planned_exposure": 10000000,
+        "warmup": 200000
+      },
+      "nominal": 4000000,
+      "optimizer_sha256": {
+        "m": "4665d37fa1927197dd184fbb21a876c0b399a198acc2bfa85ba3215625c1b7dd",
+        "v": "2879f02095d65ea8cb34cbeb37c2e9152206b50881375010dff635560c358431"
+      },
+      "parameter_sha256": "647a5c3e7b63764daf48e146e0f0d1d94cc499790ea7993ab03a24f718b9ba93",
+      "peak_lr": 0.0001,
+      "phase": "P0",
+      "recipe_id": "B100-seed42-lr1e-04",
+      "runtime_identities": {
+        "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+        "code": {
+          "benchmarks/paired_qualification_v3.py": "4e483b69a62c1aa20a55ba0a157989f14be61b62f8380ea897d1dbc9cc6f0d08",
+          "src/data/mixed_reader_v3.py": "c9e74b42cb6c6d8985649d35844963a3e7ea8e0428924a847645d2c11550ee8e",
+          "src/models/bc.py": "d58022e956b3adbd8d6a1c635ef9a7774efbd83aa5f8d8d65643c8f2d53be067",
+          "src/models/core.py": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+          "src/models/edits.py": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+          "src/models/paired_training_v3.py": "53737be25e1a8d2210ed18f35250ffdb7b8fe66f7cd7dde3873fabd630f8f119",
+          "src/models/tokenizer.py": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+          "src/models/training.py": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5"
+        },
+        "data": {
+          "configs/tokenizer_development/tokenizer.json": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+          "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": "bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": "d9b91d1193d6175e1b6185ff48153478881320867b4e0c722f5799f9c2739fcc",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": "97c137bcef4170350ef5db133ad4954151e7417b67aa38bfbdbdae0d650b7f1f",
+          "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": "d391197b246ce17512d9d2f293544623180eb539602897c6264f83a387d50713",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f"
+        },
+        "recipe_config_sha256": "8226cfeb5321a62e13ec6a36bd0139ddd24b6d661a618dd499b7492c05b20941",
+        "runtime": {
+          "TF32": "0",
+          "mlx": "0.32.3",
+          "numpy": "2.2.6",
+          "platform": "macOS-27.2-arm64-arm-64bit",
+          "python": "3.12.15"
+        }
+      },
+      "seed": 42,
+      "storage": {
+        "logical_bytes": 1611136656,
+        "logical_bytes_preserved": true,
+        "physical_bytes": 1577517056,
+        "sha256": "4daadf2b6f17389546984e327c869e837aac542c6050108c02c0d2bc3cdf0e45"
+      },
+      "update": 122
+    },
+    {
+      "arm": "B100",
+      "canonical_exposure": 5019821,
+      "checkpoint_complete_sha256": "a11cbfd3b29a9175602f90c2b7b0a5b56f9fc1e601fe3fbb26baf011bb2b8bd4",
+      "checkpoint_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/checkpoint-update153",
+      "failure_state": "NONE",
+      "last_ordinal": 68330,
+      "last_update_metrics": {
+        "MLX_peak_bytes": 3405990502,
+        "accumulation_seconds": 0.14779371093027294,
+        "arm": "B100",
+        "canonical_charge": 32833,
+        "committed_canonical_exposure": 5019821,
+        "component_losses": {
+          "target_EOS": 1.3577414302853867
+        },
+        "component_measurement": "native training total only",
+        "component_monitor_seconds": 0.0,
+        "decoder_event_positions": 14571,
+        "decoder_padding": 6781,
+        "denominators": {
+          "B": 14571,
+          "C": {
+            "action": 1153,
+            "end": 704,
+            "start": 704,
+            "vocabulary": 3086
+          }
+        },
+        "examples": 449,
+        "forward_backward_seconds": 2.993330750032328,
+        "gradient_norm": 1.5834834575653076,
+        "loss": 1.3577414302853867,
+        "lr": 5.6156509290623606e-05,
+        "microsteps": 29,
+        "native_update_wall_seconds": 3.3978066249983385,
+        "optimizer_seconds": 0.2042456250055693,
+        "overshoot": 65,
+        "padded_decoder_positions": 21352,
+        "padded_source_positions": 31823,
+        "phase": "P0",
+        "process_peak_rss_bytes": 6990381056,
+        "reader_seconds": 0.0034662929829210043,
+        "source_padding": 14415,
+        "source_positions": 17408,
+        "synchronization_seconds": 0.0013626259751617908,
+        "update": 153,
+        "update_wall_seconds": 3.41408012501779
+      },
+      "lr": {
+        "floor_fraction": 0.1,
+        "peak": 0.0001,
+        "planned_exposure": 10000000,
+        "warmup": 200000
+      },
+      "nominal": 5000000,
+      "optimizer_sha256": {
+        "m": "18453396c8b12621c24bbbf8cd5f9e3eaaad5c20a72bfffe16445868d4fe5471",
+        "v": "18d541c0571975341bc5c8c4a3f89e6d26b83050f1fc6b13c2c956e73e028f72"
+      },
+      "parameter_sha256": "8829079626dc1f35b47a45b2fea2498c2141fe0791f9aba2d32eb953630bfe69",
+      "peak_lr": 0.0001,
+      "phase": "P0",
+      "recipe_id": "B100-seed42-lr1e-04",
+      "runtime_identities": {
+        "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+        "code": {
+          "benchmarks/paired_qualification_v3.py": "4e483b69a62c1aa20a55ba0a157989f14be61b62f8380ea897d1dbc9cc6f0d08",
+          "src/data/mixed_reader_v3.py": "c9e74b42cb6c6d8985649d35844963a3e7ea8e0428924a847645d2c11550ee8e",
+          "src/models/bc.py": "d58022e956b3adbd8d6a1c635ef9a7774efbd83aa5f8d8d65643c8f2d53be067",
+          "src/models/core.py": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+          "src/models/edits.py": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+          "src/models/paired_training_v3.py": "53737be25e1a8d2210ed18f35250ffdb7b8fe66f7cd7dde3873fabd630f8f119",
+          "src/models/tokenizer.py": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+          "src/models/training.py": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5"
+        },
+        "data": {
+          "configs/tokenizer_development/tokenizer.json": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+          "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": "bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": "d9b91d1193d6175e1b6185ff48153478881320867b4e0c722f5799f9c2739fcc",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": "97c137bcef4170350ef5db133ad4954151e7417b67aa38bfbdbdae0d650b7f1f",
+          "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": "d391197b246ce17512d9d2f293544623180eb539602897c6264f83a387d50713",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f"
+        },
+        "recipe_config_sha256": "8226cfeb5321a62e13ec6a36bd0139ddd24b6d661a618dd499b7492c05b20941",
+        "runtime": {
+          "TF32": "0",
+          "mlx": "0.32.3",
+          "numpy": "2.2.6",
+          "platform": "macOS-27.2-arm64-arm-64bit",
+          "python": "3.12.15"
+        }
+      },
+      "seed": 42,
+      "storage": {
+        "logical_bytes": 1611136656,
+        "logical_bytes_preserved": true,
+        "physical_bytes": 1565982720,
+        "sha256": "19c8406974e5cb8ededebc34834a02fc06251c160f08fd55c67c4b703cfe39b1"
+      },
+      "update": 153
+    },
+    {
+      "arm": "B100",
+      "canonical_exposure": 6004173,
+      "checkpoint_complete_sha256": "0355d9c2fab9bff3fa4dd8ec170cbbc74a97a890d5512b56c8df55629638fdb2",
+      "checkpoint_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/checkpoint-update183",
+      "failure_state": "NONE",
+      "last_ordinal": 81721,
+      "last_update_metrics": {
+        "MLX_peak_bytes": 3405990502,
+        "accumulation_seconds": 0.1439074139634613,
+        "arm": "B100",
+        "canonical_charge": 32795,
+        "committed_canonical_exposure": 6004173,
+        "component_losses": {
+          "target_EOS": 1.1720473375171423
+        },
+        "component_measurement": "native training total only",
+        "component_monitor_seconds": 0.0,
+        "decoder_event_positions": 14556,
+        "decoder_padding": 6482,
+        "denominators": {
+          "B": 14556,
+          "C": {
+            "action": 1144,
+            "end": 705,
+            "start": 705,
+            "vocabulary": 3125
+          }
+        },
+        "examples": 439,
+        "forward_backward_seconds": 2.620575916953385,
+        "gradient_norm": 2.0929884910583496,
+        "loss": 1.1720473375171423,
+        "lr": 4.213855983801853e-05,
+        "microsteps": 28,
+        "native_update_wall_seconds": 2.925762250000844,
+        "optimizer_seconds": 0.11202075000619516,
+        "overshoot": 27,
+        "padded_decoder_positions": 21038,
+        "padded_source_positions": 31108,
+        "phase": "P0",
+        "process_peak_rss_bytes": 6990381056,
+        "reader_seconds": 0.00255637287045829,
+        "source_padding": 13763,
+        "source_positions": 17345,
+        "synchronization_seconds": 0.001314535125857219,
+        "update": 183,
+        "update_wall_seconds": 2.9378918329894077
+      },
+      "lr": {
+        "floor_fraction": 0.1,
+        "peak": 0.0001,
+        "planned_exposure": 10000000,
+        "warmup": 200000
+      },
+      "nominal": 6000000,
+      "optimizer_sha256": {
+        "m": "c038855e259ba688dd1f1c18bffdf4025b44fc8a3cc50ef8f3838120167f446d",
+        "v": "db487bc61eb5599a020e5055f2a69b4f1b8edc793bb636273c59c4ede89b041c"
+      },
+      "parameter_sha256": "0c2acc24c74d589eb1ca28c19ac7bf71f433c8ed932fc1988dbc4db7d3af5056",
+      "peak_lr": 0.0001,
+      "phase": "P0",
+      "recipe_id": "B100-seed42-lr1e-04",
+      "runtime_identities": {
+        "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+        "code": {
+          "benchmarks/paired_qualification_v3.py": "4e483b69a62c1aa20a55ba0a157989f14be61b62f8380ea897d1dbc9cc6f0d08",
+          "src/data/mixed_reader_v3.py": "c9e74b42cb6c6d8985649d35844963a3e7ea8e0428924a847645d2c11550ee8e",
+          "src/models/bc.py": "d58022e956b3adbd8d6a1c635ef9a7774efbd83aa5f8d8d65643c8f2d53be067",
+          "src/models/core.py": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+          "src/models/edits.py": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+          "src/models/paired_training_v3.py": "53737be25e1a8d2210ed18f35250ffdb7b8fe66f7cd7dde3873fabd630f8f119",
+          "src/models/tokenizer.py": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+          "src/models/training.py": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5"
+        },
+        "data": {
+          "configs/tokenizer_development/tokenizer.json": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+          "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": "bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": "d9b91d1193d6175e1b6185ff48153478881320867b4e0c722f5799f9c2739fcc",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": "97c137bcef4170350ef5db133ad4954151e7417b67aa38bfbdbdae0d650b7f1f",
+          "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": "d391197b246ce17512d9d2f293544623180eb539602897c6264f83a387d50713",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f"
+        },
+        "recipe_config_sha256": "8226cfeb5321a62e13ec6a36bd0139ddd24b6d661a618dd499b7492c05b20941",
+        "runtime": {
+          "TF32": "0",
+          "mlx": "0.32.3",
+          "numpy": "2.2.6",
+          "platform": "macOS-27.2-arm64-arm-64bit",
+          "python": "3.12.15"
+        }
+      },
+      "seed": 42,
+      "storage": {
+        "logical_bytes": 1611136656,
+        "logical_bytes_preserved": true,
+        "physical_bytes": 1577517056,
+        "sha256": "fc1edb24671c13667000e66ce03c44b84b5c701892e6c556d7d46e4e46c270b7"
+      },
+      "update": 183
+    },
+    {
+      "arm": "B100",
+      "canonical_exposure": 6693230,
+      "checkpoint_complete_sha256": "4c3d0f5740d4c14dab76d1b70934d9fa5f96162c3799b2c5dd82c8b26cd51276",
+      "checkpoint_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/checkpoint-update204",
+      "failure_state": "NONE",
+      "last_ordinal": 91100,
+      "last_update_metrics": {
+        "MLX_peak_bytes": 3405990502,
+        "accumulation_seconds": 0.15026299995952286,
+        "arm": "B100",
+        "canonical_charge": 32796,
+        "committed_canonical_exposure": 6693230,
+        "component_losses": {
+          "target_EOS": 1.0433811023831367
+        },
+        "component_measurement": "native training total only",
+        "component_monitor_seconds": 0.0,
+        "decoder_event_positions": 14544,
+        "decoder_padding": 6656,
+        "denominators": {
+          "B": 14544,
+          "C": {
+            "action": 1166,
+            "end": 722,
+            "start": 722,
+            "vocabulary": 3133
+          }
+        },
+        "examples": 444,
+        "forward_backward_seconds": 4.4876321659830865,
+        "gradient_norm": 1.9543348550796509,
+        "loss": 1.0433811023831367,
+        "lr": 3.300285670025534e-05,
+        "microsteps": 28,
+        "native_update_wall_seconds": 4.911984583013691,
+        "optimizer_seconds": 0.2124643750139512,
+        "overshoot": 28,
+        "padded_decoder_positions": 21200,
+        "padded_source_positions": 32316,
+        "phase": "P1",
+        "process_peak_rss_bytes": 6990381056,
+        "reader_seconds": 0.005451793083921075,
+        "source_padding": 14954,
+        "source_positions": 17362,
+        "synchronization_seconds": 0.0016337500128429383,
+        "update": 204,
+        "update_wall_seconds": 5.012039749999531
+      },
+      "lr": {
+        "floor_fraction": 0.1,
+        "peak": 0.0001,
+        "planned_exposure": 10000000,
+        "warmup": 200000
+      },
+      "nominal": 6666667,
+      "optimizer_sha256": {
+        "m": "085f3e4d6c32fcbaabedd40640cb62af17952cd3f59bdc9548cfb0e1a9773176",
+        "v": "34cd4a56c52a61eca681042f1e1365bd13af1a875275b4572867528f1fa143af"
+      },
+      "parameter_sha256": "a27c056ac2e63782c0b070d23def583c7d3832d27ca8273e0e66793bed294c6c",
+      "peak_lr": 0.0001,
+      "phase": "P1",
+      "recipe_id": "B100-seed42-lr1e-04",
+      "runtime_identities": {
+        "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+        "code": {
+          "benchmarks/paired_qualification_v3.py": "4e483b69a62c1aa20a55ba0a157989f14be61b62f8380ea897d1dbc9cc6f0d08",
+          "src/data/mixed_reader_v3.py": "c9e74b42cb6c6d8985649d35844963a3e7ea8e0428924a847645d2c11550ee8e",
+          "src/models/bc.py": "d58022e956b3adbd8d6a1c635ef9a7774efbd83aa5f8d8d65643c8f2d53be067",
+          "src/models/core.py": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+          "src/models/edits.py": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+          "src/models/paired_training_v3.py": "53737be25e1a8d2210ed18f35250ffdb7b8fe66f7cd7dde3873fabd630f8f119",
+          "src/models/tokenizer.py": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+          "src/models/training.py": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5"
+        },
+        "data": {
+          "configs/tokenizer_development/tokenizer.json": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+          "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": "bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": "d9b91d1193d6175e1b6185ff48153478881320867b4e0c722f5799f9c2739fcc",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": "97c137bcef4170350ef5db133ad4954151e7417b67aa38bfbdbdae0d650b7f1f",
+          "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": "d391197b246ce17512d9d2f293544623180eb539602897c6264f83a387d50713",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f"
+        },
+        "recipe_config_sha256": "8226cfeb5321a62e13ec6a36bd0139ddd24b6d661a618dd499b7492c05b20941",
+        "runtime": {
+          "TF32": "0",
+          "mlx": "0.32.3",
+          "numpy": "2.2.6",
+          "platform": "macOS-27.2-arm64-arm-64bit",
+          "python": "3.12.15"
+        }
+      },
+      "seed": 42,
+      "storage": {
+        "logical_bytes": 1611136656,
+        "logical_bytes_preserved": true,
+        "physical_bytes": 1627783168,
+        "sha256": "f472bf7066d16c04aef850ae39161f0e155ad51a3ba9d1d43f0bbe8f3da22d75"
+      },
+      "update": 204
+    },
+    {
+      "arm": "B100",
+      "canonical_exposure": 7021296,
+      "checkpoint_complete_sha256": "76e6518e314c5af307d1b3ea5ee7643d97d237862904e08cedd32c19b42e34bc",
+      "checkpoint_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/checkpoint-update214",
+      "failure_state": "NONE",
+      "last_ordinal": 95556,
+      "last_update_metrics": {
+        "MLX_peak_bytes": 3406020174,
+        "accumulation_seconds": 0.1542306269693654,
+        "arm": "B100",
+        "canonical_charge": 32799,
+        "committed_canonical_exposure": 7021296,
+        "component_losses": {
+          "target_EOS": 1.0046476700736093
+        },
+        "component_measurement": "native training total only",
+        "component_monitor_seconds": 0.0,
+        "decoder_event_positions": 14554,
+        "decoder_padding": 6582,
+        "denominators": {
+          "B": 14554,
+          "C": {
+            "action": 1159,
+            "end": 723,
+            "start": 723,
+            "vocabulary": 3174
+          }
+        },
+        "examples": 436,
+        "forward_backward_seconds": 4.477687999024056,
+        "gradient_norm": 2.013735055923462,
+        "loss": 1.0046476700736093,
+        "lr": 2.900338765494202e-05,
+        "microsteps": 28,
+        "native_update_wall_seconds": 4.932849875011016,
+        "optimizer_seconds": 0.23063370800809935,
+        "overshoot": 31,
+        "padded_decoder_positions": 21136,
+        "padded_source_positions": 31052,
+        "phase": "P1",
+        "process_peak_rss_bytes": 6990381056,
+        "reader_seconds": 0.005428375006886199,
+        "source_padding": 13670,
+        "source_positions": 17382,
+        "synchronization_seconds": 0.0018294130568392575,
+        "update": 214,
+        "update_wall_seconds": 4.952499375009211
+      },
+      "lr": {
+        "floor_fraction": 0.1,
+        "peak": 0.0001,
+        "planned_exposure": 10000000,
+        "warmup": 200000
+      },
+      "nominal": 7000000,
+      "optimizer_sha256": {
+        "m": "45a2d8de3f011d12da657939b3154e229af05f014c52ec4086e9e0320945aef6",
+        "v": "59768a50a3ce59969e88b210088d94bcbbf0073c8b75c06f477883258cd844cc"
+      },
+      "parameter_sha256": "3578423d7ec561685aa4d4a365d8d5a80fa4b91dc104a1b7eec8ca5abb855b97",
+      "peak_lr": 0.0001,
+      "phase": "P1",
+      "recipe_id": "B100-seed42-lr1e-04",
+      "runtime_identities": {
+        "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+        "code": {
+          "benchmarks/paired_qualification_v3.py": "4e483b69a62c1aa20a55ba0a157989f14be61b62f8380ea897d1dbc9cc6f0d08",
+          "src/data/mixed_reader_v3.py": "c9e74b42cb6c6d8985649d35844963a3e7ea8e0428924a847645d2c11550ee8e",
+          "src/models/bc.py": "d58022e956b3adbd8d6a1c635ef9a7774efbd83aa5f8d8d65643c8f2d53be067",
+          "src/models/core.py": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+          "src/models/edits.py": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+          "src/models/paired_training_v3.py": "53737be25e1a8d2210ed18f35250ffdb7b8fe66f7cd7dde3873fabd630f8f119",
+          "src/models/tokenizer.py": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+          "src/models/training.py": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5"
+        },
+        "data": {
+          "configs/tokenizer_development/tokenizer.json": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+          "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": "bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": "d9b91d1193d6175e1b6185ff48153478881320867b4e0c722f5799f9c2739fcc",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": "97c137bcef4170350ef5db133ad4954151e7417b67aa38bfbdbdae0d650b7f1f",
+          "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": "d391197b246ce17512d9d2f293544623180eb539602897c6264f83a387d50713",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f"
+        },
+        "recipe_config_sha256": "8226cfeb5321a62e13ec6a36bd0139ddd24b6d661a618dd499b7492c05b20941",
+        "runtime": {
+          "TF32": "0",
+          "mlx": "0.32.3",
+          "numpy": "2.2.6",
+          "platform": "macOS-27.2-arm64-arm-64bit",
+          "python": "3.12.15"
+        }
+      },
+      "seed": 42,
+      "storage": {
+        "logical_bytes": 1611136656,
+        "logical_bytes_preserved": true,
+        "physical_bytes": 1627783168,
+        "sha256": "a9d76c151acd82e7c97d95fc20fa89663211972590ce666b9cb9e2442256abf7"
+      },
+      "update": 214
+    },
+    {
+      "arm": "B100",
+      "canonical_exposure": 8005412,
+      "checkpoint_complete_sha256": "3e5e4cd37a3a1c5c4d1ce1d366ce9e7b3ca96f1eb46a40b5ca7755f1bffdaeb4",
+      "checkpoint_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/checkpoint-update244",
+      "failure_state": "NONE",
+      "last_ordinal": 108974,
+      "last_update_metrics": {
+        "MLX_peak_bytes": 3406020174,
+        "accumulation_seconds": 0.1444711630756501,
+        "arm": "B100",
+        "canonical_charge": 32773,
+        "committed_canonical_exposure": 8005412,
+        "component_losses": {
+          "target_EOS": 0.8701103031635284
+        },
+        "component_measurement": "native training total only",
+        "component_monitor_seconds": 0.0,
+        "decoder_event_positions": 14519,
+        "decoder_padding": 6968,
+        "denominators": {
+          "B": 14519,
+          "C": {
+            "action": 1197,
+            "end": 754,
+            "start": 754,
+            "vocabulary": 3174
+          }
+        },
+        "examples": 443,
+        "forward_backward_seconds": 2.8107008750666864,
+        "gradient_norm": 1.6813304424285889,
+        "loss": 0.8701103031635284,
+        "lr": 1.888974575904032e-05,
+        "microsteps": 28,
+        "native_update_wall_seconds": 3.229899582976941,
+        "optimizer_seconds": 0.2176179170201067,
+        "overshoot": 5,
+        "padded_decoder_positions": 21487,
+        "padded_source_positions": 31692,
+        "phase": "P1",
+        "process_peak_rss_bytes": 6990381056,
+        "reader_seconds": 0.0032116681104525924,
+        "source_padding": 14249,
+        "source_positions": 17443,
+        "synchronization_seconds": 0.0013194549828767776,
+        "update": 244,
+        "update_wall_seconds": 3.2494610830035526
+      },
+      "lr": {
+        "floor_fraction": 0.1,
+        "peak": 0.0001,
+        "planned_exposure": 10000000,
+        "warmup": 200000
+      },
+      "nominal": 8000000,
+      "optimizer_sha256": {
+        "m": "78880ec7c1ca2f17ab82d97c567563e92a5287e0d78e3548e1e24707044c48bf",
+        "v": "837b5713efc7d48d4ee47e35bc5a5453cd4c660a54b9bb7ffa870dbdb0ca37cd"
+      },
+      "parameter_sha256": "79d5be7a066b0a2ca5c4f7438a38e6fab57bbeb2670fcf8526f0407ee615941c",
+      "peak_lr": 0.0001,
+      "phase": "P1",
+      "recipe_id": "B100-seed42-lr1e-04",
+      "runtime_identities": {
+        "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+        "code": {
+          "benchmarks/paired_qualification_v3.py": "4e483b69a62c1aa20a55ba0a157989f14be61b62f8380ea897d1dbc9cc6f0d08",
+          "src/data/mixed_reader_v3.py": "c9e74b42cb6c6d8985649d35844963a3e7ea8e0428924a847645d2c11550ee8e",
+          "src/models/bc.py": "d58022e956b3adbd8d6a1c635ef9a7774efbd83aa5f8d8d65643c8f2d53be067",
+          "src/models/core.py": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+          "src/models/edits.py": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+          "src/models/paired_training_v3.py": "53737be25e1a8d2210ed18f35250ffdb7b8fe66f7cd7dde3873fabd630f8f119",
+          "src/models/tokenizer.py": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+          "src/models/training.py": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5"
+        },
+        "data": {
+          "configs/tokenizer_development/tokenizer.json": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+          "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": "bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": "d9b91d1193d6175e1b6185ff48153478881320867b4e0c722f5799f9c2739fcc",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": "97c137bcef4170350ef5db133ad4954151e7417b67aa38bfbdbdae0d650b7f1f",
+          "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": "d391197b246ce17512d9d2f293544623180eb539602897c6264f83a387d50713",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f"
+        },
+        "recipe_config_sha256": "8226cfeb5321a62e13ec6a36bd0139ddd24b6d661a618dd499b7492c05b20941",
+        "runtime": {
+          "TF32": "0",
+          "mlx": "0.32.3",
+          "numpy": "2.2.6",
+          "platform": "macOS-27.2-arm64-arm-64bit",
+          "python": "3.12.15"
+        }
+      },
+      "seed": 42,
+      "storage": {
+        "logical_bytes": 1611136656,
+        "logical_bytes_preserved": true,
+        "physical_bytes": 1627783168,
+        "sha256": "fa7b87281b50e36e1d5612ec735eb726960afe510c06ca55b77d40f64a1b6ee4"
+      },
+      "update": 244
+    },
+    {
+      "arm": "B100",
+      "canonical_exposure": 9022609,
+      "checkpoint_complete_sha256": "f3c2ccb7b8ea6dd586d4995e1ba924bd5da40126c5d02477c5cec5d132b728b3",
+      "checkpoint_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/checkpoint-update275",
+      "failure_state": "NONE",
+      "last_ordinal": 122797,
+      "last_update_metrics": {
+        "MLX_peak_bytes": 3406020174,
+        "accumulation_seconds": 0.1583015029609669,
+        "arm": "B100",
+        "canonical_charge": 32798,
+        "committed_canonical_exposure": 9022609,
+        "component_losses": {
+          "target_EOS": 0.7657071389257908
+        },
+        "component_measurement": "native training total only",
+        "component_monitor_seconds": 0.0,
+        "decoder_event_positions": 14534,
+        "decoder_padding": 6978,
+        "denominators": {
+          "B": 14534,
+          "C": {
+            "action": 1176,
+            "end": 730,
+            "start": 730,
+            "vocabulary": 3167
+          }
+        },
+        "examples": 446,
+        "forward_backward_seconds": 3.8515392500557937,
+        "gradient_norm": 1.642271876335144,
+        "loss": 0.7657071389257908,
+        "lr": 1.219084138760702e-05,
+        "microsteps": 28,
+        "native_update_wall_seconds": 4.294398958998499,
+        "optimizer_seconds": 0.2248227920208592,
+        "overshoot": 30,
+        "padded_decoder_positions": 21512,
+        "padded_source_positions": 33142,
+        "phase": "P1",
+        "process_peak_rss_bytes": 6990381056,
+        "reader_seconds": 0.004443250974873081,
+        "source_padding": 15708,
+        "source_positions": 17434,
+        "synchronization_seconds": 0.0013520399515982717,
+        "update": 275,
+        "update_wall_seconds": 4.311802250012988
+      },
+      "lr": {
+        "floor_fraction": 0.1,
+        "peak": 0.0001,
+        "planned_exposure": 10000000,
+        "warmup": 200000
+      },
+      "nominal": 9000000,
+      "optimizer_sha256": {
+        "m": "75cbef3fb48865f28d75e538f79f4d4b63d55e1271e90d36aa64804aedd89866",
+        "v": "4f1ab327a24d0dd0ef6afc061e20b89fd3c8081446de90d7b30573e1cb56db29"
+      },
+      "parameter_sha256": "eb12afb850ea4aedc9f63b56c9e4c543fc3490c95c462c3546eb4c8f4e1c703a",
+      "peak_lr": 0.0001,
+      "phase": "P1",
+      "recipe_id": "B100-seed42-lr1e-04",
+      "runtime_identities": {
+        "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+        "code": {
+          "benchmarks/paired_qualification_v3.py": "4e483b69a62c1aa20a55ba0a157989f14be61b62f8380ea897d1dbc9cc6f0d08",
+          "src/data/mixed_reader_v3.py": "c9e74b42cb6c6d8985649d35844963a3e7ea8e0428924a847645d2c11550ee8e",
+          "src/models/bc.py": "d58022e956b3adbd8d6a1c635ef9a7774efbd83aa5f8d8d65643c8f2d53be067",
+          "src/models/core.py": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+          "src/models/edits.py": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+          "src/models/paired_training_v3.py": "53737be25e1a8d2210ed18f35250ffdb7b8fe66f7cd7dde3873fabd630f8f119",
+          "src/models/tokenizer.py": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+          "src/models/training.py": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5"
+        },
+        "data": {
+          "configs/tokenizer_development/tokenizer.json": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+          "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": "bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": "d9b91d1193d6175e1b6185ff48153478881320867b4e0c722f5799f9c2739fcc",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": "97c137bcef4170350ef5db133ad4954151e7417b67aa38bfbdbdae0d650b7f1f",
+          "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": "d391197b246ce17512d9d2f293544623180eb539602897c6264f83a387d50713",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f"
+        },
+        "recipe_config_sha256": "8226cfeb5321a62e13ec6a36bd0139ddd24b6d661a618dd499b7492c05b20941",
+        "runtime": {
+          "TF32": "0",
+          "mlx": "0.32.3",
+          "numpy": "2.2.6",
+          "platform": "macOS-27.2-arm64-arm-64bit",
+          "python": "3.12.15"
+        }
+      },
+      "seed": 42,
+      "storage": {
+        "logical_bytes": 1611136656,
+        "logical_bytes_preserved": true,
+        "physical_bytes": 1573388288,
+        "sha256": "7f7f4053ad2575597034e34ae386a2fb3c08cbea887ab227e6791a45043fcd7d"
+      },
+      "update": 275
+    },
+    {
+      "arm": "B100",
+      "canonical_exposure": 9350642,
+      "checkpoint_complete_sha256": "bcc0ddb4a155c88db9d8f55ec0d7f7b80fa5ece4f7e6f56ce0aa569391b114a7",
+      "checkpoint_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/checkpoint-update285",
+      "failure_state": "NONE",
+      "last_ordinal": 127234,
+      "last_update_metrics": {
+        "MLX_peak_bytes": 4069701856,
+        "accumulation_seconds": 0.1477914990100544,
+        "arm": "B100",
+        "canonical_charge": 32811,
+        "committed_canonical_exposure": 9350642,
+        "component_losses": {
+          "target_EOS": 2.1293567521497607
+        },
+        "component_measurement": "native training total only",
+        "component_monitor_seconds": 0.0,
+        "decoder_event_positions": 14759,
+        "decoder_padding": 11632,
+        "denominators": {
+          "B": 14759,
+          "C": {
+            "action": 1019,
+            "end": 620,
+            "start": 620,
+            "vocabulary": 2726
+          }
+        },
+        "examples": 399,
+        "forward_backward_seconds": 6.124987123068422,
+        "gradient_norm": 17.845401763916016,
+        "loss": 2.1293567521497607,
+        "lr": 1.097147062382377e-05,
+        "microsteps": 25,
+        "native_update_wall_seconds": 6.551087500003632,
+        "optimizer_seconds": 0.21052329099620692,
+        "overshoot": 43,
+        "padded_decoder_positions": 26391,
+        "padded_source_positions": 33805,
+        "phase": "P2",
+        "process_peak_rss_bytes": 6990381056,
+        "reader_seconds": 0.007466586015652865,
+        "source_padding": 16536,
+        "source_positions": 17269,
+        "synchronization_seconds": 0.001699165120953694,
+        "update": 285,
+        "update_wall_seconds": 6.618592541984981
+      },
+      "lr": {
+        "floor_fraction": 0.1,
+        "peak": 0.0001,
+        "planned_exposure": 10000000,
+        "warmup": 200000
+      },
+      "nominal": 9333334,
+      "optimizer_sha256": {
+        "m": "8a3a4834c6494f7cdeb6d49097ecae938de32238fb39d6c27ba7a4c049a64c77",
+        "v": "70e588500f24c5d0d47d932caa97fcc0c156e84bfd67f0b515eae6338ce1ad2c"
+      },
+      "parameter_sha256": "38d594ede4a7622ee2afb6be2880f96c90cb39802b2cb1ce851648e05f54c364",
+      "peak_lr": 0.0001,
+      "phase": "P2",
+      "recipe_id": "B100-seed42-lr1e-04",
+      "runtime_identities": {
+        "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+        "code": {
+          "benchmarks/paired_qualification_v3.py": "4e483b69a62c1aa20a55ba0a157989f14be61b62f8380ea897d1dbc9cc6f0d08",
+          "src/data/mixed_reader_v3.py": "c9e74b42cb6c6d8985649d35844963a3e7ea8e0428924a847645d2c11550ee8e",
+          "src/models/bc.py": "d58022e956b3adbd8d6a1c635ef9a7774efbd83aa5f8d8d65643c8f2d53be067",
+          "src/models/core.py": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+          "src/models/edits.py": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+          "src/models/paired_training_v3.py": "53737be25e1a8d2210ed18f35250ffdb7b8fe66f7cd7dde3873fabd630f8f119",
+          "src/models/tokenizer.py": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+          "src/models/training.py": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5"
+        },
+        "data": {
+          "configs/tokenizer_development/tokenizer.json": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+          "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": "bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": "d9b91d1193d6175e1b6185ff48153478881320867b4e0c722f5799f9c2739fcc",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": "97c137bcef4170350ef5db133ad4954151e7417b67aa38bfbdbdae0d650b7f1f",
+          "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": "d391197b246ce17512d9d2f293544623180eb539602897c6264f83a387d50713",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f"
+        },
+        "recipe_config_sha256": "8226cfeb5321a62e13ec6a36bd0139ddd24b6d661a618dd499b7492c05b20941",
+        "runtime": {
+          "TF32": "0",
+          "mlx": "0.32.3",
+          "numpy": "2.2.6",
+          "platform": "macOS-27.2-arm64-arm-64bit",
+          "python": "3.12.15"
+        }
+      },
+      "seed": 42,
+      "storage": {
+        "logical_bytes": 1611136656,
+        "logical_bytes_preserved": true,
+        "physical_bytes": 1577517056,
+        "sha256": "df88f5ea56ce84ce332498835137e522f7342848942b05f0d381db203f696dae"
+      },
+      "update": 285
+    },
+    {
+      "arm": "B100",
+      "canonical_exposure": 10007223,
+      "checkpoint_complete_sha256": "21913f03684a22f6730dcd9eac07a0b9d7c8547996b1717dbeddc624dfb1ce0c",
+      "checkpoint_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/checkpoint-update305",
+      "failure_state": "NONE",
+      "last_ordinal": 134590,
+      "last_update_metrics": {
+        "MLX_peak_bytes": 4092635108,
+        "accumulation_seconds": 0.12794400099664927,
+        "arm": "B100",
+        "canonical_charge": 32880,
+        "committed_canonical_exposure": 10007223,
+        "component_losses": {
+          "target_EOS": 1.0558236259967089
+        },
+        "component_measurement": "native training total only",
+        "component_monitor_seconds": 0.0,
+        "decoder_event_positions": 14974,
+        "decoder_padding": 16688,
+        "denominators": {
+          "B": 14974,
+          "C": {
+            "action": 953,
+            "end": 592,
+            "start": 592,
+            "vocabulary": 2522
+          }
+        },
+        "examples": 361,
+        "forward_backward_seconds": 4.047317458956968,
+        "gradient_norm": 4.33195686340332,
+        "loss": 1.0558236259967089,
+        "lr": 1e-05,
+        "microsteps": 23,
+        "native_update_wall_seconds": 4.4823524999956135,
+        "optimizer_seconds": 0.2519429170060903,
+        "overshoot": 112,
+        "padded_decoder_positions": 31662,
+        "padded_source_positions": 36989,
+        "phase": "P2",
+        "process_peak_rss_bytes": 6990381056,
+        "reader_seconds": 0.00418216604157351,
+        "source_padding": 19685,
+        "source_positions": 17304,
+        "synchronization_seconds": 0.0011404149990994483,
+        "update": 305,
+        "update_wall_seconds": 4.493492666020757
+      },
+      "lr": {
+        "floor_fraction": 0.1,
+        "peak": 0.0001,
+        "planned_exposure": 10000000,
+        "warmup": 200000
+      },
+      "nominal": 10000000,
+      "optimizer_sha256": {
+        "m": "4094c12db52ebf0bd0629129f77c0def0834e1bf39faf5d19a9868fdbbec1161",
+        "v": "e48aa3b2e1c0bc6249eabd5d195e436717d2ca785dae2d79471002724642f367"
+      },
+      "parameter_sha256": "c50b13888a96f011dc9242afe42fa3dd84a86a42554d670e495b5a4b3b92da0f",
+      "peak_lr": 0.0001,
+      "phase": "P2",
+      "recipe_id": "B100-seed42-lr1e-04",
+      "runtime_identities": {
+        "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+        "code": {
+          "benchmarks/paired_qualification_v3.py": "4e483b69a62c1aa20a55ba0a157989f14be61b62f8380ea897d1dbc9cc6f0d08",
+          "src/data/mixed_reader_v3.py": "c9e74b42cb6c6d8985649d35844963a3e7ea8e0428924a847645d2c11550ee8e",
+          "src/models/bc.py": "d58022e956b3adbd8d6a1c635ef9a7774efbd83aa5f8d8d65643c8f2d53be067",
+          "src/models/core.py": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+          "src/models/edits.py": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+          "src/models/paired_training_v3.py": "53737be25e1a8d2210ed18f35250ffdb7b8fe66f7cd7dde3873fabd630f8f119",
+          "src/models/tokenizer.py": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+          "src/models/training.py": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5"
+        },
+        "data": {
+          "configs/tokenizer_development/tokenizer.json": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+          "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": "bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": "d9b91d1193d6175e1b6185ff48153478881320867b4e0c722f5799f9c2739fcc",
+          "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": "97c137bcef4170350ef5db133ad4954151e7417b67aa38bfbdbdae0d650b7f1f",
+          "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": "d391197b246ce17512d9d2f293544623180eb539602897c6264f83a387d50713",
+          "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f"
+        },
+        "recipe_config_sha256": "8226cfeb5321a62e13ec6a36bd0139ddd24b6d661a618dd499b7492c05b20941",
+        "runtime": {
+          "TF32": "0",
+          "mlx": "0.32.3",
+          "numpy": "2.2.6",
+          "platform": "macOS-27.2-arm64-arm-64bit",
+          "python": "3.12.15"
+        }
+      },
+      "seed": 42,
+      "storage": {
+        "logical_bytes": 1611136656,
+        "logical_bytes_preserved": true,
+        "physical_bytes": 1627783168,
+        "sha256": "55e44d3075b6eac2a04ea426cb444bc5bffee66b048efffb6392969e09e252cb"
+      },
+      "update": 305
+    }
+  ],
+  "disposition": "PRESCRIBED_10M_RECIPE_COMPLETE",
+  "endpoint": {
+    "canonical_exposure": 10007223,
+    "last_ordinal": 134590,
+    "nominal": 10000000,
+    "update": 305
+  },
+  "final_checkpoint_complete_sha256": "21913f03684a22f6730dcd9eac07a0b9d7c8547996b1717dbeddc624dfb1ce0c",
+  "final_parameter_sha256": "c50b13888a96f011dc9242afe42fa3dd84a86a42554d670e495b5a4b3b92da0f",
+  "initial_parameter_sha256": "2739837ff4ad4ff26475dca5a37608d9c46a1c7ff34f8778f24eadb18b8e8044",
+  "last_system_snapshot": {
+    "memory_pressure": {
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "The system has 51539607552 (3145728 pages with a page size of 16384).\nSystem-wide memory free percentage: 48%\n"
+    },
+    "monotonic": 193928.235659958,
+    "power_source": {
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=22937699)\t80%; AC attached; not charging present: true\n"
+    },
+    "rss_peak_bytes_macos": 6990381056,
+    "swap": {
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "vm.swapusage: total = 14336.00M  used = 13420.06M  free = 915.94M  (encrypted)\n"
+    },
+    "thermal": {
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded\n"
+    },
+    "virtual_memory": {
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                   155968.\nPages active:                                 668595.\nPages inactive:                               664544.\nPages speculative:                              1990.\nPages throttled:                                   0.\nPages wired down:                             391475.\nPages purgeable:                                2121.\n\"Translation faults\":                     8370472281.\nPages copy-on-write:                      1903176148.\nPages zero filled:                        3980003801.\nPages reactivated:                          26670628.\nPages purged:                               11352586.\nFile-backed pages:                            202545.\nAnonymous pages:                             1132584.\nPages stored in compressor:                  1746832.\nPages occupied by compressor:                1202659.\nDecompressions:                            780076821.\nCompressions:                              882208106.\nPageins:                                    52004910.\nPageouts:                                      64803.\nSwapins:                                     4026745.\nSwapouts:                                    5661377.\nPages tagged:                                 135189.\nPages tagged resident:                        115951.\nPages tagged compressed:                       19238.\nPages tag-storage:                             98304.\nPages tag-storage holding tags:                 7310.\nPages tag-storage free:                          147.\nPages tag-storage non-tag pageable:            90704.\nPages tag-storage non-tag wired:                  91.\nBytes of compressed tags:                    2874496.\nTagged compressions:                         1143074.\nTagged decompressions:                       1000016.\n"
+    }
+  },
+  "numerical_replays": 0,
+  "private_output_directory": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01",
+  "recipe_id": "B100-seed42-lr1e-04",
+  "recipe_wall_seconds": 2117.4588170051575,
+  "source_commit": "c4c28517ddb60e1d802adcac45351ee034c23070",
+  "status": "COMPLETED",
+  "updates_sha256": "babd0c48e4ab68a2c7b87c20e3a9766875dbf5470749919ce2ac7e9e259ca752"
+}

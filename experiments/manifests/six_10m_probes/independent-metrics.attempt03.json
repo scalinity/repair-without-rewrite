@@ -1,0 +1,36 @@
+{
+  "accelerator_runtime_imported": false,
+  "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+  "controlling_selection": {
+    "adoption_path": "docs/reviews/PROSPECTIVE_AMENDMENTS.md",
+    "adoption_sha256": "a4b11308d006e110124fafecbcd84cfcacc4a299a8c577a1cea9e7b6b7035e61",
+    "aggregation": "Pooled failure-inclusive corpus WER over the 108 frozen LS-PC DEVELOPMENT natural pairs; natural/generated denominators separate",
+    "eligibility_quote": "Natural failure-inclusive WER is strictly below RAW.",
+    "final_primary": "The final equal-domain LS-PC/SLUE H1 primary is a later scientific endpoint; SLUE is absent from this approved pilot panel.",
+    "lines": [
+      438,
+      479
+    ],
+    "path": "docs/reviews/FRONTIER_READER_CURRICULUM_DECISION_V1.md",
+    "ranking_quote": "lowest natural WER;",
+    "scope_quote": "These are DEVELOPMENT viability screens, not H1 significance or final-paper acceptance gates.",
+    "sha256": "7089ef96c847623b01c3d3d54f179e3e2477b8239bdad9cc4a79998d6418043b"
+  },
+  "cpu_only": true,
+  "decision": {
+    "ranking": null,
+    "selected_LR": null,
+    "status": "PREPARATION_OR_SINGLE_EVALUATION_NO_SELECTION"
+  },
+  "disposition": "INDEPENDENT_METRICS_PREPARATION_COMPLETE_RESULTS_PENDING",
+  "elapsed_seconds": 0.04686545900767669,
+  "evaluation_reconstructions": [],
+  "generated_cases": 288,
+  "natural_cases": 108,
+  "panel_cases": 396,
+  "panel_ordered_ids_sha256": "18fbfdb99442d18719f490999f5cb624c8fc8c9c7293883352c4d2d651e23694",
+  "panel_sha256": "5043ed60d6ce8f891ee8e30255fabaa40fcac37b0a043c1a85dd88178832ce4e",
+  "review_source_sha256": "3d6e714086294da9a86a19db19971370cd9362a60ca9cce17f1a9164fec14f86",
+  "reviewed_head": "c4c28517ddb60e1d802adcac45351ee034c23070",
+  "schema": "six_10m_independent_metrics_v1"
+}

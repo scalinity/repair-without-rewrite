@@ -1,0 +1,22 @@
+{
+  "MLX_native_masked_forward_load": "NOT_RUN_CPU_ONLY_REVIEW",
+  "NPZ_arrays_independently_compared": 525,
+  "accelerator_used": false,
+  "all_initial_moments_and_accumulators_zero": true,
+  "allocated_bytes": 404418560,
+  "checkpoint_replaced": false,
+  "copy_sha256": "488d3ba292f0df45420d6920d25591b1e65c07e149c0b3fdddd4159b8bf3df82",
+  "disposition": "EXACT_BYTE_HOLE_PUNCH_CPU_READBACK_QUALIFIED",
+  "initial_master_parameter_count": 100686336,
+  "initial_parameter_sha256_reconstructed": "2739837ff4ad4ff26475dca5a37608d9c46a1c7ff34f8778f24eadb18b8e8044",
+  "logical_bytes": 1611136656,
+  "native_source_changed": false,
+  "original_unchanged": true,
+  "same_path_native_load": "INFERENCE: verified identical NPZ bytes, tensor readback and metadata inventory retain existing native byte/NPZ restoration inputs",
+  "schema": "six10m_independent_punchhole_readback_v1",
+  "shape_dtype_finite_checks_against_original_metadata": true,
+  "source_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/checkpoint-update000/arrays.npz",
+  "storage_diagnostic": "experiments/manifests/six_10m_probes/independent-provenance-storage.attempt04.json",
+  "temporary_copy_path": "exports/storage-checks/six10m-punchhole-attempt01/arrays.npz",
+  "utc": "2026-10-06T05:25:02.271225+00:00"
+}

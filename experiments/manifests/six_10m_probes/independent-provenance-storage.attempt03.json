@@ -1,0 +1,46 @@
+{
+  "NPZ_arrays_additional_readback": "NOT_RUN_IN_THIS_ATTEMPT; full logical-byte hash equals verified original NPZ",
+  "accelerator_used": false,
+  "allocated_bytes_saved": 147456,
+  "allocated_extent_bytes": 1460190864,
+  "allocated_extent_count": 4,
+  "blocks_scanned": 393344,
+  "checkpoint_replaced": false,
+  "copy_allocated_bytes": 1460191232,
+  "copy_logical_bytes": 1611136656,
+  "copy_sha256": "488d3ba292f0df45420d6920d25591b1e65c07e149c0b3fdddd4159b8bf3df82",
+  "disposition": "EXACT_BYTE_PRETRUNCATE_SPARSE_STORAGE_MEASURED",
+  "first_allocated_extents": [
+    [
+      0,
+      402784256
+    ],
+    [
+      453099520,
+      805552128
+    ],
+    [
+      855867392,
+      1208336384
+    ],
+    [
+      1258651648,
+      1611136656
+    ]
+  ],
+  "free_bytes_after_test_copy": 122021265408,
+  "method": "Pretruncate full logical size; unbuffered 4096-byte reads; write only nonzero blocks at absolute offsets; fsync",
+  "native_source_changed": false,
+  "nonzero_block_bytes_written": 404418192,
+  "original_unchanged": true,
+  "rewrite_seconds": 1.3325310420186725,
+  "same_logical_bytes": true,
+  "schema": "six10m_independent_sparse_storage_diagnostic_v1",
+  "source_allocated_bytes": 1460338688,
+  "source_logical_bytes": 1611136656,
+  "source_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/checkpoint-update000/arrays.npz",
+  "source_sha256": "488d3ba292f0df45420d6920d25591b1e65c07e149c0b3fdddd4159b8bf3df82",
+  "temporary_copy_path": "exports/storage-checks/six10m-pretruncate-sparse-attempt01/arrays.npz",
+  "utc": "2026-10-06T05:22:08.967783+00:00",
+  "zero_bytes_skipped": 1206718464
+}

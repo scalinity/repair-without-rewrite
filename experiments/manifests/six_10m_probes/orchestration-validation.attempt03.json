@@ -1,0 +1,32 @@
+{
+  "desktop": {
+    "appearances": [
+      "light",
+      "dark"
+    ],
+    "scroll_width": 1280,
+    "width": 1280
+  },
+  "diagnostic_path": "exports/six-10m-probes/orchestration-validation-attempt03-diagnostics.json",
+  "diagnostic_sha256": "82f63a53f5efdd71d0f799e36d4bdd2b92be460f34c6362030681c632132039a",
+  "disposition": "ORCHESTRATION_REALIGNMENT_VERIFIED",
+  "layout_changed": false,
+  "page_sha256": "5b78928e86de47362b4af274f7f0a14355667dbdce09030b8a43835e8572501d",
+  "phone": {
+    "appearances": [
+      "light",
+      "dark"
+    ],
+    "scroll_width": 390,
+    "width": 390
+  },
+  "screenshots_saved_to_disk": false,
+  "slot_count": {
+    "completed": 1,
+    "started": 1,
+    "unstarted": 5
+  },
+  "source_head": "c4c28517ddb60e1d802adcac45351ee034c23070",
+  "strips": 14,
+  "viewer_resized": false
+}

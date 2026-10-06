@@ -1,0 +1,56 @@
+{
+  "NPZ_arrays_additional_readback": "NOT_RUN_IN_THIS_ATTEMPT; full logical-byte hash equals verified original NPZ",
+  "accelerator_used": false,
+  "allocated_bytes_saved_vs_source": 1055920128,
+  "allocated_extent_bytes": 404418192,
+  "allocated_extent_count": 304,
+  "checkpoint_replaced": false,
+  "copy_allocated_bytes_after": 404418560,
+  "copy_allocated_bytes_before": 1331167232,
+  "copy_sha256": "488d3ba292f0df45420d6920d25591b1e65c07e149c0b3fdddd4159b8bf3df82",
+  "disposition": "EXACT_BYTE_EXPLICIT_HOLE_PUNCH_MEASURED",
+  "documentation": "Installed macOS fcntl(2), F_PUNCHHOLE; installed MacOSX SDK sys/fcntl.h value99 and fpunchhole_t layout",
+  "first_allocated_extents": [
+    [
+      0,
+      402776064
+    ],
+    [
+      453103616,
+      453111808
+    ],
+    [
+      455467008,
+      455471104
+    ],
+    [
+      457826304,
+      457830400
+    ],
+    [
+      460185600,
+      460189696
+    ],
+    [
+      462544896,
+      462553088
+    ]
+  ],
+  "free_bytes_after_test_copy": 110128074752,
+  "later_dense_checkpoint_savings": "UNMEASURED",
+  "logical_bytes": 1611136656,
+  "method": "Clone untouched NPZ to new test copy; F_PUNCHHOLE only verified contiguous all-zero aligned4096-byte runs; fsync; whole-file SHA verification",
+  "native_source_changed": false,
+  "original_unchanged": true,
+  "punch_errors": [],
+  "punch_seconds": 1.077049417013768,
+  "same_logical_bytes": true,
+  "schema": "six10m_independent_punchhole_diagnostic_v1",
+  "source_allocated_bytes": 1460338688,
+  "source_path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/checkpoint-update000/arrays.npz",
+  "source_sha256": "488d3ba292f0df45420d6920d25591b1e65c07e149c0b3fdddd4159b8bf3df82",
+  "temporary_copy_path": "exports/storage-checks/six10m-punchhole-attempt01/arrays.npz",
+  "utc": "2026-10-06T05:23:46.511629+00:00",
+  "zero_bytes_punched": 1206718464,
+  "zero_runs_punched": 303
+}

@@ -1,0 +1,23 @@
+{
+  "MLX_imported": false,
+  "NPZ_arrays_independently_compared": 525,
+  "accelerator_used": false,
+  "copied_checkpoint_path": "exports/storage-checks/six10m-helper-qualification-attempt01/initial-checkpoint",
+  "copy_allocated_bytes": 404418560,
+  "disposition": "STANDALONE_STORAGE_HELPER_CPU_QUALIFIED",
+  "final_dense_checkpoint_savings": "PENDING_UPDATE031_COPY_TEST",
+  "full_zero_EOF_and_partial_tail_correct": true,
+  "helper_path": "benchmarks/six_10m_storage.py",
+  "helper_receipt_path": "experiments/manifests/six_10m_probes/independent-provenance-storage-helper.attempt01.json",
+  "helper_sha256": "cf0d37f3cef3318b4efb0350d898cd5ae2d651c96de8790aab8ceac50938a9b0",
+  "method": "CPU-only helper source review, independent AST-extracted scan fixtures, copied native initial checkpoint invocation, full NumPy array comparison",
+  "native_COMPLETE_and_metadata_bytes_identical": true,
+  "original_campaign_artifacts_changed": false,
+  "original_digest_rejection": true,
+  "same_logical_NPZ_bytes": true,
+  "schema": "six10m_storage_helper_independent_qualification_v1",
+  "source_allocated_bytes": 1460338688,
+  "stale_receipt_partial_rejection_before_copy": true,
+  "utc": "2026-10-06T05:29:09.425351+00:00",
+  "zero_run_scan_cases": 5
+}

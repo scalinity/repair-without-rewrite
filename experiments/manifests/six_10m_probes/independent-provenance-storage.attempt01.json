@@ -1,0 +1,14 @@
+{
+  "disposition": "STORAGE_DIAGNOSTIC_RECEIPT_CAPTURE_RETRY_REQUIRED",
+  "original_changed": false,
+  "same_path_checkpoint_replacement": false,
+  "schema": "six10m_independent_storage_diagnostic_v1",
+  "subsequent_verification_required": true,
+  "temporary_copy_path": "exports/storage-checks/six10m-transparent-compression-attempt01/arrays.npz",
+  "test_failure": {
+    "message": "os.listxattr is unavailable in the installed Python runtime",
+    "stage": "extended attribute name collection after logical hash and all 525 array readback comparisons completed",
+    "type": "AttributeError"
+  },
+  "utc": "2026-10-06T05:20:32.636855+00:00"
+}
