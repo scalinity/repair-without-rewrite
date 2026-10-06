@@ -502,7 +502,7 @@ footer code{font-size:12px}
 <header class="topbar">
   <div class="topbar-in">
     <a class="wordmark" href="#top">Repair Without Rewrite <span>orchestration</span></a>
-    <span class="asof">Qualification record <code>07b2ffe</code>, 6 Oct 2026</span>
+    <span class="asof">Authorized base <code>7868302</code>, 6 Oct 2026</span>
     <button class="theme-btn" id="themeBtn" type="button" aria-label="Change appearance">
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="5.5"/><path d="M8 2.5v11" /><path d="M8 2.5a5.5 5.5 0 0 1 0 11z" fill="currentColor" stroke="none"/></svg>
       <span id="themeLabel">Auto</span>
@@ -529,7 +529,7 @@ footer code{font-size:12px}
       <li><a href="#words">Words used here</a></li>
       <li><a href="#log">Change log</a></li>
     </ol>
-    <p class="rail-foot">Qualification figures come from commit <code>07b2ffe</code>; earlier results retain their own cited sources.</p>
+    <p class="rail-foot">Qualification figures come from commit <code>7868302</code>; earlier results retain their own cited sources.</p>
   </aside>
 
 <main>
@@ -603,7 +603,7 @@ footer code{font-size:12px}
 <section class="sec" id="where" aria-labelledby="h-where">
   <div class="sec-head">
     <h2 id="h-where">Where the paper is</h2>
-    <p class="lede">Eight stations from plan to manuscript. The foundation is built and the training reader is implemented. The paper sits just before its first trial training run, with the reader qualified and admission V4 complete.</p>
+    <p class="lede">Eight stations from plan to manuscript. The foundation is built and the training reader is implemented. The paper sits just before its first trial training run. Admission V4 and new-session authorization are complete; the campaign launcher is undergoing its final operational checks.</p>
   </div>
   <aside class="note"><b>In plain words</b>Think of it as a lab that has built and tested its instruments, rebuilt its practice material after the first version proved to be mostly punctuation, and has now qualified the machine that hands that material out.</aside>
 
@@ -619,8 +619,8 @@ footer code{font-size:12px}
     <div class="here">
       <div class="bigfig">0 of 6<small>trial training runs started. Every one of the six slots is untouched.</small></div>
       <div>
-        <span class="flag">Qualified; six trials await a new session</span>
-        <h3>The reader qualifies. The six scientific trial runs can now be authorized in a new session.</h3>
+        <span class="flag">New session authorized; pre-run checks</span>
+        <h3>The six trials are authorized. Publish the pre-run freeze before execution.</h3>
         <p>The first measured profile of the recognizer's mistakes was 92.05% punctuation, capital letters and spacing. Training on it might have taught the models to restore quote marks rather than fix misheard words, so the <button class="term" data-t="frontier">frontier reviewer</button> chose a lexical-first profile instead (decision v2). That profile, the reader that feeds both models identical examples, and the full-size training step are now built, with the final 372-test suite passing.</p>
         <p>All four cold resumes reproduce the uninterrupted states exactly. Both full BENCH runs and independent native audits pass. V4 admits the six trials; none has started. The measured serialized estimate is 11.44 hours, including one 25% reserve; final-paper feasibility remains unpriced.</p>
         <span class="src">From <code>docs/reviews/FRONTIER_CORRUPTION_PROFILE_DECISION_V2.md</code>, <code>docs/reports/LEXICAL_CORRUPTION_PROFILE_V2_QUALIFICATION.md</code> and <code>docs/reports/BC_10M_PROBE_ADMISSION_DECISION_V4.md</code> and <code>experiments/manifests/lexical_reader_v2/integrated-final-validation.attempt03.json</code>.</span>
@@ -689,13 +689,13 @@ footer code{font-size:12px}
     <div class="elig">
       <div>
         <h3>The graph allows these now</h3>
-        <div class="nums">2, 5, 7, 8</div>
-        <p>Steps 3 and 4 are complete. Step 5 still needs explicit authorization of a new scientific-run session; dependency eligibility alone does not start it.</p>
+        <div class="nums">2, 6, 7, 8</div>
+        <p>Steps 3, 4 and 5 are complete. Step 6 is authorized; its pre-run freeze must be published before the first optimizer update.</p>
       </div>
       <div>
         <h3>These should start now</h3>
-        <div class="nums">5 and 2; 8 can be scoped separately</div>
-        <p>Start step 5 by authorizing the six trials in a new session; step 2 remains account access. Step 7 stays on hold until its new ByT5 recipe is declared. Step 8 is outside this completed milestone: scoring can run in its own worktree; any stress-panel work must preserve the frozen training generator and pools.</p>
+        <div class="nums">6 only in this session</div>
+        <p>Finish the pre-run freeze, then execute the six recipes serially in their declared order. Account access, comparators and new scorekeeping work remain outside this campaign. CPU-only independent campaign checks may overlap training; no second accelerator workload may run.</p>
       </div>
     </div>
 
@@ -801,7 +801,7 @@ footer code{font-size:12px}
       <li><div><h3>Failures kept in plain sight</h3><p class="caught">Five scorer qualification attempts are kept on disk. A speech-synthesis path that failed its parity check stays in the record next to the path that worked.</p><span class="src"><code>docs/reports/scorer_qualification_attempt01.txt</code> to <code>05</code>; <code>docs/reports/ASR_TTS_NATIVE_PROBE.md</code></span></div><p class="cost">A reviewer can see what was tried, not just what worked.</p></li>
       <li><div><h3>A resume that didn't quite resume</h3><p class="caught">Stopping C101 mid-update and restarting it from disk failed to reproduce the uninterrupted run. The cause was the order in which its loss components were reduced; it was reproduced, repaired and re-qualified. Inconsistent checkpoint clocks are now rejected outright.</p><span class="src">Commits <code>04f3bec</code> and <code>28298ad</code>; <code>experiments/manifests/lexical_reader_v2/</code></span></div><p class="cost">Caught before a single trial run. Each trial resumes many times, so a silent drift would have touched every result.</p></li>
     </ol>
-    <p class="record">The record behind these: <b>44</b> commits, <b>40</b> reports, <b>17</b> independent review records and <b>372</b> passing tests, with no final training, sealed test or protocol freeze touched. <span class="src">Counted at qualification commit <code>07b2ffe</code>; reports are tracked <code>docs/reports/*.md</code>, reviews are <code>docs/reviews/*.md</code> with “independent” in the filename (including accepted findings). Tests: <code>experiments/manifests/lexical_reader_v2/integrated-final-validation.attempt03.json</code>.</span></p>
+    <p class="record">The record behind these: <b>45</b> commits, <b>40</b> reports, <b>17</b> independent review records and <b>372</b> passing tests, with no final training, sealed test or protocol freeze touched. <span class="src">Counted at authorized checkpoint <code>7868302</code>; reports are tracked <code>docs/reports/*.md</code>, reviews are <code>docs/reviews/*.md</code> with “independent” in the filename (including accepted findings). Tests: <code>experiments/manifests/lexical_reader_v2/integrated-final-validation.attempt03.json</code>.</span></p>
   </div>
 </section>
 
@@ -853,6 +853,7 @@ footer code{font-size:12px}
   <aside class="note"><b>In plain words</b>A lab notebook: what was done, when, and what it decided. Nothing is erased. A correction is added as a new entry.</aside>
   <div class="wide">
     <ol class="timeline">
+      <li><div class="t-when">6 Oct<code>7868302 · campaign preflight</code></div><div class="t-what"><h3>Six-trial session authorized; inputs reproduced</h3><p>Local and remote main match. Baseline: 372 tests. Frozen ledger and panel reproduced independently. The supplied ledger digest lacked its final f; the correction is authorized and matches actual bytes. Zero slots started. Launcher checks precede the published freeze.</p><span class="t-disp go">PREFLIGHT_IDENTITIES_VERIFIED</span></div></li>
       <li><div class="t-when">6 Oct, 00:07<code>07b2ffe</code></div><div class="t-what"><h3>Lexical reader qualified; six trials admitted</h3><p>All cold resumes, complete native BENCH and independent audits pass. Final suite: 372 tests. The six trials cost 11.44 hours with reserve; zero slots started. Page realigned against V4 and its receipts.</p><span class="t-disp go">AUTHORIZE_10M_BC_DEVELOPMENT_PROBES</span></div></li>
       <li><div class="t-when">5 Oct, 22:50<code>base 28298ad</code></div><div class="t-what"><h3>Repository conventions, step log and this page</h3><p>Research conventions written into AGENTS.md, CLAUDE.md made to import them, the step log started, and this page realigned and published with the repository.</p><span class="t-disp">documentation only</span></div></li>
       <li><div class="t-when">5 Oct, 20:25–22:02<code>ab8fe95…28298ad</code></div><div class="t-what"><h3>Word-level practice mistakes; reader built</h3><p>Decision v2 chose a lexical-first corruption profile. The profile, the mixed reader and the full-size training step were implemented, and two resume defects were repaired. 372 tests pass; admission V4 is in progress.</p><span class="t-disp go">CORRUPTION_PROFILE_REVISION_AUTHORIZED</span></div></li>
@@ -866,7 +867,7 @@ footer code{font-size:12px}
 
 <footer>
   <div>
-    <p>Qualification figures come from this repository at commit <code>07b2ffe</code> (<code>github.com/scalinity/repair-without-rewrite</code>). Each section names its source file. Step order, concurrency verdicts and model allocation are this page's judgements, built from those files.</p>
+    <p>Qualification figures come from this repository at commit <code>7868302</code> (<code>github.com/scalinity/repair-without-rewrite</code>). Each section names its source file. Step order, concurrency verdicts and model allocation are this page's judgements, built from those files.</p>
     <p>Realign this page after every completed step, as <code>AGENTS.md</code> requires: check it against the newest <code>docs/reports/BC_10M_PROBE_ADMISSION_DECISION_V*.md</code>, <code>docs/reviews/PROSPECTIVE_AMENDMENTS.md</code> and <code>git log</code>, not against memory, and add the step to the change log.</p>
   </div>
   <div><p>This page is part of the repository's public record. The full step history is in <code>docs/LOG.md</code>.</p></div>
@@ -1035,8 +1036,8 @@ const STATIONS = [
    d:["Every instrument the experiment stands on was built and checked: the scorer, the model math, both models' mechanics, the real-speech data and the comparison models. The first readiness report said FOUNDATION_REPAIR_REQUIRED. A repair session then fixed the speech-recognizer path, closed data leaks, trained the tokenizer and passed the real-data convergence test.",
       "Publication gates 1 (novelty) and 2 (evaluation validity) are worked on here, and both are still pending. Open: ByT5 (step 7), SLUE access (step 2) and scoring precision (step 8)."],
    src:"docs/reports/FOUNDATION_GO_NO_GO.md; docs/reports/FOUNDATION_REPAIR_SESSION_REPORT.md"},
-  {t:"Six trial runs", s:"stop", st:"Qualified: V4 admits six future trials; none started",
-   d:["Six short trainings, three per model, to check each can learn useful correction and to pick a learning rate. None has started; their six configurations are written. The machine that feeds them examples needed decisions twice: its recipe had gaps (V2), then the measured mistakes proved to be mostly punctuation (V3). Decision v2 chose a lexical-first profile, and the reader is now built. Attempt03 passes all exact resumes, full BENCH and independent audits; V4 admits the six trials. Actual runs require a new session with explicit authorization."],
+  {t:"Six trial runs", s:"stop", st:"Authorized: pre-run operational checks; none started",
+   d:["Six short trainings, three per model, to check each can learn useful correction and to pick a learning rate. None has started; their six configurations are written. The machine that feeds them examples needed decisions twice: its recipe had gaps (V2), then the measured mistakes proved to be mostly punctuation (V3). Decision v2 chose a lexical-first profile, and the reader is now built. Attempt03 passes all exact resumes, full BENCH and independent audits; V4 admits the six trials. The new session is authorized. Its launcher and receipts preserve the frozen treatment; execution follows publication of the campaign freeze."],
    src:"docs/reports/BC_10M_PROBE_ADMISSION_DECISION_V4.md; experiments/manifests/lexical_reader_v2/"},
   {t:"Freeze the plan", s:"todo", st:"Not started. PUB-GATE 3",
    d:["Lock every rule (claims, scores, margins, seeds, baselines, budgets, stop rules, statistics) before the final training, so the results can't steer the method. After this, any change is a new experiment, not an edit."],
@@ -1132,12 +1133,12 @@ const STEPS = [
    produces:"Measured update rates, memory and heat for both models, verified resume, and a priced total for all six runs with a 25% reserve.",
    stop:"No smaller update target. If 32,768 anchors proves impractical, return the measurements for review.",
    src:"docs/reports/PAIRED_COMPLETE_UPDATE_BENCH_V3.md; docs/reports/BC_10M_PROBE_COST_PROJECTION_V2.md"},
-  {n:5, t:"Decide whether the six trial runs may start", tech:"Admission decision V4: every admission question answered with reader/config hashes, matched-consumption evidence, resume results and measured cost", who:[W('codex','qualified'),W('astra','optional review'),W('you','authorizes new session')], needs:[3,4], ow:true, owText:"Approving releases a one-way step", state:'now', badge:'V4 qualified; new session awaits authorization',
+  {n:5, t:"Decide whether the six trial runs may start", tech:"Admission decision V4: every admission question answered with reader/config hashes, matched-consumption evidence, resume results and measured cost", who:[W('codex','qualified'),W('astra','optional review'),W('you','authorizes new session')], needs:[3,4], ow:true, owText:"Approving releases a one-way step", state:'done', badge:'V4 qualified; new session authorized',
    plain:"A checklist that says, with evidence, that everything the trial runs depend on is ready. V4 answers every gate. Explicit authorization of a new session unlocks execution; another frontier review is optional.",
-   produces:"V4 ends AUTHORIZE_10M_BC_DEVELOPMENT_PROBES. The current session stops; execution needs explicit new-session authorization.",
+   produces:"V4 ends AUTHORIZE_10M_BC_DEVELOPMENT_PROBES. The authorized new session must publish its frozen six-recipe manifest before execution.",
    stop:"Any unmeasured item means the answer is no. An equality claimed over zero rows is not a pass.",
    src:"docs/reviews/FRONTIER_READER_CURRICULUM_DECISION_V1.md, section L"},
-  {n:6, t:"Run the six trial trainings", tech:"B100 and C101 × peak LR 1e-4, 3e-4, 6e-4; seed 42; 10M canonical exposures in three phases (6,666,667 / 2,666,667 / 666,666); one LR chosen per model at the 10M endpoint only", who:[W('codex','runs'),W('astra','reviews the outcome')], needs:[5], ow:true, owText:"Uses up all six trial slots", accel:true, state:'later', badge:'Unstarted; new session only',
+  {n:6, t:"Run the six trial trainings", tech:"B100 and C101 × peak LR 1e-4, 3e-4, 6e-4; seed 42; 10M canonical exposures in three phases (6,666,667 / 2,666,667 / 666,666); one LR chosen per model at the 10M endpoint only", who:[W('codex','runs'),W('astra','reviews the outcome')], needs:[5], ow:true, owText:"Uses up all six trial slots", accel:true, state:'now', badge:'Authorized; pre-run checks',
    plain:"Each model gets three short runs at different learning speeds. The point isn't to crown a winner. It's to see whether either model learns to fix real mistakes without wrecking correct words, or just learns to copy.",
    produces:"Loss curves, outputs at 0, 1M, 3M and the phase ends, and one learning rate selected for each model by a fixed rule.",
    stop:"If neither model has an eligible recipe, the current 150M campaign is abandoned. That says nothing final about either architecture. No extra trial is allowed.",
@@ -1222,8 +1223,8 @@ const LANES = [
   ['cpu','Codex on the CPU','overlaps freely']
 ];
 const PHASES = [
-  {t:'Qualified', c:{astra:[[1,'Decision v2']], cpu:[[3,'Reader'],[4,'BENCH + cost']]}},
-  {t:'Now', c:{you:[[5,'New session'],[2,'SLUE']], astra:[[7,'Recipe']], cpu:[[8,'Own scope']]}},
+  {t:'Qualified', c:{you:[[5,'Authorized']], astra:[[1,'Decision v2']], cpu:[[3,'Reader'],[4,'BENCH + cost']]}},
+  {t:'Now', c:{cpu:[[6,'Pre-run freeze']]}},
   {t:'Trials', c:{accel:[[6,'Six runs']], astra:[[6,'Review',1]]}},
   {t:'Pre-freeze', c:{astra:[[9,'Decide']], cpu:[[9,'Evidence']], you:[[10,'Freeze']]}},
   {t:'Final', c:{accel:[[11,'Train'],[12,'Lock'],[13,'Exam']], astra:[[11,'Review',1]]}},

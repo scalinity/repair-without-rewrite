@@ -1,0 +1,174 @@
+{
+  "utc": "2026-10-06T04:57:12.450960+00:00",
+  "authorized_checkpoint": "7868302afc43e3cbd475464452f57912a9c2cf97",
+  "local_head": "7868302afc43e3cbd475464452f57912a9c2cf97",
+  "remote_main": "7868302afc43e3cbd475464452f57912a9c2cf97",
+  "initial_working_tree_clean": true,
+  "native_freeze_ancestor": true,
+  "identity_checks": [
+    {
+      "path": "configs/tokenizer_development/tokenizer.json",
+      "supplied_expected": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+      "expected_length": 64,
+      "actual": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+      "matches_supplied": true
+    },
+    {
+      "path": "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json",
+      "supplied_expected": "bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87",
+      "expected_length": 64,
+      "actual": "bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87",
+      "matches_supplied": true
+    },
+    {
+      "path": "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl",
+      "supplied_expected": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+      "expected_length": 64,
+      "actual": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+      "matches_supplied": true
+    },
+    {
+      "path": "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl",
+      "supplied_expected": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2",
+      "expected_length": 63,
+      "actual": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f",
+      "matches_supplied": false
+    }
+  ],
+  "recipes": [
+    {
+      "recipe": "pilot-B100-seed42-lr1e-04.json",
+      "sha256": "8226cfeb5321a62e13ec6a36bd0139ddd24b6d661a618dd499b7492c05b20941",
+      "slot_consumed": false,
+      "status": "CONFIGURED_UNSTARTED_UNAUTHORIZED",
+      "endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "data_identities_verified": {
+        "configs/tokenizer_development/tokenizer.json": true,
+        "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": true,
+        "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": true,
+        "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": true,
+        "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": true,
+        "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": true,
+        "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": true
+      },
+      "panel_hash": "5043ed60d6ce8f891ee8e30255fabaa40fcac37b0a043c1a85dd88178832ce4e"
+    },
+    {
+      "recipe": "pilot-B100-seed42-lr3e-04.json",
+      "sha256": "dd3e81dbe349ab21aba9fdca5ab3fb8ed16dac79e8f385a1b53f66ac10395338",
+      "slot_consumed": false,
+      "status": "CONFIGURED_UNSTARTED_UNAUTHORIZED",
+      "endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "data_identities_verified": {
+        "configs/tokenizer_development/tokenizer.json": true,
+        "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": true,
+        "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": true,
+        "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": true,
+        "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": true,
+        "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": true,
+        "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": true
+      },
+      "panel_hash": "5043ed60d6ce8f891ee8e30255fabaa40fcac37b0a043c1a85dd88178832ce4e"
+    },
+    {
+      "recipe": "pilot-B100-seed42-lr6e-04.json",
+      "sha256": "32347ccf5843a6147a9627fe9dd5e0033618ede86e5938e427ec6f361d47087f",
+      "slot_consumed": false,
+      "status": "CONFIGURED_UNSTARTED_UNAUTHORIZED",
+      "endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "data_identities_verified": {
+        "configs/tokenizer_development/tokenizer.json": true,
+        "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": true,
+        "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": true,
+        "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": true,
+        "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": true,
+        "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": true,
+        "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": true
+      },
+      "panel_hash": "5043ed60d6ce8f891ee8e30255fabaa40fcac37b0a043c1a85dd88178832ce4e"
+    },
+    {
+      "recipe": "pilot-C101-seed42-lr1e-04.json",
+      "sha256": "898f5a0f8e7d8a5e0cd9626a7ff9e0fe4532f3743933a45cf71b4a3067fc96f6",
+      "slot_consumed": false,
+      "status": "CONFIGURED_UNSTARTED_UNAUTHORIZED",
+      "endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "data_identities_verified": {
+        "configs/tokenizer_development/tokenizer.json": true,
+        "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": true,
+        "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": true,
+        "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": true,
+        "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": true,
+        "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": true,
+        "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": true
+      },
+      "panel_hash": "5043ed60d6ce8f891ee8e30255fabaa40fcac37b0a043c1a85dd88178832ce4e"
+    },
+    {
+      "recipe": "pilot-C101-seed42-lr3e-04.json",
+      "sha256": "a877ffe8149c92468b77f2bef4d4bbb863dffb072ad8e57ac4ffb24500cd3687",
+      "slot_consumed": false,
+      "status": "CONFIGURED_UNSTARTED_UNAUTHORIZED",
+      "endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "data_identities_verified": {
+        "configs/tokenizer_development/tokenizer.json": true,
+        "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": true,
+        "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": true,
+        "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": true,
+        "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": true,
+        "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": true,
+        "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": true
+      },
+      "panel_hash": "5043ed60d6ce8f891ee8e30255fabaa40fcac37b0a043c1a85dd88178832ce4e"
+    },
+    {
+      "recipe": "pilot-C101-seed42-lr6e-04.json",
+      "sha256": "266904e709a684f426d1bbdd8dcdbeaa7706e181dfba1f77448ae7d128282375",
+      "slot_consumed": false,
+      "status": "CONFIGURED_UNSTARTED_UNAUTHORIZED",
+      "endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "data_identities_verified": {
+        "configs/tokenizer_development/tokenizer.json": true,
+        "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": true,
+        "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": true,
+        "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": true,
+        "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": true,
+        "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": true,
+        "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": true
+      },
+      "panel_hash": "5043ed60d6ce8f891ee8e30255fabaa40fcac37b0a043c1a85dd88178832ce4e"
+    }
+  ],
+  "recipes_executed": 0,
+  "disposition": "PROBE_CAMPAIGN_REPAIR_REQUIRED"
+}

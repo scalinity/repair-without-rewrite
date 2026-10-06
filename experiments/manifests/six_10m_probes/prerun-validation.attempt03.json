@@ -1,0 +1,11 @@
+{
+  "base_commit": "7868302afc43e3cbd475464452f57912a9c2cf97",
+  "attempt": 3,
+  "command": "MLX_ENABLE_TF32=0 .venv/bin/python -m pytest",
+  "log": "exports/six-10m-prerun-validation.attempt03.log",
+  "log_sha256": "ba5c9b072cbe8c2da06ea6f7b987bc16c7977a1bd9b3f0dfb339ae0b1067e207",
+  "passed": 378,
+  "seconds": 35.27,
+  "exit_code": 0,
+  "disposition": "PASS"
+}

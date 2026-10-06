@@ -78,3 +78,13 @@ Times are local (EDT, UTC−4). Entries 1–5 were backfilled on 2026-10-05 from
 - **Left undone:** all six scientific runs and all final/sealed/protocol/cloud/production work; stop at publication of the exact qualification checkpoint.
 
 - **Correction to entry 7:** its `00:20` label was entered incorrectly. Qualification commit `07b2ffe` records `2026-10-06T00:07:52-04:00`; the orchestration timeline now uses 00:07. The measurements, scope and disposition are unchanged.
+
+## 9 · 2026-10-06 01:11 EDT · six-probe pre-run operational qualification
+
+- **Base:** `7868302afc43e3cbd475464452f57912a9c2cf97`, local and remote main verified equal with a clean tree.
+- **Step:** qualify the execution wrapper before the first scientific recipe; preserve the corrected ledger authorization and baseline.
+- **Changed:** `benchmarks/six_10m_campaign.py`, seven wrapper regression tests, preflight/validation/independent/visual receipts, `docs/reports/SIX_10M_PRERUN_QUALIFICATION.md`, `docs/reviews/SIX_10M_PRERUN_INDEPENDENT_REVIEW.md`, and this progress-page realignment. The qualified native training, reader, scorer, model and immutable configs remain byte-identical.
+- **Disposition:** `SIX_PROBE_EXECUTION_WRAPPER_QUALIFIED`. Baseline 372 passed in 33.39s; final operational suite 379 passed in 34.72s. Scientific slots started: 0.
+- **Evidence:** independent reconstruction of 134,591 presentations, 305 queues, 13 saves, six evaluation maps and 396 panel IDs. Replay/storage/capped-correspondence regression tests pass. The original 63-character ledger digest mismatch and explicit correction to the actual 64-character digest are both retained. The failed non-recipe inspection helper is retained; it performed no neural work.
+- **Orchestration:** authorization complete, pre-run execution checks and step 6 eligibility/serial accelerator lane realigned without changing layout. Light/dark checks pass at 1,280px and 390px with no overflow or viewer resize. Counts retain their stated authorized-checkpoint scope until the next freeze realignment.
+- **Left undone:** campaign manifest freeze/publication, all six scientific recipes and outcome review; all final/sealed/150M/A100/H2/protocol/cloud/production work. No scientific design choice changed.

@@ -1,0 +1,38 @@
+{
+  "utc": "2026-10-06T05:11:02.633969+00:00",
+  "page_sha256": "e59ed4508f7a8c5501adf5fba13e6f23a8d9f8dd1b881aaf3f443b24f5fc5e3a",
+  "checks": [
+    {
+      "appearance": "light",
+      "viewport_width": 1280,
+      "document_scroll_width": 1280,
+      "overflow": false,
+      "visual_inspected": true
+    },
+    {
+      "appearance": "light",
+      "viewport_width": 390,
+      "document_scroll_width": 390,
+      "overflow": false,
+      "visual_inspected": true
+    },
+    {
+      "appearance": "dark",
+      "viewport_width": 1280,
+      "document_scroll_width": 1280,
+      "overflow": false,
+      "visual_inspected": true
+    },
+    {
+      "appearance": "dark",
+      "viewport_width": 390,
+      "document_scroll_width": 390,
+      "overflow": false,
+      "visual_inspected": true
+    }
+  ],
+  "phone_method": "Temporary same-origin 390px iframe in separate hidden tab; no viewer viewport override",
+  "screenshots_saved_to_disk": false,
+  "temporary_phone_tab_closed": true,
+  "disposition": "PASS"
+}

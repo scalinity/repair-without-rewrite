@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-06T05:12:17.626644+00:00",
+  "base": "7868302afc43e3cbd475464452f57912a9c2cf97",
+  "scope": "staged publication change; existing public repository",
+  "files": {
+    "ORCHESTRATION.html": "e59ed4508f7a8c5501adf5fba13e6f23a8d9f8dd1b881aaf3f443b24f5fc5e3a",
+    "benchmarks/six_10m_campaign.py": "897bf97e21aaad2d981edb4166b6617411d2ca49a3c9471ed8e1628b9700dafc",
+    "docs/LOG.md": "b99f4485b0a299c5d014a61db3e8189c3843ba0c3efe5b2c01f8c23f6f2fb039",
+    "docs/reports/SIX_10M_PRERUN_QUALIFICATION.md": "c175ac884c82946cf029ffc493ed982b5df02b7f9a5db1616795ee898dbf53a3",
+    "docs/reviews/SIX_10M_PRERUN_INDEPENDENT_REVIEW.md": "5d09dfe6bb2a83494429732aab300b9f4fa158336335dd5eddbae492d42140e7",
+    "experiments/manifests/six_10m_probes/baseline-validation.attempt01.json": "1c763f1561a6ac5fec3610502c03b12b6e9bfd95a3252bd22a4c2b81434f8c5c",
+    "experiments/manifests/six_10m_probes/orchestration-visual.attempt01.json": "926e38084921716d5ad087cb1dd2d0195a24ace8e3c8feaadfcf812ed61e77ad",
+    "experiments/manifests/six_10m_probes/preflight-helper.attempt01.json": "7cf33579eb176410d98f1e43a7e68ae6b7d55210846814f14d330d07cc26ccb8",
+    "experiments/manifests/six_10m_probes/preflight-identities.attempt01.json": "736ceb26f3872091cc715f149b36fe1ed48d1a09e26a627797e62c7eeccc12c8",
+    "experiments/manifests/six_10m_probes/preflight-identities.attempt02.json": "7ef67583379400ed173ac3c21aac031c3480101b6a6c26299c66ee6b1578d915",
+    "experiments/manifests/six_10m_probes/prerun-independent-review.attempt01.json": "73be489b7b29fb13cfed57347bcd105104e0602d078ce2b8cf5b35c958ae9fd1",
+    "experiments/manifests/six_10m_probes/prerun-independent-review.attempt02.json": "a2709e72843b53b8abce0bc6810558181f859da4b188029de7c28383c2143afd",
+    "experiments/manifests/six_10m_probes/prerun-independent-review.attempt03.json": "d552ef2fb2f9f2c37a47531431ecca4bf6a894b351e0b7a27819aa1d441161dc",
+    "experiments/manifests/six_10m_probes/prerun-validation.attempt01.json": "e3044a110195897ecbda2540f78c0e14da9309054466bfd6fc39129fb281a984",
+    "experiments/manifests/six_10m_probes/prerun-validation.attempt02.json": "c02ffeee56cd6c667d750dd4bd60fec7970b6c4ec38100bdcf606d0832653ca8",
+    "experiments/manifests/six_10m_probes/prerun-validation.attempt03.json": "e236f99dd942df1119785c7af4a7f3186256b73e99ca86f292f4b213840fb65e",
+    "experiments/manifests/six_10m_probes/prerun-validation.attempt04.json": "dab34958ded5f1326e5f04fd5d55c50fd90499705f341fd83a14488bbf20e77c",
+    "experiments/manifests/six_10m_probes/prerun-validation.attempt05.json": "362905768128742b654726976fc0ab46d56a11756d01efbacf1f3bda7547f4e2",
+    "tests/data/test_six_10m_campaign.py": "7eb740882b34067769158f6c0afd6ad5749b256a51887efcd6867b080506a160"
+  },
+  "patterns": [
+    "absolute_local_path",
+    "credential_literal",
+    "private_endpoint"
+  ],
+  "hits": [],
+  "disposition": "PASS"
+}

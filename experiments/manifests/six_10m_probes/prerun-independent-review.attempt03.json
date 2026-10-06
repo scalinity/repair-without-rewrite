@@ -1,0 +1,89 @@
+{
+  "authorized_checkpoint": "7868302afc43e3cbd475464452f57912a9c2cf97",
+  "baseline_receipt_verified": {
+    "exit_code": 0,
+    "path": "experiments/manifests/six_10m_probes/baseline-validation.attempt01.json",
+    "private_log_sha256": "da71b0e6a54d45e24d05cad1878fc8f15b64108d5c85936b8b862ef07afe20db",
+    "receipt_sha256": "1c763f1561a6ac5fec3610502c03b12b6e9bfd95a3252bd22a4c2b81434f8c5c",
+    "reviewer_reran_suite": false,
+    "tests_passed": 372
+  },
+  "checkpoint_resume_neural_reproduction_by_reviewer": "NOT_RUN_CPU_ONLY_REVIEW; native qualified resume evidence retained",
+  "disposition": "PRERUN_STATIC_REVIEW_QUALIFIED_RUNTIME_GATES_PENDING",
+  "frozen_artifact_reconstruction_receipt": "experiments/manifests/six_10m_probes/prerun-independent-review.attempt01.json",
+  "frozen_artifact_reconstruction_sha256": "73be489b7b29fb13cfed57347bcd105104e0602d078ce2b8cf5b35c958ae9fd1",
+  "independent_CPU_checks": {
+    "canonical_natural_denominators_retained_on_correspondence_cap": true,
+    "completed_generated_structural_invalid_retained": true,
+    "covered_subset_correspondence_explicit": true,
+    "no_MLX_import_or_accelerator_execution": true,
+    "nullable_whole_population_preservation_on_unavailable_correspondence": true,
+    "sparse_bad_digest_preserves_both_original_and_failed_copy": true,
+    "sparse_exact_payload_cases": 4,
+    "synthetic_summary_generated_cases": 288,
+    "synthetic_summary_natural_cases": 108,
+    "uncapped_whole_population_preservation": true
+  },
+  "initial_tensor_identity_reconstruction_by_reviewer": "NOT_RUN_CPU_ONLY_REVIEW",
+  "native_freeze_commit": "28298ad886aa321882aa0530a18421e7d4e3553e",
+  "native_source_byte_comparisons": {
+    "benchmarks/paired_qualification_v3.py": {
+      "actual_sha256": "4e483b69a62c1aa20a55ba0a157989f14be61b62f8380ea897d1dbc9cc6f0d08",
+      "native_freeze_sha256": "4e483b69a62c1aa20a55ba0a157989f14be61b62f8380ea897d1dbc9cc6f0d08"
+    },
+    "src/data/mixed_reader_v3.py": {
+      "actual_sha256": "c9e74b42cb6c6d8985649d35844963a3e7ea8e0428924a847645d2c11550ee8e",
+      "native_freeze_sha256": "c9e74b42cb6c6d8985649d35844963a3e7ea8e0428924a847645d2c11550ee8e"
+    },
+    "src/models/bc.py": {
+      "actual_sha256": "d58022e956b3adbd8d6a1c635ef9a7774efbd83aa5f8d8d65643c8f2d53be067",
+      "native_freeze_sha256": "d58022e956b3adbd8d6a1c635ef9a7774efbd83aa5f8d8d65643c8f2d53be067"
+    },
+    "src/models/core.py": {
+      "actual_sha256": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+      "native_freeze_sha256": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94"
+    },
+    "src/models/edits.py": {
+      "actual_sha256": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+      "native_freeze_sha256": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461"
+    },
+    "src/models/paired_training_v3.py": {
+      "actual_sha256": "53737be25e1a8d2210ed18f35250ffdb7b8fe66f7cd7dde3873fabd630f8f119",
+      "native_freeze_sha256": "53737be25e1a8d2210ed18f35250ffdb7b8fe66f7cd7dde3873fabd630f8f119"
+    },
+    "src/models/tokenizer.py": {
+      "actual_sha256": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+      "native_freeze_sha256": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372"
+    },
+    "src/models/training.py": {
+      "actual_sha256": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5",
+      "native_freeze_sha256": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5"
+    }
+  },
+  "remaining_gates": [
+    "Root full integrated suite after final wrapper source",
+    "Campaign freeze generation with actual seed42 initialization identities",
+    "Freeze commit/publication before recipe optimizer work",
+    "Six actual recipe checkpoint/evaluation provenance remains unrun"
+  ],
+  "resolved_prerun_wrapper_findings": [
+    "data map equality against pre-run campaign freeze",
+    "fresh reader for replay across phase transitions",
+    "restored final checkpoint receipt retained when final evaluation replays",
+    "source/Unicode/latent dependencies frozen and checked",
+    "external same-recipe resume and preserved failed-state tensors/metadata",
+    "C component diagnostics preserve native objective and report monitoring seconds separately",
+    "generated structural-invalid counts/category/view status reporting",
+    "nullable capped natural correspondence retained without dropping canonical rows"
+  ],
+  "reviewed_base_commit": "7868302afc43e3cbd475464452f57912a9c2cf97",
+  "reviewed_tests_path": "tests/data/test_six_10m_campaign.py",
+  "reviewed_tests_sha256": "7eb740882b34067769158f6c0afd6ad5749b256a51887efcd6867b080506a160",
+  "reviewed_wrapper_path": "benchmarks/six_10m_campaign.py",
+  "reviewed_wrapper_sha256": "897bf97e21aaad2d981edb4166b6617411d2ca49a3c9471ed8e1628b9700dafc",
+  "schema": "six_10m_prerun_independent_review_v2",
+  "scientific_recipe_execution_by_reviewer": 0,
+  "scientific_treatment_changed": false,
+  "unresolved_blocking_static_findings": [],
+  "utc": "2026-10-06T05:10:23.010122+00:00"
+}

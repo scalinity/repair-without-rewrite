@@ -1,0 +1,12 @@
+{
+  "source_commit": "7868302afc43e3cbd475464452f57912a9c2cf97",
+  "command": "MLX_ENABLE_TF32=0 .venv/bin/python -m pytest",
+  "python": "3.12.15",
+  "tests_passed": 372,
+  "elapsed_seconds": 33.39,
+  "exit_code": 0,
+  "private_log": "exports/six-10m-baseline.attempt01.log",
+  "log_sha256": "da71b0e6a54d45e24d05cad1878fc8f15b64108d5c85936b8b862ef07afe20db",
+  "summary": "============================= 372 passed in 33.39s =============================",
+  "disposition": "PASS"
+}
