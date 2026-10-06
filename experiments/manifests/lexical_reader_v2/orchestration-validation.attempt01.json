@@ -1,0 +1,273 @@
+{
+  "assistant_visual_review": [
+    "light/dark chart and runnable strips at desktop widths",
+    "light/dark phone chart, header wrapping and legible concentration note"
+  ],
+  "checks": [
+    {
+      "bars": 4,
+      "bg": "#F5F4F1",
+      "blocked_external_origins": [
+        "https://fonts.googleapis.com"
+      ],
+      "body": 1040,
+      "document": 1040,
+      "eligible": "2, 5, 7, 8",
+      "mechanism_control_pass": true,
+      "name": "desktop-light",
+      "page_errors": [],
+      "rubric_reset_pass": true,
+      "step3": "done",
+      "step4": "done",
+      "step5": "now",
+      "step6": "later",
+      "strips": 14,
+      "theme_control_pass": true,
+      "window": 1040
+    },
+    {
+      "bars": 4,
+      "bg": "#141311",
+      "blocked_external_origins": [
+        "https://fonts.googleapis.com"
+      ],
+      "body": 1040,
+      "document": 1040,
+      "eligible": "2, 5, 7, 8",
+      "mechanism_control_pass": true,
+      "name": "desktop-dark",
+      "page_errors": [],
+      "rubric_reset_pass": true,
+      "step3": "done",
+      "step4": "done",
+      "step5": "now",
+      "step6": "later",
+      "strips": 14,
+      "theme_control_pass": true,
+      "window": 1040
+    },
+    {
+      "bars": 4,
+      "bg": "#F5F4F1",
+      "blocked_external_origins": [
+        "https://fonts.googleapis.com"
+      ],
+      "body": 1200,
+      "document": 1200,
+      "eligible": "2, 5, 7, 8",
+      "mechanism_control_pass": true,
+      "name": "wide-light",
+      "page_errors": [],
+      "rubric_reset_pass": true,
+      "step3": "done",
+      "step4": "done",
+      "step5": "now",
+      "step6": "later",
+      "strips": 14,
+      "theme_control_pass": true,
+      "window": 1200
+    },
+    {
+      "bars": 4,
+      "bg": "#141311",
+      "blocked_external_origins": [
+        "https://fonts.googleapis.com"
+      ],
+      "body": 1200,
+      "document": 1200,
+      "eligible": "2, 5, 7, 8",
+      "mechanism_control_pass": true,
+      "name": "wide-dark",
+      "page_errors": [],
+      "rubric_reset_pass": true,
+      "step3": "done",
+      "step4": "done",
+      "step5": "now",
+      "step6": "later",
+      "strips": 14,
+      "theme_control_pass": true,
+      "window": 1200
+    },
+    {
+      "bars": 4,
+      "bg": "#F5F4F1",
+      "blocked_external_origins": [
+        "https://fonts.googleapis.com"
+      ],
+      "body": 390,
+      "document": 390,
+      "eligible": "2, 5, 7, 8",
+      "mechanism_control_pass": true,
+      "name": "phone-light",
+      "page_errors": [],
+      "rubric_reset_pass": true,
+      "step3": "done",
+      "step4": "done",
+      "step5": "now",
+      "step6": "later",
+      "strips": 14,
+      "theme_control_pass": true,
+      "window": 390
+    },
+    {
+      "bars": 4,
+      "bg": "#141311",
+      "blocked_external_origins": [
+        "https://fonts.googleapis.com"
+      ],
+      "body": 390,
+      "document": 390,
+      "eligible": "2, 5, 7, 8",
+      "mechanism_control_pass": true,
+      "name": "phone-dark",
+      "page_errors": [],
+      "rubric_reset_pass": true,
+      "step3": "done",
+      "step4": "done",
+      "step5": "now",
+      "step6": "later",
+      "strips": 14,
+      "theme_control_pass": true,
+      "window": 390
+    }
+  ],
+  "deleted_screenshot_hashes": [
+    {
+      "path": "exports/lexical-reader-v2/orchestration-validation-attempt01/desktop-light-next.png",
+      "sha256": "f13854c5a7f0f8bc773ba232747f4cb74c7f4d71f7f8b512d8e6289dece75afc"
+    },
+    {
+      "path": "exports/lexical-reader-v2/orchestration-validation-attempt01/desktop-dark-where.png",
+      "sha256": "17fcb588b7a05d4cbcc82f172f09abf147d3beb0af5631a725de1deb3d854f74"
+    },
+    {
+      "path": "exports/lexical-reader-v2/orchestration-validation-attempt01/desktop-light-where.png",
+      "sha256": "03341aa1d2f1e08f71359c037a23476534b51b581a7914e9f6d66eeca43fa63d"
+    },
+    {
+      "path": "exports/lexical-reader-v2/orchestration-validation-attempt01/desktop-dark-next.png",
+      "sha256": "42277ef32d29f017adc4ee0b07385bfc45840688aaa028f6d16e0fce4ea27664"
+    },
+    {
+      "path": "exports/lexical-reader-v2/orchestration-validation-attempt02/desktop-light-next.png",
+      "sha256": "f13854c5a7f0f8bc773ba232747f4cb74c7f4d71f7f8b512d8e6289dece75afc"
+    },
+    {
+      "path": "exports/lexical-reader-v2/orchestration-validation-attempt02/phone-dark-where.png",
+      "sha256": "f20c4c6048b2a0bb1079317e30fea79f284b3f35adc80827442c0c8912b5490c"
+    },
+    {
+      "path": "exports/lexical-reader-v2/orchestration-validation-attempt02/desktop-dark-where.png",
+      "sha256": "17fcb588b7a05d4cbcc82f172f09abf147d3beb0af5631a725de1deb3d854f74"
+    },
+    {
+      "path": "exports/lexical-reader-v2/orchestration-validation-attempt02/desktop-light-where.png",
+      "sha256": "03341aa1d2f1e08f71359c037a23476534b51b581a7914e9f6d66eeca43fa63d"
+    },
+    {
+      "path": "exports/lexical-reader-v2/orchestration-validation-attempt02/phone-light-where.png",
+      "sha256": "59d7358cfff3e5b688f48af8849b1caa93ca6c195dd4558358e94dd518111910"
+    },
+    {
+      "path": "exports/lexical-reader-v2/orchestration-validation-attempt02/desktop-dark-next.png",
+      "sha256": "42277ef32d29f017adc4ee0b07385bfc45840688aaa028f6d16e0fce4ea27664"
+    },
+    {
+      "path": "exports/lexical-reader-v2/orchestration-validation-attempt03/wide-dark-chart.png",
+      "sha256": "d7382a6b02c7b003921f7de96d107b450d738547271e4cdd57fdf463f55ad81d"
+    },
+    {
+      "path": "exports/lexical-reader-v2/orchestration-validation-attempt03/wide-light-next.png",
+      "sha256": "88d6ddb6c4fb1bd29fbe4bfe7c245e9429551268ac088c1c5b38a250f83fbcff"
+    },
+    {
+      "path": "exports/lexical-reader-v2/orchestration-validation-attempt03/wide-light-chart.png",
+      "sha256": "1e5158bd45350c5ca59daba22b433c7a07449647cdf31aee61dad01c01de2119"
+    },
+    {
+      "path": "exports/lexical-reader-v2/orchestration-validation-attempt03/wide-dark-next.png",
+      "sha256": "9f2be58d500c48060e9ff3c0d721edac4645dc604bedbc520a55ab5f3dd19a0f"
+    },
+    {
+      "path": "exports/lexical-reader-v2/orchestration-validation-attempt03/desktop-dark-chart.png",
+      "sha256": "faa852b5d212c0e20b10a9d69aa112c77e8490718c94d0ec9df78a5655560245"
+    },
+    {
+      "path": "exports/lexical-reader-v2/orchestration-validation-attempt03/phone-dark-chart.png",
+      "sha256": "a8b577b2762a3c52d3a341fdb331ad75fe74bf63eca33435dacebafb5c09fff4"
+    },
+    {
+      "path": "exports/lexical-reader-v2/orchestration-validation-attempt03/desktop-light-chart.png",
+      "sha256": "2ed44b9181dd7cf0f89910463923ce4c92689166995ab5614373ae9c4bfb7796"
+    },
+    {
+      "path": "exports/lexical-reader-v2/orchestration-validation-attempt03/phone-light-chart.png",
+      "sha256": "1e7aea68e05ad87c2c72034a33a7ab082c608f276c0d4e7e79edde3679a5b503"
+    }
+  ],
+  "final_html_sha256": "074f0140f8eeb926c439cba150abc2765a52e2290739826288993096b1d13261",
+  "headless_receipt_sha256": "f4ea7b279b6ca7decf87963f101c3454be4ab7920330bc65fd2685c7915b7b67",
+  "html_sha256": "dac69e16d68346a10deb7b05572626cea5fe262af992f0547ee4272c290bb22a",
+  "local_system_fallback_fonts_used": true,
+  "post_visual_metadata_correction": "Timeline label corrected to actual qualification commit time00:07, same-length timestamp; no layout or executable-code change",
+  "qualification_commit": "07b2ffe56f5b28cf2d3fa2668d1862d5eb98799e",
+  "remote_font_assets_blocked": true,
+  "retained_failed_attempt": {
+    "receipt_sha256": "557206d84854ccd8a85aeea11f7188f1ef68bb545deeb1c392bc0df41670670e",
+    "scope": "390px phone header overflow407px; corrected narrow-screen wordmark wrap"
+  },
+  "scientific_recipe_slots_consumed": 0,
+  "screenshots_deleted_after_review": true,
+  "status": "PASS_ORCHESTRATION_REALIGNMENT_DOM_CONTROLS_AND_VISUAL_REVIEW",
+  "watched_tab_resized": false,
+  "post_metadata_dom_checks": [
+    {
+      "colorScheme": "light",
+      "width": 1040,
+      "document": 1040,
+      "bars": 4,
+      "strips": 14,
+      "timeline": true
+    },
+    {
+      "colorScheme": "dark",
+      "width": 1040,
+      "document": 1040,
+      "bars": 4,
+      "strips": 14,
+      "timeline": true
+    },
+    {
+      "colorScheme": "light",
+      "width": 1200,
+      "document": 1200,
+      "bars": 4,
+      "strips": 14,
+      "timeline": true
+    },
+    {
+      "colorScheme": "dark",
+      "width": 1200,
+      "document": 1200,
+      "bars": 4,
+      "strips": 14,
+      "timeline": true
+    },
+    {
+      "colorScheme": "light",
+      "width": 390,
+      "document": 390,
+      "bars": 4,
+      "strips": 14,
+      "timeline": true
+    },
+    {
+      "colorScheme": "dark",
+      "width": 390,
+      "document": 390,
+      "bars": 4,
+      "strips": 14,
+      "timeline": true
+    }
+  ]
+}

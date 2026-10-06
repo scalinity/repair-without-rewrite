@@ -42,9 +42,9 @@ The approved decision and prospective amendment were recorded at `ab8fe95` befor
 
 18. **Every empirical variant lexically changes?** Yes, all 16,808 accepted variants change each affected field and satisfy `L(S)!=L(R)` and `L(S)!=L(Y)`. K=1 applies one operation and K=2 applies two operations in distinct fields. Generated token distances are separately disclosed and do not replace requested K or the natural severity estimator.
 
-19. **Realized-edit entry alarm?** No in the complete frozen 10M reader. Weight charges every applied edit by its presentation charge: 4,926,142 total; largest entry, delete `e`, is 994,303 (20.184213%). Actual BENCH also passes each arm and every segment; B largest 1,179,580/ 5,866,253 =20.107895%, C 591,840/2,926,175 =20.225715%.
+19. **Realized-edit entry alarm?** No in the complete frozen 10M reader. Weight charges every applied edit by its presentation charge: 4,926,142 total; largest entry, delete `e`, is 994,303 (20.184213%). Actual BENCH also passes each arm and every segment; B largest 1,179,580/ 5,866,253 =20.107895%, C 591,840/2,926,175 =20.225721%.
 
-20. **Realized separator-only alarm?** No in the complete frozen reader: 996,183/4,926,142 = 20.222377%. Accepted-pool counts, natural retained-table weights and whole-reader exposure are distinct denominators. Actual BENCH also passes: B 1,185,579/ 5,866,253 =20.210158%, C 590,311/2,926,175 =20.173466%; all segment alarms are false.
+20. **Realized separator-only alarm?** No in the complete frozen reader: 996,183/4,926,142 = 20.222377%. Accepted-pool counts, natural retained-table weights and whole-reader exposure are distinct denominators. Actual BENCH also passes: B 1,185,579/ 5,866,253 =20.210158%, C 590,311/2,926,175 =20.173469%; all segment alarms are false.
 
 21. **Unique complete source-only inversion?** Yes for all 42,020 accepted generated views, independently reproduced. The qualifier enumerates the entire revised public union, including zero-operation spoken preimages and off-manifest targets. Hidden intended Y selects nothing; Y is compared only after unique qualification. Maximum proposal search is 11 states, maximum accepted search three, under the fixed 500-state bound.
 

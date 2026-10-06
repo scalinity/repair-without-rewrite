@@ -1,0 +1,26 @@
+{
+  "base_commit": "07b2ffe56f5b28cf2d3fa2668d1862d5eb98799e",
+  "checked_paths": [
+    "ORCHESTRATION.html",
+    "docs/LOG.md",
+    "docs/reports/BC_10M_PROBE_ADMISSION_DECISION_V4.md",
+    "docs/reports/LEXICAL_READER_IMPLEMENTATION_SESSION_REPORT.md",
+    "docs/reports/PAIRED_COMPLETE_UPDATE_BENCH_V3.md",
+    "experiments/manifests/lexical_reader_v2/orchestration-validation.attempt01.json"
+  ],
+  "credential_or_private_identifier_hits": [],
+  "file_sha256": {
+    "ORCHESTRATION.html": "074f0140f8eeb926c439cba150abc2765a52e2290739826288993096b1d13261",
+    "docs/LOG.md": "b1c7c2e4d087bb8ab603eafc3e5e0bd864778524ae1340946c9e30de51db62b3",
+    "docs/reports/BC_10M_PROBE_ADMISSION_DECISION_V4.md": "3ae25f250fa0453884c5810e4c29506f381a43a283195d1b45f83c0696c7b87b",
+    "docs/reports/LEXICAL_READER_IMPLEMENTATION_SESSION_REPORT.md": "db14074846b9c4b1b2c10536ab5eb86e9917cc4cd998e2f2797f3e10709fe5fb",
+    "docs/reports/PAIRED_COMPLETE_UPDATE_BENCH_V3.md": "5b2323da78c424dbfbc2aaa0e42f04bedbe81a24a1c4192928bf36b94ad3fb77",
+    "experiments/manifests/lexical_reader_v2/orchestration-validation.attempt01.json": "32fd2cd0c4b868af5abd735264bae5076091cd88c88e85ea8589ffc41245ed26"
+  },
+  "final_or_sealed_inference": false,
+  "paper_protocol_v2_frozen": false,
+  "private_exports_excluded": true,
+  "probe_slots_consumed": 0,
+  "scope": "orchestration realignment, exact-fraction display corrections, append-only log and completed UI receipt; no native runtime-source changes",
+  "status": "PASS_SCOPED_PUBLICATION_SCAN"
+}

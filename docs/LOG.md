@@ -65,3 +65,16 @@ Times are local (EDT, UTC−4). Entries 1–5 were backfilled on 2026-10-05 from
 - **Failures retained:** attempt01 clock rejection gaps; attempt02 C-mid JSON reduction-order failure; independent-checker and generator failures. The current code makes all exact attempt03 gates pass without tolerance relaxation.
 - **Orchestration:** realignment follows in the next documentation commit against this qualification record, with light/dark/phone checks. The page is clean and has no other worktree checkout.
 - **Left undone:** all six actual 10M recipes, learned-quality/LR selection, final 150M/final seeds, sealed inference, protocol freeze, cloud/production changes and unrelated units 7/8. Actual scientific runs require an explicitly authorized NEW session.
+
+## 8 · 2026-10-06 00:17 · qualified orchestration realignment
+
+- **Base:** `07b2ffe` (44 commits, 40 tracked reports, 17 independent-named review records, including accepted findings). Native code remains frozen at `28298ad`.
+- **Step:** keep the public orchestration page aligned with completed admission V4.
+- **Changed:** page state, lexical-profile chart, eligibility, concurrency, measured rates/cost, source citations, history and counts; all layout sections retained. New-session authorization remains the boundary before step 6. Two C concentration displays now round the exact integer ratios to 20.225721% and 20.173469%; the immutable measurements and all admission decisions are unchanged. Session report records completed page verification.
+- **Disposition:** `AUTHORIZE_10M_BC_DEVELOPMENT_PROBES`. Six slots used: 0.
+- **Evidence:** light/dark checks at 1,040/1,200px desktop and 390px phone widths: no horizontal overflow, no page-script errors, all 14 strips and current four bars present, mechanism/rubric/theme controls pass. Visual checks used local system fallback fonts with remote assets blocked. Receipt: `experiments/manifests/lexical_reader_v2/orchestration-validation.attempt01.json`.
+- **Failure retained:** initial 390px check found 407px header overflow; narrow-screen wordmark now wraps. The failed receipt remains private. All screenshots were deleted after visual review as required.
+- **Orchestration:** realigned against the qualification commit, including all figures and runnable-work judgements. Counts cite that committed snapshot rather than this page commit itself. The historical frontier-prompt anatomy remains labelled as a completed worked example; it is not a new scientific-run instruction.
+- **Left undone:** all six scientific runs and all final/sealed/protocol/cloud/production work; stop at publication of the exact qualification checkpoint.
+
+- **Correction to entry 7:** its `00:20` label was entered incorrectly. Qualification commit `07b2ffe` records `2026-10-06T00:07:52-04:00`; the orchestration timeline now uses 00:07. The measurements, scope and disposition are unchanged.
