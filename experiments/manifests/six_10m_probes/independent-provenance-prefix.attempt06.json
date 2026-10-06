@@ -1,0 +1,199 @@
+{
+  "B6_completion_claimed": false,
+  "B6_frozen_evaluation_updates_verified": [
+    0,
+    31
+  ],
+  "B6_start_commit": "6652667557ba18944039096c3c52c58551fcf61e",
+  "B6_status": "ACTIVE_OR_PARTIAL",
+  "B_initial_state": {
+    "array_count": 525,
+    "arrays_sha256": "488d3ba292f0df45420d6920d25591b1e65c07e149c0b3fdddd4159b8bf3df82",
+    "canonical_exposure": 0,
+    "complete_sha256": "8da35220157cd15f2ebef9875b6365ece818bc8168638f96974c460629c9b3a2",
+    "last_ordinal": -1,
+    "metadata_sha256": "5ebe3bc0d7806b25e8e2287324d36d7b618de183fdd1349546f1d04fe0e921e9",
+    "optimizer_sha256": {
+      "m": "b802af61a659f72d0d32361def122bb499f82201fcd5f2d8bc5c64bd10471627",
+      "v": "75ecf1fed0d101eff29c8aa272873e877b9de2872c0167b1f1bed1581abf98fa"
+    },
+    "parameter_count": 100686336,
+    "parameter_sha256": "2739837ff4ad4ff26475dca5a37608d9c46a1c7ff34f8778f24eadb18b8e8044",
+    "path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/checkpoint-update000",
+    "reader_state_sha256": "d2900bef1ccd94a9b90f84b407e7de93364dc2ef3ddbc27d843ee1442330807d",
+    "update": 0
+  },
+  "MLX_imported": false,
+  "Torch_imported": false,
+  "accelerator_used": false,
+  "all_five_recipe_frozen_ledger_projection_rows_equal": true,
+  "all_six_terminal_outcomes_available": false,
+  "all_three_B_initial_model_optimizer_NPZ_hashes_identical": true,
+  "campaign_artifacts_changed": false,
+  "captured_at_review_start": {
+    "capture_path": "exports/storage-checks/five-recipe-prefix-capture-attempt01.json",
+    "capture_sha256": "e948ace6e74520b8fa02e8449adcd58a3039ab3ff83ab1f5bb86604e1cb6f131",
+    "capture_update": 31,
+    "captured_projection_path": "exports/storage-checks/five-recipe-prefix-attempt01.json",
+    "captured_projection_sha256": "044c3b6bf9608cf3328f3100b823a8c2514721e1795049f850dbb87021688f7d",
+    "endpoint": {
+      "canonical_exposure": 1017149,
+      "last_presentation_ordinal": 13838,
+      "last_update": 31,
+      "presentations_compared_per_recipe": 13839
+    },
+    "raw_prefixes": [
+      {
+        "observed_structure_sha256": "230457cfc11b85d46817469a020c048a89e94114dbd2e6f41c9e7780cb2c87a3",
+        "path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/updates.jsonl",
+        "prefix_update_rows": 31,
+        "raw_prefix_bytes": 16546487,
+        "raw_prefix_sha256": "f2eea52676c9d16873ac3bf78e84f486676893759f7e569b86fb6bde70006e25",
+        "recipe_id": "B100-seed42-lr1e-04"
+      },
+      {
+        "observed_structure_sha256": "5e32e2e81a09c99f10b16f81eea892ac2e800206e3de41c903afe76dae594eee",
+        "path": "exports/six-10m-probes/C101-seed42-lr1e-04/attempt01/updates.jsonl",
+        "prefix_update_rows": 31,
+        "raw_prefix_bytes": 25654754,
+        "raw_prefix_sha256": "33b5161f4855c1b0c96a134c44dbc01645bcbce5cde413ffc055aec3ae286835",
+        "recipe_id": "C101-seed42-lr1e-04"
+      },
+      {
+        "observed_structure_sha256": "511cb6091909d31092796d8971934c7822e80108c2396ae10b10a143c875332e",
+        "path": "exports/six-10m-probes/B100-seed42-lr3e-04/attempt01/updates.jsonl",
+        "prefix_update_rows": 31,
+        "raw_prefix_bytes": 16546562,
+        "raw_prefix_sha256": "d583fa1e392a3590ed3733f5a4cb951d812453286ab1786868960e29413ebe3a",
+        "recipe_id": "B100-seed42-lr3e-04"
+      },
+      {
+        "observed_structure_sha256": "1eccf05254ad06d394750640b36cb6d544108b64ff5098d4c3c2b8c5dce186c2",
+        "path": "exports/six-10m-probes/C101-seed42-lr3e-04/attempt01/updates.jsonl",
+        "prefix_update_rows": 31,
+        "raw_prefix_bytes": 25654771,
+        "raw_prefix_sha256": "62c748403c593327baf9fa8bd714abd757e908b02770c5f18e0de49d6faa8986",
+        "recipe_id": "C101-seed42-lr3e-04"
+      },
+      {
+        "observed_structure_sha256": "d89b72f7730c2abbb03cd10e4ec2681c855a819015c8dce0de7202165e745c63",
+        "path": "exports/six-10m-probes/B100-seed42-lr6e-04/attempt01/updates.jsonl",
+        "prefix_update_rows": 31,
+        "raw_prefix_bytes": 16546498,
+        "raw_prefix_sha256": "eddd13d39334b8479045ee6133573be96f0784449f81d7c710c42bf2f5e0f4e4",
+        "recipe_id": "B100-seed42-lr6e-04"
+      }
+    ],
+    "scientific_projection_sha256": "b445f62b80c21497a723c0dfa4af59a10c56440032a976c7e47622d952a8abe4"
+  },
+  "checker_path": "benchmarks/six_10m_provenance_independent.py",
+  "checker_sha256": "b07b2343be430726a50e5585683e5d9752e4c41420a8763d179865e92930ca6a",
+  "disposition": "B6_PUBLISHED_PREFIX_PROVENANCE_VERIFIED_CAMPAIGN_PENDING",
+  "evaluation_case_count_per_endpoint": 396,
+  "evaluation_panel_sha256": "5043ed60d6ce8f891ee8e30255fabaa40fcac37b0a043c1a85dd88178832ce4e",
+  "frozen_ledger_path": "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl",
+  "frozen_ledger_sha256": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f",
+  "population_counts": {
+    "generated": 288,
+    "natural": 108
+  },
+  "recorded_interruption_resumes_in_audited_receipts": 0,
+  "recorded_numerical_failures_in_audited_receipts": 0,
+  "registered_recipe_slots": 6,
+  "reviewed_later_published_prefix": {
+    "canonical_exposure": 3018478,
+    "first_update": 1,
+    "last_presentation_ordinal": 41095,
+    "last_update": 92,
+    "presentations_compared_per_recipe": 41096,
+    "raw_prefixes": [
+      {
+        "observed_structure_sha256": "d4caefadce1dcab242c43b0125981e73fc5c47d7680621f1b6bbe7c3d85266fa",
+        "path": "exports/six-10m-probes/B100-seed42-lr1e-04/attempt01/updates.jsonl",
+        "prefix_update_rows": 92,
+        "raw_prefix_bytes": 49154789,
+        "raw_prefix_sha256": "d14c6a89103fa4963006153d4f7664f62f7281818d81c8362000b54b9fd6dabd",
+        "recipe_id": "B100-seed42-lr1e-04"
+      },
+      {
+        "observed_structure_sha256": "40764a65c87c9e88e6e2e05f2613c56cc51353ad6b133276900e33ca9758c515",
+        "path": "exports/six-10m-probes/C101-seed42-lr1e-04/attempt01/updates.jsonl",
+        "prefix_update_rows": 92,
+        "raw_prefix_bytes": 76172778,
+        "raw_prefix_sha256": "4bd6f81e84a3aa5a260c35dd4941f9dff612776096e1a7e8dbc604172faaeeab",
+        "recipe_id": "C101-seed42-lr1e-04"
+      },
+      {
+        "observed_structure_sha256": "b7c734b3cd75d3b6960caed5b3105fd2ab3529dda3da91ba034023ecd7f31f39",
+        "path": "exports/six-10m-probes/B100-seed42-lr3e-04/attempt01/updates.jsonl",
+        "prefix_update_rows": 92,
+        "raw_prefix_bytes": 49154918,
+        "raw_prefix_sha256": "64ece93fea567bd3dc311f1386714f583dbdd888739faecc755298749c64f94b",
+        "recipe_id": "B100-seed42-lr3e-04"
+      },
+      {
+        "observed_structure_sha256": "6dbb4dce3ec06ad47eca6e36487e3ad5994d6190fbdfcc5d4534884bc666da6e",
+        "path": "exports/six-10m-probes/C101-seed42-lr3e-04/attempt01/updates.jsonl",
+        "prefix_update_rows": 92,
+        "raw_prefix_bytes": 76172808,
+        "raw_prefix_sha256": "59a942bf591a744d44a104ec281d496cc566383adf33a22532b034b18b5d25f2",
+        "recipe_id": "C101-seed42-lr3e-04"
+      },
+      {
+        "observed_structure_sha256": "2a176891605f6981b9463f532438bff344248486fbeace4ca7484e664989a9e2",
+        "path": "exports/six-10m-probes/B100-seed42-lr6e-04/attempt01/updates.jsonl",
+        "prefix_update_rows": 92,
+        "raw_prefix_bytes": 49154773,
+        "raw_prefix_sha256": "876969917970bb72b6e73ce996523ba4fb892d286915ce874e4e2ddbd976a718",
+        "recipe_id": "B100-seed42-lr6e-04"
+      }
+    ],
+    "scientific_projection_sha256": "0587e94926f4bb4062ae09dfb04b7723c487f69b8974a3c45deec6971ff66c14"
+  },
+  "schema": "six10m_five_recipe_published_prefix_binding_v1",
+  "scientific_projection_encoding": "one compact sort_keys JSON object plus newline per consumed presentation; UTF-8",
+  "scientific_projection_fields": [
+    "presentation_id",
+    "variant_id",
+    "canonical_charge",
+    "channel",
+    "phase",
+    "source_sha256",
+    "target_sha256",
+    "anchor_sha256",
+    "cumulative_canonical_exposure"
+  ],
+  "scope": "Initial captured31 proof retained separately; later published92 checkpoint prefix audited by unchanged checker; active suffix and final selection excluded",
+  "shared_checkpoint_cursors": [
+    {
+      "canonical_exposure": 0,
+      "last_ordinal": -1,
+      "reader_state_sha256": "d2900bef1ccd94a9b90f84b407e7de93364dc2ef3ddbc27d843ee1442330807d",
+      "update": 0
+    },
+    {
+      "canonical_exposure": 1017149,
+      "last_ordinal": 13838,
+      "reader_state_sha256": "ca6480525192cf1318b9e4bce6a7ac37d28665f905951d28106211a47c22cafd",
+      "update": 31
+    },
+    {
+      "canonical_exposure": 2001130,
+      "last_ordinal": 27230,
+      "reader_state_sha256": "da3aa4fc50bb66c97addc81136710f1c3f97df5ec8e8ae90144cbbece7d82148",
+      "update": 61
+    },
+    {
+      "canonical_exposure": 3018478,
+      "last_ordinal": 41095,
+      "reader_state_sha256": "bba81faf93713cdb78d9589e19c1c60932462050e5fe81048042070dd6fcc1f1",
+      "update": 92
+    }
+  ],
+  "slots_started": 5,
+  "source_config_checker_changed": false,
+  "source_review_path": "experiments/manifests/six_10m_probes/independent-provenance.attempt10.json",
+  "source_review_sha256": "7f29fa0abf9270301a523cb6557ae66f7b5e432f0e36a40813044b8b4ad59fd9",
+  "terminal_outcomes": 4,
+  "utc": "2026-10-06T10:27:41.922893+00:00"
+}

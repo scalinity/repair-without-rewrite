@@ -1,0 +1,4311 @@
+{
+  "accelerator_runtime_imported": false,
+  "actual_campaign_selection_generated": false,
+  "actual_canonical_exposure": 10007223,
+  "all_presentations_and_B_target_EOS_denominators_reconstructed": true,
+  "calibration_consumption_receipt_sha256": "14380ba7af99b4e7e39792595fdb2086ef86ee31374110927a440458513f8454",
+  "calibration_frozen_endpoint_uses": 30,
+  "calibration_neural_case_evaluations": 2880,
+  "calibration_unique_rows": 96,
+  "campaign_progress_receipt_sha256": "2bac01909804735d0306c16359e1394bc5a1f85e7a683276228c65b9d29c8ee1",
+  "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+  "checkpoint_save_reconstructions": [
+    {
+      "checkpoint_complete_sha256": "50b5602e47ac2f8f27ba547decc8ee07a3171bc2864ea68e44f222f027d11919",
+      "endpoint": {
+        "canonical_exposure": 0,
+        "last_ordinal": -1,
+        "nominal": 0,
+        "update": 0
+      },
+      "metadata_sha256": "b9390f384fe249aacbc15a5e01e7c5d3abbe071b5e1799480888b4de1217bf79",
+      "optimizer_identity_receipt": {
+        "m": "b802af61a659f72d0d32361def122bb499f82201fcd5f2d8bc5c64bd10471627",
+        "v": "75ecf1fed0d101eff29c8aa272873e877b9de2872c0167b1f1bed1581abf98fa"
+      },
+      "parameter_identity_receipt": "2739837ff4ad4ff26475dca5a37608d9c46a1c7ff34f8778f24eadb18b8e8044"
+    },
+    {
+      "checkpoint_complete_sha256": "1e774eb8eb83b0ae0e7ebd563fbc1ddbc8c0f9b42bded2d4fbed6c92759bafce",
+      "endpoint": {
+        "canonical_exposure": 1017149,
+        "last_ordinal": 13838,
+        "nominal": 1000000,
+        "update": 31
+      },
+      "metadata_sha256": "6c848eb4ec6db6d6545c155878a09c02cbbe8a9648df111dcd6643ba71034cff",
+      "optimizer_identity_receipt": {
+        "m": "ef764caab8a896c0bd368bf07a73c0a236c58e18541ba32726d1fa438e1cd844",
+        "v": "31da7f12cd08fb62c39f271567eca12b7d0b8fa284529d49b60b9fa1546f6ae4"
+      },
+      "parameter_identity_receipt": "136d56f4ecfeb3c3693b445c9486b6504c28b35c7ce6f835e9288167409ede5d"
+    },
+    {
+      "checkpoint_complete_sha256": "5c08172134024dfd34b6277f89273aa32dd0c9d8cbecaa214fa65b035a5427ca",
+      "endpoint": {
+        "canonical_exposure": 2001130,
+        "last_ordinal": 27230,
+        "nominal": 2000000,
+        "update": 61
+      },
+      "metadata_sha256": "40cded837c67f6995e6181bad15e679c120d4dc053126795a3f8265c4c384a51",
+      "optimizer_identity_receipt": {
+        "m": "203c3befa3d542b3b7ccb2c2987c574998c74b771a9bb13d809fe4ea3420760f",
+        "v": "1d7087c49d4af71f8a54922f6be28977897d164c7f1094c2fd85692700d79964"
+      },
+      "parameter_identity_receipt": "9dffef62ff14463b0ee90287a5d69ad0c78a9ce7d6e8f77baee2181e87b59337"
+    },
+    {
+      "checkpoint_complete_sha256": "fe97d693bd359e4dc474eaf7587ed8d7ce0aedd53aaf3d5b451dbf74c3e4cf95",
+      "endpoint": {
+        "canonical_exposure": 3018478,
+        "last_ordinal": 41095,
+        "nominal": 3000000,
+        "update": 92
+      },
+      "metadata_sha256": "ca0f1cb1f612e149aba95e57a36f0df36e4b900703b24735ec556b7e7ccd32ce",
+      "optimizer_identity_receipt": {
+        "m": "00a90cd363fc07a025fb0c6a71ea429d2958b8eb06d9efb74dcaa982ce33f1eb",
+        "v": "f4e817dbaaed905439bb1fcda1cfeb1e686f8e087bb250ff6fa7dbe3e31bcff0"
+      },
+      "parameter_identity_receipt": "9d169d050d68557462fbb7ee8a85f2272eca4b5feb1e8c7d79f130023d45c319"
+    },
+    {
+      "checkpoint_complete_sha256": "3caa04faa91f6a8413813408452950f886c07ef1e246f8754646dd3947cc2232",
+      "endpoint": {
+        "canonical_exposure": 4002553,
+        "last_ordinal": 54485,
+        "nominal": 4000000,
+        "update": 122
+      },
+      "metadata_sha256": "997e45273273b2706906d97d31336361c7b18aa5975e63c51081c0c51e5e448e",
+      "optimizer_identity_receipt": {
+        "m": "3fdbeeee75d90e08ea1fb256e068361276948798797268919c4c68d65cdd00b4",
+        "v": "78cdfda7535b1e0b78283b839f75b9734a3b1ed6c4e1b0c3f166c561960897bc"
+      },
+      "parameter_identity_receipt": "5d8d39eede2e8386e95e3e2a9ca6ee9cc441601c4c4e70141a3284e58dca9a68"
+    },
+    {
+      "checkpoint_complete_sha256": "ec843cd810620fb6ab70c8215d7bb252be25379a5e049d55711f2064b887223a",
+      "endpoint": {
+        "canonical_exposure": 5019821,
+        "last_ordinal": 68330,
+        "nominal": 5000000,
+        "update": 153
+      },
+      "metadata_sha256": "36d087af5219927f1bb9742774d505fd1800b76f02ef79499d372d21953ec796",
+      "optimizer_identity_receipt": {
+        "m": "ad670a82e8f4750451ede457915110868e00a75f97560ae0b7c105d6860efec7",
+        "v": "c9942300d9a0f3aa3147e0bf37f770c5b2b53410c0c41ceaacb8af60a5cf7ed4"
+      },
+      "parameter_identity_receipt": "dda8a5d2658e70f8c1a9f164f6bdb21e352b816103c8f4dce67d44720af71c49"
+    },
+    {
+      "checkpoint_complete_sha256": "1abf239cee485ffad4b6327473902593bec6f0676e4aaab2f94d34013cd91965",
+      "endpoint": {
+        "canonical_exposure": 6004173,
+        "last_ordinal": 81721,
+        "nominal": 6000000,
+        "update": 183
+      },
+      "metadata_sha256": "a3936ddf7bde6f4320a592b3e956e9062105e0ca137e44302222803e260d99a4",
+      "optimizer_identity_receipt": {
+        "m": "34cf8157c3a03465772d57481ddff7f7795493b775c190049e837b9fbd7c98d5",
+        "v": "1e17d6ccedde3a57d3ef0e68b4a2e10eaf415c23f0c80cce872f3d4d10691a22"
+      },
+      "parameter_identity_receipt": "3af94797e100591930fc308f9fa601c7de3d4e6739328ed76f96fc57936d9bcc"
+    },
+    {
+      "checkpoint_complete_sha256": "4b2d3b77f227689ec0c57e12f57c8157252ef82cc1d292170a62fc572d04356f",
+      "endpoint": {
+        "canonical_exposure": 6693230,
+        "last_ordinal": 91100,
+        "nominal": 6666667,
+        "update": 204
+      },
+      "metadata_sha256": "c9f5b361a0272a0590ac41f8ddf10f5f4d2419c464aeaba13493921f63559cf4",
+      "optimizer_identity_receipt": {
+        "m": "e3801027cd070b44483e7ecb4e636840df3396ecca8c2d3a93bd20132097aacc",
+        "v": "d6bf2f3b91601af58c93d437bff5c01cf7fb17837da81a16c81d393f06938db9"
+      },
+      "parameter_identity_receipt": "2f7f5bd8a98f9e732d3b58092d0a2769bd185da611a87439235d46779ee24414"
+    },
+    {
+      "checkpoint_complete_sha256": "41e42cc1f0401cb811c59324adaf75858d36895ddc9d799d6838c5396c88d2d2",
+      "endpoint": {
+        "canonical_exposure": 7021296,
+        "last_ordinal": 95556,
+        "nominal": 7000000,
+        "update": 214
+      },
+      "metadata_sha256": "1fafe372779b20277731474c28c27da7daa89dee8617190e3ca3940ff916fbfe",
+      "optimizer_identity_receipt": {
+        "m": "5beb8a08f13371c5f0d067ad3a0c15c54fa686d413882aea75ff6a06423fcb5f",
+        "v": "c1410ca02158f73db26631847838fef8030af068c621904626295857a0304981"
+      },
+      "parameter_identity_receipt": "f2ab23d62ccae5fee71cde77fffe1c7e4bc5535a4f7c6b8fa726262dfa079460"
+    },
+    {
+      "checkpoint_complete_sha256": "347a43628d2c56ebe1433ad358356ce75a8806f4bb33d047c253db72e570f81b",
+      "endpoint": {
+        "canonical_exposure": 8005412,
+        "last_ordinal": 108974,
+        "nominal": 8000000,
+        "update": 244
+      },
+      "metadata_sha256": "10538cb09ec5c295efa86fc43449e4155003f1728575383f78b5d6a5ddd7602d",
+      "optimizer_identity_receipt": {
+        "m": "9915f88bd4f51c54d43377a38bae39d0ee67728fcfb5e0be029180cb18cdeb9b",
+        "v": "1aa5fb0a4776184dc58f31a42a7e649e7b061e68aa2e226190ca86e2225bea84"
+      },
+      "parameter_identity_receipt": "a3a8e56dcb13710a65949a440050240732f9d72d77c37e0289d54d9f1168dcb1"
+    },
+    {
+      "checkpoint_complete_sha256": "49f1011f67c57638694920c561ed164fbe98c9811142fe7f33f08f45f9c3b076",
+      "endpoint": {
+        "canonical_exposure": 9022609,
+        "last_ordinal": 122797,
+        "nominal": 9000000,
+        "update": 275
+      },
+      "metadata_sha256": "28cff00cdc449952e2d0db549482d116b32649cc134b6588daa9775c447c7b0c",
+      "optimizer_identity_receipt": {
+        "m": "b3440a5145369fad64825bb9670752f260a242cfe98e5941c44abbcd3be2bc26",
+        "v": "b45420c8ac218f8693b858a11107b7ee416597f8e1846ba8bf27e127f64e97b5"
+      },
+      "parameter_identity_receipt": "2bc6ab65d26372c705d227525478c73b0ad3e8acbeab849ec218e8355d68c100"
+    },
+    {
+      "checkpoint_complete_sha256": "de7605146077c60c3fd3892029d43387a3b8782db3951caedbfaf8e164a8f5cb",
+      "endpoint": {
+        "canonical_exposure": 9350642,
+        "last_ordinal": 127234,
+        "nominal": 9333334,
+        "update": 285
+      },
+      "metadata_sha256": "af2351ff00ad4dea0805471d2a4eeb40dcfe319bded257e46d7064705016b960",
+      "optimizer_identity_receipt": {
+        "m": "dd236afe81cfe6fbadc40c2d7024aaf95e331396e6adf63fd97f9306a66aa865",
+        "v": "d572987aedeca9e722a52189fbdf9e67dbfecf5da469af858b40251d182b82ed"
+      },
+      "parameter_identity_receipt": "bec22f0ccfcfb825dcf338a4b9960d84c01aa12da803a9701059902a5f85c0c4"
+    },
+    {
+      "checkpoint_complete_sha256": "7230be8c253a9d7007c1df3ac9cb7889a4c9e2cb58782935f8da86591c27ce58",
+      "endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "metadata_sha256": "3bc83adf6e27800429fdf1a587dfdec2a1e1ae62e8e515f6f9d9902d542b16aa",
+      "optimizer_identity_receipt": {
+        "m": "67dbc3d5d49d0b3e54886602c78b2f6e67f2c0aaf1e5865718455bcaf5e1b325",
+        "v": "85d217bd2fc7b3246091af9eda6bef207680b1d0e61adc710732dffe703268c0"
+      },
+      "parameter_identity_receipt": "f76f3542fc688eac39669c4ef5f8e4b11ce440296728edbcc38f5e9775e93cfa"
+    }
+  ],
+  "claim_kind": "MEASURED RESULT",
+  "cpu_only": true,
+  "curves": [
+    {
+      "LR_independent_formula_result": null,
+      "endpoint": {
+        "canonical_exposure": 0,
+        "last_ordinal": -1,
+        "nominal": 0,
+        "update": 0
+      },
+      "evaluation_receipt_path": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr6e-04-update000.attempt01.json",
+      "evaluation_receipt_sha256": "317780fa3916287482b82dd14e8d5414f8580f075593d6404759375ae34864c7",
+      "generated": {
+        "by_category_view": {
+          "identifiers:clean_preservation": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          },
+          "identifiers:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          },
+          "identifiers:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          },
+          "multiple_bindings:clean_preservation": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          },
+          "multiple_bindings:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          },
+          "multiple_bindings:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          },
+          "negation:clean_preservation": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          },
+          "negation:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          },
+          "negation:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          },
+          "paths:clean_preservation": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          },
+          "paths:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          },
+          "paths:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          },
+          "repeated_literals:clean_preservation": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          },
+          "repeated_literals:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          },
+          "repeated_literals:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          },
+          "signs_numerical:clean_preservation": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          },
+          "signs_numerical:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          },
+          "signs_numerical:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          },
+          "units_quantities:clean_preservation": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 11,
+              "invalid_byte_decoding": 1
+            }
+          },
+          "units_quantities:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          },
+          "units_quantities:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 11,
+              "invalid_byte_decoding": 1
+            }
+          },
+          "versions:clean_preservation": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          },
+          "versions:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 9,
+              "invalid_byte_decoding": 3
+            }
+          },
+          "versions:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 12
+            }
+          }
+        },
+        "by_view": {
+          "clean_preservation": {
+            "cases": 96,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 96,
+            "preserve_denominator": 192,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 95,
+              "invalid_byte_decoding": 1
+            }
+          },
+          "mixed_repair_preservation": {
+            "cases": 96,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 96,
+            "preserve_denominator": 96,
+            "preserved_fields": 0,
+            "repair_denominator": 96,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 93,
+              "invalid_byte_decoding": 3
+            }
+          },
+          "uniquely_recoverable_repair": {
+            "cases": 96,
+            "complete": 0,
+            "conformant": 0,
+            "invalid_or_incomplete": 96,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 192,
+            "repaired_fields": 0,
+            "status_counts": {
+              "capped": 95,
+              "invalid_byte_decoding": 1
+            }
+          }
+        },
+        "cases": 288,
+        "complete": 0,
+        "decoder_invalid_or_incomplete": 288,
+        "invalid_or_incomplete": 288,
+        "mixed_success": 0,
+        "required_repair_cases_completed": 0,
+        "required_repair_fields_completed": 0,
+        "structure_invalid": 288,
+        "whole_case_conformance": 0
+      },
+      "independent_population_counts": {
+        "generated": 288,
+        "natural": 108
+      },
+      "independent_receipt_path": "experiments/manifests/six_10m_probes/independent-metrics.attempt28.json",
+      "independent_receipt_sha256": "8e20d247bcc4778bfbc3c1a3ca4d5f068d06d6d9c0d508593a831ef91d000a58",
+      "natural": {
+        "RAW_WER": 0.028193832599118944,
+        "completed_repair": [
+          0,
+          0
+        ],
+        "completed_repair_rate": [
+          0.0,
+          0.0
+        ],
+        "introduced": [
+          21719,
+          21719
+        ],
+        "introduced_rate": [
+          9.56784140969163,
+          9.56784140969163
+        ],
+        "introduced_width": 0,
+        "invalid_or_incomplete": 108,
+        "output_errors": 21781,
+        "reference_words": 2270,
+        "repair": [
+          2,
+          2
+        ],
+        "repair_support_source_groups_lower": [],
+        "repair_support_source_groups_upper": [],
+        "repair_width": 0,
+        "scorer_caps": 0,
+        "source_byte_identity": 0,
+        "source_correct_counts": 2210,
+        "source_correct_damage_bounds": [
+          2200,
+          2200
+        ],
+        "source_correct_preservation_coverage": {
+          "covered_cases": 108,
+          "covered_correct_counts": 2210,
+          "covered_damage_bounds": [
+            2200,
+            2200
+          ],
+          "covered_preserved_bounds": [
+            10,
+            10
+          ],
+          "unavailable_cases": 0
+        },
+        "source_correct_preserved_bounds": [
+          10,
+          10
+        ],
+        "source_errors": 64,
+        "source_lexical_identity": 0,
+        "status_counts": {
+          "capped": 105,
+          "invalid_byte_decoding": 3
+        },
+        "target_byte_exact": 0,
+        "target_lexical_exact": 0,
+        "wer": 9.595154185022027
+      },
+      "output_burden": {
+        "by_population": {
+          "generated": {
+            "alignment_status_counts": {
+              "exact_point": 288
+            },
+            "cases": 288,
+            "decoder_positions": {
+              "count": 288,
+              "maximum": 256,
+              "median": 256.0,
+              "minimum": 256,
+              "sum": 73728
+            },
+            "decoder_status_counts": {
+              "capped": 283,
+              "invalid_byte_decoding": 5
+            },
+            "empty_string_outputs": 0,
+            "introduced_bound_ambiguous_cases": 0,
+            "lexically_empty_outputs": 6,
+            "missing_outputs": 5,
+            "output_words": {
+              "count": 288,
+              "maximum": 768,
+              "median": 256.0,
+              "minimum": 0,
+              "sum": 78370
+            },
+            "reference_words": {
+              "count": 288,
+              "maximum": 32,
+              "median": 15.0,
+              "minimum": 8,
+              "sum": 4896
+            },
+            "repair_bound_ambiguous_cases": 0,
+            "returned_token_ids_excluding_EOS": {
+              "count": 288,
+              "maximum": 256,
+              "median": 256.0,
+              "minimum": 256,
+              "sum": 73728
+            },
+            "scoring_status_counts": {
+              "completed": 288
+            },
+            "source_output_word_distance": {
+              "count": 288,
+              "maximum": 768,
+              "median": 256.0,
+              "minimum": 9,
+              "sum": 80125
+            },
+            "source_words": {
+              "count": 288,
+              "maximum": 37,
+              "median": 15.5,
+              "minimum": 8,
+              "sum": 5076
+            }
+          },
+          "natural": {
+            "alignment_status_counts": {
+              "exact_point": 108
+            },
+            "cases": 108,
+            "decoder_positions": {
+              "count": 108,
+              "maximum": 256,
+              "median": 256.0,
+              "minimum": 256,
+              "sum": 27648
+            },
+            "decoder_status_counts": {
+              "capped": 105,
+              "invalid_byte_decoding": 3
+            },
+            "empty_string_outputs": 0,
+            "introduced_bound_ambiguous_cases": 0,
+            "lexically_empty_outputs": 3,
+            "missing_outputs": 3,
+            "output_words": {
+              "count": 108,
+              "maximum": 768,
+              "median": 256.0,
+              "minimum": 0,
+              "sum": 20769
+            },
+            "reference_words": {
+              "count": 108,
+              "maximum": 37,
+              "median": 22.0,
+              "minimum": 3,
+              "sum": 2270
+            },
+            "repair_bound_ambiguous_cases": 0,
+            "returned_token_ids_excluding_EOS": {
+              "count": 108,
+              "maximum": 256,
+              "median": 256.0,
+              "minimum": 256,
+              "sum": 27648
+            },
+            "scoring_status_counts": {
+              "completed": 108
+            },
+            "source_output_word_distance": {
+              "count": 108,
+              "maximum": 768,
+              "median": 256.0,
+              "minimum": 3,
+              "sum": 21776
+            },
+            "source_words": {
+              "count": 108,
+              "maximum": 37,
+              "median": 22.0,
+              "minimum": 3,
+              "sum": 2266
+            }
+          }
+        },
+        "output_path": "exports/six-10m-probes/B100-seed42-lr6e-04/attempt01/evaluation-update000.jsonl",
+        "output_sha256": "5cfa42c84b971b6fc6c0a0fa87b9be8d2f9e31f6d07f3dc3e699bc122fd1de7a"
+      },
+      "output_sha256": "5cfa42c84b971b6fc6c0a0fa87b9be8d2f9e31f6d07f3dc3e699bc122fd1de7a",
+      "recipe_id": "B100-seed42-lr6e-04",
+      "resources": {
+        "by_population": {
+          "generated": {
+            "decode_seconds": 322.73559208685765,
+            "positions": 73728
+          },
+          "natural": {
+            "decode_seconds": 118.90369000192732,
+            "positions": 27648
+          }
+        },
+        "decode_seconds": 441.63928208878497,
+        "decoder_positions": 101376,
+        "scorer_seconds": 41.61245133695775
+      },
+      "training": null
+    },
+    {
+      "LR_independent_formula_result": 0.0005907891648238318,
+      "endpoint": {
+        "canonical_exposure": 1017149,
+        "last_ordinal": 13838,
+        "nominal": 1000000,
+        "update": 31
+      },
+      "evaluation_receipt_path": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr6e-04-update031.attempt01.json",
+      "evaluation_receipt_sha256": "c96143fd8ea85786b535a3681af3a8fbc75912c859f3bc2c30015823f77a2481",
+      "generated": {
+        "by_category_view": {
+          "identifiers:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "identifiers:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "identifiers:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "multiple_bindings:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "multiple_bindings:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "multiple_bindings:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "negation:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "negation:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "negation:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "paths:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "paths:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "paths:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "repeated_literals:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "repeated_literals:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "repeated_literals:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "signs_numerical:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "signs_numerical:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "signs_numerical:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "units_quantities:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "units_quantities:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "units_quantities:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "versions:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "versions:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "versions:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          }
+        },
+        "by_view": {
+          "clean_preservation": {
+            "cases": 96,
+            "complete": 96,
+            "conformant": 0,
+            "invalid_or_incomplete": 96,
+            "preserve_denominator": 192,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 96
+            }
+          },
+          "mixed_repair_preservation": {
+            "cases": 96,
+            "complete": 96,
+            "conformant": 0,
+            "invalid_or_incomplete": 96,
+            "preserve_denominator": 96,
+            "preserved_fields": 0,
+            "repair_denominator": 96,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 96
+            }
+          },
+          "uniquely_recoverable_repair": {
+            "cases": 96,
+            "complete": 96,
+            "conformant": 0,
+            "invalid_or_incomplete": 96,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 192,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 96
+            }
+          }
+        },
+        "cases": 288,
+        "complete": 288,
+        "decoder_invalid_or_incomplete": 0,
+        "invalid_or_incomplete": 288,
+        "mixed_success": 0,
+        "required_repair_cases_completed": 0,
+        "required_repair_fields_completed": 0,
+        "structure_invalid": 288,
+        "whole_case_conformance": 0
+      },
+      "independent_population_counts": {
+        "generated": 288,
+        "natural": 108
+      },
+      "independent_receipt_path": "experiments/manifests/six_10m_probes/independent-metrics.attempt29.json",
+      "independent_receipt_sha256": "6a1f3c8a63968aeabfb607665f29ff1b3622a388649c68533cc143377949cce5",
+      "natural": {
+        "RAW_WER": 0.028193832599118944,
+        "completed_repair": [
+          6,
+          6
+        ],
+        "completed_repair_rate": [
+          0.09375,
+          0.09375
+        ],
+        "introduced": [
+          2284,
+          2284
+        ],
+        "introduced_rate": [
+          1.0061674008810573,
+          1.0061674008810573
+        ],
+        "introduced_width": 0,
+        "invalid_or_incomplete": 0,
+        "output_errors": 2342,
+        "reference_words": 2270,
+        "repair": [
+          6,
+          6
+        ],
+        "repair_support_source_groups_lower": [
+          "22eb01a46f3dbcde6014312334e2a5a04ab816f606c8eb3d40bb574a9f4cfeb1",
+          "5a91d5a57328d6a41d63a67601712b7bdb0f0c63dadeac014bd1a851d70931cb",
+          "8188226b16cbc861701cf405848f6c986e16d3b5ff29c78873574f8f8fab27a0",
+          "91fbac4c4a94a7818d524118ab900bc03cde1c0e51444410681b2ea217e6c519"
+        ],
+        "repair_support_source_groups_upper": [
+          "22eb01a46f3dbcde6014312334e2a5a04ab816f606c8eb3d40bb574a9f4cfeb1",
+          "5a91d5a57328d6a41d63a67601712b7bdb0f0c63dadeac014bd1a851d70931cb",
+          "8188226b16cbc861701cf405848f6c986e16d3b5ff29c78873574f8f8fab27a0",
+          "91fbac4c4a94a7818d524118ab900bc03cde1c0e51444410681b2ea217e6c519"
+        ],
+        "repair_width": 0,
+        "scorer_caps": 0,
+        "source_byte_identity": 0,
+        "source_correct_counts": 2210,
+        "source_correct_damage_bounds": [
+          2206,
+          2207
+        ],
+        "source_correct_preservation_coverage": {
+          "covered_cases": 108,
+          "covered_correct_counts": 2210,
+          "covered_damage_bounds": [
+            2206,
+            2207
+          ],
+          "covered_preserved_bounds": [
+            3,
+            4
+          ],
+          "unavailable_cases": 0
+        },
+        "source_correct_preserved_bounds": [
+          3,
+          4
+        ],
+        "source_errors": 64,
+        "source_lexical_identity": 0,
+        "status_counts": {
+          "completed": 108
+        },
+        "target_byte_exact": 0,
+        "target_lexical_exact": 0,
+        "wer": 1.0317180616740087
+      },
+      "output_burden": {
+        "by_population": {
+          "generated": {
+            "alignment_status_counts": {
+              "exact_point": 288
+            },
+            "cases": 288,
+            "decoder_positions": {
+              "count": 288,
+              "maximum": 56,
+              "median": 40.0,
+              "minimum": 20,
+              "sum": 10997
+            },
+            "decoder_status_counts": {
+              "completed": 288
+            },
+            "empty_string_outputs": 0,
+            "introduced_bound_ambiguous_cases": 0,
+            "lexically_empty_outputs": 0,
+            "missing_outputs": 0,
+            "output_words": {
+              "count": 288,
+              "maximum": 29,
+              "median": 15.0,
+              "minimum": 7,
+              "sum": 4162
+            },
+            "reference_words": {
+              "count": 288,
+              "maximum": 32,
+              "median": 15.0,
+              "minimum": 8,
+              "sum": 4896
+            },
+            "repair_bound_ambiguous_cases": 0,
+            "returned_token_ids_excluding_EOS": {
+              "count": 288,
+              "maximum": 55,
+              "median": 39.0,
+              "minimum": 19,
+              "sum": 10709
+            },
+            "scoring_status_counts": {
+              "completed": 288
+            },
+            "source_output_word_distance": {
+              "count": 288,
+              "maximum": 30,
+              "median": 12.0,
+              "minimum": 4,
+              "sum": 3851
+            },
+            "source_words": {
+              "count": 288,
+              "maximum": 37,
+              "median": 15.5,
+              "minimum": 8,
+              "sum": 5076
+            }
+          },
+          "natural": {
+            "alignment_status_counts": {
+              "exact_point": 108
+            },
+            "cases": 108,
+            "decoder_positions": {
+              "count": 108,
+              "maximum": 44,
+              "median": 22.0,
+              "minimum": 10,
+              "sum": 2695
+            },
+            "decoder_status_counts": {
+              "completed": 108
+            },
+            "empty_string_outputs": 0,
+            "introduced_bound_ambiguous_cases": 0,
+            "lexically_empty_outputs": 0,
+            "missing_outputs": 0,
+            "output_words": {
+              "count": 108,
+              "maximum": 21,
+              "median": 9.0,
+              "minimum": 6,
+              "sum": 1085
+            },
+            "reference_words": {
+              "count": 108,
+              "maximum": 37,
+              "median": 22.0,
+              "minimum": 3,
+              "sum": 2270
+            },
+            "repair_bound_ambiguous_cases": 0,
+            "returned_token_ids_excluding_EOS": {
+              "count": 108,
+              "maximum": 43,
+              "median": 21.0,
+              "minimum": 9,
+              "sum": 2587
+            },
+            "scoring_status_counts": {
+              "completed": 108
+            },
+            "source_output_word_distance": {
+              "count": 108,
+              "maximum": 37,
+              "median": 22.0,
+              "minimum": 6,
+              "sum": 2340
+            },
+            "source_words": {
+              "count": 108,
+              "maximum": 37,
+              "median": 22.0,
+              "minimum": 3,
+              "sum": 2266
+            }
+          }
+        },
+        "output_path": "exports/six-10m-probes/B100-seed42-lr6e-04/attempt01/evaluation-update031.jsonl",
+        "output_sha256": "2a9670f81f73495c784b3b90c892d9c9a3deed41d72bc1b4d33b05010f46f23e"
+      },
+      "output_sha256": "2a9670f81f73495c784b3b90c892d9c9a3deed41d72bc1b4d33b05010f46f23e",
+      "recipe_id": "B100-seed42-lr6e-04",
+      "resources": {
+        "by_population": {
+          "generated": {
+            "decode_seconds": 48.764218614116544,
+            "positions": 10997
+          },
+          "natural": {
+            "decode_seconds": 12.252310962852789,
+            "positions": 2695
+          }
+        },
+        "decode_seconds": 61.01652957696933,
+        "decoder_positions": 13692,
+        "scorer_seconds": 1.2079359582567122
+      },
+      "training": {
+        "MLX_peak_bytes": 3406053478,
+        "accumulation_seconds": 0.15789041595417075,
+        "arm": "B100",
+        "canonical_charge": 32810,
+        "committed_canonical_exposure": 1017149,
+        "component_losses": {
+          "target_EOS": 2.562995492829941
+        },
+        "component_measurement": "native training total only",
+        "component_monitor_seconds": 0.0,
+        "decoder_event_positions": 14557,
+        "decoder_padding": 7269,
+        "denominators": {
+          "B": 14557,
+          "C": {
+            "action": 1137,
+            "end": 688,
+            "start": 688,
+            "vocabulary": 3081
+          }
+        },
+        "examples": 449,
+        "forward_backward_seconds": 4.985166125930846,
+        "gradient_norm": 2.6649863719940186,
+        "loss": 2.562995492829941,
+        "lr": 0.0005907891648238318,
+        "microsteps": 29,
+        "native_update_wall_seconds": 5.468074750009691,
+        "optimizer_seconds": 0.2588646660151426,
+        "overshoot": 42,
+        "padded_decoder_positions": 21826,
+        "padded_source_positions": 31996,
+        "phase": "P0",
+        "process_peak_rss_bytes": 7085703168,
+        "reader_seconds": 0.005783417000202462,
+        "source_padding": 14637,
+        "source_positions": 17359,
+        "synchronization_seconds": 0.0015322909748647362,
+        "update": 31,
+        "update_wall_seconds": 5.490414375002729
+      }
+    },
+    {
+      "LR_independent_formula_result": 0.0004970888811050444,
+      "endpoint": {
+        "canonical_exposure": 3018478,
+        "last_ordinal": 41095,
+        "nominal": 3000000,
+        "update": 92
+      },
+      "evaluation_receipt_path": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr6e-04-update092.attempt01.json",
+      "evaluation_receipt_sha256": "cb12bf9490cc28e94f5613b0a0b35fdf4d097658ec7a02e4ec2850a74b8bf9a5",
+      "generated": {
+        "by_category_view": {
+          "identifiers:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "identifiers:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "identifiers:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "multiple_bindings:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "multiple_bindings:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "multiple_bindings:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "negation:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "negation:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "negation:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "paths:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "paths:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "paths:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "repeated_literals:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "repeated_literals:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "repeated_literals:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "signs_numerical:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "signs_numerical:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "signs_numerical:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "units_quantities:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "units_quantities:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "units_quantities:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "versions:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "versions:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "versions:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          }
+        },
+        "by_view": {
+          "clean_preservation": {
+            "cases": 96,
+            "complete": 96,
+            "conformant": 0,
+            "invalid_or_incomplete": 96,
+            "preserve_denominator": 192,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 96
+            }
+          },
+          "mixed_repair_preservation": {
+            "cases": 96,
+            "complete": 96,
+            "conformant": 0,
+            "invalid_or_incomplete": 96,
+            "preserve_denominator": 96,
+            "preserved_fields": 0,
+            "repair_denominator": 96,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 96
+            }
+          },
+          "uniquely_recoverable_repair": {
+            "cases": 96,
+            "complete": 96,
+            "conformant": 0,
+            "invalid_or_incomplete": 96,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 192,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 96
+            }
+          }
+        },
+        "cases": 288,
+        "complete": 288,
+        "decoder_invalid_or_incomplete": 0,
+        "invalid_or_incomplete": 288,
+        "mixed_success": 0,
+        "required_repair_cases_completed": 0,
+        "required_repair_fields_completed": 0,
+        "structure_invalid": 288,
+        "whole_case_conformance": 0
+      },
+      "independent_population_counts": {
+        "generated": 288,
+        "natural": 108
+      },
+      "independent_receipt_path": "experiments/manifests/six_10m_probes/independent-metrics.attempt30.json",
+      "independent_receipt_sha256": "6c4dce9658c16a7b8062b4e6bfb1f44d95a3dd346b0e78659d36d301da33be09",
+      "natural": {
+        "RAW_WER": 0.028193832599118944,
+        "completed_repair": [
+          5,
+          5
+        ],
+        "completed_repair_rate": [
+          0.078125,
+          0.078125
+        ],
+        "introduced": [
+          2295,
+          2295
+        ],
+        "introduced_rate": [
+          1.0110132158590308,
+          1.0110132158590308
+        ],
+        "introduced_width": 0,
+        "invalid_or_incomplete": 0,
+        "output_errors": 2354,
+        "reference_words": 2270,
+        "repair": [
+          5,
+          5
+        ],
+        "repair_support_source_groups_lower": [
+          "5a91d5a57328d6a41d63a67601712b7bdb0f0c63dadeac014bd1a851d70931cb",
+          "8188226b16cbc861701cf405848f6c986e16d3b5ff29c78873574f8f8fab27a0",
+          "91fbac4c4a94a7818d524118ab900bc03cde1c0e51444410681b2ea217e6c519",
+          "f0388b4d890d41c034cdcd32f5dcc3bc69e83947f327e978b5b0aa7a9c23e5d7"
+        ],
+        "repair_support_source_groups_upper": [
+          "5a91d5a57328d6a41d63a67601712b7bdb0f0c63dadeac014bd1a851d70931cb",
+          "8188226b16cbc861701cf405848f6c986e16d3b5ff29c78873574f8f8fab27a0",
+          "91fbac4c4a94a7818d524118ab900bc03cde1c0e51444410681b2ea217e6c519",
+          "f0388b4d890d41c034cdcd32f5dcc3bc69e83947f327e978b5b0aa7a9c23e5d7"
+        ],
+        "repair_width": 0,
+        "scorer_caps": 0,
+        "source_byte_identity": 0,
+        "source_correct_counts": 2210,
+        "source_correct_damage_bounds": [
+          2168,
+          2170
+        ],
+        "source_correct_preservation_coverage": {
+          "covered_cases": 108,
+          "covered_correct_counts": 2210,
+          "covered_damage_bounds": [
+            2168,
+            2170
+          ],
+          "covered_preserved_bounds": [
+            40,
+            42
+          ],
+          "unavailable_cases": 0
+        },
+        "source_correct_preserved_bounds": [
+          40,
+          42
+        ],
+        "source_errors": 64,
+        "source_lexical_identity": 0,
+        "status_counts": {
+          "completed": 108
+        },
+        "target_byte_exact": 0,
+        "target_lexical_exact": 0,
+        "wer": 1.0370044052863436
+      },
+      "output_burden": {
+        "by_population": {
+          "generated": {
+            "alignment_status_counts": {
+              "exact_point": 288
+            },
+            "cases": 288,
+            "decoder_positions": {
+              "count": 288,
+              "maximum": 50,
+              "median": 39.0,
+              "minimum": 23,
+              "sum": 10912
+            },
+            "decoder_status_counts": {
+              "completed": 288
+            },
+            "empty_string_outputs": 0,
+            "introduced_bound_ambiguous_cases": 0,
+            "lexically_empty_outputs": 0,
+            "missing_outputs": 0,
+            "output_words": {
+              "count": 288,
+              "maximum": 20,
+              "median": 13.0,
+              "minimum": 8,
+              "sum": 3817
+            },
+            "reference_words": {
+              "count": 288,
+              "maximum": 32,
+              "median": 15.0,
+              "minimum": 8,
+              "sum": 4896
+            },
+            "repair_bound_ambiguous_cases": 0,
+            "returned_token_ids_excluding_EOS": {
+              "count": 288,
+              "maximum": 49,
+              "median": 38.0,
+              "minimum": 22,
+              "sum": 10624
+            },
+            "scoring_status_counts": {
+              "completed": 288
+            },
+            "source_output_word_distance": {
+              "count": 288,
+              "maximum": 30,
+              "median": 10.0,
+              "minimum": 2,
+              "sum": 3548
+            },
+            "source_words": {
+              "count": 288,
+              "maximum": 37,
+              "median": 15.5,
+              "minimum": 8,
+              "sum": 5076
+            }
+          },
+          "natural": {
+            "alignment_status_counts": {
+              "exact_point": 108
+            },
+            "cases": 108,
+            "decoder_positions": {
+              "count": 108,
+              "maximum": 45,
+              "median": 39.0,
+              "minimum": 16,
+              "sum": 3766
+            },
+            "decoder_status_counts": {
+              "completed": 108
+            },
+            "empty_string_outputs": 0,
+            "introduced_bound_ambiguous_cases": 0,
+            "lexically_empty_outputs": 0,
+            "missing_outputs": 0,
+            "output_words": {
+              "count": 108,
+              "maximum": 17,
+              "median": 14.0,
+              "minimum": 8,
+              "sum": 1403
+            },
+            "reference_words": {
+              "count": 108,
+              "maximum": 37,
+              "median": 22.0,
+              "minimum": 3,
+              "sum": 2270
+            },
+            "repair_bound_ambiguous_cases": 0,
+            "returned_token_ids_excluding_EOS": {
+              "count": 108,
+              "maximum": 44,
+              "median": 38.0,
+              "minimum": 15,
+              "sum": 3658
+            },
+            "scoring_status_counts": {
+              "completed": 108
+            },
+            "source_output_word_distance": {
+              "count": 108,
+              "maximum": 36,
+              "median": 21.5,
+              "minimum": 9,
+              "sum": 2352
+            },
+            "source_words": {
+              "count": 108,
+              "maximum": 37,
+              "median": 22.0,
+              "minimum": 3,
+              "sum": 2266
+            }
+          }
+        },
+        "output_path": "exports/six-10m-probes/B100-seed42-lr6e-04/attempt01/evaluation-update092.jsonl",
+        "output_sha256": "ea0fa1c29ad0f84d90da1420d2c6fa856aedb4cc177b6fae2580271b3fc13ade"
+      },
+      "output_sha256": "ea0fa1c29ad0f84d90da1420d2c6fa856aedb4cc177b6fae2580271b3fc13ade",
+      "recipe_id": "B100-seed42-lr6e-04",
+      "resources": {
+        "by_population": {
+          "generated": {
+            "decode_seconds": 49.76021687503089,
+            "positions": 10912
+          },
+          "natural": {
+            "decode_seconds": 18.949767956044525,
+            "positions": 3766
+          }
+        },
+        "decode_seconds": 68.70998483107542,
+        "decoder_positions": 14678,
+        "scorer_seconds": 1.1635836779605597
+      },
+      "training": {
+        "MLX_peak_bytes": 3406053478,
+        "accumulation_seconds": 0.16525553894462064,
+        "arm": "B100",
+        "canonical_charge": 32790,
+        "committed_canonical_exposure": 3018478,
+        "component_losses": {
+          "target_EOS": 1.6786288181319833
+        },
+        "component_measurement": "native training total only",
+        "component_monitor_seconds": 0.0,
+        "decoder_event_positions": 14540,
+        "decoder_padding": 6954,
+        "denominators": {
+          "B": 14540,
+          "C": {
+            "action": 1141,
+            "end": 690,
+            "start": 690,
+            "vocabulary": 3083
+          }
+        },
+        "examples": 451,
+        "forward_backward_seconds": 7.21254091890296,
+        "gradient_norm": 0.42828211188316345,
+        "loss": 1.6786288181319833,
+        "lr": 0.0004970888811050444,
+        "microsteps": 29,
+        "native_update_wall_seconds": 7.7286054589785635,
+        "optimizer_seconds": 0.21173295902553946,
+        "overshoot": 22,
+        "padded_decoder_positions": 21494,
+        "padded_source_positions": 32655,
+        "phase": "P0",
+        "process_peak_rss_bytes": 7085703168,
+        "reader_seconds": 0.010461373982252553,
+        "source_padding": 15334,
+        "source_positions": 17321,
+        "synchronization_seconds": 0.0022528749832417816,
+        "update": 92,
+        "update_wall_seconds": 7.80336933300714
+      }
+    },
+    {
+      "LR_independent_formula_result": 0.000198017140201532,
+      "endpoint": {
+        "canonical_exposure": 6693230,
+        "last_ordinal": 91100,
+        "nominal": 6666667,
+        "update": 204
+      },
+      "evaluation_receipt_path": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr6e-04-update204.attempt01.json",
+      "evaluation_receipt_sha256": "3bf7108d09c4cfe514babd79b4f39beecb0300957fe2a333a8bcccfee81426a6",
+      "generated": {
+        "by_category_view": {
+          "identifiers:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "identifiers:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "identifiers:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "multiple_bindings:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "multiple_bindings:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "multiple_bindings:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "negation:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "negation:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "negation:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "paths:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "paths:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "paths:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "repeated_literals:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "repeated_literals:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "repeated_literals:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "signs_numerical:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "signs_numerical:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "signs_numerical:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "units_quantities:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "units_quantities:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "units_quantities:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "versions:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "versions:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "versions:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          }
+        },
+        "by_view": {
+          "clean_preservation": {
+            "cases": 96,
+            "complete": 96,
+            "conformant": 0,
+            "invalid_or_incomplete": 96,
+            "preserve_denominator": 192,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 96
+            }
+          },
+          "mixed_repair_preservation": {
+            "cases": 96,
+            "complete": 96,
+            "conformant": 0,
+            "invalid_or_incomplete": 96,
+            "preserve_denominator": 96,
+            "preserved_fields": 0,
+            "repair_denominator": 96,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 96
+            }
+          },
+          "uniquely_recoverable_repair": {
+            "cases": 96,
+            "complete": 96,
+            "conformant": 0,
+            "invalid_or_incomplete": 96,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 192,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 96
+            }
+          }
+        },
+        "cases": 288,
+        "complete": 288,
+        "decoder_invalid_or_incomplete": 0,
+        "invalid_or_incomplete": 288,
+        "mixed_success": 0,
+        "required_repair_cases_completed": 0,
+        "required_repair_fields_completed": 0,
+        "structure_invalid": 288,
+        "whole_case_conformance": 0
+      },
+      "independent_population_counts": {
+        "generated": 288,
+        "natural": 108
+      },
+      "independent_receipt_path": "experiments/manifests/six_10m_probes/independent-metrics.attempt31.json",
+      "independent_receipt_sha256": "3e4d5fde75dfa228b333715e3b9ee6b72d8790e1ffae6982490a35851b0a1d59",
+      "natural": {
+        "RAW_WER": 0.028193832599118944,
+        "completed_repair": [
+          5,
+          5
+        ],
+        "completed_repair_rate": [
+          0.078125,
+          0.078125
+        ],
+        "introduced": [
+          2350,
+          2350
+        ],
+        "introduced_rate": [
+          1.0352422907488987,
+          1.0352422907488987
+        ],
+        "introduced_width": 0,
+        "invalid_or_incomplete": 0,
+        "output_errors": 2409,
+        "reference_words": 2270,
+        "repair": [
+          5,
+          5
+        ],
+        "repair_support_source_groups_lower": [
+          "8188226b16cbc861701cf405848f6c986e16d3b5ff29c78873574f8f8fab27a0",
+          "91fbac4c4a94a7818d524118ab900bc03cde1c0e51444410681b2ea217e6c519",
+          "d7800d66044bd5eebfd6bc60546d094c2a2eee3deb700f67c36a5f72a36364fe",
+          "f0388b4d890d41c034cdcd32f5dcc3bc69e83947f327e978b5b0aa7a9c23e5d7"
+        ],
+        "repair_support_source_groups_upper": [
+          "8188226b16cbc861701cf405848f6c986e16d3b5ff29c78873574f8f8fab27a0",
+          "91fbac4c4a94a7818d524118ab900bc03cde1c0e51444410681b2ea217e6c519",
+          "d7800d66044bd5eebfd6bc60546d094c2a2eee3deb700f67c36a5f72a36364fe",
+          "f0388b4d890d41c034cdcd32f5dcc3bc69e83947f327e978b5b0aa7a9c23e5d7"
+        ],
+        "repair_width": 0,
+        "scorer_caps": 0,
+        "source_byte_identity": 0,
+        "source_correct_counts": 2210,
+        "source_correct_damage_bounds": [
+          2085,
+          2097
+        ],
+        "source_correct_preservation_coverage": {
+          "covered_cases": 108,
+          "covered_correct_counts": 2210,
+          "covered_damage_bounds": [
+            2085,
+            2097
+          ],
+          "covered_preserved_bounds": [
+            113,
+            125
+          ],
+          "unavailable_cases": 0
+        },
+        "source_correct_preserved_bounds": [
+          113,
+          125
+        ],
+        "source_errors": 64,
+        "source_lexical_identity": 0,
+        "status_counts": {
+          "completed": 108
+        },
+        "target_byte_exact": 0,
+        "target_lexical_exact": 0,
+        "wer": 1.0612334801762116
+      },
+      "output_burden": {
+        "by_population": {
+          "generated": {
+            "alignment_status_counts": {
+              "exact_point": 288
+            },
+            "cases": 288,
+            "decoder_positions": {
+              "count": 288,
+              "maximum": 52,
+              "median": 39.0,
+              "minimum": 22,
+              "sum": 10911
+            },
+            "decoder_status_counts": {
+              "completed": 288
+            },
+            "empty_string_outputs": 0,
+            "introduced_bound_ambiguous_cases": 0,
+            "lexically_empty_outputs": 0,
+            "missing_outputs": 0,
+            "output_words": {
+              "count": 288,
+              "maximum": 20,
+              "median": 12.0,
+              "minimum": 9,
+              "sum": 3765
+            },
+            "reference_words": {
+              "count": 288,
+              "maximum": 32,
+              "median": 15.0,
+              "minimum": 8,
+              "sum": 4896
+            },
+            "repair_bound_ambiguous_cases": 0,
+            "returned_token_ids_excluding_EOS": {
+              "count": 288,
+              "maximum": 51,
+              "median": 38.0,
+              "minimum": 21,
+              "sum": 10623
+            },
+            "scoring_status_counts": {
+              "completed": 288
+            },
+            "source_output_word_distance": {
+              "count": 288,
+              "maximum": 30,
+              "median": 5.0,
+              "minimum": 2,
+              "sum": 2807
+            },
+            "source_words": {
+              "count": 288,
+              "maximum": 37,
+              "median": 15.5,
+              "minimum": 8,
+              "sum": 5076
+            }
+          },
+          "natural": {
+            "alignment_status_counts": {
+              "exact_point": 108
+            },
+            "cases": 108,
+            "decoder_positions": {
+              "count": 108,
+              "maximum": 46,
+              "median": 16.0,
+              "minimum": 10,
+              "sum": 2231
+            },
+            "decoder_status_counts": {
+              "completed": 108
+            },
+            "empty_string_outputs": 0,
+            "introduced_bound_ambiguous_cases": 0,
+            "lexically_empty_outputs": 0,
+            "missing_outputs": 0,
+            "output_words": {
+              "count": 108,
+              "maximum": 38,
+              "median": 12.5,
+              "minimum": 8,
+              "sum": 1809
+            },
+            "reference_words": {
+              "count": 108,
+              "maximum": 37,
+              "median": 22.0,
+              "minimum": 3,
+              "sum": 2270
+            },
+            "repair_bound_ambiguous_cases": 0,
+            "returned_token_ids_excluding_EOS": {
+              "count": 108,
+              "maximum": 45,
+              "median": 15.0,
+              "minimum": 9,
+              "sum": 2123
+            },
+            "scoring_status_counts": {
+              "completed": 108
+            },
+            "source_output_word_distance": {
+              "count": 108,
+              "maximum": 36,
+              "median": 23.0,
+              "minimum": 8,
+              "sum": 2404
+            },
+            "source_words": {
+              "count": 108,
+              "maximum": 37,
+              "median": 22.0,
+              "minimum": 3,
+              "sum": 2266
+            }
+          }
+        },
+        "output_path": "exports/six-10m-probes/B100-seed42-lr6e-04/attempt01/evaluation-update204.jsonl",
+        "output_sha256": "836fadc85fb28f5432abc2521c369a1e4b75a23b3401437a6074369663ecb759"
+      },
+      "output_sha256": "836fadc85fb28f5432abc2521c369a1e4b75a23b3401437a6074369663ecb759",
+      "recipe_id": "B100-seed42-lr6e-04",
+      "resources": {
+        "by_population": {
+          "generated": {
+            "decode_seconds": 48.96404550014995,
+            "positions": 10911
+          },
+          "natural": {
+            "decode_seconds": 10.01752971005044,
+            "positions": 2231
+          }
+        },
+        "decode_seconds": 58.98157521020039,
+        "decoder_positions": 13142,
+        "scorer_seconds": 1.1373953703150619
+      },
+      "training": {
+        "MLX_peak_bytes": 3406053478,
+        "accumulation_seconds": 0.15383437802665867,
+        "arm": "B100",
+        "canonical_charge": 32796,
+        "committed_canonical_exposure": 6693230,
+        "component_losses": {
+          "target_EOS": 0.26140943728387356
+        },
+        "component_measurement": "native training total only",
+        "component_monitor_seconds": 0.0,
+        "decoder_event_positions": 14544,
+        "decoder_padding": 6656,
+        "denominators": {
+          "B": 14544,
+          "C": {
+            "action": 1166,
+            "end": 722,
+            "start": 722,
+            "vocabulary": 3133
+          }
+        },
+        "examples": 444,
+        "forward_backward_seconds": 3.7787256670417264,
+        "gradient_norm": 0.4575735032558441,
+        "loss": 0.26140943728387356,
+        "lr": 0.000198017140201532,
+        "microsteps": 28,
+        "native_update_wall_seconds": 4.224375457997667,
+        "optimizer_seconds": 0.22594645802746527,
+        "overshoot": 28,
+        "padded_decoder_positions": 21200,
+        "padded_source_positions": 32316,
+        "phase": "P1",
+        "process_peak_rss_bytes": 7085703168,
+        "reader_seconds": 0.0043064609344583005,
+        "source_padding": 14954,
+        "source_positions": 17362,
+        "synchronization_seconds": 0.0016544981044717133,
+        "update": 204,
+        "update_wall_seconds": 4.3868081659893505
+      }
+    },
+    {
+      "LR_independent_formula_result": 6.582882374294261e-05,
+      "endpoint": {
+        "canonical_exposure": 9350642,
+        "last_ordinal": 127234,
+        "nominal": 9333334,
+        "update": 285
+      },
+      "evaluation_receipt_path": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr6e-04-update285.attempt01.json",
+      "evaluation_receipt_sha256": "e67bd96b6c983f0c51bb96f53d6fdfd051d4bbad3b8d49bab2dfab1de195b38e",
+      "generated": {
+        "by_category_view": {
+          "identifiers:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "identifiers:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "identifiers:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "multiple_bindings:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "multiple_bindings:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "multiple_bindings:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "negation:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "negation:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "negation:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "paths:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "paths:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "paths:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "repeated_literals:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "repeated_literals:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "repeated_literals:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "signs_numerical:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "signs_numerical:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "signs_numerical:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "units_quantities:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "units_quantities:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "units_quantities:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "versions:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "versions:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "versions:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          }
+        },
+        "by_view": {
+          "clean_preservation": {
+            "cases": 96,
+            "complete": 96,
+            "conformant": 0,
+            "invalid_or_incomplete": 96,
+            "preserve_denominator": 192,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 96
+            }
+          },
+          "mixed_repair_preservation": {
+            "cases": 96,
+            "complete": 96,
+            "conformant": 0,
+            "invalid_or_incomplete": 96,
+            "preserve_denominator": 96,
+            "preserved_fields": 0,
+            "repair_denominator": 96,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 96
+            }
+          },
+          "uniquely_recoverable_repair": {
+            "cases": 96,
+            "complete": 96,
+            "conformant": 0,
+            "invalid_or_incomplete": 96,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 192,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 96
+            }
+          }
+        },
+        "cases": 288,
+        "complete": 288,
+        "decoder_invalid_or_incomplete": 0,
+        "invalid_or_incomplete": 288,
+        "mixed_success": 0,
+        "required_repair_cases_completed": 0,
+        "required_repair_fields_completed": 0,
+        "structure_invalid": 288,
+        "whole_case_conformance": 0
+      },
+      "independent_population_counts": {
+        "generated": 288,
+        "natural": 108
+      },
+      "independent_receipt_path": "experiments/manifests/six_10m_probes/independent-metrics.attempt32.json",
+      "independent_receipt_sha256": "a257de5ec2d46e034e9ea0197568e46df53cd9f8d605ce205f8a9c97c8fef39d",
+      "natural": {
+        "RAW_WER": 0.028193832599118944,
+        "completed_repair": [
+          3,
+          3
+        ],
+        "completed_repair_rate": [
+          0.046875,
+          0.046875
+        ],
+        "introduced": [
+          2586,
+          2586
+        ],
+        "introduced_rate": [
+          1.1392070484581498,
+          1.1392070484581498
+        ],
+        "introduced_width": 0,
+        "invalid_or_incomplete": 0,
+        "output_errors": 2647,
+        "reference_words": 2270,
+        "repair": [
+          3,
+          3
+        ],
+        "repair_support_source_groups_lower": [
+          "8188226b16cbc861701cf405848f6c986e16d3b5ff29c78873574f8f8fab27a0",
+          "91fbac4c4a94a7818d524118ab900bc03cde1c0e51444410681b2ea217e6c519",
+          "d7800d66044bd5eebfd6bc60546d094c2a2eee3deb700f67c36a5f72a36364fe"
+        ],
+        "repair_support_source_groups_upper": [
+          "8188226b16cbc861701cf405848f6c986e16d3b5ff29c78873574f8f8fab27a0",
+          "91fbac4c4a94a7818d524118ab900bc03cde1c0e51444410681b2ea217e6c519",
+          "d7800d66044bd5eebfd6bc60546d094c2a2eee3deb700f67c36a5f72a36364fe"
+        ],
+        "repair_width": 0,
+        "scorer_caps": 0,
+        "source_byte_identity": 0,
+        "source_correct_counts": 2210,
+        "source_correct_damage_bounds": [
+          2077,
+          2097
+        ],
+        "source_correct_preservation_coverage": {
+          "covered_cases": 108,
+          "covered_correct_counts": 2210,
+          "covered_damage_bounds": [
+            2077,
+            2097
+          ],
+          "covered_preserved_bounds": [
+            113,
+            133
+          ],
+          "unavailable_cases": 0
+        },
+        "source_correct_preserved_bounds": [
+          113,
+          133
+        ],
+        "source_errors": 64,
+        "source_lexical_identity": 0,
+        "status_counts": {
+          "completed": 108
+        },
+        "target_byte_exact": 0,
+        "target_lexical_exact": 0,
+        "wer": 1.166079295154185
+      },
+      "output_burden": {
+        "by_population": {
+          "generated": {
+            "alignment_status_counts": {
+              "exact_point": 288
+            },
+            "cases": 288,
+            "decoder_positions": {
+              "count": 288,
+              "maximum": 52,
+              "median": 39.0,
+              "minimum": 22,
+              "sum": 10924
+            },
+            "decoder_status_counts": {
+              "completed": 288
+            },
+            "empty_string_outputs": 0,
+            "introduced_bound_ambiguous_cases": 0,
+            "lexically_empty_outputs": 0,
+            "missing_outputs": 0,
+            "output_words": {
+              "count": 288,
+              "maximum": 22,
+              "median": 12.5,
+              "minimum": 8,
+              "sum": 3862
+            },
+            "reference_words": {
+              "count": 288,
+              "maximum": 32,
+              "median": 15.0,
+              "minimum": 8,
+              "sum": 4896
+            },
+            "repair_bound_ambiguous_cases": 0,
+            "returned_token_ids_excluding_EOS": {
+              "count": 288,
+              "maximum": 51,
+              "median": 38.0,
+              "minimum": 21,
+              "sum": 10636
+            },
+            "scoring_status_counts": {
+              "completed": 288
+            },
+            "source_output_word_distance": {
+              "count": 288,
+              "maximum": 30,
+              "median": 5.0,
+              "minimum": 2,
+              "sum": 2769
+            },
+            "source_words": {
+              "count": 288,
+              "maximum": 37,
+              "median": 15.5,
+              "minimum": 8,
+              "sum": 5076
+            }
+          },
+          "natural": {
+            "alignment_status_counts": {
+              "exact_point": 108
+            },
+            "cases": 108,
+            "decoder_positions": {
+              "count": 108,
+              "maximum": 50,
+              "median": 24.0,
+              "minimum": 7,
+              "sum": 2663
+            },
+            "decoder_status_counts": {
+              "completed": 108
+            },
+            "empty_string_outputs": 0,
+            "introduced_bound_ambiguous_cases": 0,
+            "lexically_empty_outputs": 0,
+            "missing_outputs": 0,
+            "output_words": {
+              "count": 108,
+              "maximum": 37,
+              "median": 22.0,
+              "minimum": 7,
+              "sum": 2296
+            },
+            "reference_words": {
+              "count": 108,
+              "maximum": 37,
+              "median": 22.0,
+              "minimum": 3,
+              "sum": 2270
+            },
+            "repair_bound_ambiguous_cases": 0,
+            "returned_token_ids_excluding_EOS": {
+              "count": 108,
+              "maximum": 49,
+              "median": 23.0,
+              "minimum": 6,
+              "sum": 2555
+            },
+            "scoring_status_counts": {
+              "completed": 108
+            },
+            "source_output_word_distance": {
+              "count": 108,
+              "maximum": 37,
+              "median": 24.0,
+              "minimum": 9,
+              "sum": 2645
+            },
+            "source_words": {
+              "count": 108,
+              "maximum": 37,
+              "median": 22.0,
+              "minimum": 3,
+              "sum": 2266
+            }
+          }
+        },
+        "output_path": "exports/six-10m-probes/B100-seed42-lr6e-04/attempt01/evaluation-update285.jsonl",
+        "output_sha256": "490ecd92010fd762ed9f56656c1774f65a0ce22bbea891f7f4d83556134b615c"
+      },
+      "output_sha256": "490ecd92010fd762ed9f56656c1774f65a0ce22bbea891f7f4d83556134b615c",
+      "recipe_id": "B100-seed42-lr6e-04",
+      "resources": {
+        "by_population": {
+          "generated": {
+            "decode_seconds": 48.49286404377199,
+            "positions": 10924
+          },
+          "natural": {
+            "decode_seconds": 11.964022585074417,
+            "positions": 2663
+          }
+        },
+        "decode_seconds": 60.456886628846405,
+        "decoder_positions": 13587,
+        "scorer_seconds": 1.1792645499808714
+      },
+      "training": {
+        "MLX_peak_bytes": 4039879008,
+        "accumulation_seconds": 0.13518299892893992,
+        "arm": "B100",
+        "canonical_charge": 32811,
+        "committed_canonical_exposure": 9350642,
+        "component_losses": {
+          "target_EOS": 1.7754456351976842
+        },
+        "component_measurement": "native training total only",
+        "component_monitor_seconds": 0.0,
+        "decoder_event_positions": 14759,
+        "decoder_padding": 11632,
+        "denominators": {
+          "B": 14759,
+          "C": {
+            "action": 1019,
+            "end": 620,
+            "start": 620,
+            "vocabulary": 2726
+          }
+        },
+        "examples": 399,
+        "forward_backward_seconds": 4.0885465419560205,
+        "gradient_norm": 4.79418420791626,
+        "loss": 1.7754456351976842,
+        "lr": 6.582882374294261e-05,
+        "microsteps": 25,
+        "native_update_wall_seconds": 4.498654583003372,
+        "optimizer_seconds": 0.21562087500933558,
+        "overshoot": 43,
+        "padded_decoder_positions": 26391,
+        "padded_source_positions": 33805,
+        "phase": "P2",
+        "process_peak_rss_bytes": 7085703168,
+        "reader_seconds": 0.006506540899863467,
+        "source_padding": 16536,
+        "source_positions": 17269,
+        "synchronization_seconds": 0.0015742519753985107,
+        "update": 285,
+        "update_wall_seconds": 4.541079917020397
+      }
+    },
+    {
+      "LR_independent_formula_result": 5.9999999999999995e-05,
+      "endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "evaluation_receipt_path": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr6e-04-update305.attempt01.json",
+      "evaluation_receipt_sha256": "9353bd5603f8c861305c3479835e7c5a74585dfd25c1740f5f65305bdc4979a6",
+      "generated": {
+        "by_category_view": {
+          "identifiers:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "identifiers:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "identifiers:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "multiple_bindings:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "multiple_bindings:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "multiple_bindings:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "negation:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "negation:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "negation:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "paths:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "paths:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "paths:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "repeated_literals:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "repeated_literals:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "repeated_literals:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "signs_numerical:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "signs_numerical:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "signs_numerical:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "units_quantities:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "units_quantities:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "units_quantities:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "versions:clean_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 24,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "versions:mixed_repair_preservation": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 12,
+            "preserved_fields": 0,
+            "repair_denominator": 12,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          },
+          "versions:uniquely_recoverable_repair": {
+            "cases": 12,
+            "complete": 12,
+            "conformant": 0,
+            "invalid_or_incomplete": 12,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 24,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 12
+            }
+          }
+        },
+        "by_view": {
+          "clean_preservation": {
+            "cases": 96,
+            "complete": 96,
+            "conformant": 0,
+            "invalid_or_incomplete": 96,
+            "preserve_denominator": 192,
+            "preserved_fields": 0,
+            "repair_denominator": 0,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 96
+            }
+          },
+          "mixed_repair_preservation": {
+            "cases": 96,
+            "complete": 96,
+            "conformant": 0,
+            "invalid_or_incomplete": 96,
+            "preserve_denominator": 96,
+            "preserved_fields": 0,
+            "repair_denominator": 96,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 96
+            }
+          },
+          "uniquely_recoverable_repair": {
+            "cases": 96,
+            "complete": 96,
+            "conformant": 0,
+            "invalid_or_incomplete": 96,
+            "preserve_denominator": 0,
+            "preserved_fields": 0,
+            "repair_denominator": 192,
+            "repaired_fields": 0,
+            "status_counts": {
+              "completed": 96
+            }
+          }
+        },
+        "cases": 288,
+        "complete": 288,
+        "decoder_invalid_or_incomplete": 0,
+        "invalid_or_incomplete": 288,
+        "mixed_success": 0,
+        "required_repair_cases_completed": 0,
+        "required_repair_fields_completed": 0,
+        "structure_invalid": 288,
+        "whole_case_conformance": 0
+      },
+      "independent_population_counts": {
+        "generated": 288,
+        "natural": 108
+      },
+      "independent_receipt_path": "experiments/manifests/six_10m_probes/independent-metrics.attempt33.json",
+      "independent_receipt_sha256": "f2ba6e297149986fa811ce605bb7655c23a9529a33cd2442f2caf3d2a5a2a950",
+      "natural": {
+        "RAW_WER": 0.028193832599118944,
+        "completed_repair": [
+          2,
+          2
+        ],
+        "completed_repair_rate": [
+          0.03125,
+          0.03125
+        ],
+        "introduced": [
+          2602,
+          2602
+        ],
+        "introduced_rate": [
+          1.1462555066079294,
+          1.1462555066079294
+        ],
+        "introduced_width": 0,
+        "invalid_or_incomplete": 0,
+        "output_errors": 2664,
+        "reference_words": 2270,
+        "repair": [
+          2,
+          2
+        ],
+        "repair_support_source_groups_lower": [
+          "8188226b16cbc861701cf405848f6c986e16d3b5ff29c78873574f8f8fab27a0",
+          "91fbac4c4a94a7818d524118ab900bc03cde1c0e51444410681b2ea217e6c519"
+        ],
+        "repair_support_source_groups_upper": [
+          "8188226b16cbc861701cf405848f6c986e16d3b5ff29c78873574f8f8fab27a0",
+          "91fbac4c4a94a7818d524118ab900bc03cde1c0e51444410681b2ea217e6c519"
+        ],
+        "repair_width": 0,
+        "scorer_caps": 0,
+        "source_byte_identity": 0,
+        "source_correct_counts": 2210,
+        "source_correct_damage_bounds": [
+          2064,
+          2084
+        ],
+        "source_correct_preservation_coverage": {
+          "covered_cases": 108,
+          "covered_correct_counts": 2210,
+          "covered_damage_bounds": [
+            2064,
+            2084
+          ],
+          "covered_preserved_bounds": [
+            126,
+            146
+          ],
+          "unavailable_cases": 0
+        },
+        "source_correct_preserved_bounds": [
+          126,
+          146
+        ],
+        "source_errors": 64,
+        "source_lexical_identity": 0,
+        "status_counts": {
+          "completed": 108
+        },
+        "target_byte_exact": 0,
+        "target_lexical_exact": 0,
+        "wer": 1.173568281938326
+      },
+      "output_burden": {
+        "by_population": {
+          "generated": {
+            "alignment_status_counts": {
+              "exact_point": 288
+            },
+            "cases": 288,
+            "decoder_positions": {
+              "count": 288,
+              "maximum": 94,
+              "median": 40.0,
+              "minimum": 22,
+              "sum": 14010
+            },
+            "decoder_status_counts": {
+              "completed": 288
+            },
+            "empty_string_outputs": 0,
+            "introduced_bound_ambiguous_cases": 0,
+            "lexically_empty_outputs": 0,
+            "missing_outputs": 0,
+            "output_words": {
+              "count": 288,
+              "maximum": 32,
+              "median": 14.0,
+              "minimum": 8,
+              "sum": 4611
+            },
+            "reference_words": {
+              "count": 288,
+              "maximum": 32,
+              "median": 15.0,
+              "minimum": 8,
+              "sum": 4896
+            },
+            "repair_bound_ambiguous_cases": 0,
+            "returned_token_ids_excluding_EOS": {
+              "count": 288,
+              "maximum": 93,
+              "median": 39.0,
+              "minimum": 21,
+              "sum": 13722
+            },
+            "scoring_status_counts": {
+              "completed": 288
+            },
+            "source_output_word_distance": {
+              "count": 288,
+              "maximum": 22,
+              "median": 5.0,
+              "minimum": 2,
+              "sum": 1924
+            },
+            "source_words": {
+              "count": 288,
+              "maximum": 37,
+              "median": 15.5,
+              "minimum": 8,
+              "sum": 5076
+            }
+          },
+          "natural": {
+            "alignment_status_counts": {
+              "exact_point": 108
+            },
+            "cases": 108,
+            "decoder_positions": {
+              "count": 108,
+              "maximum": 74,
+              "median": 24.5,
+              "minimum": 5,
+              "sum": 2651
+            },
+            "decoder_status_counts": {
+              "completed": 108
+            },
+            "empty_string_outputs": 0,
+            "introduced_bound_ambiguous_cases": 0,
+            "lexically_empty_outputs": 0,
+            "missing_outputs": 0,
+            "output_words": {
+              "count": 108,
+              "maximum": 40,
+              "median": 20.0,
+              "minimum": 6,
+              "sum": 2218
+            },
+            "reference_words": {
+              "count": 108,
+              "maximum": 37,
+              "median": 22.0,
+              "minimum": 3,
+              "sum": 2270
+            },
+            "repair_bound_ambiguous_cases": 0,
+            "returned_token_ids_excluding_EOS": {
+              "count": 108,
+              "maximum": 73,
+              "median": 23.5,
+              "minimum": 4,
+              "sum": 2543
+            },
+            "scoring_status_counts": {
+              "completed": 108
+            },
+            "source_output_word_distance": {
+              "count": 108,
+              "maximum": 37,
+              "median": 25.0,
+              "minimum": 7,
+              "sum": 2657
+            },
+            "source_words": {
+              "count": 108,
+              "maximum": 37,
+              "median": 22.0,
+              "minimum": 3,
+              "sum": 2266
+            }
+          }
+        },
+        "output_path": "exports/six-10m-probes/B100-seed42-lr6e-04/attempt01/evaluation-update305.jsonl",
+        "output_sha256": "8118c48d87f3e8987e06f217c36b98b4577cb51c80bf93bb4fde0864696fd616"
+      },
+      "output_sha256": "8118c48d87f3e8987e06f217c36b98b4577cb51c80bf93bb4fde0864696fd616",
+      "recipe_id": "B100-seed42-lr6e-04",
+      "resources": {
+        "by_population": {
+          "generated": {
+            "decode_seconds": 61.25954641689896,
+            "positions": 14010
+          },
+          "natural": {
+            "decode_seconds": 11.639792747038882,
+            "positions": 2651
+          }
+        },
+        "decode_seconds": 72.89933916393784,
+        "decoder_positions": 16661,
+        "scorer_seconds": 1.3022798711317591
+      },
+      "training": {
+        "MLX_peak_bytes": 4092658148,
+        "accumulation_seconds": 0.12184887798503041,
+        "arm": "B100",
+        "canonical_charge": 32880,
+        "committed_canonical_exposure": 10007223,
+        "component_losses": {
+          "target_EOS": 0.13065933249890804
+        },
+        "component_measurement": "native training total only",
+        "component_monitor_seconds": 0.0,
+        "decoder_event_positions": 14974,
+        "decoder_padding": 16688,
+        "denominators": {
+          "B": 14974,
+          "C": {
+            "action": 953,
+            "end": 592,
+            "start": 592,
+            "vocabulary": 2522
+          }
+        },
+        "examples": 361,
+        "forward_backward_seconds": 3.6799132069572806,
+        "gradient_norm": 0.34694749116897583,
+        "loss": 0.13065933249890804,
+        "lr": 5.9999999999999995e-05,
+        "microsteps": 23,
+        "native_update_wall_seconds": 4.031246209022356,
+        "optimizer_seconds": 0.17748591702547856,
+        "overshoot": 112,
+        "padded_decoder_positions": 31662,
+        "padded_source_positions": 36989,
+        "phase": "P2",
+        "process_peak_rss_bytes": 7085703168,
+        "reader_seconds": 0.004168626066530123,
+        "source_padding": 19685,
+        "source_positions": 17304,
+        "synchronization_seconds": 0.0013045839441474527,
+        "update": 305,
+        "update_wall_seconds": 4.04284183299751
+      }
+    }
+  ],
+  "discrepancies": 0,
+  "disposition": "PARTIAL_LEARNING_CURVES_RECONSTRUCTED_SIX_OUTCOMES_PENDING",
+  "final_checkpoint_complete_sha256": "7230be8c253a9d7007c1df3ac9cb7889a4c9e2cb58782935f8da86591c27ce58",
+  "final_metadata_sha256": "3bc83adf6e27800429fdf1a587dfdec2a1e1ae62e8e515f6f9d9902d542b16aa",
+  "final_parameter_identity_from_verified_checkpoint_receipt": "f76f3542fc688eac39669c4ef5f8e4b11ce440296728edbcc38f5e9775e93cfa",
+  "independent_review_totals": {
+    "bounded_dense_oracle_envelope_checks": 0,
+    "bounded_dense_oracle_exact_checks": 1999,
+    "canonical_score_records_reproduced": 2376,
+    "independent_edit_distance_checks": 7128
+  },
+  "individual_endpoint_eligibility": {
+    "completed_repair_lower_source_groups": [
+      "8188226b16cbc861701cf405848f6c986e16d3b5ff29c78873574f8f8fab27a0",
+      "91fbac4c4a94a7818d524118ab900bc03cde1c0e51444410681b2ea217e6c519"
+    ],
+    "criteria": {
+      "completed_natural_repair_lower_positive": true,
+      "completed_natural_repair_lower_support_at_least_two_groups": true,
+      "generated_genuine_required_repair_completed": false,
+      "natural_WER_strictly_below_RAW": false,
+      "prescribed_completion_resolved": true
+    },
+    "eligible": false,
+    "generated_required_repair_cases_completed": 0,
+    "generated_required_repair_fields_completed": 0,
+    "rank_values_for_this_recipe_only": {
+      "RAW_WER": {
+        "denominator": 1135,
+        "numerator": 32
+      },
+      "WER": {
+        "denominator": 1135,
+        "numerator": 1332
+      },
+      "completed_natural_repair_lower": 2,
+      "generated_mixed_success": 0,
+      "introduced_rate_upper": {
+        "denominator": 1135,
+        "numerator": 1301
+      },
+      "natural_invalid_or_incomplete": 0,
+      "peak_lr": {
+        "denominator": 5000,
+        "numerator": 3
+      }
+    }
+  },
+  "initial_parameter_identity_receipt_matches_all_three_B100_LRs": "2739837ff4ad4ff26475dca5a37608d9c46a1c7ff34f8778f24eadb18b8e8044",
+  "last_presentation_ordinal": 134590,
+  "numerical_failure_count": 0,
+  "numerical_replays": 0,
+  "partial_campaign_refusal": "unresolved prescribed recipe: C101-seed42-lr6e-04",
+  "plot_helper_matches_library_receipt": true,
+  "plot_library_receipt_sha256": "79194730ffab0da560dbd3e43e491b973755b89a4bc67b721c9308ec16684066",
+  "presentation_ledger_sha256": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f",
+  "prior_four_completed_endpoints_reconciled": [
+    {
+      "common_endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "evaluation_receipt_sha256": "c503c389706dd8f99b959fd035a188bf30a9b2fb1b2310dd1686d9a69a76a0ff",
+      "individual_endpoint_eligibility": {
+        "completed_repair_lower_source_groups": [
+          "5a91d5a57328d6a41d63a67601712b7bdb0f0c63dadeac014bd1a851d70931cb",
+          "8188226b16cbc861701cf405848f6c986e16d3b5ff29c78873574f8f8fab27a0",
+          "91fbac4c4a94a7818d524118ab900bc03cde1c0e51444410681b2ea217e6c519"
+        ],
+        "criteria": {
+          "completed_natural_repair_lower_positive": true,
+          "completed_natural_repair_lower_support_at_least_two_groups": true,
+          "generated_genuine_required_repair_completed": false,
+          "natural_WER_strictly_below_RAW": false,
+          "prescribed_completion_resolved": true
+        },
+        "eligible": false,
+        "generated_required_repair_cases_completed": 0,
+        "generated_required_repair_fields_completed": 0,
+        "rank_values_for_this_recipe_only": {
+          "RAW_WER": {
+            "denominator": 1135,
+            "numerator": 32
+          },
+          "WER": {
+            "denominator": 1135,
+            "numerator": 1104
+          },
+          "completed_natural_repair_lower": 6,
+          "generated_mixed_success": 0,
+          "introduced_rate_upper": {
+            "denominator": 227,
+            "numerator": 215
+          },
+          "natural_invalid_or_incomplete": 0,
+          "peak_lr": {
+            "denominator": 10000,
+            "numerator": 1
+          }
+        }
+      },
+      "no_arm_ranking": true,
+      "prior_curve_review_sha256": "7895e9514a5d9b2634d4ccd17079f4b477fb593381bea027b6582c0f08eb7537",
+      "recipe_id": "B100-seed42-lr1e-04",
+      "terminal_receipt_sha256": "d48414902ca0ba042bd12348ed6aa157775e53467522010af97ebe053c9a032e"
+    },
+    {
+      "common_endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "evaluation_receipt_sha256": "5ce28986506c5583b5a48e3387294dc576e4ac51371d51306cf1542077add213",
+      "individual_endpoint_eligibility": {
+        "completed_repair_lower_source_groups": [],
+        "criteria": {
+          "completed_natural_repair_lower_positive": false,
+          "completed_natural_repair_lower_support_at_least_two_groups": false,
+          "generated_genuine_required_repair_completed": true,
+          "natural_WER_strictly_below_RAW": false,
+          "prescribed_completion_resolved": true
+        },
+        "eligible": false,
+        "generated_required_repair_cases_completed": 49,
+        "generated_required_repair_fields_completed": 55,
+        "rank_values_for_this_recipe_only": {
+          "RAW_WER": {
+            "denominator": 1135,
+            "numerator": 32
+          },
+          "WER": {
+            "denominator": 2270,
+            "numerator": 121
+          },
+          "completed_natural_repair_lower": 0,
+          "generated_mixed_success": 32,
+          "introduced_rate_upper": {
+            "denominator": 2270,
+            "numerator": 57
+          },
+          "natural_invalid_or_incomplete": 0,
+          "peak_lr": {
+            "denominator": 10000,
+            "numerator": 1
+          }
+        }
+      },
+      "no_arm_ranking": true,
+      "prior_curve_review_sha256": "7895e9514a5d9b2634d4ccd17079f4b477fb593381bea027b6582c0f08eb7537",
+      "recipe_id": "C101-seed42-lr1e-04",
+      "terminal_receipt_sha256": "a2a4200d1c9438d58870d81a7ba21fd8860cadd2da82384ee9157e2578ce02b0"
+    },
+    {
+      "common_endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "evaluation_receipt_sha256": "70d8a346dd1eef2a573dfb826fdfc58562e9d82a2139558f370d3fa2461e89df",
+      "individual_endpoint_eligibility": {
+        "completed_repair_lower_source_groups": [
+          "8188226b16cbc861701cf405848f6c986e16d3b5ff29c78873574f8f8fab27a0",
+          "91fbac4c4a94a7818d524118ab900bc03cde1c0e51444410681b2ea217e6c519"
+        ],
+        "criteria": {
+          "completed_natural_repair_lower_positive": true,
+          "completed_natural_repair_lower_support_at_least_two_groups": true,
+          "generated_genuine_required_repair_completed": false,
+          "natural_WER_strictly_below_RAW": false,
+          "prescribed_completion_resolved": true
+        },
+        "eligible": false,
+        "generated_required_repair_cases_completed": 0,
+        "generated_required_repair_fields_completed": 0,
+        "rank_values_for_this_recipe_only": {
+          "RAW_WER": {
+            "denominator": 1135,
+            "numerator": 32
+          },
+          "WER": {
+            "denominator": 1135,
+            "numerator": 1292
+          },
+          "completed_natural_repair_lower": 2,
+          "generated_mixed_success": 0,
+          "introduced_rate_upper": {
+            "denominator": 1135,
+            "numerator": 1261
+          },
+          "natural_invalid_or_incomplete": 0,
+          "peak_lr": {
+            "denominator": 10000,
+            "numerator": 3
+          }
+        }
+      },
+      "no_arm_ranking": true,
+      "prior_curve_review_sha256": "1b516eba8e533f416741af6adb2a5e9b5713a27d87421e53d7c7e079adcc5ece",
+      "recipe_id": "B100-seed42-lr3e-04",
+      "terminal_receipt_sha256": "8c33eeae2a055806ca9c1c03985def5de080aab17fb70034903fda7db7d0dd17"
+    },
+    {
+      "common_endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "evaluation_receipt_sha256": "f6e2283521a28c0fc80bf94640580f9b1c0942c862fc48a5b9ce7c49a8037d57",
+      "individual_endpoint_eligibility": {
+        "completed_repair_lower_source_groups": [],
+        "criteria": {
+          "completed_natural_repair_lower_positive": false,
+          "completed_natural_repair_lower_support_at_least_two_groups": false,
+          "generated_genuine_required_repair_completed": true,
+          "natural_WER_strictly_below_RAW": false,
+          "prescribed_completion_resolved": true
+        },
+        "eligible": false,
+        "generated_required_repair_cases_completed": 79,
+        "generated_required_repair_fields_completed": 90,
+        "rank_values_for_this_recipe_only": {
+          "RAW_WER": {
+            "denominator": 1135,
+            "numerator": 32
+          },
+          "WER": {
+            "denominator": 1135,
+            "numerator": 64
+          },
+          "completed_natural_repair_lower": 0,
+          "generated_mixed_success": 42,
+          "introduced_rate_upper": {
+            "denominator": 1135,
+            "numerator": 32
+          },
+          "natural_invalid_or_incomplete": 0,
+          "peak_lr": {
+            "denominator": 10000,
+            "numerator": 3
+          }
+        }
+      },
+      "no_arm_ranking": true,
+      "prior_curve_review_sha256": "3995f616a66ca441ae15e9217cf12ef19d0fd5c42b041a96128a333a04e4ff7e",
+      "recipe_id": "C101-seed42-lr3e-04",
+      "terminal_receipt_sha256": "3efd9050161ba75ad08fd05dcb23cba52d19cb13705447290cd2ee373503fc94"
+    }
+  ],
+  "recipe_wall_seconds": 2468.490536928177,
+  "reconstruction_scope": "Six B1006e-4 frozen evaluations; all305 updates/134591 presentations; PAD256-excluded target/EOS denominators and positions; B16 microsteps; continuous canonical-clock LR; thirteen COMPLETE/metadata saved states. Tensor byte rehash is outside this CPU metric review scope.",
+  "reporting_helper_bindings": {
+    "benchmarks/six_10m_descriptive.py": true,
+    "benchmarks/six_10m_figures.py": true
+  },
+  "reporting_preparation_receipt_sha256": "d63bc1c22df1b1fa4f759918d9f1ddbbf5ffdc263e555e2eb98f08927efd6765",
+  "reviewed_head": "6652667557ba18944039096c3c52c58551fcf61e",
+  "root_output_burden_receipt_sha256": "06658b3569ad3a48fe5a01d0d8277187498e614f93fba3e114ce6aa803714d9a",
+  "root_output_burden_reproduced": true,
+  "schema": "six10m_independent_curve_consistency_v1",
+  "scientific_design_conclusion": null,
+  "scientific_figures_generated": false,
+  "scope": {
+    "LR_selection": "not performed",
+    "completed_registered_recipe_ids": [
+      "B100-seed42-lr1e-04",
+      "C101-seed42-lr1e-04",
+      "B100-seed42-lr3e-04",
+      "C101-seed42-lr3e-04",
+      "B100-seed42-lr6e-04"
+    ],
+    "new_frozen_evaluations": 6,
+    "new_recipe": "B100-seed42-lr6e-04",
+    "remaining_recipes": 1
+  },
+  "terminal_receipt_sha256": "34f81ffa79f14164a4646c7054058988a1beac8385b668452d668ab0476cde3d",
+  "training_resources": {
+    "canonical_exposures_per_instrumented_update_wall_second": 6398.543362423433,
+    "canonical_exposures_per_native_update_wall_second": 6442.058784134889,
+    "exact_accelerator_kernel_time": "UNMEASURED",
+    "first_update": 1,
+    "peak_observed_fields": {
+      "MLX_peak_bytes": 4092658148,
+      "process_peak_rss_bytes": 7085703168
+    },
+    "phase_update_counts": {
+      "P0": 203,
+      "P1": 81,
+      "P2": 21
+    },
+    "start_exposure": 0,
+    "summed_observed_fields": {
+      "accumulation_seconds": 47.22616754740011,
+      "canonical_charge": 10007223,
+      "component_monitor_seconds": 0.0,
+      "decoder_event_positions": 4445162,
+      "examples": 134591,
+      "forward_backward_seconds": 1409.9516183492087,
+      "microsteps": 8540,
+      "native_update_wall_seconds": 1553.4200067601341,
+      "optimizer_seconds": 65.40899346000515,
+      "reader_seconds": 1.5662286073202267,
+      "source_positions": 5300659,
+      "synchronization_seconds": 0.5265926267020404,
+      "update_wall_seconds": 1563.9845560427348
+    },
+    "timing_scope": "Terminal-attempt observed host wall intervals with native synchronization; earlier attempt work is excluded; not a kernel-time trace",
+    "update_path": "exports/six-10m-probes/B100-seed42-lr6e-04/attempt01/updates.jsonl",
+    "update_sha256": "50b417c58ef6f5fdff360a091a15d052719cad518b396c27acf1428077aeabea",
+    "updates": 305,
+    "whole_recipe_update_sequence_covered": true
+  },
+  "update_count": 305,
+  "updates_sha256": "50b417c58ef6f5fdff360a091a15d052719cad518b396c27acf1428077aeabea"
+}

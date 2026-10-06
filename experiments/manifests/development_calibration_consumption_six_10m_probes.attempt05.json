@@ -1,0 +1,553 @@
+{
+  "calibration_ids": [
+    "150-126107-0002",
+    "150-126107-0015",
+    "150-126107-0023",
+    "150-126107-0027",
+    "150-126107-0034",
+    "150-126112-0008",
+    "150-126112-0013",
+    "150-126112-0020",
+    "150-132655-0000",
+    "150-132655-0002",
+    "150-132655-0003",
+    "150-132655-0007",
+    "150-132655-0008",
+    "150-132655-0009",
+    "150-132655-0011",
+    "150-132655-0012",
+    "150-132655-0027",
+    "150-132655-0031",
+    "150-132655-0032",
+    "150-132655-0033",
+    "1841-150351-0002",
+    "1841-150351-0006",
+    "1841-150351-0019",
+    "1841-150351-0022",
+    "1841-159771-0003",
+    "1841-159771-0007",
+    "1841-159771-0014",
+    "1841-159771-0015",
+    "1841-159771-0016",
+    "1841-159771-0020",
+    "1841-159771-0026",
+    "1841-159771-0028",
+    "1841-159771-0032",
+    "1841-159771-0033",
+    "1841-179183-0009",
+    "1841-179183-0011",
+    "1841-179183-0028",
+    "1841-179183-0034",
+    "1841-179183-0035",
+    "1841-179183-0038",
+    "1970-10594-0005",
+    "1970-10594-0014",
+    "1970-10594-0022",
+    "1970-10594-0025",
+    "1970-10594-0027",
+    "1970-10594-0038",
+    "1970-10594-0042",
+    "1970-26100-0004",
+    "1970-26100-0009",
+    "1970-26100-0011",
+    "1970-26100-0014",
+    "1970-26100-0017",
+    "1970-26100-0021",
+    "1970-26100-0022",
+    "1970-26100-0023",
+    "1970-26100-0025",
+    "1970-26100-0026",
+    "1970-26100-0027",
+    "1970-26100-0028",
+    "1970-28415-0002",
+    "1970-28415-0003",
+    "1970-28415-0005",
+    "1970-28415-0007",
+    "1970-28415-0013",
+    "1970-28415-0023",
+    "1970-28415-0030",
+    "1970-28415-0034",
+    "1970-28415-0039",
+    "2196-170151-0017",
+    "2196-170151-0025",
+    "2196-170151-0030",
+    "2196-170151-0031",
+    "2196-170379-0003",
+    "2196-170379-0007",
+    "2196-170379-0010",
+    "2196-170379-0014",
+    "2196-170379-0021",
+    "2196-170379-0034",
+    "2196-174172-0001",
+    "2196-174172-0003",
+    "2196-174172-0008",
+    "2196-174172-0035",
+    "2196-174172-0039",
+    "7226-86964-0018",
+    "7226-86964-0042",
+    "7226-86964-0044",
+    "7226-86964-0052",
+    "7226-86964-0059",
+    "7226-86964-0060",
+    "7226-86965-0000",
+    "7226-86965-0014",
+    "7226-86965-0016",
+    "7226-86965-0017",
+    "7226-86965-0023",
+    "7226-86965-0048",
+    "7226-86965-0049"
+  ],
+  "calibration_neural_case_evaluations": 2880,
+  "calibration_unique_rows": 96,
+  "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+  "completed_neural_evaluation_endpoints": 30,
+  "disposition": "FROZEN_DEVELOPMENT_CALIBRATION_USES_RECORDED",
+  "fit_performed": false,
+  "hpo_ids": [
+    "116-288047-0021",
+    "251-118436-0004",
+    "3000-15664-0005",
+    "3081-166546-0007",
+    "3752-4944-0048",
+    "4572-112381-0006",
+    "5536-43358-0006",
+    "5694-64038-0014",
+    "6599-38591-0009",
+    "6841-88291-0010",
+    "8288-274162-0010",
+    "8842-304647-0004"
+  ],
+  "hpo_unique_rows": 12,
+  "independent_score_reproduction": "Same already-consumed DEVELOPMENT rows, hash-bound in six_10m_probes/independent-metrics receipts",
+  "panel_sha256": "5043ed60d6ce8f891ee8e30255fabaa40fcac37b0a043c1a85dd88178832ce4e",
+  "previous_consumption_receipt": "experiments/manifests/development_calibration_consumption_six_10m_probes.attempt04.json",
+  "previous_consumption_sha256": "ac9d0171ac27cd7816529d8b32cb59b553b128201923b8d3ac23dba07b9153e0",
+  "prior_panel_role": "calibration_development_consumed",
+  "schema": "six10m_development_calibration_consumption_v1",
+  "scope": "Record actual frozen DEVELOPMENT neural evaluation uses; row roles and evaluation population unchanged",
+  "sealed_references_used": false,
+  "source_role_manifests_changed": false,
+  "uses": [
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 0,
+        "last_ordinal": -1,
+        "nominal": 0,
+        "update": 0
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 0,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr1e-04-update000.attempt01.json",
+      "receipt_sha256": "cd70d6a6cabf4779325e12b39fe669aae0538092fa2f9a1d3d5d4085000b7b33",
+      "recipe_id": "B100-seed42-lr1e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 1017149,
+        "last_ordinal": 13838,
+        "nominal": 1000000,
+        "update": 31
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 1000000,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr1e-04-update031.attempt01.json",
+      "receipt_sha256": "1b7bdaa8ffaf5e103a35e69c545348eec21c477aa12f55dc0f5c40b98c59ed66",
+      "recipe_id": "B100-seed42-lr1e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 3018478,
+        "last_ordinal": 41095,
+        "nominal": 3000000,
+        "update": 92
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 3000000,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr1e-04-update092.attempt01.json",
+      "receipt_sha256": "d1e04c53092155a14db9a1de430b1f4b91be035c6b314d5a22c1d5da30cce0c3",
+      "recipe_id": "B100-seed42-lr1e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 6693230,
+        "last_ordinal": 91100,
+        "nominal": 6666667,
+        "update": 204
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 6666667,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr1e-04-update204.attempt01.json",
+      "receipt_sha256": "7ce3de8d56b3b97f6e9db908958e45073f7155dedd7bc006b58f09dec784d8ba",
+      "recipe_id": "B100-seed42-lr1e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 9350642,
+        "last_ordinal": 127234,
+        "nominal": 9333334,
+        "update": 285
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 9333334,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr1e-04-update285.attempt01.json",
+      "receipt_sha256": "ce43185a58c9f798556323edeea1a9ae28785d6479e232d1a70421c3e01972e5",
+      "recipe_id": "B100-seed42-lr1e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 10000000,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr1e-04-update305.attempt01.json",
+      "receipt_sha256": "c503c389706dd8f99b959fd035a188bf30a9b2fb1b2310dd1686d9a69a76a0ff",
+      "recipe_id": "B100-seed42-lr1e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 0,
+        "last_ordinal": -1,
+        "nominal": 0,
+        "update": 0
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 0,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-C101-seed42-lr1e-04-update000.attempt01.json",
+      "receipt_sha256": "4e4f51bdecab33559bdfeed86fb4e1ef771e9932e2d63ef5a1eddb018b2497ab",
+      "recipe_id": "C101-seed42-lr1e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 1017149,
+        "last_ordinal": 13838,
+        "nominal": 1000000,
+        "update": 31
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 1000000,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-C101-seed42-lr1e-04-update031.attempt01.json",
+      "receipt_sha256": "f3637cfd47d24539e64851bfe833b506fcbb91fba7853304e95cb61a2a393687",
+      "recipe_id": "C101-seed42-lr1e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 3018478,
+        "last_ordinal": 41095,
+        "nominal": 3000000,
+        "update": 92
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 3000000,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-C101-seed42-lr1e-04-update092.attempt01.json",
+      "receipt_sha256": "0c7e8c3f765f3581ec9c18e9304cc2605228ced4a6906394f6b2736a483cf3bf",
+      "recipe_id": "C101-seed42-lr1e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 6693230,
+        "last_ordinal": 91100,
+        "nominal": 6666667,
+        "update": 204
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 6666667,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-C101-seed42-lr1e-04-update204.attempt01.json",
+      "receipt_sha256": "4ebc7f7837d0537327837def6abed3397ddb27746863b36b7539cdc74b72c319",
+      "recipe_id": "C101-seed42-lr1e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 9350642,
+        "last_ordinal": 127234,
+        "nominal": 9333334,
+        "update": 285
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 9333334,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-C101-seed42-lr1e-04-update285.attempt01.json",
+      "receipt_sha256": "d0bb034edadc23242a92bca4096fb562fd001f8215f859cd910ac44f7aedd1b9",
+      "recipe_id": "C101-seed42-lr1e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 10000000,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-C101-seed42-lr1e-04-update305.attempt01.json",
+      "receipt_sha256": "5ce28986506c5583b5a48e3387294dc576e4ac51371d51306cf1542077add213",
+      "recipe_id": "C101-seed42-lr1e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 0,
+        "last_ordinal": -1,
+        "nominal": 0,
+        "update": 0
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 0,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr3e-04-update000.attempt01.json",
+      "receipt_sha256": "269d16f7ef9ee0076bfc6d6481c999fc88276ba9866c84ff73c67e1902c12da0",
+      "recipe_id": "B100-seed42-lr3e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 1017149,
+        "last_ordinal": 13838,
+        "nominal": 1000000,
+        "update": 31
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 1000000,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr3e-04-update031.attempt01.json",
+      "receipt_sha256": "ec7a23456a6a03563023aab2649049f874054cf117a4c552ec8a82005dc71e29",
+      "recipe_id": "B100-seed42-lr3e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 3018478,
+        "last_ordinal": 41095,
+        "nominal": 3000000,
+        "update": 92
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 3000000,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr3e-04-update092.attempt01.json",
+      "receipt_sha256": "547644da2905f7ad1579b38ee50ff85e08988408ed433ce6644d591da80a6733",
+      "recipe_id": "B100-seed42-lr3e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 6693230,
+        "last_ordinal": 91100,
+        "nominal": 6666667,
+        "update": 204
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 6666667,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr3e-04-update204.attempt01.json",
+      "receipt_sha256": "5f7c73e317f6047ee584450d46ad41bc5bb296d70a27eb6ba46a83c4d5e2bf40",
+      "recipe_id": "B100-seed42-lr3e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 9350642,
+        "last_ordinal": 127234,
+        "nominal": 9333334,
+        "update": 285
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 9333334,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr3e-04-update285.attempt01.json",
+      "receipt_sha256": "432f0f4ae434c168241a53dc62ec3e1d206b227a46786888272e094a2c3f9f86",
+      "recipe_id": "B100-seed42-lr3e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 10000000,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr3e-04-update305.attempt01.json",
+      "receipt_sha256": "70d8a346dd1eef2a573dfb826fdfc58562e9d82a2139558f370d3fa2461e89df",
+      "recipe_id": "B100-seed42-lr3e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 0,
+        "last_ordinal": -1,
+        "nominal": 0,
+        "update": 0
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 0,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-C101-seed42-lr3e-04-update000.attempt01.json",
+      "receipt_sha256": "ed4e28c239f19e32639ddf41e9262afecadf0775e93d233c02dd96e21734bfc8",
+      "recipe_id": "C101-seed42-lr3e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 1017149,
+        "last_ordinal": 13838,
+        "nominal": 1000000,
+        "update": 31
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 1000000,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-C101-seed42-lr3e-04-update031.attempt01.json",
+      "receipt_sha256": "b7631a06fd2f89c461b1afb7afbbe0a7217e63dc74927c0c6b7a0500a4acde98",
+      "recipe_id": "C101-seed42-lr3e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 3018478,
+        "last_ordinal": 41095,
+        "nominal": 3000000,
+        "update": 92
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 3000000,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-C101-seed42-lr3e-04-update092.attempt01.json",
+      "receipt_sha256": "d0436d70753e56850cf318f739ebf3f56868ad73a5e953dffac028741ccc0082",
+      "recipe_id": "C101-seed42-lr3e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 6693230,
+        "last_ordinal": 91100,
+        "nominal": 6666667,
+        "update": 204
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 6666667,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-C101-seed42-lr3e-04-update204.attempt01.json",
+      "receipt_sha256": "3e11d4e1950a3039c204dfb45e5bddbeb0bce0b5fe2f2a225b4666206678a191",
+      "recipe_id": "C101-seed42-lr3e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 9350642,
+        "last_ordinal": 127234,
+        "nominal": 9333334,
+        "update": 285
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 9333334,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-C101-seed42-lr3e-04-update285.attempt01.json",
+      "receipt_sha256": "f0de22103298a210aba98b606f6c9df94fe792c7ae80eedee89937a5e2e4db55",
+      "recipe_id": "C101-seed42-lr3e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 10000000,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-C101-seed42-lr3e-04-update305.attempt01.json",
+      "receipt_sha256": "f6e2283521a28c0fc80bf94640580f9b1c0942c862fc48a5b9ce7c49a8037d57",
+      "recipe_id": "C101-seed42-lr3e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 0,
+        "last_ordinal": -1,
+        "nominal": 0,
+        "update": 0
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 0,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr6e-04-update000.attempt01.json",
+      "receipt_sha256": "317780fa3916287482b82dd14e8d5414f8580f075593d6404759375ae34864c7",
+      "recipe_id": "B100-seed42-lr6e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 1017149,
+        "last_ordinal": 13838,
+        "nominal": 1000000,
+        "update": 31
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 1000000,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr6e-04-update031.attempt01.json",
+      "receipt_sha256": "c96143fd8ea85786b535a3681af3a8fbc75912c859f3bc2c30015823f77a2481",
+      "recipe_id": "B100-seed42-lr6e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 3018478,
+        "last_ordinal": 41095,
+        "nominal": 3000000,
+        "update": 92
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 3000000,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr6e-04-update092.attempt01.json",
+      "receipt_sha256": "cb12bf9490cc28e94f5613b0a0b35fdf4d097658ec7a02e4ec2850a74b8bf9a5",
+      "recipe_id": "B100-seed42-lr6e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 6693230,
+        "last_ordinal": 91100,
+        "nominal": 6666667,
+        "update": 204
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 6666667,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr6e-04-update204.attempt01.json",
+      "receipt_sha256": "3bf7108d09c4cfe514babd79b4f39beecb0300957fe2a333a8bcccfee81426a6",
+      "recipe_id": "B100-seed42-lr6e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 9350642,
+        "last_ordinal": 127234,
+        "nominal": 9333334,
+        "update": 285
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 9333334,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr6e-04-update285.attempt01.json",
+      "receipt_sha256": "e67bd96b6c983f0c51bb96f53d6fdfd051d4bbad3b8d49bab2dfab1de195b38e",
+      "recipe_id": "B100-seed42-lr6e-04"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "calibration_rows_evaluated": 96,
+      "hpo_rows_evaluated": 12,
+      "nominal_endpoint": 10000000,
+      "receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr6e-04-update305.attempt01.json",
+      "receipt_sha256": "9353bd5603f8c861305c3479835e7c5a74585dfd25c1740f5f65305bdc4979a6",
+      "recipe_id": "B100-seed42-lr6e-04"
+    }
+  ],
+  "utc_unix": 1791283687.516969
+}

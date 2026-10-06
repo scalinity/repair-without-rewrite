@@ -1,0 +1,804 @@
+{
+  "collector_sha256": "ccbcf2dc0f737dc29d0ec0edb1ea9d0b4a12e1089414322e349fd2365c7c6ec7",
+  "disposition": "EXISTING_OUTPUT_BURDEN_RECORDED",
+  "evaluations": [
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 0,
+        "last_ordinal": -1,
+        "nominal": 0,
+        "update": 0
+      },
+      "by_population": {
+        "generated": {
+          "alignment_status_counts": {
+            "exact_point": 288
+          },
+          "cases": 288,
+          "decoder_positions": {
+            "count": 288,
+            "maximum": 256,
+            "median": 256.0,
+            "minimum": 256,
+            "sum": 73728
+          },
+          "decoder_status_counts": {
+            "capped": 283,
+            "invalid_byte_decoding": 5
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 6,
+          "missing_outputs": 5,
+          "output_words": {
+            "count": 288,
+            "maximum": 768,
+            "median": 256.0,
+            "minimum": 0,
+            "sum": 78370
+          },
+          "reference_words": {
+            "count": 288,
+            "maximum": 32,
+            "median": 15.0,
+            "minimum": 8,
+            "sum": 4896
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "returned_token_ids_excluding_EOS": {
+            "count": 288,
+            "maximum": 256,
+            "median": 256.0,
+            "minimum": 256,
+            "sum": 73728
+          },
+          "scoring_status_counts": {
+            "completed": 288
+          },
+          "source_output_word_distance": {
+            "count": 288,
+            "maximum": 768,
+            "median": 256.0,
+            "minimum": 9,
+            "sum": 80125
+          },
+          "source_words": {
+            "count": 288,
+            "maximum": 37,
+            "median": 15.5,
+            "minimum": 8,
+            "sum": 5076
+          }
+        },
+        "natural": {
+          "alignment_status_counts": {
+            "exact_point": 108
+          },
+          "cases": 108,
+          "decoder_positions": {
+            "count": 108,
+            "maximum": 256,
+            "median": 256.0,
+            "minimum": 256,
+            "sum": 27648
+          },
+          "decoder_status_counts": {
+            "capped": 105,
+            "invalid_byte_decoding": 3
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 3,
+          "missing_outputs": 3,
+          "output_words": {
+            "count": 108,
+            "maximum": 768,
+            "median": 256.0,
+            "minimum": 0,
+            "sum": 20769
+          },
+          "reference_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2270
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "returned_token_ids_excluding_EOS": {
+            "count": 108,
+            "maximum": 256,
+            "median": 256.0,
+            "minimum": 256,
+            "sum": 27648
+          },
+          "scoring_status_counts": {
+            "completed": 108
+          },
+          "source_output_word_distance": {
+            "count": 108,
+            "maximum": 768,
+            "median": 256.0,
+            "minimum": 3,
+            "sum": 21776
+          },
+          "source_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2266
+          }
+        }
+      },
+      "evaluation_receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr6e-04-update000.attempt01.json",
+      "evaluation_sha256": "317780fa3916287482b82dd14e8d5414f8580f075593d6404759375ae34864c7",
+      "output_path": "exports/six-10m-probes/B100-seed42-lr6e-04/attempt01/evaluation-update000.jsonl",
+      "output_sha256": "5cfa42c84b971b6fc6c0a0fa87b9be8d2f9e31f6d07f3dc3e699bc122fd1de7a"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 1017149,
+        "last_ordinal": 13838,
+        "nominal": 1000000,
+        "update": 31
+      },
+      "by_population": {
+        "generated": {
+          "alignment_status_counts": {
+            "exact_point": 288
+          },
+          "cases": 288,
+          "decoder_positions": {
+            "count": 288,
+            "maximum": 56,
+            "median": 40.0,
+            "minimum": 20,
+            "sum": 10997
+          },
+          "decoder_status_counts": {
+            "completed": 288
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 0,
+          "missing_outputs": 0,
+          "output_words": {
+            "count": 288,
+            "maximum": 29,
+            "median": 15.0,
+            "minimum": 7,
+            "sum": 4162
+          },
+          "reference_words": {
+            "count": 288,
+            "maximum": 32,
+            "median": 15.0,
+            "minimum": 8,
+            "sum": 4896
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "returned_token_ids_excluding_EOS": {
+            "count": 288,
+            "maximum": 55,
+            "median": 39.0,
+            "minimum": 19,
+            "sum": 10709
+          },
+          "scoring_status_counts": {
+            "completed": 288
+          },
+          "source_output_word_distance": {
+            "count": 288,
+            "maximum": 30,
+            "median": 12.0,
+            "minimum": 4,
+            "sum": 3851
+          },
+          "source_words": {
+            "count": 288,
+            "maximum": 37,
+            "median": 15.5,
+            "minimum": 8,
+            "sum": 5076
+          }
+        },
+        "natural": {
+          "alignment_status_counts": {
+            "exact_point": 108
+          },
+          "cases": 108,
+          "decoder_positions": {
+            "count": 108,
+            "maximum": 44,
+            "median": 22.0,
+            "minimum": 10,
+            "sum": 2695
+          },
+          "decoder_status_counts": {
+            "completed": 108
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 0,
+          "missing_outputs": 0,
+          "output_words": {
+            "count": 108,
+            "maximum": 21,
+            "median": 9.0,
+            "minimum": 6,
+            "sum": 1085
+          },
+          "reference_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2270
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "returned_token_ids_excluding_EOS": {
+            "count": 108,
+            "maximum": 43,
+            "median": 21.0,
+            "minimum": 9,
+            "sum": 2587
+          },
+          "scoring_status_counts": {
+            "completed": 108
+          },
+          "source_output_word_distance": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 6,
+            "sum": 2340
+          },
+          "source_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2266
+          }
+        }
+      },
+      "evaluation_receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr6e-04-update031.attempt01.json",
+      "evaluation_sha256": "c96143fd8ea85786b535a3681af3a8fbc75912c859f3bc2c30015823f77a2481",
+      "output_path": "exports/six-10m-probes/B100-seed42-lr6e-04/attempt01/evaluation-update031.jsonl",
+      "output_sha256": "2a9670f81f73495c784b3b90c892d9c9a3deed41d72bc1b4d33b05010f46f23e"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 3018478,
+        "last_ordinal": 41095,
+        "nominal": 3000000,
+        "update": 92
+      },
+      "by_population": {
+        "generated": {
+          "alignment_status_counts": {
+            "exact_point": 288
+          },
+          "cases": 288,
+          "decoder_positions": {
+            "count": 288,
+            "maximum": 50,
+            "median": 39.0,
+            "minimum": 23,
+            "sum": 10912
+          },
+          "decoder_status_counts": {
+            "completed": 288
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 0,
+          "missing_outputs": 0,
+          "output_words": {
+            "count": 288,
+            "maximum": 20,
+            "median": 13.0,
+            "minimum": 8,
+            "sum": 3817
+          },
+          "reference_words": {
+            "count": 288,
+            "maximum": 32,
+            "median": 15.0,
+            "minimum": 8,
+            "sum": 4896
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "returned_token_ids_excluding_EOS": {
+            "count": 288,
+            "maximum": 49,
+            "median": 38.0,
+            "minimum": 22,
+            "sum": 10624
+          },
+          "scoring_status_counts": {
+            "completed": 288
+          },
+          "source_output_word_distance": {
+            "count": 288,
+            "maximum": 30,
+            "median": 10.0,
+            "minimum": 2,
+            "sum": 3548
+          },
+          "source_words": {
+            "count": 288,
+            "maximum": 37,
+            "median": 15.5,
+            "minimum": 8,
+            "sum": 5076
+          }
+        },
+        "natural": {
+          "alignment_status_counts": {
+            "exact_point": 108
+          },
+          "cases": 108,
+          "decoder_positions": {
+            "count": 108,
+            "maximum": 45,
+            "median": 39.0,
+            "minimum": 16,
+            "sum": 3766
+          },
+          "decoder_status_counts": {
+            "completed": 108
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 0,
+          "missing_outputs": 0,
+          "output_words": {
+            "count": 108,
+            "maximum": 17,
+            "median": 14.0,
+            "minimum": 8,
+            "sum": 1403
+          },
+          "reference_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2270
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "returned_token_ids_excluding_EOS": {
+            "count": 108,
+            "maximum": 44,
+            "median": 38.0,
+            "minimum": 15,
+            "sum": 3658
+          },
+          "scoring_status_counts": {
+            "completed": 108
+          },
+          "source_output_word_distance": {
+            "count": 108,
+            "maximum": 36,
+            "median": 21.5,
+            "minimum": 9,
+            "sum": 2352
+          },
+          "source_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2266
+          }
+        }
+      },
+      "evaluation_receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr6e-04-update092.attempt01.json",
+      "evaluation_sha256": "cb12bf9490cc28e94f5613b0a0b35fdf4d097658ec7a02e4ec2850a74b8bf9a5",
+      "output_path": "exports/six-10m-probes/B100-seed42-lr6e-04/attempt01/evaluation-update092.jsonl",
+      "output_sha256": "ea0fa1c29ad0f84d90da1420d2c6fa856aedb4cc177b6fae2580271b3fc13ade"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 6693230,
+        "last_ordinal": 91100,
+        "nominal": 6666667,
+        "update": 204
+      },
+      "by_population": {
+        "generated": {
+          "alignment_status_counts": {
+            "exact_point": 288
+          },
+          "cases": 288,
+          "decoder_positions": {
+            "count": 288,
+            "maximum": 52,
+            "median": 39.0,
+            "minimum": 22,
+            "sum": 10911
+          },
+          "decoder_status_counts": {
+            "completed": 288
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 0,
+          "missing_outputs": 0,
+          "output_words": {
+            "count": 288,
+            "maximum": 20,
+            "median": 12.0,
+            "minimum": 9,
+            "sum": 3765
+          },
+          "reference_words": {
+            "count": 288,
+            "maximum": 32,
+            "median": 15.0,
+            "minimum": 8,
+            "sum": 4896
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "returned_token_ids_excluding_EOS": {
+            "count": 288,
+            "maximum": 51,
+            "median": 38.0,
+            "minimum": 21,
+            "sum": 10623
+          },
+          "scoring_status_counts": {
+            "completed": 288
+          },
+          "source_output_word_distance": {
+            "count": 288,
+            "maximum": 30,
+            "median": 5.0,
+            "minimum": 2,
+            "sum": 2807
+          },
+          "source_words": {
+            "count": 288,
+            "maximum": 37,
+            "median": 15.5,
+            "minimum": 8,
+            "sum": 5076
+          }
+        },
+        "natural": {
+          "alignment_status_counts": {
+            "exact_point": 108
+          },
+          "cases": 108,
+          "decoder_positions": {
+            "count": 108,
+            "maximum": 46,
+            "median": 16.0,
+            "minimum": 10,
+            "sum": 2231
+          },
+          "decoder_status_counts": {
+            "completed": 108
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 0,
+          "missing_outputs": 0,
+          "output_words": {
+            "count": 108,
+            "maximum": 38,
+            "median": 12.5,
+            "minimum": 8,
+            "sum": 1809
+          },
+          "reference_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2270
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "returned_token_ids_excluding_EOS": {
+            "count": 108,
+            "maximum": 45,
+            "median": 15.0,
+            "minimum": 9,
+            "sum": 2123
+          },
+          "scoring_status_counts": {
+            "completed": 108
+          },
+          "source_output_word_distance": {
+            "count": 108,
+            "maximum": 36,
+            "median": 23.0,
+            "minimum": 8,
+            "sum": 2404
+          },
+          "source_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2266
+          }
+        }
+      },
+      "evaluation_receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr6e-04-update204.attempt01.json",
+      "evaluation_sha256": "3bf7108d09c4cfe514babd79b4f39beecb0300957fe2a333a8bcccfee81426a6",
+      "output_path": "exports/six-10m-probes/B100-seed42-lr6e-04/attempt01/evaluation-update204.jsonl",
+      "output_sha256": "836fadc85fb28f5432abc2521c369a1e4b75a23b3401437a6074369663ecb759"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 9350642,
+        "last_ordinal": 127234,
+        "nominal": 9333334,
+        "update": 285
+      },
+      "by_population": {
+        "generated": {
+          "alignment_status_counts": {
+            "exact_point": 288
+          },
+          "cases": 288,
+          "decoder_positions": {
+            "count": 288,
+            "maximum": 52,
+            "median": 39.0,
+            "minimum": 22,
+            "sum": 10924
+          },
+          "decoder_status_counts": {
+            "completed": 288
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 0,
+          "missing_outputs": 0,
+          "output_words": {
+            "count": 288,
+            "maximum": 22,
+            "median": 12.5,
+            "minimum": 8,
+            "sum": 3862
+          },
+          "reference_words": {
+            "count": 288,
+            "maximum": 32,
+            "median": 15.0,
+            "minimum": 8,
+            "sum": 4896
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "returned_token_ids_excluding_EOS": {
+            "count": 288,
+            "maximum": 51,
+            "median": 38.0,
+            "minimum": 21,
+            "sum": 10636
+          },
+          "scoring_status_counts": {
+            "completed": 288
+          },
+          "source_output_word_distance": {
+            "count": 288,
+            "maximum": 30,
+            "median": 5.0,
+            "minimum": 2,
+            "sum": 2769
+          },
+          "source_words": {
+            "count": 288,
+            "maximum": 37,
+            "median": 15.5,
+            "minimum": 8,
+            "sum": 5076
+          }
+        },
+        "natural": {
+          "alignment_status_counts": {
+            "exact_point": 108
+          },
+          "cases": 108,
+          "decoder_positions": {
+            "count": 108,
+            "maximum": 50,
+            "median": 24.0,
+            "minimum": 7,
+            "sum": 2663
+          },
+          "decoder_status_counts": {
+            "completed": 108
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 0,
+          "missing_outputs": 0,
+          "output_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 7,
+            "sum": 2296
+          },
+          "reference_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2270
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "returned_token_ids_excluding_EOS": {
+            "count": 108,
+            "maximum": 49,
+            "median": 23.0,
+            "minimum": 6,
+            "sum": 2555
+          },
+          "scoring_status_counts": {
+            "completed": 108
+          },
+          "source_output_word_distance": {
+            "count": 108,
+            "maximum": 37,
+            "median": 24.0,
+            "minimum": 9,
+            "sum": 2645
+          },
+          "source_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2266
+          }
+        }
+      },
+      "evaluation_receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr6e-04-update285.attempt01.json",
+      "evaluation_sha256": "e67bd96b6c983f0c51bb96f53d6fdfd051d4bbad3b8d49bab2dfab1de195b38e",
+      "output_path": "exports/six-10m-probes/B100-seed42-lr6e-04/attempt01/evaluation-update285.jsonl",
+      "output_sha256": "490ecd92010fd762ed9f56656c1774f65a0ce22bbea891f7f4d83556134b615c"
+    },
+    {
+      "actual_endpoint": {
+        "canonical_exposure": 10007223,
+        "last_ordinal": 134590,
+        "nominal": 10000000,
+        "update": 305
+      },
+      "by_population": {
+        "generated": {
+          "alignment_status_counts": {
+            "exact_point": 288
+          },
+          "cases": 288,
+          "decoder_positions": {
+            "count": 288,
+            "maximum": 94,
+            "median": 40.0,
+            "minimum": 22,
+            "sum": 14010
+          },
+          "decoder_status_counts": {
+            "completed": 288
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 0,
+          "missing_outputs": 0,
+          "output_words": {
+            "count": 288,
+            "maximum": 32,
+            "median": 14.0,
+            "minimum": 8,
+            "sum": 4611
+          },
+          "reference_words": {
+            "count": 288,
+            "maximum": 32,
+            "median": 15.0,
+            "minimum": 8,
+            "sum": 4896
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "returned_token_ids_excluding_EOS": {
+            "count": 288,
+            "maximum": 93,
+            "median": 39.0,
+            "minimum": 21,
+            "sum": 13722
+          },
+          "scoring_status_counts": {
+            "completed": 288
+          },
+          "source_output_word_distance": {
+            "count": 288,
+            "maximum": 22,
+            "median": 5.0,
+            "minimum": 2,
+            "sum": 1924
+          },
+          "source_words": {
+            "count": 288,
+            "maximum": 37,
+            "median": 15.5,
+            "minimum": 8,
+            "sum": 5076
+          }
+        },
+        "natural": {
+          "alignment_status_counts": {
+            "exact_point": 108
+          },
+          "cases": 108,
+          "decoder_positions": {
+            "count": 108,
+            "maximum": 74,
+            "median": 24.5,
+            "minimum": 5,
+            "sum": 2651
+          },
+          "decoder_status_counts": {
+            "completed": 108
+          },
+          "empty_string_outputs": 0,
+          "introduced_bound_ambiguous_cases": 0,
+          "lexically_empty_outputs": 0,
+          "missing_outputs": 0,
+          "output_words": {
+            "count": 108,
+            "maximum": 40,
+            "median": 20.0,
+            "minimum": 6,
+            "sum": 2218
+          },
+          "reference_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2270
+          },
+          "repair_bound_ambiguous_cases": 0,
+          "returned_token_ids_excluding_EOS": {
+            "count": 108,
+            "maximum": 73,
+            "median": 23.5,
+            "minimum": 4,
+            "sum": 2543
+          },
+          "scoring_status_counts": {
+            "completed": 108
+          },
+          "source_output_word_distance": {
+            "count": 108,
+            "maximum": 37,
+            "median": 25.0,
+            "minimum": 7,
+            "sum": 2657
+          },
+          "source_words": {
+            "count": 108,
+            "maximum": 37,
+            "median": 22.0,
+            "minimum": 3,
+            "sum": 2266
+          }
+        }
+      },
+      "evaluation_receipt": "experiments/manifests/six_10m_probes/evaluation-B100-seed42-lr6e-04-update305.attempt01.json",
+      "evaluation_sha256": "9353bd5603f8c861305c3479835e7c5a74585dfd25c1740f5f65305bdc4979a6",
+      "output_path": "exports/six-10m-probes/B100-seed42-lr6e-04/attempt01/evaluation-update305.jsonl",
+      "output_sha256": "8118c48d87f3e8987e06f217c36b98b4577cb51c80bf93bb4fde0864696fd616"
+    }
+  ],
+  "no_new_inference": true,
+  "no_rescoring": true,
+  "recipe_id": "B100-seed42-lr6e-04",
+  "source_head": "6652667557ba18944039096c3c52c58551fcf61e"
+}
