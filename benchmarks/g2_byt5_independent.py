@@ -17,9 +17,21 @@ def run(binding, attempt):
     receipt = Path(f"experiments/manifests/generation_2/independent-byt5.attempt{attempt:02d}.json")
     if receipt.exists():
         raise FileExistsError(receipt)
-    report_path = Path("experiments/manifests/generation_2/byt5-qualification.attempt01.json")
+    report_path = Path("experiments/manifests/generation_2/byt5-qualification.attempt02.json")
     report = json.loads(report_path.read_text())
     assert report["status"] == "PASS_G2_BYT5_RUNNER_100_UPDATES"
+    repair_path = Path("experiments/manifests/generation_2/byt5-record-repair.attempt01.json")
+    repair = json.loads(repair_path.read_text())
+    failed_path = Path(repair["failed_receipt"])
+    failed = json.loads(failed_path.read_text())
+    assert sha256(failed_path) == repair["failed_receipt_sha256"]
+    assert repair["status"] == "PASS_MECHANICAL_PRETRAINING_RECORD_REPAIR"
+    assert report["attempt"] == repair["qualified_attempt_predeclared"] == 2
+    assert repair["completed_optimizer_updates"] == 0 and not repair["numerical_replay_used"]
+    assert report["config"] == failed["config"]
+    for field in ("config_sha256", "pairs_sha256", "panel_sha256", "corpus_freeze_sha256",
+                  "official_weight_sha256", "official_config_sha256"):
+        assert report[field] == failed[field]
     source = root.path("asr-hypotheses-v1/construction.attempt01")
     read_complete(source)
     training = [row for row in (json.loads(line) for line in (source / "pairs.jsonl").open())

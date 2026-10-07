@@ -11,6 +11,7 @@ import time
 
 from src.data.g2_artifacts import ArtifactRoot, atomic_artifact, offline_model_environment, read_complete, sha256
 from src.data.g2_byt5 import accounting_plan, training_batches, validate_pairs
+from src.scoring.triple import serialize
 
 
 def write(path, value):
@@ -118,7 +119,7 @@ def run(binding, attempt):
                         score_seconds=time.perf_counter()-begin;score_total+=score_seconds
                         record={"id":row["id"],"population":row["population"],"status":decoded["status"],
                             "decoded":decoded,"generated_ids":answer,"score":scored,"decode_seconds":decode_seconds,"scorer_seconds":score_seconds}
-                        stream.write(json.dumps(record,sort_keys=True)+"\n");counts[decoded["status"]]=counts.get(decoded["status"],0)+1
+                        stream.write(serialize(record)+"\n");counts[decoded["status"]]=counts.get(decoded["status"],0)+1
                         if (index+1)%100==0:print(json.dumps({"phase":"byt5-evaluation","label":label,"cases":index+1}),flush=True)
                 return {"cases":len(panel),"decode_seconds":decode_total,"scorer_seconds":score_total,
                     "complete_panel_wall_seconds":time.perf_counter()-tick,"status_counts":counts,

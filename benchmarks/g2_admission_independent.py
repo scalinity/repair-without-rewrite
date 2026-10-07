@@ -49,7 +49,7 @@ def run(binding, attempt):
         "independent-native.attempt01.json":"PASS_INDEPENDENT_G2_NATIVE_QUALIFICATION",
         "archived-evaluation-B100.attempt01.json":"PASS_G2_EXPANDED_ARCHIVED_ENDPOINT_EVALUATION",
         "archived-evaluation-C101.attempt01.json":"PASS_G2_EXPANDED_ARCHIVED_ENDPOINT_EVALUATION",
-        "byt5-qualification.attempt01.json":"PASS_G2_BYT5_RUNNER_100_UPDATES",
+        "byt5-qualification.attempt02.json":"PASS_G2_BYT5_RUNNER_100_UPDATES",
         "independent-byt5.attempt01.json":"PASS_INDEPENDENT_G2_BYT5_ACCOUNTING_STATE",
         "independent-cost.attempt01.json":"PASS_INDEPENDENT_G2_COST_RECONSTRUCTION",
         "expanded-evaluation-summary.attempt01.json":"PASS_COMPLETE_FAILURE_INCLUSIVE_QUALIFICATION_TABLES",
@@ -71,12 +71,24 @@ def run(binding, attempt):
     identities[str(calibration_path)] = sha256(calibration_path)
     assert calibration["status"] == "OBSERVED_USE_RECONSTRUCTED"
     assert calibration["calibration_unique_rows"] == calibration["student_evaluated_unique_rows"] == 1900
-    assert calibration["new_student_neural_case_evaluations"] == 16 * 1900
+    repair_path = directory / "byt5-record-repair.attempt01.json"
+    repair = json.loads(repair_path.read_text())
+    assert repair["status"] == "PASS_MECHANICAL_PRETRAINING_RECORD_REPAIR"
+    assert sha256(Path(repair["failed_receipt"])) == repair["failed_receipt_sha256"]
+    assert calibration["mechanical_repair_receipt_sha256"] == sha256(repair_path)
+    assert repair["completed_optimizer_updates"] == repair["successful_recorded_evaluations"] == 0
+    assert calibration["unwritten_failure_reference_uses"] == repair["unwritten_failure_reference_uses"]
+    assert len(repair["unwritten_failure_reference_uses"]) == 1
+    extra_id = repair["unwritten_failure_reference_uses"][0]["id"]
+    assert extra_id in calibration["calibration_ids"]
+    assert calibration["recorded_student_neural_case_evaluations"] == 16 * 1900
+    assert calibration["new_student_neural_case_evaluations"] == 16 * 1900 + 1
     assert len(calibration["evaluation_files"]) == 16
     assert all(row["completed_artifact"] and row["calibration_evaluations"] == 1900
                for row in calibration["evaluation_files"])
     assert len(calibration["per_id_student_evaluation_counts"]) == 1900
-    assert set(calibration["per_id_student_evaluation_counts"].values()) == {16}
+    assert calibration["per_id_student_evaluation_counts"] == {
+        name:17 if name == extra_id else 16 for name in calibration["calibration_ids"]}
     assert calibration["source_recognizer_calibration_calls"] == {"unique":1804,"replay":24}
     assert calibration["fit_performed"] is False and calibration["training_use_forbidden"] is True
     assert calibration["sealed_reference_use"] is False and calibration["scientific_recipes_started"] == 0

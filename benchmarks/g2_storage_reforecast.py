@@ -45,7 +45,7 @@ def run(binding, attempt):
             measured_max_metadata_bytes=max(metadata),future_checkpoints=39,
             metadata_allowance_per_checkpoint=max(16*1024**2,max(metadata)))
         native[arm]["calculated_future_bytes"] = 39 * (max(sizes) + native[arm]["metadata_allowance_per_checkpoint"])
-    by = json.loads(Path("experiments/manifests/generation_2/byt5-qualification.attempt01.json").read_text())
+    by = json.loads(Path("experiments/manifests/generation_2/byt5-qualification.attempt02.json").read_text())
     if by["status"] != "PASS_G2_BYT5_RUNNER_100_UPDATES":
         raise ValueError("native ByT5 storage layout required")
     by_sizes = {}

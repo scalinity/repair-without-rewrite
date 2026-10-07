@@ -1,0 +1,53 @@
+{
+  "audit_script_sha256": "6737a4209af3a761fb360669230bf403a3cd7ba9c3934c03a1fc3d5dcf5055e1",
+  "completed_optimizer_updates": 0,
+  "config_sha256": "2a7df0ca42ffe356fdfdf79ebed2b44e4da706b27cdcb2a2c9d4fbdb482c8119",
+  "corpus_freeze_sha256": "dd77f4e70346962d1fba1748fe5503c706eabd83cccdc1fb960ced937b69e67f",
+  "created_utc": "2026-10-07T13:33:20.391514+00:00",
+  "elapsed_seconds": 1.6461094580008648,
+  "failed_elapsed_seconds": 14.01187129097525,
+  "failed_receipt": "experiments/manifests/generation_2/byt5-qualification.attempt01.json",
+  "failed_receipt_sha256": "87e4f34bd1c92f66981aef589390edd388f4a566922cbfa96fab9d63808085e6",
+  "independent_method": "CPU portable initial state, original runner control flow and traceback, empty retained partial, frozen first-row role, independent recursive JSON normalization and aggregate equivalence for four synthetic statuses",
+  "initial_checkpoint_cpu_readback_zero_updates": true,
+  "initial_checkpoint_relative": "byt5-v1/qualification.attempt01.initial",
+  "initial_checkpoint_sha256": "238e896d40fd27976051c505771589b2c0eb3d67ec7bb5efa5fc441bcac93f04",
+  "maximum_training_updates": 100,
+  "no_automatic_retry": true,
+  "numerical_replay_used": false,
+  "original_runner_relative": "logs-v1/g2-byt5-qualification.pre-record-repair.py",
+  "original_runner_sha256": "3a4a5610672b07198dbe7893cbaa362a4f961e1f6c2060145ffd21ded95378c9",
+  "pairs_sha256": "d188c2a4ae8ed0b9ba8de05e3194f988cf1a2d06f96aa522e7c5f3ebfa9c5250",
+  "panel_sha256": "7a92da674399991fb1e282811f984e4018536e81b5400901038f78f44b5bb097",
+  "partial_evaluation_bytes": 0,
+  "partial_start_sha256": "64d4972a3037423b4df916399550248b9255f17dea3a2f73148658a519b16c52",
+  "qualified_attempt_predeclared": 2,
+  "repair": "Use unchanged scoring.triple.serialize instead of json.dumps for complete evaluation records; no scoring, data, optimizer, capacity, backend or seed change",
+  "repair_runner_sha256": "8ebe9f7b5b34277e6111128677c588ecb63bd9c9b81222f3c778a9163e35b09f",
+  "retained_partial_relative": "byt5-v1/qualification.attempt01.partial-x1baybwh",
+  "reviewed_commit": "54d707e1c71e1e23cf13441b5d878b2bd049da23",
+  "schema": "g2_byt5_mechanical_record_repair_v1",
+  "scientific_recipes_started": 0,
+  "scorer_algorithm_unchanged": true,
+  "status": "PASS_MECHANICAL_PRETRAINING_RECORD_REPAIR",
+  "successful_recorded_evaluations": 0,
+  "synthetic_statuses_verified": [
+    "complete",
+    "capped",
+    "invalid_utf8",
+    "complete"
+  ],
+  "traceback_relative": "logs-v1/byt5-qualification.attempt01.log",
+  "traceback_sha256": "7b52a366d2a0d0a4a5475a451da8af0ebcab20fb7d02d818e7cbd26b46bbe7a6",
+  "unwritten_failure_reference_uses": [
+    {
+      "decoded_output_unavailable": true,
+      "id": "1093-132891-0004",
+      "phase": "initial",
+      "population": "natural",
+      "reason": "record serialization failed after decoding and scoring",
+      "role": "calibration",
+      "scored": true
+    }
+  ]
+}

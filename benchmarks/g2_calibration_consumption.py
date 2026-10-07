@@ -44,12 +44,23 @@ def run(binding, attempt):
                 files.append(dict(artifact_relative=str(path.relative_to(root.root)),
                     file_sha256=sha256(path),calibration_evaluations=count,
                     completed_artifact=".partial-" not in path.parent.name))
+    recorded_uses = sum(uses.values())
+    repair_path = Path("experiments/manifests/generation_2/byt5-record-repair.attempt01.json")
+    repair = json.loads(repair_path.read_text())
+    failed_path = Path(repair["failed_receipt"])
+    assert sha256(failed_path) == repair["failed_receipt_sha256"]
+    assert repair["completed_optimizer_updates"] == 0 and repair["successful_recorded_evaluations"] == 0
+    unwritten = repair["unwritten_failure_reference_uses"]
+    assert len(unwritten) == 1 and unwritten[0]["id"] in ids and unwritten[0]["role"] == "calibration"
+    uses[unwritten[0]["id"]] += 1
     result = dict(schema="g2_observed_calibration_consumption_v1",created_utc=datetime.now(timezone.utc).isoformat(),
         prospective_receipt=str(prospective),prospective_receipt_sha256=sha256(prospective),
         calibration_ids=sorted(ids),calibration_unique_rows=1900,
         expanded_corpus_support_and_reference_qualification_rows=1900,
         source_recognizer_calibration_calls=dict(calls),source_recognizer_calls=sum(calls.values()),
         new_student_neural_case_evaluations=sum(uses.values()),student_evaluated_unique_rows=len(uses),
+        recorded_student_neural_case_evaluations=recorded_uses,
+        unwritten_failure_reference_uses=unwritten,mechanical_repair_receipt_sha256=sha256(repair_path),
         per_id_student_evaluation_counts=dict(uses),evaluation_files=files,
         previous_neural_case_evaluations=original["previous_neural_case_evaluations"],
         remaining_untouched_duration_eligible_calibration_rows=0,

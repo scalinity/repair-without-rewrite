@@ -32,7 +32,7 @@ def run(binding, attempt):
             for label in ("initial","final"):
                 inputs.append((f"BENCH-{arm}-{data}-{condition}-{label}",f"bench-v1/{arm}-{data}-{condition}.attempt01",label))
     for label in ("initial","update100"):
-        inputs.append(("ByT5-qualification-"+label,"byt5-v1/qualification.attempt01",label))
+        inputs.append(("ByT5-qualification-"+label,"byt5-v1/qualification.attempt02",label))
     from src.scoring.records import aggregate
     from src.scoring.g2_bootstrap import paired_group_intervals
     tables = {}

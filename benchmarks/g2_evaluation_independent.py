@@ -38,7 +38,7 @@ def run(binding, attempt):
                     f"bench-v1/{arm}-{data}-{condition}.attempt01", checkpoint)
     for checkpoint in ("initial", "update100"):
         expected_files["ByT5-qualification-" + checkpoint] = (
-            "byt5-v1/qualification.attempt01", checkpoint)
+            "byt5-v1/qualification.attempt02", checkpoint)
     assert len(expected_files) == 16 and set(report["tables"]) == set(expected_files)
     by_metric = {key:{} for key in report["paired_source_group_bootstrap"]}
     raw = None

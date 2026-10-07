@@ -1,0 +1,546 @@
+{
+  "after": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 495044755456,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "arm": "B100",
+  "attempt": 1,
+  "before": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 495088046080,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "captured_dirty_status": "?? experiments/manifests/generation_2/bench-C101-D1-U8.attempt01.json\n?? experiments/manifests/generation_2/cold-C101-D1-U8.attempt01.boundary.json\n?? experiments/manifests/generation_2/cold-C101-D1-U8.attempt01.mid.json\n?? experiments/manifests/generation_2/storage-monitor.attempt20.json\n?? experiments/manifests/generation_2/storage-monitor.attempt21.json\n?? experiments/manifests/generation_2/storage-monitor.attempt22.json\n",
+  "checkpoint_files": {
+    "arrays.npz": "a6a6674161503245ace1dceade90369960f68c68657e4e9de33e0e04a0015486",
+    "metadata.json": "565b73eaea33ec152ed6cf78f1cd6f1ec49eaada628ee2b268026981772ad7fb"
+  },
+  "checkpoint_relative": "exports/six-10m-probes/B100-seed42-lr3e-04/attempt01/checkpoint-update305",
+  "code_commit": "6823b3e0d2cf4ab0233ca935e2dbfcd9a3e48c35",
+  "code_sha256": "07497b24e77ba1c4f984dff00f1dca44a9a2d27f5dd46f72348cbcb8d83ac596",
+  "elapsed_seconds": 429.110187165963,
+  "evaluation": {
+    "cases": 2984,
+    "checkpoint_label": "archived-endpoint",
+    "complete_panel_wall_seconds": 423.1442823340185,
+    "decode_seconds": 410.2722185649327,
+    "records_sha256": "e844c707cf6fcc9fccfe285737265e96c6928743f48cf94935d2c5ef619aa726",
+    "scope": "DEVELOPMENT_RUNTIME_PRICING_NOT_LR_SELECTION_OR_MODEL_QUALITY_ADMISSION",
+    "scorer_seconds": 11.237340657506138,
+    "status_counts": {
+      "capped": 3,
+      "completed": 2981
+    }
+  },
+  "load_seconds": 1.0189006250002421,
+  "native_updates_performed": 0,
+  "output_relative": "evaluation-v1/archived-B100-3e-4-endpoint.attempt01",
+  "panel_sha256": "7a92da674399991fb1e282811f984e4018536e81b5400901038f78f44b5bb097",
+  "resume_policy": "immutable original checkpoint loaded read-only; no G1 result mutation or extra training",
+  "schema": "g2_archived_endpoint_evaluation_v1",
+  "scientific_recipes_started": 0,
+  "seed": 42,
+  "status": "PASS_G2_EXPANDED_ARCHIVED_ENDPOINT_EVALUATION",
+  "subsets": {
+    "calibration": {
+      "aggregate": {
+        "completed_repair": [
+          58,
+          58
+        ],
+        "completed_repair_rate": [
+          0.05691854759568204,
+          0.05691854759568204
+        ],
+        "introduced": [
+          42739,
+          42739
+        ],
+        "introduced_rate": [
+          1.1051379515424198,
+          1.1051379515424198
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 43700,
+        "reference_words": 38673,
+        "repair": [
+          58,
+          58
+        ],
+        "source_errors": 1019,
+        "wer": 1.129987329661521
+      },
+      "cases": 1900,
+      "status_counts": {
+        "completed": 1900
+      }
+    },
+    "dev-clean": {
+      "aggregate": {
+        "completed_repair": [
+          5,
+          5
+        ],
+        "completed_repair_rate": [
+          0.031446540880503145,
+          0.031446540880503145
+        ],
+        "introduced": [
+          8086,
+          8086
+        ],
+        "introduced_rate": [
+          1.1674848397343345,
+          1.1674848397343345
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 8240,
+        "reference_words": 6926,
+        "repair": [
+          5,
+          5
+        ],
+        "source_errors": 159,
+        "wer": 1.1897198960438926
+      },
+      "cases": 443,
+      "status_counts": {
+        "completed": 443
+      }
+    },
+    "dev-other": {
+      "aggregate": {
+        "completed_repair": [
+          13,
+          14
+        ],
+        "completed_repair_rate": [
+          0.05531914893617021,
+          0.059574468085106386
+        ],
+        "introduced": [
+          6331,
+          6332
+        ],
+        "introduced_rate": [
+          1.188473812652525,
+          1.1886615355734935
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 6553,
+        "reference_words": 5327,
+        "repair": [
+          13,
+          14
+        ],
+        "source_errors": 235,
+        "wer": 1.2301483011075651
+      },
+      "cases": 353,
+      "status_counts": {
+        "completed": 353
+      }
+    },
+    "generated/clean": {
+      "aggregate": {
+        "completed_repair": [
+          0,
+          0
+        ],
+        "completed_repair_rate": null,
+        "introduced": [
+          627,
+          627
+        ],
+        "introduced_rate": [
+          0.38419117647058826,
+          0.38419117647058826
+        ],
+        "invalid_or_incomplete": 1,
+        "output_errors": 627,
+        "reference_words": 1632,
+        "repair": [
+          0,
+          0
+        ],
+        "source_errors": 0,
+        "wer": 0.38419117647058826
+      },
+      "cases": 96,
+      "status_counts": {
+        "capped": 1,
+        "completed": 95
+      }
+    },
+    "generated/mixed": {
+      "aggregate": {
+        "completed_repair": [
+          109,
+          109
+        ],
+        "completed_repair_rate": [
+          0.5677083333333334,
+          0.5677083333333334
+        ],
+        "introduced": [
+          505,
+          505
+        ],
+        "introduced_rate": [
+          0.30943627450980393,
+          0.30943627450980393
+        ],
+        "invalid_or_incomplete": 1,
+        "output_errors": 588,
+        "reference_words": 1632,
+        "repair": [
+          109,
+          109
+        ],
+        "source_errors": 192,
+        "wer": 0.3602941176470588
+      },
+      "cases": 96,
+      "status_counts": {
+        "capped": 1,
+        "completed": 95
+      }
+    },
+    "generated/required": {
+      "aggregate": {
+        "completed_repair": [
+          228,
+          228
+        ],
+        "completed_repair_rate": [
+          0.59375,
+          0.59375
+        ],
+        "introduced": [
+          425,
+          425
+        ],
+        "introduced_rate": [
+          0.2604166666666667,
+          0.2604166666666667
+        ],
+        "invalid_or_incomplete": 1,
+        "output_errors": 581,
+        "reference_words": 1632,
+        "repair": [
+          228,
+          228
+        ],
+        "source_errors": 384,
+        "wer": 0.3560049019607843
+      },
+      "cases": 96,
+      "status_counts": {
+        "capped": 1,
+        "completed": 95
+      }
+    },
+    "hpo_development": {
+      "aggregate": {
+        "completed_repair": [
+          18,
+          19
+        ],
+        "completed_repair_rate": [
+          0.04568527918781726,
+          0.048223350253807105
+        ],
+        "introduced": [
+          14417,
+          14418
+        ],
+        "introduced_rate": [
+          1.1766098098424875,
+          1.1766914225087735
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 14793,
+        "reference_words": 12253,
+        "repair": [
+          18,
+          19
+        ],
+        "source_errors": 394,
+        "wer": 1.2072961723659512
+      },
+      "cases": 796,
+      "status_counts": {
+        "completed": 796
+      }
+    },
+    "legacy108": {
+      "aggregate": {
+        "completed_repair": [
+          2,
+          2
+        ],
+        "completed_repair_rate": [
+          0.03125,
+          0.03125
+        ],
+        "introduced": [
+          2522,
+          2522
+        ],
+        "introduced_rate": [
+          1.111013215859031,
+          1.111013215859031
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 2584,
+        "reference_words": 2270,
+        "repair": [
+          2,
+          2
+        ],
+        "source_errors": 64,
+        "wer": 1.1383259911894272
+      },
+      "cases": 108,
+      "status_counts": {
+        "completed": 108
+      }
+    },
+    "natural-clean": {
+      "aggregate": {
+        "completed_repair": [
+          35,
+          35
+        ],
+        "completed_repair_rate": [
+          0.042997542997543,
+          0.042997542997543
+        ],
+        "introduced": [
+          35121,
+          35121
+        ],
+        "introduced_rate": [
+          1.1255648495336987,
+          1.1255648495336987
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 35900,
+        "reference_words": 31203,
+        "repair": [
+          35,
+          35
+        ],
+        "source_errors": 814,
+        "wer": 1.1505303977181682
+      },
+      "cases": 1644,
+      "status_counts": {
+        "completed": 1644
+      }
+    },
+    "natural-other": {
+      "aggregate": {
+        "completed_repair": [
+          41,
+          42
+        ],
+        "completed_repair_rate": [
+          0.06844741235392321,
+          0.07011686143572621
+        ],
+        "introduced": [
+          22035,
+          22036
+        ],
+        "introduced_rate": [
+          1.1172235461136744,
+          1.1172742483395022
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 22593,
+        "reference_words": 19723,
+        "repair": [
+          41,
+          42
+        ],
+        "source_errors": 599,
+        "wer": 1.1455153881255387
+      },
+      "cases": 1052,
+      "status_counts": {
+        "completed": 1052
+      }
+    },
+    "natural_all": {
+      "aggregate": {
+        "completed_repair": [
+          76,
+          77
+        ],
+        "completed_repair_rate": [
+          0.0537862703467799,
+          0.05449398443029016
+        ],
+        "introduced": [
+          57156,
+          57157
+        ],
+        "introduced_rate": [
+          1.1223343675136472,
+          1.1223540038487216
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 58493,
+        "reference_words": 50926,
+        "repair": [
+          76,
+          77
+        ],
+        "source_errors": 1413,
+        "wer": 1.148588147508149
+      },
+      "cases": 2696,
+      "status_counts": {
+        "completed": 2696
+      }
+    },
+    "new2588": {
+      "aggregate": {
+        "completed_repair": [
+          74,
+          75
+        ],
+        "completed_repair_rate": [
+          0.05485544848035582,
+          0.05559673832468495
+        ],
+        "introduced": [
+          54634,
+          54635
+        ],
+        "introduced_rate": [
+          1.1228625452153898,
+          1.1228830976652417
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 55909,
+        "reference_words": 48656,
+        "repair": [
+          74,
+          75
+        ],
+        "source_errors": 1349,
+        "wer": 1.1490669187767182
+      },
+      "cases": 2588,
+      "status_counts": {
+        "completed": 2588
+      }
+    },
+    "train-clean-100": {
+      "aggregate": {
+        "completed_repair": [
+          2,
+          2
+        ],
+        "completed_repair_rate": [
+          0.028169014084507043,
+          0.028169014084507043
+        ],
+        "introduced": [
+          2996,
+          2996
+        ],
+        "introduced_rate": [
+          1.1166604547148715,
+          1.1166604547148715
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 3065,
+        "reference_words": 2683,
+        "repair": [
+          2,
+          2
+        ],
+        "source_errors": 71,
+        "wer": 1.1423779351472232
+      },
+      "cases": 125,
+      "status_counts": {
+        "completed": 125
+      }
+    },
+    "train-clean-360": {
+      "aggregate": {
+        "completed_repair": [
+          28,
+          28
+        ],
+        "completed_repair_rate": [
+          0.04794520547945205,
+          0.04794520547945205
+        ],
+        "introduced": [
+          24039,
+          24039
+        ],
+        "introduced_rate": [
+          1.113225896082245,
+          1.113225896082245
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 24595,
+        "reference_words": 21594,
+        "repair": [
+          28,
+          28
+        ],
+        "source_errors": 584,
+        "wer": 1.1389737890154672
+      },
+      "cases": 1076,
+      "status_counts": {
+        "completed": 1076
+      }
+    },
+    "train-other-500": {
+      "aggregate": {
+        "completed_repair": [
+          28,
+          28
+        ],
+        "completed_repair_rate": [
+          0.07692307692307693,
+          0.07692307692307693
+        ],
+        "introduced": [
+          15704,
+          15704
+        ],
+        "introduced_rate": [
+          1.090858571825507,
+          1.090858571825507
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 16040,
+        "reference_words": 14396,
+        "repair": [
+          28,
+          28
+        ],
+        "source_errors": 364,
+        "wer": 1.1141983884412336
+      },
+      "cases": 699,
+      "status_counts": {
+        "completed": 699
+      }
+    }
+  }
+}

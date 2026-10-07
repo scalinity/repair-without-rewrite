@@ -43,7 +43,7 @@ def run(binding, attempt):
                 cold = json.loads((directory / f"cold-{name}.{kind}.json").read_text())
                 assert cold["status"] == "PASS_EXACT_G2_COLD_RESUME"
                 measured += cold["elapsed_seconds"]
-    byt5 = json.loads((directory / "byt5-qualification.attempt01.json").read_text())
+    byt5 = json.loads((directory / "byt5-qualification.attempt02.json").read_text())
     assert byt5["status"] == "PASS_G2_BYT5_RUNNER_100_UPDATES"
     measured += byt5["elapsed_seconds"]
     seconds = (35283 * byt5["conservative_update_seconds"]
@@ -53,7 +53,7 @@ def run(binding, attempt):
     future = math.fsum(value for _, value in lines)
     assumed = calculated = 0.
     expected_shared = {
-        "source-archives.attempt01.json", "audio-train-clean-100.attempt02.json",
+        "byt5-record-repair.attempt01.json", "byt5-qualification.attempt01.json", "source-archives.attempt01.json", "audio-train-clean-100.attempt02.json",
         "audio-train-clean-360.attempt03.json", "audio-train-other-500.attempt01.json",
         "audio-dev-clean.attempt01.json", "audio-dev-other.attempt01.json",
         "parakeet-sources.attempt01.json", "corpus-freeze.attempt01.json",

@@ -1,0 +1,542 @@
+{
+  "after": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 495010918400,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "arm": "C101",
+  "attempt": 1,
+  "before": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 495044739072,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "captured_dirty_status": "?? experiments/manifests/generation_2/archived-evaluation-B100.attempt01.json\n",
+  "checkpoint_files": {
+    "arrays.npz": "51f9cb80ff32324149a142f2bc3a0ae8448c0c94a03f7ba16e52dcb0c887a079",
+    "metadata.json": "cd0dbd29fceda734bae8934127fd2d136adc409664fb2f757139906747fe537e"
+  },
+  "checkpoint_relative": "exports/six-10m-probes/C101-seed42-lr3e-04/attempt01/checkpoint-update305",
+  "code_commit": "54d707e1c71e1e23cf13441b5d878b2bd049da23",
+  "code_sha256": "07497b24e77ba1c4f984dff00f1dca44a9a2d27f5dd46f72348cbcb8d83ac596",
+  "elapsed_seconds": 67.19707529200241,
+  "evaluation": {
+    "cases": 2984,
+    "checkpoint_label": "archived-endpoint",
+    "complete_panel_wall_seconds": 61.70974958402803,
+    "decode_seconds": 51.8308239596081,
+    "records_sha256": "6b13839b590b50e0af24ae593f017d22202cab2a0598247328cb1af5c21b47a8",
+    "scope": "DEVELOPMENT_RUNTIME_PRICING_NOT_LR_SELECTION_OR_MODEL_QUALITY_ADMISSION",
+    "scorer_seconds": 8.862718072428834,
+    "status_counts": {
+      "completed": 2984
+    }
+  },
+  "load_seconds": 1.011655709007755,
+  "native_updates_performed": 0,
+  "output_relative": "evaluation-v1/archived-C101-3e-4-endpoint.attempt01",
+  "panel_sha256": "7a92da674399991fb1e282811f984e4018536e81b5400901038f78f44b5bb097",
+  "resume_policy": "immutable original checkpoint loaded read-only; no G1 result mutation or extra training",
+  "schema": "g2_archived_endpoint_evaluation_v1",
+  "scientific_recipes_started": 0,
+  "seed": 42,
+  "status": "PASS_G2_EXPANDED_ARCHIVED_ENDPOINT_EVALUATION",
+  "subsets": {
+    "calibration": {
+      "aggregate": {
+        "completed_repair": [
+          4,
+          5
+        ],
+        "completed_repair_rate": [
+          0.003925417075564278,
+          0.004906771344455349
+        ],
+        "introduced": [
+          801,
+          802
+        ],
+        "introduced_rate": [
+          0.020712124738189435,
+          0.02073798257182013
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 1816,
+        "reference_words": 38673,
+        "repair": [
+          4,
+          5
+        ],
+        "source_errors": 1019,
+        "wer": 0.04695782587334833
+      },
+      "cases": 1900,
+      "status_counts": {
+        "completed": 1900
+      }
+    },
+    "dev-clean": {
+      "aggregate": {
+        "completed_repair": [
+          0,
+          0
+        ],
+        "completed_repair_rate": [
+          0.0,
+          0.0
+        ],
+        "introduced": [
+          127,
+          127
+        ],
+        "introduced_rate": [
+          0.018336702281259023,
+          0.018336702281259023
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 286,
+        "reference_words": 6926,
+        "repair": [
+          0,
+          0
+        ],
+        "source_errors": 159,
+        "wer": 0.0412936760034652
+      },
+      "cases": 443,
+      "status_counts": {
+        "completed": 443
+      }
+    },
+    "dev-other": {
+      "aggregate": {
+        "completed_repair": [
+          1,
+          1
+        ],
+        "completed_repair_rate": [
+          0.00425531914893617,
+          0.00425531914893617
+        ],
+        "introduced": [
+          125,
+          125
+        ],
+        "introduced_rate": [
+          0.023465365121081282,
+          0.023465365121081282
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 359,
+        "reference_words": 5327,
+        "repair": [
+          1,
+          1
+        ],
+        "source_errors": 235,
+        "wer": 0.06739252862774545
+      },
+      "cases": 353,
+      "status_counts": {
+        "completed": 353
+      }
+    },
+    "generated/clean": {
+      "aggregate": {
+        "completed_repair": [
+          0,
+          0
+        ],
+        "completed_repair_rate": null,
+        "introduced": [
+          0,
+          0
+        ],
+        "introduced_rate": [
+          0.0,
+          0.0
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 0,
+        "reference_words": 1632,
+        "repair": [
+          0,
+          0
+        ],
+        "source_errors": 0,
+        "wer": 0.0
+      },
+      "cases": 96,
+      "status_counts": {
+        "completed": 96
+      }
+    },
+    "generated/mixed": {
+      "aggregate": {
+        "completed_repair": [
+          126,
+          126
+        ],
+        "completed_repair_rate": [
+          0.65625,
+          0.65625
+        ],
+        "introduced": [
+          0,
+          0
+        ],
+        "introduced_rate": [
+          0.0,
+          0.0
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 66,
+        "reference_words": 1632,
+        "repair": [
+          126,
+          126
+        ],
+        "source_errors": 192,
+        "wer": 0.04044117647058824
+      },
+      "cases": 96,
+      "status_counts": {
+        "completed": 96
+      }
+    },
+    "generated/required": {
+      "aggregate": {
+        "completed_repair": [
+          208,
+          208
+        ],
+        "completed_repair_rate": [
+          0.5416666666666666,
+          0.5416666666666666
+        ],
+        "introduced": [
+          6,
+          6
+        ],
+        "introduced_rate": [
+          0.003676470588235294,
+          0.003676470588235294
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 182,
+        "reference_words": 1632,
+        "repair": [
+          208,
+          208
+        ],
+        "source_errors": 384,
+        "wer": 0.11151960784313726
+      },
+      "cases": 96,
+      "status_counts": {
+        "completed": 96
+      }
+    },
+    "hpo_development": {
+      "aggregate": {
+        "completed_repair": [
+          1,
+          1
+        ],
+        "completed_repair_rate": [
+          0.0025380710659898475,
+          0.0025380710659898475
+        ],
+        "introduced": [
+          252,
+          252
+        ],
+        "introduced_rate": [
+          0.020566391904023505,
+          0.020566391904023505
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 645,
+        "reference_words": 12253,
+        "repair": [
+          1,
+          1
+        ],
+        "source_errors": 394,
+        "wer": 0.05264016975434587
+      },
+      "cases": 796,
+      "status_counts": {
+        "completed": 796
+      }
+    },
+    "legacy108": {
+      "aggregate": {
+        "completed_repair": [
+          0,
+          0
+        ],
+        "completed_repair_rate": [
+          0.0,
+          0.0
+        ],
+        "introduced": [
+          64,
+          64
+        ],
+        "introduced_rate": [
+          0.028193832599118944,
+          0.028193832599118944
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 128,
+        "reference_words": 2270,
+        "repair": [
+          0,
+          0
+        ],
+        "source_errors": 64,
+        "wer": 0.05638766519823789
+      },
+      "cases": 108,
+      "status_counts": {
+        "completed": 108
+      }
+    },
+    "natural-clean": {
+      "aggregate": {
+        "completed_repair": [
+          2,
+          2
+        ],
+        "completed_repair_rate": [
+          0.002457002457002457,
+          0.002457002457002457
+        ],
+        "introduced": [
+          638,
+          638
+        ],
+        "introduced_rate": [
+          0.02044675191487998,
+          0.02044675191487998
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 1450,
+        "reference_words": 31203,
+        "repair": [
+          2,
+          2
+        ],
+        "source_errors": 814,
+        "wer": 0.046469890715636314
+      },
+      "cases": 1644,
+      "status_counts": {
+        "completed": 1644
+      }
+    },
+    "natural-other": {
+      "aggregate": {
+        "completed_repair": [
+          3,
+          4
+        ],
+        "completed_repair_rate": [
+          0.005008347245409015,
+          0.00667779632721202
+        ],
+        "introduced": [
+          415,
+          416
+        ],
+        "introduced_rate": [
+          0.02104142371850124,
+          0.021092125944328955
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 1011,
+        "reference_words": 19723,
+        "repair": [
+          3,
+          4
+        ],
+        "source_errors": 599,
+        "wer": 0.05125995031181869
+      },
+      "cases": 1052,
+      "status_counts": {
+        "completed": 1052
+      }
+    },
+    "natural_all": {
+      "aggregate": {
+        "completed_repair": [
+          5,
+          6
+        ],
+        "completed_repair_rate": [
+          0.003538570417551309,
+          0.004246284501061571
+        ],
+        "introduced": [
+          1053,
+          1054
+        ],
+        "introduced_rate": [
+          0.02067706083336606,
+          0.020696697168440484
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 2461,
+        "reference_words": 50926,
+        "repair": [
+          5,
+          6
+        ],
+        "source_errors": 1413,
+        "wer": 0.04832502061815183
+      },
+      "cases": 2696,
+      "status_counts": {
+        "completed": 2696
+      }
+    },
+    "new2588": {
+      "aggregate": {
+        "completed_repair": [
+          5,
+          6
+        ],
+        "completed_repair_rate": [
+          0.0037064492216456633,
+          0.004447739065974796
+        ],
+        "introduced": [
+          989,
+          990
+        ],
+        "introduced_rate": [
+          0.020326372903650115,
+          0.02034692535350214
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 2333,
+        "reference_words": 48656,
+        "repair": [
+          5,
+          6
+        ],
+        "source_errors": 1349,
+        "wer": 0.047948865504768165
+      },
+      "cases": 2588,
+      "status_counts": {
+        "completed": 2588
+      }
+    },
+    "train-clean-100": {
+      "aggregate": {
+        "completed_repair": [
+          0,
+          0
+        ],
+        "completed_repair_rate": [
+          0.0,
+          0.0
+        ],
+        "introduced": [
+          67,
+          67
+        ],
+        "introduced_rate": [
+          0.024972046216921357,
+          0.024972046216921357
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 138,
+        "reference_words": 2683,
+        "repair": [
+          0,
+          0
+        ],
+        "source_errors": 71,
+        "wer": 0.05143496086470369
+      },
+      "cases": 125,
+      "status_counts": {
+        "completed": 125
+      }
+    },
+    "train-clean-360": {
+      "aggregate": {
+        "completed_repair": [
+          2,
+          2
+        ],
+        "completed_repair_rate": [
+          0.003424657534246575,
+          0.003424657534246575
+        ],
+        "introduced": [
+          444,
+          444
+        ],
+        "introduced_rate": [
+          0.020561267018616283,
+          0.020561267018616283
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 1026,
+        "reference_words": 21594,
+        "repair": [
+          2,
+          2
+        ],
+        "source_errors": 584,
+        "wer": 0.047513198110586276
+      },
+      "cases": 1076,
+      "status_counts": {
+        "completed": 1076
+      }
+    },
+    "train-other-500": {
+      "aggregate": {
+        "completed_repair": [
+          2,
+          3
+        ],
+        "completed_repair_rate": [
+          0.005494505494505495,
+          0.008241758241758242
+        ],
+        "introduced": [
+          290,
+          291
+        ],
+        "introduced_rate": [
+          0.020144484579049736,
+          0.020213948318977493
+        ],
+        "invalid_or_incomplete": 0,
+        "output_errors": 652,
+        "reference_words": 14396,
+        "repair": [
+          2,
+          3
+        ],
+        "source_errors": 364,
+        "wer": 0.045290358432898026
+      },
+      "cases": 699,
+      "status_counts": {
+        "completed": 699
+      }
+    }
+  }
+}

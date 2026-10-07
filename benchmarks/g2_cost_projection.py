@@ -54,7 +54,7 @@ def run(binding,attempt):
                 name_cold=f"cold-{name}.{kind}.json";cold,identity=load(name_cold);inputs[name_cold]=identity
                 if cold["status"]!="PASS_EXACT_G2_COLD_RESUME":raise ValueError("every cold qualification cost and status required")
                 qualification+=cold["elapsed_seconds"]
-    byt5,identity=load("byt5-qualification.attempt01.json");inputs["byt5-qualification.attempt01.json"]=identity
+    byt5,identity=load("byt5-qualification.attempt02.json");inputs["byt5-qualification.attempt02.json"]=identity
     if byt5["status"]!="PASS_G2_BYT5_RUNNER_100_UPDATES":raise ValueError("native ByT5 runner qualification required")
     qualification+=byt5["elapsed_seconds"]
     by_train=35283*byt5["conservative_update_seconds"]
@@ -67,7 +67,7 @@ def run(binding,attempt):
         "conservative_update_seconds":byt5["conservative_update_seconds"],"optimizer_updates":35283,
         "forecast_assumption":"charge final short batch at full-batch conservative rate; charge larger complete panel at all four endpoints"})
     shared=[]
-    for name in ("source-archives.attempt01.json","audio-train-clean-100.attempt02.json","audio-train-clean-360.attempt03.json",
+    for name in ("byt5-record-repair.attempt01.json","byt5-qualification.attempt01.json","source-archives.attempt01.json","audio-train-clean-100.attempt02.json","audio-train-clean-360.attempt03.json",
             "audio-train-other-500.attempt01.json","audio-dev-clean.attempt01.json","audio-dev-other.attempt01.json",
             "parakeet-sources.attempt01.json","corpus-freeze.attempt01.json","compatibility-B100.attempt02.json",
             "compatibility-C101.attempt01.json","compatibility-C101.attempt02.json","archived-evaluation-B100.attempt01.json",

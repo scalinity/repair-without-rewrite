@@ -1,0 +1,24 @@
+{
+  "code_commit": "54d707e1c71e1e23cf13441b5d878b2bd049da23",
+  "created_utc": "2026-10-07T13:35:19.063325+00:00",
+  "failed": 0,
+  "log_sha256": "d9af72198f4c775047b74bb099668ea7c1d0cb25ec183d439c451525f756886c",
+  "passed": 33,
+  "schema": "g2_bounded_cpu_test_v1",
+  "scientific_recipes_started": 0,
+  "scope": "Actual scored-record set serialization, aggregation equivalence, missing-root guards, accounting, fixed ByT5 batch geometry and descriptive bootstrap; final full suite pending",
+  "seconds": 0.33,
+  "skipped": 0,
+  "source_hashes": {
+    "benchmarks/g2_admission_independent.py": "851399f9e8a30249947f10245737f66c4b65b2aa78e4940e429b5e3078854e9e",
+    "benchmarks/g2_byt5_independent.py": "abe0c174a1710f47d47b8331d0d40cf180ba5329077cbcb4225c753be161d0c2",
+    "benchmarks/g2_byt5_qualification.py": "8ebe9f7b5b34277e6111128677c588ecb63bd9c9b81222f3c778a9163e35b09f",
+    "benchmarks/g2_calibration_consumption.py": "6ff04b72ddddd381ded9fd4e6ebc001f277cc0b5c5eb489ab9c0eff9229634f9",
+    "benchmarks/g2_cost_independent.py": "6cbb56c12b7a06aa0b36bf96930dbe84f0f6441284241e44a59b79a176c79be0",
+    "benchmarks/g2_cost_projection.py": "389e5b8b7202419c8da83e9acbc5cad6ee2fb9ea01b3626b0c1e410abf9bb9e8",
+    "benchmarks/g2_evaluation_independent.py": "1b10e1fbceb5a271e7ecacdde8669fa6ebe659ba60fa059be49a1e2108bb7b5c",
+    "benchmarks/g2_evaluation_summary.py": "a065bce340e5fa8841d2f134f34c4014a508b733fb427987c417edee53eb1a23",
+    "benchmarks/g2_storage_reforecast.py": "59b86f29252bf6541e83c616e085c8ad7704e9c764515d220ffb953447098366"
+  },
+  "status": "PASS"
+}
