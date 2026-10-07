@@ -1,0 +1,25 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "new validator interpreted inherited start-stop partition pairs as index lists",
+      "failed": 5,
+      "full_model_runs": 0,
+      "log_sha256": "381a79c4b8405c546b76e3081c1268c5d8ac1111a7770e4e82994a47d183f2ec",
+      "passed": 0,
+      "seconds": 0.13
+    },
+    {
+      "attempt": 2,
+      "correction": "retain the inherited start-stop tuple partition; restore sorted JSON C denominators in inherited action/start/end/vocabulary reduction order",
+      "failed": 0,
+      "full_model_runs": 0,
+      "log_sha256": "0fdfeefecbe9ec7a9bbf83b5878ff58a3e7c2862e83acfc9b42c5f8cf6996ab7",
+      "passed": 5,
+      "seconds": 4.31
+    }
+  ],
+  "schema": "g2_native_unit_test_attempts_v1",
+  "scientific_recipes_started": 0,
+  "scope": "synthetic small-model unit fixtures only; no full-model native BENCH or fresh-process G2 resume qualification claimed"
+}

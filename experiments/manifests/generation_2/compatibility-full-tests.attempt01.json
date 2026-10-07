@@ -1,0 +1,14 @@
+{
+  "captured_dirty_status": " M benchmarks/g2_source_audio.py\n?? benchmarks/g2_compatibility_independent.py\n?? benchmarks/g2_historical_compatibility.py\n?? benchmarks/g2_parakeet_sources.py\n?? experiments/manifests/generation_2/audio-train-clean-360.attempt01.json\n?? experiments/manifests/generation_2/audio-train-clean-360.attempt02.json\n?? experiments/manifests/generation_2/audio-train-clean-360.attempt03.json\n?? experiments/manifests/generation_2/compatibility-B100.attempt01.json\n?? experiments/manifests/generation_2/compatibility-B100.attempt02.json\n?? experiments/manifests/generation_2/compatibility-C101.attempt01.json\n?? experiments/manifests/generation_2/compatibility-C101.attempt02.json\n?? experiments/manifests/generation_2/compatibility-comparator-audit.attempt01.json\n?? experiments/manifests/generation_2/independent-compatibility.attempt01.json\n?? experiments/manifests/generation_2/independent-compatibility.attempt02.json\n?? src/data/g2_byt5.py\n?? src/data/g2_stream.py\n?? src/models/g2_training.py\n?? src/scoring/g2_bootstrap.py\n?? tests/data/test_g2_byt5.py\n?? tests/data/test_g2_qualification_guards.py\n?? tests/data/test_g2_stream.py\n?? tests/models/test_g2_training.py\n?? tests/scoring/test_g2_bootstrap.py\n",
+  "code_commit": "c468c85403fb1fe0fa7701b72c921fca7d934832",
+  "command": "MLX_ENABLE_TF32=0 .venv/bin/python -m pytest",
+  "failed": 0,
+  "log_relative": "logs-v1/compatibility-full-tests.attempt01.log",
+  "log_sha256": "65b4a03109ca4265e0b28d3c9d0be359207b8e578108f117c923f0cafbf8a8b8",
+  "passed": 434,
+  "schema": "g2_full_suite_receipt_v1",
+  "scientific_recipes_started": 0,
+  "seconds": 38.96,
+  "skipped": 0,
+  "synthetic_fixture_temp_area": "qualification-v1/integrated-tests.attempt03"
+}

@@ -1,0 +1,74 @@
+{
+  "after": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 561611792384,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "arms": {
+    "B100": {
+      "checkpoints": [
+        {
+          "array_bytes_exact": true,
+          "arrays_sha256": "488d3ba292f0df45420d6920d25591b1e65c07e149c0b3fdddd4159b8bf3df82",
+          "forward_probe_exact": true,
+          "reader_exact": true,
+          "scalars_compared_exactly": 402745346,
+          "step": 0
+        },
+        {
+          "array_bytes_exact": true,
+          "arrays_sha256": "2486f25a518ad37559094ae326a9db3ebd6219d95eb82f6172bf5994e0a1c8d3",
+          "forward_probe_exact": true,
+          "reader_exact": true,
+          "scalars_compared_exactly": 402745346,
+          "step": 31
+        }
+      ],
+      "committed_exposure": 1017149,
+      "loss_denominators_lr_gradient_norm_exact": true,
+      "native_consumption_exact": true,
+      "pass": true,
+      "updates_compared_exactly": 31
+    },
+    "C101": {
+      "checkpoints": [
+        {
+          "array_bytes_exact": true,
+          "arrays_sha256": "a5e574c00177ac7d97440ad643053cc7279b7600c547de97c26220dd466f1cc3",
+          "forward_probe_exact": true,
+          "reader_exact": true,
+          "scalars_compared_exactly": 404327438,
+          "step": 0
+        },
+        {
+          "array_bytes_exact": true,
+          "arrays_sha256": "a0d0a425a2e123d24529c030c061a236f26c6c94fc5ad20bcf905a2479de4b4e",
+          "forward_probe_exact": true,
+          "reader_exact": true,
+          "scalars_compared_exactly": 404327438,
+          "step": 31
+        }
+      ],
+      "committed_exposure": 1017149,
+      "loss_denominators_lr_gradient_norm_exact": true,
+      "native_consumption_exact": true,
+      "pass": true,
+      "updates_compared_exactly": 31
+    }
+  },
+  "before": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 561913782272,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "root_training_helpers_imported": false,
+  "schema": "g2_historical_artifact_reconstruction_v1",
+  "scientific_recipes_started": 0,
+  "seconds": 13.529578291985672,
+  "source_code_sha256": "9f0bfe9ebba4a4e3d404e29ce96c23b7953fc05586f3546179f50700b8f27155",
+  "status": "PASS_EXACT_ARTIFACT_RECONSTRUCTION"
+}

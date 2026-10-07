@@ -1,0 +1,100 @@
+{
+  "after": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 572586164224,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "arm": "C101",
+  "attempt": 2,
+  "before": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 588390301696,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "captured_dirty_status": " M benchmarks/g2_source_audio.py\n?? benchmarks/g2_historical_compatibility.py\n?? benchmarks/g2_parakeet_sources.py\n?? experiments/manifests/generation_2/audio-train-clean-360.attempt01.json\n?? experiments/manifests/generation_2/audio-train-clean-360.attempt02.json\n?? experiments/manifests/generation_2/compatibility-B100.attempt01.json\n?? experiments/manifests/generation_2/compatibility-B100.attempt02.json\n?? experiments/manifests/generation_2/compatibility-C101.attempt01.json\n?? experiments/manifests/generation_2/compatibility-comparator-audit.attempt01.json\n?? tests/data/test_g2_qualification_guards.py\n",
+  "checks": [
+    {
+      "arrays_npz_exact": true,
+      "control_arrays_sha256": "a5e574c00177ac7d97440ad643053cc7279b7600c547de97c26220dd466f1cc3",
+      "control_metadata_sha256": "a5feb80109a43e67759a0adb9375ce282e8e5bdb4b0fa8faed20bb2841eb3eec",
+      "differing_state_fields": [],
+      "original_arrays_sha256": "a5e574c00177ac7d97440ad643053cc7279b7600c547de97c26220dd466f1cc3",
+      "original_metadata_sha256": "d6ffc49560a33a3ca1414aca5f9aefb9b55005c0bc4a1bab791a889e0bc196bd",
+      "step": 0
+    },
+    {
+      "arrays_npz_exact": true,
+      "control_arrays_sha256": "a0d0a425a2e123d24529c030c061a236f26c6c94fc5ad20bcf905a2479de4b4e",
+      "control_metadata_sha256": "fa182bea9698d939116842cf325ba50b811cfef49d17dd65b33cacf644d42865",
+      "differing_state_fields": [],
+      "original_arrays_sha256": "a0d0a425a2e123d24529c030c061a236f26c6c94fc5ad20bcf905a2479de4b4e",
+      "original_metadata_sha256": "f69ea7a3cedf5c0f439d04f432a4761411b062b29f2b10d870f66c480afdff06",
+      "step": 31
+    }
+  ],
+  "code_commit": "c468c85403fb1fe0fa7701b72c921fca7d934832",
+  "code_hashes": {
+    "benchmarks/g2_historical_compatibility.py": "422c98958bd8874199b5a8698fb0eaf365d9cfa81a206ee1e37b47b64227a5e9",
+    "src/data/g2_artifacts.py": "091897ddcca0a1e0fe03b35e3b54b3fe2737344080faa3d669ac5c8096c7bd70"
+  },
+  "committed_exposure": 1017149,
+  "completed_updates": 31,
+  "config_sha256": "a877ffe8149c92468b77f2bef4d4bbb863dffb072ad8e57ac4ffb24500cd3687",
+  "data_condition": "D0",
+  "data_manifest_sha256": "09bf225b878047e1021ec80b42be0eade793f0ddd8e3411ceb8246ff71ca2857",
+  "deterministic_checkpoint_identity": "exact arrays.npz and the inherited scientific/optimizer/reader fields; host timings and unused process-global Python/NumPy RNG are separately retained in original metadata under the inherited explicit-model-key RNG policy",
+  "dirty_diff_sha256": "9b231fef9678e107a9434f82e8c53f7f01b58ac850902c4ca5b326188033ee85",
+  "elapsed_seconds": 521.3723159579677,
+  "historical_campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+  "identities": {
+    "campaign_sha256": "43a97ef40acbb2efebaf4941931934969c093e23f77b69bfd132f236755b1dd3",
+    "code": {
+      "benchmarks/paired_qualification_v3.py": "4e483b69a62c1aa20a55ba0a157989f14be61b62f8380ea897d1dbc9cc6f0d08",
+      "src/data/mixed_reader_v3.py": "c9e74b42cb6c6d8985649d35844963a3e7ea8e0428924a847645d2c11550ee8e",
+      "src/models/bc.py": "d58022e956b3adbd8d6a1c635ef9a7774efbd83aa5f8d8d65643c8f2d53be067",
+      "src/models/core.py": "a919fa98d0a2c4035cb646c416807278b1b6db585c5deebc342634e6ddfbea94",
+      "src/models/edits.py": "9a2b752fb50328e1f857a33fd011dee7e91681dfd5916938be0f1d706513e461",
+      "src/models/paired_training_v3.py": "53737be25e1a8d2210ed18f35250ffdb7b8fe66f7cd7dde3873fabd630f8f119",
+      "src/models/tokenizer.py": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+      "src/models/training.py": "98fb789ff3e6fd9c20bfc6627be2153fdbc7527b362f50ca6b8acbd52a44f3b5"
+    },
+    "data": {
+      "configs/tokenizer_development/tokenizer.json": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+      "experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json": "bc14b7ca5e8299ee8004cefb6deb67151ea93f1d44f48ea48d0b4619a9549b87",
+      "experiments/manifests/lexical_reader_v2/mixed-reader-dry-run.attempt02.json": "d9b91d1193d6175e1b6185ff48153478881320867b4e0c722f5799f9c2739fcc",
+      "experiments/manifests/lexical_reader_v2/mixed-reader-update-index.attempt02.json": "97c137bcef4170350ef5db133ad4954151e7417b67aa38bfbdbdae0d650b7f1f",
+      "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl": "dc9caac46145eee1e8d9ebea34ff486b3b08afffaee447d0bb22e12bef3fe8dc",
+      "exports/lexical-reader-v2/mixed-reader-attempt02/natural-accepted.jsonl": "d391197b246ce17512d9d2f293544623180eb539602897c6264f83a387d50713",
+      "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f"
+    },
+    "recipe_config_sha256": "a877ffe8149c92468b77f2bef4d4bbb863dffb072ad8e57ac4ffb24500cd3687",
+    "runtime": {
+      "TF32": "0",
+      "mlx": "0.32.3",
+      "numpy": "2.2.6",
+      "platform": "macOS-27.2-arm64-arm-64bit",
+      "python": "3.12.15"
+    }
+  },
+  "optimizer_sha256": {
+    "m": "de858a449c3363ff4c073a7d75a84d89e326f7232ce5b597e7dfa9a38cc62af9",
+    "v": "d1e3da90122a84e886bdfc6de5af271c630a9218d95b97805ffdc0bbf7df34ef"
+  },
+  "output_relative": "compatibility-v1/C101.attempt02",
+  "parameter_sha256": "b7e1024d62c548148838c2c2f36a595a1baa42eb9ba4b3efd171e86707e632fd",
+  "peak_lr": 0.0003,
+  "qualification_id": "G2-QUAL-COMPATIBILITY-C101-attempt02",
+  "qualification_weights_are_scientific_initializers": false,
+  "resume_policy": "verified immutable external initial control snapshot; incomplete publications rejected; no automatic restart or recipe substitution",
+  "schema": "g2_historical_compatibility_v1",
+  "scientific_recipes_started": 0,
+  "seed": 42,
+  "status": "PASS_EXACT_HISTORICAL_COMPATIBILITY",
+  "update_condition": "U1",
+  "updates_sha256": "5214e186f8dcbf65bb0a401ee95fa2cf039dbcb1cab347b219cbb067f0ea30c5",
+  "verified_initial_snapshot_relative": "compatibility-v1/C101.attempt02/initial"
+}

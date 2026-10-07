@@ -1,0 +1,17 @@
+# Generation-2 historical compatibility
+
+MEASURED RESULT — Both bounded seed-42, peak-3e-4 D0-U1 controls complete 31 unchanged updates and end at 1,017,149 canonical exposures. Every persisted presentation ID, queue boundary, exposure, LR, loss, gradient norm, denominator and native-consumption record matches the archived scientific trajectory exactly. B100's last loss is 2.5882810638286173; C101's is 2.5780319338664412. The initial and update031 NPZ files are byte-identical to the originals, including model parameters, optimizer moments, cleared accumulators and explicit model RNG. Reader and masked-forward identities also match. Receipts: `experiments/manifests/generation_2/compatibility-{B100,C101}.attempt02.json`.
+
+FACT — Deterministic checkpoint identity means the serialized arrays and the inherited scientific/optimizer/reader state fields. The complete metadata files also retain measured host timings and unused process-global Python/NumPy RNG under the unchanged explicit-model-key RNG policy; their hashes are recorded separately and are not claimed equal. No numerical tolerance is introduced. The original checkpoint writer's readback/rebinding is preserved inside the separately synced external physical-publication envelope. The G1 validator and all G1 artifacts are unchanged.
+
+MEASURED RESULT — A separate artifact reconstruction reads all original/control NPZ leaves and compares every scalar byte, shape and dtype directly, without importing the training or comparison helpers. It compares 402,745,346 B scalars and 404,327,438 C scalars at each of two checkpoints, plus all 31 persisted updates per arm. `independent-compatibility.attempt02.json` binds the executable reconstruction; the earlier read-only reconstruction remains in attempt01.
+
+FACT — B100 attempt01 failed before model construction because the new versioned parent area was absent. C101 attempt01 executed one matching update, but the initial comparator incorrectly compared in-memory dataclass tuples with lists from persisted JSON. Its original FRONTIER_MODEL_REVIEW_REQUIRED receipt remains unchanged. `compatibility-comparator-audit.attempt01.json` establishes exact equality of every persisted scientific field and identifies that comparator defect. Attempt02 compares the persisted JSON contract exactly and passes; no model, source, protocol, loss, or tolerance changed.
+
+MEASURED RESULT — B100 control attempt02 took 164.567768 seconds; C101 attempt02 took 521.372316 seconds, including qualification publication work. The retained failed C attempt took 20.388136 seconds. These are bounded qualification costs, not new scientific recipes. Qualification weights are never scientific initializers.
+
+MEASURED RESULT — The integrated suite passes 434 tests, zero failures/skips, in 38.96 seconds. `compatibility-full-tests.attempt01.json` binds the log. New small-model G2 resume tests pass after a retained partition-representation failure; they do not qualify the full-model G2 BENCH/cold paths. All seven exact scientific IDs remain AUTHORIZED_UNSTARTED in `scientific-status.attempt02.json`.
+
+PROPOSED NEXT ACTION — Re-evaluate the archived controls on the expanded panel after its corpus/support qualification. Finish full-model G2 checkpoint/BENCH/cold-resume, ByT5 and cost qualification before any separately authorized execution session. Historical compatibility alone does not admit G2 execution or final training.
+
+G2_HISTORICAL_COMPATIBILITY_QUALIFIED

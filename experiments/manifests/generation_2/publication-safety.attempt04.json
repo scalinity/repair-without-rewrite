@@ -1,0 +1,83 @@
+{
+  "classified_gitleaks_hits": [
+    {
+      "classification": "CODE_AND_ASSET_SHA256_NOT_CREDENTIAL",
+      "file": "experiments/manifests/generation_2/compatibility-C101.attempt01.json",
+      "hash_path": "src/models/tokenizer.py",
+      "line": 54,
+      "sha256": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372"
+    },
+    {
+      "classification": "CODE_AND_ASSET_SHA256_NOT_CREDENTIAL",
+      "file": "experiments/manifests/generation_2/compatibility-C101.attempt01.json",
+      "hash_path": "configs/tokenizer_development/tokenizer.json",
+      "line": 58,
+      "sha256": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca"
+    },
+    {
+      "classification": "CODE_AND_ASSET_SHA256_NOT_CREDENTIAL",
+      "file": "experiments/manifests/generation_2/compatibility-B100.attempt02.json",
+      "hash_path": "src/models/tokenizer.py",
+      "line": 62,
+      "sha256": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372"
+    },
+    {
+      "classification": "CODE_AND_ASSET_SHA256_NOT_CREDENTIAL",
+      "file": "experiments/manifests/generation_2/compatibility-B100.attempt02.json",
+      "hash_path": "configs/tokenizer_development/tokenizer.json",
+      "line": 66,
+      "sha256": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca"
+    },
+    {
+      "classification": "CODE_AND_ASSET_SHA256_NOT_CREDENTIAL",
+      "file": "experiments/manifests/generation_2/compatibility-C101.attempt02.json",
+      "hash_path": "src/models/tokenizer.py",
+      "line": 62,
+      "sha256": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372"
+    },
+    {
+      "classification": "CODE_AND_ASSET_SHA256_NOT_CREDENTIAL",
+      "file": "experiments/manifests/generation_2/compatibility-C101.attempt02.json",
+      "hash_path": "configs/tokenizer_development/tokenizer.json",
+      "line": 66,
+      "sha256": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca"
+    }
+  ],
+  "created_utc": "2026-10-07T02:44:10.827069+00:00",
+  "gitleaks": "PASS_SIX_CLASSIFIED_FILE_HASH_FALSE_POSITIVES",
+  "personal_identifier_hits": [],
+  "public_data": "hashes/counts/stable IDs and relative paths; no raw source, references, weights or physical binding",
+  "scan_report_sha256": "8e0ab5a78cfbca0b16485d9ca30df77baca6e856719a9eb3bca0e441eb692a1b",
+  "schema": "g2_publication_safety_v1",
+  "scope": "named historical compatibility and bounded G2 mechanics packet",
+  "staged_file_sha256": {
+    "ORCHESTRATION.html": "eb02f47b4c00a189862a3ad04034cbf4c85584e640594163c43c6af96db3036c",
+    "benchmarks/g2_compatibility_independent.py": "9f0bfe9ebba4a4e3d404e29ce96c23b7953fc05586f3546179f50700b8f27155",
+    "benchmarks/g2_historical_compatibility.py": "422c98958bd8874199b5a8698fb0eaf365d9cfa81a206ee1e37b47b64227a5e9",
+    "docs/LOG.md": "4031bb1b803ae9a25d06dc8f4368a31a9021c491c0cff9b5b0695ddbf1275bc7",
+    "docs/reports/G2_HISTORICAL_COMPATIBILITY.md": "46951339725d749d5e80a7e8f28ed8945b50f2f75d7e07fe386d482708885df2",
+    "docs/reviews/G2_HISTORICAL_INDEPENDENT_REVIEW.md": "ad91cf3c87b08b2d53c44a92cd3976f2f2864420a4cbb4743a6dc2e5d8af3b44",
+    "experiments/manifests/generation_2/compatibility-B100.attempt01.json": "ca60d55b25365c77c41007998cbd64631b3f9e60314f63407a519a6f00613579",
+    "experiments/manifests/generation_2/compatibility-B100.attempt02.json": "10a05a7f14c1437f3bcf0d637be3578952c746397781c5b0738f44d226fef6e2",
+    "experiments/manifests/generation_2/compatibility-C101.attempt01.json": "028f446fe29a3674bdb24e89d2ba92762f2144114cd6e379562bc58c130be3e6",
+    "experiments/manifests/generation_2/compatibility-C101.attempt02.json": "2b30d3961f739ddbe842ac65424103a0f4815e24f9f28cbc1a91556baa64e9ba",
+    "experiments/manifests/generation_2/compatibility-comparator-audit.attempt01.json": "162cdb9a2d271267fb990a2a19347286c9b409d82de8bae6ac832aed1d801935",
+    "experiments/manifests/generation_2/compatibility-full-tests.attempt01.json": "3db4a4bda0a71537abd6f0745a1e5839eec898d543dc8ee37932c0ff6ea5b9d3",
+    "experiments/manifests/generation_2/independent-compatibility.attempt01.json": "9ef58112a3dc4c242a6f4e02f67fe918f2967779959bda7b4698d43cb3125925",
+    "experiments/manifests/generation_2/independent-compatibility.attempt02.json": "383d2abe60d59f0616b87ffe5604bf4bb50d9fbe64b0e713140bf7e121218daf",
+    "experiments/manifests/generation_2/native-unit-test-attempts.attempt01.json": "36736dfb5756e6995866e81a3fe5973b6ece23886452ca54e0d60d4d992f18ca",
+    "experiments/manifests/generation_2/orchestration-visual.attempt04.json": "fd88ac7d5e5c646e303c15336d1d58cb758f699abb5df5faccfbcec8b1cd1c1d",
+    "experiments/manifests/generation_2/scientific-status.attempt02.json": "0d2f546aaf62773f984e39c4e74329ff495d94dfd5c92fad4ccc2c345e3f1043",
+    "src/data/g2_byt5.py": "ac085c95efb21ea85514d06ae1779b35b43ec24a1570e63c58039919aaefee88",
+    "src/data/g2_stream.py": "5b393b3f8c2433a1d8e7310fc3a333bcd6cc915d0179eae8bb502a154adc4e42",
+    "src/models/g2_training.py": "01166fe05dd847dcaa909a506c149f09cd2d8dfa6e64ff3a514fcf5ac3a05a85",
+    "src/scoring/g2_bootstrap.py": "a36b5358df661a249ff9952d7572a3b467917fe971cd75ae2a4790eb5ef1a7bd",
+    "tests/data/test_g2_byt5.py": "e66bd57ecb566eba8b40e1619a96e90871ff55ac7f5b82297c409745c5f607aa",
+    "tests/data/test_g2_qualification_guards.py": "27127107968b37e0f0e37d46e6ddf5e6d23d28e3b42c3a300e3855cb3154126e",
+    "tests/data/test_g2_stream.py": "bc9efc246cac9919652c9dfb566ede255d6a43d4d883c0c031bafc4e08b6d8ae",
+    "tests/models/test_g2_training.py": "995043233eda28ad85706f12da29daf65c776ba4f47e2e7104aff21fadc92a99",
+    "tests/scoring/test_g2_bootstrap.py": "1b3f7aaa64354c09275ce21afe3e057ef388fe1fa9416635e4ed1534bd8188de"
+  },
+  "status": "PASS",
+  "unclassified_hits": 0
+}

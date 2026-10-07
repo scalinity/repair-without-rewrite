@@ -1,0 +1,44 @@
+{
+  "corrects_identifier_aliases_in": "experiments/manifests/generation_2/scientific-status.attempt01.json",
+  "final_training_started": false,
+  "paper_protocol_v2_frozen": false,
+  "qualification_only_session": true,
+  "qualification_outputs_are_initializers": false,
+  "recipes": [
+    {
+      "recipe_id": "G2-B100-D0-U8-seed42-lr3e-4",
+      "status": "AUTHORIZED_UNSTARTED"
+    },
+    {
+      "recipe_id": "G2-C101-D0-U8-seed42-lr3e-4",
+      "status": "AUTHORIZED_UNSTARTED"
+    },
+    {
+      "recipe_id": "G2-B100-D1-U1-seed42-lr3e-4",
+      "status": "AUTHORIZED_UNSTARTED"
+    },
+    {
+      "recipe_id": "G2-C101-D1-U1-seed42-lr3e-4",
+      "status": "AUTHORIZED_UNSTARTED"
+    },
+    {
+      "recipe_id": "G2-B100-D1-U8-seed42-lr3e-4",
+      "status": "AUTHORIZED_UNSTARTED"
+    },
+    {
+      "recipe_id": "G2-C101-D1-U8-seed42-lr3e-4",
+      "status": "AUTHORIZED_UNSTARTED"
+    },
+    {
+      "recipe_id": "G2-ByT5-D1-10pass-seed42-lr3e-4",
+      "status": "AUTHORIZED_UNSTARTED"
+    }
+  ],
+  "schema": "g2_scientific_recipe_status_v1",
+  "scientific_output_directories_created": 0,
+  "scientific_recipe_slots_consumed": 0,
+  "sealed_inference_performed": false,
+  "seed": 42,
+  "teacher_calls": 0,
+  "tts_calls": 0
+}

@@ -1,0 +1,26 @@
+{
+  "correction": "compare canonical JSON field representations exactly; no numeric tolerance or protocol change",
+  "corrects": "experiments/manifests/generation_2/compatibility-C101.attempt01.json",
+  "historical_updates_sha256": "4355507fd4a3fdd9a51be957e24d8b959b6af402bd034eaa433eb0da2bdb045f",
+  "measurement_error": "dataclass label tuples exist in memory; the original public JSON contract serializes these as lists; the initial comparator compared across these representations",
+  "observed_update": 1,
+  "observed_updates_sha256": "e94a202e5584a24daa334413f348e32e98bba66f6f7c3d5a00fe4e74cb788cde",
+  "original_failure_receipt_preserved": true,
+  "persisted_fields_exact": {
+    "actual_consumption": true,
+    "arm": true,
+    "canonical_charge": true,
+    "committed_canonical_exposure": true,
+    "denominators": true,
+    "examples": true,
+    "gradient_norm": true,
+    "loss": true,
+    "lr": true,
+    "microsteps": true,
+    "presentation_ids": true,
+    "update": true
+  },
+  "schema": "g2_compatibility_comparator_audit_v1",
+  "scientific_contradiction_measured": false,
+  "status": "COMPARATOR_REPAIR_REQUIRED_NO_SCIENTIFIC_MISMATCH"
+}

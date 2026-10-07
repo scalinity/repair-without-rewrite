@@ -1,0 +1,15 @@
+{
+  "arm": "B100",
+  "attempt": 1,
+  "cause": "versioned compatibility parent area did not exist",
+  "code_sha256": "ed9109dc295125f93de6882f1c42b4b16db2175bf356e255f919c855e159bc1f",
+  "completed_updates": 0,
+  "error_type": "FileNotFoundError",
+  "log_sha256": "4ad4b3d8e3a962f87cde60855fbd3359400d35e8da48b87593f005fb6c45142a",
+  "native_models_constructed": 0,
+  "qualification_id": "G2-QUAL-COMPATIBILITY-B100-attempt01",
+  "reconstruction": "post-failure from the retained exact runner and console log; no model or checkpoint was created",
+  "schema": "g2_historical_compatibility_v1",
+  "scientific_recipes_started": 0,
+  "status": "FAILED_BEFORE_MODEL_CONSTRUCTION"
+}

@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "appearance": "light",
+      "background": "rgb(245, 244, 241)",
+      "bodyWidth": 1280,
+      "documentWidth": 1280,
+      "errors": [],
+      "screenshotBytes": 212512,
+      "status": "PASS",
+      "storageText": true,
+      "width": 1280
+    },
+    {
+      "appearance": "dark",
+      "background": "rgb(20, 19, 17)",
+      "bodyWidth": 1280,
+      "documentWidth": 1280,
+      "errors": [],
+      "screenshotBytes": 210401,
+      "status": "PASS",
+      "storageText": true,
+      "width": 1280
+    },
+    {
+      "appearance": "light",
+      "background": "rgb(245, 244, 241)",
+      "bodyWidth": 390,
+      "documentWidth": 390,
+      "errors": [],
+      "screenshotBytes": 106717,
+      "status": "PASS",
+      "storageText": true,
+      "width": 390
+    },
+    {
+      "appearance": "dark",
+      "background": "rgb(20, 19, 17)",
+      "bodyWidth": 390,
+      "documentWidth": 390,
+      "errors": [],
+      "screenshotBytes": 105007,
+      "status": "PASS",
+      "storageText": true,
+      "width": 390
+    }
+  ],
+  "html_sha256": "eb02f47b4c00a189862a3ad04034cbf4c85584e640594163c43c6af96db3036c",
+  "scope": "separate headless desktop/phone contexts; viewer tab unchanged",
+  "status": "PASS",
+  "temporary_screenshots_created": 4,
+  "temporary_screenshots_removed": true,
+  "visually_inspected": true
+}
