@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "width": 1280,
+      "appearance": "light",
+      "documentWidth": 1280,
+      "bodyWidth": 1280,
+      "background": "rgb(245, 244, 241)",
+      "storageText": true,
+      "errors": [],
+      "screenshotBytes": 204896,
+      "status": "PASS"
+    },
+    {
+      "width": 1280,
+      "appearance": "dark",
+      "documentWidth": 1280,
+      "bodyWidth": 1280,
+      "background": "rgb(20, 19, 17)",
+      "storageText": true,
+      "errors": [],
+      "screenshotBytes": 202812,
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "appearance": "light",
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "background": "rgb(245, 244, 241)",
+      "storageText": true,
+      "errors": [],
+      "screenshotBytes": 104830,
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "appearance": "dark",
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "background": "rgb(20, 19, 17)",
+      "storageText": true,
+      "errors": [],
+      "screenshotBytes": 105174,
+      "status": "PASS"
+    }
+  ],
+  "temporary_screenshots_created": 4,
+  "source_sha256": "dcd65dec7518e7fd72a4f14bd1542cca19eb122f09f1bda70c63fd5c045575b5",
+  "screenshots_visually_inspected": 4,
+  "temporary_screenshots_removed": true
+}

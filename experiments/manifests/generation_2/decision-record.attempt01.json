@@ -1,0 +1,19 @@
+{
+  "schema": "g2_verbatim_decision_record_v1",
+  "source_attachment_sha256": "3c3bb48ab1897f4beae0b61706ca5c59472e73e8ded4b7ffe8ddfcfc6ee6b553",
+  "decision_sha256": "417c109971f607b94c43a71092a81284d0a091e40a1a7382fe02aecc36108663",
+  "decision_bytes": 48411,
+  "source_span": {
+    "start_byte": 2171,
+    "end_byte_exclusive": 50582
+  },
+  "amendment_sha256": "29e142b4e76f5fecdeefa3505fb5ad909942e6a4a918b617d89bdf9400cbfad5",
+  "reviewed_scientific_base": "abd8bc885ee754cb43b48d6197b8d93b011c24fb",
+  "recording_base": "871a01fac6ab8b7b10dde8f0c5c557d0114da84a",
+  "created_utc": "2026-10-07T01:38:57.085443+00:00",
+  "verbatim_bytes_match": true,
+  "seven_recipes": "AUTHORIZED_UNSTARTED",
+  "scientific_outputs": 0,
+  "absolute_identifier_classification": "real repository location supplied in verbatim frontier handoff; retained by explicit verbatim publication instruction",
+  "disposition": "AUTHORIZE_DEVELOPMENT_GENERATION_2"
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "g2_test_receipt_v1",
+  "created_utc": "2026-10-07T01:40:35.028315+00:00",
+  "code_commit": "871a01fac6ab8b7b10dde8f0c5c557d0114da84a",
+  "captured_state": "decision and amendment only; no scientific code/config changes",
+  "command": "MLX_ENABLE_TF32=0 .venv/bin/python -m pytest",
+  "passed": 379,
+  "skipped": 0,
+  "failed": 0,
+  "seconds": 34.5,
+  "log_sha256": "e8c9d7ef05afe238371cc67ce62fc5c4d76520cd96d6d4d99bc51c686dce0999",
+  "log_path_class": "PRIVATE_G2_STARTUP_PACKET",
+  "status": "PASS"
+}

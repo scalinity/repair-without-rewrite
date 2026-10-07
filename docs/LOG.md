@@ -220,3 +220,14 @@ Times are local (EDT, UTC−4). Entries 1–5 were backfilled on 2026-10-05 from
 - **Files and orchestration:** storage report, public-safe manifest, append-only log and orchestration content only. The page carries the final capacity measurement and offline requirement; scientific eligibility and accelerator holds are unchanged.
 - **Disposition:** `PARTIAL_RELOCATION_COMPLETED`. All 205 allowlisted relocations are verified and usable while mounted; all 16 keep-set paths remain real internal paths. No further data removal, snapshot changes, Generation-2 execution or scientific change.
 - **Left undone:** separately authorized APFS allocation investigation and future Generation-2 artifact-root/workflow qualification.
+
+## 20 · 2026-10-06 21:40 EDT · Prospective Generation-2 scientific decision
+
+- **Base:** `871a01fac6ab8b7b10dde8f0c5c557d0114da84a`; clean local/remote main before creating `codex/g2-qualification`. Reviewed scientific base: `abd8bc885ee754cb43b48d6197b8d93b011c24fb`.
+- **Step:** preserve the supplied complete Post-10M Frontier Scientific Decision v1 verbatim and append its exact Section Z amendment before affected outputs.
+- **Changed:** frontier decision; prospective amendments; decision, startup and baseline receipts under `experiments/manifests/generation_2/`; this append-only entry; orchestration content. No scientific code/configuration or historical artifact changed.
+- **Disposition:** `AUTHORIZE_DEVELOPMENT_GENERATION_2`, scientific design only. All seven scientific recipes remain `AUTHORIZED_UNSTARTED`; all six G1 recipes remain permanent spent DEVELOPMENT evidence, with no selected LR.
+- **Evidence:** decision SHA-256 `417c109971f607b94c43a71092a81284d0a091e40a1a7382fe02aecc36108663`, 48,411 bytes copied from the supplied marked span; Section Z bytes preserved. New full suite passes 379 tests, zero skips/failures, 34.50 seconds. All 205 links and 16 internal keep paths reverified. External literal free space 578.192 GiB. Exact private originals/logs remain outside Git.
+- **Publication classification:** the decision's one real absolute repository-location identifier is retained under the explicit instruction to publish its complete verbatim text. Other public records use repository-relative paths and hashed/path-class identities. No credential value is included.
+- **Orchestration:** as-of base, station, active step 9, lanes, eligibility, open questions, counts and timeline realigned in place to G2 qualification. External capacity is satisfied; root qualification is pending. Layout unchanged; visual checks are recorded separately before publication.
+- **Left undone:** root binding/qualification, high-water forecast, archive acquisition, source/corpus/panel construction, native code and BENCH/resume/ByT5/cost/admission qualification. Zero teacher/TTS requests; no final seed, sealed inference or protocol freeze. Scientific execution is excluded from this session.

@@ -1,0 +1,28 @@
+{
+  "schema": "g2_publication_safety_v1",
+  "created_utc": "2026-10-07T01:41:34.312822+00:00",
+  "scope": "exact named staged decision-only packet; complete original decision explicitly authorized verbatim",
+  "staged_file_sha256": {
+    "ORCHESTRATION.html": "dcd65dec7518e7fd72a4f14bd1542cca19eb122f09f1bda70c63fd5c045575b5",
+    "docs/LOG.md": "a51ceae319e32f092f86e1bdca4aead2f0cb06d01a933d4802bf0d793d8adf4f",
+    "docs/reviews/FRONTIER_POST_10M_SCIENTIFIC_DECISION_V1.md": "417c109971f607b94c43a71092a81284d0a091e40a1a7382fe02aecc36108663",
+    "docs/reviews/PROSPECTIVE_AMENDMENTS.md": "112c0c3bdf345d4d870f821fba3e0c13f620362d6e2f730320e3afbf5a24b54a",
+    "experiments/manifests/generation_2/baseline-tests.attempt01.json": "c3e97c4711befea4ac1274b81b32edf16f29956f6a4d843e0ac0107932238bbf",
+    "experiments/manifests/generation_2/decision-record.attempt01.json": "6a52cd67c3ac3dd1af518f02a87071d99dcf7b8859c57aeb48fce3bec07cbfe1",
+    "experiments/manifests/generation_2/orchestration-visual.attempt01.json": "6be6ae8f87482ab0ade8b8755704833cf92effd3890a40daaeca1eee9b8afc74",
+    "experiments/manifests/generation_2/startup.attempt01.json": "f0ba13ae742930ddfde0a34b40e3435dd7b5d1c6ed8d7ddc634260b3658244e3"
+  },
+  "gitleaks": "PASS_ZERO_CREDENTIAL_HITS",
+  "personal_identifier_hits": [
+    {
+      "file": "docs/reviews/FRONTIER_POST_10M_SCIENTIFIC_DECISION_V1.md",
+      "line": 636,
+      "classification": "REAL_LOCAL_IDENTIFIER_EXPLICIT_VERBATIM_PUBLICATION",
+      "approved": true,
+      "literal_sha256": "0485bdf841a56dbffc2ab0c9154631ac1a2ba3b5839a19ec392029c493f503ad"
+    }
+  ],
+  "unclassified_hits": 0,
+  "decision_verbatim_sha256": "417c109971f607b94c43a71092a81284d0a091e40a1a7382fe02aecc36108663",
+  "status": "PASS_WITH_EXPLICITLY_AUTHORIZED_VERBATIM_IDENTIFIER"
+}

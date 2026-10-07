@@ -1,0 +1,18 @@
+{
+  "schema": "g2_resume_startup_v1",
+  "created_utc": "2026-10-07T01:40:35.028315+00:00",
+  "local_head": "871a01fac6ab8b7b10dde8f0c5c557d0114da84a",
+  "remote_main": "871a01fac6ab8b7b10dde8f0c5c557d0114da84a",
+  "branch": "codex/g2-qualification",
+  "compatibility_links": 205,
+  "compatibility_pass": true,
+  "real_internal_keep_paths": 16,
+  "free_external_bytes": 620828454912,
+  "free_external_gib": 578.1915550231934,
+  "G2_root_empty": true,
+  "root_qualified": false,
+  "seven_scientific_recipes": "AUTHORIZED_UNSTARTED",
+  "zero_model_outputs": true,
+  "snapshot_operations": 0,
+  "prior_startup_receipt_sha256": "9d34af0390ce63f72d36e086962f053d4a982c4aa09ed4f3262be86cff21b734"
+}

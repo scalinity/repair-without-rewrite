@@ -67,3 +67,66 @@ Generated candidates require lexical effect and unique complete source-only inve
 The 30/20/10/40 allocation, other channels, models, representation/renderer, tokenizer, optimization, accounting, scheduler, update target, probe schedule, LR grid, checkpoints, final seeds, and H1 attribution remain fixed.
 
 New profile and construction hashes await measurement and independent reproduction. No final result has been seen or used; no probe slot has been consumed. Reader admission and owner authorization remain pending. `paper_protocol_v2` is not frozen.
+
+### Post-10M Frontier Scientific Decision v1
+
+Post-10M Frontier Scientific Decision v1 — 2026-10-06
+
+Reviewed checkpoint: abd8bc885ee754cb43b48d6197b8d93b011c24fb.
+Disposition: AUTHORIZE_DEVELOPMENT_GENERATION_2.
+Status: scientific design authorized; implementation, qualification and
+scientific execution remain separate stages. No final outcomes have been seen.
+
+Preserve all six generation-1 seed-42 recipes and their ineligible outcomes.
+Do not select a generation-1 LR or relabel any run as an implementation test.
+
+Adopt the complete Post-10M Frontier Scientific Decision v1, sections A–Y,
+as the normative generation-2 DEVELOPMENT contract.
+
+Retain exact B100/C101 architectures, initialization, tokenizer, source-only
+inference, pointer/event representation, deterministic renderer, loss
+coefficients, optimizer settings, precision, generated pool and lexical
+corruption profile.
+
+Define D0 as the original 1,024-pair natural pool. Define D1 as the complete
+predeclared 14,113-record TRAIN census within the existing 2–12-second source
+runtime envelope, subject to full qualification. Replace both natural identity
+and public-real pools under D1. Retain 30/20/10/40 allocation, phase policy,
+record-balanced passes and natural zero-error cases. No teacher or TTS data.
+
+Define U1 as one complete optimizer update per original 32,768-anchor
+whole-presentation master queue. Define U8 as eight contiguous subqueues cut
+at the first whole-presentation boundaries satisfying 8*C >= j*Q for j=1..7.
+Normalize, clip and update once per actual subqueue. Preserve exact master
+endpoints for evaluation, routine saves and stopping.
+
+Use fixed peak LR3e-4, seed42, 200,000-exposure warmup, continuous cosine decay
+to 10% at nominal10M and no phase reset. Reuse the two original3e-4 D0-U1
+runs only after exact compatibility qualification. Admit at most six new B/C
+recipes: D0-U8, D1-U1 and D1-U8 for each arm. No LR sweep or B/C extension.
+
+Freeze all2,696 eligible natural DEVELOPMENT cases and the unchanged288
+generated cases. Preserve the original108 natural cases byte-for-byte and
+report them separately. Record prospective calibration consumption. Keep
+decoding, caps, scorer and failure inclusion unchanged. Do not rewrite
+generation-1 evaluations or selection.
+
+Reserve one separate ByT5 raw-source adaptation recipe on D1: official pinned
+ByT5-small, seed42, batch4, ten complete record passes, constantLR3e-4 and
+existing ByT5 optimizer/native-byte policies. Its35,283-update execution
+requires a separately qualified runner.
+
+Require corpus, accounting, native consumption, historical compatibility,
+checkpoint/resume, BENCH, cost and independent-review gates. Require250GiB
+available artifact storage and a measured forecast within96 serialized hours,
+including one25% reserve.
+
+No new scientific recipe may execute before a frozen manifest, successful
+independent admission and separate owner execution authorization. No
+outcome-driven corpus, LR, loss, architecture, cap or eligibility change is
+permitted. Numerical replay remains one exact replay; defects stop the
+affected campaign.
+
+This amendment does not freeze paper_protocol_v2, alter final populations,
+confirm H1, authorize final seeds, final150M training, sealed inference,
+A100, H2, cloud spending or teacher API spending.
