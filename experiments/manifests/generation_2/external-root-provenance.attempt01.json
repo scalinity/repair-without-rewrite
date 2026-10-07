@@ -1,0 +1,18 @@
+{
+  "schema": "g2_storage_execution_provenance_v1",
+  "capture": "post-run reconstruction of unchanged synthetic qualification sources; no pre-run clean-state claim",
+  "code_commit": "98c061066dab728f45ceac865b6d9b75288ef624",
+  "dirty_state": " M docs/reviews/PROSPECTIVE_AMENDMENTS.md\n?? benchmarks/g2_artifact_root_qualification.py\n?? configs/generation_2/\n?? experiments/manifests/generation_2/external-root.attempt01.json\n?? experiments/manifests/generation_2/independent-storage.attempt01.json\n?? experiments/manifests/generation_2/metadata-census-summary.attempt01.json\n?? experiments/manifests/generation_2/metadata-census.attempt01.jsonl\n?? experiments/manifests/generation_2/parakeet-replay-selection.attempt01.json\n?? experiments/manifests/generation_2/storage-forecast.attempt01.json\n?? src/data/g2_artifacts.py\n?? tests/data/test_g2_artifacts.py\n",
+  "sources_sha256": {
+    "src/data/g2_artifacts.py": "091897ddcca0a1e0fe03b35e3b54b3fe2737344080faa3d669ac5c8096c7bd70",
+    "benchmarks/g2_artifact_root_qualification.py": "43cff0aa8a0be4f2b3f20ce1cdb3c22255e161b9dd74c0111cc7fbe574165ef2",
+    "tests/data/test_g2_artifacts.py": "c822dd5411123678a686dcb468313584d859095576d11e24c059442ce0954e3a",
+    "configs/generation_2/artifact_policy_v1.json": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f"
+  },
+  "binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+  "synthetic_payload": "2GiB of repeated bytes(range(256))*8192; 256MiB sparse fixture with fixed edge pages",
+  "scientific_seed": null,
+  "qualification_ID": "G2-QUAL-EXTERNAL-STORAGE-attempt01",
+  "scientific_recipes_started": 0,
+  "snapshot_operations": 0
+}

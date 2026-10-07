@@ -1,0 +1,24 @@
+{
+  "schema": "g2_storage_independent_reconstruction_v1",
+  "created_utc": "2026-10-07T01:52:13.899397+00:00",
+  "method": "separate standard-library volume/receipt/census arithmetic reconstruction; does not invoke artifact-root or forecast producer code",
+  "scope": "storage primitives and planning headroom; not full G2 campaign admission",
+  "external_volume_identity": "PASS",
+  "fixture_cleanup": "PASS",
+  "fresh_process_dense_and_sparse_readback": "PASS",
+  "forecast_arithmetic": "PASS",
+  "future_scientific_BC_saves_formula": "39*(B_array_bytes+C_array_bytes), no sparse benefit",
+  "metadata_id_role_group_disjointness": "PASS",
+  "metadata_rows": 16809,
+  "replay_preselection": 64,
+  "minimum_250GiB_after_conservative_forecast": "PASS",
+  "qualified_storage_layout_assumptions": "four checkpoints per BENCH stream; cold starts reuse immutable source snapshot and preserve one final full-array capture each; actual runner layout still must match this plan",
+  "public_inputs_sha256": {
+    "configs/generation_2/artifact_policy_v1.json": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "experiments/manifests/generation_2/external-root.attempt01.json": "f1f51da2a617981bfaa664c1b96e2a6a989b54f033c6eb508e82f3d43bad4160",
+    "experiments/manifests/generation_2/storage-forecast.attempt01.json": "40871247ab0a16da0f8de397a44c8562b60e0938b4ab4138a0d8f7c0e4eb27c4",
+    "experiments/manifests/generation_2/metadata-census.attempt01.jsonl": "09bf225b878047e1021ec80b42be0eade793f0ddd8e3411ceb8246ff71ca2857"
+  },
+  "external_model_review_claimed": false,
+  "status": "PASS_BOUNDED_STORAGE_RECONSTRUCTION"
+}

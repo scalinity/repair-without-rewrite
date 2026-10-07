@@ -1,0 +1,27 @@
+{
+  "schema": "g2_artifact_policy_v1",
+  "path_class": "GENERATION_2_ARTIFACT_ROOT",
+  "minimum_free_bytes": 268435456000,
+  "root_path_sha256": "e0eefe0fc3a9201640365288e4b1098fcf23697a69b11632c00c5b9b883a59e3",
+  "mount_path_sha256": "afa94edc1514429ecf07d3f0269f5ac2943f0866c940753574597a09422277a5",
+  "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5",
+  "filesystem": "Case-sensitive APFS",
+  "fallback": "FORBIDDEN",
+  "versioned_areas": [
+    "binding-v1",
+    "source-archives-v1",
+    "source-audio-v1",
+    "asr-hypotheses-v1",
+    "corpus-qualification-v1",
+    "frozen-d1-v1",
+    "expanded-development-v1",
+    "bench-v1",
+    "cold-resume-v1",
+    "compatibility-v1",
+    "scientific-checkpoints-v1",
+    "byt5-v1",
+    "evaluation-v1",
+    "logs-v1",
+    "qualification-v1"
+  ]
+}

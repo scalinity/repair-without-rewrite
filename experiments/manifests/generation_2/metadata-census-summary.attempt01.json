@@ -1,0 +1,36 @@
+{
+  "schema": "g2_candidate_metadata_census_v1",
+  "created_utc": "2026-10-07T01:50:49.684614+00:00",
+  "status": "METADATA_VERIFIED_AUDIO_AND_HYPOTHESES_UNQUALIFIED",
+  "counts": {
+    "train": 14113,
+    "calibration": 1900,
+    "hpo_development": 796
+  },
+  "groups": {
+    "train": 314,
+    "calibration": 40,
+    "hpo_development": 12
+  },
+  "split_counts": {
+    "train-other-500": 7758,
+    "train-clean-360": 6689,
+    "train-clean-100": 1566,
+    "dev-other": 353,
+    "dev-clean": 443
+  },
+  "total_manifest_duration_seconds": "124294.223747",
+  "pcm16_mono_16khz_calculated_bytes": 3977415159,
+  "maximum_target_bytes": 263,
+  "legacy_train_members": 1024,
+  "legacy_development_members": 108,
+  "legacy_reference_and_group_identity": "PASS_METADATA_JOIN_ONLY",
+  "new_train_hypotheses_required": 13089,
+  "new_development_hypotheses_required": 2588,
+  "public_census_sha256": "09bf225b878047e1021ec80b42be0eade793f0ddd8e3411ceb8246ff71ca2857",
+  "private_candidate_census_sha256": "e37fa0801cd1b844d7ec8fbd7798a6d136f65eb6d4f2d8ddf7fcc235571c98b1",
+  "role_manifest_sha256": "56c5889d952c83120267ea92b4aaf8bcec63dff61a34e83ce531c9be97b3eb98",
+  "source_qualification_sha256": "d0b1de70c2d2a7c7bbc7ad711a4d771fa91a22ef399651b0482aaeeee7616842",
+  "audio_qualification": "NOT_RUN",
+  "recognizer_calls": 0
+}

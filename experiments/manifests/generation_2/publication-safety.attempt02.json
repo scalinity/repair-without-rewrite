@@ -1,0 +1,30 @@
+{
+  "schema": "g2_publication_safety_v1",
+  "created_utc": "2026-10-07T01:56:15.938513+00:00",
+  "scope": "named staged storage qualification packet",
+  "staged_file_sha256": {
+    "ORCHESTRATION.html": "b1c244efaa155a4a5807f8494a9c178110dc203aea6b598717570bc3136f540a",
+    "benchmarks/g2_artifact_root_qualification.py": "43cff0aa8a0be4f2b3f20ce1cdb3c22255e161b9dd74c0111cc7fbe574165ef2",
+    "configs/generation_2/artifact_policy_v1.json": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "docs/LOG.md": "8b2783c8666917f2658277e448c5371d0b221142913bf7eeee3db02ff1da7db5",
+    "docs/reports/G2_EXTERNAL_ARTIFACT_ROOT_QUALIFICATION.md": "33962cfde5cd2005e2ac110d5101d92015b735a7fc06e10b72db7eeea29a3fd7",
+    "docs/reviews/G2_STORAGE_INDEPENDENT_REVIEW.md": "b7c1aa7e06727518d782d7cb125671f915cc8d85bcf39e1bbdf337edde3380f1",
+    "docs/reviews/PROSPECTIVE_AMENDMENTS.md": "6bfdb8f004edd6d682b86c12776e9bc46a54e8ee0c7ac2a649b8aaaff8059d7b",
+    "experiments/manifests/generation_2/external-root-provenance.attempt01.json": "1cf4d3e8f9c18acc9552bd3d607a9e390d2a62729f2974e7c598e50494bea397",
+    "experiments/manifests/generation_2/external-root.attempt01.json": "f1f51da2a617981bfaa664c1b96e2a6a989b54f033c6eb508e82f3d43bad4160",
+    "experiments/manifests/generation_2/independent-storage.attempt01.json": "47676aaa0a24fec0070f3c03e56afab894f9f3d00665ff38b89544955da1a152",
+    "experiments/manifests/generation_2/metadata-census-summary.attempt01.json": "26b38221045622a4ec9f5df7c2ed21d12d78513ee222386c925aab255abcdcdc",
+    "experiments/manifests/generation_2/metadata-census.attempt01.jsonl": "09bf225b878047e1021ec80b42be0eade793f0ddd8e3411ceb8246ff71ca2857",
+    "experiments/manifests/generation_2/orchestration-visual.attempt02.json": "2c3694f0169351520a515eb938e5e6c6363ce461752b255f82b19be74bf1ce9e",
+    "experiments/manifests/generation_2/parakeet-replay-selection.attempt01.json": "64cd63c735c20cdcb8d8a63b7895191fee2127f72d3108784850a715765f7497",
+    "experiments/manifests/generation_2/storage-forecast.attempt01.json": "40871247ab0a16da0f8de397a44c8562b60e0938b4ab4138a0d8f7c0e4eb27c4",
+    "experiments/manifests/generation_2/storage-full-tests.attempt01.json": "e748d37a7b6a6dbc13e091939aa0072485f77b19833a9d4e426714acb467de90",
+    "src/data/g2_artifacts.py": "091897ddcca0a1e0fe03b35e3b54b3fe2737344080faa3d669ac5c8096c7bd70",
+    "tests/data/test_g2_artifacts.py": "c822dd5411123678a686dcb468313584d859095576d11e24c059442ce0954e3a"
+  },
+  "gitleaks": "PASS_ZERO_CREDENTIAL_HITS",
+  "personal_identifier_hits": [],
+  "unclassified_hits": 0,
+  "public_census": "stable IDs, official relative archive members, roles, families, duration/reference hashes and byte counts only; no source/target text or audio",
+  "status": "PASS"
+}

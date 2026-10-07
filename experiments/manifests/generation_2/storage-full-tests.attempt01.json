@@ -1,0 +1,12 @@
+{
+  "schema": "g2_test_receipt_v1",
+  "code_commit": "98c061066dab728f45ceac865b6d9b75288ef624",
+  "captured_state": "storage-only implementation and prospective binding; dirty source hashes bound in external-root-provenance receipt",
+  "command": "MLX_ENABLE_TF32=0 .venv/bin/python -m pytest",
+  "passed": 391,
+  "skipped": 0,
+  "failed": 0,
+  "seconds": 33.32,
+  "log_sha256": "ce7afd91265203043ae1585db9a7d2e4944f6059bbe6fff2d3e8290469149945",
+  "status": "PASS"
+}

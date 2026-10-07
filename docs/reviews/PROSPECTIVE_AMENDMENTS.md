@@ -130,3 +130,9 @@ affected campaign.
 This amendment does not freeze paper_protocol_v2, alter final populations,
 confirm H1, authorize final seeds, final150M training, sealed inference,
 A100, H2, cloud spending or teacher API spending.
+
+### Generation-2 physical artifact storage binding v1 — 2026-10-06
+
+FACT — The authorized external Generation-2 artifact root is bound through `configs/generation_2/artifact_policy_v1.json` and a separate private `g2_artifact_binding_v1` mapping. Public identities are hashes and path classes; the exact root, mount and UUID remain outside Git. The root is distinct from the immutable Generation-1 evidence archive. The repository and existing internal runtimes remain internal. This changes physical storage only; no scientific treatment, corpus, optimizer or checkpoint validation is changed.
+
+Require the bound external, writable, case-sensitive APFS identity and at least 250 GiB literal free. Missing roots, changed identity, redirected paths and insufficient free space fail before network/model work. No internal or alternate-volume fallback is permitted. Artifact directories are separately versioned for sources, audio, hypotheses, corpus, frozen manifests, development, BENCH, replay, controls, scientific checkpoints, ByT5, evaluations, logs and disposable qualification fixtures. Atomic publication/durability, actual-volume cold readback and headroom remain pending qualification. No scientific recipe is released by this physical binding.

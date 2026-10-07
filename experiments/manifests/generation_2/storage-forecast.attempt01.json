@@ -1,0 +1,149 @@
+{
+  "schema": "g2_storage_high_water_v1",
+  "created_utc": "2026-10-07T01:50:49.814168+00:00",
+  "scope": "new G2 bytes only; existing G1 occupancy already reflected in measured free space",
+  "current_free_bytes": 620808671232,
+  "minimum_literal_free_bytes": 268435456000,
+  "components": [
+    {
+      "component": "missing_official_archives",
+      "classification": "ASSUMED_FROM_APPROVED_INVENTORY",
+      "minimum_bytes": 53642979491,
+      "likely_bytes": 53642979491,
+      "conservative_bytes": 53642979491,
+      "basis": "Complete missing train-clean-360 and train-other-500; no mirror or smaller census"
+    },
+    {
+      "component": "extracted_selected_audio",
+      "classification": "CALCULATED_WITH_FORMAT_ALLOWANCE",
+      "minimum_bytes": 3977415159,
+      "likely_bytes": 4971768948,
+      "conservative_bytes": 8589934592,
+      "basis": "Full 16,809 candidate records total duration; selected native FLAC only, PCM-equivalent bound plus container allowance"
+    },
+    {
+      "component": "hypotheses_corpus_and_frozen_manifests",
+      "classification": "ASSUMED",
+      "minimum_bytes": 107374182,
+      "likely_bytes": 536870912,
+      "conservative_bytes": 2147483648,
+      "basis": "15,677 new hypotheses, 64 replay receipts, full corpus and expanded DEVELOPMENT; no text duplicated into Git"
+    },
+    {
+      "component": "six_BC_BENCH_streams",
+      "classification": "CALCULATED_WITH_ASSUMED_STORAGE_LAYOUT",
+      "minimum_bytes": 19371649008,
+      "likely_bytes": 39145951200,
+      "conservative_bytes": 39145951200,
+      "basis": "Initial/final plus boundary and mid snapshots per stream; four checkpoints per configuration, using fixed G1 logical array sizes plus 16MiB metadata each"
+    },
+    {
+      "component": "twelve_cold_replay_trajectories",
+      "classification": "CALCULATED_WITH_ASSUMED_STORAGE_LAYOUT",
+      "minimum_bytes": 0,
+      "likely_bytes": 19572975600,
+      "conservative_bytes": 19572975600,
+      "basis": "Replay starts from the immutable BENCH source snapshot; preserve one final array capture per replay and full update hashes, without duplicating the starting arrays"
+    },
+    {
+      "component": "two_historical_compatibility_controls",
+      "classification": "CALCULATED",
+      "minimum_bytes": 3228608168,
+      "likely_bytes": 6524325200,
+      "conservative_bytes": 6524325200,
+      "basis": "Fresh initial and original first-save endpoint per arm; qualification weights are not scientific initializers"
+    },
+    {
+      "component": "one_ByT5_qualification_trajectory",
+      "classification": "CALCULATED_WITH_FORMAT_ALLOWANCE",
+      "minimum_bytes": 3595653120,
+      "likely_bytes": 4827758592,
+      "conservative_bytes": 4827758592,
+      "basis": "FP32 model plus two FP32 AdamW moments at 100-update endpoint, initial model only; no scientific recipe consumed"
+    },
+    {
+      "component": "expanded_DEVELOPMENT_and_diagnostic_outputs",
+      "classification": "ASSUMED",
+      "minimum_bytes": 536870912,
+      "likely_bytes": 2147483648,
+      "conservative_bytes": 4294967296,
+      "basis": "All prescribed B/C/ByT5 outputs, failure-inclusive scoring, TRAIN diagnostics and bootstrap; no selected-case thinning"
+    },
+    {
+      "component": "six_future_BC_scientific_recipes_routine_saves",
+      "classification": "CALCULATED",
+      "minimum_bytes": 125915718552,
+      "likely_bytes": 127224341400,
+      "conservative_bytes": 127224341400,
+      "basis": "Three recipes per arm, all thirteen prescribed saves each, fixed full logical bytes; no sparse benefit assumed"
+    },
+    {
+      "component": "future_ByT5_scientific_recipe",
+      "classification": "CALCULATED_WITH_FORMAT_ALLOWANCE",
+      "minimum_bytes": 11985510400,
+      "likely_bytes": 12052619264,
+      "conservative_bytes": 12052619264,
+      "basis": "Initial model plus model/moments after 2, 5 and 10 complete passes; four routine saves"
+    },
+    {
+      "component": "full_presentation_ledgers_and_resume_metadata",
+      "classification": "ASSUMED",
+      "minimum_bytes": 214748364,
+      "likely_bytes": 1073741824,
+      "conservative_bytes": 4294967296,
+      "basis": "D0/D1 master/subqueue ledgers and full native consumption logs retained; generated pools read unchanged from G1"
+    },
+    {
+      "component": "private_logs_and_receipts",
+      "classification": "ASSUMED",
+      "minimum_bytes": 268435456,
+      "likely_bytes": 2147483648,
+      "conservative_bytes": 8589934592,
+      "basis": "Source, corpus, qualification, future scientific and resource logs; failed attempts retained"
+    },
+    {
+      "component": "atomic_publication_transient",
+      "classification": "CALCULATED_WITH_ALLOWANCE",
+      "minimum_bytes": 3228608168,
+      "likely_bytes": 4294967296,
+      "conservative_bytes": 8589934592,
+      "basis": "One writer at a time; whole old/new checkpoint publication plus runtime-format allowance"
+    },
+    {
+      "component": "unallocated_headroom_and_failed_attempt_reserve",
+      "classification": "ASSUMED",
+      "minimum_bytes": 8589934592,
+      "likely_bytes": 17179869184,
+      "conservative_bytes": 34359738368,
+      "basis": "Additional storage reserve, including a retained failed scientific trajectory or a large partial archive; not a guaranteed bound for arbitrarily many failures"
+    }
+  ],
+  "totals": {
+    "minimum_bytes": 234663505572,
+    "likely_bytes": 295343136207,
+    "conservative_bytes": 333857911131
+  },
+  "projected_remaining_bytes": {
+    "minimum_bytes": 386145165660,
+    "likely_bytes": 325465535025,
+    "conservative_bytes": 286950760101
+  },
+  "conservative_remaining_above_250GiB": true,
+  "checkpoint_B100_logical_bytes_measured": 1611136656,
+  "checkpoint_C101_logical_bytes_measured": 1617471512,
+  "checkpoint_format_overhead": "16 MiB assumed per save; versioned G2 native schema remains unqualified",
+  "retained_failure_limit": "Reserve is finite. Reforecast from retained actual attempts before new expensive work; stop if projected free space/headroom is unsafe. No deletion of G1 or snapshots, or scientific treatment change, is authorized.",
+  "qualification_storage_layout": "Separate immutable source checkpoints for BENCH and cold replay; replay final captures only. Hash/state records for all next20 actual updates remain required. Counts must be rechecked against implemented runners before execution admission.",
+  "metadata_census_receipt_sha256": "26b38221045622a4ec9f5df7c2ed21d12d78513ee222386c925aab255abcdcdc",
+  "price_labels": [
+    "MEASURED",
+    "CALCULATED",
+    "ASSUMED",
+    "UNPRICED"
+  ],
+  "unpriced": [
+    "Unbounded additional failures",
+    "Changes in runtime checkpoint serialization overhead beyond the explicit allowance"
+  ],
+  "status": "PASS_PLANNING_HEADROOM"
+}
