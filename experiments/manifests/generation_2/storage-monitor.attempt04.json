@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-10-07T04:23:06.249044+00:00",
+  "external_literal_free_bytes": 554420047872,
+  "external_minimum_250GiB_pass": true,
+  "internal_literal_free_bytes": 183449010176,
+  "native_bench": "B100-D0-U8 qualification-only initial evaluation in progress",
+  "protected_snapshot_present": true,
+  "schema": "g2_storage_monitor_v1",
+  "scientific_recipes_started": 0,
+  "snapshot_readonly_record_sha256": "335ed69ce722c9abfca6abb7f148b5a2a3815860c086fbb86061ed58a8d408d8",
+  "status": "PASS_CURRENT_CAPACITY",
+  "time_machine_operations": 0
+}

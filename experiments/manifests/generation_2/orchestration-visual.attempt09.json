@@ -1,0 +1,80 @@
+{
+  "checks": [
+    {
+      "appearance": "light",
+      "background": "rgb(245, 244, 241)",
+      "bodyWidth": 1280,
+      "documentWidth": 1280,
+      "errors": [],
+      "screenshotBytes": 221674,
+      "status": "PASS",
+      "storageText": true,
+      "width": 1280
+    },
+    {
+      "appearance": "dark",
+      "background": "rgb(20, 19, 17)",
+      "bodyWidth": 1280,
+      "documentWidth": 1280,
+      "errors": [],
+      "screenshotBytes": 219429,
+      "status": "PASS",
+      "storageText": true,
+      "width": 1280
+    },
+    {
+      "appearance": "light",
+      "background": "rgb(245, 244, 241)",
+      "bodyWidth": 390,
+      "documentWidth": 390,
+      "errors": [],
+      "screenshotBytes": 106809,
+      "status": "PASS",
+      "storageText": true,
+      "width": 390
+    },
+    {
+      "appearance": "dark",
+      "background": "rgb(20, 19, 17)",
+      "bodyWidth": 390,
+      "documentWidth": 390,
+      "errors": [],
+      "screenshotBytes": 105055,
+      "status": "PASS",
+      "storageText": true,
+      "width": 390
+    }
+  ],
+  "orchestration_sha256": "a127e944e0bd9422ca149f607cda061d033cba1f8e19f64ce86e7463bcb09fb4",
+  "preliminary_check_retained_privately": true,
+  "schema": "g2_orchestration_visual_v1",
+  "screenshot_inspection": [
+    {
+      "appearance": "light",
+      "sha256": "e4d1ad012590b8f6544a2265991fc058e4c6963a8c6dda8372b530fb5fdecccd",
+      "visually_inspected": true,
+      "width": 1280
+    },
+    {
+      "appearance": "dark",
+      "sha256": "ac09bd302676b211d412cff6e010c2bc42c97a6e812884211b3b523d599acc01",
+      "visually_inspected": true,
+      "width": 1280
+    },
+    {
+      "appearance": "light",
+      "sha256": "49a63f09538a851c0153afe4857409ab3902c505dcfeb9d3de05fdf9e72cbb25",
+      "visually_inspected": true,
+      "width": 390
+    },
+    {
+      "appearance": "dark",
+      "sha256": "16d28c12e99fda3346d0109a321c3b46d05f6bd9131118f89cad41311a53d78f",
+      "visually_inspected": true,
+      "width": 390
+    }
+  ],
+  "status": "PASS",
+  "temporary_screenshots_created": 4,
+  "temporary_screenshots_removed": 4
+}

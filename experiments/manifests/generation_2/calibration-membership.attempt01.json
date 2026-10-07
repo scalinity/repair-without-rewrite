@@ -1,0 +1,12 @@
+{
+  "calibration_membership_matches": 1900,
+  "calibration_role_rows": 1900,
+  "failed_read_retained": true,
+  "failed_read_sha256": "def67a1bca2f8c6afd1919462e469676ad8c381a43fc35359ef4d9bd1a68ec9f",
+  "legacy_calibration": 96,
+  "legacy_hpo": 12,
+  "schema": "g2_readonly_calibration_membership_v1",
+  "scientific_recipes_started": 0,
+  "status": "PASS_FROZEN_MEMBERSHIP_ONLY",
+  "successful_read_sha256": "12ea0face1dc4c781e4c6cce2d9ec2afef15500df927c7062fa9f9e112751501"
+}

@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "-m",
+    "pytest",
+    "tests/data/test_g2_qualification_guards.py",
+    "tests/data/test_g2_qualification_accounting.py",
+    "-q"
+  ],
+  "code_commit": "40c9839625a83fbd4474b80170ed9800d072daa6",
+  "created_utc": "2026-10-07T04:45:22.760321+00:00",
+  "failed": 0,
+  "log_sha256": "92255cd92a064074a66b46e5ca14f00e91042146d69627ec984664821f3a5d81",
+  "passed": 23,
+  "schema": "g2_bounded_cpu_test_v1",
+  "scientific_recipes_started": 0,
+  "scope": "CPU-only unavailable-root/accounting checks; completed CAL-output accounting gate remains pending actual closed panels",
+  "seconds": 0.07,
+  "skipped": 0,
+  "source_hashes": {
+    "benchmarks/g2_admission_independent.py": "2c38953e1c68966fe65f7bb58370acce6b5ec70e60e4e9c85fb6a4ff8fe71cdf"
+  },
+  "status": "PASS"
+}

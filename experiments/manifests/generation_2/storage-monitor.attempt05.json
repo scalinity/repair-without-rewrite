@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-10-07T05:07:30.117895+00:00",
+  "external_literal_free_bytes": 550732451840,
+  "external_minimum_250GiB_pass": true,
+  "internal_literal_free_bytes": 176566079488,
+  "native_bench": "B100-D0-U8 timed updates in progress; three complete qualification snapshots retained",
+  "schema": "g2_storage_monitor_v1",
+  "scientific_recipes_started": 0,
+  "status": "PASS_CURRENT_CAPACITY",
+  "time_machine_operations": 0
+}

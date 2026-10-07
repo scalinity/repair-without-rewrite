@@ -66,6 +66,20 @@ def run(binding, attempt):
         identities[name] = sha256(path)
     native = records["independent-native.attempt01.json"]
     assert native["scientific_recipes_started"] == 0
+    calibration_path = Path("experiments/manifests/development_calibration_consumption_generation_2.attempt03.json")
+    calibration = json.loads(calibration_path.read_text())
+    identities[str(calibration_path)] = sha256(calibration_path)
+    assert calibration["status"] == "OBSERVED_USE_RECONSTRUCTED"
+    assert calibration["calibration_unique_rows"] == calibration["student_evaluated_unique_rows"] == 1900
+    assert calibration["new_student_neural_case_evaluations"] == 16 * 1900
+    assert len(calibration["evaluation_files"]) == 16
+    assert all(row["completed_artifact"] and row["calibration_evaluations"] == 1900
+               for row in calibration["evaluation_files"])
+    assert len(calibration["per_id_student_evaluation_counts"]) == 1900
+    assert set(calibration["per_id_student_evaluation_counts"].values()) == {16}
+    assert calibration["source_recognizer_calibration_calls"] == {"unique":1804,"replay":24}
+    assert calibration["fit_performed"] is False and calibration["training_use_forbidden"] is True
+    assert calibration["sealed_reference_use"] is False and calibration["scientific_recipes_started"] == 0
     baseline = json.loads((directory / "baseline-tests.attempt01.json").read_text())
     assert baseline["passed"] == 379 and baseline["failed"] == baseline["skipped"] == 0
     final = records["final-full-tests.attempt01.json"]

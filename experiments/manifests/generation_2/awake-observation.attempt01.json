@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-10-07T05:05:03.656736+00:00",
+  "new_assertion_created": false,
+  "power_settings_changed": false,
+  "read_only_record_sha256": "a5b4f8630c54722aed3b04cabd3fe41ac3c7a2d0e64202a3eb21189bd8ccd0e3",
+  "schema": "g2_awake_assertion_observation_v1",
+  "scientific_recipes_started": 0,
+  "scope": "current observation only, not a guarantee against manual/lid/power interruption",
+  "status": "PASS_EXISTING_IDLE_SLEEP_ASSERTION_PRESENT"
+}
