@@ -1,0 +1,14 @@
+{
+  "cause": "new-archive descriptor used md5 instead of the published official_md5 field",
+  "code_commit": "c468c85403fb1fe0fa7701b72c921fca7d934832",
+  "code_sha256": "8844d939d02e2bd9466b36e64fbe286970c0ed3d775fce38ae1c4b90722b4a8b",
+  "error_type": "KeyError",
+  "extracted": 0,
+  "log_sha256": "d914d4168cc1a42f9b99de97c98522ef4a0f3c4e6a0e3259b8aa4a940d490a3a",
+  "qualification_id": "G2-QUAL-AUDIO-train-clean-360-attempt01",
+  "recognizer_calls": 0,
+  "reconstruction": "post-failure from exact retained code and console; no extraction output or source call was created",
+  "schema": "g2_audio_extraction_provenance_v1",
+  "scientific_recipes_started": 0,
+  "status": "FAILED_BEFORE_NATIVE_AUDIO_ACCESS"
+}

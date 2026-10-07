@@ -1,0 +1,13 @@
+{
+  "cause": "new archive descriptor expected native.tar.gz instead of the acquisition filename train-clean-360.tar.gz",
+  "code_sha256": "39d4cb115f38ed2f9e9094cef261ed5ca8ed3b5f9da76061b8829d9725c2d84f",
+  "error_type": "KeyError",
+  "extracted": 0,
+  "log_sha256": "c1bc654b19bbb15c6a0c4e0f60ebfa972c74b06ec770280b06113a96b47b3657",
+  "qualification_id": "G2-QUAL-AUDIO-train-clean-360-attempt02",
+  "recognizer_calls": 0,
+  "reconstruction": "post-failure from exact retained code and console; no extraction output or source call was created",
+  "schema": "g2_audio_extraction_provenance_v1",
+  "scientific_recipes_started": 0,
+  "status": "FAILED_BEFORE_NATIVE_AUDIO_ACCESS"
+}

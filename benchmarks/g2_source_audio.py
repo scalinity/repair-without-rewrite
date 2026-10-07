@@ -45,9 +45,9 @@ def extract(binding, split, attempt):
         if len(finished) != 1:
             raise ValueError("one verified completed source archive required")
         complete = read_complete(finished[0])
-        archive = finished[0] / "native.tar.gz"
-        size, md5 = specification["bytes"], specification["md5"]
-        expected_sha = complete["files"]["native.tar.gz"]["sha256"]
+        archive = finished[0] / (split + ".tar.gz")
+        size, md5 = specification["bytes"], specification["official_md5"]
+        expected_sha = complete["files"][split + ".tar.gz"]["sha256"]
     output_relative = f"source-audio-v1/{split}.attempt{attempt:02d}"
     provenance = {"schema": "g2_audio_extraction_provenance_v1",
         "qualification_id": f"G2-QUAL-AUDIO-{split}-attempt{attempt:02d}", "seed": None,

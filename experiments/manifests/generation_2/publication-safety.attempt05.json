@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-10-07T02:55:48.653570+00:00",
+  "gitleaks": "PASS_ZERO_CREDENTIAL_HITS",
+  "personal_identifier_hits": [],
+  "scan_report_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "schema": "g2_publication_safety_v1",
+  "scope": "named native-audio, guarded source and pending qualification entry points",
+  "staged_file_sha256": {
+    "ORCHESTRATION.html": "956de4916bb63f7ba4a5bc09bb2b546f47aa4e2f7dae9920e5f7a44b2614ec0a",
+    "benchmarks/g2_byt5_qualification.py": "ea0450c32a423fa2a12fb3278acbef3c09c40a864912f694713c4b3b62ed372d",
+    "benchmarks/g2_corpus_independent.py": "beaa66a45da3720c99dc31c4b67a6e1284763fe4bfd25f368352df6d48baa732",
+    "benchmarks/g2_corpus_qualification.py": "9b1fde1fa5829eb9ac24f51ac350e3b8334b91e69f5790c2a1a13cc7e2257468",
+    "benchmarks/g2_native_qualification.py": "2d446a4350cfed4eb508baae1797ce21f6073fc904c2d3ae2340afd78cce627c",
+    "benchmarks/g2_parakeet_sources.py": "a65be35590f0d6a8467accb90144231ceb8dcb43f46d98dd09da1cf15a71637e",
+    "benchmarks/g2_source_audio.py": "0a4950c2a6452bb1a770606128fd4bafb5c64d0d64c77dfc869d3e82fc20c64c",
+    "docs/LOG.md": "78bc88258b2990c5236b195430835c6c14abc466d1b6eac1b044bc60fa424c7a",
+    "docs/reports/G2_OFFICIAL_NATIVE_AUDIO_QUALIFICATION.md": "358f6856b49188132aea34739e5488a2855b5d1aa559d0dd2e57f05cac648a4d",
+    "experiments/manifests/generation_2/audio-train-clean-360.attempt01.json": "6ec3d38898440bcfebcdb7fbbe4eab453c1bebaf3441c3064cae057b29ddbec9",
+    "experiments/manifests/generation_2/audio-train-clean-360.attempt02.json": "1f585f6f81d69a5fd4ef59fd12516fcce932f96b8499e6d12274c6450dbba646",
+    "experiments/manifests/generation_2/audio-train-clean-360.attempt03.json": "5952b2dd280524f18244b3cbaa2b1a015e7d79649b587917910fc48e22d98346",
+    "experiments/manifests/generation_2/audio-train-other-500.attempt01.json": "0ab31e7f33d07a27a187d55cd2b838898f1a17d048b8a85fa0787493a55e01e5",
+    "experiments/manifests/generation_2/orchestration-visual.attempt05.json": "d685f21ee777311c561101c0210e9bc3f7d7cdae0ea5a0a53d4b9e394209c4bd",
+    "experiments/manifests/generation_2/qualification-cpu-tests.attempt01.json": "55cec859af3582acde63b8df7d8fb053d8cfe8b25f1ef236fe081805b602ce13",
+    "experiments/manifests/generation_2/source-archives.attempt01.json": "df385b505ad85576db21b81117648b8d1693aa29562f99f6ff911730c2bdab0d",
+    "src/models/g2_training.py": "b98acdd34e26291763c2e3022c26222e50323085dffc134d2e00f7bd3aa6facf",
+    "tests/data/test_g2_qualification_guards.py": "6d39f6543fd88aa958d85d4cf11d4984dc4dee5a6353eebb99ac3af040e87810"
+  },
+  "status": "PASS",
+  "unclassified_hits": 0
+}

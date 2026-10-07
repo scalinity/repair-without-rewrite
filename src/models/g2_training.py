@@ -30,6 +30,8 @@ class G2Native:
     def finish(self):
         self.validate()
         result = self.native.finish()
+        result["legacy_32768_charge_difference"] = result.pop("overshoot")
+        result["master_overshoot"] = sum(row["canonical_charge"] for row in self.stream.master) - 32768
         result.update(data_condition=self.stream.data_condition, update_condition=self.stream.update_condition,
             master_queue_index=self.stream.master_queue_index, subqueue_index=self.stream.subqueue_index)
         self.stream.finish_actual()

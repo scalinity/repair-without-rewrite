@@ -1,0 +1,46 @@
+{
+  "after": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 584112427008,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "archive_sha256": "146a56496217e96c14334a160df97fffedd6e0a04e66b9c5af0d40be3c792ecf",
+  "audio_bytes": 963506717,
+  "before": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 588373540864,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "captured_dirty_status": " M benchmarks/g2_source_audio.py\n?? benchmarks/g2_historical_compatibility.py\n?? benchmarks/g2_parakeet_sources.py\n?? experiments/manifests/generation_2/audio-train-clean-360.attempt01.json\n?? experiments/manifests/generation_2/audio-train-clean-360.attempt02.json\n?? experiments/manifests/generation_2/compatibility-B100.attempt01.json\n?? experiments/manifests/generation_2/compatibility-B100.attempt02.json\n?? experiments/manifests/generation_2/compatibility-C101.attempt01.json\n?? experiments/manifests/generation_2/compatibility-comparator-audit.attempt01.json\n?? tests/data/test_g2_qualification_guards.py\n",
+  "code_commit": "c468c85403fb1fe0fa7701b72c921fca7d934832",
+  "code_hashes": {
+    "benchmarks/g2_source_audio.py": "0a4950c2a6452bb1a770606128fd4bafb5c64d0d64c77dfc869d3e82fc20c64c",
+    "src/data/g2_artifacts.py": "091897ddcca0a1e0fe03b35e3b54b3fe2737344080faa3d669ac5c8096c7bd70",
+    "src/data/g2_corpus.py": "4b059265d74c466bbf532d190a0c1a1cb1c18ffd871331fb7427019dd4afa05e"
+  },
+  "config_sha256": "6ca236b88d430a5a0d97e27532d3a23a92f92dfb6976b386439c6a55378be29c",
+  "data_manifest_sha256": "09bf225b878047e1021ec80b42be0eade793f0ddd8e3411ceb8246ff71ca2857",
+  "decoded_seconds": 51169.86925,
+  "dirty_diff_sha256": "9b231fef9678e107a9434f82e8c53f7f01b58ac850902c4ca5b326188033ee85",
+  "elapsed_seconds": 66.84704037499614,
+  "expected_official_md5": "c0e676e450a7ff2f54aeade5171606fa",
+  "extracted": 6689,
+  "inventory_sha256": "2ad3e4671c23257da06a7bdcfd4b5a5e8132c8b0c15e8c13590e7de19374b80b",
+  "official_split": "train-clean-360",
+  "official_url": "https://www.openslr.org/resources/12/train-clean-360.tar.gz",
+  "output_relative": "source-audio-v1/train-clean-360.attempt03",
+  "private_census_sha256": "e37fa0801cd1b844d7ec8fbd7798a6d136f65eb6d4f2d8ddf7fcc235571c98b1",
+  "qualification_id": "G2-QUAL-AUDIO-train-clean-360-attempt03",
+  "recognizer_calls": 0,
+  "resume_policy": "immutable completed extraction reused; failed partial retained; new attempt required",
+  "schema": "g2_audio_extraction_provenance_v1",
+  "scientific_recipes_started": 0,
+  "seed": null,
+  "selected_records": 6689,
+  "source_archive_bytes": 23049477885,
+  "status": "PASS_AUDIO_ONLY"
+}

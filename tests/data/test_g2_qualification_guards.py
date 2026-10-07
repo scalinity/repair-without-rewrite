@@ -3,12 +3,19 @@ import pytest
 from benchmarks import g2_historical_compatibility as historical
 from benchmarks import g2_parakeet_sources as source
 from benchmarks import g2_source_audio as audio
+from benchmarks import g2_native_qualification as native
+from benchmarks import g2_byt5_qualification as byt5
+from benchmarks import g2_corpus_qualification as corpus
 
 
 @pytest.mark.parametrize("module,invoke", [
     (historical, lambda p: historical.run(p, "B100", 1)),
     (source, lambda p: source.run(p, 1)),
-    (audio, lambda p: audio.extract(p, "dev-clean", 1))])
+    (audio, lambda p: audio.extract(p, "dev-clean", 1)),
+    (native, lambda p: native.run(p, "B100", "D0", "U8", "bench")),
+    (native, lambda p: native.run(p, "C101", "D1", "U1", "cold", kind="mid")),
+    (byt5, lambda p: byt5.run(p, 1)),
+    (corpus, lambda p: corpus.run(p, 1))])
 def test_unavailable_external_root_precedes_native_libraries_and_output(tmp_path, monkeypatch, module, invoke):
     def missing(_):
         raise FileNotFoundError("missing external root")

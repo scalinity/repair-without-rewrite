@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "appearance": "light",
+      "background": "rgb(245, 244, 241)",
+      "bodyWidth": 1280,
+      "documentWidth": 1280,
+      "errors": [],
+      "screenshotBytes": 216862,
+      "status": "PASS",
+      "storageText": true,
+      "width": 1280
+    },
+    {
+      "appearance": "dark",
+      "background": "rgb(20, 19, 17)",
+      "bodyWidth": 1280,
+      "documentWidth": 1280,
+      "errors": [],
+      "screenshotBytes": 214292,
+      "status": "PASS",
+      "storageText": true,
+      "width": 1280
+    },
+    {
+      "appearance": "light",
+      "background": "rgb(245, 244, 241)",
+      "bodyWidth": 390,
+      "documentWidth": 390,
+      "errors": [],
+      "screenshotBytes": 106993,
+      "status": "PASS",
+      "storageText": true,
+      "width": 390
+    },
+    {
+      "appearance": "dark",
+      "background": "rgb(20, 19, 17)",
+      "bodyWidth": 390,
+      "documentWidth": 390,
+      "errors": [],
+      "screenshotBytes": 105481,
+      "status": "PASS",
+      "storageText": true,
+      "width": 390
+    }
+  ],
+  "html_sha256": "956de4916bb63f7ba4a5bc09bb2b546f47aa4e2f7dae9920e5f7a44b2614ec0a",
+  "scope": "separate headless desktop/phone contexts; viewer unchanged",
+  "status": "PASS",
+  "temporary_screenshots_created": 4,
+  "temporary_screenshots_removed": true,
+  "visually_inspected": true
+}

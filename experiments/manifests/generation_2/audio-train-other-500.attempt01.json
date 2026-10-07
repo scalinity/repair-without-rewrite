@@ -1,0 +1,46 @@
+{
+  "after": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 556622622720,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "archive_sha256": "ddb22f27f96ec163645d53215559df6aa36515f26e01dd70798188350adcb6d2",
+  "audio_bytes": 1028580084,
+  "before": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 557685919744,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "captured_dirty_status": " M benchmarks/g2_source_audio.py\n M docs/LOG.md\n?? benchmarks/g2_compatibility_independent.py\n?? benchmarks/g2_historical_compatibility.py\n?? benchmarks/g2_parakeet_sources.py\n?? docs/reports/G2_HISTORICAL_COMPATIBILITY.md\n?? docs/reviews/G2_HISTORICAL_INDEPENDENT_REVIEW.md\n?? experiments/manifests/generation_2/audio-train-clean-360.attempt01.json\n?? experiments/manifests/generation_2/audio-train-clean-360.attempt02.json\n?? experiments/manifests/generation_2/audio-train-clean-360.attempt03.json\n?? experiments/manifests/generation_2/compatibility-B100.attempt01.json\n?? experiments/manifests/generation_2/compatibility-B100.attempt02.json\n?? experiments/manifests/generation_2/compatibility-C101.attempt01.json\n?? experiments/manifests/generation_2/compatibility-C101.attempt02.json\n?? experiments/manifests/generation_2/compatibility-comparator-audit.attempt01.json\n?? experiments/manifests/generation_2/compatibility-full-tests.attempt01.json\n?? experiments/manifests/generation_2/independent-compatibility.attempt01.json\n?? experiments/manifests/generation_2/independent-compatibility.attempt02.json\n?? experiments/manifests/generation_2/native-unit-test-attempts.attempt01.json\n?? experiments/manifests/generation_2/scientific-status.attempt02.json\n?? experiments/manifests/generation_2/source-archives.attempt01.json\n?? src/data/g2_byt5.py\n?? src/data/g2_stream.py\n?? src/models/g2_training.py\n?? src/scoring/g2_bootstrap.py\n?? tests/data/test_g2_byt5.py\n?? tests/data/test_g2_qualification_guards.py\n?? tests/data/test_g2_stream.py\n?? tests/models/test_g2_training.py\n?? tests/scoring/test_g2_bootstrap.py\n",
+  "code_commit": "c468c85403fb1fe0fa7701b72c921fca7d934832",
+  "code_hashes": {
+    "benchmarks/g2_source_audio.py": "0a4950c2a6452bb1a770606128fd4bafb5c64d0d64c77dfc869d3e82fc20c64c",
+    "src/data/g2_artifacts.py": "091897ddcca0a1e0fe03b35e3b54b3fe2737344080faa3d669ac5c8096c7bd70",
+    "src/data/g2_corpus.py": "4b059265d74c466bbf532d190a0c1a1cb1c18ffd871331fb7427019dd4afa05e"
+  },
+  "config_sha256": "6ca236b88d430a5a0d97e27532d3a23a92f92dfb6976b386439c6a55378be29c",
+  "data_manifest_sha256": "09bf225b878047e1021ec80b42be0eade793f0ddd8e3411ceb8246ff71ca2857",
+  "decoded_seconds": 56463.1594375,
+  "dirty_diff_sha256": "f65bff63ca90b43a75d37efadb58873b0fd618c3de72b933d36231d9212f5410",
+  "elapsed_seconds": 73.77837945899228,
+  "expected_official_md5": "d1a0fd59409feb2c614ce4d30c387708",
+  "extracted": 7758,
+  "inventory_sha256": "3fe50f8cc574cab5daeb40e5c1f7f59f7d93312bf76ab6c02540dc06c5053100",
+  "official_split": "train-other-500",
+  "official_url": "https://www.openslr.org/resources/12/train-other-500.tar.gz",
+  "output_relative": "source-audio-v1/train-other-500.attempt01",
+  "private_census_sha256": "e37fa0801cd1b844d7ec8fbd7798a6d136f65eb6d4f2d8ddf7fcc235571c98b1",
+  "qualification_id": "G2-QUAL-AUDIO-train-other-500-attempt01",
+  "recognizer_calls": 0,
+  "resume_policy": "immutable completed extraction reused; failed partial retained; new attempt required",
+  "schema": "g2_audio_extraction_provenance_v1",
+  "scientific_recipes_started": 0,
+  "seed": null,
+  "selected_records": 7758,
+  "source_archive_bytes": 30593501606,
+  "status": "PASS_AUDIO_ONLY"
+}

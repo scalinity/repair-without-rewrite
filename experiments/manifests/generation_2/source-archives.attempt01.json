@@ -1,0 +1,60 @@
+{
+  "schema": "g2_official_archive_acquisition_v1",
+  "attempt": 1,
+  "qualification_id": "G2-QUAL-SOURCE-ARCHIVES-attempt01",
+  "started_utc": "2026-10-07T01:59:14.101306+00:00",
+  "code_commit": "d03f343b1b33e646287455bbb402260054e4a64d",
+  "captured_dirty_status": "?? benchmarks/g2_source_archives.py\n?? configs/generation_2/source_archives_v1.json\n?? tests/data/test_g2_source_archives.py\n",
+  "dirty_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source_hashes": {
+    "benchmarks/g2_source_archives.py": "50cd305dfead11000677b2947f3e228dc184b7d4daa07a2d03eeb24db27249a7",
+    "src/data/g2_artifacts.py": "091897ddcca0a1e0fe03b35e3b54b3fe2737344080faa3d669ac5c8096c7bd70"
+  },
+  "config_sha256": "6ca236b88d430a5a0d97e27532d3a23a92f92dfb6976b386439c6a55378be29c",
+  "data_manifest_sha256": "09bf225b878047e1021ec80b42be0eade793f0ddd8e3411ceb8246ff71ca2857",
+  "initial_preflight": {
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5",
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 620808458240,
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f"
+  },
+  "scientific_seed": null,
+  "resume_policy": "reuse verified completed immutable archives; preserve failed partials; no overwrite or internal fallback",
+  "archives": [
+    {
+      "name": "train-clean-360",
+      "official_url": "https://www.openslr.org/resources/12/train-clean-360.tar.gz",
+      "bytes": 23049477885,
+      "official_md5": "c0e676e450a7ff2f54aeade5171606fa",
+      "sha256": "146a56496217e96c14334a160df97fffedd6e0a04e66b9c5af0d40be3c792ecf",
+      "status": "PASS",
+      "seconds_before_publication": 1104.345290416968,
+      "artifact_relative_directory": "source-archives-v1/train-clean-360.attempt01",
+      "seconds_including_publication": 1131.335141833988
+    },
+    {
+      "name": "train-other-500",
+      "official_url": "https://www.openslr.org/resources/12/train-other-500.tar.gz",
+      "bytes": 30593501606,
+      "official_md5": "d1a0fd59409feb2c614ce4d30c387708",
+      "sha256": "ddb22f27f96ec163645d53215559df6aa36515f26e01dd70798188350adcb6d2",
+      "status": "PASS",
+      "seconds_before_publication": 1428.3175814590068,
+      "artifact_relative_directory": "source-archives-v1/train-other-500.attempt01",
+      "seconds_including_publication": 1453.5831124589895
+    }
+  ],
+  "recognizer_calls": 0,
+  "scientific_recipes_started": 0,
+  "status": "PASS_OFFICIAL_ARCHIVES_ONLY",
+  "elapsed_seconds": 2585.1301597920246,
+  "finished_utc": "2026-10-07T02:42:19.378069+00:00",
+  "final_preflight": {
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5",
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 557685903360,
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f"
+  }
+}

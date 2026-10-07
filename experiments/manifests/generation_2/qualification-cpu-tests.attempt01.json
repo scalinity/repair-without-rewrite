@@ -1,0 +1,12 @@
+{
+  "failures": 0,
+  "integrated_full_suite_last_passed": 434,
+  "log_relative": "logs-v1/qualification-cpu-tests.attempt01.log",
+  "log_sha256": "0a0296041ed2a2474f5eebf14d83bbeb0b6ec5a85c61c4410afb1d28df261997",
+  "native_new_runner_qualification": "PENDING",
+  "passed": 39,
+  "schema": "g2_cpu_qualification_tests_v1",
+  "seconds": 0.57,
+  "skips": 0,
+  "status": "PASS_CPU_ONLY"
+}
