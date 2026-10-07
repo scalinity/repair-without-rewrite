@@ -1,0 +1,57 @@
+{
+  "base_commit": "daaf98f59d1567d2aa5f85982769a6a9d4c287a3",
+  "checks": [
+    {
+      "appearance": "light",
+      "background": "rgb(245, 244, 241)",
+      "bodyWidth": 1280,
+      "documentWidth": 1280,
+      "errors": [],
+      "screenshotBytes": 217137,
+      "status": "PASS",
+      "storageText": true,
+      "width": 1280
+    },
+    {
+      "appearance": "dark",
+      "background": "rgb(20, 19, 17)",
+      "bodyWidth": 1280,
+      "documentWidth": 1280,
+      "errors": [],
+      "screenshotBytes": 214450,
+      "status": "PASS",
+      "storageText": true,
+      "width": 1280
+    },
+    {
+      "appearance": "light",
+      "background": "rgb(245, 244, 241)",
+      "bodyWidth": 390,
+      "documentWidth": 390,
+      "errors": [],
+      "screenshotBytes": 105268,
+      "status": "PASS",
+      "storageText": true,
+      "width": 390
+    },
+    {
+      "appearance": "dark",
+      "background": "rgb(20, 19, 17)",
+      "bodyWidth": 390,
+      "documentWidth": 390,
+      "errors": [],
+      "screenshotBytes": 104660,
+      "status": "PASS",
+      "storageText": true,
+      "width": 390
+    }
+  ],
+  "created_utc": "2026-10-07T14:28:12.830796+00:00",
+  "orchestration_sha256": "d97b140531ed9f52db0120d1edc105687e3c8f95e41544a0a7c47b8687dd4ef3",
+  "schema": "g2_orchestration_visual_v1",
+  "status": "PASS",
+  "temporary_screenshots_created": 4,
+  "temporary_screenshots_deleted": 4,
+  "temporary_screenshots_inspected": 4,
+  "watched_tab_resized": false
+}

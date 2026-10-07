@@ -1,0 +1,13 @@
+{
+  "independent_receipt_sha256": "88ec12d4af984194aa51ab1ea16fdbf14935a3cca36042cf41cde8a9190fb5a7",
+  "qualification_weights_forbidden_as_scientific_initializers": true,
+  "reports_sha256": {
+    "docs/reports/G2_COLD_RESUME_QUALIFICATION.md": "11a0b2b2a2df9b3d5f47009959bbdb6c90b7382204703fc48f6047d8e51f3924",
+    "docs/reports/G2_NATIVE_BENCH_QUALIFICATION.md": "9a9fb61f7e8ba87a2e02a379325fab5f1a4f59d37d3fb345a6beb732b58b19bc",
+    "docs/reviews/G2_NATIVE_INDEPENDENT_REVIEW.md": "217ea07e7193107acd68d3e636ad664d8e4673a59faec523bc9511e164a0e16e"
+  },
+  "reviewed_commit": "daaf98f59d1567d2aa5f85982769a6a9d4c287a3",
+  "schema": "g2_native_report_publication_v1",
+  "scientific_recipes_started": 0,
+  "status": "PASS_NATIVE_REPORT_ARTIFACT_BINDINGS"
+}

@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-10-07T14:26:47.312106+00:00",
+  "external_literal_free_bytes": 492621742080,
+  "external_root_preflight": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 492621742080,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "internal_below_250_GiB_does_not_block_external_qualification": true,
+  "internal_literal_free_bytes": 154356953088,
+  "phase": "Independent native six-stream/twelve-cold audit passed; ByT5 attempt02 fixed initial evaluation",
+  "schema": "g2_capacity_observation_v1",
+  "scientific_recipes_started": 0,
+  "snapshot_operations": 0
+}
