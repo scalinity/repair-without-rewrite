@@ -1,0 +1,61 @@
+{
+  "code_sha256": "696a5f2cd7fce9b1ff5a190567e3f0e4ead278e513ce3f68a7bce3d088d16a96",
+  "disposition": "FRONTIER_MODEL_REVIEW_REQUIRED",
+  "final_batch_size": 2,
+  "method": "finite integer batch endpoint enumeration; no G2 batch, model or trainer imports",
+  "milestones": [
+    {
+      "exact_optimizer_boundary": true,
+      "following_offset": 0,
+      "following_presentations": 0,
+      "following_update": 0,
+      "nominal_presentations": 0,
+      "passes": 0,
+      "preceding_offset": 0,
+      "preceding_presentations": 0,
+      "preceding_update": 0
+    },
+    {
+      "exact_optimizer_boundary": false,
+      "following_offset": 2,
+      "following_presentations": 28228,
+      "following_update": 7057,
+      "nominal_presentations": 28226,
+      "passes": 2,
+      "preceding_offset": -2,
+      "preceding_presentations": 28224,
+      "preceding_update": 7056
+    },
+    {
+      "exact_optimizer_boundary": false,
+      "following_offset": 3,
+      "following_presentations": 70568,
+      "following_update": 17642,
+      "nominal_presentations": 70565,
+      "passes": 5,
+      "preceding_offset": -1,
+      "preceding_presentations": 70564,
+      "preceding_update": 17641
+    },
+    {
+      "exact_optimizer_boundary": true,
+      "following_offset": 0,
+      "following_presentations": 141130,
+      "following_update": 35283,
+      "nominal_presentations": 141130,
+      "passes": 10,
+      "preceding_offset": 0,
+      "preceding_presentations": 141130,
+      "preceding_update": 35283
+    }
+  ],
+  "model_execution_performed": false,
+  "optimizer_updates": 35283,
+  "recipe_path": "experiments/manifests/generation_2/recipe-G2-ByT5-D1-10pass-seed42-lr3e-4.attempt01.json",
+  "recipe_sha256": "cd74653ce9af7a155560884e1b34d1e936392ed9fce61558345b1d8ac442b5df",
+  "schedule_selected": false,
+  "schema": "g2_independent_byt5_milestone_geometry_v1",
+  "scientific_slots_consumed": 0,
+  "status": "UNBOUND_INTERMEDIATE_MILESTONE_MAPPING",
+  "total_presentations": 141130
+}

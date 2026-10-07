@@ -1,0 +1,65 @@
+{
+  "schema": "g2_execution_orchestration_visual_v1",
+  "attempt": 2,
+  "created_utc": "2026-10-07T22:35:01.712Z",
+  "base_commit": "2c27cff28a31ae64220df9b06094a914e94dd0f3",
+  "orchestration_sha256": "6418a8aec5bde2fc4bb95c1292d07044e4fc0df297858824b03b1da1ffdafefc",
+  "checks": [
+    {
+      "width": 1280,
+      "documentWidth": 1280,
+      "bodyWidth": 1280,
+      "background": "rgb(245, 244, 241)",
+      "preflightText": true,
+      "laneText": true,
+      "appearance": "light",
+      "errors": [],
+      "screenshotBytes": 224715,
+      "status": "PASS"
+    },
+    {
+      "width": 1280,
+      "documentWidth": 1280,
+      "bodyWidth": 1280,
+      "background": "rgb(20, 19, 17)",
+      "preflightText": true,
+      "laneText": true,
+      "appearance": "dark",
+      "errors": [],
+      "screenshotBytes": 223546,
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "background": "rgb(245, 244, 241)",
+      "preflightText": true,
+      "laneText": true,
+      "appearance": "light",
+      "errors": [],
+      "screenshotBytes": 109142,
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "background": "rgb(20, 19, 17)",
+      "preflightText": true,
+      "laneText": true,
+      "appearance": "dark",
+      "errors": [],
+      "screenshotBytes": 108551,
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "viewer_width_verified_in_app": 1280,
+  "temporary_screenshots_created": 4,
+  "temporary_screenshots_inspected": 4,
+  "temporary_screenshots_deleted": 4,
+  "viewer_tab_resized": false,
+  "method": "Separate headless development-test contexts at the measured viewer width and phone width; no resize of the visible viewer tab.",
+  "inspection": "All four screenshots inspected for readable current preflight text in both appearances; no horizontal document overflow. Only these four temporary screenshots removed."
+}

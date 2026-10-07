@@ -1,0 +1,16 @@
+{
+  "clean_tree_at_test_start": true,
+  "collected": 465,
+  "elapsed_seconds": 43.45434104203014,
+  "execution_branch": "codex/g2-execution",
+  "exit_code": 0,
+  "failed": 0,
+  "log_sha256": "30de7ca57a91cb5bbf89b7b2d73b78c77e4ef09941fa674e664427653993c985",
+  "passed": 465,
+  "private_log_relative": "logs-v1/execution-preflight.attempt01/baseline-tests.log",
+  "qualified_source_sha": "2c27cff28a31ae64220df9b06094a914e94dd0f3",
+  "schema": "g2_execution_baseline_tests_v1",
+  "scientific_slots_consumed": 0,
+  "skipped": 0,
+  "status": "PASS"
+}

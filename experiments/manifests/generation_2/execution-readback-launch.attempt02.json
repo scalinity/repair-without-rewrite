@@ -1,0 +1,15 @@
+{
+  "schema": "g2_execution_mechanical_launch_v1",
+  "status": "FAILED_ABSENT_EMPTY_AREA_ASSUMPTION",
+  "attempt": 2,
+  "error_type": "FileNotFoundError",
+  "reason": "Unstarted scientific storage area is absent; absence must count as zero entries without creating it.",
+  "log_sha256": "a775adee3cf30a34df72ad37dffe1c15ad27b004ecfe58f727d822f737841cfe",
+  "script_sha256": "6da426748ed455819c28c4b6c7701eed0c7b9ab7cfe3c6bf1c4b45db7c995739",
+  "scientific_slots_consumed": 0,
+  "model_execution_performed": false,
+  "numerical_replay_used": false,
+  "elapsed_seconds": 0.956546375004109,
+  "timing_classification": "MEASURED",
+  "repair": "Permit an absent scientific area; never create it during a read-only preflight."
+}

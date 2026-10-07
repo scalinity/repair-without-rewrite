@@ -1,0 +1,11 @@
+{
+  "schema": "g2_execution_orchestration_edit_v1",
+  "status": "STOPPED_BEFORE_WRITE",
+  "attempt": 1,
+  "error_type": "AssertionError",
+  "reason": "A dry-run edit expected 19 matching content lines and found 16; the aggregate guard stopped before writing.",
+  "orchestration_changed": false,
+  "scientific_slots_consumed": 0,
+  "elapsed_seconds": null,
+  "timing_classification": "UNMEASURED"
+}

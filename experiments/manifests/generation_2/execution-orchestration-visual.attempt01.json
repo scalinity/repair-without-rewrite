@@ -1,0 +1,13 @@
+{
+  "schema": "g2_execution_orchestration_visual_v1",
+  "attempt": 1,
+  "status": "FAILED_BEFORE_BROWSER_LAUNCH",
+  "error_type": "MissingExecutable",
+  "reason": "Bundled Playwright expected an unavailable chromium_headless_shell executable; no browser was downloaded or installed.",
+  "temporary_screenshots_created": 0,
+  "viewer_tab_resized": false,
+  "scientific_slots_consumed": 0,
+  "elapsed_seconds": null,
+  "timing_classification": "UNMEASURED",
+  "repair": "Use the already installed Google Chrome executable for isolated headless development checks."
+}

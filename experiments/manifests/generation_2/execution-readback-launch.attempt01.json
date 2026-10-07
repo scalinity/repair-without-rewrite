@@ -1,0 +1,15 @@
+{
+  "schema": "g2_execution_mechanical_launch_v1",
+  "status": "FAILED_IMPORT_BEFORE_READBACK",
+  "attempt": 1,
+  "error_type": "ModuleNotFoundError",
+  "reason": "Executing the preserved script outside the repository does not add the repository to Python module search paths.",
+  "log_sha256": "dd6bdabb4582c139d3e139e460272f36846a702ce32ea2ae2336fe1c216cbaf7",
+  "script_sha256": "6da426748ed455819c28c4b6c7701eed0c7b9ab7cfe3c6bf1c4b45db7c995739",
+  "scientific_slots_consumed": 0,
+  "model_execution_performed": false,
+  "numerical_replay_used": false,
+  "elapsed_seconds": null,
+  "timing_classification": "UNMEASURED",
+  "repair": "Run the unchanged CPU-only script with the repository explicitly on PYTHONPATH."
+}

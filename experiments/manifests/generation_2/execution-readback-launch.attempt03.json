@@ -1,0 +1,13 @@
+{
+  "schema": "g2_execution_mechanical_launch_v1",
+  "status": "PASS",
+  "attempt": 3,
+  "exit_code": 0,
+  "script_sha256": "a819284c0cafa8b133ceaf808b6b8ae184079106921c97cb8006f270c177aa7b",
+  "log_sha256": "0d0d5891db1407c9b64eb78477d446a57462fd3efc4dfc8dcb36f8e9a42d4e69",
+  "scientific_slots_consumed": 0,
+  "model_execution_performed": false,
+  "numerical_replay_used": false,
+  "elapsed_seconds": 1.720898459025193,
+  "timing_classification": "MEASURED"
+}

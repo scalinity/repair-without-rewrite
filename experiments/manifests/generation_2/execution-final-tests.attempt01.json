@@ -1,0 +1,16 @@
+{
+  "schema": "g2_execution_final_integrated_tests_v1",
+  "recorded_at": "2026-10-07T22:33:20.310181+00:00",
+  "qualified_source_sha": "2c27cff28a31ae64220df9b06094a914e94dd0f3",
+  "collected": 465,
+  "passed": 465,
+  "skipped": 0,
+  "failed": 0,
+  "exit_code": 0,
+  "elapsed_seconds": 42.77675575000467,
+  "captured_dirty_status": " M ORCHESTRATION.html\n?? benchmarks/g2_byt5_milestone_independent.py\n?? docs/reports/G2_EXECUTION_PREFLIGHT.md\n?? docs/reviews/FRONTIER_G2_BYT5_MILESTONE_REVIEW_REQUEST_V1.md\n?? docs/reviews/G2_BYT5_MILESTONE_INDEPENDENT_REVIEW.md\n?? experiments/manifests/generation_2/execution-baseline-tests.attempt01.json\n?? experiments/manifests/generation_2/execution-independent-byt5-milestones.attempt01.json\n?? experiments/manifests/generation_2/execution-orchestration-edit.attempt01.json\n?? experiments/manifests/generation_2/execution-preflight.attempt01.json\n?? experiments/manifests/generation_2/execution-readback-launch.attempt01.json\n?? experiments/manifests/generation_2/execution-readback-launch.attempt02.json\n?? experiments/manifests/generation_2/execution-readback-launch.attempt03.json\n?? experiments/manifests/generation_2/execution-storage-monitor.attempt01.json\n",
+  "log_sha256": "17ae052320f7e9de5091d5e278dff0acaa151cbb188bee319d363c77b3fc1dcb",
+  "private_log_relative": "logs-v1/execution-preflight.attempt01/final-tests.log",
+  "status": "PASS",
+  "scientific_slots_consumed": 0
+}
