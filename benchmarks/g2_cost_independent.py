@@ -52,7 +52,34 @@ def run(binding, attempt):
     lines.append(("G2-ByT5-D1-10pass-seed42-lr3e-4", seconds))
     future = math.fsum(value for _, value in lines)
     assumed = calculated = 0.
+    expected_shared = {
+        "source-archives.attempt01.json", "audio-train-clean-100.attempt02.json",
+        "audio-train-clean-360.attempt03.json", "audio-train-other-500.attempt01.json",
+        "audio-dev-clean.attempt01.json", "audio-dev-other.attempt01.json",
+        "parakeet-sources.attempt01.json", "corpus-freeze.attempt01.json",
+        "compatibility-B100.attempt02.json", "compatibility-C101.attempt01.json",
+        "compatibility-C101.attempt02.json", "archived-evaluation-B100.attempt01.json",
+        "archived-evaluation-C101.attempt01.json", "independent-archives.attempt01.json",
+        "independent-corpus.attempt01.json", "independent-native.attempt01.json",
+        "independent-byt5.attempt01.json", "storage-reforecast.attempt01.json",
+        "native-initialization-precheck.attempt01.json", "expanded-evaluation-summary.attempt01.json",
+        "independent-evaluation.attempt01.json", "independent-compatibility.attempt02.json",
+        "audio-train-clean-100.attempt01.json", "audio-train-clean-360.attempt01.json",
+        "audio-train-clean-360.attempt02.json", "compatibility-B100.attempt01.json",
+        "external-root.attempt01.json", "artifact-root-io.attempt02.json",
+        "independent-storage.attempt01.json", "independent-root-loss.attempt01.json",
+        "source-startup-creation-gap.attempt01.json"}
+    shared_names = [item["receipt"] for item in result["shared_measured_and_assumed"]]
+    assert len(shared_names) == len(set(shared_names)) and set(shared_names) == expected_shared
+    untimed = {"audio-train-clean-100.attempt01.json", "audio-train-clean-360.attempt01.json",
+        "audio-train-clean-360.attempt02.json", "compatibility-B100.attempt01.json",
+        "external-root.attempt01.json", "artifact-root-io.attempt02.json",
+        "independent-storage.attempt01.json", "independent-root-loss.attempt01.json"}
     for item in result["shared_measured_and_assumed"]:
+        expected_class = ("ASSUMED" if item["receipt"] in untimed else
+            "CALCULATION_FROM_FILESYSTEM_CREATION_TIMESTAMPS"
+            if item["receipt"] == "source-startup-creation-gap.attempt01.json" else "MEASURED")
+        assert item["classification"] == expected_class
         record = json.loads((directory / item["receipt"]).read_text())
         if item["classification"] == "MEASURED":
             assert item["seconds"] == record[item.get("elapsed_field","elapsed_seconds")]

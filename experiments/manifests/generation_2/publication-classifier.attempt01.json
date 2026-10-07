@@ -1,0 +1,9 @@
+{
+  "error_type": "AssertionError",
+  "publication_performed": false,
+  "reason": "expected full source key; scanner Match starts at shortened token-related key suffix",
+  "scan_report_relative": "logs-v1/publication-gitleaks.attempt10.json",
+  "scientific_recipes_started": 0,
+  "stage": "publication scan classification",
+  "status": "FAILED_MECHANICAL_CLASSIFIER_ONLY"
+}

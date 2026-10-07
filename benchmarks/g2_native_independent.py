@@ -39,6 +39,9 @@ def run(binding,attempt):
     receipt=Path(f"experiments/manifests/generation_2/independent-native.attempt{attempt:02d}.json")
     if receipt.exists():raise FileExistsError(receipt)
     freeze=json.loads(Path("experiments/manifests/generation_2/corpus-freeze.attempt01.json").read_text())
+    historical_path=Path("experiments/manifests/generation_2/independent-compatibility.attempt02.json")
+    historical=json.loads(historical_path.read_text())
+    assert historical["status"]=="PASS_EXACT_ARTIFACT_RECONSTRUCTION"
     generated=records("exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl")
     summaries={};paired={}
     for data,condition in (("D0","U8"),("D1","U1"),("D1","U8")):
@@ -108,9 +111,14 @@ def run(binding,attempt):
             control={row["update"]:row for row in all_rows}
             states={}
             for key in ("initial","boundary","mid","final"):
-                snapshot=root.path(f"bench-v1/{name}.{key}");read_complete(snapshot)
+                snapshot=root.path(f"bench-v1/{name}.{key}");complete=read_complete(snapshot)
                 identity,meta=persisted_hash(snapshot);assert meta["schema"]=="paired_complete_actual_update_resume_g2_v1"
                 assert meta["data_condition"]==data and meta["update_condition"]==condition
+                if key=="initial":
+                    accepted=historical["arms"][arm]["checkpoints"][0]
+                    assert accepted["step"]==0 and accepted["array_bytes_exact"]
+                    assert complete["files"]["arrays.npz"]["sha256"]==accepted["arrays_sha256"]
+                    assert meta["optimizer_step"]==meta["committed_exposure"]==meta["pending_charge"]==0
                 states[key]=identity
             for kind in ("boundary","mid"):
                 cold_name=name+"."+kind;directory=root.path("cold-resume-v1/"+cold_name);read_complete(directory)
@@ -125,6 +133,7 @@ def run(binding,attempt):
             summaries[name]={"actual_updates_reconstructed":len(all_rows),"consumed_exposure":exposure,
                 "timed_updates":100,"warmups":5,"sustained_seconds":report["sustained_elapsed_seconds"],
                 "conservative_anchors_per_second":conservative,"native_labels_masks_padding_denominators_exact":True,
+                "initial_arrays_exact_accepted_historical_seed42":True,
                 "boundary_next20_exact":True,"mid_pending_plus_next20_exact":True,"persisted_state_hashes":states}
         a,b=paired[("B100",data,condition)],paired[("C101",data,condition)]
         common=min(len(a),len(b));assert common>=105 and a[:common]==b[:common]
@@ -132,8 +141,9 @@ def run(binding,attempt):
             "exact_shared_native_scientific_consumption":True,
             "total_bench_update_counts_may_differ":"fixed elapsed sustained benchmark; no total-equality claim"}
     report={"schema":"g2_independent_native_qualification_v1","status":"PASS_INDEPENDENT_G2_NATIVE_QUALIFICATION",
-        "method":"stdlib integer selector, prefix/bisect cuts, label lengths, padding masks and NumPy persisted arrays; no G2 stream/trainer/save/load/hash helpers imported",
+        "method":"stdlib integer selector, prefix/bisect cuts, label lengths, padding masks, NumPy persisted arrays and accepted historical seed42 initial array identities; no G2 stream/trainer/save/load/hash helpers imported",
         "streams":summaries,"cold_paths":12,"before":before,"after":root.preflight(),
+        "historical_initialization_review_sha256":sha256(historical_path),
         "code_sha256":sha256(__file__),"elapsed_seconds":time.perf_counter()-started,"scientific_recipes_started":0}
     receipt.write_text(json.dumps(report,indent=2,sort_keys=True)+"\n");return report
 

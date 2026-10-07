@@ -1,0 +1,45 @@
+{
+  "after": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 544279445504,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "before": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 544279445504,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "created_utc": "2026-10-07T06:24:12.880309+00:00",
+  "elapsed_seconds": 1.8234256249852479,
+  "historical_review_sha256": "383d2abe60d59f0616b87ffe5604bf4bb50d9fbe64b0e713140bf7e121218daf",
+  "independent_reviewer_code_sha256": "eabd361c426d86c41e70136bb97107c724f85fb3690f963e69a62655d1621df0",
+  "reviewed_commit": "0158153d65347fe17ada112b0cbca8d11ee78476",
+  "schema": "g2_two_cell_initialization_precheck_v1",
+  "scientific_recipes_started": 0,
+  "scope": "Two D0-U8 initializations only; full six-stream independent audit remains unrun",
+  "states": [
+    {
+      "accepted_historical_initial_exact": true,
+      "arm": "B100",
+      "arrays_sha256": "488d3ba292f0df45420d6920d25591b1e65c07e149c0b3fdddd4159b8bf3df82",
+      "committed_exposure": 0,
+      "optimizer_step": 0,
+      "pending_charge": 0,
+      "qualification_initial_relative": "bench-v1/B100-D0-U8.attempt01.initial"
+    },
+    {
+      "accepted_historical_initial_exact": true,
+      "arm": "C101",
+      "arrays_sha256": "a5e574c00177ac7d97440ad643053cc7279b7600c547de97c26220dd466f1cc3",
+      "committed_exposure": 0,
+      "optimizer_step": 0,
+      "pending_charge": 0,
+      "qualification_initial_relative": "bench-v1/C101-D0-U8.attempt01.initial"
+    }
+  ],
+  "status": "PASS_TWO_INITIAL_IDENTITIES_ONLY"
+}

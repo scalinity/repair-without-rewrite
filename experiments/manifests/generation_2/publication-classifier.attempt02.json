@@ -1,0 +1,14 @@
+{
+  "exact_source_hashes_verified": true,
+  "findings": 6,
+  "matched_suffixes": [
+    "tokenizer.json",
+    "tokenizer.py"
+  ],
+  "previous_failed_attempt": "publication-classifier.attempt01.json",
+  "schema": "g2_publication_classifier_v1",
+  "scientific_recipes_started": 0,
+  "scope": "publication classifier only; no qualification trajectory rerun",
+  "status": "PASS_EXACT_FILE_HASH_CLASSIFICATION",
+  "unclassified_findings": 0
+}

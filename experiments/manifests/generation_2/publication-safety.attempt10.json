@@ -1,0 +1,87 @@
+{
+  "absolute_local_path_additions": 0,
+  "code_commit": "0158153d65347fe17ada112b0cbca8d11ee78476",
+  "created_utc": "2026-10-07T07:00:49.145243+00:00",
+  "credential_values": 0,
+  "gitleaks_exit_code": 1,
+  "gitleaks_findings": [
+    {
+      "classification": "real source or artifact SHA256, not a credential",
+      "file": "experiments/manifests/generation_2/cold-C101-D0-U8.attempt01.mid.json",
+      "full_literal": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+      "independent_source": "configs/tokenizer_development/tokenizer.json",
+      "line": 1,
+      "rule": "generic-api-key",
+      "sha256_matches": true
+    },
+    {
+      "classification": "real source or artifact SHA256, not a credential",
+      "file": "experiments/manifests/generation_2/cold-C101-D0-U8.attempt01.mid.json",
+      "full_literal": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+      "independent_source": "src/models/tokenizer.py",
+      "line": 1,
+      "rule": "generic-api-key",
+      "sha256_matches": true
+    },
+    {
+      "classification": "real source or artifact SHA256, not a credential",
+      "file": "experiments/manifests/generation_2/cold-C101-D0-U8.attempt01.boundary.json",
+      "full_literal": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+      "independent_source": "configs/tokenizer_development/tokenizer.json",
+      "line": 1,
+      "rule": "generic-api-key",
+      "sha256_matches": true
+    },
+    {
+      "classification": "real source or artifact SHA256, not a credential",
+      "file": "experiments/manifests/generation_2/cold-C101-D0-U8.attempt01.boundary.json",
+      "full_literal": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+      "independent_source": "src/models/tokenizer.py",
+      "line": 1,
+      "rule": "generic-api-key",
+      "sha256_matches": true
+    },
+    {
+      "classification": "real source or artifact SHA256, not a credential",
+      "file": "experiments/manifests/generation_2/bench-C101-D0-U8.attempt01.json",
+      "full_literal": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+      "independent_source": "configs/tokenizer_development/tokenizer.json",
+      "line": 1,
+      "rule": "generic-api-key",
+      "sha256_matches": true
+    },
+    {
+      "classification": "real source or artifact SHA256, not a credential",
+      "file": "experiments/manifests/generation_2/bench-C101-D0-U8.attempt01.json",
+      "full_literal": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+      "independent_source": "src/models/tokenizer.py",
+      "line": 1,
+      "rule": "generic-api-key",
+      "sha256_matches": true
+    }
+  ],
+  "gitleaks_raw_report_sha256": "3bf196cd8bfff04522adaba891ae315c5c6267f828c94a18db92443c5d1b35d3",
+  "nonfunctional_personal_identifiers": 0,
+  "public_files_repository_relative": true,
+  "schema": "g2_publication_safety_v1",
+  "staged_diff_sha256": "71d188cd6d49dcb3ebb3d6b3675bbaa47da171fadef552cf517820eb8a375d01",
+  "staged_paths": [
+    "ORCHESTRATION.html",
+    "benchmarks/g2_cost_independent.py",
+    "benchmarks/g2_cost_projection.py",
+    "benchmarks/g2_native_independent.py",
+    "docs/LOG.md",
+    "docs/reports/G2_C101_D0_U8_RUNTIME_QUALIFICATION.md",
+    "experiments/manifests/generation_2/bench-C101-D0-U8.attempt01.json",
+    "experiments/manifests/generation_2/cold-C101-D0-U8.attempt01.boundary.json",
+    "experiments/manifests/generation_2/cold-C101-D0-U8.attempt01.mid.json",
+    "experiments/manifests/generation_2/native-initialization-precheck.attempt01.json",
+    "experiments/manifests/generation_2/orchestration-visual.attempt10.json",
+    "experiments/manifests/generation_2/publication-classifier.attempt01.json",
+    "experiments/manifests/generation_2/publication-classifier.attempt02.json",
+    "experiments/manifests/generation_2/storage-monitor.attempt07.json",
+    "experiments/manifests/generation_2/storage-monitor.attempt08.json"
+  ],
+  "status": "PASS",
+  "unclassified_findings": 0
+}

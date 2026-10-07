@@ -1,0 +1,57 @@
+{
+  "artifact_relative": "ORCHESTRATION.html",
+  "artifact_sha256": "40d586125d931e17d68c18bfa409ae970560acd08a4f00a12293e4ef4c822769",
+  "checks": [
+    {
+      "appearance": "light",
+      "background": "rgb(245, 244, 241)",
+      "bodyWidth": 1280,
+      "documentWidth": 1280,
+      "errors": [],
+      "screenshotBytes": 221582,
+      "status": "PASS",
+      "storageText": true,
+      "width": 1280
+    },
+    {
+      "appearance": "dark",
+      "background": "rgb(20, 19, 17)",
+      "bodyWidth": 1280,
+      "documentWidth": 1280,
+      "errors": [],
+      "screenshotBytes": 219315,
+      "status": "PASS",
+      "storageText": true,
+      "width": 1280
+    },
+    {
+      "appearance": "light",
+      "background": "rgb(245, 244, 241)",
+      "bodyWidth": 390,
+      "documentWidth": 390,
+      "errors": [],
+      "screenshotBytes": 106809,
+      "status": "PASS",
+      "storageText": true,
+      "width": 390
+    },
+    {
+      "appearance": "dark",
+      "background": "rgb(20, 19, 17)",
+      "bodyWidth": 390,
+      "documentWidth": 390,
+      "errors": [],
+      "screenshotBytes": 105055,
+      "status": "PASS",
+      "storageText": true,
+      "width": 390
+    }
+  ],
+  "schema": "g2_orchestration_visual_check_v1",
+  "screenshots_visually_inspected": 4,
+  "separate_headless_contexts": true,
+  "status": "PASS",
+  "temporary_screenshots_created": 4,
+  "temporary_screenshots_deleted": 4,
+  "watched_tab_resized": false
+}
