@@ -1,0 +1,406 @@
+{
+  "after": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 488970027008,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "assumed_mechanical_failure_seconds": 480,
+  "before": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 488970027008,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "calculated_future_recipe_seconds": 205741.7935443182,
+  "calculated_source_startup_creation_gap_seconds": 5.143998861312866,
+  "ceiling_hours": 96,
+  "code_sha256": "998bcaffb55de2ab816a73b1c790efeb3bd378a50e3b7564aed5efe35a386391",
+  "inputs_sha256": {
+    "archived-evaluation-B100.attempt01.json": "efe19a8e9f193380b602f10d7d5a63512eec488bd6da76b2b911d80669a3608f",
+    "archived-evaluation-C101.attempt01.json": "30a1a4caa7c78ef5ec9b9f67d9eaddc4c84f6c89d70598027c94d44caeb8e5a3",
+    "artifact-root-io.attempt02.json": "c5e52d503f55406ab860e30f714182cfab9451160f17563928c59ee652e381c5",
+    "audio-dev-clean.attempt01.json": "6080aa86f95812946e52cb4dbe93cc2086b5ef3307f9c391aedb0f79ddd6d7ec",
+    "audio-dev-other.attempt01.json": "0a92eb81b5fd0573ff9ecc5e80ce7d8aa2436da0260e8d785f42b398425d6429",
+    "audio-train-clean-100.attempt01.json": "a979eafb35c6d5e3d4457d2864540a90f539a78c24f43b951936c5ee8b602ef9",
+    "audio-train-clean-100.attempt02.json": "4780f3ef542501f6864947dbec05759ae091865c736fe63a284ca5686cd24bf2",
+    "audio-train-clean-360.attempt01.json": "6ec3d38898440bcfebcdb7fbbe4eab453c1bebaf3441c3064cae057b29ddbec9",
+    "audio-train-clean-360.attempt02.json": "1f585f6f81d69a5fd4ef59fd12516fcce932f96b8499e6d12274c6450dbba646",
+    "audio-train-clean-360.attempt03.json": "5952b2dd280524f18244b3cbaa2b1a015e7d79649b587917910fc48e22d98346",
+    "audio-train-other-500.attempt01.json": "0ab31e7f33d07a27a187d55cd2b838898f1a17d048b8a85fa0787493a55e01e5",
+    "bench-B100-D0-U8.attempt01.json": "adf8c267eb9c7a06c39c0d23fbe5acf25c8a674acd43b26a4b17570ca3dd93f1",
+    "bench-B100-D1-U1.attempt01.json": "31f1560e8e4b9d74f31c45e5ac96cec8a8d3afa11c077806d151c12acb2f9ce5",
+    "bench-B100-D1-U8.attempt01.json": "b68b68da6331d089a7c947cdb7824be8d238d63a5a38be26533b21c4dfe997d7",
+    "bench-C101-D0-U8.attempt01.json": "d453561aa81172380671e6837a81a36e57c770fa865d821dedfee9aba6f4781d",
+    "bench-C101-D1-U1.attempt01.json": "d3aefc22b186ffbdea8ce304c945987b7f5f825a1680d0487539aa801da776de",
+    "bench-C101-D1-U8.attempt01.json": "881d76f709b5ab59c8cd96953927e01ca87ab3351176e4407007ec486665c570",
+    "byt5-qualification.attempt01.json": "87e4f34bd1c92f66981aef589390edd388f4a566922cbfa96fab9d63808085e6",
+    "byt5-qualification.attempt02.json": "3544400c7da1b1188237c5cc27bc3ca3b7dcb45d0329058fa43ab34345e49945",
+    "byt5-record-repair.attempt01.json": "ccc3e6110670526094e40145b26d7f00b6214b887b0d9a72228d14c59fe0aca7",
+    "cold-B100-D0-U8.attempt01.boundary.json": "5815447c38c1fa2cfd41db1b47c78572ce80812de96ae31e8e48d2f061554419",
+    "cold-B100-D0-U8.attempt01.mid.json": "f120ca03a3d0578c0484c20cb9a6ed34a8df01a3f9ae97f91fbedb7c0f9a7c71",
+    "cold-B100-D1-U1.attempt01.boundary.json": "120d80bcbe314e090a77dacacb600d6f0a9357e289e13b2fba0aea66fdebcbe9",
+    "cold-B100-D1-U1.attempt01.mid.json": "0e885150fc873957a4620313e19fb8f2702e49cfe554db1cecba445f350d2b2c",
+    "cold-B100-D1-U8.attempt01.boundary.json": "d72fc7fc193a885eca905a20e1d325a5ecb3a89f59dfe461943b7412f7cc8b6d",
+    "cold-B100-D1-U8.attempt01.mid.json": "d79e3787fafd35ce66ec778f212832ae9a0d5ec8bba9032c43cbb2ac05b028e0",
+    "cold-C101-D0-U8.attempt01.boundary.json": "2b8d5ef00521a5302d995dba7c75702c63dff3809210a4cdb981e13bcb13db7c",
+    "cold-C101-D0-U8.attempt01.mid.json": "1a2203b44d2b1053bdb6b8b4324df4d6edc6cf1dddd95ea6aa4c5ea83eca25de",
+    "cold-C101-D1-U1.attempt01.boundary.json": "fa31ea79c545de6208984744781cd38b84dc14f10c4660031ef5afbc4d7a87a5",
+    "cold-C101-D1-U1.attempt01.mid.json": "118cb95b1faf9ede09e9d111aa7448832c58e842da27e947a906cab2bdd6af44",
+    "cold-C101-D1-U8.attempt01.boundary.json": "3c32a879ff0970d1313b6bada989f6a1cb80cafda56c9f7dc073ed55b6199055",
+    "cold-C101-D1-U8.attempt01.mid.json": "305fc91a1a7541d7265f83ed976a3772b4ecd38f8a8783618cc153916e709370",
+    "compatibility-B100.attempt01.json": "ca60d55b25365c77c41007998cbd64631b3f9e60314f63407a519a6f00613579",
+    "compatibility-B100.attempt02.json": "10a05a7f14c1437f3bcf0d637be3578952c746397781c5b0738f44d226fef6e2",
+    "compatibility-C101.attempt01.json": "028f446fe29a3674bdb24e89d2ba92762f2144114cd6e379562bc58c130be3e6",
+    "compatibility-C101.attempt02.json": "2b30d3961f739ddbe842ac65424103a0f4815e24f9f28cbc1a91556baa64e9ba",
+    "corpus-freeze.attempt01.json": "dd77f4e70346962d1fba1748fe5503c706eabd83cccdc1fb960ced937b69e67f",
+    "expanded-evaluation-summary.attempt01.json": "874cc02905ce005a9890e7cc0c73c236e4031bc3ef4096e1c4086dfc4eb75cc5",
+    "external-root.attempt01.json": "f1f51da2a617981bfaa664c1b96e2a6a989b54f033c6eb508e82f3d43bad4160",
+    "independent-archives.attempt01.json": "35500d0e5b84c9b04e0be9125a0bfb39099b547ba325d14abb127aadd596c595",
+    "independent-byt5.attempt01.json": "94b859d3ccdf829b0fa207ff88e0521486b15baa944395f16656ee20cf2dd863",
+    "independent-compatibility.attempt02.json": "383d2abe60d59f0616b87ffe5604bf4bb50d9fbe64b0e713140bf7e121218daf",
+    "independent-corpus.attempt01.json": "1513bb05de11a87adbe6c12bbb887ee19e7e302e54dd2e1fd5681425eee5dd22",
+    "independent-evaluation.attempt01.json": "e0e43b9e6318038e96d8fcb7bbfc4bda70899e5aa04b5dadade9a9c7b64779e0",
+    "independent-native.attempt01.json": "88ec12d4af984194aa51ab1ea16fdbf14935a3cca36042cf41cde8a9190fb5a7",
+    "independent-root-loss.attempt01.json": "4760a39633fef3657ec42cd580f81a8f17e6fc47b3d89c6a74573056d620415b",
+    "independent-storage.attempt01.json": "47676aaa0a24fec0070f3c03e56afab894f9f3d00665ff38b89544955da1a152",
+    "native-initialization-precheck.attempt01.json": "83621b9ad5e0c206662a43a4c2e6ac08604ec1b158d161089dd85bd98500d95e",
+    "parakeet-sources.attempt01.json": "c6715ad12ccb706d645853c81de94ae6557864f3cfb0c5cbf2cd1897aa0e1934",
+    "recipe-G2-B100-D0-U8-seed42-lr3e-4.attempt01.json": "8cc63a41cb1d108fb7eed7f267ad3a2de2ca7c1f79937a9c9e2bcdf54e6f998b",
+    "recipe-G2-B100-D1-U1-seed42-lr3e-4.attempt01.json": "ef19187eef868276df147ac507c5316294b91a164f2ac98702e28134c9f58725",
+    "recipe-G2-B100-D1-U8-seed42-lr3e-4.attempt01.json": "28348151fa21488c2f9afcf52d346023549685172dd49449ff12271593463c57",
+    "recipe-G2-C101-D0-U8-seed42-lr3e-4.attempt01.json": "c615723dee59e8e3d55bff16aa91a58c5253e793280b9ae089bde43ebf1cc114",
+    "recipe-G2-C101-D1-U1-seed42-lr3e-4.attempt01.json": "de2f92d6b6bb38c9d3cc3748772c1f873ab4de17f1ea5da8e8a69d9921739aa0",
+    "recipe-G2-C101-D1-U8-seed42-lr3e-4.attempt01.json": "50e39c0c2f254547437f2a2d01e0dadf1cadd53de88124a0d7e1b141285588db",
+    "source-archives.attempt01.json": "df385b505ad85576db21b81117648b8d1693aa29562f99f6ff911730c2bdab0d",
+    "source-startup-creation-gap.attempt01.json": "1e494ff1d38ed5e2c359e30ccb9870184552dae04c352337e3eaf61e22810323",
+    "storage-census-repair.attempt01.json": "364807d0ac765f5f5175e7092f98f7fec53c795559fdc59f5a95a793ed47c312",
+    "storage-census-repair.attempt02.json": "7f1f0efac1240d4741de7c08c282e86d6dd23593ab6dd60e6b3b421ffdc266e8",
+    "storage-reforecast.attempt01.json": "83350c4d4ba25ff14ecb8df041dc996a2e90aa5d391547e2c05d8b48cac9bdc2",
+    "storage-reforecast.attempt02.json": "b109887b5cd6b6f46adee354dc09fe09e086b50cda35185d65a5be39e4648552"
+  },
+  "measured_qualification_and_shared_seconds": 56370.968247544035,
+  "projection_execution_seconds": 0.08492383401608095,
+  "recipes": [
+    {
+      "actual_exposure": 10007223,
+      "classification": "CALCULATED_FROM_MEASURED_QUALIFICATION",
+      "conservative_anchors_per_second": 4141.473753237398,
+      "diagnostic_forced_seconds": 8.618323665927164,
+      "diagnostic_greedy_seconds": 817.1177543340018,
+      "evaluation_seconds": 22785.179998248,
+      "forecast_assumption": "use larger complete initialization/endpoint panel cost at all six future endpoints; no quality-based speed reduction",
+      "recipe_id": "G2-B100-D0-U8-seed42-lr3e-4",
+      "save_count": 13,
+      "save_seconds": 64.76391675026389,
+      "startup_seconds": 3.1702225420158356,
+      "total_future_seconds": 26095.19367109811,
+      "training_seconds": 2416.3434555578997
+    },
+    {
+      "actual_exposure": 10007223,
+      "classification": "CALCULATED_FROM_MEASURED_QUALIFICATION",
+      "conservative_anchors_per_second": 1732.0613554360327,
+      "diagnostic_forced_seconds": 8.844211168005131,
+      "diagnostic_greedy_seconds": 519.6976327500306,
+      "evaluation_seconds": 15574.471712999744,
+      "forecast_assumption": "use larger complete initialization/endpoint panel cost at all six future endpoints; no quality-based speed reduction",
+      "recipe_id": "G2-C101-D0-U8-seed42-lr3e-4",
+      "save_count": 13,
+      "save_seconds": 52.25668824999593,
+      "startup_seconds": 3.182425750012044,
+      "total_future_seconds": 21936.090379069738,
+      "training_seconds": 5777.6377081519495
+    },
+    {
+      "actual_exposure": 10006223,
+      "classification": "CALCULATED_FROM_MEASURED_QUALIFICATION",
+      "conservative_anchors_per_second": 6748.207730528063,
+      "diagnostic_forced_seconds": 7.943971416098066,
+      "diagnostic_greedy_seconds": 815.6303182500415,
+      "evaluation_seconds": 23048.514803501777,
+      "forecast_assumption": "use larger complete initialization/endpoint panel cost at all six future endpoints; no quality-based speed reduction",
+      "recipe_id": "G2-B100-D1-U1-seed42-lr3e-4",
+      "save_count": 13,
+      "save_seconds": 61.62926032906398,
+      "startup_seconds": 3.6352713339729235,
+      "total_future_seconds": 25420.15074661087,
+      "training_seconds": 1482.7971217799175
+    },
+    {
+      "actual_exposure": 10006223,
+      "classification": "CALCULATED_FROM_MEASURED_QUALIFICATION",
+      "conservative_anchors_per_second": 2018.2230781745573,
+      "diagnostic_forced_seconds": 7.129498915979639,
+      "diagnostic_greedy_seconds": 433.34972125000786,
+      "evaluation_seconds": 14389.809339504107,
+      "forecast_assumption": "use larger complete initialization/endpoint panel cost at all six future endpoints; no quality-based speed reduction",
+      "recipe_id": "G2-C101-D1-U1-seed42-lr3e-4",
+      "save_count": 13,
+      "save_seconds": 49.78809115814511,
+      "startup_seconds": 3.4627767089987174,
+      "total_future_seconds": 19841.476490198533,
+      "training_seconds": 4957.9370626612945
+    },
+    {
+      "actual_exposure": 10006223,
+      "classification": "CALCULATED_FROM_MEASURED_QUALIFICATION",
+      "conservative_anchors_per_second": 5361.484295877911,
+      "diagnostic_forced_seconds": 7.358890833915211,
+      "diagnostic_greedy_seconds": 721.2652416679775,
+      "evaluation_seconds": 20836.398412500042,
+      "forecast_assumption": "use larger complete initialization/endpoint panel cost at all six future endpoints; no quality-based speed reduction",
+      "recipe_id": "G2-B100-D1-U8-seed42-lr3e-4",
+      "save_count": 13,
+      "save_seconds": 53.74886345397681,
+      "startup_seconds": 3.451033624995034,
+      "total_future_seconds": 23488.538269526885,
+      "training_seconds": 1866.315827445978
+    },
+    {
+      "actual_exposure": 10006223,
+      "classification": "CALCULATED_FROM_MEASURED_QUALIFICATION",
+      "conservative_anchors_per_second": 1873.6634997753642,
+      "diagnostic_forced_seconds": 7.4093478340655565,
+      "diagnostic_greedy_seconds": 431.6833044999512,
+      "evaluation_seconds": 13334.422247753944,
+      "forecast_assumption": "use larger complete initialization/endpoint panel cost at all six future endpoints; no quality-based speed reduction",
+      "recipe_id": "G2-C101-D1-U8-seed42-lr3e-4",
+      "save_count": 13,
+      "save_seconds": 49.333621467172634,
+      "startup_seconds": 3.4183923749951646,
+      "total_future_seconds": 19166.725860373637,
+      "training_seconds": 5340.458946443509
+    },
+    {
+      "classification": "CALCULATED_FROM_MEASURED_QUALIFICATION",
+      "conservative_update_seconds": 0.9894144666701322,
+      "evaluation_seconds": 34839.308893332025,
+      "forecast_assumption": "charge final short batch at full-batch conservative rate; charge larger complete panel at all four endpoints",
+      "optimizer_updates": 35283,
+      "recipe_id": "G2-ByT5-D1-10pass-seed42-lr3e-4",
+      "save_count": 4,
+      "save_seconds": 41.558480336098,
+      "startup_seconds": 3.240126250020694,
+      "total_future_seconds": 69793.61812744042,
+      "training_seconds": 34909.51062752227
+    }
+  ],
+  "reserve_fraction": 0.25,
+  "schema": "g2_cost_projection_v1",
+  "scientific_recipes_started": 0,
+  "scope": "cost gate only; independent admission still required",
+  "shared_measured_and_assumed": [
+    {
+      "classification": "MEASURED",
+      "receipt": "byt5-record-repair.attempt01.json",
+      "seconds": 1.6461094580008648
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "byt5-qualification.attempt01.json",
+      "seconds": 14.01187129097525
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "source-archives.attempt01.json",
+      "seconds": 2585.1301597920246
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "audio-train-clean-100.attempt02.json",
+      "seconds": 14.53951487498125
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "audio-train-clean-360.attempt03.json",
+      "seconds": 66.84704037499614
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "audio-train-other-500.attempt01.json",
+      "seconds": 73.77837945899228
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "audio-dev-clean.attempt01.json",
+      "seconds": 1.2261128749814816
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "audio-dev-other.attempt01.json",
+      "seconds": 1.2227595419972204
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "parakeet-sources.attempt01.json",
+      "seconds": 3573.8427795000025
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "corpus-freeze.attempt01.json",
+      "seconds": 146.41929099999834
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "compatibility-B100.attempt02.json",
+      "seconds": 164.56776800000807
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "compatibility-C101.attempt01.json",
+      "seconds": 20.38813612505328
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "compatibility-C101.attempt02.json",
+      "seconds": 521.3723159579677
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "archived-evaluation-B100.attempt01.json",
+      "seconds": 429.110187165963
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "archived-evaluation-C101.attempt01.json",
+      "seconds": 67.19707529200241
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "independent-archives.attempt01.json",
+      "seconds": 85.01562583300984
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "independent-corpus.attempt01.json",
+      "seconds": 33.53613675001543
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "independent-native.attempt01.json",
+      "seconds": 78.03935970901512
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "independent-byt5.attempt01.json",
+      "seconds": 8.859006166981999
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "storage-reforecast.attempt01.json",
+      "seconds": 0.6854960420168936
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "storage-reforecast.attempt02.json",
+      "seconds": 20.28642287501134
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "storage-census-repair.attempt01.json",
+      "seconds": 0.808561667
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "storage-census-repair.attempt02.json",
+      "seconds": 1.0945931669557467
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "native-initialization-precheck.attempt01.json",
+      "seconds": 1.8234256249852479
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "expanded-evaluation-summary.attempt01.json",
+      "seconds": 40.33927812502952
+    },
+    {
+      "classification": "MEASURED",
+      "receipt": "independent-evaluation.attempt01.json",
+      "seconds": 39.82799283298664
+    },
+    {
+      "classification": "MEASURED",
+      "elapsed_field": "seconds",
+      "receipt": "independent-compatibility.attempt02.json",
+      "seconds": 13.529578291985672
+    },
+    {
+      "classification": "ASSUMED",
+      "measured_seconds": null,
+      "reason": "retained pre-model failure or bounded storage check without a dedicated total timer; conservative one-minute planning allowance",
+      "receipt": "audio-train-clean-100.attempt01.json",
+      "seconds": 60
+    },
+    {
+      "classification": "ASSUMED",
+      "measured_seconds": null,
+      "reason": "retained pre-model failure or bounded storage check without a dedicated total timer; conservative one-minute planning allowance",
+      "receipt": "audio-train-clean-360.attempt01.json",
+      "seconds": 60
+    },
+    {
+      "classification": "ASSUMED",
+      "measured_seconds": null,
+      "reason": "retained pre-model failure or bounded storage check without a dedicated total timer; conservative one-minute planning allowance",
+      "receipt": "audio-train-clean-360.attempt02.json",
+      "seconds": 60
+    },
+    {
+      "classification": "ASSUMED",
+      "measured_seconds": null,
+      "reason": "retained pre-model failure or bounded storage check without a dedicated total timer; conservative one-minute planning allowance",
+      "receipt": "compatibility-B100.attempt01.json",
+      "seconds": 60
+    },
+    {
+      "classification": "ASSUMED",
+      "measured_seconds": null,
+      "reason": "retained pre-model failure or bounded storage check without a dedicated total timer; conservative one-minute planning allowance",
+      "receipt": "external-root.attempt01.json",
+      "seconds": 60
+    },
+    {
+      "classification": "ASSUMED",
+      "measured_seconds": null,
+      "reason": "retained pre-model failure or bounded storage check without a dedicated total timer; conservative one-minute planning allowance",
+      "receipt": "artifact-root-io.attempt02.json",
+      "seconds": 60
+    },
+    {
+      "classification": "ASSUMED",
+      "measured_seconds": null,
+      "reason": "retained pre-model failure or bounded storage check without a dedicated total timer; conservative one-minute planning allowance",
+      "receipt": "independent-storage.attempt01.json",
+      "seconds": 60
+    },
+    {
+      "classification": "ASSUMED",
+      "measured_seconds": null,
+      "reason": "retained pre-model failure or bounded storage check without a dedicated total timer; conservative one-minute planning allowance",
+      "receipt": "independent-root-loss.attempt01.json",
+      "seconds": 60
+    },
+    {
+      "classification": "CALCULATION_FROM_FILESYSTEM_CREATION_TIMESTAMPS",
+      "receipt": "source-startup-creation-gap.attempt01.json",
+      "seconds": 5.143998861312866
+    }
+  ],
+  "single_reserve_seconds": 65649.47644768089,
+  "status": "PASS_G2_COST_CEILING_ONLY",
+  "subtotal_seconds": 262597.90579072357,
+  "total_serialized_hours": 91.1798283995568,
+  "total_serialized_seconds": 328247.3822384045,
+  "unpriced": [
+    "researcher/implementation time and engineering unit/full-suite tests",
+    "electricity",
+    "unrelated host activity",
+    "final campaign or paper completion"
+  ],
+  "within_ceiling": true
+}

@@ -1,0 +1,13 @@
+{
+  "captured_dirty_status": "?? experiments/manifests/generation_2/cost-projection.attempt01.json\n?? experiments/manifests/generation_2/independent-cost.attempt01.json\n?? experiments/manifests/generation_2/storage-reforecast.attempt02.json\n",
+  "code_commit": "c33d975540236722cf6b5daf050921c79d3579ec",
+  "elapsed_seconds": 41.0829055000213,
+  "exit_code": 0,
+  "failed": 0,
+  "log_sha256": "6d8fa1575a16bcefb25fbd75978dcd14d7399b58347639caf109300d14c0f19a",
+  "passed": 465,
+  "schema": "g2_final_integrated_tests_v1",
+  "scientific_recipes_started": 0,
+  "skipped": 0,
+  "status": "PASS"
+}

@@ -1,0 +1,78 @@
+{
+  "all_recipe_statuses": "AUTHORIZED_UNSTARTED",
+  "created_utc": "2026-10-07T18:15:01.868576+00:00",
+  "final_failures": 0,
+  "final_skips": 0,
+  "final_tests": 465,
+  "numbered_admission_answers": 70,
+  "original_baseline_test_file_count": 28,
+  "protected_snapshot_present": true,
+  "required_reports": [
+    {
+      "last_disposition": "G2_EXTERNAL_ARTIFACT_ROOT_QUALIFIED",
+      "path": "docs/reports/G2_EXTERNAL_ARTIFACT_ROOT_QUALIFICATION.md",
+      "sha256": "33962cfde5cd2005e2ac110d5101d92015b735a7fc06e10b72db7eeea29a3fd7"
+    },
+    {
+      "last_disposition": "G2_NATURAL_CENSUS_QUALIFIED",
+      "path": "docs/reports/G2_NATURAL_CENSUS_QUALIFICATION.md",
+      "sha256": "fc3f7f1ba8c6ae8181debc187d4be28272f3f7d6785a52687d68e55dc96ec955"
+    },
+    {
+      "last_disposition": "G2_DEVELOPMENT_PANEL_QUALIFIED",
+      "path": "docs/reports/G2_DEVELOPMENT_PANEL_QUALIFICATION.md",
+      "sha256": "d698c45136fa2751b2dd803ddfbf6a555cf27c7b7ef5c689b697173601b86698"
+    },
+    {
+      "last_disposition": "G2_U1_U8_GEOMETRY_QUALIFIED",
+      "path": "docs/reports/G2_U1_U8_GEOMETRY_QUALIFICATION.md",
+      "sha256": "3ae138fc6c1ed3152d9c52c2d3b2ffe129bcb20187e7c4a7cd59b01fab0b0038"
+    },
+    {
+      "last_disposition": "G2_HISTORICAL_COMPATIBILITY_QUALIFIED",
+      "path": "docs/reports/G2_HISTORICAL_COMPATIBILITY.md",
+      "sha256": "46951339725d749d5e80a7e8f28ed8945b50f2f75d7e07fe386d482708885df2"
+    },
+    {
+      "last_disposition": "G2_NATIVE_BENCH_QUALIFIED",
+      "path": "docs/reports/G2_NATIVE_BENCH_QUALIFICATION.md",
+      "sha256": "9a9fb61f7e8ba87a2e02a379325fab5f1a4f59d37d3fb345a6beb732b58b19bc"
+    },
+    {
+      "last_disposition": "G2_EXACT_COLD_RESUME_QUALIFIED",
+      "path": "docs/reports/G2_COLD_RESUME_QUALIFICATION.md",
+      "sha256": "11a0b2b2a2df9b3d5f47009959bbdb6c90b7382204703fc48f6047d8e51f3924"
+    },
+    {
+      "last_disposition": "G2_BYT5_RUNNER_QUALIFIED",
+      "path": "docs/reports/G2_BYT5_RUNNER_QUALIFICATION.md",
+      "sha256": "652c0b1a125fd58173094b5b540f2bff850ae8cbe4fb13c0d3b010814de60b9e"
+    },
+    {
+      "last_disposition": "PASS_G2_COST_CEILING_ONLY",
+      "path": "docs/reports/G2_COST_PROJECTION.md",
+      "sha256": "1c4dd1348a4629153b07faeb79800dea59933b687f827ed51e03b90fb89d5073"
+    },
+    {
+      "last_disposition": "AUTHORIZE_DEVELOPMENT_GENERATION_2_EXECUTION",
+      "path": "docs/reports/G2_INDEPENDENT_ADMISSION_REVIEW.md",
+      "sha256": "389af9f53956fc93e9983aec46f8d5ed83c4a3dfb7d06963058f1c882f5a8396"
+    },
+    {
+      "last_disposition": "AUTHORIZE_DEVELOPMENT_GENERATION_2_EXECUTION",
+      "path": "docs/reports/DEVELOPMENT_GENERATION_2_ADMISSION_DECISION.md",
+      "sha256": "c1438c987a17feda33c84753fb651dc03e80ec06204a738435308dad71ebe5f9"
+    },
+    {
+      "last_disposition": "AUTHORIZE_DEVELOPMENT_GENERATION_2_EXECUTION",
+      "path": "docs/reports/G2_IMPLEMENTATION_SESSION_REPORT.md",
+      "sha256": "f4001b1d0569f03c7385e7dd47e9bde7ad9fd907eeb71df80bc2276c0bcc9c1f"
+    }
+  ],
+  "reviewed_commit": "c33d975540236722cf6b5daf050921c79d3579ec",
+  "schema": "g2_closeout_content_checks_v1",
+  "scientific_recipe_count": 7,
+  "scientific_recipes_started": 0,
+  "status": "PASS",
+  "time_machine_operations": 0
+}

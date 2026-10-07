@@ -1,0 +1,32 @@
+{
+  "after": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 488970018816,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "arithmetic_reconciliation_limit_seconds": 1e-06,
+  "assumed_seconds": 480.0,
+  "before": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 488970018816,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "calculated_future_seconds": 205741.7935443182,
+  "calculated_source_startup_seconds": 5.143998861312866,
+  "code_sha256": "b191013343a4bc419a3b76a6da79d9e9e62b9826bb21f91617de805f1136736f",
+  "cost_disposition": "PASS_G2_COST_CEILING_ONLY",
+  "cost_report_sha256": "52b00955f3fa888ec3e526f18fd34c40ffb140a5225ef5264a15eadc495861fc",
+  "elapsed_seconds": 0.08084320899797603,
+  "measured_seconds": 56370.968247544035,
+  "method": "separate receipt reads, explicit six-cell and ByT5 formulas, fsum and quarter reserve; no cost producer imported",
+  "recipes": 7,
+  "schema": "g2_independent_cost_v1",
+  "scientific_recipes_started": 0,
+  "single_reserve_fraction": 0.25,
+  "status": "PASS_INDEPENDENT_G2_COST_RECONSTRUCTION",
+  "total_serialized_hours": 91.1798283995568
+}

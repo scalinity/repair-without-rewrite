@@ -1,0 +1,144 @@
+{
+  "after": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 488970051584,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "all_current_failures_and_partials_retained": true,
+  "allocation_caveat": "file allocation sums are not unique APFS physical blocks; actual statvfs free space is the capacity gate",
+  "assumed_future_allowances_bytes": {
+    "additional_failed_attempt_reserve": 34359738368,
+    "future_evaluation_and_diagnostic_outputs": 4294967296,
+    "future_presentation_and_consumption_logs": 4294967296,
+    "future_private_logs_and_receipts": 8589934592,
+    "one_writer_atomic_transient": 8589934592
+  },
+  "before": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 488970027008,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "calculated_high_water_literal_free_bytes": 289562884420,
+  "calculated_remaining_conservative_bytes": 199407142588,
+  "code_sha256": "b64f6600907ebca6335e40f9559d4d90b5c52a1421af286671a89ad7c083bc7c",
+  "elapsed_seconds": 20.28642287501134,
+  "literal_free_bytes_for_forecast": 488970027008,
+  "measured_byt5_checkpoint_sizes": {
+    "calculated_future_bytes": 12053259044,
+    "initial": 1198624003,
+    "trained": 3595842059
+  },
+  "measured_native_checkpoint_sizes": {
+    "B100": {
+      "calculated_future_bytes": 63488641008,
+      "future_checkpoints": 39,
+      "measured_max_array_bytes": 1611136656,
+      "measured_max_metadata_bytes": 1089322,
+      "metadata_allowance_per_checkpoint": 16777216
+    },
+    "C101": {
+      "calculated_future_bytes": 63735700392,
+      "future_checkpoints": 39,
+      "measured_max_array_bytes": 1617471512,
+      "measured_max_metadata_bytes": 1963302,
+      "metadata_allowance_per_checkpoint": 16777216
+    }
+  },
+  "minimum_literal_free_bytes": 268435456000,
+  "no_sparse_saving_assumed": true,
+  "retained_allocated_bytes": 131943616512,
+  "retained_by_area": {
+    "asr-hypotheses-v1": {
+      "allocated_bytes": 36913152,
+      "files": 5,
+      "logical_bytes": 36904415,
+      "symlinks": 0
+    },
+    "bench-v1": {
+      "allocated_bytes": 41952722944,
+      "files": 162,
+      "logical_bytes": 41952381849,
+      "symlinks": 0
+    },
+    "binding-v1": {
+      "allocated_bytes": 4096,
+      "files": 1,
+      "logical_bytes": 476,
+      "symlinks": 0
+    },
+    "byt5-v1": {
+      "allocated_bytes": 6060306432,
+      "files": 14,
+      "logical_bytes": 6058957219,
+      "symlinks": 0
+    },
+    "cold-resume-v1": {
+      "allocated_bytes": 19383123968,
+      "files": 84,
+      "logical_bytes": 19382871419,
+      "symlinks": 0
+    },
+    "compatibility-v1": {
+      "allocated_bytes": 8125452288,
+      "files": 29,
+      "logical_bytes": 8125373503,
+      "symlinks": 0
+    },
+    "corpus-qualification-v1": {
+      "allocated_bytes": 116428800,
+      "files": 8,
+      "logical_bytes": 116404552,
+      "symlinks": 0
+    },
+    "evaluation-v1": {
+      "allocated_bytes": 75415552,
+      "files": 10,
+      "logical_bytes": 75392554,
+      "symlinks": 0
+    },
+    "expanded-development-v1": {
+      "allocated_bytes": 8527872,
+      "files": 3,
+      "logical_bytes": 8516700,
+      "symlinks": 0
+    },
+    "frozen-d1-v1": {
+      "allocated_bytes": 178044928,
+      "files": 8,
+      "logical_bytes": 178028072,
+      "symlinks": 0
+    },
+    "logs-v1": {
+      "allocated_bytes": 1818624,
+      "files": 180,
+      "logical_bytes": 1292432,
+      "symlinks": 0
+    },
+    "qualification-v1": {
+      "allocated_bytes": 12136448,
+      "files": 219,
+      "logical_bytes": 11534947,
+      "symlinks": 39
+    },
+    "source-archives-v1": {
+      "allocated_bytes": 53642997760,
+      "files": 6,
+      "logical_bytes": 53642980754,
+      "symlinks": 0
+    },
+    "source-audio-v1": {
+      "allocated_bytes": 2349723648,
+      "files": 16819,
+      "logical_bytes": 2315165725,
+      "symlinks": 0
+    }
+  },
+  "retained_logical_bytes": 131905804617,
+  "schema": "g2_retained_storage_reforecast_v1",
+  "scientific_recipes_started": 0,
+  "status": "PASS_G2_RETAINED_STORAGE_FORECAST"
+}

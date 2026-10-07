@@ -1,0 +1,92 @@
+{
+  "after": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 488969998336,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "before": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 488970010624,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "compatibility_links": 205,
+  "compatibility_links_sha256": "08f4cb0b400eca1afa359e7c3b40c5a8798abb318ebb7cf06525cc30e9262b27",
+  "created_utc": "2026-10-07T18:11:09.395140+00:00",
+  "dependency_lock_sha256": "e75b50786f73f24295d832126ded45906dab774e3f94f6967cff7a5ee7ddcfb0",
+  "dependency_lock_unchanged": true,
+  "external_literal_free_bytes": 488969998336,
+  "immutable_inputs": [
+    {
+      "relative_path": "docs/reviews/Independent_Pre_Implementation_Review_v1_2_Accepted_Findings.md",
+      "sha256": "b408e93a11e395099c57edf76ba507c487ba2671c057e1ff2fae6f13c0e8d00a"
+    },
+    {
+      "relative_path": "docs/design-inputs/KICKOFF_PROMPT.txt",
+      "sha256": "91848265ed36ae02e07524a20e82f5d3e4e0836aa0dcc574437a48edb163d2f5"
+    },
+    {
+      "relative_path": "docs/design-inputs/LocalFlow_From_Scratch_Master_Spec_v1_2.html",
+      "sha256": "fd7132adbf3796424db29a6a06c2ff470e425f2b42f43f3203a4ff7f4de5c329"
+    },
+    {
+      "relative_path": "docs/design-inputs/LocalFlow_From_Scratch_Master_Spec_v1_2.pdf",
+      "sha256": "d84309ca0b9e69e2dd7f85398bd80af8efa58ade885e3c30ff2ec08f50aab48e"
+    },
+    {
+      "relative_path": "docs/design-inputs/LocalFlow_Publication_Experiment_Registry_v2.txt",
+      "sha256": "596932dd91e0b108936c3a7a80245f4f44df5cfeac4f13d6fda8cfb30412cfe0"
+    },
+    {
+      "relative_path": "docs/design-inputs/PACKAGE_README.md",
+      "sha256": "9ec70b0e2b9f9ea1139545370c49b75178dd9278dbc31e95c6ac071c6af6045d"
+    },
+    {
+      "relative_path": "docs/design-inputs/BUNDLE_SHA256SUMS",
+      "sha256": "8b1f98bb7e8debd01c062992efa8c6e422a2c23e4e458ff0b0d07dd0b11bcbd1"
+    }
+  ],
+  "internal_below_250_GiB_is_not_external_gate": true,
+  "internal_literal_free_bytes": 153709178880,
+  "main_environment_real_internal": true,
+  "original_baseline_test_file_count": 28,
+  "original_baseline_test_files_unchanged": true,
+  "original_baseline_test_paths_sha256": "4a1c1ddff3eb1e5d0b3045b4b4f9b06ee241826caa13770cd251f6f52c57e3b8",
+  "protected_snapshot_identity_sha256": "ec4a91ca246c33d70d85cb50ec2d84a6d1822092f15dce8396bda47bc76bef76",
+  "protected_snapshot_name": "com.apple.TimeMachine.2026-10-06-191850.local",
+  "protected_snapshot_present": true,
+  "python_version": "3.12.15",
+  "real_internal_keep_paths": [
+    "checkpoints/.gitkeep",
+    "exports/.gitkeep",
+    "exports/asr-tts-probe-venv",
+    "exports/foundation-repair/development-asr-pairs-attempt01/pairs.jsonl",
+    "exports/lexical-reader-v2/bench-C101-attempt03/evaluation-final.jsonl",
+    "exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl",
+    "exports/lexical-reader-v2/mixed-reader-attempt02/presentations.jsonl",
+    "exports/lexical-reader-v2/pilot-preparation-attempt01/development-panel.json",
+    "exports/six-10m-build-reports.attempt01.py",
+    "exports/six-10m-build-reports.py",
+    "exports/six-10m-final-validation.attempt02.py",
+    "exports/six-10m-final-validation.py",
+    "exports/six-10m-plot-runtime",
+    "exports/six-10m-record-completion.py",
+    "exports/six-10m-record-final.py",
+    "exports/source-qualification/ls_pc_manifest.tar.gz"
+  ],
+  "reviewed_commit": "c33d975540236722cf6b5daf050921c79d3579ec",
+  "schema": "g2_final_read_only_preservation_v1",
+  "snapshot_readonly_output_sha256": "335ed69ce722c9abfca6abb7f148b5a2a3815860c086fbb86061ed58a8d408d8",
+  "status": "PASS_READ_ONLY_PRESERVATION_CHECKS",
+  "time_machine_operations": 0,
+  "unstarted": {
+    "qualification_initializers_forbidden": true,
+    "recipes": 7,
+    "scientific_output_entries": 0,
+    "scientific_slots_consumed": 0,
+    "status": "AUTHORIZED_UNSTARTED"
+  }
+}

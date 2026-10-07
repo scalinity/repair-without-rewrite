@@ -1,0 +1,19 @@
+# Generation-2 implementation and qualification session
+
+FACT: Recorded 2026-10-07T18:11:20.522978+00:00; reviewed repository source commit `c33d975540236722cf6b5daf050921c79d3579ec`. This report never identifies its own future commit. All seven scientific recipes remain AUTHORIZED_UNSTARTED.
+
+FACT: The prospective frontier decision and Section Z were published before affected outputs. The external artifact root was bound and qualified, official archives acquired directly there, native audio and ASR hypotheses constructed, corpus/support/panel/geometry frozen, historical controls reproduced, six native timing trajectories and twelve exact cold paths completed, and the ByT5 runner qualified for exactly 100 updates. All raw text/audio/weights and failed/partial attempts remain outside Git in authorized external storage.
+
+MEASURED RESULT: Initial/resumed baseline 379 passed; final 465 passed, zero failures/skips. Separate corpus/native/ByT5/evaluation/cost/admission reconstruction paths pass. Final snapshot, compatibility-link, immutable-input, environment/lock and root-preservation observations are in `experiments/manifests/generation_2/final-preservation.attempt01.json`. Internal free space is monitored and is not treated as the 250 GiB external gate. No Time Machine deletion/thinning/configuration change was performed.
+
+FACT: Retained failures include pre-model missing-directory/environment/config-key invocations, the post-preflight missing-root fixture, the C historical tuple/list serialization flag, and the ByT5 first-record set serialization error before training. The ByT5 failed attempt performed zero optimizer updates and one scored CAL reference use, which remains separately recorded despite the unavailable output/score. Attempt02 supplies the sole actual 100-update ByT5 qualification trajectory. The root-loss mechanism was repaired and independently reconstructed; missing inputs and metadata bugs were corrected without changing scientific populations, recipes or tolerances. The retained storage forecaster first rejected 39 in-volume pytest directory aliases; its mechanical lstat census repair passes an independent os.walk reconstruction and 25 CPU checks. The first repair audit mistakenly assumed the unstarted scientific area existed; that failed audit is retained. Storage forecast02 is the qualified forecast, and both failed accounting attempts plus the successful census audit remain measured in the exact 36-entry shared set. Failed engineering/check commands and diagnostics remain in numbered receipts/private logs. Numerical qualification trajectories were not silently retried.
+
+CALCULATION: Serialized forecast 91.179828 hours with exactly one 25% reserve; remaining conservative storage 185.712373432 GiB, high-water literal free 269.676451031 GiB. Admission disposition `AUTHORIZE_DEVELOPMENT_GENERATION_2_EXECUTION`.
+
+FACT: All seven recipes remain AUTHORIZED_UNSTARTED, zero scientific slots consumed, and qualification weights forbidden as initializers. No final seeds/final 150M runs, sealed/final inference, protocol freeze, teacher/TTS, annotation/listening, cloud spending or production changes occurred.
+
+FACT: ORCHESTRATION.html is realigned in the close-out commit from these records, with final qualification/admission state, counts, eligibility, lanes, open questions and timeline. Named public paths are scanned before each publication; private binding/raw payloads are excluded. Branch publication is authorized; main is unchanged. The exact clean final commit and synchronized remote are reported after publication, without embedding this report's own future hash.
+
+PROPOSED NEXT ACTION: Stop. Eligible scientific execution still requires a new explicit owner authorization; a cost/storage block requires its stated resolution without recipe redesign.
+
+AUTHORIZE_DEVELOPMENT_GENERATION_2_EXECUTION
