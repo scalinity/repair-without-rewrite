@@ -1,0 +1,19 @@
+{
+  "code_commit": "34f22412c82cfb8938a1f0a38490deca0b626f42",
+  "created_utc": "2026-10-07T03:58:56.053878+00:00",
+  "failed": 0,
+  "log_sha256": "4f9f3407e7387e4665b6be2b0417ce64f1367432547ec66cfa43d6cdd1c9a152",
+  "passed": 69,
+  "schema": "g2_bounded_cpu_test_v1",
+  "scientific_recipes_started": 0,
+  "scope": "CPU-only unavailable-root and existing accounting tests; added evaluation checker not yet qualified on model outputs",
+  "seconds": 0.67,
+  "skipped": 0,
+  "source_hashes": {
+    "benchmarks/g2_admission_independent.py": "ecba3381ed2436577d8647e85ef976ee24c706a505fe90fbfc34e249a0d8715a",
+    "benchmarks/g2_cost_projection.py": "a24bb8f9394288d1769ade795afd368d48e73864c2c451b9831ba7f39da4221d",
+    "benchmarks/g2_evaluation_independent.py": "a360a09dcb7f9a831a9e26a62f5090cef4816435382d8d61b3a05a90c34aa23c",
+    "tests/data/test_g2_qualification_guards.py": "07e79b8e84c9489b243be1a59da926fa8e3c098b52e2e8fc50d388a047491148"
+  },
+  "status": "PASS"
+}

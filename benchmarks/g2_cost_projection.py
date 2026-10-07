@@ -74,7 +74,7 @@ def run(binding,attempt):
             "archived-evaluation-C101.attempt01.json","independent-archives.attempt01.json",
             "independent-corpus.attempt01.json","independent-native.attempt01.json",
             "independent-byt5.attempt01.json","storage-reforecast.attempt01.json",
-            "expanded-evaluation-summary.attempt01.json"):
+            "expanded-evaluation-summary.attempt01.json","independent-evaluation.attempt01.json"):
         record,identity=load(name);inputs[name]=identity
         seconds=record["elapsed_seconds"];qualification+=seconds
         shared.append({"receipt":name,"classification":"MEASURED","seconds":seconds})

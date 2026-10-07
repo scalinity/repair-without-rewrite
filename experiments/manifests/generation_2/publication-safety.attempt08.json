@@ -1,0 +1,48 @@
+{
+  "absolute_local_path_additions": 0,
+  "code_commit": "34f22412c82cfb8938a1f0a38490deca0b626f42",
+  "created_utc": "2026-10-07T04:18:08.329900+00:00",
+  "credential_values": 0,
+  "gitleaks_exit_code": 1,
+  "gitleaks_findings": [
+    {
+      "classification": "real source or artifact SHA256, not a credential",
+      "file": "experiments/manifests/generation_2/native-bench-start.attempt01.json",
+      "full_literal": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+      "independent_source": "configs/tokenizer_development/tokenizer.json",
+      "line": 44,
+      "rule": "generic-api-key",
+      "sha256_matches": true
+    },
+    {
+      "classification": "real source or artifact SHA256, not a credential",
+      "file": "experiments/manifests/generation_2/native-bench-start.attempt01.json",
+      "full_literal": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+      "independent_source": "src/models/tokenizer.py",
+      "line": 65,
+      "rule": "generic-api-key",
+      "sha256_matches": true
+    }
+  ],
+  "gitleaks_raw_report_sha256": "2824c8276a312f3dffc70402a451369209c4387a789387b233f9a0ff02b39b9f",
+  "nonfunctional_personal_identifiers": 0,
+  "public_files_repository_relative": true,
+  "schema": "g2_publication_safety_v1",
+  "staged_diff_sha256": "1bdbd1fdb4acdd71392a1b94c3e0b1190114d6137266d9962b689b9410b9ab41",
+  "staged_paths": [
+    "ORCHESTRATION.html",
+    "benchmarks/g2_admission_independent.py",
+    "benchmarks/g2_cost_projection.py",
+    "benchmarks/g2_evaluation_independent.py",
+    "docs/LOG.md",
+    "experiments/manifests/generation_2/native-bench-start.attempt01.json",
+    "experiments/manifests/generation_2/orchestration-visual.attempt08.json",
+    "experiments/manifests/generation_2/qualification-cpu-tests.attempt03.json",
+    "experiments/manifests/generation_2/qualification-cpu-tests.attempt04.json",
+    "experiments/manifests/generation_2/qualification-cpu-tests.attempt05.json",
+    "experiments/manifests/generation_2/qualification-cpu-tests.attempt06.json",
+    "tests/data/test_g2_qualification_guards.py"
+  ],
+  "status": "PASS_CLASSIFIED",
+  "unclassified_findings": 0
+}

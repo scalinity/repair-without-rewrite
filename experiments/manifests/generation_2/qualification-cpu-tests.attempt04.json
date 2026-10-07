@@ -1,0 +1,23 @@
+{
+  "code_commit": "34f22412c82cfb8938a1f0a38490deca0b626f42",
+  "created_utc": "2026-10-07T04:17:02.172350+00:00",
+  "elapsed_scope": "pytest reported collection duration; command wall time 0.055918 seconds",
+  "error": "nonexistent tests/data/test_g2_calibration_consumption.py; failed invocation retained",
+  "exit_code": 4,
+  "failed": 0,
+  "log_sha256": "a1d4cf3d5247be0b251e15d673cde1d49f2e5b6d5c25ce004fa2d8bd3a0628e7",
+  "passed": 0,
+  "schema": "g2_bounded_cpu_test_v1",
+  "scientific_recipes_started": 0,
+  "scope": "CPU-only unavailable-root/accounting/bootstrap checks; full model-output reviewer remains runtime-unqualified",
+  "seconds": 0.0,
+  "skipped": 0,
+  "source_hashes": {
+    "benchmarks/g2_admission_independent.py": "ecba3381ed2436577d8647e85ef976ee24c706a505fe90fbfc34e249a0d8715a",
+    "benchmarks/g2_cost_projection.py": "a24bb8f9394288d1769ade795afd368d48e73864c2c451b9831ba7f39da4221d",
+    "benchmarks/g2_evaluation_independent.py": "b4d96d756bf2aaedaffe67c1244d798e93f246ca99f1ad4c495321c84c4ba0ac",
+    "tests/data/test_g2_qualification_guards.py": "07e79b8e84c9489b243be1a59da926fa8e3c098b52e2e8fc50d388a047491148"
+  },
+  "status": "FAILED_TEST_INVOCATION",
+  "tests_run": 0
+}

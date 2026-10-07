@@ -53,6 +53,7 @@ def run(binding, attempt):
         "independent-byt5.attempt01.json":"PASS_INDEPENDENT_G2_BYT5_ACCOUNTING_STATE",
         "independent-cost.attempt01.json":"PASS_INDEPENDENT_G2_COST_RECONSTRUCTION",
         "expanded-evaluation-summary.attempt01.json":"PASS_COMPLETE_FAILURE_INCLUSIVE_QUALIFICATION_TABLES",
+        "independent-evaluation.attempt01.json":"PASS_INDEPENDENT_G2_TABLE_BOOTSTRAP_RECONSTRUCTION",
         "final-full-tests.attempt01.json":"PASS"}
     records = {}
     identities = {}

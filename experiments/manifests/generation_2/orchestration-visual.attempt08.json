@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "appearance": "light",
+      "background": "rgb(245, 244, 241)",
+      "bodyWidth": 1280,
+      "documentWidth": 1280,
+      "errors": [],
+      "screenshotBytes": 221355,
+      "status": "PASS",
+      "storageText": true,
+      "width": 1280
+    },
+    {
+      "appearance": "dark",
+      "background": "rgb(20, 19, 17)",
+      "bodyWidth": 1280,
+      "documentWidth": 1280,
+      "errors": [],
+      "screenshotBytes": 219050,
+      "status": "PASS",
+      "storageText": true,
+      "width": 1280
+    },
+    {
+      "appearance": "light",
+      "background": "rgb(245, 244, 241)",
+      "bodyWidth": 390,
+      "documentWidth": 390,
+      "errors": [],
+      "screenshotBytes": 106809,
+      "status": "PASS",
+      "storageText": true,
+      "width": 390
+    },
+    {
+      "appearance": "dark",
+      "background": "rgb(20, 19, 17)",
+      "bodyWidth": 390,
+      "documentWidth": 390,
+      "errors": [],
+      "screenshotBytes": 105055,
+      "status": "PASS",
+      "storageText": true,
+      "width": 390
+    }
+  ],
+  "orchestration_sha256": "37c8b501c6afbf11ff8faebcfb00591f4dd4482e3c0344a22d0c68af77533bc9",
+  "schema": "g2_orchestration_visual_v1",
+  "screenshot_inspection": [
+    {
+      "appearance": "light",
+      "sha256": "bced84fcf77249e68583198e98c6ff9670389b311152fedd7477b69b09847334",
+      "visually_inspected": true,
+      "width": 1280
+    },
+    {
+      "appearance": "dark",
+      "sha256": "c5aa1fc5a9465177cd3ff757510814857d5fd595191fdab6089912abafe4c22a",
+      "visually_inspected": true,
+      "width": 1280
+    },
+    {
+      "appearance": "light",
+      "sha256": "49a63f09538a851c0153afe4857409ab3902c505dcfeb9d3de05fdf9e72cbb25",
+      "visually_inspected": true,
+      "width": 390
+    },
+    {
+      "appearance": "dark",
+      "sha256": "16d28c12e99fda3346d0109a321c3b46d05f6bd9131118f89cad41311a53d78f",
+      "visually_inspected": true,
+      "width": 390
+    }
+  ],
+  "status": "PASS",
+  "temporary_screenshots_created": 4,
+  "temporary_screenshots_removed": 4
+}

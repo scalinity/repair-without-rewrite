@@ -17,6 +17,7 @@ from benchmarks import g2_archive_independent as archive_independent
 from benchmarks import g2_admission_independent as admission_independent
 from benchmarks import g2_calibration_consumption as calibration_consumption
 from benchmarks import g2_evaluation_summary as evaluation_summary
+from benchmarks import g2_evaluation_independent as evaluation_independent
 
 
 @pytest.mark.parametrize("module,invoke", [
@@ -37,6 +38,7 @@ from benchmarks import g2_evaluation_summary as evaluation_summary
     (admission_independent, lambda p: admission_independent.run(p, 1)),
     (calibration_consumption, lambda p: calibration_consumption.run(p, 2)),
     (evaluation_summary, lambda p: evaluation_summary.run(p, 1)),
+    (evaluation_independent, lambda p: evaluation_independent.run(p, 1)),
     (cost, lambda p: cost.run(p, 1))])
 def test_unavailable_external_root_precedes_native_libraries_and_output(tmp_path, monkeypatch, module, invoke):
     def missing(_):
