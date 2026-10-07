@@ -1,0 +1,23 @@
+{
+  "external_model_review_claimed": false,
+  "failed_and_passed_test_attempts_retained": true,
+  "fresh_process_dense_sparse_reconstruction": "PASS",
+  "incomplete_and_atomic_replacement_checks": "PASS",
+  "inputs_sha256": {
+    "experiments/manifests/generation_2/artifact-root-io.attempt02.json": "c5e52d503f55406ab860e30f714182cfab9451160f17563928c59ee652e381c5",
+    "experiments/manifests/generation_2/root-loss-repair.attempt01.json": "7796b61f191370b69715f495722ee6151da011d031251d1e66c33caec68ac414",
+    "src/data/g2_artifacts.py": "7a214aad72a7a4e0b661c69a7046de82c09f1f922cdb7faad2883e52ee3627b2"
+  },
+  "limits": [
+    "synthetic missing-root race only; the real mounted root was never removed",
+    "no power-loss or cold device-cache claim",
+    "active recognizer retains its originally loaded code"
+  ],
+  "literal_free_bytes": 556629417984,
+  "method": "separate AST path-creation inspection, direct diskutil/statvfs identity checks, and independently parsed fresh-process fixture receipts; no preflight or forecast producer invoked",
+  "recursive_bound_root_creation_removed": true,
+  "schema": "g2_root_loss_independent_software_path_v1",
+  "scientific_recipes_started": 0,
+  "status": "PASS_BOUNDED_MECHANICAL_RECONSTRUCTION",
+  "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+}

@@ -122,7 +122,14 @@ def atomic_artifact(root, relative):
     Failed partial directories remain evidence until fixture-specific cleanup.
     """
     destination = root.path(relative)
-    destination.parent.mkdir(parents=True, exist_ok=True)
+    # Never recreate the bound root or its mount after a disconnect. Create
+    # only one child at a time beneath an already-existing bound parent.
+    parent = root.root
+    for component in destination.relative_to(root.root).parts[:-1]:
+        parent = parent / component
+        parent.mkdir(exist_ok=True)
+        if parent.is_symlink() or parent.stat().st_dev != root.root.stat().st_dev:
+            raise ValueError("Generation-2 artifact parent is redirected or outside the bound volume")
     sync_directory(destination.parent)
     if destination.exists():
         raise FileExistsError(destination)

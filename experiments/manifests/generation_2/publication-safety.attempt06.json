@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-10-07T03:25:50.438340+00:00",
+  "gitleaks": "PASS_ZERO_CREDENTIAL_HITS",
+  "personal_identifier_hits": [],
+  "scan_report_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "schema": "g2_publication_safety_v1",
+  "scope": "named mechanical root-loss repair and measured storage evidence",
+  "staged_file_sha256": {
+    "ORCHESTRATION.html": "cc30ba388689600752ee29e18baa089b59423f941908a0776684b7748e280c5d",
+    "docs/LOG.md": "13e4118a1626003576798b3f9c62c617ab57ef218c817f0e423d637fbbf2d896",
+    "docs/reports/G2_EXTERNAL_ARTIFACT_ROOT_REPAIR_V2.md": "777b1514b2455bcbd144d3076ee7743f0d48b1a17b7f90ca586b581fc73450d1",
+    "docs/reviews/G2_STORAGE_ROOT_LOSS_INDEPENDENT_REVIEW.md": "6dfc6ca3a5dfc5bf7fbee2ce5208150aef565fae9cbdc362bf4ab9958ebc8179",
+    "experiments/manifests/generation_2/artifact-root-io.attempt02.json": "c5e52d503f55406ab860e30f714182cfab9451160f17563928c59ee652e381c5",
+    "experiments/manifests/generation_2/independent-root-loss.attempt01.json": "4760a39633fef3657ec42cd580f81a8f17e6fc47b3d89c6a74573056d620415b",
+    "experiments/manifests/generation_2/orchestration-visual.attempt06.json": "3cc1cb44237f81af557ba13dfc065b344f8d1060dd24b1e6b6b1d429607bbc3e",
+    "experiments/manifests/generation_2/root-loss-repair.attempt01.json": "7796b61f191370b69715f495722ee6151da011d031251d1e66c33caec68ac414",
+    "src/data/g2_artifacts.py": "7a214aad72a7a4e0b661c69a7046de82c09f1f922cdb7faad2883e52ee3627b2",
+    "tests/data/test_g2_artifacts.py": "5427011b2687a001a343b20b6493e888d4fdae9909672e7345056560305007c1"
+  },
+  "status": "PASS",
+  "unclassified_hits": 0
+}

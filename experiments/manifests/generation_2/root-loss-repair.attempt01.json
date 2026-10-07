@@ -1,0 +1,29 @@
+{
+  "active_recognizer_process": "loaded prior published storage code before this mechanical repair; no restart or hot patch",
+  "base_commit": "d232a3eeef6489242767f27940f7922dacf12dc6",
+  "created_utc": "2026-10-07T03:24:10.001599+00:00",
+  "failed_attempt": {
+    "attempt": 1,
+    "failed": 1,
+    "failure": "artifact creation continued after the bound root disappeared",
+    "log_sha256": "e369f8a025dde22cfea2bfc29302a5ac41db480750bbf3d16c047b4a3d48e45f",
+    "seconds": 0.03,
+    "status": "FAIL"
+  },
+  "prior_source_sha256": "091897ddcca0a1e0fe03b35e3b54b3fe2737344080faa3d669ac5c8096c7bd70",
+  "repaired_attempt": {
+    "attempt": 2,
+    "failed": 0,
+    "log_sha256": "5b5757d89ead3bed5c3c0be52d686c462652dc7e06190e893d579856289359bd",
+    "passed": 58,
+    "scope": "bounded CPU storage, corpus, geometry, stream, ByT5 accounting, bootstrap and unavailable-root guards",
+    "seconds": 0.58,
+    "skipped": 0,
+    "status": "PASS"
+  },
+  "repaired_source_sha256": "7a214aad72a7a4e0b661c69a7046de82c09f1f922cdb7faad2883e52ee3627b2",
+  "schema": "g2_root_loss_repair_v1",
+  "scientific_recipes_started": 0,
+  "scope": "mechanical storage path repair only",
+  "status": "PASS_MECHANICAL_ROOT_LOSS_REPAIR"
+}

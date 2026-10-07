@@ -45,6 +45,19 @@ def test_missing_root_fails_before_volume_query(bound_root, monkeypatch):
     assert not bound_root.root.exists()
 
 
+def test_root_loss_after_path_preflight_does_not_recreate_a_fallback(bound_root, monkeypatch):
+    original = bound_root.path
+    def disappear(relative):
+        destination = original(relative)
+        bound_root.root.rmdir()
+        return destination
+    monkeypatch.setattr(bound_root, "path", disappear)
+    with pytest.raises(FileNotFoundError):
+        with g2.atomic_artifact(bound_root, "qualification-v1/new-artifact"):
+            pytest.fail("artifact creation continued after the bound root disappeared")
+    assert not bound_root.root.exists()
+
+
 @pytest.mark.parametrize("field,value", [("Internal", True), ("Writable", False),
     ("VolumeUUID", "wrong"), ("FilesystemName", "APFS")])
 def test_changed_volume_is_rejected(bound_root, monkeypatch, field, value):
