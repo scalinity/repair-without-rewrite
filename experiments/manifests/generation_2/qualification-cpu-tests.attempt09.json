@@ -1,0 +1,17 @@
+{
+  "code_commit": "d1488f5510e94fd378ddde1564d8c4b0ecc29b58",
+  "created_utc": "2026-10-07T13:41:20.387187+00:00",
+  "failed": 0,
+  "log_sha256": "a891ad32de10b87e8bfa16cb704b52e46b88dfcbad5b1cf5db40884d92d2a1a0",
+  "passed": 25,
+  "schema": "g2_bounded_cpu_test_v1",
+  "scientific_recipes_started": 0,
+  "scope": "Independent remaining-storage arithmetic from complete manifests and physical sizes, save deduplication, false-byte rejection and existing root/accounting guards; real completed ByT5 snapshot/forecast reconstruction remains unrun",
+  "seconds": 0.06,
+  "skipped": 0,
+  "source_hashes": {
+    "benchmarks/g2_admission_independent.py": "87a36967d200781f151b405c6c49a14dfa4575f62dc41c94766e5bf1f27c8749",
+    "tests/data/test_g2_admission_storage.py": "5cc635959c4d2068e8d3308e55f83147822154304516616fba2cd918baf5fa47"
+  },
+  "status": "PASS"
+}

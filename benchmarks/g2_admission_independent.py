@@ -26,6 +26,40 @@ def assert_unstarted(configs, scientific_area):
             "qualification_initializers_forbidden":True,"scientific_output_entries":0}
 
 
+def reconstruct_remaining_storage(root, directory, configs):
+    # Read complete manifests and physical file sizes directly; no forecast
+    # producer or checkpoint-read helper is imported.
+    def size(relative, filename):
+        path = root.path(relative)
+        complete = json.loads((path / "COMPLETE.json").read_text())
+        actual = (path / filename).stat().st_size
+        assert actual > 0 and complete["files"][filename]["bytes"] == actual
+        return actual
+    native = {}
+    for arm in ("B100", "C101"):
+        arrays, metadata = [], []
+        for data, condition in (("D0", "U8"), ("D1", "U1"), ("D1", "U8")):
+            bench = json.loads((directory / f"bench-{arm}-{data}-{condition}.attempt01.json").read_text())
+            for relative in bench["checkpoint_relatives"].values():
+                arrays.append(size(relative, "arrays.npz"))
+                metadata.append(size(relative, "metadata.json"))
+        count = sum(len({item["master_completed"] for item in row["save_endpoints"]})
+            for row in configs if row["recipe_id"].startswith("G2-" + arm + "-"))
+        assert count == 39 and len(arrays) == len(metadata) == 12
+        native[arm] = count * (max(arrays) + max(16 * 1024**2, max(metadata)))
+    by = json.loads((directory / "byt5-qualification.attempt02.json").read_text())
+    recipe = next(row for row in configs if row["recipe_id"].startswith("G2-ByT5-"))
+    assert recipe["save_evaluate_pass_milestones"] == [0, 2, 5, 10]
+    byt5 = (size(by["initial_checkpoint"]["relative"], "state.pt")
+        + 3 * size(by["final_checkpoint"]["relative"], "state.pt") + 4 * 16 * 1024**2)
+    allowances = {"additional_failed_attempt_reserve":32 * 1024**3,
+        "one_writer_atomic_transient":8 * 1024**3,
+        "future_evaluation_and_diagnostic_outputs":4 * 1024**3,
+        "future_presentation_and_consumption_logs":4 * 1024**3,
+        "future_private_logs_and_receipts":8 * 1024**3}
+    return sum(native.values()) + byt5 + sum(allowances.values()), allowances
+
+
 def run(binding, attempt):
     root = ArtifactRoot(binding)
     before = root.preflight()
@@ -115,6 +149,9 @@ def run(binding, attempt):
     storage = records["storage-reforecast.attempt01.json"]
     assert cost["status"] in ("PASS_G2_COST_CEILING_ONLY","GENERATION_2_COST_BLOCKED")
     assert storage["status"] in ("PASS_G2_RETAINED_STORAGE_FORECAST","GENERATION_2_STORAGE_BLOCKED")
+    remaining, allowances = reconstruct_remaining_storage(root, directory, configs)
+    assert remaining == storage["calculated_remaining_conservative_bytes"]
+    assert allowances == storage["assumed_future_allowances_bytes"]
     expected_high_water = storage["literal_free_bytes_for_forecast"] - storage["calculated_remaining_conservative_bytes"]
     assert expected_high_water == storage["calculated_high_water_literal_free_bytes"]
     assert storage["minimum_literal_free_bytes"] == 250*1024**3
@@ -130,6 +167,8 @@ def run(binding, attempt):
         unstarted=unstarted,before=before,after=end,code_sha256=sha256(__file__),
         total_serialized_hours=cost["total_serialized_hours"],
         high_water_literal_free_bytes=expected_high_water,
+        independently_reconstructed_remaining_storage_bytes=remaining,
+        future_storage_allowances_classification="ASSUMED; explicit planning allowances, not a guaranteed worst-case bound",
         scientific_execution_performed=False,external_model_review_claimed=False,
         scope="read-only artifact coherence and independent prerequisite reconstruction; separate owner execution authorization still required",
         elapsed_seconds=time.perf_counter()-started)

@@ -1,0 +1,24 @@
+{
+  "absolute_local_path_additions": 0,
+  "code_commit": "d1488f5510e94fd378ddde1564d8c4b0ecc29b58",
+  "created_utc": "2026-10-07T13:45:29.988246+00:00",
+  "credential_values": 0,
+  "gitleaks_exit_code": 0,
+  "gitleaks_findings": [],
+  "gitleaks_raw_report_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "nonfunctional_personal_identifiers": 0,
+  "public_files_repository_relative": true,
+  "schema": "g2_publication_safety_v1",
+  "staged_diff_sha256": "82f1021567b01df904d3c91f4621476c12bd4c16321f1fdf7ca1d0aa02323ca7",
+  "staged_paths": [
+    "ORCHESTRATION.html",
+    "benchmarks/g2_admission_independent.py",
+    "docs/LOG.md",
+    "experiments/manifests/generation_2/orchestration-visual.attempt16.json",
+    "experiments/manifests/generation_2/qualification-cpu-tests.attempt09.json",
+    "experiments/manifests/generation_2/storage-monitor.attempt24.json",
+    "tests/data/test_g2_admission_storage.py"
+  ],
+  "status": "PASS",
+  "unclassified_findings": 0
+}
