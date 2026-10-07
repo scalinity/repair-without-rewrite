@@ -1,0 +1,56 @@
+{
+  "checks": [
+    {
+      "appearance": "light",
+      "background": "rgb(245, 244, 241)",
+      "bodyWidth": 1280,
+      "documentWidth": 1280,
+      "errors": [],
+      "screenshotBytes": 217746,
+      "status": "PASS",
+      "storageText": true,
+      "width": 1280
+    },
+    {
+      "appearance": "dark",
+      "background": "rgb(20, 19, 17)",
+      "bodyWidth": 1280,
+      "documentWidth": 1280,
+      "errors": [],
+      "screenshotBytes": 215149,
+      "status": "PASS",
+      "storageText": true,
+      "width": 1280
+    },
+    {
+      "appearance": "light",
+      "background": "rgb(245, 244, 241)",
+      "bodyWidth": 390,
+      "documentWidth": 390,
+      "errors": [],
+      "screenshotBytes": 105312,
+      "status": "PASS",
+      "storageText": true,
+      "width": 390
+    },
+    {
+      "appearance": "dark",
+      "background": "rgb(20, 19, 17)",
+      "bodyWidth": 390,
+      "documentWidth": 390,
+      "errors": [],
+      "screenshotBytes": 104714,
+      "status": "PASS",
+      "storageText": true,
+      "width": 390
+    }
+  ],
+  "created_utc": "2026-10-07T12:06:06.895190+00:00",
+  "layout_changed": false,
+  "schema": "g2_orchestration_visual_v1",
+  "status": "PASS",
+  "temporary_screenshots_created": 4,
+  "temporary_screenshots_deleted": 4,
+  "temporary_screenshots_inspected": 4,
+  "watched_tab_resized": false
+}
