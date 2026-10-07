@@ -1,0 +1,109 @@
+{
+  "binding_path": "experiments/manifests/generation_2/byt5-execution-schedule.attempt01.json",
+  "binding_sha256": "a83d8e1a10c51cbe06b21bd0b3e078d926e98e1d89292dfca65c3e2e7c3bc4f5",
+  "code_sha256": "9636687a2a0a8251a57a06446ae3245248a145d064dd5d2924de5fc3f396ecda",
+  "decision_sha256": "f198e3ad9a59e1236e4d1506f19a0b63985e944224ef34ffb338676bc11d73ed",
+  "geometry": {
+    "final_batch_size": 2,
+    "milestones": [
+      {
+        "exact_optimizer_boundary": true,
+        "following_offset": 0,
+        "following_presentations": 0,
+        "following_update": 0,
+        "nominal_presentations": 0,
+        "passes": 0,
+        "preceding_offset": 0,
+        "preceding_presentations": 0,
+        "preceding_update": 0
+      },
+      {
+        "exact_optimizer_boundary": false,
+        "following_offset": 2,
+        "following_presentations": 28228,
+        "following_update": 7057,
+        "nominal_presentations": 28226,
+        "passes": 2,
+        "preceding_offset": -2,
+        "preceding_presentations": 28224,
+        "preceding_update": 7056
+      },
+      {
+        "exact_optimizer_boundary": false,
+        "following_offset": 3,
+        "following_presentations": 70568,
+        "following_update": 17642,
+        "nominal_presentations": 70565,
+        "passes": 5,
+        "preceding_offset": -1,
+        "preceding_presentations": 70564,
+        "preceding_update": 17641
+      },
+      {
+        "exact_optimizer_boundary": true,
+        "following_offset": 0,
+        "following_presentations": 141130,
+        "following_update": 35283,
+        "nominal_presentations": 141130,
+        "passes": 10,
+        "preceding_offset": 0,
+        "preceding_presentations": 141130,
+        "preceding_update": 35283
+      }
+    ],
+    "optimizer_updates": 35283,
+    "total_presentations": 141130
+  },
+  "independent_geometry_code_sha256": "696a5f2cd7fce9b1ff5a190567e3f0e4ead278e513ce3f68a7bce3d088d16a96",
+  "model_execution_performed": false,
+  "recipe_sha256": "cd74653ce9af7a155560884e1b34d1e936392ed9fce61558345b1d8ac442b5df",
+  "schema": "g2_execution_schedule_independent_v1",
+  "scientific_slots_consumed": 0,
+  "states": [
+    {
+      "actual_presentations": 0,
+      "frontier_decision_commit": "b1c565e341c1571fec15d4f918049c584246517b",
+      "frontier_decision_sha256": "f198e3ad9a59e1236e4d1506f19a0b63985e944224ef34ffb338676bc11d73ed",
+      "label": "initialization",
+      "nominal_passes": 0,
+      "nominal_presentations": 0,
+      "optimizer_update": 0,
+      "original_qualified_recipe_sha256": "cd74653ce9af7a155560884e1b34d1e936392ed9fce61558345b1d8ac442b5df",
+      "presentation_offset": 0
+    },
+    {
+      "actual_presentations": 28228,
+      "frontier_decision_commit": "b1c565e341c1571fec15d4f918049c584246517b",
+      "frontier_decision_sha256": "f198e3ad9a59e1236e4d1506f19a0b63985e944224ef34ffb338676bc11d73ed",
+      "label": "2-pass nominal milestone \u2014 first completed update at/after boundary",
+      "nominal_passes": 2,
+      "nominal_presentations": 28226,
+      "optimizer_update": 7057,
+      "original_qualified_recipe_sha256": "cd74653ce9af7a155560884e1b34d1e936392ed9fce61558345b1d8ac442b5df",
+      "presentation_offset": 2
+    },
+    {
+      "actual_presentations": 70568,
+      "frontier_decision_commit": "b1c565e341c1571fec15d4f918049c584246517b",
+      "frontier_decision_sha256": "f198e3ad9a59e1236e4d1506f19a0b63985e944224ef34ffb338676bc11d73ed",
+      "label": "5-pass nominal milestone \u2014 first completed update at/after boundary",
+      "nominal_passes": 5,
+      "nominal_presentations": 70565,
+      "optimizer_update": 17642,
+      "original_qualified_recipe_sha256": "cd74653ce9af7a155560884e1b34d1e936392ed9fce61558345b1d8ac442b5df",
+      "presentation_offset": 3
+    },
+    {
+      "actual_presentations": 141130,
+      "frontier_decision_commit": "b1c565e341c1571fec15d4f918049c584246517b",
+      "frontier_decision_sha256": "f198e3ad9a59e1236e4d1506f19a0b63985e944224ef34ffb338676bc11d73ed",
+      "label": "10-pass exact endpoint",
+      "nominal_passes": 10,
+      "nominal_presentations": 141130,
+      "optimizer_update": 35283,
+      "original_qualified_recipe_sha256": "cd74653ce9af7a155560884e1b34d1e936392ed9fce61558345b1d8ac442b5df",
+      "presentation_offset": 0
+    }
+  ],
+  "status": "PASS_FIRST_COMPLETED_UPDATE_BINDING"
+}

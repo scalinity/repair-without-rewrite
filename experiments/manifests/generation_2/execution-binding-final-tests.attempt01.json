@@ -1,0 +1,18 @@
+{
+  "schema": "g2_execution_tests_v1",
+  "recorded_at": "2026-10-07T23:01:18.074149+00:00",
+  "reviewed_commit": "b1c565e341c1571fec15d4f918049c584246517b",
+  "scope": "POST_BINDING_FULL_SUITE",
+  "exit_code": 0,
+  "passed": 477,
+  "process_wall_seconds": 42.347051374963485,
+  "log_relative": "logs-v1/execution-continuation.attempt01/post-binding-tests.log",
+  "log_sha256": "a923a8dd4bcd2d2c95696b8cb0a337583d7656bdea5b9915098b3624183c08a6",
+  "summary": [
+    "tests/scoring/test_independent_review.py ................                [ 96%]",
+    "tests/scoring/test_qualification.py ...................                  [100%]",
+    "",
+    "============================= 477 passed in 41.92s ============================="
+  ],
+  "status": "PASS"
+}

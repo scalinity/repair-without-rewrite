@@ -1,0 +1,62 @@
+{
+  "schema": "g2_byt5_execution_schedule_v1",
+  "recorded_at": "2026-10-07T23:00:07.177704+00:00",
+  "original_qualified_recipe_path": "experiments/manifests/generation_2/recipe-G2-ByT5-D1-10pass-seed42-lr3e-4.attempt01.json",
+  "original_qualified_recipe_sha256": "cd74653ce9af7a155560884e1b34d1e936392ed9fce61558345b1d8ac442b5df",
+  "frontier_decision_path": "docs/reviews/FRONTIER_G2_BYT5_MILESTONE_DECISION_V1.md",
+  "frontier_decision_commit": "b1c565e341c1571fec15d4f918049c584246517b",
+  "frontier_decision_sha256": "f198e3ad9a59e1236e4d1506f19a0b63985e944224ef34ffb338676bc11d73ed",
+  "disposition": "AUTHORIZE_FIRST_COMPLETED_UPDATE_AT_OR_AFTER_MILESTONE",
+  "states": [
+    {
+      "nominal_passes": 0,
+      "nominal_presentations": 0,
+      "optimizer_update": 0,
+      "actual_presentations": 0,
+      "presentation_offset": 0,
+      "label": "initialization",
+      "frontier_decision_commit": "b1c565e341c1571fec15d4f918049c584246517b",
+      "frontier_decision_sha256": "f198e3ad9a59e1236e4d1506f19a0b63985e944224ef34ffb338676bc11d73ed",
+      "original_qualified_recipe_sha256": "cd74653ce9af7a155560884e1b34d1e936392ed9fce61558345b1d8ac442b5df"
+    },
+    {
+      "nominal_passes": 2,
+      "nominal_presentations": 28226,
+      "optimizer_update": 7057,
+      "actual_presentations": 28228,
+      "presentation_offset": 2,
+      "label": "2-pass nominal milestone — first completed update at/after boundary",
+      "frontier_decision_commit": "b1c565e341c1571fec15d4f918049c584246517b",
+      "frontier_decision_sha256": "f198e3ad9a59e1236e4d1506f19a0b63985e944224ef34ffb338676bc11d73ed",
+      "original_qualified_recipe_sha256": "cd74653ce9af7a155560884e1b34d1e936392ed9fce61558345b1d8ac442b5df"
+    },
+    {
+      "nominal_passes": 5,
+      "nominal_presentations": 70565,
+      "optimizer_update": 17642,
+      "actual_presentations": 70568,
+      "presentation_offset": 3,
+      "label": "5-pass nominal milestone — first completed update at/after boundary",
+      "frontier_decision_commit": "b1c565e341c1571fec15d4f918049c584246517b",
+      "frontier_decision_sha256": "f198e3ad9a59e1236e4d1506f19a0b63985e944224ef34ffb338676bc11d73ed",
+      "original_qualified_recipe_sha256": "cd74653ce9af7a155560884e1b34d1e936392ed9fce61558345b1d8ac442b5df"
+    },
+    {
+      "nominal_passes": 10,
+      "nominal_presentations": 141130,
+      "optimizer_update": 35283,
+      "actual_presentations": 141130,
+      "presentation_offset": 0,
+      "label": "10-pass exact endpoint",
+      "frontier_decision_commit": "b1c565e341c1571fec15d4f918049c584246517b",
+      "frontier_decision_sha256": "f198e3ad9a59e1236e4d1506f19a0b63985e944224ef34ffb338676bc11d73ed",
+      "original_qualified_recipe_sha256": "cd74653ce9af7a155560884e1b34d1e936392ed9fce61558345b1d8ac442b5df"
+    }
+  ],
+  "training_presentations": 141130,
+  "optimizer_updates": 35283,
+  "intermediate_selection_permitted": false,
+  "adequacy_endpoint_only": 35283,
+  "training_sequence_changed": false,
+  "scientific_slots_consumed": 0
+}

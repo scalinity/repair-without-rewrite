@@ -1,0 +1,27 @@
+{
+  "schema": "g2_execution_binding_preservation_v1",
+  "status": "PASS",
+  "qualified_source_sha": "2c27cff28a31ae64220df9b06094a914e94dd0f3",
+  "protected_qualified_training_files": [
+    "src/data/g2_byt5.py",
+    "src/data/g2_stream.py",
+    "src/data/g2_geometry.py",
+    "src/models/g2_training.py",
+    "uv.lock",
+    "pyproject.toml"
+  ],
+  "all_original_baseline_test_files_unchanged": true,
+  "all_original_recipe_hashes_unchanged": true,
+  "original_byt5_recipe_sha256": "cd74653ce9af7a155560884e1b34d1e936392ed9fce61558345b1d8ac442b5df",
+  "scientific_slots_consumed": 0,
+  "all_seven_statuses": "AUTHORIZED_UNSTARTED",
+  "scientific_output_entries": 0,
+  "storage": {
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5",
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 488971010048,
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f"
+  },
+  "log_append_only": true
+}

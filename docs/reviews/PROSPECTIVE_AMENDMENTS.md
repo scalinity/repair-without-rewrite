@@ -136,3 +136,19 @@ A100, H2, cloud spending or teacher API spending.
 FACT — The authorized external Generation-2 artifact root is bound through `configs/generation_2/artifact_policy_v1.json` and a separate private `g2_artifact_binding_v1` mapping. Public identities are hashes and path classes; the exact root, mount and UUID remain outside Git. The root is distinct from the immutable Generation-1 evidence archive. The repository and existing internal runtimes remain internal. This changes physical storage only; no scientific treatment, corpus, optimizer or checkpoint validation is changed.
 
 Require the bound external, writable, case-sensitive APFS identity and at least 250 GiB literal free. Missing roots, changed identity, redirected paths and insufficient free space fail before network/model work. No internal or alternate-volume fallback is permitted. Artifact directories are separately versioned for sources, audio, hypotheses, corpus, frozen manifests, development, BENCH, replay, controls, scientific checkpoints, ByT5, evaluations, logs and disposable qualification fixtures. Atomic publication/durability, actual-volume cold readback and headroom remain pending qualification. No scientific recipe is released by this physical binding.
+
+### Generation-2 ByT5 completed-state milestone binding v1 — 2026-10-07
+
+FACT — Frontier decision `docs/reviews/FRONTIER_G2_BYT5_MILESTONE_DECISION_V1.md` was published alone at `b1c565e341c1571fec15d4f918049c584246517b` before affected implementation. All seven scientific recipes remain unstarted. The original qualified recipe is unchanged.
+
+For Generation-2 ByT5, a nominal pass milestone is observed at the first
+completed optimizer update whose cumulative incorporated training presentations
+reach or exceed the nominal count. Preserve continuous batch-four training
+across pass boundaries and the final two-record batch. Bind the 2-pass
+milestone to update 7,057 at 28,228 actual presentations versus 28,226 nominal
+(+2); bind the 5-pass milestone to update 17,642 at 70,568 actual presentations
+versus 70,565 nominal (+3). Retain initialization at update zero and the exact
+10-pass endpoint at update 35,283 and 141,130 presentations. Publish nominal
+and actual counts, signed offsets, and the labels specified in Frontier G2
+ByT5 Milestone Decision v1. Intermediate results are descriptive only;
+endpoint-only adequacy and all qualified training operations remain unchanged.

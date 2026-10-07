@@ -1,0 +1,16 @@
+{
+  "schema": "g2_publication_safety_v1",
+  "recorded_at": "2026-10-07T22:57:13.952987+00:00",
+  "reviewed_base": "1300a7c50f2b97eed477d2b2c464fcd80e4fbba3",
+  "staged_paths": [
+    "docs/reviews/FRONTIER_G2_BYT5_MILESTONE_DECISION_V1.md"
+  ],
+  "staged_diff_sha256": "f09491f590416fb5b03f96aaa0a7801bab8f79a8c9fc0e395a70e0f06b655f61",
+  "decision_sha256": "f198e3ad9a59e1236e4d1506f19a0b63985e944224ef34ffb338676bc11d73ed",
+  "gitleaks_exit_code": 0,
+  "credential_findings": 0,
+  "personal_identifier_findings": 0,
+  "status": "PASS",
+  "decision_only_commit_required": true,
+  "receipt_to_follow_in_next_evidence_commit": true
+}

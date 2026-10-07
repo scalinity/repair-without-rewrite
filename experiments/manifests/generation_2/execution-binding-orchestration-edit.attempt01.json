@@ -1,0 +1,10 @@
+{
+  "schema": "g2_orchestration_realign_attempt_v1",
+  "recorded_at": "2026-10-07T23:03:41.685959+00:00",
+  "attempt": 1,
+  "status": "FAILED_BEFORE_WRITE",
+  "failure": "Exact current-count text assertion matched zero; in-memory substitutions were not written",
+  "failed_expected_text": "75 commits at the reviewed source base, 74 Markdown reports, 34 independent review records and 465 passing tests in both current full suites",
+  "scientific_slots_consumed": 0,
+  "model_execution_performed": false
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "g2_publication_safety_v1",
+  "recorded_at": "2026-10-07T23:07:37.821778+00:00",
+  "reviewed_base": "b1c565e341c1571fec15d4f918049c584246517b",
+  "staged_paths": [
+    "ORCHESTRATION.html",
+    "docs/LOG.md",
+    "docs/reviews/PROSPECTIVE_AMENDMENTS.md",
+    "docs/reports/G2_BYT5_EXECUTION_BINDING.md",
+    "docs/reviews/G2_BYT5_EXECUTION_BINDING_INDEPENDENT_REVIEW.md",
+    "src/data/g2_byt5_schedule.py",
+    "tests/data/test_g2_byt5_schedule.py",
+    "benchmarks/g2_execution_schedule_independent.py",
+    "experiments/manifests/generation_2/byt5-execution-schedule.attempt01.json",
+    "experiments/manifests/generation_2/execution-binding-baseline-tests.attempt01.json",
+    "experiments/manifests/generation_2/execution-binding-final-tests.attempt01.json",
+    "experiments/manifests/generation_2/execution-schedule-independent.attempt01.json",
+    "experiments/manifests/generation_2/publication-safety.attempt21.json",
+    "experiments/manifests/generation_2/execution-binding-orchestration-edit.attempt01.json",
+    "experiments/manifests/generation_2/execution-binding-orchestration-visual.attempt01.json",
+    "experiments/manifests/generation_2/execution-binding-preservation.attempt01.json"
+  ],
+  "staged_diff_sha256": "74a8a8b5625c9768fd8c5d7cd47f6fc87ef805ad3e6a48434f48b13fa4b822c6",
+  "credential_findings": 0,
+  "personal_identifier_findings": 0,
+  "status": "PASS"
+}

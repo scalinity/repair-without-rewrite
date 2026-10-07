@@ -1,0 +1,49 @@
+{
+  "schema": "g2_orchestration_visual_v1",
+  "recorded_at": "2026-10-07T23:07:08.083861+00:00",
+  "status": "PASS",
+  "source_sha256": "a18ce861e036c26b25874894cb0c633f9bd521fd791edbb98c260e43bc66a35d",
+  "viewer_width_measured": 1280,
+  "checks": [
+    {
+      "width": 1280,
+      "height": 720,
+      "appearance": "light",
+      "document_scroll_width": 1280,
+      "body_scroll_width": 1280,
+      "horizontal_overflow": false,
+      "screenshot_visually_inspected": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "appearance": "dark",
+      "document_scroll_width": 1280,
+      "body_scroll_width": 1280,
+      "horizontal_overflow": false,
+      "screenshot_visually_inspected": true
+    },
+    {
+      "width": 390,
+      "height": 720,
+      "appearance": "light",
+      "document_scroll_width": 390,
+      "body_scroll_width": 390,
+      "horizontal_overflow": false,
+      "screenshot_visually_inspected": true
+    },
+    {
+      "width": 390,
+      "height": 720,
+      "appearance": "dark",
+      "document_scroll_width": 390,
+      "body_scroll_width": 390,
+      "horizontal_overflow": false,
+      "screenshot_visually_inspected": true
+    }
+  ],
+  "temporary_browser_tabs_closed": true,
+  "temporary_viewport_reset": true,
+  "screenshots_persisted_to_disk": 0,
+  "screenshots_remaining_on_disk": 0
+}

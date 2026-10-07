@@ -1,0 +1,17 @@
+{
+  "schema": "g2_execution_tests_v1",
+  "recorded_at": "2026-10-07T22:58:29.363869+00:00",
+  "reviewed_commit": "b1c565e341c1571fec15d4f918049c584246517b",
+  "scope": "PRE_BINDING_BASELINE",
+  "exit_code": 0,
+  "process_wall_seconds": 42.59105458302656,
+  "log_relative": "logs-v1/execution-continuation.attempt01/baseline-tests.log",
+  "log_sha256": "6592478f9d7efd76f4e018b00b7211c5a788f70262b0e779ed588909635f2aa9",
+  "summary": [
+    "tests/scoring/test_independent_review.py ................                [ 95%]",
+    "tests/scoring/test_qualification.py ...................                  [100%]",
+    "",
+    "============================= 465 passed in 42.05s ============================="
+  ],
+  "status": "PASS"
+}
