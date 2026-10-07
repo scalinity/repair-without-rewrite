@@ -1,0 +1,29 @@
+{
+  "after": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 488970219520,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "all_shared_draw_intervals_exact": true,
+  "before": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 488970190848,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "cases_per_panel": 2984,
+  "code_sha256": "1b10e1fbceb5a271e7ecacdde8669fa6ebe659ba60fa059be49a1e2108bb7b5c",
+  "complete_panels": 16,
+  "draw_indices_int64_sha256": "ca7289b19fcdde43e36592843d88bc89d9aa3f2361120a120cd3df4c9ec336d0",
+  "draws": 10000,
+  "elapsed_seconds": 39.82799283298664,
+  "method": "separate JSON membership/status/integer bounds arithmetic and integer multiplicity matrix products; no aggregate or bootstrap producer imported",
+  "natural_groups": 52,
+  "schema": "g2_independent_evaluation_v1",
+  "scientific_recipes_started": 0,
+  "status": "PASS_INDEPENDENT_G2_TABLE_BOOTSTRAP_RECONSTRUCTION",
+  "summary_sha256": "874cc02905ce005a9890e7cc0c73c236e4031bc3ef4096e1c4086dfc4eb75cc5"
+}

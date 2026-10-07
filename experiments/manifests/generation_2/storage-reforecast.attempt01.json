@@ -1,0 +1,18 @@
+{
+  "additional_engineering_locator_error": "A guessed manifest policy path was absent; the module explicitly identifies configs/generation_2/artifact_policy_v1.json. The read command exited 2; the search was not PASS.",
+  "attempt": 1,
+  "code_sha256": "59b86f29252bf6541e83c616e085c8ad7704e9c764515d220ffb953447098366",
+  "created_utc": "2026-10-07T17:51:52.262267+00:00",
+  "elapsed_scope": "measured supervisor process wall including interpreter startup",
+  "elapsed_seconds": 0.6854960420168936,
+  "exception": "ValueError: retained G2 artifact redirects outside physical accounting",
+  "exit_code": 1,
+  "locator_time_class": "UNPRICED",
+  "neural_runs_restarted": 0,
+  "root_policy_changed": false,
+  "schema": "g2_failed_storage_reforecast_v1",
+  "scientific_recipes_started": 0,
+  "status": "FAILED_RETAINED_INTERNAL_PYTEST_ALIAS_REJECTED",
+  "stopped_supervisor_journal_sha256": "88110f4df88b5fba9842cd088e0e402c463fa5f1fe5d9cd8970d8b70d99e2ae1",
+  "traceback_sha256": "f2c2e3f42a2a193c8ff7e73fae16779500f0b7c9206844585e493f8ec03c46a6"
+}

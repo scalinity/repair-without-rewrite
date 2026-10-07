@@ -1,0 +1,44 @@
+{
+  "after": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 488970170368,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "all_training_source_target_capacities_pass": true,
+  "before": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 488970170368,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "code_sha256": "abe0c174a1710f47d47b8331d0d40cf180ba5329077cbcb4225c753be161d0c2",
+  "conservative_update_seconds": 0.9894144666701322,
+  "elapsed_seconds": 8.859006166981999,
+  "external_model_review_claimed": false,
+  "final_batch_rows": 2,
+  "initial_final_panel_cases": 2984,
+  "method": "independent index arithmetic, UTF8-plus-EOS counts, JSON and portable CPU Torch state; no G2 batching, ByT5 interface or trainer helpers",
+  "official_weights_sha256": "5c5aaf56299d6f2d4eaadad550a40765198828ead4d74f0a15f91cbe0961931a",
+  "qualification_updates": 100,
+  "report_sha256": "3544400c7da1b1188237c5cc27bc3ca3b7dcb45d0329058fa43ab34345e49945",
+  "schema": "g2_independent_byt5_v1",
+  "scientific_optimizer_updates": 35283,
+  "scientific_presentations": 141130,
+  "scientific_recipes_started": 0,
+  "snapshots": {
+    "initial": {
+      "arrays_sha256": "238e896d40fd27976051c505771589b2c0eb3d67ec7bb5efa5fc441bcac93f04",
+      "completed_updates": 0,
+      "portable_cpu_readback": true
+    },
+    "update100": {
+      "arrays_sha256": "adf34e5f440cb2bcf01f484743b301e16f46b1de6b198fd29a8cecbea63a75ac",
+      "completed_updates": 100,
+      "portable_cpu_readback": true
+    }
+  },
+  "status": "PASS_INDEPENDENT_G2_BYT5_ACCOUNTING_STATE"
+}

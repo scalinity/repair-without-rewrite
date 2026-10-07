@@ -1,0 +1,11 @@
+{
+  "artifact_relative": "logs-v1/engineering-read-diagnostics.attempt01.json",
+  "artifact_sha256": "59f39cb4e176529344327faf91d6ed8f766c249054c8145fcc4dabaae9eee4b5",
+  "cost_classification": "UNPRICED implementation work; no dedicated timer",
+  "elapsed_seconds": null,
+  "locator_queries": 4,
+  "qualification_result_affected": false,
+  "schema": "g2_engineering_locator_diagnostics_receipt_v1",
+  "scientific_recipes_started": 0,
+  "status": "RETAINED_ENGINEERING_DIAGNOSTICS"
+}

@@ -1,0 +1,17 @@
+{
+  "corrected_helper_execution": "UNRUN",
+  "corrected_helper_syntax": "PASS_PYTHON_PARSE_ONLY",
+  "created_utc": "2026-10-07T16:13:18.812200+00:00",
+  "elapsed_seconds": null,
+  "failed_before_execution": true,
+  "failed_helper_sha256": "83176aad8fae5d04cd53867637a66a07ebff538d4c539631c7ca5d333a79abfc",
+  "failure": "SyntaxError: unterminated string literal at conditional final-lane replacement",
+  "fixed_helper_sha256": "aba56597e7c2fb3cab76469651653b4bde4bce6238202fc4f40111f9110dca5b",
+  "neural_runs_restarted": 0,
+  "private_diagnostics_sha256": "e7fc13b772509c846106e159b4bd00e797afa102b25db0035f8e1b3cfadfa6ad",
+  "qualification_affected": false,
+  "repository_files_modified": 0,
+  "schema": "g2_engineering_preparation_diagnostics_v1",
+  "status": "FAILED_PREPARATION_RETAINED_MECHANICALLY_CORRECTED",
+  "time_class": "UNPRICED"
+}

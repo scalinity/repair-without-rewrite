@@ -1,0 +1,30 @@
+{
+  "absolute_local_path_additions": 0,
+  "code_commit": "01578311c75d10e8f4b2da67add9a9f2cd672c3f",
+  "created_utc": "2026-10-07T18:03:25.505382+00:00",
+  "credential_values": 0,
+  "gitleaks_exit_code": 0,
+  "gitleaks_findings": [],
+  "gitleaks_raw_report_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "nonfunctional_personal_identifiers": 0,
+  "public_files_repository_relative": true,
+  "schema": "g2_publication_safety_v1",
+  "staged_diff_sha256": "0489aec7a85a65868bc5d872bac9276ffc24d7159225e869eb0e11dfc2b1d037",
+  "staged_paths": [
+    "ORCHESTRATION.html",
+    "docs/LOG.md",
+    "docs/reports/G2_BYT5_RUNNER_QUALIFICATION.md",
+    "docs/reviews/G2_BYT5_INDEPENDENT_REVIEW.md",
+    "experiments/manifests/development_calibration_consumption_generation_2.attempt03.json",
+    "experiments/manifests/generation_2/byt5-qualification.attempt02.json",
+    "experiments/manifests/generation_2/engineering-preparation-diagnostics.attempt02.json",
+    "experiments/manifests/generation_2/engineering-read-diagnostics.attempt01.json",
+    "experiments/manifests/generation_2/expanded-evaluation-summary.attempt01.json",
+    "experiments/manifests/generation_2/independent-byt5.attempt01.json",
+    "experiments/manifests/generation_2/independent-evaluation.attempt01.json",
+    "experiments/manifests/generation_2/orchestration-visual.attempt18.json",
+    "experiments/manifests/generation_2/storage-reforecast.attempt01.json"
+  ],
+  "status": "PASS",
+  "unclassified_findings": 0
+}
