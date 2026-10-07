@@ -109,3 +109,48 @@ class G2BenchStream:
 
 def canonical_cursor(state):
     return json.dumps(state, sort_keys=True, separators=(",", ":"), allow_nan=False)
+
+
+class G2ScientificStream(G2BenchStream):
+    """Sequential frozen master cursor; qualification snapshots cannot initialize it."""
+    def actual_queue(self):
+        if not self.master:
+            if self.master_completed == len(self.updates):
+                raise StopIteration("all frozen scientific masters completed")
+            self.master_queue_index = self.master_completed
+            self.master = self._queue(self.master_queue_index)
+        return split_master(self.master, self.update_condition)[self.subqueue_index]
+
+    def state(self):
+        return {"schema": "g2_scientific_whole_master_cursor_v1",
+            "scope": "FROZEN_SEQUENTIAL_SCIENTIFIC_STREAM", "data_condition": self.data_condition,
+            "update_condition": self.update_condition, "master_completed": self.master_completed,
+            "master_committed_exposure": self.master_committed_exposure,
+            "master_queue_index": self.master_queue_index, "subqueue_index": self.subqueue_index,
+            "master_presentations": scientific_projection(self.master)}
+
+    def restore(self, state):
+        if (state["schema"] != "g2_scientific_whole_master_cursor_v1"
+                or state["scope"] != "FROZEN_SEQUENTIAL_SCIENTIFIC_STREAM"
+                or state["data_condition"] != self.data_condition
+                or state["update_condition"] != self.update_condition):
+            raise ValueError("scientific cursor requires its own frozen scope; BENCH initializers forbidden")
+        for key in ("master_completed", "master_committed_exposure", "subqueue_index"):
+            value = state[key]
+            if type(value) is not int or value < 0:
+                raise ValueError("scientific integer cursor required")
+            setattr(self, key, value)
+        if self.master_completed > len(self.updates):
+            raise ValueError("scientific master cursor exceeds frozen endpoint")
+        expected = sum(item["canonical_charge"] for item in self.updates[:self.master_completed])
+        if expected != self.master_committed_exposure:
+            raise ValueError("scientific exposure differs from frozen completed masters")
+        self.master_queue_index = state["master_queue_index"]
+        self.master = [] if self.master_queue_index is None else self._queue(self.master_queue_index)
+        if self.master and self.master_queue_index != self.master_completed:
+            raise ValueError("scientific pending master is not the next frozen master")
+        if scientific_projection(self.master) != state["master_presentations"]:
+            raise ValueError("scientific pending master projection changed")
+        if (self.master and self.subqueue_index >= (8 if self.update_condition == "U8" else 1)
+                or not self.master and self.subqueue_index):
+            raise ValueError("scientific subqueue cursor outside pending master")

@@ -1,0 +1,58 @@
+{
+  "after": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 556316573696,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "before": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 556315766784,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "census_rows": 16809,
+  "code_sha256": "d11808bc67286b1447dad16fed1b28495744a9ca2e37c1dc0e9c1201c2f778fd",
+  "conditions": {
+    "D0": {
+      "U8_updates": 2440,
+      "actual_exposure": 10007223,
+      "all_cuts_denominators_microbatches_lr_exact": true,
+      "diagnostic_cases": 304,
+      "diagnostic_selection_independently_exact": true,
+      "diagnostics_sha256": "87d8c57cc98a32ce4db654559859d4986e5781bd8a178599f8dbda9c7f5d4ac1",
+      "full_accepted_reader_reconstruction_exact": true,
+      "ledger_sha256": "21c3f5838f5c7e85f258e8eef25b2b38884a2023199afc5d1852d68155b04f2f",
+      "masters": 305
+    },
+    "D1": {
+      "U8_updates": 2440,
+      "actual_exposure": 10006223,
+      "all_cuts_denominators_microbatches_lr_exact": true,
+      "diagnostic_cases": 304,
+      "diagnostic_selection_independently_exact": true,
+      "diagnostics_sha256": "847133c3fa187ac185e988c5f6271675ba1993eba1b61f84b020ea798a97e007",
+      "full_accepted_reader_reconstruction_exact": true,
+      "ledger_sha256": "4927980826095d6e2f5d74f37c17d43e233acf3356ccb99d16a1930b29b3a60f",
+      "masters": 305
+    }
+  },
+  "elapsed_seconds": 33.53613675001543,
+  "exact_replays": 64,
+  "freeze_sha256": "dd77f4e70346962d1fba1748fe5503c706eabd83cccdc1fb960ced937b69e67f",
+  "legacy_sources_exact": 1132,
+  "path": "stdlib JSON/hash/counts/bisect and label-list lengths; no G2 construction, cut, denominator or LR helpers imported",
+  "schema": "g2_independent_corpus_geometry_v1",
+  "scientific_recipes_started": 0,
+  "status": "PASS_INDEPENDENT_G2_CORPUS_GEOMETRY",
+  "support": {
+    "cases": 2696,
+    "lexical_error_cases": 878,
+    "lexical_error_groups": 52,
+    "lexical_zero_cases": 1818,
+    "pass": true
+  },
+  "unique_calls": 15677
+}

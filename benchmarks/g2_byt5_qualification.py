@@ -18,7 +18,7 @@ def write(path, value):
 
 
 def run(binding, attempt):
-    root=ArtifactRoot(binding);before=root.preflight();offline_model_environment()
+    root=ArtifactRoot(binding);before=root.preflight();started=time.perf_counter();offline_model_environment()
     if attempt<1:raise ValueError("positive ByT5 qualification attempt required")
     receipt=Path(f"experiments/manifests/generation_2/byt5-qualification.attempt{attempt:02d}.json")
     if receipt.exists():raise FileExistsError(receipt)
@@ -26,6 +26,9 @@ def run(binding, attempt):
     freeze=json.loads(freeze_path.read_text())
     if freeze["status"]!="PASS_COMPLETE_G2_CORPUS_PANEL_GEOMETRY_FREEZE" or not freeze["development_support"]["pass"]:
         raise ValueError("complete source/support qualification required")
+    independent=json.loads(Path("experiments/manifests/generation_2/independent-corpus.attempt01.json").read_text())
+    if independent["status"]!="PASS_INDEPENDENT_G2_CORPUS_GEOMETRY" or independent["freeze_sha256"]!=sha256(freeze_path):
+        raise ValueError("independent complete corpus/accounting qualification required before model work")
     path=root.path("asr-hypotheses-v1/construction.attempt01");read_complete(path)
     training=[row for row in (json.loads(line) for line in (path/"pairs.jsonl").open()) if row["role"]=="train"]
     validate_pairs(training);plan=accounting_plan(training)
@@ -44,11 +47,17 @@ def run(binding, attempt):
         "captured_dirty_status":subprocess.check_output(["git","status","--porcelain"],text=True),
         "code_sha256":sha256(__file__),"config_sha256":hashlib.sha256(json.dumps(cfg,sort_keys=True).encode()).hexdigest(),
         "corpus_freeze_sha256":sha256(freeze_path),"pairs_sha256":sha256(path/"pairs.jsonl"),
+        "identities":{name:sha256(name) for name in ("src/data/g2_byt5.py",
+            "src/data/g2_artifacts.py","src/data/comparator_interfaces.py",
+            "src/inference/byt5_probe.py","src/scoring/records.py",
+            "src/scoring/text.py","src/scoring/triple.py")},
+        "panel_sha256":sha256(panel_path/"panel.json"),
+        "official_weight_sha256":sha256(weights/"pytorch_model.bin"),
+        "official_config_sha256":sha256(weights/"config.json"),
         "runtime":{name:importlib.metadata.version(name) for name in ("torch","transformers","numpy")},
         "before":before,"status":"RUNNING","scientific_recipes_started":0,
-        "discard_as_scientific_initializer":True,"output_relative":f"byt5-g2-v1/qualification.attempt{attempt:02d}",
+        "discard_as_scientific_initializer":True,"output_relative":f"byt5-v1/qualification.attempt{attempt:02d}",
         "resume_policy":"retain every attempt; no automatic neural retry; future recipe starts from official pinned weights"}
-    started=time.perf_counter()
     try:
         with atomic_artifact(root,report["output_relative"]) as out:
             write(out/"start.json",report)
@@ -66,13 +75,16 @@ def run(binding, attempt):
             torch.mps.synchronize();report["startup_seconds"]=time.perf_counter()-started
             def checkpoint(label):
                 tick=time.perf_counter()
-                relative=f"byt5-g2-v1/qualification.attempt{attempt:02d}.{label}"
+                relative=f"byt5-v1/qualification.attempt{attempt:02d}.{label}"
                 with atomic_artifact(root,relative) as saved:
                     torch.save({"schema":"g2_byt5_qualification_checkpoint_v1","model":model.state_dict(),
                         "optimizer":optimizer.state_dict(),"torch_cpu_rng":torch.get_rng_state(),
                         "mps_rng":torch.mps.get_rng_state(),"completed_updates":0 if label=="initial" else 100,
                         "config":cfg,"corpus_freeze_sha256":report["corpus_freeze_sha256"]},saved/"state.pt")
                     loaded=torch.load(saved/"state.pt",map_location="cpu",weights_only=True)
+                    if (not torch.equal(torch.get_rng_state(),loaded["torch_cpu_rng"])
+                            or not torch.equal(torch.mps.get_rng_state(),loaded["mps_rng"])):
+                        raise ValueError("ByT5 checkpoint exact RNG readback mismatch")
                     for key,value in model.state_dict().items():
                         if not torch.equal(value.detach().cpu(),loaded["model"][key]):raise ValueError("ByT5 checkpoint exact model readback mismatch")
                     for index,state in optimizer.state_dict()["state"].items():
@@ -113,7 +125,7 @@ def run(binding, attempt):
                     "records_sha256":sha256(out/f"evaluation-{label}.jsonl")}
             report["initial_checkpoint"]=checkpoint("initial")
             report["initial_evaluation"]=evaluate("initial")
-            batches=training_batches(training);steps=[]
+            batches=training_batches(training);steps=[];training_tick=time.perf_counter()
             for step in range(1,101):
                 root.preflight();selected=next(batches);tick=time.perf_counter();model.train()
                 batch,count=native_batch([{**item["row"],"reference":item["row"]["target"]} for item in selected],cfg,"mps")
@@ -130,6 +142,7 @@ def run(binding, attempt):
                 steps.append(record)
                 with (out/"steps.jsonl").open("a") as stream:stream.write(json.dumps(record,sort_keys=True)+"\n")
                 print(json.dumps({"phase":"byt5-update","update":step,"wall_seconds":record["wall_seconds"]}),flush=True)
+            training_loop_seconds=time.perf_counter()-training_tick
             report["final_checkpoint"]=checkpoint("update100")
             report["final_evaluation"]=evaluate("update100")
             final_batch=list(training_batches(training))[-1]
@@ -142,7 +155,8 @@ def run(binding, attempt):
             report.update(status="PASS_G2_BYT5_RUNNER_100_UPDATES",updates=100,qualification_presentations=400,
                 mean_update_seconds=sum(row["wall_seconds"] for row in steps)/100,
                 conservative_update_seconds=max(sum(row["wall_seconds"] for row in steps)/100,
-                    sum(row["wall_seconds"] for row in steps[-25:])/25),
+                    sum(row["wall_seconds"] for row in steps[-25:])/25,training_loop_seconds/100),
+                training_loop_seconds=training_loop_seconds,
                 final_short_batch={"rows":2,"native_targets":count,"forward_only_loss":float(short_loss)},
                 optimizer_state_dtypes=sorted({str(value.dtype) for state in optimizer.state.values() for value in state.values() if torch.is_tensor(value)}),
                 peak_rss_bytes=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)

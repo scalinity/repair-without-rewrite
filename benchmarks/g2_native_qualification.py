@@ -31,6 +31,9 @@ def frozen(root, data):
     freeze = json.loads(report_path.read_text())
     if freeze["status"] != "PASS_COMPLETE_G2_CORPUS_PANEL_GEOMETRY_FREEZE" or not freeze["development_support"]["pass"]:
         raise ValueError("complete corpus/support freeze must precede student qualification")
+    independent=json.loads(Path("experiments/manifests/generation_2/independent-corpus.attempt01.json").read_text())
+    if independent["status"]!="PASS_INDEPENDENT_G2_CORPUS_GEOMETRY" or independent["freeze_sha256"]!=sha256(report_path):
+        raise ValueError("independent complete corpus/accounting qualification required before model work")
     path = root.path(freeze["conditions"][data]["artifact_relative"]); read_complete(path)
     generated_path = Path("exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl")
     if sha256(generated_path) != freeze["conditions"][data]["generated_pool_sha256"]:
@@ -47,6 +50,8 @@ def frozen(root, data):
     source_files = ("src/models/g2_training.py", "src/data/g2_stream.py", "src/data/g2_geometry.py",
         "src/models/paired_training_v3.py", "src/models/bc.py", "src/models/core.py", "src/models/training.py",
         "src/models/edits.py", "src/models/tokenizer.py", "src/data/mixed_reader_v3.py",
+        "src/data/g2_artifacts.py", "benchmarks/paired_qualification_v3.py",
+        "src/scoring/records.py", "src/scoring/text.py", "src/scoring/triple.py",
         "configs/tokenizer_development/tokenizer.json")
     identities = {name: sha256(name) for name in source_files}
     identities.update({"corpus_freeze": sha256(report_path), "natural": sha256(path / "natural.jsonl"),
@@ -80,7 +85,7 @@ def forced_losses(trainer, panel, out, label):
         if trainer.arm == "C101":
             sums = trainer.model.component_sums(**packed[0], dtype=mx.bfloat16)
             mx.eval(sums)
-            losses = {key: float(value.item()) / den["C"][key] if den["C"][key] else 0.
+            losses = {key: float(value.item()) / den["C"][key] if den["C"][key] else None
                       for key, value in sums.items()}
         else:
             loss = objective(trainer.model, packed, trainer.arm, den, mx.bfloat16)
@@ -92,17 +97,24 @@ def forced_losses(trainer, panel, out, label):
 
 
 def provenance(arm, data, condition, mode, attempt, before, identities):
+    config={"arm":arm,"data_condition":data,"update_condition":condition,"mode":mode,
+        "seed":42,"peak_lr":3e-4,"microbatch_size":16 if arm=="B100" else 4,
+        "warmups":5,"timed_updates":100,"minimum_sustained_seconds":1200,
+        "greedy_position_cap":256,"C_edit_cap":64,"working_dtype":"bfloat16",
+        "master_moment_accumulator_dtype":"float32","qualification_initializers_forbidden":True}
     return {"schema": "g2_native_qualification_v1", "arm": arm, "data_condition": data,
         "update_condition": condition, "mode": mode, "attempt": attempt, "seed": 42,
         "code_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
         "captured_dirty_status": subprocess.check_output(["git", "status", "--porcelain"], text=True),
         "entrypoint_sha256": sha256(__file__), "identities": identities, "before": before,
+        "config":config,"config_sha256":hashlib.sha256(json.dumps(config,sort_keys=True).encode()).hexdigest(),
+        "data_manifest_sha256":identities["corpus_freeze"],
         "scope": "QUALIFICATION_ONLY_NOT_SCIENTIFIC", "scientific_recipes_started": 0,
         "discard_as_scientific_initializers": True, "status": "RUNNING"}
 
 
 def run(binding, arm, data, condition, mode, attempt=1, kind=None):
-    root = ArtifactRoot(binding); before = root.preflight(); offline_model_environment()
+    root = ArtifactRoot(binding); before = root.preflight(); started = time.perf_counter(); offline_model_environment()
     if (arm, data, condition) not in CONFIGURATIONS or attempt < 1 or mode not in {"bench", "cold"}:
         raise ValueError("only the six fixed BENCH configurations are authorized")
     if mode == "cold" and kind not in {"boundary", "mid"}:
@@ -113,9 +125,11 @@ def run(binding, arm, data, condition, mode, attempt=1, kind=None):
     if receipt.exists(): raise FileExistsError(receipt)
     rows, ledger, updates, panel, diagnostic, identities = frozen(root, data)
     report = provenance(arm, data, condition, mode, attempt, before, identities)
-    started = time.perf_counter()
-    area = "native-bench-v1" if mode == "bench" else "cold-resume-v1"
-    checkpoints = {key: f"native-bench-v1/{name}.{key}" for key in ("initial", "boundary", "mid", "final")}
+    area = "bench-v1" if mode == "bench" else "cold-resume-v1"
+    checkpoints = {key: f"bench-v1/{name}.{key}" for key in ("initial", "boundary", "mid", "final")}
+    if mode=="cold":
+        read_complete(root.path(f"bench-v1/{name}"))
+        read_complete(root.path(checkpoints[kind]))
     report.update(output_relative=f"{area}/{tag}", checkpoint_relatives=checkpoints,
         resume_policy="cold replay of verified completed qualification snapshots only; never a scientific initializer")
     try:
@@ -128,10 +142,11 @@ def run(binding, arm, data, condition, mode, attempt=1, kind=None):
             probe = rows[ledger[0]["variant_id"]]
             report["startup_seconds"] = time.perf_counter()-started
             if mode == "cold":
-                control = root.path(f"native-bench-v1/{name}"); read_complete(control)
+                control = root.path(f"bench-v1/{name}"); read_complete(control)
                 expected = {row["update"]: row for row in (json.loads(line) for line in (control / "updates.jsonl").open())}
-                tick = time.perf_counter(); load_g2_checkpoint(root, checkpoints[kind], trainer, rows)
+                tick = time.perf_counter(); loaded=load_g2_checkpoint(root, checkpoints[kind], trainer, rows)
                 report["load_seconds"] = time.perf_counter()-tick
+                report["load_io_timing"]=loaded["io_timing"]
                 initial_step = trainer.native.optimizer.step
                 count = 21 if kind == "mid" else 20
                 if initial_step != 5 or bool(trainer.native.queue) != (kind == "mid"):
@@ -148,15 +163,17 @@ def run(binding, arm, data, condition, mode, attempt=1, kind=None):
                         "actual_consumption_sha256": hashlib.sha256(json.dumps(result["actual_consumption"],sort_keys=True).encode()).hexdigest()}
                     matches.append(record); append(out / "matches.jsonl", record)
                     print(json.dumps({"configuration": name, "kind": kind, "update": result["update"], "status": "EXACT_MATCH"}),flush=True)
-                tick = time.perf_counter(); save_g2_checkpoint(root, f"cold-resume-v1/{tag}.final", trainer, probe)
+                tick = time.perf_counter(); saved=save_g2_checkpoint(root, f"cold-resume-v1/{tag}.final", trainer, probe)
                 report.update(status="PASS_EXACT_G2_COLD_RESUME", final_save_seconds=time.perf_counter()-tick,
+                    final_save_io_timing=saved["io_timing"],
                     pending_completion=kind == "mid", next_twenty_complete_updates=20,
                     complete_actual_matches=len(matches), final_state_sha256=trainer.state_hash())
             else:
-                save_times = {}
+                save_times = {};save_details={}
                 def save(key):
-                    tick = time.perf_counter(); save_g2_checkpoint(root, checkpoints[key], trainer, probe)
+                    tick = time.perf_counter(); saved=save_g2_checkpoint(root, checkpoints[key], trainer, probe)
                     save_times[key] = time.perf_counter()-tick
+                    save_details[key]=saved["io_timing"]
                 save("initial")
                 report["initial_evaluation"] = evaluation_timing(trainer.native, panel, out, "initial")
                 report["initial_diagnostic_greedy"] = evaluation_timing(trainer.native, diagnostic, out, "diagnostic-initial")
@@ -218,6 +235,7 @@ def run(binding, arm, data, condition, mode, attempt=1, kind=None):
                 report.update(status="PASS_G2_NATIVE_BENCH_COLD_PENDING",warmups=5,timed=metrics(timed),
                     sustained=metrics(sustained),conservative_anchors_per_second=conservative,
                     phase_segments=dict(phase_segments),checkpoint_save_seconds=save_times,
+                    checkpoint_save_io_timing=save_details,
                     state_hash_overhead_seconds=state_hash_seconds,mid_microstep_seconds=checkpoint_micro_seconds,
                     complete_updates=len(records),consumed_exposure=trainer.native.committed_exposure,
                     peak_mlx_allocation_bytes=mx.get_peak_memory(),snapshots=snapshots)

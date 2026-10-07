@@ -1,5 +1,5 @@
 import copy
-from src.data.g2_stream import G2BenchStream
+from src.data.g2_stream import G2BenchStream, G2ScientificStream
 import pytest
 
 
@@ -59,3 +59,38 @@ def test_corrupt_resume_geometry_and_clocks_are_rejected(field, value):
     state = copy.deepcopy(original.state()); state[field] = value
     with pytest.raises(ValueError):
         stream().restore(state)
+
+
+def test_scientific_cursor_consumes_each_frozen_master_once_and_rejects_bench_initializers():
+    base = stream()
+    u1 = G2ScientificStream(base.rows, base.ledger, base.updates, "D0", "U1")
+    u8 = G2ScientificStream(base.rows, base.ledger, base.updates, "D0", "U8")
+    seen = []
+    for master in range(3):
+        whole = u1.actual_queue(); parts = []
+        for sub in range(8):
+            queue = u8.actual_queue()
+            replay = G2ScientificStream(base.rows, base.ledger, base.updates, "D0", "U8")
+            replay.restore(u8.state())
+            assert replay.actual_queue() == queue
+            assert replay.completed_actual_clock() == u8.completed_actual_clock()
+            parts.extend(queue); u8.finish_actual()
+        assert parts == whole and u1.master_queue_index == master
+        seen.extend(item["ordinal"] for item in parts); u1.finish_actual()
+    assert seen == list(range(48))
+    assert u1.completed_actual_clock() == (3, 98304)
+    assert u8.completed_actual_clock() == (24, 98304)
+    with pytest.raises(StopIteration): u8.actual_queue()
+    with pytest.raises(ValueError, match="BENCH"):
+        u8.restore(base.state())
+    with pytest.raises(ValueError, match="scope"):
+        base.restore(u8.state())
+
+
+def test_scientific_cursor_rejects_a_skipped_frozen_master():
+    base = stream()
+    scientific = G2ScientificStream(base.rows, base.ledger, base.updates, "D0", "U8")
+    scientific.actual_queue(); state = scientific.state()
+    state["master_completed"] = 1
+    with pytest.raises(ValueError, match="exposure"):
+        scientific.restore(state)

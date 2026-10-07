@@ -1,0 +1,11 @@
+{
+  "classification": "CALCULATION_FROM_FILESYSTEM_CREATION_TIMESTAMPS",
+  "durable_start_file_creation_unix": 1791341096.0080714,
+  "includes_small_atomic_directory_setup": true,
+  "schema": "g2_source_startup_creation_gap_v1",
+  "scientific_recipes_started": 0,
+  "scope": "initial source preflight, audio inventory and pinned asset validation before durable source journal start; not a direct stopwatch measurement",
+  "seconds": 5.143998861312866,
+  "source_log_creation_unix": 1791341090.8640726,
+  "source_loop_timer_recorded_separately": true
+}

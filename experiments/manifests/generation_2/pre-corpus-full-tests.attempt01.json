@@ -1,0 +1,15 @@
+{
+  "captured_working_state_sha256": "2f5f2d384def5615dedd687fbb6038b48e2d9e075046c9388f93b52d7fb788c5",
+  "code_commit": "8ecb19c86d013b0eeaac7dff25baf5400064d4e5",
+  "command": "MLX_ENABLE_TF32=0 .venv/bin/python -m pytest -q",
+  "created_utc": "2026-10-07T03:45:59.693913+00:00",
+  "failed": 0,
+  "log_sha256": "d23d0a650883a0758ec008fb3b0a260e9f18347927735b46d9a65480bad899bd",
+  "passed": 455,
+  "schema": "g2_test_receipt_v1",
+  "scientific_recipes_started": 0,
+  "scope": "integrated suite before full corpus construction; no full-model G2 runtime qualification claimed",
+  "seconds": 42.76,
+  "skipped": 0,
+  "status": "PASS"
+}

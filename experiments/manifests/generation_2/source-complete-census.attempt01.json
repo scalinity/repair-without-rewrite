@@ -1,0 +1,51 @@
+{
+  "elapsed_seconds": 8.630812582967337,
+  "legacy_development": 108,
+  "legacy_train": 1024,
+  "method": "separate full-source UTF8 and accepted lexical-policy counts; no corpus freeze, shape, cut or model code invoked",
+  "populations": {
+    "D1_TRAIN": {
+      "byte_equal_rows": 2270,
+      "lexical_error_rows": 5373,
+      "lexical_error_source_groups": 309,
+      "lexical_zero_rows": 8740,
+      "maximum_source_utf8_bytes": 258,
+      "maximum_target_utf8_bytes": 263,
+      "official_splits": {
+        "train-clean-100": 1441,
+        "train-clean-360": 5613,
+        "train-other-500": 7059
+      },
+      "roles": {
+        "train": 14113
+      },
+      "rows": 14113,
+      "source_groups": 314
+    },
+    "NATURAL_DEVELOPMENT": {
+      "byte_equal_rows": 578,
+      "lexical_error_rows": 878,
+      "lexical_error_source_groups": 52,
+      "lexical_zero_rows": 1818,
+      "maximum_source_utf8_bytes": 246,
+      "maximum_target_utf8_bytes": 245,
+      "official_splits": {
+        "dev-clean": 443,
+        "dev-other": 353,
+        "train-clean-100": 125,
+        "train-clean-360": 1076,
+        "train-other-500": 699
+      },
+      "roles": {
+        "calibration": 1900,
+        "hpo_development": 796
+      },
+      "rows": 2696,
+      "source_groups": 52
+    }
+  },
+  "schema": "g2_complete_source_census_v1",
+  "scientific_recipes_started": 0,
+  "source_pairs_sha256": "d188c2a4ae8ed0b9ba8de05e3194f988cf1a2d06f96aa522e7c5f3ebfa9c5250",
+  "status": "PASS_COMPLETE_CENSUS_COUNTS_ONLY"
+}

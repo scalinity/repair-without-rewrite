@@ -4,6 +4,7 @@ import hashlib
 import json
 import math
 import random
+import time
 
 from src.data.g2_artifacts import atomic_artifact, read_complete
 from src.data.g2_geometry import actual_denominators
@@ -60,6 +61,8 @@ class G2Native:
         if not math.isfinite(native.loss) or native.completed_microbatches != native.accumulator.microbatches:
             raise ValueError("G2 finite loss/accumulated microbatch mismatch")
         if native.queue:
+            if not self.stream.master:
+                raise ValueError("G2 pending native queue has no pending frozen master")
             actual = self.stream.actual_queue()
             if ([row["presentation_id"] for row in native.queue] != [row["presentation_id"] for row in actual]
                     or native.pending_charge != sum(row["canonical_charge"] for row in actual)
@@ -97,11 +100,15 @@ def save_g2_checkpoint(root, relative, trainer, probe):
     if native.accumulator.microbatches == 0 and any(np.any(value) for key, value in arrays.items() if key.startswith("acc::")):
         raise ValueError("G2 empty accumulator has nonzero gradients")
     with atomic_artifact(root, relative) as pending:
+        tick=time.perf_counter()
         np.savez(pending / "arrays.npz", **arrays)
+        write_seconds=time.perf_counter()-tick
+        tick=time.perf_counter()
         with np.load(pending / "arrays.npz", allow_pickle=False) as saved:
             if set(saved.files) != set(arrays) or any(not np.array_equal(saved[key], value) for key, value in arrays.items()):
                 raise ValueError("G2 exact checkpoint readback failed")
             rebound = {key: mx.array(saved[key]) for key in arrays if key.startswith("model::")}
+        exact_readback_seconds=time.perf_counter()-tick
         native.model.update(tree_unflatten([(key.removeprefix("model::"), value) for key, value in rebound.items()]))
         state = trainer.stream.state()
         meta = {"schema": SCHEMA, "data_condition": state["data_condition"], "update_condition": state["update_condition"],
@@ -122,13 +129,21 @@ def save_g2_checkpoint(root, relative, trainer, probe):
             "dtypes": {key: str(value.dtype) for key, value in arrays.items()}, "probe_variant_id": probe["variant_id"],
             "forward_probe_sha256": forward_probe(native, probe), "deterministic_state_sha256": trainer.state_hash()}
         (pending / "metadata.json").write_text(json.dumps(meta, sort_keys=True, indent=2, allow_nan=False) + "\n")
-    return read_complete(root.path(relative))
+        publication_tick=time.perf_counter()
+    publication_seconds=time.perf_counter()-publication_tick
+    complete=read_complete(root.path(relative))
+    return {**complete,"io_timing":{"array_write_seconds":write_seconds,
+        "exact_array_readback_seconds":exact_readback_seconds,
+        "file_directory_fsync_publication_hash_readback_seconds":publication_seconds,
+        "cold_device_cache_claimed":False}}
 
 
 def load_g2_checkpoint(root, relative, trainer, rows):
     root.preflight()
     path = root.path(relative)
+    completion_tick=time.perf_counter()
     complete = read_complete(path)
+    completion_readback_seconds=time.perf_counter()-completion_tick
     if set(complete["files"]) != {"arrays.npz", "metadata.json"}:
         raise ValueError("G2 native checkpoint inventory mismatch")
     import mlx.core as mx
@@ -147,6 +162,7 @@ def load_g2_checkpoint(root, relative, trainer, rows):
     if any(meta["root_identity"][key] != physical[key] for key in ("volume_uuid_sha256", "root_binding_sha256", "policy_sha256")):
         raise ValueError("G2 checkpoint physical root identity mismatch")
     templates = native.arrays()
+    array_load_tick=time.perf_counter()
     with np.load(path / "arrays.npz", allow_pickle=False) as saved:
         if set(saved.files) != set(templates):
             raise ValueError("G2 checkpoint array inventory mismatch")
@@ -158,6 +174,7 @@ def load_g2_checkpoint(root, relative, trainer, rows):
                     or list(value.shape) != meta["shapes"][key] or str(value.dtype) != meta["dtypes"][key]):
                 raise ValueError("G2 checkpoint shape/dtype/finite-state mismatch")
             arrays[key] = mx.array(value)
+    array_load_seconds=time.perf_counter()-array_load_tick
     native.model.update(tree_unflatten([(key.removeprefix("model::"), value) for key, value in arrays.items() if key.startswith("model::")]))
     for prefix, destination in (("m", native.optimizer.m), ("v", native.optimizer.v), ("acc", native.accumulator.values)):
         for key in destination:
@@ -189,4 +206,6 @@ def load_g2_checkpoint(root, relative, trainer, rows):
         raise ValueError("G2 restored empty accumulator has nonzero gradients")
     if trainer.state_hash() != meta["deterministic_state_sha256"] or forward_probe(native, rows[meta["probe_variant_id"]]) != meta["forward_probe_sha256"]:
         raise ValueError("G2 restored exact state/forward identity mismatch")
-    return meta
+    return {**meta,"io_timing":{"completion_hash_readback_seconds":completion_readback_seconds,
+        "array_load_finite_shape_dtype_check_seconds":array_load_seconds,
+        "cold_device_cache_claimed":False}}

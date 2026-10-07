@@ -75,9 +75,11 @@ def diagnostics(condition, natural, generated, ledger):
     return chosen
 
 
-def geometry(rows, ledger, updates):
+def geometry(rows, ledger, updates, data_condition):
+    from src.data.g2_stream import G2ScientificStream
     actual = {"U1": [], "U8": []}
     for condition in actual:
+        cursor = G2ScientificStream(rows, ledger, updates, data_condition, condition)
         completed = 0
         for index, master in enumerate(updates):
             queue = [{**item, "row": rows[item["variant_id"]]}
@@ -86,6 +88,12 @@ def geometry(rows, ledger, updates):
             if [item for part in parts for item in part] != queue:
                 raise ValueError("U8 concatenation changes the immutable U1 stream")
             for sub, part in enumerate(parts):
+                if cursor.actual_queue() != part:
+                    raise ValueError("sequential scientific cursor changed a frozen actual update")
+                restored = G2ScientificStream(rows, ledger, updates, data_condition, condition)
+                restored.restore(cursor.state())
+                if restored.actual_queue() != part or restored.completed_actual_clock() != cursor.completed_actual_clock():
+                    raise ValueError("CPU scientific cursor restore changed its actual queue/clock")
                 charge = sum(item["canonical_charge"] for item in part)
                 completed += charge
                 actual[condition].append({"master_index": index, "subqueue_index": sub,
@@ -96,13 +104,16 @@ def geometry(rows, ledger, updates):
                     "denominators": actual_denominators(part),
                     "microbatch_partitions": {arm: [[i, min(i + size, len(part))]
                         for i in range(0, len(part), size)] for arm, size in (("B100", 16), ("C101", 4))}})
+                cursor.finish_actual()
         if completed != ledger[-1]["end_exposure"]:
             raise ValueError("actual-update clock fails master endpoint")
+        if cursor.completed_actual_clock() != (len(actual[condition]), completed):
+            raise ValueError("CPU scientific cursor full endpoint mismatch")
     return actual
 
 
 def run(binding, attempt):
-    root = ArtifactRoot(binding); before = root.preflight()
+    root = ArtifactRoot(binding); before = root.preflight(); started = time.perf_counter()
     if attempt < 1:
         raise ValueError("positive corpus attempt required")
     receipt = Path(f"experiments/manifests/generation_2/corpus-freeze.attempt{attempt:02d}.json")
@@ -111,14 +122,26 @@ def run(binding, attempt):
     source = root.path("asr-hypotheses-v1/construction.attempt01")
     read_complete(source)
     pairs = lines(source / "pairs.jsonl"); validate_census(pairs)
+    metadata = {row["id"]: row for row in lines("experiments/manifests/generation_2/metadata-census.attempt01.jsonl")}
+    if set(metadata) != {row["id"] for row in pairs}:
+        raise ValueError("completed sources differ from the prospectively published census")
+    for row in pairs:
+        public = metadata[row["id"]]
+        if any((len(row["target"].encode()) if key == "target_bytes" else row[key]) != value
+               for key, value in public.items()):
+            raise ValueError("published census member/reference/role/family identity changed")
     if any(row["status"] != "COMPLETED" or text_hash(row["source"]) != row["source_sha256"] for row in pairs):
         raise ValueError("all completed source identities required")
     report = {"schema": "g2_complete_corpus_freeze_v1", "attempt": attempt, "seed": 42,
         "code_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
         "captured_dirty_status": subprocess.check_output(["git", "status", "--porcelain"], text=True),
         "code_sha256": sha256(__file__), "pairs_sha256": sha256(source / "pairs.jsonl"),
+        "source_hashes":{name:sha256(name) for name in ("src/data/g2_artifacts.py",
+            "src/data/g2_corpus.py","src/data/g2_geometry.py","src/data/g2_stream.py",
+            "src/data/g2_byt5.py","src/data/mixed_reader_v3.py",
+            "benchmarks/paired_qualification_v3.py","src/models/tokenizer.py",
+            "src/models/edits.py","src/scoring/text.py")},
         "before": before, "scientific_recipes_started": 0, "status": "RUNNING"}
-    started = time.perf_counter()
     try:
         from benchmarks.paired_qualification_v3 import common
         from src.data.g2_byt5 import accounting_plan, validate_pairs
@@ -157,7 +180,7 @@ def run(binding, attempt):
         table = json.loads(Path("experiments/manifests/lexical_reader_v2/lexical-profile-table.attempt01.json").read_text())
         corpus_summary = {}
         for condition, natural in (("D0", old_natural), ("D1", expanded)):
-            relative = f"{'frozen-d1-stream-v1' if condition == 'D1' else 'corpus-qualification-v1'}/{condition}.attempt{attempt:02d}"
+            relative = f"{'frozen-d1-v1' if condition == 'D1' else 'corpus-qualification-v1'}/{condition}.attempt{attempt:02d}"
             lookup = {row["variant_id"]: row for row in [*generated, *natural]}
             with atomic_artifact(root, relative) as out:
                 with (out / "natural.jsonl").open("x") as stream:
@@ -188,7 +211,7 @@ def run(binding, attempt):
                 with (out / "presentations.jsonl").open("x") as stream:
                     for row in ledger: stream.write(json.dumps(row, sort_keys=True) + "\n")
                 write(out / "masters.json", updates)
-                actual = geometry(lookup, ledger, updates); write(out / "actual-updates.json", actual)
+                actual = geometry(lookup, ledger, updates, condition); write(out / "actual-updates.json", actual)
                 diagnostic = diagnostics(condition, natural, generated, ledger); write(out / "diagnostics.json", diagnostic)
                 if condition == "D0" and (len(updates), ledger[-1]["end_exposure"], ledger[-1]["ordinal"]) != (305, 10007223, 134590):
                     raise ValueError("D0 endpoint no longer reproduces G1")
@@ -206,10 +229,17 @@ def run(binding, attempt):
                     "diagnostics_sha256": sha256(out / "diagnostics.json"),
                     "actual_updates_sha256": sha256(out / "actual-updates.json"),
                     "generated_pool_sha256": old_ids["exports/lexical-reader-v2/generated-pool-attempt02/accepted.jsonl"],
+                    "target_bpe_per_full_pass": sum(len(row["target_ids"]) for row in natural_real),
+                    "canonical_exposure_per_full_natural_pass": sum(row["canonical_charge"] for row in natural_real),
+                    "maximum_target_bpe": max(len(row["target_ids"]) for row in natural_real),
+                    "masters_sha256": sha256(out / "masters.json"),
                     "scope": "CPU_ONLY_FROZEN_SCIENTIFIC_INPUTS_UNSTARTED"}
+                if condition == "D1" and (stats["target_bpe_per_full_pass"],
+                        stats["canonical_exposure_per_full_natural_pass"],stats["maximum_target_bpe"]) != (325630,721825,56):
+                    raise ValueError("canonical accepted D1 reference token census changed")
                 write(out / "summary.json", stats)
             corpus_summary[condition] = {**stats, "artifact_relative": relative}
-        relative = f"expanded-dev-panel-v1/panel.attempt{attempt:02d}"
+        relative = f"expanded-development-v1/panel.attempt{attempt:02d}"
         with atomic_artifact(root, relative) as out:
             write(out / "panel.json", panel)
             report["panel_sha256"] = sha256(out / "panel.json")
@@ -217,6 +247,48 @@ def run(binding, attempt):
             write(out / "support.json", support)
         report.update(status="PASS_COMPLETE_G2_CORPUS_PANEL_GEOMETRY_FREEZE", conditions=corpus_summary,
             panel_cases=2984, old_natural_development=108, after=root.preflight())
+        campaign=json.loads(Path("experiments/manifests/six_10m_probes/campaign-freeze.attempt01.json").read_text())
+        recipes=[]
+        for data,update_condition in (("D0","U8"),("D1","U1"),("D1","U8")):
+            artifact=root.path(corpus_summary[data]["artifact_relative"])
+            masters=json.loads((artifact/"masters.json").read_text())
+            def endpoint(nominal):
+                if nominal==0:return {"nominal_exposure":0,"master_completed":0,"optimizer_updates":0,"actual_exposure":0,"last_ordinal":-1}
+                index=next(i for i,row in enumerate(masters) if row["end_exposure"]>=nominal)
+                row=masters[index]
+                return {"nominal_exposure":nominal,"master_completed":index+1,
+                    "optimizer_updates":(index+1)*(8 if update_condition=="U8" else 1),
+                    "actual_exposure":row["end_exposure"],"last_ordinal":row["last_ordinal"]}
+            for arm in ("B100","C101"):
+                recipe_id=f"G2-{arm}-{data}-{update_condition}-seed42-lr3e-4"
+                config={"schema":"g2_frozen_scientific_recipe_v1","recipe_id":recipe_id,"status":"AUTHORIZED_UNSTARTED",
+                    "seed":42,"arm":arm,"data_condition":data,"update_condition":update_condition,
+                    "model":campaign["models"][arm],"peak_lr":3e-4,"microbatch_size":16 if arm=="B100" else 4,
+                    "precision":campaign["precision"],"nominal_exposure":10000000,
+                    "phase_absolute_ends":[6666667,9333334,10000000],"update_target_master":32768,
+                    "LR_clock":{"warmup_exposure":200000,"planned_exposure":10000000,"floor_fraction":.1,
+                        "sample_at":"completed actual optimizer update exposure","phase_resets":False},
+                    "corpus_geometry":corpus_summary[data],"development_panel_sha256":report["panel_sha256"],
+                    "save_endpoints":[endpoint(n) for n in sorted({0,*range(1000000,10000001,1000000),6666667,9333334})],
+                    "evaluation_endpoints":[endpoint(n) for n in (0,1000000,3000000,6666667,9333334,10000000)],
+                    "stop_endpoint":endpoint(10000000),"scientific_slot_consumed":False,
+                    "checkpoint_area":"scientific-checkpoints-v1","qualification_initializers_forbidden":True,
+                    "execution_requires_separate_owner_session":True}
+                path=Path(f"experiments/manifests/generation_2/recipe-{recipe_id}.attempt{attempt:02d}.json")
+                if path.exists():raise FileExistsError(path)
+                write(path,config);recipes.append({"recipe_id":recipe_id,"status":"AUTHORIZED_UNSTARTED","config_relative":str(path),"config_sha256":sha256(path)})
+        recipe_id="G2-ByT5-D1-10pass-seed42-lr3e-4"
+        config={"schema":"g2_frozen_byt5_recipe_v1","recipe_id":recipe_id,"status":"AUTHORIZED_UNSTARTED",
+            "model":"google/byt5-small","revision":"68377bdc18a2ffec8a0533fef03b1c513a4dd49d","parameter_count":299637760,
+            "seed":42,"prefix":"","lr":3e-4,"device":"FP32 MPS eager; CPU fallback disabled",
+            "source_capacity":512,"target_capacity":512,"decode_cap":512,"accounting":report["byt5_accounting"],
+            "optimizer":{"beta1":.9,"beta2":.999,"epsilon":1e-8,"weight_decay":.01,"clip":1.},
+            "save_evaluate_pass_milestones":[0,2,5,10],"scientific_slot_consumed":False,
+            "qualification_initializers_forbidden":True,"execution_requires_separate_owner_session":True}
+        path=Path(f"experiments/manifests/generation_2/recipe-{recipe_id}.attempt{attempt:02d}.json")
+        if path.exists():raise FileExistsError(path)
+        write(path,config);recipes.append({"recipe_id":recipe_id,"status":"AUTHORIZED_UNSTARTED","config_relative":str(path),"config_sha256":sha256(path)})
+        report["recipes"]=recipes
     except BaseException as error:
         report.update(status="FAILED_ALL_OR_BLOCK", error_type=type(error).__name__)
         raise
