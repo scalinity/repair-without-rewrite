@@ -1,0 +1,13 @@
+{
+  "captured_dirty_status": "?? benchmarks/g2_source_archives.py\n?? benchmarks/g2_source_audio.py\n?? configs/generation_2/source_archives_v1.json\n?? experiments/manifests/development_calibration_consumption_generation_2.attempt01.json\n?? experiments/manifests/generation_2/audio-dev-clean.attempt01.json\n?? experiments/manifests/generation_2/audio-dev-other.attempt01.json\n?? experiments/manifests/generation_2/audio-train-clean-100.attempt01.json\n?? experiments/manifests/generation_2/audio-train-clean-100.attempt02.json\n?? experiments/manifests/generation_2/parakeet-requests.attempt01.json\n?? src/data/g2_corpus.py\n?? src/data/g2_geometry.py\n?? tests/data/test_g2_corpus.py\n?? tests/data/test_g2_geometry.py\n?? tests/data/test_g2_source_archives.py\n",
+  "code_commit": "d03f343b1b33e646287455bbb402260054e4a64d",
+  "command": "MLX_ENABLE_TF32=0 .venv/bin/python -m pytest",
+  "failed": 0,
+  "log_relative": "logs-v1/source-preparation-full-tests.attempt01.log",
+  "log_sha256": "2ba28a2128b2a13fbb58def2dc8beb7e99c2e83806ef9182cddd0a55533cbe93",
+  "passed": 412,
+  "schema": "g2_full_suite_receipt_v1",
+  "scientific_recipes_started": 0,
+  "seconds": 34.97,
+  "skipped": 0
+}

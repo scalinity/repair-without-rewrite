@@ -1,0 +1,35 @@
+{
+  "schema": "g2_approved_source_archives_v1",
+  "release": "LibriSpeech SLR12, official released TRAIN archives",
+  "source_page": "https://www.openslr.org/12/",
+  "official_checksum_url": "https://www.openslr.org/resources/12/md5sum.txt",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "attribution": "V. Panayotov, G. Chen, D. Povey and S. Khudanpur, LibriSpeech: An ASR corpus based on public domain audio books, ICASSP 2015, doi:10.1109/ICASSP.2015.7178964",
+  "reference_release": "LibriSpeech-PC SLR145, existing hash-frozen text_raw manifests",
+  "reference_source_page": "https://www.openslr.org/145/",
+  "reference_license": "CC BY 4.0",
+  "reference_attribution": "A. Meister, M. Novikov, N. Karpov, E. Bakhturina, V. Lavrukhin and B. Ginsburg, LibriSpeech-PC, arXiv:2310.02943",
+  "verified_primary_sources_date": "2026-10-06",
+  "missing_archive_total_bytes": 53642979491,
+  "archives": [
+    {
+      "name": "train-clean-360",
+      "official_url": "https://www.openslr.org/resources/12/train-clean-360.tar.gz",
+      "bytes": 23049477885,
+      "official_md5": "c0e676e450a7ff2f54aeade5171606fa"
+    },
+    {
+      "name": "train-other-500",
+      "official_url": "https://www.openslr.org/resources/12/train-other-500.tar.gz",
+      "bytes": 30593501606,
+      "official_md5": "d1a0fd59409feb2c614ce4d30c387708"
+    }
+  ],
+  "sealed_test_archives": "FORBIDDEN",
+  "mirrors_and_redirects": "FORBIDDEN_IN_THIS_RUNNER",
+  "recognizer_calls": 0,
+  "teacher_calls": 0,
+  "tts_calls": 0,
+  "scientific_recipes": "AUTHORIZED_UNSTARTED"
+}

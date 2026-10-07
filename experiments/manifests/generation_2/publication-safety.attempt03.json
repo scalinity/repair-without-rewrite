@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-10-07T02:13:50.949629+00:00",
+  "gitleaks": "PASS_ZERO_CREDENTIAL_HITS",
+  "personal_identifier_hits": [],
+  "public_data": "stable IDs, roles, families, official relative members and hashes only; no raw references, hypotheses, audio, weights or private binding paths",
+  "schema": "g2_publication_safety_v1",
+  "scope": "named staged source-preparation packet",
+  "staged_file_sha256": {
+    "ORCHESTRATION.html": "5d023b7d36adb341b92e0fe3fb1319a25b475b03ad386b8aba0584e038031721",
+    "benchmarks/g2_source_archives.py": "50cd305dfead11000677b2947f3e228dc184b7d4daa07a2d03eeb24db27249a7",
+    "benchmarks/g2_source_audio.py": "8844d939d02e2bd9466b36e64fbe286970c0ed3d775fce38ae1c4b90722b4a8b",
+    "configs/generation_2/source_archives_v1.json": "6ca236b88d430a5a0d97e27532d3a23a92f92dfb6976b386439c6a55378be29c",
+    "docs/LOG.md": "7d6c2560c77a1f752648469b8dc40ff394a24223cdacd171223c79d4dc39468d",
+    "docs/reports/G2_SOURCE_PREPARATION.md": "f1ae83a1f62ebe9c816df1fcf3101121e495d94f416fbb81a41b0679da5a80d0",
+    "experiments/manifests/development_calibration_consumption_generation_2.attempt01.json": "16e3845d437775fe126e497a6b1db65d86eef27a8e56b0c60184c13248435f83",
+    "experiments/manifests/generation_2/audio-dev-clean.attempt01.json": "6080aa86f95812946e52cb4dbe93cc2086b5ef3307f9c391aedb0f79ddd6d7ec",
+    "experiments/manifests/generation_2/audio-dev-other.attempt01.json": "0a92eb81b5fd0573ff9ecc5e80ce7d8aa2436da0260e8d785f42b398425d6429",
+    "experiments/manifests/generation_2/audio-train-clean-100.attempt01.json": "a979eafb35c6d5e3d4457d2864540a90f539a78c24f43b951936c5ee8b602ef9",
+    "experiments/manifests/generation_2/audio-train-clean-100.attempt02.json": "4780f3ef542501f6864947dbec05759ae091865c736fe63a284ca5686cd24bf2",
+    "experiments/manifests/generation_2/orchestration-visual.attempt03.json": "5608819598145d500ca30aa6e91f2e4512dd5d692463fbae0191542dcbc7454d",
+    "experiments/manifests/generation_2/parakeet-requests.attempt01.json": "dd5519783b2fec77303bd94b03893c187ef636c94a73dc38debdd8b57d185c12",
+    "experiments/manifests/generation_2/scientific-status.attempt01.json": "ba051b16659adfa1c3658ead179a548c1cd38b0e4eabee9d8542605d3444a2df",
+    "experiments/manifests/generation_2/source-join-implementation.attempt01.json": "e7682d54e128357e34fd7745448e12390082a0065b978e121a23fe3bcbea6b51",
+    "experiments/manifests/generation_2/source-preparation-full-tests.attempt01.json": "5d85bd0246c773e2af16a815166532eaba30337a2df10debbdad2b7735c1237c",
+    "src/data/g2_corpus.py": "4b059265d74c466bbf532d190a0c1a1cb1c18ffd871331fb7427019dd4afa05e",
+    "src/data/g2_geometry.py": "dd4c8013a2bc0d6b53d18b3066feb714a7116948449a7f0fc749fb4000125d8b",
+    "tests/data/test_g2_corpus.py": "dc9988be1332145843cd4b641365b9b22a7acec6f28eb6c2b7f0380a12cf0104",
+    "tests/data/test_g2_geometry.py": "df3c07fb11a31c4455cafa514af826a595934ad78acd0b22120f63fca31c7a9e",
+    "tests/data/test_g2_source_archives.py": "dc74fc53dcefd9e0a13af38993545e29ffd991fcad0dc385b9b3ace7cd9fdfdb"
+  },
+  "status": "PASS",
+  "unclassified_hits": 0
+}

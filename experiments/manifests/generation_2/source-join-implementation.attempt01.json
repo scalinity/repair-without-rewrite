@@ -1,0 +1,23 @@
+{
+  "failures": [
+    {
+      "affected_census_rows": 0,
+      "attempt": 1,
+      "cause": "family dictionary keys were treated as identities instead of field-value pairs",
+      "error_type": "ValueError",
+      "fixed_by": "compare family field-value pairs",
+      "recognizer_calls": 0
+    },
+    {
+      "affected_census_rows": 0,
+      "attempt": 2,
+      "cause": "historical consumed-calibration role label was compared literally with canonical calibration role",
+      "error_type": "ValueError",
+      "fixed_by": "bind the documented consumed-calibration label to its original canonical role; preserve the historical panel unchanged",
+      "recognizer_calls": 0
+    }
+  ],
+  "schema": "g2_join_implementation_attempts_v1",
+  "scientific_design_changed": false,
+  "verification": "10 focused regression tests pass; actual full census joins and blind source request selection pass"
+}

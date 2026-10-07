@@ -1,0 +1,35 @@
+{
+  "before": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 608691056640,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "captured_dirty_status": "?? benchmarks/g2_source_archives.py\n?? benchmarks/g2_source_audio.py\n?? configs/generation_2/source_archives_v1.json\n?? experiments/manifests/development_calibration_consumption_generation_2.attempt01.json\n?? experiments/manifests/generation_2/parakeet-requests.attempt01.json\n?? src/data/g2_corpus.py\n?? src/data/g2_geometry.py\n?? tests/data/test_g2_geometry.py\n?? tests/data/test_g2_source_archives.py\n",
+  "code_commit": "d03f343b1b33e646287455bbb402260054e4a64d",
+  "code_hashes": {
+    "benchmarks/g2_source_audio.py": "30105525c499d298242eb55b2ae8908f28e9c0e0180664b513f975a335890ef7",
+    "src/data/g2_artifacts.py": "091897ddcca0a1e0fe03b35e3b54b3fe2737344080faa3d669ac5c8096c7bd70",
+    "src/data/g2_corpus.py": "4b059265d74c466bbf532d190a0c1a1cb1c18ffd871331fb7427019dd4afa05e"
+  },
+  "config_sha256": "6ca236b88d430a5a0d97e27532d3a23a92f92dfb6976b386439c6a55378be29c",
+  "data_manifest_sha256": "09bf225b878047e1021ec80b42be0eade793f0ddd8e3411ceb8246ff71ca2857",
+  "dirty_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "error_type": "ModuleNotFoundError",
+  "extracted": 0,
+  "log_sha256": "28b1fb3dc7ac6a8c33fc2a7948e0c95f8242065553292eda72a1407ceea1354d",
+  "missing_package": "soundfile",
+  "output_relative": "source-audio-v1/train-clean-100.attempt01",
+  "private_census_sha256": "e37fa0801cd1b844d7ec8fbd7798a6d136f65eb6d4f2d8ddf7fcc235571c98b1",
+  "qualification_id": "G2-QUAL-AUDIO-train-clean-100-attempt01",
+  "recognizer_calls": 0,
+  "reconstruction": "post-failure receipt from preserved pre-run provenance and raw console log; private original unchanged",
+  "resume_policy": "immutable completed extraction reused; failed partial retained; new attempt required",
+  "schema": "g2_audio_extraction_provenance_v1",
+  "scientific_recipes_started": 0,
+  "seed": null,
+  "selected_records": 1566,
+  "source_runtime_used": "main test environment",
+  "status": "FAILED_BEFORE_NATIVE_AUDIO_ACCESS"
+}
