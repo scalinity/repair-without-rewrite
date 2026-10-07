@@ -1,0 +1,82 @@
+{
+  "absolute_local_path_additions": 0,
+  "code_commit": "32c97f7a3ae26ea84730af130727d39a47ac82dc",
+  "created_utc": "2026-10-07T08:46:05.577895+00:00",
+  "credential_values": 0,
+  "gitleaks_exit_code": 1,
+  "gitleaks_findings": [
+    {
+      "classification": "real source or artifact SHA256, not a credential",
+      "file": "experiments/manifests/generation_2/cold-B100-D1-U1.attempt01.mid.json",
+      "full_literal": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+      "independent_source": "configs/tokenizer_development/tokenizer.json",
+      "line": 1,
+      "rule": "generic-api-key",
+      "sha256_matches": true
+    },
+    {
+      "classification": "real source or artifact SHA256, not a credential",
+      "file": "experiments/manifests/generation_2/cold-B100-D1-U1.attempt01.mid.json",
+      "full_literal": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+      "independent_source": "src/models/tokenizer.py",
+      "line": 1,
+      "rule": "generic-api-key",
+      "sha256_matches": true
+    },
+    {
+      "classification": "real source or artifact SHA256, not a credential",
+      "file": "experiments/manifests/generation_2/cold-B100-D1-U1.attempt01.boundary.json",
+      "full_literal": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+      "independent_source": "configs/tokenizer_development/tokenizer.json",
+      "line": 1,
+      "rule": "generic-api-key",
+      "sha256_matches": true
+    },
+    {
+      "classification": "real source or artifact SHA256, not a credential",
+      "file": "experiments/manifests/generation_2/cold-B100-D1-U1.attempt01.boundary.json",
+      "full_literal": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+      "independent_source": "src/models/tokenizer.py",
+      "line": 1,
+      "rule": "generic-api-key",
+      "sha256_matches": true
+    },
+    {
+      "classification": "real source or artifact SHA256, not a credential",
+      "file": "experiments/manifests/generation_2/bench-B100-D1-U1.attempt01.json",
+      "full_literal": "b125551f3c3627edc9cb8d325bc70bfd8340df1518f03d0fd16d140ff7ace6ca",
+      "independent_source": "configs/tokenizer_development/tokenizer.json",
+      "line": 1,
+      "rule": "generic-api-key",
+      "sha256_matches": true
+    },
+    {
+      "classification": "real source or artifact SHA256, not a credential",
+      "file": "experiments/manifests/generation_2/bench-B100-D1-U1.attempt01.json",
+      "full_literal": "c6b7452659ae1654ca36d868f33367d17b03df0ad3325b58e993ccaf454d7372",
+      "independent_source": "src/models/tokenizer.py",
+      "line": 1,
+      "rule": "generic-api-key",
+      "sha256_matches": true
+    }
+  ],
+  "gitleaks_raw_report_sha256": "bd7a41efd2d363eb19d9556ab1d6f7eb54e6c5eecc64c3e84132bbb7fb722e26",
+  "nonfunctional_personal_identifiers": 0,
+  "public_files_repository_relative": true,
+  "schema": "g2_publication_safety_v1",
+  "staged_diff_sha256": "c24208c1e91f74476a5c2fe7e58e3b25c9e8f7164e277bb80853bcec3e4dd1c0",
+  "staged_paths": [
+    "ORCHESTRATION.html",
+    "docs/LOG.md",
+    "docs/reports/G2_B100_D1_U1_RUNTIME_QUALIFICATION.md",
+    "experiments/manifests/generation_2/bench-B100-D1-U1.attempt01.json",
+    "experiments/manifests/generation_2/cold-B100-D1-U1.attempt01.boundary.json",
+    "experiments/manifests/generation_2/cold-B100-D1-U1.attempt01.mid.json",
+    "experiments/manifests/generation_2/orchestration-visual.attempt11.json",
+    "experiments/manifests/generation_2/publication-classifier.attempt03.json",
+    "experiments/manifests/generation_2/storage-monitor.attempt09.json",
+    "experiments/manifests/generation_2/storage-monitor.attempt10.json"
+  ],
+  "status": "PASS",
+  "unclassified_findings": 0
+}

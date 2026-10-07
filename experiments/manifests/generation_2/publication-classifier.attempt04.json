@@ -1,0 +1,8 @@
+{
+  "classification": "All flagged token-related staged fields exactly match independently hashed source files; scanner output retains redacted values.",
+  "created_utc": "2026-10-07T08:46:05.625802+00:00",
+  "failed_attempt": "publication-classifier.attempt03.json",
+  "qualification_trajectories_rerun": 0,
+  "schema": "g2_publication_classifier_v1",
+  "status": "PASS"
+}

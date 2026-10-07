@@ -1,0 +1,8 @@
+{
+  "created_utc": "2026-10-07T08:46:05.339929+00:00",
+  "qualification_trajectories_rerun": 0,
+  "raw_report_sha256": "843aa3f033ae0c5a13838d5442e8e71f0bc8a33b9f8196ecc7de236752e4e436",
+  "reason": "The scanner redacts the matched value; requiring the full literal inside Match was false. No qualification result or tolerance changed.",
+  "schema": "g2_publication_classifier_v1",
+  "status": "FAILED_MECHANICAL_CLASSIFIER_ONLY"
+}
