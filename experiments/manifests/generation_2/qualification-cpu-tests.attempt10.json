@@ -1,0 +1,17 @@
+{
+  "elapsed_scope": "observed test command process wall",
+  "elapsed_seconds": 0.080219167,
+  "failed": 0,
+  "log_sha256": "10b79edaeabeedb0e904227c4c862db566e1cdf9ef6717bd15841643011401e4",
+  "passed": 25,
+  "pytest_reported_seconds": 0.06,
+  "schema": "g2_targeted_cpu_tests_v1",
+  "scientific_recipes_started": 0,
+  "skipped": 0,
+  "status": "PASS",
+  "tests": [
+    "tests/data/test_g2_storage_census.py",
+    "tests/data/test_g2_admission_storage.py",
+    "tests/data/test_g2_qualification_guards.py"
+  ]
+}

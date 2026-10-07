@@ -1,0 +1,14 @@
+{
+  "audit_script_sha256": "21214693932fff4d4543fd16221dee74aa59d452c2674636525100a4c1c946da",
+  "correction": "An absent scientific area and an existing empty area both establish zero artifacts; do not create it for this audit. Correct the targeted test count to the actual receipt: 25.",
+  "created_utc": "2026-10-07T17:58:20.929183+00:00",
+  "elapsed_scope": "observed tool command wall including three-line targeted-test summary read and audit process",
+  "elapsed_seconds": 0.808561667,
+  "exception": "FileNotFoundError from listing the deliberately uncreated scientific artifact area",
+  "exit_code": 1,
+  "neural_runs_restarted": 0,
+  "schema": "g2_failed_storage_census_audit_v1",
+  "scientific_recipes_started": 0,
+  "status": "FAILED_AUDIT_ASSUMED_UNSTARTED_AREA_EXISTS",
+  "traceback_sha256": "773d22b98c603bc1c75f442420e10e972b7925535c054efcf7c60d5d0f75c8c2"
+}

@@ -72,6 +72,7 @@ def run(binding, attempt):
         "external-root.attempt01.json":"PASS_STORAGE_PRIMITIVES_ONLY",
         "independent-storage.attempt01.json":"PASS_BOUNDED_STORAGE_RECONSTRUCTION",
         "independent-root-loss.attempt01.json":"PASS_BOUNDED_MECHANICAL_RECONSTRUCTION",
+        "storage-census-repair.attempt02.json":"PASS_INDEPENDENT_IN_ROOT_ALIAS_CENSUS_REPAIR",
         "source-archives.attempt01.json":"PASS_OFFICIAL_ARCHIVES_ONLY",
         "independent-archives.attempt01.json":"PASS_INDEPENDENT_OFFICIAL_ARCHIVES",
         "parakeet-sources.attempt01.json":"PASS_SOURCE_CONSTRUCTION_ONLY",
@@ -141,12 +142,12 @@ def run(binding, attempt):
         assert sha256(path) == recipe["config_sha256"]
         configs.append(json.loads(path.read_text()))
     unstarted = assert_unstarted(configs,root.path("scientific-checkpoints-v1"))
-    for name in ("cost-projection.attempt01.json","storage-reforecast.attempt01.json"):
+    for name in ("cost-projection.attempt01.json","storage-reforecast.attempt02.json"):
         path = directory / name
         records[name] = json.loads(path.read_text())
         identities[name] = sha256(path)
     cost = records["cost-projection.attempt01.json"]
-    storage = records["storage-reforecast.attempt01.json"]
+    storage = records["storage-reforecast.attempt02.json"]
     assert cost["status"] in ("PASS_G2_COST_CEILING_ONLY","GENERATION_2_COST_BLOCKED")
     assert storage["status"] in ("PASS_G2_RETAINED_STORAGE_FORECAST","GENERATION_2_STORAGE_BLOCKED")
     remaining, allowances = reconstruct_remaining_storage(root, directory, configs)

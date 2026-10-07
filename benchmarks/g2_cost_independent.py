@@ -62,6 +62,7 @@ def run(binding, attempt):
         "archived-evaluation-C101.attempt01.json", "independent-archives.attempt01.json",
         "independent-corpus.attempt01.json", "independent-native.attempt01.json",
         "independent-byt5.attempt01.json", "storage-reforecast.attempt01.json",
+        "storage-reforecast.attempt02.json", "storage-census-repair.attempt01.json","storage-census-repair.attempt02.json",
         "native-initialization-precheck.attempt01.json", "expanded-evaluation-summary.attempt01.json",
         "independent-evaluation.attempt01.json", "independent-compatibility.attempt02.json",
         "audio-train-clean-100.attempt01.json", "audio-train-clean-360.attempt01.json",

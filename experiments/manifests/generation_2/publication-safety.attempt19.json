@@ -1,0 +1,30 @@
+{
+  "absolute_local_path_additions": 0,
+  "code_commit": "3ba9bd5462f43baf83a454de533c0ad8d19ee869",
+  "created_utc": "2026-10-07T18:08:04.783046+00:00",
+  "credential_values": 0,
+  "gitleaks_exit_code": 0,
+  "gitleaks_findings": [],
+  "gitleaks_raw_report_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "nonfunctional_personal_identifiers": 0,
+  "public_files_repository_relative": true,
+  "schema": "g2_publication_safety_v1",
+  "staged_diff_sha256": "2d7ac401643d3c77d3340977ea0b9cff734cf589f7716f7d04786ca2bddd4b5d",
+  "staged_paths": [
+    "ORCHESTRATION.html",
+    "benchmarks/g2_admission_independent.py",
+    "benchmarks/g2_cost_independent.py",
+    "benchmarks/g2_cost_projection.py",
+    "benchmarks/g2_storage_reforecast.py",
+    "docs/LOG.md",
+    "docs/reports/G2_STORAGE_CENSUS_MECHANICAL_REPAIR.md",
+    "docs/reviews/G2_STORAGE_CENSUS_REPAIR_INDEPENDENT_REVIEW.md",
+    "experiments/manifests/generation_2/orchestration-visual.attempt19.json",
+    "experiments/manifests/generation_2/qualification-cpu-tests.attempt10.json",
+    "experiments/manifests/generation_2/storage-census-repair.attempt01.json",
+    "experiments/manifests/generation_2/storage-census-repair.attempt02.json",
+    "tests/data/test_g2_storage_census.py"
+  ],
+  "status": "PASS",
+  "unclassified_findings": 0
+}

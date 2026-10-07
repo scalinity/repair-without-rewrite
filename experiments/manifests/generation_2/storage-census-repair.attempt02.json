@@ -1,0 +1,324 @@
+{
+  "after": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 488970170368,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "aliases_not_followed_or_double_counted": true,
+  "all_targets_inside_bound_physical_volume": true,
+  "artifact_root_policy_changed": false,
+  "audit_script_sha256": "a9e1c5f3be1ad1a8cd77081c2681e97b34b71ce0b25a7d335f939f5935085deb",
+  "before": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 488970170368,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "captured_dirty_status": " M benchmarks/g2_admission_independent.py\n M benchmarks/g2_cost_independent.py\n M benchmarks/g2_cost_projection.py\n M benchmarks/g2_storage_reforecast.py\n?? docs/reports/G2_BYT5_RUNNER_QUALIFICATION.md\n?? docs/reviews/G2_BYT5_INDEPENDENT_REVIEW.md\n?? experiments/manifests/development_calibration_consumption_generation_2.attempt03.json\n?? experiments/manifests/generation_2/byt5-qualification.attempt02.json\n?? experiments/manifests/generation_2/engineering-preparation-diagnostics.attempt02.json\n?? experiments/manifests/generation_2/engineering-read-diagnostics.attempt01.json\n?? experiments/manifests/generation_2/expanded-evaluation-summary.attempt01.json\n?? experiments/manifests/generation_2/independent-byt5.attempt01.json\n?? experiments/manifests/generation_2/independent-evaluation.attempt01.json\n?? experiments/manifests/generation_2/storage-census-repair.attempt01.json\n?? experiments/manifests/generation_2/storage-reforecast.attempt01.json\n?? tests/data/test_g2_storage_census.py\n",
+  "created_utc": "2026-10-07T17:58:21.953363+00:00",
+  "elapsed_seconds": 1.0945931669557467,
+  "failed_elapsed_seconds": 0.6854960420168936,
+  "failed_receipt_sha256": "83350c4d4ba25ff14ecb8df041dc996a2e90aa5d391547e2c05d8b48cac9bdc2",
+  "future_checkpoint_size_and_allowance_code_byte_unchanged": true,
+  "independent_census_by_area": {
+    "asr-hypotheses-v1": {
+      "allocated_bytes": 36913152,
+      "files": 5,
+      "logical_bytes": 36904415,
+      "symlinks": 0
+    },
+    "bench-v1": {
+      "allocated_bytes": 41952722944,
+      "files": 162,
+      "logical_bytes": 41952381849,
+      "symlinks": 0
+    },
+    "binding-v1": {
+      "allocated_bytes": 4096,
+      "files": 1,
+      "logical_bytes": 476,
+      "symlinks": 0
+    },
+    "byt5-v1": {
+      "allocated_bytes": 6060306432,
+      "files": 14,
+      "logical_bytes": 6058957219,
+      "symlinks": 0
+    },
+    "cold-resume-v1": {
+      "allocated_bytes": 19383123968,
+      "files": 84,
+      "logical_bytes": 19382871419,
+      "symlinks": 0
+    },
+    "compatibility-v1": {
+      "allocated_bytes": 8125452288,
+      "files": 29,
+      "logical_bytes": 8125373503,
+      "symlinks": 0
+    },
+    "corpus-qualification-v1": {
+      "allocated_bytes": 116428800,
+      "files": 8,
+      "logical_bytes": 116404552,
+      "symlinks": 0
+    },
+    "evaluation-v1": {
+      "allocated_bytes": 75415552,
+      "files": 10,
+      "logical_bytes": 75392554,
+      "symlinks": 0
+    },
+    "expanded-development-v1": {
+      "allocated_bytes": 8527872,
+      "files": 3,
+      "logical_bytes": 8516700,
+      "symlinks": 0
+    },
+    "frozen-d1-v1": {
+      "allocated_bytes": 178044928,
+      "files": 8,
+      "logical_bytes": 178028072,
+      "symlinks": 0
+    },
+    "logs-v1": {
+      "allocated_bytes": 1794048,
+      "files": 174,
+      "logical_bytes": 1291592,
+      "symlinks": 0
+    },
+    "qualification-v1": {
+      "allocated_bytes": 12136448,
+      "files": 219,
+      "logical_bytes": 11534947,
+      "symlinks": 39
+    },
+    "source-archives-v1": {
+      "allocated_bytes": 53642997760,
+      "files": 6,
+      "logical_bytes": 53642980754,
+      "symlinks": 0
+    },
+    "source-audio-v1": {
+      "allocated_bytes": 2349723648,
+      "files": 16819,
+      "logical_bytes": 2315165725,
+      "symlinks": 0
+    }
+  },
+  "internal_alias_count": 39,
+  "method": "Separate os.walk with followlinks=False, os.lstat file/link sizes, strict os.path.realpath containment and device identity; exact per-area reconciliation against producer rglob census. Frozen future-size/allowance code is byte-identical.",
+  "neural_runs_restarted": 0,
+  "next_storage_attempt_predeclared": 2,
+  "no_automatic_retry": true,
+  "original_code_sha256": "59b86f29252bf6541e83c616e085c8ad7704e9c764515d220ffb953447098366",
+  "repaired_code_sha256": "b64f6600907ebca6335e40f9559d4d90b5c52a1421af286671a89ad7c083bc7c",
+  "reviewed_commit": "01578311c75d10e8f4b2da67add9a9f2cd672c3f",
+  "schema": "g2_storage_census_mechanical_repair_v1",
+  "scientific_recipes_started": 0,
+  "status": "PASS_INDEPENDENT_IN_ROOT_ALIAS_CENSUS_REPAIR",
+  "targeted_cpu_test_log_sha256": "10b79edaeabeedb0e904227c4c862db566e1cdf9ef6717bd15841643011401e4",
+  "targeted_cpu_tests": 25,
+  "total_link_logical_bytes": 5153,
+  "unresolved_or_external_aliases_forbidden": true,
+  "validated_aliases": [
+    {
+      "link_bytes": 133,
+      "relative": "qualification-v1/native-unit-tests.attempt02/test_actual_update_checkpoint_current",
+      "target_relative": "qualification-v1/native-unit-tests.attempt02/test_actual_update_checkpoint_3"
+    },
+    {
+      "link_bytes": 133,
+      "relative": "qualification-v1/native-unit-tests.attempt02/test_actual_native_clock_rejeccurrent",
+      "target_relative": "qualification-v1/native-unit-tests.attempt02/test_actual_native_clock_rejec0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_artifact_rejects_noncanoncurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_artifact_rejects_noncanon2"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_atomic_save_rejects_nonzecurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_atomic_save_rejects_nonze1"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_sparse_checkpoint_keeps_bcurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_sparse_checkpoint_keeps_b0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_bfs_parent_graph_keeps_omcurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_bfs_parent_graph_keeps_om0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_rehashed_boundary_cannot_current",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_rehashed_boundary_cannot_5"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_positive_committed_clock_current",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_positive_committed_clock_1"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_cold_mid_restore_keeps_orcurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_cold_mid_restore_keeps_or0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_actual_update_checkpoint_current",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_actual_update_checkpoint_3"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_unavailable_external_rootcurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_unavailable_external_root2"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_capped_scorer_correspondecurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_capped_scorer_corresponde0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_atomic_completion_and_invcurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_atomic_completion_and_inv0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_checkpoint_twenty_updatescurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_checkpoint_twenty_updates1"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_official_parent_metadata_current",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_official_parent_metadata_0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_interruption_preserves_pacurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_interruption_preserves_pa0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_receipts_cannot_replace_pcurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_receipts_cannot_replace_p0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_sparse_bad_hash_preservescurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_sparse_bad_hash_preserves0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_benchmark_reader_clock_iscurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_benchmark_reader_clock_is0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_changed_volume_is_rejectecurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_changed_volume_is_rejecte3"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_cold_boundary_and_mid_rescurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_cold_boundary_and_mid_res3"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_numerical_replay_keeps_ficurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_numerical_replay_keeps_fi1"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_inventory_preserves_fieldcurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_inventory_preserves_field0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_no_absolute_parent_or_symcurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_no_absolute_parent_or_sym0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_deterministic_merge_rankscurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_deterministic_merge_ranks0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_archive_identity_rejects_current",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_archive_identity_rejects_0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_training_parent_bounds_arcurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_training_parent_bounds_ar0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_missing_binding_does_not_current",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_missing_binding_does_not_0"
+    },
+    {
+      "link_bytes": 133,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_corrupted_checkpoint_is_rcurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_corrupted_checkpoint_is_r10"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_missing_root_fails_beforecurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_missing_root_fails_before0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_missing_root_precedes_netcurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_missing_root_precedes_net0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_extra_inventory_entry_rejcurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_extra_inventory_entry_rej0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_actual_native_clock_rejeccurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_actual_native_clock_rejec0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_official_chapter_duplicatcurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_official_chapter_duplicat1"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_literal_capacity_cannot_ucurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_literal_capacity_cannot_u0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_atomic_replacement_and_ofcurrent",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_atomic_replacement_and_of0"
+    },
+    {
+      "link_bytes": 132,
+      "relative": "qualification-v1/integrated-tests.attempt03/test_no_absolute_parent_or_sym0/volume/g2/qualification-v1",
+      "target_relative": "qualification-v1/integrated-tests.attempt03/test_no_absolute_parent_or_sym0"
+    },
+    {
+      "link_bytes": 133,
+      "relative": "qualification-v1/native-unit-tests.attempt01/test_actual_update_checkpoint_current",
+      "target_relative": "qualification-v1/native-unit-tests.attempt01/test_actual_update_checkpoint_3"
+    },
+    {
+      "link_bytes": 133,
+      "relative": "qualification-v1/native-unit-tests.attempt01/test_actual_native_clock_rejeccurrent",
+      "target_relative": "qualification-v1/native-unit-tests.attempt01/test_actual_native_clock_rejec0"
+    }
+  ]
+}

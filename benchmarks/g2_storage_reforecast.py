@@ -8,6 +8,34 @@ import time
 from src.data.g2_artifacts import ArtifactRoot, read_complete, sha256
 
 
+def retained_census(root, versioned_areas):
+    files = defaultdict(lambda: dict(files=0, symlinks=0, logical_bytes=0, allocated_bytes=0))
+    physical_root = root.resolve(strict=True)
+    device = root.stat().st_dev
+    for path in root.rglob("*"):
+        area = path.relative_to(root).parts[0]
+        if area not in versioned_areas:
+            raise ValueError("retained artifact outside approved versioned areas")
+        if path.is_symlink():
+            target = path.resolve(strict=True)
+            if not target.is_relative_to(physical_root) or target.stat().st_dev != device:
+                raise ValueError("retained G2 artifact redirects outside physical accounting")
+            # rglob does not descend directory aliases. Count the link payload
+            # itself; the real target is already inventoried at its own path.
+            stat = path.lstat()
+            files[area]["symlinks"] += 1
+        elif path.is_file():
+            stat = path.stat()
+            if stat.st_dev != device:
+                raise ValueError("retained G2 artifact outside bound physical volume")
+            files[area]["files"] += 1
+        else:
+            continue
+        files[area]["logical_bytes"] += stat.st_size
+        files[area]["allocated_bytes"] += stat.st_blocks * 512
+    return dict(files)
+
+
 def run(binding, attempt):
     root = ArtifactRoot(binding)
     before = root.preflight()
@@ -15,18 +43,7 @@ def run(binding, attempt):
     receipt = Path(f"experiments/manifests/generation_2/storage-reforecast.attempt{attempt:02d}.json")
     if receipt.exists():
         raise FileExistsError(receipt)
-    files = defaultdict(lambda: dict(files=0,logical_bytes=0,allocated_bytes=0))
-    for path in root.root.rglob("*"):
-        if path.is_symlink():
-            raise ValueError("retained G2 artifact redirects outside physical accounting")
-        if path.is_file():
-            area = path.relative_to(root.root).parts[0]
-            if area not in root.policy["versioned_areas"]:
-                raise ValueError("retained artifact outside approved versioned areas")
-            stat = path.stat()
-            files[area]["files"] += 1
-            files[area]["logical_bytes"] += stat.st_size
-            files[area]["allocated_bytes"] += stat.st_blocks * 512
+    files = retained_census(root.root, root.policy["versioned_areas"])
     native = {}
     for arm in ("B100", "C101"):
         sizes = []
