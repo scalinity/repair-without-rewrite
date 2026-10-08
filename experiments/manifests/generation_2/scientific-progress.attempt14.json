@@ -1,0 +1,149 @@
+{
+  "active_recipe_completed_observations": [
+    {
+      "TRAIN_forced_cases": 304,
+      "TRAIN_greedy_cases": 304,
+      "calibration_evaluations": 1900,
+      "calibration_receipt": "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-C101-D1-U8-seed42-lr3e-4.update00000.attempt01.json",
+      "calibration_receipt_sha256": "f133a74b202533f6e0c226a2bb94d4c25206ff475e9fb78f2ee1c051d0d87ebc",
+      "checkpoint_COMPLETE_sha256": "a9ad25d48d6df2c02f0e63e680211da564c66b75396df9f3686be8b26d5481bf",
+      "endpoint": {
+        "actual_exposure": 0,
+        "last_ordinal": -1,
+        "master_completed": 0,
+        "nominal_exposure": 0,
+        "optimizer_updates": 0
+      },
+      "heldout_cases": 2984,
+      "optimizer_update": 0,
+      "payload_hashes_verified": 6,
+      "receipt": "experiments/manifests/generation_2/scientific-observation-G2-C101-D1-U8-seed42-lr3e-4.update00000.attempt01.json",
+      "receipt_sha256": "715f34c8fc360559b51ac312d13b5f50ad780a5b4a02d9be829d21f4cb900820",
+      "seconds_MEASURED": 2460.200641374977,
+      "state_sha256": "b93abe5d2f8401bbd394c5583651b7c94da937bbe64933559dac34ac3725ef90"
+    }
+  ],
+  "active_recipe_independent_observation_receipt": "experiments/manifests/generation_2/scientific-observation-independent-G2-C101-D1-U8-seed42-lr3e-4.update00000.attempt01.json",
+  "active_recipe_independent_observation_sha256": "61bc64c9421d4987cb471cad3fd8598f174e3f9ce1e1431e56244e2ae2639b7d",
+  "active_recipe_initial_checkpoint_COMPLETE_sha256": "a9ad25d48d6df2c02f0e63e680211da564c66b75396df9f3686be8b26d5481bf",
+  "active_recipe_initial_checkpoint_metadata_sha256": "dedee505095cdfc13fe62698a0c05b391fcf23576bb55b9079aca5fc256c3066",
+  "active_recipe_initial_checkpoint_payload_hashes_verified": 2,
+  "active_recipe_initial_checkpoint_relative": "scientific-checkpoints-v1/G2-C101-D1-U8-seed42-lr3e-4.attempt01.update0000",
+  "active_recipe_initial_checkpoint_state_sha256": "b93abe5d2f8401bbd394c5583651b7c94da937bbe64933559dac34ac3725ef90",
+  "calibration_evaluations_recorded_completed_observations": 58900,
+  "campaign_freeze_sha256": "084be260a7f6797d9e138839fe56660c3ce47cb6d92d813c4c3a518b3344cb14",
+  "complete_suite": "UNRUN_DURING_ACTIVE_SCIENTIFIC_ACCELERATOR_JOB",
+  "completed_prescribed_outcomes": 5,
+  "completed_recipe_extents": [
+    {
+      "actual_exposure": 10007223,
+      "completed_masters": 305,
+      "nominal_exposure": 10000000,
+      "optimizer_updates": 2440,
+      "presentations": 134591,
+      "recipe_id": "G2-B100-D0-U8-seed42-lr3e-4"
+    },
+    {
+      "actual_exposure": 10007223,
+      "completed_masters": 305,
+      "nominal_exposure": 10000000,
+      "optimizer_updates": 2440,
+      "presentations": 134591,
+      "recipe_id": "G2-C101-D0-U8-seed42-lr3e-4"
+    },
+    {
+      "actual_exposure": 10006223,
+      "completed_masters": 305,
+      "nominal_exposure": 10000000,
+      "optimizer_updates": 305,
+      "presentations": 136755,
+      "recipe_id": "G2-B100-D1-U1-seed42-lr3e-4"
+    },
+    {
+      "actual_exposure": 10006223,
+      "completed_masters": 305,
+      "nominal_exposure": 10000000,
+      "optimizer_updates": 305,
+      "presentations": 136755,
+      "recipe_id": "G2-C101-D1-U1-seed42-lr3e-4"
+    },
+    {
+      "actual_exposure": 10006223,
+      "completed_masters": 305,
+      "nominal_exposure": 10000000,
+      "optimizer_updates": 2440,
+      "presentations": 136755,
+      "recipe_id": "G2-B100-D1-U8-seed42-lr3e-4"
+    }
+  ],
+  "completed_recipe_independent_receipt": "experiments/manifests/generation_2/scientific-recipe-independent-G2-B100-D1-U8-seed42-lr3e-4.attempt01.json",
+  "completed_recipe_independent_sha256": "0d0690732561e09e90977f179f8b5106aa5c696c7a6ac445249b1b802e1821f1",
+  "current_phase": "Recipes 1 through 5 completed; recipe 6 initialization observation complete and training active; ByT5 unstarted",
+  "final_or_sealed_work": false,
+  "full_campaign_reports": "UNRUN_UNTIL_ALL_SEVEN_OUTCOMES",
+  "last_complete_suite_passes": 505,
+  "live_storage": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 377286529024,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "prior_progress_receipt": "experiments/manifests/generation_2/scientific-progress.attempt13.json",
+  "prior_progress_sha256": "1c6c98ef92830b08b9a73995ee097e2f2b316c33cf4fb82312266e7ff9bb6664",
+  "quality_selection_performed": false,
+  "recipes": [
+    {
+      "latest_receipt": "experiments/manifests/generation_2/scientific-outcome-G2-B100-D0-U8-seed42-lr3e-4.attempt01.json",
+      "latest_receipt_sha256": "040b1b2fdd2c4ea82c9973b8abfc828730721229af7cb31a3d4e2a27f55c23b3",
+      "recipe_id": "G2-B100-D0-U8-seed42-lr3e-4",
+      "scientific_slot_consumed": true,
+      "status": "COMPLETED"
+    },
+    {
+      "latest_receipt": "experiments/manifests/generation_2/scientific-outcome-G2-C101-D0-U8-seed42-lr3e-4.attempt01.json",
+      "latest_receipt_sha256": "998c4dabc2fad4cc5c1ba19b1555a47624ac1d44219f39f4879050bdb28303a4",
+      "recipe_id": "G2-C101-D0-U8-seed42-lr3e-4",
+      "scientific_slot_consumed": true,
+      "status": "COMPLETED"
+    },
+    {
+      "latest_receipt": "experiments/manifests/generation_2/scientific-outcome-G2-B100-D1-U1-seed42-lr3e-4.attempt01.json",
+      "latest_receipt_sha256": "56d0c20a469e6255e0ccefbf2a427e5a3404001d4aeec94294193ee419bf0412",
+      "recipe_id": "G2-B100-D1-U1-seed42-lr3e-4",
+      "scientific_slot_consumed": true,
+      "status": "COMPLETED"
+    },
+    {
+      "latest_receipt": "experiments/manifests/generation_2/scientific-outcome-G2-C101-D1-U1-seed42-lr3e-4.attempt01.json",
+      "latest_receipt_sha256": "ba23f2e0c47a09549c9279a50a0653d1c465615a5f8e9afe5278b0a089dc9fbb",
+      "recipe_id": "G2-C101-D1-U1-seed42-lr3e-4",
+      "scientific_slot_consumed": true,
+      "status": "COMPLETED"
+    },
+    {
+      "latest_receipt": "experiments/manifests/generation_2/scientific-outcome-G2-B100-D1-U8-seed42-lr3e-4.attempt01.json",
+      "latest_receipt_sha256": "b7b61cbc075b177ffb917e107c82e445e6e7c8883ad9fc35f6b71d60fac37ef3",
+      "recipe_id": "G2-B100-D1-U8-seed42-lr3e-4",
+      "scientific_slot_consumed": true,
+      "status": "COMPLETED"
+    },
+    {
+      "latest_receipt": "experiments/manifests/generation_2/scientific-start-G2-C101-D1-U8-seed42-lr3e-4.attempt01.json",
+      "latest_receipt_sha256": "e41c6641bdb6e2783ee635bedd85620e46c90587d4d5385991fbe4bab28a43bc",
+      "recipe_id": "G2-C101-D1-U8-seed42-lr3e-4",
+      "scientific_slot_consumed": true,
+      "status": "RUNNING"
+    },
+    {
+      "recipe_id": "G2-ByT5-D1-10pass-seed42-lr3e-4",
+      "scientific_slot_consumed": false,
+      "status": "AUTHORIZED_UNSTARTED"
+    }
+  ],
+  "recorded_at": "2026-10-08T12:38:04.308780+00:00",
+  "reviewed_base": "17cb443d264584312f147c6e79e83db8f78b4240",
+  "schema": "g2_scientific_campaign_progress_v1",
+  "scientific_design_changed": false,
+  "scientific_slots_consumed": 6
+}

@@ -1,0 +1,31 @@
+{
+  "credential_findings": 0,
+  "default_gitleaks_no_allowlist": true,
+  "diff_check": "PASS",
+  "personal_identifier_findings": 0,
+  "public_payload_fields": "hashes, relative paths, permitted stable IDs, numerical counts and timings; no transcript payload",
+  "recorded_at": "2026-10-08T12:40:31.610438+00:00",
+  "reviewed_base": "17cb443d264584312f147c6e79e83db8f78b4240",
+  "schema": "g2_publication_safety_v1",
+  "scientific_source_changed": false,
+  "staged_diff_sha256": "a6e4d20206edfbba99a15e529c2ac39df3540a31ea8d64fa98014c018f65c369",
+  "staged_paths": [
+    "ORCHESTRATION.html",
+    "docs/LOG.md",
+    "docs/reports/G2_B100_D1_U8_SCIENTIFIC_EXECUTION.md",
+    "docs/reviews/G2_B100_D1_U8_EXECUTION_INDEPENDENT_REVIEW.md",
+    "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-B100-D1-U8-seed42-lr3e-4.update02280.attempt01.json",
+    "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-B100-D1-U8-seed42-lr3e-4.update02440.attempt01.json",
+    "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-C101-D1-U8-seed42-lr3e-4.update00000.attempt01.json",
+    "experiments/manifests/generation_2/scientific-observation-G2-B100-D1-U8-seed42-lr3e-4.update02280.attempt01.json",
+    "experiments/manifests/generation_2/scientific-observation-G2-B100-D1-U8-seed42-lr3e-4.update02440.attempt01.json",
+    "experiments/manifests/generation_2/scientific-observation-G2-C101-D1-U8-seed42-lr3e-4.update00000.attempt01.json",
+    "experiments/manifests/generation_2/scientific-observation-independent-G2-C101-D1-U8-seed42-lr3e-4.update00000.attempt01.json",
+    "experiments/manifests/generation_2/scientific-outcome-G2-B100-D1-U8-seed42-lr3e-4.attempt01.json",
+    "experiments/manifests/generation_2/scientific-progress-orchestration-visual.attempt12.json",
+    "experiments/manifests/generation_2/scientific-progress.attempt14.json",
+    "experiments/manifests/generation_2/scientific-recipe-independent-G2-B100-D1-U8-seed42-lr3e-4.attempt01.json",
+    "experiments/manifests/generation_2/scientific-start-G2-C101-D1-U8-seed42-lr3e-4.attempt01.json"
+  ],
+  "status": "PASS"
+}

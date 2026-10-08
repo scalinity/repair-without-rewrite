@@ -1,0 +1,51 @@
+{
+  "bounded_checker_relative": "logs-v1/execution-continuation.attempt01/recipe6-initial-observation-independent.attempt01.py",
+  "bounded_checker_sha256": "0f35340e57c6307f89f26a297d2df34478ef93f755ac1e47d986fee77c4e20ed",
+  "checkpoint_payload_hashes_verified": 2,
+  "completed_observation": {
+    "TRAIN_forced_cases": 304,
+    "TRAIN_greedy_cases": 304,
+    "calibration_evaluations": 1900,
+    "calibration_receipt": "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-C101-D1-U8-seed42-lr3e-4.update00000.attempt01.json",
+    "calibration_receipt_sha256": "f133a74b202533f6e0c226a2bb94d4c25206ff475e9fb78f2ee1c051d0d87ebc",
+    "checkpoint_COMPLETE_sha256": "a9ad25d48d6df2c02f0e63e680211da564c66b75396df9f3686be8b26d5481bf",
+    "endpoint": {
+      "actual_exposure": 0,
+      "last_ordinal": -1,
+      "master_completed": 0,
+      "nominal_exposure": 0,
+      "optimizer_updates": 0
+    },
+    "heldout_cases": 2984,
+    "optimizer_update": 0,
+    "payload_hashes_verified": 6,
+    "receipt": "experiments/manifests/generation_2/scientific-observation-G2-C101-D1-U8-seed42-lr3e-4.update00000.attempt01.json",
+    "receipt_sha256": "715f34c8fc360559b51ac312d13b5f50ad780a5b4a02d9be829d21f4cb900820",
+    "seconds_MEASURED": 2460.200641374977,
+    "state_sha256": "b93abe5d2f8401bbd394c5583651b7c94da937bbe64933559dac34ac3725ef90"
+  },
+  "completed_recipe_proof": "experiments/manifests/generation_2/scientific-recipe-independent-G2-B100-D1-U8-seed42-lr3e-4.attempt01.json",
+  "completed_recipe_proof_sha256": "0d0690732561e09e90977f179f8b5106aa5c696c7a6ac445249b1b802e1821f1",
+  "quality_selection_performed": false,
+  "recipe_id": "G2-C101-D1-U8-seed42-lr3e-4",
+  "recorded_at": "2026-10-08T12:37:11.026297+00:00",
+  "review_elapsed_seconds": 1.796356167003978,
+  "reviewed_base": "17cb443d264584312f147c6e79e83db8f78b4240",
+  "schema": "g2_independent_completed_observation_v1",
+  "status": "PASS_INDEPENDENT_COMPLETED_OBSERVATION_AND_CHECKPOINT",
+  "storage_after": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 377286529024,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "storage_before": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 377286529024,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "training_prefix_claimed": false
+}

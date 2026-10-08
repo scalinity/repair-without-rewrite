@@ -1,0 +1,17 @@
+{
+  "appearance_restored": "Auto",
+  "current_status_text_verified": "Five outcomes complete; recipe 6 fresh update-zero checkpoint and complete initialization observation independently verified; recipe 6 training active; ByT5 unstarted",
+  "desktop_width": 1280,
+  "light_dark_inspected": true,
+  "no_document_overflow": true,
+  "persisted_screenshot_files": 0,
+  "phone_height": 844,
+  "phone_width": 390,
+  "recorded_at": "2026-10-08T12:39:29.264072+00:00",
+  "reviewed_base": "17cb443d264584312f147c6e79e83db8f78b4240",
+  "schema": "g2_progress_page_visual_v1",
+  "source_sha256": "1d2140ebfc6de71fe9342ddb8745666aa5e6fdcdd646da6c2eebec1abe25ad95",
+  "status": "PASS_LAYOUT_AND_STATUS_TEXT",
+  "temporary_tabs_closed": true,
+  "viewport_reset": true
+}

@@ -1,0 +1,19 @@
+# Independent Generation-2 B100-D1-U8 completed execution review
+
+Date: 2026-10-08T12:38:04.308780+00:00
+
+Reviewed base: `17cb443d264584312f147c6e79e83db8f78b4240`. The separate CPU path, immutable artifacts and measured timing are hash-bound in `experiments/manifests/generation_2/scientific-recipe-independent-G2-B100-D1-U8-seed42-lr3e-4.attempt01.json`. The checker completed in 17.850974 measured seconds; no scientific code or active process changed.
+
+MEASURED RESULT: All 2,440 native update rows independently match the frozen ordered D1 presentation ledger and U8 geometry. Exact presentation IDs, source/target/anchor identities, channels/phases, cumulative charges, optimizer steps, master/subqueue indices, actual-update denominators and LR agree. The fixed trajectory contains 136,755 presentations, 305 completed masters and 10,006,223 actual canonical exposures against 10M nominal. One attempt completed without numerical replay or manual resume. Its qualified seed42 fresh-parameter fingerprint agrees with the launch gate. The completed B100 D1/U1 and D1/U8 trajectories retain matching master geometry, presentation order and extent, with eight U8 updates per master. The next C101 D1/U8 recipe binds identical frozen geometry and save/evaluation endpoints.
+
+MEASURED RESULT: The final output inventory, all 13 checkpoint payload inventories and metadata state identities, and all six prescribed observation payload inventories reproduce. Every completed checkpoint has the registered step/exposure and zero pending queue/charge/microbatch accumulation. Observation states match their complete checkpoints. The final checkpoint state agrees with the outcome. Each observation retains 2,984 heldout cases; initialization and endpoint each retain separate 304-case TRAIN greedy/forced diagnostics. Calibration receipts reproduce at all six states: 11,400 evaluations without training or selection use.
+
+MEASURED RESULT: Complete physical attempt wall time is 8631.517741 seconds. Logged completed-update training sums to 1897.213684, observations to 6450.914888, and saves to 54.485050. Components are inside the attempt interval and are not added again. Unique scientific extent counts the trajectory once. Exact kernel time and monetary cost remain unmeasured/unpriced.
+
+MEASURED RESULT: Recipe 6's start timestamp follows recipe 5's completed interval. Its immutable update-zero checkpoint reproduces all payload hashes, zero-pending metadata and frozen D1/U8 recipe/campaign/ledger identities. The live inventory retains the original serial parent and one C101-D1-U8 scientific child. All 47 frozen scientific sources, scientific inputs, frontier decision/amendment hashes, qualification receipts, external artifact identities, seven original recipe hashes and the ByT5 schedule reproduce; bound-volume identity/access/free-space checks pass.
+
+MEASURED RESULT: The separate initialization-observation check `experiments/manifests/generation_2/scientific-observation-independent-G2-C101-D1-U8-seed42-lr3e-4.update00000.attempt01.json` passes in 1.796356 measured seconds. All 2,984 heldout case IDs are unique; payload inventories and the update-zero checkpoint state reproduce. Separate 304-case TRAIN greedy/forced diagnostics and 1,900 calibration evaluations are retained without training, sealed-reference or selection use. This observation check makes no claim about a completed training prefix.
+
+FACT: Five prescribed outcomes are complete; recipe 6 has completed its initialization observation and is training; ByT5 remains unstarted. Full scientific metric/gate analysis, factorial contrasts, full campaign independent reconstruction and a new complete suite are UNRUN. No intermediate result selects or changes a treatment. No final/sealed work occurs.
+
+PASS_INDEPENDENT_COMPLETED_RECIPE_TRAJECTORY_AND_ARTIFACTS
