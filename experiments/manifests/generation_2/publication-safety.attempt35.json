@@ -1,0 +1,30 @@
+{
+  "credential_findings": 0,
+  "default_gitleaks_no_allowlist": true,
+  "diff_check": "PASS",
+  "personal_identifier_findings": 0,
+  "public_payload_fields": "hashes, relative paths, permitted stable IDs, numerical counts and timings; no transcript payload",
+  "recorded_at": "2026-10-08T07:31:11.084897+00:00",
+  "reviewed_base": "6ca92b9810f05ad88bb2a0a79462600ff698485c",
+  "schema": "g2_publication_safety_v1",
+  "scientific_source_changed": false,
+  "staged_diff_sha256": "de520a533c4b5dc76b4ad584bb110eeeee18813510855242d82a67243cb44862",
+  "staged_paths": [
+    "ORCHESTRATION.html",
+    "docs/LOG.md",
+    "docs/reports/G2_B100_D1_U1_SCIENTIFIC_EXECUTION.md",
+    "docs/reviews/G2_B100_D1_U1_EXECUTION_INDEPENDENT_REVIEW.md",
+    "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-B100-D1-U1-seed42-lr3e-4.update00204.attempt01.json",
+    "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-B100-D1-U1-seed42-lr3e-4.update00285.attempt01.json",
+    "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-B100-D1-U1-seed42-lr3e-4.update00305.attempt01.json",
+    "experiments/manifests/generation_2/scientific-observation-G2-B100-D1-U1-seed42-lr3e-4.update00204.attempt01.json",
+    "experiments/manifests/generation_2/scientific-observation-G2-B100-D1-U1-seed42-lr3e-4.update00285.attempt01.json",
+    "experiments/manifests/generation_2/scientific-observation-G2-B100-D1-U1-seed42-lr3e-4.update00305.attempt01.json",
+    "experiments/manifests/generation_2/scientific-outcome-G2-B100-D1-U1-seed42-lr3e-4.attempt01.json",
+    "experiments/manifests/generation_2/scientific-progress-orchestration-visual.attempt08.json",
+    "experiments/manifests/generation_2/scientific-progress.attempt10.json",
+    "experiments/manifests/generation_2/scientific-recipe-independent-G2-B100-D1-U1-seed42-lr3e-4.attempt01.json",
+    "experiments/manifests/generation_2/scientific-start-G2-C101-D1-U1-seed42-lr3e-4.attempt01.json"
+  ],
+  "status": "PASS"
+}
