@@ -1,0 +1,210 @@
+{
+  "active_recipe_completed_observations": [],
+  "active_recipe_independent_initial_checkpoint_receipt": "experiments/manifests/generation_2/scientific-recipe-independent-G2-C101-D1-U8-seed42-lr3e-4.attempt02.json",
+  "active_recipe_independent_initial_checkpoint_sha256": "e3547caae82b5c2f87483aa5d00b4ceb06836d4fe9967399edcd16c449a4ecd1",
+  "active_recipe_initial_checkpoint_COMPLETE_sha256": "448014fe06a501bbad9c18fbc03d9edb8044681b41e8a67f5f37a581565a0501",
+  "active_recipe_initial_checkpoint_payload_hashes_verified": 1,
+  "active_recipe_initial_checkpoint_relative": "scientific-checkpoints-v1/G2-ByT5-D1-10pass-seed42-lr3e-4.attempt01.update00000",
+  "active_recipe_initial_checkpoint_state_pt_sha256": "39786db97107f194791cbf062066398e1ab81ef3db9facb9b013816c5b45e8ab",
+  "active_recipe_initial_checkpoint_state_sha256": "48af8f6b04a20a6fd1b0c3a9b9cd17fef92d45c33c92e183da0df34c2ff4b094",
+  "active_recipe_initial_model_official_tensor_equality_verified": true,
+  "active_recipe_initial_observation": "IN_PROGRESS_UNVERIFIED",
+  "active_recipe_initial_optimizer_empty_and_settings_verified": true,
+  "active_recipe_initial_unique_parameters": 299637760,
+  "active_recipe_schedule": [
+    {
+      "actual_presentations": 0,
+      "frontier_decision_commit": "b1c565e341c1571fec15d4f918049c584246517b",
+      "frontier_decision_sha256": "f198e3ad9a59e1236e4d1506f19a0b63985e944224ef34ffb338676bc11d73ed",
+      "label": "initialization",
+      "nominal_passes": 0,
+      "nominal_presentations": 0,
+      "optimizer_update": 0,
+      "original_qualified_recipe_sha256": "cd74653ce9af7a155560884e1b34d1e936392ed9fce61558345b1d8ac442b5df",
+      "presentation_offset": 0
+    },
+    {
+      "actual_presentations": 28228,
+      "frontier_decision_commit": "b1c565e341c1571fec15d4f918049c584246517b",
+      "frontier_decision_sha256": "f198e3ad9a59e1236e4d1506f19a0b63985e944224ef34ffb338676bc11d73ed",
+      "label": "2-pass nominal milestone \u2014 first completed update at/after boundary",
+      "nominal_passes": 2,
+      "nominal_presentations": 28226,
+      "optimizer_update": 7057,
+      "original_qualified_recipe_sha256": "cd74653ce9af7a155560884e1b34d1e936392ed9fce61558345b1d8ac442b5df",
+      "presentation_offset": 2
+    },
+    {
+      "actual_presentations": 70568,
+      "frontier_decision_commit": "b1c565e341c1571fec15d4f918049c584246517b",
+      "frontier_decision_sha256": "f198e3ad9a59e1236e4d1506f19a0b63985e944224ef34ffb338676bc11d73ed",
+      "label": "5-pass nominal milestone \u2014 first completed update at/after boundary",
+      "nominal_passes": 5,
+      "nominal_presentations": 70565,
+      "optimizer_update": 17642,
+      "original_qualified_recipe_sha256": "cd74653ce9af7a155560884e1b34d1e936392ed9fce61558345b1d8ac442b5df",
+      "presentation_offset": 3
+    },
+    {
+      "actual_presentations": 141130,
+      "frontier_decision_commit": "b1c565e341c1571fec15d4f918049c584246517b",
+      "frontier_decision_sha256": "f198e3ad9a59e1236e4d1506f19a0b63985e944224ef34ffb338676bc11d73ed",
+      "label": "10-pass exact endpoint",
+      "nominal_passes": 10,
+      "nominal_presentations": 141130,
+      "optimizer_update": 35283,
+      "original_qualified_recipe_sha256": "cd74653ce9af7a155560884e1b34d1e936392ed9fce61558345b1d8ac442b5df",
+      "presentation_offset": 0
+    }
+  ],
+  "active_recipe_schedule_sha256": "a83d8e1a10c51cbe06b21bd0b3e078d926e98e1d89292dfca65c3e2e7c3bc4f5",
+  "calibration_evaluations_recorded_completed_observations": 68400,
+  "campaign_freeze_sha256": "084be260a7f6797d9e138839fe56660c3ce47cb6d92d813c4c3a518b3344cb14",
+  "complete_suite": "UNRUN_DURING_ACTIVE_SCIENTIFIC_ACCELERATOR_JOB",
+  "completed_prescribed_outcomes": 6,
+  "completed_recipe_extents": [
+    {
+      "actual_exposure": 10007223,
+      "completed_masters": 305,
+      "nominal_exposure": 10000000,
+      "optimizer_updates": 2440,
+      "presentations": 134591,
+      "recipe_id": "G2-B100-D0-U8-seed42-lr3e-4"
+    },
+    {
+      "actual_exposure": 10007223,
+      "completed_masters": 305,
+      "nominal_exposure": 10000000,
+      "optimizer_updates": 2440,
+      "presentations": 134591,
+      "recipe_id": "G2-C101-D0-U8-seed42-lr3e-4"
+    },
+    {
+      "actual_exposure": 10006223,
+      "completed_masters": 305,
+      "nominal_exposure": 10000000,
+      "optimizer_updates": 305,
+      "presentations": 136755,
+      "recipe_id": "G2-B100-D1-U1-seed42-lr3e-4"
+    },
+    {
+      "actual_exposure": 10006223,
+      "completed_masters": 305,
+      "nominal_exposure": 10000000,
+      "optimizer_updates": 305,
+      "presentations": 136755,
+      "recipe_id": "G2-C101-D1-U1-seed42-lr3e-4"
+    },
+    {
+      "actual_exposure": 10006223,
+      "completed_masters": 305,
+      "nominal_exposure": 10000000,
+      "optimizer_updates": 2440,
+      "presentations": 136755,
+      "recipe_id": "G2-B100-D1-U8-seed42-lr3e-4"
+    },
+    {
+      "actual_exposure": 10006223,
+      "completed_masters": 305,
+      "nominal_exposure": 10000000,
+      "optimizer_updates": 2440,
+      "presentations": 136755,
+      "recipe_id": "G2-C101-D1-U8-seed42-lr3e-4"
+    }
+  ],
+  "completed_recipe_independent_receipt": "experiments/manifests/generation_2/scientific-recipe-independent-G2-C101-D1-U8-seed42-lr3e-4.attempt02.json",
+  "completed_recipe_independent_sha256": "e3547caae82b5c2f87483aa5d00b4ceb06836d4fe9967399edcd16c449a4ecd1",
+  "current_phase": "All six B/C recipes completed; ByT5 fresh initialization checkpoint verified and initialization evaluation active",
+  "final_or_sealed_work": false,
+  "full_campaign_reports": "UNRUN_UNTIL_ALL_SEVEN_OUTCOMES",
+  "last_complete_suite_passes": 505,
+  "live_storage": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 355888484352,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "prior_progress_receipt": "experiments/manifests/generation_2/scientific-progress.attempt15.json",
+  "prior_progress_sha256": "0b3976a72a28250c863d6f16224c6f0a4569d876fd326a62a90ba30039c0169a",
+  "quality_selection_performed": false,
+  "recipes": [
+    {
+      "latest_receipt": "experiments/manifests/generation_2/scientific-outcome-G2-B100-D0-U8-seed42-lr3e-4.attempt01.json",
+      "latest_receipt_sha256": "040b1b2fdd2c4ea82c9973b8abfc828730721229af7cb31a3d4e2a27f55c23b3",
+      "recipe_id": "G2-B100-D0-U8-seed42-lr3e-4",
+      "scientific_slot_consumed": true,
+      "status": "COMPLETED"
+    },
+    {
+      "latest_receipt": "experiments/manifests/generation_2/scientific-outcome-G2-C101-D0-U8-seed42-lr3e-4.attempt01.json",
+      "latest_receipt_sha256": "998c4dabc2fad4cc5c1ba19b1555a47624ac1d44219f39f4879050bdb28303a4",
+      "recipe_id": "G2-C101-D0-U8-seed42-lr3e-4",
+      "scientific_slot_consumed": true,
+      "status": "COMPLETED"
+    },
+    {
+      "latest_receipt": "experiments/manifests/generation_2/scientific-outcome-G2-B100-D1-U1-seed42-lr3e-4.attempt01.json",
+      "latest_receipt_sha256": "56d0c20a469e6255e0ccefbf2a427e5a3404001d4aeec94294193ee419bf0412",
+      "recipe_id": "G2-B100-D1-U1-seed42-lr3e-4",
+      "scientific_slot_consumed": true,
+      "status": "COMPLETED"
+    },
+    {
+      "latest_receipt": "experiments/manifests/generation_2/scientific-outcome-G2-C101-D1-U1-seed42-lr3e-4.attempt01.json",
+      "latest_receipt_sha256": "ba23f2e0c47a09549c9279a50a0653d1c465615a5f8e9afe5278b0a089dc9fbb",
+      "recipe_id": "G2-C101-D1-U1-seed42-lr3e-4",
+      "scientific_slot_consumed": true,
+      "status": "COMPLETED"
+    },
+    {
+      "latest_receipt": "experiments/manifests/generation_2/scientific-outcome-G2-B100-D1-U8-seed42-lr3e-4.attempt01.json",
+      "latest_receipt_sha256": "b7b61cbc075b177ffb917e107c82e445e6e7c8883ad9fc35f6b71d60fac37ef3",
+      "recipe_id": "G2-B100-D1-U8-seed42-lr3e-4",
+      "scientific_slot_consumed": true,
+      "status": "COMPLETED"
+    },
+    {
+      "latest_receipt": "experiments/manifests/generation_2/scientific-outcome-G2-C101-D1-U8-seed42-lr3e-4.attempt01.json",
+      "latest_receipt_sha256": "4d25c8c25fde5ad847bd7f863247f01b03871dba61eb9e5d3099a56d4224cadc",
+      "recipe_id": "G2-C101-D1-U8-seed42-lr3e-4",
+      "scientific_slot_consumed": true,
+      "status": "COMPLETED"
+    },
+    {
+      "latest_receipt": "experiments/manifests/generation_2/scientific-start-G2-ByT5-D1-10pass-seed42-lr3e-4.attempt01.json",
+      "latest_receipt_sha256": "8c02596dc5489d082d58da20e91449cb360cd7b969ff8a7cde3da9448a4f2b1e",
+      "recipe_id": "G2-ByT5-D1-10pass-seed42-lr3e-4",
+      "scientific_slot_consumed": true,
+      "status": "RUNNING"
+    }
+  ],
+  "recorded_at": "2026-10-08T14:40:46.066565+00:00",
+  "retained_completed_recipe_failed_check": {
+    "failure_type": "Checker expected training mode at initialization; documented loader evaluation mode is preserved",
+    "installed_loader_source_sha256": "0d6747d87a1b0c6cd95e6112fb2c269e109350deba0860aa4733801f26f5c0d9",
+    "private_log_relative": "logs-v1/execution-continuation.attempt01/recipe6-independent-audit.attempt01.log",
+    "private_log_sha256": "19aacdc6bfc2650ff441cae5244161dc28f2be593f835d41f4ae811ee74003d1",
+    "receipt": "experiments/manifests/generation_2/scientific-recipe-independent-G2-C101-D1-U8-seed42-lr3e-4.attempt01.json",
+    "receipt_sha256": "5dbe64fe3452ebf9aea61e514c8aefbf63248e7132a11bee28afde369cb3967a",
+    "scientific_source_changed": false
+  },
+  "retained_prefix_check_receipts": [
+    {
+      "path": "experiments/manifests/generation_2/scientific-progress-independent.attempt09.json",
+      "sha256": "125226d0d4d0da6f9f30ab8fc7248abebc52c94ea4a5dc3caa4466c7fe5c2282"
+    },
+    {
+      "path": "experiments/manifests/generation_2/scientific-progress-independent.attempt10.json",
+      "sha256": "1bcff800e8784ad4fd8aa780f444d3a6918c41d535af487c79d27dab81877422"
+    },
+    {
+      "path": "experiments/manifests/generation_2/scientific-progress-independent.attempt11.json",
+      "sha256": "6805052ba29ce6b2912eac7e8ac5d00edd4a7d4fe0e54a7391efb569833cd62c"
+    }
+  ],
+  "reviewed_base": "beb8589518a9d8a1c50892fd8bf93683e37dcfb7",
+  "schema": "g2_scientific_campaign_progress_v1",
+  "scientific_design_changed": false,
+  "scientific_slots_consumed": 7
+}
