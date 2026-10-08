@@ -1,0 +1,17 @@
+{
+  "appearance_restored": "Auto",
+  "current_status_text_verified": "Two outcomes complete; recipe 3 initialization/1M/3M observations complete; 4M save verified; four recipes unstarted",
+  "desktop_width": 1280,
+  "light_dark_inspected": true,
+  "no_document_overflow": true,
+  "persisted_screenshot_files": 0,
+  "phone_height": 844,
+  "phone_width": 390,
+  "recorded_at": "2026-10-08T06:29:09.587399+00:00",
+  "reviewed_base": "ae3a0ef09e61a5c7d870cd3e09a236a4cb37625a",
+  "schema": "g2_progress_page_visual_v1",
+  "source_sha256": "74dacf1383f676c1ab4da28d60c90151dc9925ebd8be0bca6885dcd018268cf7",
+  "status": "PASS_LAYOUT_AND_STATUS_TEXT",
+  "temporary_tabs_closed": true,
+  "viewport_reset": true
+}

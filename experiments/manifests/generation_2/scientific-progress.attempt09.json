@@ -1,0 +1,164 @@
+{
+  "active_recipe_completed_observations": [
+    {
+      "TRAIN_forced_cases": 304,
+      "TRAIN_greedy_cases": 304,
+      "calibration_evaluations": 1900,
+      "calibration_receipt": "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-B100-D1-U1-seed42-lr3e-4.update00000.attempt01.json",
+      "calibration_receipt_sha256": "834929de0689ccaca0838e8d8d0c66a1ab49b77c09a65763c320bca074a7ec74",
+      "checkpoint_COMPLETE_sha256": "6dc5efcda622ee698c6d3dee43378425a3e9cf72bd6e455b4b42ceeba957a303",
+      "endpoint": {
+        "actual_exposure": 0,
+        "last_ordinal": -1,
+        "master_completed": 0,
+        "nominal_exposure": 0,
+        "optimizer_updates": 0
+      },
+      "heldout_cases": 2984,
+      "optimizer_update": 0,
+      "payload_hashes_verified": 6,
+      "receipt": "experiments/manifests/generation_2/scientific-observation-G2-B100-D1-U1-seed42-lr3e-4.update00000.attempt01.json",
+      "receipt_sha256": "75733617fb4b0e6d12044904a48b8c0922f7eef9cd3f94ce7786e22a110bb267",
+      "state_sha256": "51ab2b0b82dc139343514732ad677f9df8e21b753a55cf0977248d03653c8d2d"
+    },
+    {
+      "TRAIN_forced_cases": null,
+      "TRAIN_greedy_cases": null,
+      "calibration_evaluations": 1900,
+      "calibration_receipt": "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-B100-D1-U1-seed42-lr3e-4.update00031.attempt01.json",
+      "calibration_receipt_sha256": "0696c42b046579ddf957ad5a5c343d1d43825c3b63f62717eb4a1cfc1754f21b",
+      "checkpoint_COMPLETE_sha256": "8fc2dad15cc73b70f8bc166253c175515082af725717ff697ce8e1639c1e48e0",
+      "endpoint": {
+        "actual_exposure": 1016836,
+        "last_ordinal": 14057,
+        "master_completed": 31,
+        "nominal_exposure": 1000000,
+        "optimizer_updates": 31
+      },
+      "heldout_cases": 2984,
+      "optimizer_update": 31,
+      "payload_hashes_verified": 3,
+      "receipt": "experiments/manifests/generation_2/scientific-observation-G2-B100-D1-U1-seed42-lr3e-4.update00031.attempt01.json",
+      "receipt_sha256": "b64a1a8c2ce25e3d2ce7a643e134423ca1c07247b7f29f09d910b9e7f9ea0868",
+      "state_sha256": "9a25efef0901ba0254ad8b78796060502dbe709e90e05b4378343c09d8b45a60"
+    },
+    {
+      "TRAIN_forced_cases": null,
+      "TRAIN_greedy_cases": null,
+      "calibration_evaluations": 1900,
+      "calibration_receipt": "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-B100-D1-U1-seed42-lr3e-4.update00092.attempt01.json",
+      "calibration_receipt_sha256": "26b53b65ff37252b74fb8f9ba733dec5c50d7468f8231e84bb3b333d174b9297",
+      "checkpoint_COMPLETE_sha256": "29830f61c6e6fa2db2443ecd4281b15912db149372b97a965db9cb6470dfaf33",
+      "endpoint": {
+        "actual_exposure": 3017745,
+        "last_ordinal": 41719,
+        "master_completed": 92,
+        "nominal_exposure": 3000000,
+        "optimizer_updates": 92
+      },
+      "heldout_cases": 2984,
+      "optimizer_update": 92,
+      "payload_hashes_verified": 3,
+      "receipt": "experiments/manifests/generation_2/scientific-observation-G2-B100-D1-U1-seed42-lr3e-4.update00092.attempt01.json",
+      "receipt_sha256": "1ffbafd642f5ce88d33c6985c8bea862fe6aeef0655b6eae0a00e5382e3d988f",
+      "state_sha256": "14c70c627a7d1c6f5a2d843afc8131c3428df5449622c41cfe43bb47364d4b76"
+    }
+  ],
+  "active_recipe_independent_progress_receipt": "experiments/manifests/generation_2/scientific-progress-independent.attempt05.json",
+  "active_recipe_independent_progress_sha256": "478c36bf025f44710c27ae8df60c8c2763dfd778fa02e2428e2b7e779d6919cd",
+  "active_recipe_initial_checkpoint_COMPLETE_sha256": "6dc5efcda622ee698c6d3dee43378425a3e9cf72bd6e455b4b42ceeba957a303",
+  "active_recipe_initial_checkpoint_metadata_sha256": "18e0f2b75d1ab2e61c4c7799ef5d8c50930a64c049071ff57334d26ad206adbe",
+  "active_recipe_initial_checkpoint_state_sha256": "51ab2b0b82dc139343514732ad677f9df8e21b753a55cf0977248d03653c8d2d",
+  "active_recipe_latest_verified_checkpoint_actual_exposure": 4001964,
+  "active_recipe_latest_verified_checkpoint_completed_masters": 122,
+  "active_recipe_latest_verified_checkpoint_nominal_exposure": 4000000,
+  "active_recipe_latest_verified_checkpoint_presentations": 55355,
+  "active_recipe_latest_verified_checkpoint_relative": "scientific-checkpoints-v1/G2-B100-D1-U1-seed42-lr3e-4.attempt01.update0122",
+  "active_recipe_latest_verified_checkpoint_update": 122,
+  "calibration_evaluations_recorded_completed_observations": 28500,
+  "campaign_freeze_sha256": "084be260a7f6797d9e138839fe56660c3ce47cb6d92d813c4c3a518b3344cb14",
+  "complete_suite": "UNRUN_DURING_ACTIVE_SCIENTIFIC_ACCELERATOR_JOB",
+  "completed_prescribed_outcomes": 2,
+  "completed_recipe_extents": [
+    {
+      "actual_exposure": 10007223,
+      "completed_masters": 305,
+      "nominal_exposure": 10000000,
+      "optimizer_updates": 2440,
+      "presentations": 134591,
+      "recipe_id": "G2-B100-D0-U8-seed42-lr3e-4"
+    },
+    {
+      "actual_exposure": 10007223,
+      "completed_masters": 305,
+      "nominal_exposure": 10000000,
+      "optimizer_updates": 2440,
+      "presentations": 134591,
+      "recipe_id": "G2-C101-D0-U8-seed42-lr3e-4"
+    }
+  ],
+  "completed_recipe_independent_receipt": "experiments/manifests/generation_2/scientific-recipe-independent-G2-C101-D0-U8-seed42-lr3e-4.attempt02.json",
+  "completed_recipe_independent_sha256": "c35076fa7bbea8bdb5f11520b9bcc85e606c7036f273cdc5097ed358822e6f16",
+  "current_phase": "Recipes 1 and 2 completed; recipe 3 initialization, 1M and 3M observations complete; scientific execution active; four recipes unstarted",
+  "final_or_sealed_work": false,
+  "full_campaign_reports": "UNRUN_UNTIL_ALL_SEVEN_OUTCOMES",
+  "last_complete_suite_passes": 505,
+  "live_storage": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 435982733312,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "prior_progress_receipt": "experiments/manifests/generation_2/scientific-progress.attempt08.json",
+  "prior_progress_sha256": "82bef9dfa38cf7e4b51ffe9af45a6aa5644b69ae28d6fe6fdc3919de249bcc36",
+  "quality_selection_performed": false,
+  "recipes": [
+    {
+      "latest_receipt": "experiments/manifests/generation_2/scientific-outcome-G2-B100-D0-U8-seed42-lr3e-4.attempt01.json",
+      "latest_receipt_sha256": "040b1b2fdd2c4ea82c9973b8abfc828730721229af7cb31a3d4e2a27f55c23b3",
+      "recipe_id": "G2-B100-D0-U8-seed42-lr3e-4",
+      "scientific_slot_consumed": true,
+      "status": "COMPLETED"
+    },
+    {
+      "latest_receipt": "experiments/manifests/generation_2/scientific-outcome-G2-C101-D0-U8-seed42-lr3e-4.attempt01.json",
+      "latest_receipt_sha256": "998c4dabc2fad4cc5c1ba19b1555a47624ac1d44219f39f4879050bdb28303a4",
+      "recipe_id": "G2-C101-D0-U8-seed42-lr3e-4",
+      "scientific_slot_consumed": true,
+      "status": "COMPLETED"
+    },
+    {
+      "latest_receipt": "experiments/manifests/generation_2/scientific-start-G2-B100-D1-U1-seed42-lr3e-4.attempt01.json",
+      "latest_receipt_sha256": "e1d33dd0dd8919bee8b0705b7fd1092755e91cc84448e8bf75e83223b3a44951",
+      "recipe_id": "G2-B100-D1-U1-seed42-lr3e-4",
+      "scientific_slot_consumed": true,
+      "status": "RUNNING"
+    },
+    {
+      "recipe_id": "G2-C101-D1-U1-seed42-lr3e-4",
+      "scientific_slot_consumed": false,
+      "status": "AUTHORIZED_UNSTARTED"
+    },
+    {
+      "recipe_id": "G2-B100-D1-U8-seed42-lr3e-4",
+      "scientific_slot_consumed": false,
+      "status": "AUTHORIZED_UNSTARTED"
+    },
+    {
+      "recipe_id": "G2-C101-D1-U8-seed42-lr3e-4",
+      "scientific_slot_consumed": false,
+      "status": "AUTHORIZED_UNSTARTED"
+    },
+    {
+      "recipe_id": "G2-ByT5-D1-10pass-seed42-lr3e-4",
+      "scientific_slot_consumed": false,
+      "status": "AUTHORIZED_UNSTARTED"
+    }
+  ],
+  "recorded_at": "2026-10-08T06:27:42.437415+00:00",
+  "reviewed_base": "ae3a0ef09e61a5c7d870cd3e09a236a4cb37625a",
+  "schema": "g2_scientific_campaign_progress_v1",
+  "scientific_design_changed": false,
+  "scientific_slots_consumed": 3
+}
