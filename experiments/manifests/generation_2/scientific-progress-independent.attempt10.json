@@ -1,0 +1,18 @@
+{
+  "attempt": 10,
+  "error": "No module named 'src'",
+  "error_type": "ModuleNotFoundError",
+  "failure_stage": "Repository import before checker execution; repository root missing from import path",
+  "independent_scientific_checks_executed": false,
+  "private_audit_code_relative": "logs-v1/execution-continuation.attempt01/c101-d1-u8-prefix-independent.attempt10.py",
+  "private_audit_code_sha256": "b696f5f12f41a5524bb959ca3266e05f0003f09e725736660a0a8d070ee57f3e",
+  "private_failed_log_relative": "logs-v1/execution-continuation.attempt01/c101-d1-u8-prefix-independent.attempt10.log",
+  "private_failed_log_sha256": "6bd25ba0b489f22bbc22496ecbc72a740c9534690ca4f6736aacb6c2fcb6e5df",
+  "process_exit_code": 1,
+  "recipe_id": "G2-C101-D1-U8-seed42-lr3e-4",
+  "recorded_at": "2026-10-08T13:38:58.055143+00:00",
+  "reviewed_base": "d979782f2540de68b22de33b2a6824281f3942b8",
+  "schema": "g2_independent_scientific_progress_v1",
+  "scientific_job_changed": false,
+  "status": "FAIL_INDEPENDENT_SCIENTIFIC_PREFIX_CHECK"
+}
