@@ -1,0 +1,30 @@
+{
+  "credential_findings": 0,
+  "default_gitleaks_no_allowlist": true,
+  "diff_check": "PASS",
+  "personal_identifier_findings": 0,
+  "public_payload_fields": "hashes, relative paths, permitted stable IDs, numerical counts and timings; no transcript payload",
+  "recorded_at": "2026-10-08T11:33:06.584448+00:00",
+  "reviewed_base": "75f78e89ba186e0a9019e15077d6db086612de3d",
+  "schema": "g2_publication_safety_v1",
+  "scientific_source_changed": false,
+  "staged_diff_sha256": "c085e8c74b0f4d882ecd2d8786ab6574ddc900d9f993e8a53a1a3ab25bd9eb3d",
+  "staged_paths": [
+    "ORCHESTRATION.html",
+    "docs/LOG.md",
+    "docs/reviews/G2_B100_D1_U8_P0_PREFIX_INDEPENDENT_REVIEW.md",
+    "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-B100-D1-U8-seed42-lr3e-4.update00000.attempt01.json",
+    "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-B100-D1-U8-seed42-lr3e-4.update00248.attempt01.json",
+    "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-B100-D1-U8-seed42-lr3e-4.update00736.attempt01.json",
+    "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-B100-D1-U8-seed42-lr3e-4.update01632.attempt01.json",
+    "experiments/manifests/generation_2/scientific-observation-G2-B100-D1-U8-seed42-lr3e-4.update00000.attempt01.json",
+    "experiments/manifests/generation_2/scientific-observation-G2-B100-D1-U8-seed42-lr3e-4.update00248.attempt01.json",
+    "experiments/manifests/generation_2/scientific-observation-G2-B100-D1-U8-seed42-lr3e-4.update00736.attempt01.json",
+    "experiments/manifests/generation_2/scientific-observation-G2-B100-D1-U8-seed42-lr3e-4.update01632.attempt01.json",
+    "experiments/manifests/generation_2/scientific-progress-independent.attempt07.json",
+    "experiments/manifests/generation_2/scientific-progress-independent.attempt08.json",
+    "experiments/manifests/generation_2/scientific-progress-orchestration-visual.attempt11.json",
+    "experiments/manifests/generation_2/scientific-progress.attempt13.json"
+  ],
+  "status": "PASS"
+}
