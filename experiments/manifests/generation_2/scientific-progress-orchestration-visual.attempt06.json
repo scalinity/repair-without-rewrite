@@ -1,0 +1,17 @@
+{
+  "appearance_restored": "Auto",
+  "current_status_text_verified": "Recipes 1 and 2 complete; recipe 3 B100-D1-U1 initialization evaluation active; four unstarted",
+  "desktop_width": 1280,
+  "light_dark_inspected": true,
+  "no_document_overflow": true,
+  "persisted_screenshot_files": 0,
+  "phone_height": 844,
+  "phone_width": 390,
+  "recorded_at": "2026-10-08T05:28:43.829666+00:00",
+  "reviewed_base": "b867d2430fb577c714e152d2f6ccad91d6095e49",
+  "schema": "g2_progress_page_visual_v1",
+  "source_sha256": "090c3467328a92f6730afe400ea7baf1a6ffef2195fce2bc1df226525e8e9113",
+  "status": "PASS_LAYOUT_AND_STATUS_TEXT",
+  "temporary_tabs_closed": true,
+  "viewport_reset": true
+}

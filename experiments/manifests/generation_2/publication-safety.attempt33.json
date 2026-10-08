@@ -1,0 +1,31 @@
+{
+  "credential_findings": 0,
+  "default_gitleaks_no_allowlist": true,
+  "diff_check": "PASS",
+  "personal_identifier_findings": 0,
+  "public_payload_fields": "hashes, relative paths, permitted stable IDs, numerical counts and timings; no transcript payload",
+  "recorded_at": "2026-10-08T05:29:21.965236+00:00",
+  "reviewed_base": "b867d2430fb577c714e152d2f6ccad91d6095e49",
+  "schema": "g2_publication_safety_v1",
+  "scientific_source_changed": false,
+  "staged_diff_sha256": "8f39186bb2c3eb3ad1027a8a04bdc9ff3b39ba19c8b4c538ff3ad074bc7560dd",
+  "staged_paths": [
+    "ORCHESTRATION.html",
+    "docs/LOG.md",
+    "docs/reports/G2_C101_D0_U8_SCIENTIFIC_EXECUTION.md",
+    "docs/reviews/G2_C101_D0_U8_EXECUTION_INDEPENDENT_REVIEW.md",
+    "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-C101-D0-U8-seed42-lr3e-4.update01632.attempt01.json",
+    "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-C101-D0-U8-seed42-lr3e-4.update02280.attempt01.json",
+    "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-C101-D0-U8-seed42-lr3e-4.update02440.attempt01.json",
+    "experiments/manifests/generation_2/scientific-observation-G2-C101-D0-U8-seed42-lr3e-4.update01632.attempt01.json",
+    "experiments/manifests/generation_2/scientific-observation-G2-C101-D0-U8-seed42-lr3e-4.update02280.attempt01.json",
+    "experiments/manifests/generation_2/scientific-observation-G2-C101-D0-U8-seed42-lr3e-4.update02440.attempt01.json",
+    "experiments/manifests/generation_2/scientific-outcome-G2-C101-D0-U8-seed42-lr3e-4.attempt01.json",
+    "experiments/manifests/generation_2/scientific-progress-orchestration-visual.attempt06.json",
+    "experiments/manifests/generation_2/scientific-progress.attempt08.json",
+    "experiments/manifests/generation_2/scientific-recipe-independent-G2-C101-D0-U8-seed42-lr3e-4.attempt01.json",
+    "experiments/manifests/generation_2/scientific-recipe-independent-G2-C101-D0-U8-seed42-lr3e-4.attempt02.json",
+    "experiments/manifests/generation_2/scientific-start-G2-B100-D1-U1-seed42-lr3e-4.attempt01.json"
+  ],
+  "status": "PASS"
+}

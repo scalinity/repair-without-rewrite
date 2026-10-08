@@ -1,0 +1,14 @@
+{
+  "bounded_checker_relative": "logs-v1/execution-continuation.attempt01/recipe2-independent-audit.attempt01.py",
+  "bounded_checker_sha256": "795538d6e6c17d49a69693ce9c3cf6d15888cc7cdf90ff4abb52d51c0f629ca9",
+  "elapsed_seconds": "UNMEASURED",
+  "failed_check": "Next-recipe checkpoint identity lookup assumed presentations; actual immutable metadata uses ledger.",
+  "failure_scope": "CPU evidence checker only; scientific artifacts, source and active process unchanged",
+  "private_log_relative": "logs-v1/execution-continuation.attempt01/recipe2-independent-audit.attempt01.log",
+  "private_log_sha256": "a062a50816096200be95bd28a73dd65901540ed9af6f804ea19175b6412e7b0d",
+  "recipe_id": "G2-C101-D0-U8-seed42-lr3e-4",
+  "recorded_at": "2026-10-08T05:23:29.688978+00:00",
+  "reviewed_base": "b867d2430fb577c714e152d2f6ccad91d6095e49",
+  "schema": "g2_independent_completed_recipe_v1",
+  "status": "FAIL_CHECKER_METADATA_KEY_ASSUMPTION"
+}
