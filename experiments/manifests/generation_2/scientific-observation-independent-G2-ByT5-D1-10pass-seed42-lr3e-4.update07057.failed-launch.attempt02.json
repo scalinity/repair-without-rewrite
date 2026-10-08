@@ -1,0 +1,17 @@
+{
+  "attempt": 2,
+  "check_results": "UNRUN_BY_THIS_FAILED_LAUNCH",
+  "failure": "Correction preparation matched multiple receipt suffixes; no attempt02 checker source was created. The subsequent launch failed before any checks.",
+  "model_constructed_or_executed": false,
+  "optimizer_update": 7057,
+  "private_log_relative": "logs-v1/execution-continuation.attempt01/byt5-2pass-observation-independent.attempt02.log",
+  "private_log_sha256": "db2239f86d69410caa2a180526503517fe4d73f5997994f5532f2b63f0ddab63",
+  "recipe_id": "G2-ByT5-D1-10pass-seed42-lr3e-4",
+  "recorded_at": "2026-10-08T21:50:19.195724+00:00",
+  "replacement_check": "attempt03",
+  "reviewed_base": "12d7e5a827da023a3dfb1af1c374be9dc33d2d3b",
+  "schema": "g2_independent_cpu_checker_failure_v1",
+  "scientific_recipe_replayed": false,
+  "scientific_source_or_artifact_changed": false,
+  "status": "FAILED_CHECKER_LAUNCH"
+}
