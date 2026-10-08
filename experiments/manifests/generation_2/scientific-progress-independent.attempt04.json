@@ -1,0 +1,102 @@
+{
+  "actual_exposure": 5019821,
+  "attempt": 4,
+  "calibration_evaluations_recorded": 5700,
+  "checker_source_sha256": "ac69d104cbf83462ceee4da851ad7ef6fa95da71b5e889eadc020ae6d3415f87",
+  "checkpoint_COMPLETE_sha256": "44adb799ca110172e7f1d75fbb2791e8594b00530ba53207453ab4077e4926f5",
+  "checkpoint_metadata_sha256": "ab6fa5b5b7a64929718da1e3dd059568f906869f4ec730cf39b03130ce420426",
+  "checkpoint_payload_hashes_verified": 2,
+  "completed_observations": [
+    {
+      "calibration_evaluations": 1900,
+      "calibration_receipt": "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-C101-D0-U8-seed42-lr3e-4.update00000.attempt01.json",
+      "calibration_receipt_sha256": "237901d1efc62fb486936bd0832f265e98b4d3cc71970a8669364ab439da6139",
+      "endpoint": {
+        "actual_exposure": 0,
+        "last_ordinal": -1,
+        "master_completed": 0,
+        "nominal_exposure": 0,
+        "optimizer_updates": 0
+      },
+      "heldout_cases": 2984,
+      "optimizer_update": 0,
+      "payload_hashes_verified": 6,
+      "receipt": "experiments/manifests/generation_2/scientific-observation-G2-C101-D0-U8-seed42-lr3e-4.update00000.attempt01.json",
+      "receipt_sha256": "b4c8976ae50d5556a2935be397ab9381aae6173741258c2df4bccdb70591039d"
+    },
+    {
+      "calibration_evaluations": 1900,
+      "calibration_receipt": "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-C101-D0-U8-seed42-lr3e-4.update00248.attempt01.json",
+      "calibration_receipt_sha256": "849a6e8465e0084f7cdca123157f8b60cea565f4cfa64d3e1f2d7f48361f87d7",
+      "endpoint": {
+        "actual_exposure": 1017149,
+        "last_ordinal": 13838,
+        "master_completed": 31,
+        "nominal_exposure": 1000000,
+        "optimizer_updates": 248
+      },
+      "heldout_cases": 2984,
+      "optimizer_update": 248,
+      "payload_hashes_verified": 3,
+      "receipt": "experiments/manifests/generation_2/scientific-observation-G2-C101-D0-U8-seed42-lr3e-4.update00248.attempt01.json",
+      "receipt_sha256": "7be97c80d2544a6135191b7c6e32849ea1ddd7a2ed2dc20f6bf5691e27493a97"
+    },
+    {
+      "calibration_evaluations": 1900,
+      "calibration_receipt": "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-C101-D0-U8-seed42-lr3e-4.update00736.attempt01.json",
+      "calibration_receipt_sha256": "fdb7334138b5807be43479780551fbffeaeba3f8fbc026bd058006f16784153d",
+      "endpoint": {
+        "actual_exposure": 3018478,
+        "last_ordinal": 41095,
+        "master_completed": 92,
+        "nominal_exposure": 3000000,
+        "optimizer_updates": 736
+      },
+      "heldout_cases": 2984,
+      "optimizer_update": 736,
+      "payload_hashes_verified": 3,
+      "receipt": "experiments/manifests/generation_2/scientific-observation-G2-C101-D0-U8-seed42-lr3e-4.update00736.attempt01.json",
+      "receipt_sha256": "8fa9872c7d8c283fde061b4d6364aa29ba3605c1a548082e57b9f565741c3fd5"
+    }
+  ],
+  "completed_update_identities_sha256": "fdfbb6769af5294184615229a2bc929d463969723e21680384f6cb0438f72cdb",
+  "completed_updates_reconstructed": 1224,
+  "elapsed_seconds": 3.9108672909787856,
+  "frozen_artifact_hashes_unchanged": 12,
+  "frozen_frontier_decision_hashes_unchanged": 3,
+  "frozen_functional_hashes_unchanged": 47,
+  "frozen_qualification_hashes_unchanged": 21,
+  "frozen_scientific_input_hashes_unchanged": 3,
+  "full_suite": "UNRUN_WHILE_SCIENTIFIC_ACCELERATOR_ACTIVE",
+  "latest_verified_checkpoint": "scientific-checkpoints-v1/G2-C101-D0-U8-seed42-lr3e-4.attempt01.update1224",
+  "logged_training_seconds_MEASURED": 2853.022887908155,
+  "master_completed": 153,
+  "master_queue_index_zero_based": 152,
+  "model_or_quality_selection_performed": false,
+  "nominal_exposure": 5000000,
+  "presentation_count": 68331,
+  "private_audit_code_relative": "logs-v1/execution-continuation.attempt01/c101-prefix-independent.attempt04.py",
+  "private_audit_code_sha256": "13b9c70dfa8266a8af817fa630752e9082f1be2947998d43875213498ceb03dc",
+  "private_updates_snapshot_relative": "logs-v1/execution-continuation.attempt01/scientific-progress-independent.attempt04.updates.jsonl",
+  "recipe_id": "G2-C101-D0-U8-seed42-lr3e-4",
+  "recorded_at": "2026-10-08T04:21:51.107109+00:00",
+  "reviewed_base": "95d47128e763c6924da1aa51d5c2b078c83336c2",
+  "schema": "g2_independent_scientific_progress_v1",
+  "scientific_recipe_completed": false,
+  "status": "PASS_INDEPENDENT_SCIENTIFIC_PREFIX_AND_COMPLETED_OBSERVATIONS",
+  "storage_after": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 454914301952,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "storage_before": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 455041945600,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "updates_snapshot_sha256": "49dce5eb0bf86dcfce3e32d952e4123d8fd47465bb90eb03ac5d9e0d5d377de5"
+}
