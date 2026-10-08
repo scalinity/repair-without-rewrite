@@ -1,0 +1,83 @@
+{
+  "attempt": 2,
+  "calibration_evaluations": 1900,
+  "calibration_receipt": "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-ByT5-D1-10pass-seed42-lr3e-4.update00000.attempt01.json",
+  "calibration_receipt_sha256": "e2d4735a0e47a167ee158460e25af22d83926d46e4f03c8c36ee302abd412536",
+  "decode_reason_counts": {
+    "nonbyte_or_invalid_utf8": 2984
+  },
+  "decode_seconds_MEASURED": 7901.2647974545835,
+  "elapsed_seconds_MEASURED": 3.794757582945749,
+  "expected_frozen_panel_order_verified": true,
+  "frozen_ByT5_execution_schedule_unchanged": true,
+  "frozen_external_artifact_hashes_unchanged": 12,
+  "frozen_frontier_hashes_unchanged": 3,
+  "frozen_original_recipe_hashes_unchanged": 7,
+  "frozen_qualification_hashes_unchanged": 21,
+  "frozen_scientific_input_hashes_unchanged": 3,
+  "frozen_scientific_source_hashes_unchanged": 47,
+  "full_suite": "UNRUN_WHILE_SCIENTIFIC_ACCELERATOR_ACTIVE",
+  "generated_ids_strict_UTF8_rejection_independently_verified": true,
+  "heldout_cases": 2984,
+  "initial_checkpoint_COMPLETE_sha256": "448014fe06a501bbad9c18fbc03d9edb8044681b41e8a67f5f37a581565a0501",
+  "initial_checkpoint_prior_independent_receipt": "experiments/manifests/generation_2/scientific-recipe-independent-G2-C101-D1-U8-seed42-lr3e-4.attempt02.json",
+  "initial_checkpoint_prior_independent_sha256": "e3547caae82b5c2f87483aa5d00b4ceb06836d4fe9967399edcd16c449a4ecd1",
+  "initial_checkpoint_relative": "scientific-checkpoints-v1/G2-ByT5-D1-10pass-seed42-lr3e-4.attempt01.update00000",
+  "initial_checkpoint_state_pt_sha256": "39786db97107f194791cbf062066398e1ab81ef3db9facb9b013816c5b45e8ab",
+  "milestone": {
+    "actual_presentations": 0,
+    "frontier_decision_commit": "b1c565e341c1571fec15d4f918049c584246517b",
+    "frontier_decision_sha256": "f198e3ad9a59e1236e4d1506f19a0b63985e944224ef34ffb338676bc11d73ed",
+    "label": "initialization",
+    "nominal_passes": 0,
+    "nominal_presentations": 0,
+    "optimizer_update": 0,
+    "original_qualified_recipe_sha256": "cd74653ce9af7a155560884e1b34d1e936392ed9fce61558345b1d8ac442b5df",
+    "presentation_offset": 0
+  },
+  "model_constructed_or_executed": false,
+  "observation_COMPLETE_sha256": "a78f0d18b880641509c57ff1cdb1b07fb18668155ff6c5719a4feee41e7465dd",
+  "observation_artifact_relative": "evaluation-v1/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update00000.attempt01",
+  "observation_cost_actual_presentations": 0,
+  "observation_cost_attaches_to_actual_update": 0,
+  "observation_cost_nominal_presentations": 0,
+  "observation_receipt": "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update00000.attempt01.json",
+  "observation_receipt_sha256": "52ada186420081edc98ba6885d6745189ad1ff189ddb1c4c9ea9948f890657fd",
+  "observation_seconds_MEASURED": 8525.97095287498,
+  "observation_time_in_physical_recipe_interval": true,
+  "payload_hashes_verified": 2,
+  "population_counts": {
+    "generated": 288,
+    "natural": 2696
+  },
+  "private_checker_relative": "logs-v1/execution-continuation.attempt01/byt5-initial-observation-independent.attempt02.py",
+  "private_checker_sha256": "e9a0e441bb3fd502e38919292c0b978ebfe1eeeaee111073d5a8267b0b720f4e",
+  "quality_or_checkpoint_selection": false,
+  "recipe_id": "G2-ByT5-D1-10pass-seed42-lr3e-4",
+  "recorded_at": "2026-10-08T16:41:50.881936+00:00",
+  "reviewed_base": "b02be75cfd4d62bc5d513cc0b7f1979745023117",
+  "schema": "g2_independent_scientific_observation_v1",
+  "scientific_recipe_completed": false,
+  "scorer_seconds_MEASURED": 5.3893831801833585,
+  "state_sha256": "48af8f6b04a20a6fd1b0c3a9b9cd17fef92d45c33c92e183da0df34c2ff4b094",
+  "status": "PASS_INDEPENDENT_SCIENTIFIC_OBSERVATION_AND_STATE",
+  "status_counts": {
+    "invalid_utf8": 2984
+  },
+  "storage_after": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 355885920256,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "storage_before": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 355885895680,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  },
+  "unique_case_ids": 2984,
+  "unique_training_extent_not_increased_by_observation": true
+}

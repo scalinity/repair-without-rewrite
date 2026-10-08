@@ -1,0 +1,47 @@
+{
+  "appearance_restored": "Auto",
+  "checks": [
+    {
+      "appearance": "light",
+      "document_width": 1280,
+      "no_document_overflow": true,
+      "visually_inspected": true,
+      "width": 1280
+    },
+    {
+      "appearance": "dark",
+      "document_width": 1280,
+      "no_document_overflow": true,
+      "visually_inspected": true,
+      "width": 1280
+    },
+    {
+      "appearance": "light",
+      "document_width": 390,
+      "no_document_overflow": true,
+      "visually_inspected": true,
+      "width": 390
+    },
+    {
+      "appearance": "dark",
+      "document_width": 390,
+      "no_document_overflow": true,
+      "visually_inspected": true,
+      "width": 390
+    }
+  ],
+  "complete_initialization_observation_and_active_training_text_verified": true,
+  "initialization_invalid_UTF8_retention_text_verified": true,
+  "layout_changed": false,
+  "page_sha256": "8c0e913f5af8f9a3f0f4e29a9dfe4e577953adc32c1341ebefe4f7eb6dd1529b",
+  "persisted_screenshots": 0,
+  "phone_height": 844,
+  "recorded_at": "2026-10-08T16:46:04.899345+00:00",
+  "reviewed_base": "b02be75cfd4d62bc5d513cc0b7f1979745023117",
+  "schema": "g2_orchestration_visual_v1",
+  "status": "PASS_LAYOUT_AND_STATUS_TEXT",
+  "temporary_preview_server_stopped": true,
+  "temporary_preview_tab_closed": true,
+  "viewport_override_reset": true,
+  "watched_tab_resized": false
+}

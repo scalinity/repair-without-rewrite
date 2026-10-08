@@ -1,0 +1,30 @@
+{
+  "attempt": 1,
+  "elapsed_seconds_MEASURED": 3.053706541948486,
+  "error_type": "KeyError",
+  "frozen_ByT5_execution_schedule_unchanged": true,
+  "frozen_external_artifact_hashes_unchanged": 12,
+  "frozen_frontier_hashes_unchanged": 3,
+  "frozen_original_recipe_hashes_unchanged": 7,
+  "frozen_qualification_hashes_unchanged": 21,
+  "frozen_scientific_input_hashes_unchanged": 3,
+  "frozen_scientific_source_hashes_unchanged": 47,
+  "full_suite": "UNRUN_WHILE_SCIENTIFIC_ACCELERATOR_ACTIVE",
+  "model_constructed_or_executed": false,
+  "private_checker_relative": "logs-v1/execution-continuation.attempt01/byt5-initial-observation-independent.attempt01.py",
+  "private_checker_sha256": "bc8b8878d5eaae09bdf284e84e1614b3adfe54fd3949d47344e09fd6aef8171e",
+  "quality_or_checkpoint_selection": false,
+  "recipe_id": "G2-ByT5-D1-10pass-seed42-lr3e-4",
+  "recorded_at": "2026-10-08T16:41:05.751558+00:00",
+  "reviewed_base": "b02be75cfd4d62bc5d513cc0b7f1979745023117",
+  "schema": "g2_independent_scientific_observation_v1",
+  "scientific_recipe_completed": false,
+  "status": "FAIL_INDEPENDENT_SCIENTIFIC_OBSERVATION_CHECK",
+  "storage_before": {
+    "filesystem": "Case-sensitive APFS",
+    "literal_free_bytes": 355885903872,
+    "policy_sha256": "c1c0c1fb27af0d73e64c3a1bc2cc7e98e9656064d6d0549e6145a0064ddfeb2f",
+    "root_binding_sha256": "2acd104814b418d91f0eb9077888c6a3fc0eb0715cd95b1d6546406c24acc868",
+    "volume_uuid_sha256": "d2830e5e525c9a1a3e6f9049cf42b53f7404f467e470683bf66058ed4f9c86f5"
+  }
+}

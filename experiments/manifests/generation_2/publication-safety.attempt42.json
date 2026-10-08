@@ -1,0 +1,24 @@
+{
+  "credential_findings": 0,
+  "default_gitleaks_no_allowlist": true,
+  "diff_check": "PASS",
+  "personal_identifier_findings": 0,
+  "public_payload_fields": "hashes, relative paths, permitted stable IDs, numerical counts and timings; no transcript payload",
+  "recorded_at": "2026-10-08T16:46:45.567560+00:00",
+  "reviewed_base": "b02be75cfd4d62bc5d513cc0b7f1979745023117",
+  "schema": "g2_publication_safety_v1",
+  "scientific_source_changed": false,
+  "staged_diff_sha256": "fc3bc3f8e9f597b3668a1434c37e533d8c01517d0ef6c70307e1a125fb1affcb",
+  "staged_paths": [
+    "ORCHESTRATION.html",
+    "docs/LOG.md",
+    "docs/reviews/G2_BYT5_INITIALIZATION_INDEPENDENT_REVIEW.md",
+    "experiments/manifests/development_calibration_consumption_generation_2_scientific-G2-ByT5-D1-10pass-seed42-lr3e-4.update00000.attempt01.json",
+    "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update00000.attempt01.json",
+    "experiments/manifests/generation_2/scientific-observation-independent-G2-ByT5-D1-10pass-seed42-lr3e-4.update00000.attempt01.json",
+    "experiments/manifests/generation_2/scientific-observation-independent-G2-ByT5-D1-10pass-seed42-lr3e-4.update00000.attempt02.json",
+    "experiments/manifests/generation_2/scientific-progress-orchestration-visual.attempt15.json",
+    "experiments/manifests/generation_2/scientific-progress.attempt17.json"
+  ],
+  "status": "PASS"
+}
