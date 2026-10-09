@@ -1,0 +1,13 @@
+# G2 scientific results independent review
+
+FACT: Reviewed execution source `9e737af0e5168e2b2b7a6d960274e2ded7d724be` at 2026-10-09T13:58:35.728134+00:00. The independent CPU path `benchmarks/g2_scientific_results_independent.py`, SHA-256 `6ba8b40d97bc6d983bc97ab5fa12f602d301725f8ac713fee8d03d398dfe432d`, does not import the launcher, summary producer, model, trainer or primary bootstrap implementation. Receipt `experiments/manifests/generation_2/scientific-results-independent.attempt01.json` (SHA-256 `8f952fc01a96e2e8468c4ac65234de5922bc3aad1984155f1803aecc8d8b5cf7`) binds summary `510e0efceec1127f38d524f8ca71a224cbaea59cd8206f5dc138889d9be74edd` and unchanged campaign `084be260a7f6797d9e138839fe56660c3ce47cb6d92d813c4c3a518b3344cb14`.
+
+MEASURED RESULT: All 42 frozen heldout panels reconstruct with2,984 cases each, including the two archived D0-U1 expanded-panel controls without retraining. Separate canonical rescoring, two-row integer edit-distance checks and a full-consumption generated parser reproduce failure-inclusive natural/generated counts and all reported subgroups. All 12 complete 304-case greedy/teacher-forced TRAIN diagnostic states independently reproduce and remain outside heldout eligibility.
+
+CALCULATION: Integer group multiplicities independently reproduce all 10,000 shared PCG64 seed42 draws over 52 groups; draw-index SHA-256 `ca7289b19fcdde43e36592843d88bc89d9aa3f2361120a120cd3df4c9ec336d0`. Exact rational effects and every paired/group-bootstrap interval reproduce for both separately analyzed arms. Lower/upper scorer alignment estimands remain separate from 95% sampling intervals, which do not capture training-seed uncertainty or establish H1.
+
+MEASURED RESULT: The endpoint-only frozen gates independently agree for all seven recipes. Both scratch D1-U8 candidates and exact ten-pass ByT5 fail WER strictly below RAW. B100-D1-U8 also fails genuine generated required repair. The prospective candidate/disposition rule reproduces FRONTIER_MODEL_REVIEW_REQUIRED, with no subjective cell selection, intermediate checkpoint selection or unregistered rescue. Independent ledger/resource accounting is separately recorded in `experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json` and its review.
+
+MEASURED RESULT: Independent reconstruction took 1836.888611 CPU seconds; bound-volume identity/access/free-space preflight passes before and after. This is verification cost separate from scientific recipe wall intervals. Complete post-campaign tests separately report 514 passes, zero failures/errors/skips and no removed baseline tests.
+
+PASS_INDEPENDENT_SCIENTIFIC_RESULTS

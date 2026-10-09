@@ -1,0 +1,24 @@
+{
+  "hits": [
+    {
+      "classification": "CALCULATED_PUBLIC_TEST_FILE_SHA256_NOT_A_CREDENTIAL",
+      "path": "tests/models/test_tokenizer.py",
+      "value": "1eaca6f5c6f54475b0e2725a6ba5466fc54b05fba79d17bda0ba64850b52e639"
+    },
+    {
+      "classification": "CALCULATED_PUBLIC_TEST_FILE_SHA256_NOT_A_CREDENTIAL",
+      "path": "tests/models/test_tokenizer_training.py",
+      "value": "4644a88b6ca3d2298e2de6597df0bfa0bf74ab91141e7d280d037e80162b76eb"
+    }
+  ],
+  "original_receipt_relative": "logs-v1/execution-continuation.attempt01/scientific-campaign-final-tests.original-receipt.attempt01.json",
+  "original_receipt_sha256": "ebeaebd4eda636e2320b6041bc9cf1990cd778cdcc133a061c60c086a8a861b6",
+  "real_credentials": 0,
+  "recorded_at": "2026-10-09T13:37:49.624758+00:00",
+  "resolution": "Represent all 41 unchanged baseline path/hash pairs as explicit records; retain every SHA256 and original private receipt; no scanner exclusions",
+  "scan_exit_code": 1,
+  "scan_report_relative": "logs-v1/execution-continuation.attempt01/pre-publication-content-scan.attempt01.json",
+  "scan_report_sha256": "e918763eed28c5476cd47805d1a266fd6def083e455f4cc3a9c3846c2b795a74",
+  "schema": "g2_publication_pattern_classification_v1",
+  "status": "TWO_PUBLIC_CHECKSUM_FALSE_POSITIVES_CLASSIFIED"
+}
