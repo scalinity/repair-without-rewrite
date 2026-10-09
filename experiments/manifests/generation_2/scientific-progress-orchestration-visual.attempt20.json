@@ -1,0 +1,45 @@
+{
+  "actual_nominal_presentation_and_offset_text_verified": true,
+  "appearance_restored": "Auto",
+  "checks": [
+    {
+      "appearance": "light",
+      "document_width": 1280,
+      "horizontal_overflow": false,
+      "viewport_width": 1280,
+      "visually_reviewed": true
+    },
+    {
+      "appearance": "dark",
+      "document_width": 1280,
+      "horizontal_overflow": false,
+      "viewport_width": 1280,
+      "visually_reviewed": true
+    },
+    {
+      "appearance": "light",
+      "document_width": 390,
+      "horizontal_overflow": false,
+      "viewport_width": 390,
+      "visually_reviewed": true
+    },
+    {
+      "appearance": "dark",
+      "document_width": 390,
+      "horizontal_overflow": false,
+      "viewport_width": 390,
+      "visually_reviewed": true
+    }
+  ],
+  "layout_changed": false,
+  "page": "ORCHESTRATION.html",
+  "page_sha256": "5810ba5e9cf148f301b2896807f3af29654de538188dd81cc47887c6eec16d40",
+  "persisted_screenshots": 0,
+  "recorded_at": "2026-10-09T11:14:04.103121+00:00",
+  "reviewed_base": "c05f8cc6017e5fc4530725211b3f6dfabf74a313",
+  "schema": "g2_orchestration_visual_v1",
+  "status": "PASS",
+  "temporary_preview_server_stopped": true,
+  "temporary_tab_closed": true,
+  "viewport_override_reset": true
+}
