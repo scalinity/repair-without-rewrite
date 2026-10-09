@@ -1,0 +1,21 @@
+{
+  "credential_findings": 0,
+  "default_gitleaks_no_allowlist": true,
+  "diff_check": "PASS",
+  "personal_identifier_findings": 0,
+  "public_payload_fields": "hashes, relative paths, permitted stable IDs, numerical counts and timings; no transcript payload",
+  "recorded_at": "2026-10-09T00:57:48.050257+00:00",
+  "reviewed_base": "848258e1a03b0772865971a2dfa3019d8f7d563f",
+  "schema": "g2_publication_safety_v1",
+  "scientific_source_changed": false,
+  "staged_diff_sha256": "afcaa326cb59fc9ce3d30be5946db928aa3ce7da9a38c46ccd00e2e8cb8d6c39",
+  "staged_paths": [
+    "ORCHESTRATION.html",
+    "docs/LOG.md",
+    "docs/reviews/G2_BYT5_5PASS_CHECKPOINT_INDEPENDENT_REVIEW.md",
+    "experiments/manifests/generation_2/scientific-byt5-prefix-independent.update17642.attempt01.json",
+    "experiments/manifests/generation_2/scientific-progress.attempt20.json",
+    "experiments/manifests/generation_2/scientific-progress-orchestration-visual.attempt18.json"
+  ],
+  "status": "PASS"
+}
