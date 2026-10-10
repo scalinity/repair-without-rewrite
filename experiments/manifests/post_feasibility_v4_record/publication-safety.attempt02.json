@@ -1,0 +1,48 @@
+{
+  "schema": "post_feasibility_v4_documentation_publication_safety_v1",
+  "phase": "A",
+  "attempt": 2,
+  "time_utc": "2026-10-10T06:09:24.308990+00:00",
+  "base": "ca69d2d8787c9baee823b2920e5f446a93d32afa",
+  "scanned_changes": {
+    "ORCHESTRATION.html": {
+      "credential_findings": 0,
+      "nonfunctional_private_identifiers": 0
+    },
+    "docs/LOG.md": {
+      "credential_findings": 0,
+      "nonfunctional_private_identifiers": 0
+    },
+    "docs/reviews/PROSPECTIVE_AMENDMENTS.md": {
+      "credential_findings": 0,
+      "nonfunctional_private_identifiers": 0
+    },
+    "experiments/manifests/post_feasibility_v4_record/documentation-integrity.attempt01.json": {
+      "credential_findings": 0,
+      "nonfunctional_private_identifiers": 0
+    },
+    "experiments/manifests/post_feasibility_v4_record/preparation.attempt01.json": {
+      "credential_findings": 0,
+      "nonfunctional_private_identifiers": 0
+    },
+    "experiments/manifests/post_feasibility_v4_record/publication-safety.attempt01.json": {
+      "credential_findings": 0,
+      "nonfunctional_private_identifiers": 0
+    },
+    "experiments/manifests/post_feasibility_v4_record/verbatim-record.attempt01.json": {
+      "credential_findings": 0,
+      "nonfunctional_private_identifiers": 0
+    },
+    "experiments/manifests/post_feasibility_v4_record/visual.attempt01.json": {
+      "credential_findings": 0,
+      "nonfunctional_private_identifiers": 0
+    }
+  },
+  "scope": "Added document bytes and complete new documentation receipts; unchanged prior content excluded",
+  "credentials": "PASS_ZERO_FINDINGS",
+  "private_identifiers": "PASS_ZERO_NEW_FINDINGS",
+  "existing_scientific_manifests_modified": false,
+  "tests": "NOT_RUN_DOCUMENTATION_ONLY",
+  "disposition": "PASS_PUBLICATION_SAFETY",
+  "default_staged_whitespace_check": "PASS"
+}

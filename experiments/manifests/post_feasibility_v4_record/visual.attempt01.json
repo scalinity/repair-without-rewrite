@@ -1,0 +1,35 @@
+{
+  "schema": "post_feasibility_v4_documentation_visual_v1",
+  "phase": "A",
+  "attempt": 1,
+  "viewport_checks": [
+    {
+      "width": 1280,
+      "document_width": 1280,
+      "appearance": "Light"
+    },
+    {
+      "width": 1280,
+      "document_width": 1280,
+      "appearance": "Dark"
+    },
+    {
+      "width": 390,
+      "document_width": 390,
+      "appearance": "Light"
+    },
+    {
+      "width": 390,
+      "document_width": 390,
+      "appearance": "Dark"
+    }
+  ],
+  "horizontal_document_overflow": false,
+  "appearance_restored": "Auto",
+  "viewport_override_reset": true,
+  "temporary_tabs_closed": true,
+  "screenshots_persisted": false,
+  "css_layout_unchanged": true,
+  "science_tests": "NOT_RUN",
+  "disposition": "PASS_DOCUMENTATION_VISUAL_CHECK"
+}

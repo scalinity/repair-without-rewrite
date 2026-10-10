@@ -326,3 +326,107 @@ scratch pilot, edit-level search, Generation 3, final seeds, final 150M
 training, sealed inference, protocol freeze, publication or production
 changes.
 
+
+## N. Prospective scientific amendment — copy-ready text
+
+```text
+POST-FEASIBILITY FRESH-DATA SOURCE AMENDMENT V4
+Date: 2026-10-10
+
+Reviewed documentation checkpoint:
+b432690ca137f4fb4946f3fe5579a6b6069844f1
+
+Frozen scientific checkpoint:
+609f97f31979d469ad8551d06b2c07c3513181ec
+
+Disposition:
+AUTHORIZE_ALTERNATIVE_CORPUS_QUALIFICATION_DESIGN
+
+This amendment selects exactly one alternative fresh-data candidate:
+Mozilla Common Voice Scripted Speech 26.0 — British English,
+Mozilla Data Collective dataset cmrt6zrob000zmm07yqwjlpwi.
+
+The publisher identifies parent release cv-corpus-26.0-2026-06-12,
+locale en, and archive
+common-voice-scripted-speech-26-0-britis-0fe481c3.tar.gz.
+Exact artifact bytes, checksum, inventory, accessibility and population
+properties remain subject to qualification.
+
+TED-LIUM 3 legacy TRAIN remains NOT QUALIFIED. Immediate recovery work
+is suspended. No additional corpus search or substitution is authorized.
+
+The next designed prerequisite is:
+POST_FEASIBILITY_CV26_BRITISH_METADATA_QUALIFICATION_V1.
+
+Only publisher TRAIN records may become cases. Publisher DEV and TEST
+records are excluded from admitted populations; permitted metadata may
+be used to preserve graph bridges and detect overlap.
+
+Independence remains defined by connected speaker, recording, prompt
+and underlying source/derivation families. Speaker-disjoint publisher
+splits alone do not satisfy this requirement.
+
+Leakage signatures use the existing Unicode NFC, casefold and Unicode
+word-token convention. Exact signatures link at every nonempty length.
+Retain the registered minimum-20-word, word-5-gram Jaccard >=0.90 rule.
+Additionally link nonempty space-joined signatures s and t when their
+Unicode-character Levenshtein distance is at most
+floor(0.10 * max(length(s), length(t))).
+These rules are combined with identifier, duplicate-audio and known
+source-derivation links. This leakage normalization does not rewrite
+references, model inputs or scoring.
+
+Construct full transitive closure before eligibility filtering,
+component caps and role assignment. Do not remove bridge records,
+cut edges, replace components with speakers, tune duplicate thresholds
+or relax source-family exclusions to reach quotas.
+
+Sections L and M of the complete Frontier Source Decision v4 bind
+stable identifiers, metadata scope, exclusion checks, reference and
+duration qualification, stage separation, review and stop conditions.
+That complete decision must accompany this amendment.
+
+Preserve the v3 hash assignment, case ranking, 60-case component cap,
+FIT 4,000 / SELECT 2,000 / EVAL 6,000 populations and minimum
+80 / 40 / 100 independent components. Preserve the EVAL information
+gates of 100,000 reference words and 1,000 RAW errors. No outcome-based
+selection, top-up, reallocation or quota relaxation is permitted.
+
+The proposed reference field is the original publisher sentence field,
+conditional on verified parsing and semantics. No invented text cleanup,
+annotation removal or acoustic-truth assertion is authorized.
+
+The changed prospective domain is publisher-selected prompted speech.
+Any future result applies to that frozen population. Historical G2
+DEVELOPMENT remains consumed, immutable and excluded from prospective
+EVAL.
+
+The fixed ByT5 proposer, exact ten-pass checkpoint, source-only input,
+whole-output choice, mandatory RAW fallbacks, conditional-score
+comparison, exactly two ridge fits, registered selection logic,
+success gates, failure-inclusive evaluation and group-aware uncertainty
+remain unchanged under v3 Sections O2–O10, P and Q.
+
+This is scientific DESIGN ONLY. Phase 1 is metadata/provenance
+qualification. Phase 2 acquisition requires separate owner approval.
+Neither phase authorizes Parakeet recognition, ByT5 generation,
+conditional scoring, policy fitting or final evaluation.
+
+The Phase 1 design is bounded to one working day, two CPU-compute hours
+and 8 GiB working memory. The prospective experiment retains the
+80-GiB incremental high-water ceiling, including archives, extraction,
+temporary files, failed attempts and retained outputs.
+
+Account creation, terms acceptance, access requests, credentials,
+payments, downloads, implementation and repository publication require
+their own explicit owner authorization. Protected references may not
+be opened.
+
+All historical scientific evidence remains immutable. Continuation
+automation remains paused. Generation 3, final training, sealed
+inference and protocol freeze remain unauthorized or held.
+
+Qualification failure returns to frontier review. Successful metadata
+qualification does not automatically admit or launch model work.
+```
+

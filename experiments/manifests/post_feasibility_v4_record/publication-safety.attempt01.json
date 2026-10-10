@@ -1,0 +1,54 @@
+{
+  "schema": "post_feasibility_v4_documentation_publication_safety_v1",
+  "phase": "A",
+  "attempt": 1,
+  "time_utc": "2026-10-10T06:03:54.595359+00:00",
+  "base": "b432690ca137f4fb4946f3fe5579a6b6069844f1",
+  "scanned_paths": [
+    "docs/reviews/FRONTIER_POST_FEASIBILITY_FRESH_DATA_SOURCE_DECISION_V4.md"
+  ],
+  "decision_sha256": "60b2934857d624fc8bc6007b4ad68089964c5250b78f211c98a6f3b2602dc8b6",
+  "decision_bytes": 36180,
+  "complete_sections": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q"
+  ],
+  "original_message_preserved_outside_git": true,
+  "document_body_exact": true,
+  "excluded_display_metadata": "Chat memory citation after the complete scientific document; no Sections A-Q text excluded",
+  "credential_pattern_counts": {
+    "private_key": 0,
+    "github_token": 0,
+    "aws_key": 0,
+    "api_key": 0,
+    "slack_token": 0
+  },
+  "unclassified_personal_identifiers": 0,
+  "functional_location_identifiers": 1,
+  "location_classification": "Exact original repository handoff path retained under explicit verbatim-publication authorization; original preserved outside Git",
+  "default_whitespace_check": "FAIL_EXPECTED_ORIGINAL_MARKDOWN_HARD_BREAKS",
+  "original_hard_break_lines": [
+    3,
+    12
+  ],
+  "classified_whitespace_check": "PASS",
+  "staged_decision_only": true,
+  "science_modified": false,
+  "tests": "NOT_RUN_DOCUMENTATION_ONLY",
+  "disposition": "PASS_CLASSIFIED_VERBATIM_PUBLICATION"
+}

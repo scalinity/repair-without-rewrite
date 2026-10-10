@@ -1,0 +1,33 @@
+{
+  "schema": "post_feasibility_v4_documentation_integrity_v1",
+  "phase": "A",
+  "attempt": 1,
+  "independent_source_extraction": "jq from exact original response record, separately compared with document bytes",
+  "decision_original_byte_compare": "PASS",
+  "complete_a_q": "PASS",
+  "section_n_exact_append": "PASS",
+  "historical_amendment_log_prefixes": "PASS",
+  "css_layout_unchanged": "PASS",
+  "existing_manifests_sha256": "a8798dc037e602199d4749277bbea723e2c6704931e5081542f3ffa90912d1e8",
+  "existing_manifest_changes": 0,
+  "protected_refs": {
+    "main": "871a01fac6ab8b7b10dde8f0c5c557d0114da84a",
+    "codex/g2-execution": "609f97f31979d469ad8551d06b2c07c3513181ec",
+    "codex/g2-qualification": "2c27cff28a31ae64220df9b06094a914e94dd0f3",
+    "codex/post-g2-feasibility-record": "f7dda7bbeddfcb21d9ac7c7441bf8158afbcd06a",
+    "codex/post-feasibility-v3-record": "b432690ca137f4fb4946f3fe5579a6b6069844f1"
+  },
+  "automation_sha256": "870d277d47c840fce6f77c54f5566d279ddc7274da808d947ee445432f984da9",
+  "continuation_automation": "PAUSED",
+  "changed_existing_paths": [
+    "ORCHESTRATION.html",
+    "docs/LOG.md",
+    "docs/reviews/FRONTIER_POST_FEASIBILITY_FRESH_DATA_SOURCE_DECISION_V4.md",
+    "docs/reviews/PROSPECTIVE_AMENDMENTS.md"
+  ],
+  "scientific_source_output_changes": 0,
+  "private_payload_rehash": "NOT_PERFORMED",
+  "tests_benchmarks": "NOT_RUN",
+  "phase_b": "NOT_YET_EXECUTED",
+  "disposition": "PASS_DOCUMENTATION_INTEGRITY"
+}
