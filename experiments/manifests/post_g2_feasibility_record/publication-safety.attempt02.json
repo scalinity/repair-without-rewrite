@@ -1,0 +1,56 @@
+{
+  "credential_findings": 0,
+  "default_gitleaks_no_allowlist": true,
+  "default_whitespace_check": "Three original two-space Markdown hard line breaks on decision lines 3\u20135; failed attempt01 retained.",
+  "feasibility_study": "UNEXECUTED",
+  "nonfunctional_personal_identifier_findings": 0,
+  "other_staged_paths_default_whitespace_check": "PASS",
+  "private_original_preserved_outside_git": true,
+  "public_receipt_metadata": "Hashes, repository-relative paths, permitted identities and documentation-check outcomes only. This receipt is checked separately in the final staged snapshot.",
+  "real_functional_location_identifiers": [
+    {
+      "classification": "REAL_FUNCTIONAL_HANDOFF_LOCATION",
+      "file": "docs/reviews/FRONTIER_POST_G2_SCIENTIFIC_DECISION_V2.md",
+      "line": 614,
+      "literal_sha256": "9da73ef8bda9b5f8d48a286e7f05a34f0f7420b72cac18f03718e443adecc2ce",
+      "original_retained_outside_git": true,
+      "retained_reason": "Complete preceding decision and Sol handoff explicitly authorized for verbatim publication in this documentation session."
+    },
+    {
+      "classification": "REAL_FUNCTIONAL_HANDOFF_LOCATION",
+      "file": "docs/reviews/FRONTIER_POST_G2_SCIENTIFIC_DECISION_V2.md",
+      "line": 659,
+      "literal_sha256": "e0eefe0fc3a9201640365288e4b1098fcf23697a69b11632c00c5b9b883a59e3",
+      "original_retained_outside_git": true,
+      "retained_reason": "Complete preceding decision and Sol handoff explicitly authorized for verbatim publication in this documentation session."
+    }
+  ],
+  "recorded_at": "2026-10-10T03:05:06.824766+00:00",
+  "reviewed_base": "609f97f31979d469ad8551d06b2c07c3513181ec",
+  "scanner_version": "8.30.1",
+  "schema": "post_g2_documentation_publication_safety_v1",
+  "scientific_source_frozen_manifest_historical_report_changes": 0,
+  "scientific_tests_models_data_generation": "NOT_RUN",
+  "staged_diff_sha256_before_this_receipt": "9a71515233faab8c54a6274b4758ee1c048a1a1803e7fa696e3477c940d04d8e",
+  "staged_paths_before_this_receipt": [
+    "ORCHESTRATION.html",
+    "docs/LOG.md",
+    "docs/reviews/FRONTIER_POST_G2_SCIENTIFIC_DECISION_V2.md",
+    "docs/reviews/PROSPECTIVE_AMENDMENTS.md",
+    "experiments/manifests/post_g2_feasibility_record/decision-record.attempt01.json",
+    "experiments/manifests/post_g2_feasibility_record/integrity.attempt01.json",
+    "experiments/manifests/post_g2_feasibility_record/orchestration-visual.attempt01.json",
+    "experiments/manifests/post_g2_feasibility_record/orchestration-visual.attempt02.json",
+    "experiments/manifests/post_g2_feasibility_record/publication-safety.attempt01.json"
+  ],
+  "status": "PASS_WITH_EXPLICIT_VERBATIM_EXCEPTIONS",
+  "unclassified_personal_identifier_findings": 0,
+  "verbatim_document_other_whitespace_check": "PASS",
+  "verbatim_path_authority": "Explicit authorization to publish the complete preceding Astra decision, including its Sol handoff, verbatim. Prior repository decision-record precedent classified such handoff paths identically.",
+  "whitespace_exception_lines": [
+    3,
+    4,
+    5
+  ],
+  "whitespace_exceptions_byte_identical_to_original": true
+}

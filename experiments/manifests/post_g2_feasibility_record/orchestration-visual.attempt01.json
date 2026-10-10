@@ -1,0 +1,24 @@
+{
+  "cause": "Long study role label and narrow table labels exceeded the available viewer width.",
+  "checks": [
+    {
+      "appearance": "dark",
+      "document_width": 352,
+      "horizontal_overflow": true,
+      "viewport_width": 319
+    },
+    {
+      "appearance": "light",
+      "document_width": 352,
+      "horizontal_overflow": true,
+      "viewport_width": 319
+    }
+  ],
+  "page": "ORCHESTRATION.html",
+  "persisted_screenshots": 0,
+  "recorded_at": "2026-10-10T03:01:36.243239+00:00",
+  "resolution": "Content labels shortened without CSS, structure, figures or scientific changes; final checks retained in attempt02.",
+  "reviewed_base": "609f97f31979d469ad8551d06b2c07c3513181ec",
+  "schema": "post_g2_documentation_orchestration_visual_v1",
+  "status": "FAIL_HORIZONTAL_OVERFLOW"
+}

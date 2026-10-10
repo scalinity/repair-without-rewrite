@@ -152,3 +152,61 @@ versus 70,565 nominal (+3). Retain initialization at update zero and the exact
 and actual counts, signed offsets, and the labels specified in Frontier G2
 ByT5 Milestone Decision v1. Intermediate results are descriptive only;
 endpoint-only adequacy and all qualified training operations remain unchanged.
+
+
+### Post-G2 Frontier Scientific Decision v2 — 2026-10-09
+
+```text
+Post-G2 Frontier Scientific Decision v2 — 2026-10-09
+
+Reviewed branch: codex/g2-execution
+Reviewed checkpoint: 609f97f31979d469ad8551d06b2c07c3513181ec
+Qualified Generation-2 source:
+2c27cff28a31ae64220df9b06094a914e94dd0f3
+
+Disposition: AUTHORIZE_READ_ONLY_TASK_FEASIBILITY_STUDY
+
+Preserve all completed Generation-1 and Generation-2 treatments, outputs,
+failures, accounting, adequacy gates, and dispositions unchanged. All seven
+Generation-2 scientific slots remain consumed. No historical checkpoint,
+learning rate, cell, or subgroup becomes a selected successful model.
+
+Adopt POST_G2_READ_ONLY_FEASIBILITY_V1, Sections R–T of this decision, as the
+next bounded analytical design. Its purpose is to distinguish inadequate
+proposal quality, harmful edit acceptance, limited natural supervision, and
+unresolved source-only information support using retained evidence.
+
+The study permits no new neural training, inference, teacher-forced model
+scoring, detector fitting, calibration fitting, threshold optimization,
+teacher generation, TTS, ASR calls, data acquisition, or paid API use.
+
+Use the exact frozen Generation-2 corpus, ledgers, DEVELOPMENT panel,
+prescribed outputs, TRAIN diagnostics, and source-group identities. Preserve
+all cases and failure treatments. Existing DEVELOPMENT observations remain
+development-consumed; no partition is relabelled untouched validation.
+
+Reference-aware whole-output selection is an oracle diagnostic restricted
+to RAW versus the fixed complete cached output. It is not a deployable
+source-only policy or a general task-recoverability bound. Local edit
+counterfactuals are analytical diagnostics and cannot be credited to the
+bare model or combined without accounting for edit interactions.
+
+Keep scorer alignment bounds, group-bootstrap uncertainty, and training-seed
+uncertainty distinct. Missing probability traces remain unavailable.
+Automatic support and collision analyses do not establish semantic truth,
+acoustic truth, or universal text recoverability.
+
+No model size, architecture, copying mechanism, event representation,
+curriculum share, loss coefficient, optimizer, learning rate, training
+horizon, teacher corpus, final population, or paper claim is changed here.
+
+Execution and any persistent evidence-writing scope require separate owner
+authorization. Record this decision and amendment before the subsequent
+analytical stage in an authorized documentation session. Do not modify
+immutable design inputs or historical reports.
+
+After the bounded study, return for a new frontier scientific decision.
+No result automatically authorizes implementation, Generation 3, final
+seeds 1729/2718/31415, final 150M training, sealed inference,
+paper_protocol_v2 freeze, publication, cloud spending, or production changes.
+```

@@ -1,0 +1,63 @@
+{
+  "appearance_restored": "Dark",
+  "background_default_viewport_width": 1280,
+  "checks": [
+    {
+      "appearance": "light",
+      "document_width": 319,
+      "horizontal_overflow": false,
+      "viewport_width": 319,
+      "visually_reviewed": true
+    },
+    {
+      "appearance": "dark",
+      "document_width": 319,
+      "horizontal_overflow": false,
+      "viewport_width": 319,
+      "visually_reviewed": true
+    },
+    {
+      "appearance": "light",
+      "document_width": 1280,
+      "horizontal_overflow": false,
+      "viewport_width": 1280,
+      "visually_reviewed": true
+    },
+    {
+      "appearance": "dark",
+      "document_width": 1280,
+      "horizontal_overflow": false,
+      "viewport_width": 1280,
+      "visually_reviewed": true
+    },
+    {
+      "appearance": "light",
+      "document_width": 390,
+      "horizontal_overflow": false,
+      "viewport_width": 390,
+      "visually_reviewed": true
+    },
+    {
+      "appearance": "dark",
+      "document_width": 390,
+      "horizontal_overflow": false,
+      "viewport_width": 390,
+      "visually_reviewed": true
+    }
+  ],
+  "css_changed": false,
+  "layout_changed": false,
+  "page": "ORCHESTRATION.html",
+  "page_sha256": "bf73ca2ac482f8413981e9af4f438aa05ef2b7c05d46cf95b10020e21881c18d",
+  "persisted_screenshots": 0,
+  "recorded_at": "2026-10-10T03:01:36.243239+00:00",
+  "reviewed_base": "609f97f31979d469ad8551d06b2c07c3513181ec",
+  "schema": "post_g2_documentation_orchestration_visual_v1",
+  "separate_phone_preview_width": 390,
+  "status": "PASS",
+  "temporary_preview_server_stopped": true,
+  "temporary_tabs_closed": true,
+  "viewer_window_width": 319,
+  "viewport_override_reset": true,
+  "watched_tab_resized": false
+}

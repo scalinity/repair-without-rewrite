@@ -1,0 +1,15 @@
+{
+  "classification": "Original Markdown hard line breaks, exactly two spaces on decision lines 3\u20135; required by the explicit verbatim-recording instruction.",
+  "credential_scanner": "NOT_RUN_AFTER_PRECHECK_STOP",
+  "decision_bytes_modified": false,
+  "default_diff_check_exit_code": 2,
+  "finding_locations": [
+    "docs/reviews/FRONTIER_POST_G2_SCIENTIFIC_DECISION_V2.md:3: trailing whitespace.",
+    "docs/reviews/FRONTIER_POST_G2_SCIENTIFIC_DECISION_V2.md:4: trailing whitespace.",
+    "docs/reviews/FRONTIER_POST_G2_SCIENTIFIC_DECISION_V2.md:5: trailing whitespace."
+  ],
+  "recorded_at": "2026-10-10T03:04:11.501658+00:00",
+  "resolution": "Preserve original decision; validate exact exceptions, default-check all other paths and scoped-check the verbatim decision in attempt02.",
+  "schema": "post_g2_documentation_publication_safety_v1",
+  "status": "FAIL_DEFAULT_WHITESPACE_CHECK"
+}

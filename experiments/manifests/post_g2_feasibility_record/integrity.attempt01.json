@@ -1,0 +1,45 @@
+{
+  "amendment_prefix_unchanged": "PASS",
+  "automation_paused_and_byte_unchanged": true,
+  "base": "609f97f31979d469ad8551d06b2c07c3513181ec",
+  "branch": "codex/post-g2-feasibility-record",
+  "complete_sections_A_to_X": "PASS",
+  "css_and_section_structure_unchanged": "PASS",
+  "decision_bytes": 55141,
+  "decision_identity": "Post-G2 Frontier Scientific Decision v2",
+  "decision_sha256": "874957b90a0dd33cffbde3b9a60980be88d06b3733b74b0b4de3e28180f3f88b",
+  "documentation_preparation_failure": "Attempt01 stopped at parse time before operations; exact diagnostic retained outside Git; corrected attempt02 succeeded.",
+  "exact_section_U_append": "PASS",
+  "execution_tree_unchanged": true,
+  "feasibility_study": "UNEXECUTED",
+  "independent_shasum_identity": "PASS",
+  "log_prefix_unchanged": "PASS",
+  "new_documentation_paths": [
+    "docs/reviews/FRONTIER_POST_G2_SCIENTIFIC_DECISION_V2.md",
+    "experiments/manifests/post_g2_feasibility_record/decision-record.attempt01.json",
+    "experiments/manifests/post_g2_feasibility_record/orchestration-visual.attempt01.json",
+    "experiments/manifests/post_g2_feasibility_record/orchestration-visual.attempt02.json"
+  ],
+  "new_feasibility_study_outputs": 0,
+  "protected_live_remote_refs": {
+    "codex/g2-execution": "609f97f31979d469ad8551d06b2c07c3513181ec",
+    "codex/g2-qualification": "2c27cff28a31ae64220df9b06094a914e94dd0f3",
+    "main": "871a01fac6ab8b7b10dde8f0c5c557d0114da84a"
+  },
+  "protected_local_refs": {
+    "codex/g2-execution": "609f97f31979d469ad8551d06b2c07c3513181ec",
+    "codex/g2-qualification": "2c27cff28a31ae64220df9b06094a914e94dd0f3",
+    "main": "871a01fac6ab8b7b10dde8f0c5c557d0114da84a"
+  },
+  "recorded_at": "2026-10-10T03:02:32.882066+00:00",
+  "schema": "post_g2_documentation_integrity_v1",
+  "scientific_tests_models_inference_data_generation": "NOT_RUN",
+  "source_dataset_model_weight_frozen_manifest_experiment_output_previous_report_changes": 0,
+  "status": "PASS",
+  "tracked_changes": [
+    "ORCHESTRATION.html",
+    "docs/LOG.md",
+    "docs/reviews/PROSPECTIVE_AMENDMENTS.md"
+  ],
+  "verbatim_original_byte_compare": "PASS"
+}
