@@ -1,0 +1,1170 @@
+{
+  "schema": "manuscript_figure_public_data_v1",
+  "figure": "F08",
+  "preparation_checkpoint": "2550823ca8f4f3c3ceb15a0de775e43878291422",
+  "scientific_checkpoint": "609f97f31979d469ad8551d06b2c07c3513181ec",
+  "page_points": [
+    900,
+    1450
+  ],
+  "source_sha256": {
+    "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json": "3dfdad614f2b16bda60e97a454f9dc08b6eb8a132e710ebaf18dc0d271bb8334",
+    "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update00000.attempt01.json": "52ada186420081edc98ba6885d6745189ad1ff189ddb1c4c9ea9948f890657fd",
+    "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update07057.attempt01.json": "e914f309e1f6cfae793cda48bd6e7308240f53798db1918704cd274354a1f94a",
+    "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update17642.attempt01.json": "850bce21a63e9edc5c2e227521486ddd54863db259dc594ec84fa08c2b55dfe2",
+    "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update35283.attempt01.json": "1531a4d404e3d08392f460b00407112555b83d021411ffed1ee1fe069a05d5d4",
+    "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json": "fd06cd8a86edbcc37cc3642363d28929efc380622bfe485422318071b6c766bf"
+  },
+  "measurements": [
+    {
+      "id": "F08-0001",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          0,
+          "recipe_wall_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "2117.4588170051575",
+      "label": "2117.458817"
+    },
+    {
+      "id": "F08-0002",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          0,
+          "training_resources",
+          "updates"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "305",
+      "label": "305"
+    },
+    {
+      "id": "F08-0003",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          0,
+          "training_resources",
+          "summed_observed_fields",
+          "examples"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "134591",
+      "label": "134,591"
+    },
+    {
+      "id": "F08-0004",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          1,
+          "recipe_wall_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "5360.392530918121",
+      "label": "5360.392531"
+    },
+    {
+      "id": "F08-0005",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          1,
+          "training_resources",
+          "updates"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "305",
+      "label": "305"
+    },
+    {
+      "id": "F08-0006",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          1,
+          "training_resources",
+          "summed_observed_fields",
+          "examples"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "134591",
+      "label": "134,591"
+    },
+    {
+      "id": "F08-0007",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          2,
+          "recipe_wall_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "2255.1000287532806",
+      "label": "2255.100029"
+    },
+    {
+      "id": "F08-0008",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          2,
+          "training_resources",
+          "updates"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "305",
+      "label": "305"
+    },
+    {
+      "id": "F08-0009",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          2,
+          "training_resources",
+          "summed_observed_fields",
+          "examples"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "134591",
+      "label": "134,591"
+    },
+    {
+      "id": "F08-0010",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          3,
+          "recipe_wall_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "5544.691852807999",
+      "label": "5544.691853"
+    },
+    {
+      "id": "F08-0011",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          3,
+          "training_resources",
+          "updates"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "305",
+      "label": "305"
+    },
+    {
+      "id": "F08-0012",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          3,
+          "training_resources",
+          "summed_observed_fields",
+          "examples"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "134591",
+      "label": "134,591"
+    },
+    {
+      "id": "F08-0013",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          4,
+          "recipe_wall_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "2468.490536928177",
+      "label": "2468.490537"
+    },
+    {
+      "id": "F08-0014",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          4,
+          "training_resources",
+          "updates"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "305",
+      "label": "305"
+    },
+    {
+      "id": "F08-0015",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          4,
+          "training_resources",
+          "summed_observed_fields",
+          "examples"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "134591",
+      "label": "134,591"
+    },
+    {
+      "id": "F08-0016",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          5,
+          "recipe_wall_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "5382.778655052185",
+      "label": "5382.778655"
+    },
+    {
+      "id": "F08-0017",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          5,
+          "training_resources",
+          "updates"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "305",
+      "label": "305"
+    },
+    {
+      "id": "F08-0018",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          5,
+          "training_resources",
+          "summed_observed_fields",
+          "examples"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "134591",
+      "label": "134,591"
+    },
+    {
+      "id": "F08-0019",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          0,
+          "attempt_elapsed_seconds_MEASURED"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "10286.654193540977",
+      "label": "10286.654194"
+    },
+    {
+      "id": "F08-0020",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          0,
+          "unique_logged_optimizer_updates"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "2440",
+      "label": "2,440"
+    },
+    {
+      "id": "F08-0021",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          0,
+          "unique_scientific_presentations"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "134591",
+      "label": "134,591"
+    },
+    {
+      "id": "F08-0022",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          1,
+          "attempt_elapsed_seconds_MEASURED"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "9010.581726000004",
+      "label": "9010.581726"
+    },
+    {
+      "id": "F08-0023",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          1,
+          "unique_logged_optimizer_updates"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "2440",
+      "label": "2,440"
+    },
+    {
+      "id": "F08-0024",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          1,
+          "unique_scientific_presentations"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "134591",
+      "label": "134,591"
+    },
+    {
+      "id": "F08-0025",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          2,
+          "attempt_elapsed_seconds_MEASURED"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "7276.738184541988",
+      "label": "7276.738185"
+    },
+    {
+      "id": "F08-0026",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          2,
+          "unique_logged_optimizer_updates"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "305",
+      "label": "305"
+    },
+    {
+      "id": "F08-0027",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          2,
+          "unique_scientific_presentations"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "136755",
+      "label": "136,755"
+    },
+    {
+      "id": "F08-0028",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          3,
+          "attempt_elapsed_seconds_MEASURED"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "8864.873318125028",
+      "label": "8864.873318"
+    },
+    {
+      "id": "F08-0029",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          3,
+          "unique_logged_optimizer_updates"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "305",
+      "label": "305"
+    },
+    {
+      "id": "F08-0030",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          3,
+          "unique_scientific_presentations"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "136755",
+      "label": "136,755"
+    },
+    {
+      "id": "F08-0031",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          4,
+          "attempt_elapsed_seconds_MEASURED"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "8631.517740916985",
+      "label": "8631.517741"
+    },
+    {
+      "id": "F08-0032",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          4,
+          "unique_logged_optimizer_updates"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "2440",
+      "label": "2,440"
+    },
+    {
+      "id": "F08-0033",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          4,
+          "unique_scientific_presentations"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "136755",
+      "label": "136,755"
+    },
+    {
+      "id": "F08-0034",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          5,
+          "attempt_elapsed_seconds_MEASURED"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "8189.65645249997",
+      "label": "8189.656452"
+    },
+    {
+      "id": "F08-0035",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          5,
+          "unique_logged_optimizer_updates"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "2440",
+      "label": "2,440"
+    },
+    {
+      "id": "F08-0036",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          5,
+          "unique_scientific_presentations"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "136755",
+      "label": "136,755"
+    },
+    {
+      "id": "F08-0037",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          6,
+          "attempt_elapsed_seconds_MEASURED"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "79862.09961362497",
+      "label": "79862.099614"
+    },
+    {
+      "id": "F08-0038",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          6,
+          "unique_logged_optimizer_updates"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "35283",
+      "label": "35,283"
+    },
+    {
+      "id": "F08-0039",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          6,
+          "unique_scientific_presentations"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "141130",
+      "label": "141,130"
+    },
+    {
+      "id": "F08-0040",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update00000.attempt01.json",
+        "pointer": [
+          "milestone",
+          "actual_presentations"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F08-0041",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update00000.attempt01.json",
+        "pointer": [
+          "seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "8525.97095287498",
+      "label": "8525.970953"
+    },
+    {
+      "id": "F08-0042",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update00000.attempt01.json",
+        "pointer": [
+          "decode_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "7901.2647974545835",
+      "label": "7901.264797"
+    },
+    {
+      "id": "F08-0043",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update00000.attempt01.json",
+        "pointer": [
+          "scorer_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "5.3893831801833585",
+      "label": "5.389383"
+    },
+    {
+      "id": "F08-0044",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update07057.attempt01.json",
+        "pointer": [
+          "milestone",
+          "actual_presentations"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "28228",
+      "label": "28,228"
+    },
+    {
+      "id": "F08-0045",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update07057.attempt01.json",
+        "pointer": [
+          "seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "7214.049868375005",
+      "label": "7214.049868"
+    },
+    {
+      "id": "F08-0046",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update07057.attempt01.json",
+        "pointer": [
+          "decode_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "5343.791777251987",
+      "label": "5343.791777"
+    },
+    {
+      "id": "F08-0047",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update07057.attempt01.json",
+        "pointer": [
+          "scorer_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "11.141650602861773",
+      "label": "11.141651"
+    },
+    {
+      "id": "F08-0048",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update17642.attempt01.json",
+        "pointer": [
+          "milestone",
+          "actual_presentations"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "70568",
+      "label": "70,568"
+    },
+    {
+      "id": "F08-0049",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update17642.attempt01.json",
+        "pointer": [
+          "seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "10059.125262999965",
+      "label": "10059.125263"
+    },
+    {
+      "id": "F08-0050",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update17642.attempt01.json",
+        "pointer": [
+          "decode_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "7636.503628845501",
+      "label": "7636.503629"
+    },
+    {
+      "id": "F08-0051",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update17642.attempt01.json",
+        "pointer": [
+          "scorer_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "14.24167937983293",
+      "label": "14.241679"
+    },
+    {
+      "id": "F08-0052",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update35283.attempt01.json",
+        "pointer": [
+          "milestone",
+          "actual_presentations"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "141130",
+      "label": "141,130"
+    },
+    {
+      "id": "F08-0053",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update35283.attempt01.json",
+        "pointer": [
+          "seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "7074.588476707984",
+      "label": "7074.588477"
+    },
+    {
+      "id": "F08-0054",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update35283.attempt01.json",
+        "pointer": [
+          "decode_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "4916.474747133034",
+      "label": "4916.474747"
+    },
+    {
+      "id": "F08-0055",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-observation-G2-ByT5-D1-10pass-seed42-lr3e-4.update35283.attempt01.json",
+        "pointer": [
+          "scorer_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "10.75786370591959",
+      "label": "10.757864"
+    },
+    {
+      "id": "F08-0056",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-accounting-independent.attempt01.json",
+        "pointer": [
+          "recipes",
+          6,
+          "attempts",
+          0,
+          "logged_training_seconds_MEASURED"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "21143.83453864476",
+      "label": "21143.834539"
+    },
+    {
+      "id": "F08-0057",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          0,
+          "learning_curve",
+          5,
+          "resources",
+          "decode_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "62.872234248992754",
+      "label": "62.872234"
+    },
+    {
+      "id": "F08-0058",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          0,
+          "learning_curve",
+          5,
+          "resources",
+          "decoder_positions"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "13145",
+      "label": "13,145"
+    },
+    {
+      "id": "F08-0059",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          0,
+          "training_resources",
+          "summed_observed_fields",
+          "native_update_wall_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "1278.31224858918",
+      "label": "1278.312249"
+    },
+    {
+      "id": "F08-0060",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          1,
+          "learning_curve",
+          5,
+          "resources",
+          "decode_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "14.05622709702584",
+      "label": "14.056227"
+    },
+    {
+      "id": "F08-0061",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          1,
+          "learning_curve",
+          5,
+          "resources",
+          "decoder_positions"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "2833",
+      "label": "2,833"
+    },
+    {
+      "id": "F08-0062",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          1,
+          "training_resources",
+          "summed_observed_fields",
+          "native_update_wall_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "4934.404538500268",
+      "label": "4934.404539"
+    },
+    {
+      "id": "F08-0063",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          2,
+          "learning_curve",
+          5,
+          "resources",
+          "decode_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "80.77158333497937",
+      "label": "80.771583"
+    },
+    {
+      "id": "F08-0064",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          2,
+          "learning_curve",
+          5,
+          "resources",
+          "decoder_positions"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "18572",
+      "label": "18,572"
+    },
+    {
+      "id": "F08-0065",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          2,
+          "training_resources",
+          "summed_observed_fields",
+          "native_update_wall_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "1357.8199255741783",
+      "label": "1357.819926"
+    },
+    {
+      "id": "F08-0066",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          3,
+          "learning_curve",
+          5,
+          "resources",
+          "decode_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "12.402017195854569",
+      "label": "12.402017"
+    },
+    {
+      "id": "F08-0067",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          3,
+          "learning_curve",
+          5,
+          "resources",
+          "decoder_positions"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "2264",
+      "label": "2,264"
+    },
+    {
+      "id": "F08-0068",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          3,
+          "training_resources",
+          "summed_observed_fields",
+          "native_update_wall_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "5077.106273882178",
+      "label": "5077.106274"
+    },
+    {
+      "id": "F08-0069",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          4,
+          "learning_curve",
+          5,
+          "resources",
+          "decode_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "72.89933916393784",
+      "label": "72.899339"
+    },
+    {
+      "id": "F08-0070",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          4,
+          "learning_curve",
+          5,
+          "resources",
+          "decoder_positions"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "16661",
+      "label": "16,661"
+    },
+    {
+      "id": "F08-0071",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          4,
+          "training_resources",
+          "summed_observed_fields",
+          "native_update_wall_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "1553.4200067601341",
+      "label": "1553.420007"
+    },
+    {
+      "id": "F08-0072",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          5,
+          "learning_curve",
+          5,
+          "resources",
+          "decode_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "11.978356467239792",
+      "label": "11.978356"
+    },
+    {
+      "id": "F08-0073",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          5,
+          "learning_curve",
+          5,
+          "resources",
+          "decoder_positions"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "2120",
+      "label": "2,120"
+    },
+    {
+      "id": "F08-0074",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          5,
+          "training_resources",
+          "summed_observed_fields",
+          "native_update_wall_seconds"
+        ],
+        "scale": 1,
+        "format": "dec"
+      },
+      "value": "4972.247959669854",
+      "label": "4972.247960"
+    }
+  ]
+}

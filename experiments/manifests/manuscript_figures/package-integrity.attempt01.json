@@ -1,0 +1,13 @@
+{
+  "schema": "manuscript_figure_package_integrity_v1",
+  "base_commit": "2550823ca8f4f3c3ceb15a0de775e43878291422",
+  "original_LOG_prefix_bytes": 164600,
+  "original_LOG_prefix_sha256": "bf71ee40b68c0ad9895394fac94116b572a177a0897e094687e1ea57ace72c7b",
+  "all_preexisting_branch_heads_unchanged_before_commit": true,
+  "scientific_source_and_evidence_changes": "NONE",
+  "tooling_sha256": {
+    "tools/manuscript_figures/regenerate_v1.py": "135b27ed9ae12e81c539d3e3e7a17589d82b1f89435589345dc7cb5ead4bd7c6",
+    "tools/manuscript_figures/validate_v1.py": "0608c8e14eb229088ed9b3088f8441c66cd6133ca2febcded0259c05a3b087ca"
+  },
+  "status": "PASS_APPEND_ONLY_PACKAGE_INTEGRITY"
+}

@@ -1,0 +1,464 @@
+{
+  "schema": "manuscript_figure_public_data_v1",
+  "figure": "F07",
+  "preparation_checkpoint": "2550823ca8f4f3c3ceb15a0de775e43878291422",
+  "scientific_checkpoint": "609f97f31979d469ad8551d06b2c07c3513181ec",
+  "page_points": [
+    900,
+    830
+  ],
+  "source_sha256": {
+    "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md": "698bc4a54e07c09db8e0c63228836ffaec32ec664a5c68edb2e86a5c900976d0",
+    "experiments/manifests/generation_2/scientific-results.attempt01.json": "510e0efceec1127f38d524f8ca71a224cbaea59cd8206f5dc138889d9be74edd"
+  },
+  "measurements": [
+    {
+      "id": "F07-0001",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 164,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "2",
+      "label": "2"
+    },
+    {
+      "id": "F07-0002",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 165,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "297",
+      "label": "297"
+    },
+    {
+      "id": "F07-0003",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 166,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "2397",
+      "label": "2,397"
+    },
+    {
+      "id": "F07-0004",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 167,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "16997",
+      "label": "16,997"
+    },
+    {
+      "id": "F07-0005",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 164,
+        "column": 2,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "3",
+      "label": "3"
+    },
+    {
+      "id": "F07-0006",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 165,
+        "column": 2,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "2197",
+      "label": "2,197"
+    },
+    {
+      "id": "F07-0007",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 166,
+        "column": 2,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "496",
+      "label": "496"
+    },
+    {
+      "id": "F07-0008",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 167,
+        "column": 2,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "4095",
+      "label": "4,095"
+    },
+    {
+      "id": "F07-0009",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 164,
+        "column": 3,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "67",
+      "label": "67"
+    },
+    {
+      "id": "F07-0010",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 165,
+        "column": 3,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "2360",
+      "label": "2,360"
+    },
+    {
+      "id": "F07-0011",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 166,
+        "column": 3,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "269",
+      "label": "269"
+    },
+    {
+      "id": "F07-0012",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 167,
+        "column": 3,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "1650",
+      "label": "1,650"
+    },
+    {
+      "id": "F07-0013",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 220,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "2",
+      "label": "2"
+    },
+    {
+      "id": "F07-0014",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 220,
+        "column": 2,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "2",
+      "label": "2"
+    },
+    {
+      "id": "F07-0015",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 220,
+        "column": 3,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "2",
+      "label": "2"
+    },
+    {
+      "id": "F07-0016",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 220,
+        "column": 4,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "1411",
+      "label": "1,411"
+    },
+    {
+      "id": "F07-0017",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 220,
+        "column": 5,
+        "tokens": [
+          0
+        ],
+        "format": "dec"
+      },
+      "value": "2.770687",
+      "label": "2.770687"
+    },
+    {
+      "id": "F07-0018",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 221,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "3",
+      "label": "3"
+    },
+    {
+      "id": "F07-0019",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 221,
+        "column": 2,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "3",
+      "label": "3"
+    },
+    {
+      "id": "F07-0020",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 221,
+        "column": 3,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "3",
+      "label": "3"
+    },
+    {
+      "id": "F07-0021",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 221,
+        "column": 4,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "1410",
+      "label": "1,410"
+    },
+    {
+      "id": "F07-0022",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 221,
+        "column": 5,
+        "tokens": [
+          0
+        ],
+        "format": "dec"
+      },
+      "value": "2.768723",
+      "label": "2.768723"
+    },
+    {
+      "id": "F07-0023",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 222,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "67",
+      "label": "67"
+    },
+    {
+      "id": "F07-0024",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 222,
+        "column": 2,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "36",
+      "label": "36"
+    },
+    {
+      "id": "F07-0025",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 222,
+        "column": 3,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "109",
+      "label": "109"
+    },
+    {
+      "id": "F07-0026",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 222,
+        "column": 4,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "1304",
+      "label": "1,304"
+    },
+    {
+      "id": "F07-0027",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 222,
+        "column": 5,
+        "tokens": [
+          0
+        ],
+        "format": "dec"
+      },
+      "value": "2.560578",
+      "label": "2.560578"
+    },
+    {
+      "id": "F07-0028",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-C101-D1-U8-seed42-lr3e-4/update2440",
+          "natural",
+          "RAW_WER"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "2.774614146015787600",
+      "label": "2.774614"
+    },
+    {
+      "id": "F07-0029",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 482,
+        "column": 3,
+        "tokens": [
+          0,
+          1
+        ],
+        "format": "interval"
+      },
+      "value": [
+        "0",
+        "0.010418"
+      ],
+      "label": "[0.000000, 0.010418]"
+    },
+    {
+      "id": "F07-0030",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 483,
+        "column": 3,
+        "tokens": [
+          0,
+          1
+        ],
+        "format": "interval"
+      },
+      "value": [
+        "0",
+        "0.013181"
+      ],
+      "label": "[0.000000, 0.013181]"
+    },
+    {
+      "id": "F07-0031",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 484,
+        "column": 3,
+        "tokens": [
+          0,
+          1
+        ],
+        "format": "interval"
+      },
+      "value": [
+        "0.154027",
+        "0.288196"
+      ],
+      "label": "[0.154027, 0.288196]"
+    }
+  ]
+}

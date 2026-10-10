@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900pt" height="1450pt" viewBox="0 0 900 1450" role="img" aria-labelledby="title desc"><title id="title">F08: Native training and evaluation runtime</title><desc id="desc">MEASURED RESULT — All six G1 and seven new G2 physical recipe intervals, one attempt each, with completed updates and unique presentations. G1 totals 23,128.912421 seconds (6.424698 hours), G2 totals 132,122.121229 seconds (36.700589 hours); archived D0-U1 controls add zero new G2 training. ByT5 logged training (21,143.834539 seconds) and four observation intervals are already within its 79,862.099614-second recipe interval. Decode/scorer components are nested within observations and are not added again. G1 endpoint decode and native synchronized update-host timings retain their field scopes and 396-case panel; G2 observations use 2,984 cases, so no equal-work latency comparison is claimed. Exact kernel time and G2 all-in operational span are unmeasured; electricity/depreciation/price are unpriced; pretraining is not assigned zero cost. Independent CPU review costs and retained failed review attempts are separate from scientific recipe attempts. No overall efficiency claim follows.</desc><g font-family="Bitstream Vera Sans, DejaVu Sans, Arial, sans-serif"><rect x="0" y="0" width="900" height="1450" fill="#FFFFFF" stroke="none"/>
+<text x="36.000000" y="36.000000" font-size="19" fill="#202A33" text-anchor="start" font-weight="bold">F08  |  Native training and evaluation runtime</text>
+<text x="36.000000" y="59.000000" font-size="11" fill="#53616D" text-anchor="start" font-weight="normal">Repair Without Rewrite  /  DEVELOPMENT evidence  /  seed 42</text>
+<line x1="36.000000" y1="73.000000" x2="864.000000" y2="73.000000" stroke="#D7DFE5" stroke-width="1"/>
+<text x="36.000000" y="103.000000" font-size="13" fill="#202A33" text-anchor="start" font-weight="bold">Physical recipe wall seconds: 13 attempts; components below are already included</text>
+<rect x="36" y="116" width="828" height="43" fill="#F3F6F8" stroke="none"/>
+<text x="44.000000" y="132.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Generation / recipe</text>
+<text x="407.000000" y="132.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Recipe wall seconds</text>
+<text x="407.000000" y="146.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">MEASURED</text>
+<text x="605.000000" y="132.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Completed</text>
+<text x="605.000000" y="146.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">updates</text>
+<text x="722.000000" y="132.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Unique</text>
+<text x="722.000000" y="146.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">presentations</text>
+<line x1="36.000000" y1="159.000000" x2="864.000000" y2="159.000000" stroke="#D7DFE5" stroke-width="1"/>
+<text x="44.000000" y="177.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">G1 B100-lr1e-04</text>
+<text x="589.000000" y="177.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0001" data-role="label">2117.458817</text>
+<text x="706.000000" y="177.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0002" data-role="label">305</text>
+<text x="856.000000" y="177.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0003" data-role="label">134,591</text>
+<line x1="36.000000" y1="186.000000" x2="864.000000" y2="186.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="204.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">G1 C101-lr1e-04</text>
+<text x="589.000000" y="204.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0004" data-role="label">5360.392531</text>
+<text x="706.000000" y="204.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0005" data-role="label">305</text>
+<text x="856.000000" y="204.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0006" data-role="label">134,591</text>
+<line x1="36.000000" y1="213.000000" x2="864.000000" y2="213.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="231.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">G1 B100-lr3e-04</text>
+<text x="589.000000" y="231.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0007" data-role="label">2255.100029</text>
+<text x="706.000000" y="231.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0008" data-role="label">305</text>
+<text x="856.000000" y="231.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0009" data-role="label">134,591</text>
+<line x1="36.000000" y1="240.000000" x2="864.000000" y2="240.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="258.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">G1 C101-lr3e-04</text>
+<text x="589.000000" y="258.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0010" data-role="label">5544.691853</text>
+<text x="706.000000" y="258.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0011" data-role="label">305</text>
+<text x="856.000000" y="258.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0012" data-role="label">134,591</text>
+<line x1="36.000000" y1="267.000000" x2="864.000000" y2="267.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="285.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">G1 B100-lr6e-04</text>
+<text x="589.000000" y="285.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0013" data-role="label">2468.490537</text>
+<text x="706.000000" y="285.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0014" data-role="label">305</text>
+<text x="856.000000" y="285.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0015" data-role="label">134,591</text>
+<line x1="36.000000" y1="294.000000" x2="864.000000" y2="294.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="312.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">G1 C101-lr6e-04</text>
+<text x="589.000000" y="312.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0016" data-role="label">5382.778655</text>
+<text x="706.000000" y="312.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0017" data-role="label">305</text>
+<text x="856.000000" y="312.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0018" data-role="label">134,591</text>
+<line x1="36.000000" y1="321.000000" x2="864.000000" y2="321.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="339.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">G2-B100-D0-U8</text>
+<text x="589.000000" y="339.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0019" data-role="label">10286.654194</text>
+<text x="706.000000" y="339.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0020" data-role="label">2,440</text>
+<text x="856.000000" y="339.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0021" data-role="label">134,591</text>
+<line x1="36.000000" y1="348.000000" x2="864.000000" y2="348.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="366.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">G2-C101-D0-U8</text>
+<text x="589.000000" y="366.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0022" data-role="label">9010.581726</text>
+<text x="706.000000" y="366.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0023" data-role="label">2,440</text>
+<text x="856.000000" y="366.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0024" data-role="label">134,591</text>
+<line x1="36.000000" y1="375.000000" x2="864.000000" y2="375.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="393.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">G2-B100-D1-U1</text>
+<text x="589.000000" y="393.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0025" data-role="label">7276.738185</text>
+<text x="706.000000" y="393.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0026" data-role="label">305</text>
+<text x="856.000000" y="393.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0027" data-role="label">136,755</text>
+<line x1="36.000000" y1="402.000000" x2="864.000000" y2="402.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="420.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">G2-C101-D1-U1</text>
+<text x="589.000000" y="420.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0028" data-role="label">8864.873318</text>
+<text x="706.000000" y="420.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0029" data-role="label">305</text>
+<text x="856.000000" y="420.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0030" data-role="label">136,755</text>
+<line x1="36.000000" y1="429.000000" x2="864.000000" y2="429.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="447.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">G2-B100-D1-U8</text>
+<text x="589.000000" y="447.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0031" data-role="label">8631.517741</text>
+<text x="706.000000" y="447.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0032" data-role="label">2,440</text>
+<text x="856.000000" y="447.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0033" data-role="label">136,755</text>
+<line x1="36.000000" y1="456.000000" x2="864.000000" y2="456.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="474.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">G2-C101-D1-U8</text>
+<text x="589.000000" y="474.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0034" data-role="label">8189.656452</text>
+<text x="706.000000" y="474.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0035" data-role="label">2,440</text>
+<text x="856.000000" y="474.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0036" data-role="label">136,755</text>
+<line x1="36.000000" y1="483.000000" x2="864.000000" y2="483.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="501.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">G2-ByT5-D1-10pass</text>
+<text x="589.000000" y="501.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0037" data-role="label">79862.099614</text>
+<text x="706.000000" y="501.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0038" data-role="label">35,283</text>
+<text x="856.000000" y="501.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0039" data-role="label">141,130</text>
+<line x1="36.000000" y1="510.000000" x2="864.000000" y2="510.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="36.000000" y="535.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">G1: 396-case evaluations; G2: 2,984-case evaluations. These are unequal-work native timings.</text>
+<text x="36.000000" y="552.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Archived D0-U1 controls are rescored, not retrained; they incur zero new G2 training.</text>
+<text x="36.000000" y="602.000000" font-size="13" fill="#202A33" text-anchor="start" font-weight="bold">ByT5 components: nested inside its recipe interval; do not sum into recipe time</text>
+<rect x="36" y="615" width="828" height="43" fill="#F3F6F8" stroke="none"/>
+<text x="44.000000" y="631.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Observation state</text>
+<text x="223.000000" y="631.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Actual</text>
+<text x="223.000000" y="645.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">presentations</text>
+<text x="358.000000" y="631.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Observation wall s</text>
+<text x="358.000000" y="645.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">in recipe wall</text>
+<text x="534.000000" y="631.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Decode s</text>
+<text x="534.000000" y="645.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">in observation wall</text>
+<text x="712.000000" y="631.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Scorer s</text>
+<text x="712.000000" y="645.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">in observation wall</text>
+<line x1="36.000000" y1="658.000000" x2="864.000000" y2="658.000000" stroke="#D7DFE5" stroke-width="1"/>
+<text x="44.000000" y="676.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">Initialization</text>
+<text x="342.000000" y="676.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0040" data-role="label">0</text>
+<text x="518.000000" y="676.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0041" data-role="label">8525.970953</text>
+<text x="696.000000" y="676.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0042" data-role="label">7901.264797</text>
+<text x="856.000000" y="676.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0043" data-role="label">5.389383</text>
+<line x1="36.000000" y1="685.000000" x2="864.000000" y2="685.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="703.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">2-pass nominal</text>
+<text x="342.000000" y="703.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0044" data-role="label">28,228</text>
+<text x="518.000000" y="703.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0045" data-role="label">7214.049868</text>
+<text x="696.000000" y="703.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0046" data-role="label">5343.791777</text>
+<text x="856.000000" y="703.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0047" data-role="label">11.141651</text>
+<line x1="36.000000" y1="712.000000" x2="864.000000" y2="712.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="730.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">5-pass nominal</text>
+<text x="342.000000" y="730.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0048" data-role="label">70,568</text>
+<text x="518.000000" y="730.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0049" data-role="label">10059.125263</text>
+<text x="696.000000" y="730.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0050" data-role="label">7636.503629</text>
+<text x="856.000000" y="730.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0051" data-role="label">14.241679</text>
+<line x1="36.000000" y1="739.000000" x2="864.000000" y2="739.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="757.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">10-pass exact</text>
+<text x="342.000000" y="757.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0052" data-role="label">141,130</text>
+<text x="518.000000" y="757.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0053" data-role="label">7074.588477</text>
+<text x="696.000000" y="757.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0054" data-role="label">4916.474747</text>
+<text x="856.000000" y="757.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0055" data-role="label">10.757864</text>
+<line x1="36.000000" y1="766.000000" x2="864.000000" y2="766.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="36.000000" y="791.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">ByT5 logged training seconds (MEASURED; included in recipe wall):</text>
+<text x="690.000000" y="791.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0056" data-role="label">21143.834539</text>
+<text x="36.000000" y="850.000000" font-size="13" fill="#202A33" text-anchor="start" font-weight="bold">G1 endpoint decoding on the complete 396-case panel</text>
+<rect x="36" y="863" width="828" height="43" fill="#F3F6F8" stroke="none"/>
+<text x="44.000000" y="879.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">G1 endpoint</text>
+<text x="354.000000" y="879.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Decode seconds</text>
+<text x="354.000000" y="893.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">in recipe wall</text>
+<text x="532.000000" y="879.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Decoder</text>
+<text x="532.000000" y="893.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">positions</text>
+<text x="660.000000" y="879.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Native update host s</text>
+<text x="660.000000" y="893.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">in recipe wall</text>
+<line x1="36.000000" y1="906.000000" x2="864.000000" y2="906.000000" stroke="#D7DFE5" stroke-width="1"/>
+<text x="44.000000" y="924.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">B100-lr1e-04</text>
+<text x="516.000000" y="924.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0057" data-role="label">62.872234</text>
+<text x="644.000000" y="924.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0058" data-role="label">13,145</text>
+<text x="856.000000" y="924.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0059" data-role="label">1278.312249</text>
+<line x1="36.000000" y1="933.000000" x2="864.000000" y2="933.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="951.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">C101-lr1e-04</text>
+<text x="516.000000" y="951.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0060" data-role="label">14.056227</text>
+<text x="644.000000" y="951.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0061" data-role="label">2,833</text>
+<text x="856.000000" y="951.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0062" data-role="label">4934.404539</text>
+<line x1="36.000000" y1="960.000000" x2="864.000000" y2="960.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="978.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">B100-lr3e-04</text>
+<text x="516.000000" y="978.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0063" data-role="label">80.771583</text>
+<text x="644.000000" y="978.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0064" data-role="label">18,572</text>
+<text x="856.000000" y="978.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0065" data-role="label">1357.819926</text>
+<line x1="36.000000" y1="987.000000" x2="864.000000" y2="987.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="1005.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">C101-lr3e-04</text>
+<text x="516.000000" y="1005.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0066" data-role="label">12.402017</text>
+<text x="644.000000" y="1005.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0067" data-role="label">2,264</text>
+<text x="856.000000" y="1005.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0068" data-role="label">5077.106274</text>
+<line x1="36.000000" y1="1014.000000" x2="864.000000" y2="1014.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="1032.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">B100-lr6e-04</text>
+<text x="516.000000" y="1032.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0069" data-role="label">72.899339</text>
+<text x="644.000000" y="1032.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0070" data-role="label">16,661</text>
+<text x="856.000000" y="1032.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0071" data-role="label">1553.420007</text>
+<line x1="36.000000" y1="1041.000000" x2="864.000000" y2="1041.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="1059.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">C101-lr6e-04</text>
+<text x="516.000000" y="1059.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0072" data-role="label">11.978356</text>
+<text x="644.000000" y="1059.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0073" data-role="label">2,120</text>
+<text x="856.000000" y="1059.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F08-0074" data-role="label">4972.247960</text>
+<line x1="36.000000" y1="1068.000000" x2="864.000000" y2="1068.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="36.000000" y="1121.000000" font-size="13" fill="#202A33" text-anchor="start" font-weight="bold">Timing scope and unavailable cost</text>
+<text x="36.000000" y="1141.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Recipe wall includes training, saves and prescribed evaluation. Decode/scorer lie inside observation wall.</text>
+<text x="36.000000" y="1158.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">G1 native update host intervals and ByT5 logged training intervals are components, not extra charges.</text>
+<text x="36.000000" y="1175.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">No unnamed timing remainder is assigned to a new category. Failed CPU checks are separate from scientific replay.</text>
+<text x="36.000000" y="1192.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Exact device kernel time: UNMEASURED. G2 all-in operational span: UNMEASURED.</text>
+<text x="36.000000" y="1209.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Electricity, depreciation and local monetary cost: UNPRICED. Upstream pretraining cost: UNESTABLISHED.</text>
+<text x="36.000000" y="1226.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">One local native implementation; failed models and unequal comparator training do not establish overall efficiency.</text></g></svg>

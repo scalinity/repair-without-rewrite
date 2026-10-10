@@ -1,0 +1,299 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900pt" height="1140pt" viewBox="0 0 900 1140" role="img" aria-labelledby="title desc"><title id="title">F04: C101 development adaptation trajectories</title><desc id="desc">MEASURED RESULT — The three new C101 DEVELOPMENT trajectories at six fixed observations each. The quantitative x-axis uses actual canonical exposure; exact optimizer-update counts are retained in the companion table. The full WER panel includes the 86.857401% initialization failures; the separately labelled detail panel contains post-initialization observations only. Straight segments connect observed states without smooth learning-curve inference. RAW is 2.774614%. All natural G2 observations retain 2,696 cases, 50,926 reference words, 1,413 RAW errors and 52 groups. Repair rates use source errors; introduction rates use reference words. Companion counts preserve alignment bounds, failures and source lexical identity. Early equality to RAW has zero completed repairs and is not an eligible checkpoint. Only the prescribed D1-U8 endpoint supplies scratch adequacy and it fails. Group intervals exist in E06 but are not drawn here; seed/domain uncertainty is unmeasured.</desc><g font-family="Bitstream Vera Sans, DejaVu Sans, Arial, sans-serif"><rect x="0" y="0" width="900" height="1140" fill="#FFFFFF" stroke="none"/>
+<text x="36.000000" y="36.000000" font-size="19" fill="#202A33" text-anchor="start" font-weight="bold">F04  |  C101 development adaptation trajectories</text>
+<text x="36.000000" y="59.000000" font-size="11" fill="#53616D" text-anchor="start" font-weight="normal">Repair Without Rewrite  /  DEVELOPMENT evidence  /  seed 42</text>
+<line x1="36.000000" y1="73.000000" x2="864.000000" y2="73.000000" stroke="#D7DFE5" stroke-width="1"/>
+<text x="82.000000" y="98.000000" font-size="12" fill="#202A33" text-anchor="start" font-weight="bold">Full WER scale: initialization retained</text>
+<line x1="82.000000" y1="331.000000" x2="419.000000" y2="331.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="72.000000" y="335.000000" font-size="10" fill="#202A33" text-anchor="end" font-weight="normal">0</text>
+<line x1="82.000000" y1="281.000000" x2="419.000000" y2="281.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="72.000000" y="285.000000" font-size="10" fill="#202A33" text-anchor="end" font-weight="normal">25</text>
+<line x1="82.000000" y1="231.000000" x2="419.000000" y2="231.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="72.000000" y="235.000000" font-size="10" fill="#202A33" text-anchor="end" font-weight="normal">50</text>
+<line x1="82.000000" y1="181.000000" x2="419.000000" y2="181.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="72.000000" y="185.000000" font-size="10" fill="#202A33" text-anchor="end" font-weight="normal">75</text>
+<line x1="82.000000" y1="131.000000" x2="419.000000" y2="131.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="72.000000" y="135.000000" font-size="10" fill="#202A33" text-anchor="end" font-weight="normal">100</text>
+<line x1="82.000000" y1="331.000000" x2="82.000000" y2="335.000000" stroke="#202A33" stroke-width="0.7"/>
+<text x="82.000000" y="350.000000" font-size="10" fill="#202A33" text-anchor="middle" font-weight="normal">0</text>
+<line x1="242.476190" y1="331.000000" x2="242.476190" y2="335.000000" stroke="#202A33" stroke-width="0.7"/>
+<text x="242.476190" y="350.000000" font-size="10" fill="#202A33" text-anchor="middle" font-weight="normal">5M</text>
+<line x1="402.952381" y1="331.000000" x2="402.952381" y2="335.000000" stroke="#202A33" stroke-width="0.7"/>
+<text x="402.952381" y="350.000000" font-size="10" fill="#202A33" text-anchor="middle" font-weight="normal">10M</text>
+<line x1="82.000000" y1="131.000000" x2="82.000000" y2="331.000000" stroke="#202A33" stroke-width="0.8"/>
+<line x1="82.000000" y1="331.000000" x2="419.000000" y2="331.000000" stroke="#202A33" stroke-width="0.8"/>
+<text x="250.500000" y="370.000000" font-size="11" fill="#202A33" text-anchor="middle" font-weight="normal">Actual canonical exposure</text>
+<text x="44.000000" y="117.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="normal">WER %</text>
+<text x="511.000000" y="98.000000" font-size="12" fill="#202A33" text-anchor="start" font-weight="bold">Post-initialization detail: 0-12%</text>
+<line x1="511.000000" y1="331.000000" x2="848.000000" y2="331.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="501.000000" y="335.000000" font-size="10" fill="#202A33" text-anchor="end" font-weight="normal">0</text>
+<line x1="511.000000" y1="281.000000" x2="848.000000" y2="281.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="501.000000" y="285.000000" font-size="10" fill="#202A33" text-anchor="end" font-weight="normal">3</text>
+<line x1="511.000000" y1="231.000000" x2="848.000000" y2="231.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="501.000000" y="235.000000" font-size="10" fill="#202A33" text-anchor="end" font-weight="normal">6</text>
+<line x1="511.000000" y1="181.000000" x2="848.000000" y2="181.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="501.000000" y="185.000000" font-size="10" fill="#202A33" text-anchor="end" font-weight="normal">9</text>
+<line x1="511.000000" y1="131.000000" x2="848.000000" y2="131.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="501.000000" y="135.000000" font-size="10" fill="#202A33" text-anchor="end" font-weight="normal">12</text>
+<line x1="511.000000" y1="331.000000" x2="511.000000" y2="335.000000" stroke="#202A33" stroke-width="0.7"/>
+<text x="511.000000" y="350.000000" font-size="10" fill="#202A33" text-anchor="middle" font-weight="normal">0</text>
+<line x1="671.476190" y1="331.000000" x2="671.476190" y2="335.000000" stroke="#202A33" stroke-width="0.7"/>
+<text x="671.476190" y="350.000000" font-size="10" fill="#202A33" text-anchor="middle" font-weight="normal">5M</text>
+<line x1="831.952381" y1="331.000000" x2="831.952381" y2="335.000000" stroke="#202A33" stroke-width="0.7"/>
+<text x="831.952381" y="350.000000" font-size="10" fill="#202A33" text-anchor="middle" font-weight="normal">10M</text>
+<line x1="511.000000" y1="131.000000" x2="511.000000" y2="331.000000" stroke="#202A33" stroke-width="0.8"/>
+<line x1="511.000000" y1="331.000000" x2="848.000000" y2="331.000000" stroke="#202A33" stroke-width="0.8"/>
+<text x="679.500000" y="370.000000" font-size="11" fill="#202A33" text-anchor="middle" font-weight="normal">Actual canonical exposure</text>
+<text x="473.000000" y="117.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="normal">WER %</text>
+<line x1="82.000000" y1="325.450772" x2="419.000000" y2="325.450772" stroke="#202A33" stroke-width="1" stroke-dasharray="4 3" data-measurement="F04-0127" data-y-domain="0 100" data-y-pixels="331 131" data-role="baseline"/>
+<text x="89.000000" y="318.450772" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">RAW</text>
+<line x1="511.000000" y1="284.756431" x2="848.000000" y2="284.756431" stroke="#202A33" stroke-width="1" stroke-dasharray="4 3" data-measurement="F04-0127" data-y-domain="0 12" data-y-pixels="331 131" data-role="baseline"/>
+<text x="518.000000" y="277.756431" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">RAW</text>
+<line x1="82.000000" y1="157.285198" x2="114.645639" y2="325.415426" stroke="#0072B2" stroke-width="1.1"/>
+<line x1="114.645639" y1="325.415426" x2="178.878770" y2="324.677100" stroke="#0072B2" stroke-width="1.1"/>
+<line x1="178.878770" y1="324.677100" x2="296.820810" y2="322.363940" stroke="#0072B2" stroke-width="1.1"/>
+<line x1="296.820810" y1="322.363940" x2="382.111081" y2="321.001178" stroke="#0072B2" stroke-width="1.1"/>
+<line x1="382.111081" y1="321.001178" x2="403.184205" y2="318.538782" stroke="#0072B2" stroke-width="1.1"/>
+<circle cx="82.000000" cy="157.285198" r="3.7" fill="#0072B2" stroke="#0072B2" data-measurement="F04-0002" data-y-domain="0 100" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0001" data-x-domain="0 10500000" data-x-pixels="82 419"/>
+<circle cx="114.645639" cy="325.415426" r="3.7" fill="#0072B2" stroke="#0072B2" data-measurement="F04-0009" data-y-domain="0 100" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0008" data-x-domain="0 10500000" data-x-pixels="82 419"/>
+<circle cx="178.878770" cy="324.677100" r="3.7" fill="#0072B2" stroke="#0072B2" data-measurement="F04-0016" data-y-domain="0 100" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0015" data-x-domain="0 10500000" data-x-pixels="82 419"/>
+<circle cx="296.820810" cy="322.363940" r="3.7" fill="#0072B2" stroke="#0072B2" data-measurement="F04-0023" data-y-domain="0 100" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0022" data-x-domain="0 10500000" data-x-pixels="82 419"/>
+<circle cx="382.111081" cy="321.001178" r="3.7" fill="#0072B2" stroke="#0072B2" data-measurement="F04-0030" data-y-domain="0 100" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0029" data-x-domain="0 10500000" data-x-pixels="82 419"/>
+<circle cx="403.184205" cy="318.538782" r="3.7" fill="#0072B2" stroke="#0072B2" data-measurement="F04-0037" data-y-domain="0 100" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0036" data-x-domain="0 10500000" data-x-pixels="82 419"/>
+<line x1="543.645639" y1="284.461886" x2="607.878770" y2="278.309168" stroke="#0072B2" stroke-width="1.1"/>
+<line x1="607.878770" y1="278.309168" x2="725.820810" y2="259.032832" stroke="#0072B2" stroke-width="1.1"/>
+<line x1="725.820810" y1="259.032832" x2="811.111081" y2="247.676485" stroke="#0072B2" stroke-width="1.1"/>
+<line x1="811.111081" y1="247.676485" x2="832.184205" y2="227.156515" stroke="#0072B2" stroke-width="1.1"/>
+<circle cx="543.645639" cy="284.461886" r="3.7" fill="#0072B2" stroke="#0072B2" data-measurement="F04-0009" data-y-domain="0 12" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0008" data-x-domain="0 10500000" data-x-pixels="511 848"/>
+<circle cx="607.878770" cy="278.309168" r="3.7" fill="#0072B2" stroke="#0072B2" data-measurement="F04-0016" data-y-domain="0 12" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0015" data-x-domain="0 10500000" data-x-pixels="511 848"/>
+<circle cx="725.820810" cy="259.032832" r="3.7" fill="#0072B2" stroke="#0072B2" data-measurement="F04-0023" data-y-domain="0 12" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0022" data-x-domain="0 10500000" data-x-pixels="511 848"/>
+<circle cx="811.111081" cy="247.676485" r="3.7" fill="#0072B2" stroke="#0072B2" data-measurement="F04-0030" data-y-domain="0 12" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0029" data-x-domain="0 10500000" data-x-pixels="511 848"/>
+<circle cx="832.184205" cy="227.156515" r="3.7" fill="#0072B2" stroke="#0072B2" data-measurement="F04-0037" data-y-domain="0 12" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0036" data-x-domain="0 10500000" data-x-pixels="511 848"/>
+<circle cx="52.000000" cy="389.000000" r="3.7" fill="#0072B2" stroke="#0072B2"/>
+<text x="64.000000" y="394.000000" font-size="11" fill="#0072B2" text-anchor="start" font-weight="normal">D0-U8 (descriptive)</text>
+<line x1="82.000000" y1="157.285198" x2="114.635594" y2="325.450772" stroke="#B65C00" stroke-width="1.1"/>
+<line x1="114.635594" y1="325.450772" x2="178.855244" y2="325.450772" stroke="#B65C00" stroke-width="1.1"/>
+<line x1="178.855244" y1="325.450772" x2="296.785313" y2="325.450772" stroke="#B65C00" stroke-width="1.1"/>
+<line x1="296.785313" y1="325.450772" x2="382.083512" y2="309.254723" stroke="#B65C00" stroke-width="1.1"/>
+<line x1="382.083512" y1="309.254723" x2="403.152110" y2="309.462868" stroke="#B65C00" stroke-width="1.1"/>
+<rect x="78.500000" y="153.785198" width="7" height="7" fill="#B65C00" data-measurement="F04-0044" data-y-domain="0 100" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0043" data-x-domain="0 10500000" data-x-pixels="82 419"/>
+<rect x="111.135594" y="321.950772" width="7" height="7" fill="#B65C00" data-measurement="F04-0051" data-y-domain="0 100" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0050" data-x-domain="0 10500000" data-x-pixels="82 419"/>
+<rect x="175.355244" y="321.950772" width="7" height="7" fill="#B65C00" data-measurement="F04-0058" data-y-domain="0 100" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0057" data-x-domain="0 10500000" data-x-pixels="82 419"/>
+<rect x="293.285313" y="321.950772" width="7" height="7" fill="#B65C00" data-measurement="F04-0065" data-y-domain="0 100" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0064" data-x-domain="0 10500000" data-x-pixels="82 419"/>
+<rect x="378.583512" y="305.754723" width="7" height="7" fill="#B65C00" data-measurement="F04-0072" data-y-domain="0 100" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0071" data-x-domain="0 10500000" data-x-pixels="82 419"/>
+<rect x="399.652110" y="305.962868" width="7" height="7" fill="#B65C00" data-measurement="F04-0079" data-y-domain="0 100" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0078" data-x-domain="0 10500000" data-x-pixels="82 419"/>
+<line x1="543.635594" y1="284.756431" x2="607.855244" y2="284.756431" stroke="#B65C00" stroke-width="1.1"/>
+<line x1="607.855244" y1="284.756431" x2="725.785313" y2="284.756431" stroke="#B65C00" stroke-width="1.1"/>
+<line x1="725.785313" y1="284.756431" x2="811.083512" y2="149.789354" stroke="#B65C00" stroke-width="1.1"/>
+<line x1="811.083512" y1="149.789354" x2="832.152110" y2="151.523897" stroke="#B65C00" stroke-width="1.1"/>
+<rect x="540.135594" y="281.256431" width="7" height="7" fill="#B65C00" data-measurement="F04-0051" data-y-domain="0 12" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0050" data-x-domain="0 10500000" data-x-pixels="511 848"/>
+<rect x="604.355244" y="281.256431" width="7" height="7" fill="#B65C00" data-measurement="F04-0058" data-y-domain="0 12" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0057" data-x-domain="0 10500000" data-x-pixels="511 848"/>
+<rect x="722.285313" y="281.256431" width="7" height="7" fill="#B65C00" data-measurement="F04-0065" data-y-domain="0 12" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0064" data-x-domain="0 10500000" data-x-pixels="511 848"/>
+<rect x="807.583512" y="146.289354" width="7" height="7" fill="#B65C00" data-measurement="F04-0072" data-y-domain="0 12" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0071" data-x-domain="0 10500000" data-x-pixels="511 848"/>
+<rect x="828.652110" y="148.023897" width="7" height="7" fill="#B65C00" data-measurement="F04-0079" data-y-domain="0 12" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0078" data-x-domain="0 10500000" data-x-pixels="511 848"/>
+<rect x="315.500000" y="385.500000" width="7" height="7" fill="#B65C00"/>
+<text x="331.000000" y="394.000000" font-size="11" fill="#B65C00" text-anchor="start" font-weight="normal">D1-U1 (descriptive)</text>
+<line x1="82.000000" y1="157.285198" x2="114.635594" y2="325.450772" stroke="#8755A5" stroke-width="1.1"/>
+<line x1="114.635594" y1="325.450772" x2="178.855244" y2="325.450772" stroke="#8755A5" stroke-width="1.1"/>
+<line x1="178.855244" y1="325.450772" x2="296.785313" y2="324.036956" stroke="#8755A5" stroke-width="1.1"/>
+<line x1="296.785313" y1="324.036956" x2="382.083512" y2="318.464164" stroke="#8755A5" stroke-width="1.1"/>
+<line x1="382.083512" y1="318.464164" x2="403.152110" y2="314.917842" stroke="#8755A5" stroke-width="1.1"/>
+<circle cx="82.000000" cy="157.285198" r="3.7" fill="#FFFFFF" stroke="#8755A5" data-measurement="F04-0086" data-y-domain="0 100" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0085" data-x-domain="0 10500000" data-x-pixels="82 419"/>
+<circle cx="114.635594" cy="325.450772" r="3.7" fill="#FFFFFF" stroke="#8755A5" data-measurement="F04-0093" data-y-domain="0 100" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0092" data-x-domain="0 10500000" data-x-pixels="82 419"/>
+<circle cx="178.855244" cy="325.450772" r="3.7" fill="#FFFFFF" stroke="#8755A5" data-measurement="F04-0100" data-y-domain="0 100" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0099" data-x-domain="0 10500000" data-x-pixels="82 419"/>
+<circle cx="296.785313" cy="324.036956" r="3.7" fill="#FFFFFF" stroke="#8755A5" data-measurement="F04-0107" data-y-domain="0 100" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0106" data-x-domain="0 10500000" data-x-pixels="82 419"/>
+<circle cx="382.083512" cy="318.464164" r="3.7" fill="#FFFFFF" stroke="#8755A5" data-measurement="F04-0114" data-y-domain="0 100" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0113" data-x-domain="0 10500000" data-x-pixels="82 419"/>
+<circle cx="403.152110" cy="314.917842" r="3.7" fill="#FFFFFF" stroke="#8755A5" data-measurement="F04-0121" data-y-domain="0 100" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0120" data-x-domain="0 10500000" data-x-pixels="82 419"/>
+<line x1="543.635594" y1="284.756431" x2="607.855244" y2="284.756431" stroke="#8755A5" stroke-width="1.1"/>
+<line x1="607.855244" y1="284.756431" x2="725.785313" y2="272.974630" stroke="#8755A5" stroke-width="1.1"/>
+<line x1="725.785313" y1="272.974630" x2="811.083512" y2="226.534697" stroke="#8755A5" stroke-width="1.1"/>
+<line x1="811.083512" y1="226.534697" x2="832.152110" y2="196.982013" stroke="#8755A5" stroke-width="1.1"/>
+<circle cx="543.635594" cy="284.756431" r="3.7" fill="#FFFFFF" stroke="#8755A5" data-measurement="F04-0093" data-y-domain="0 12" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0092" data-x-domain="0 10500000" data-x-pixels="511 848"/>
+<circle cx="607.855244" cy="284.756431" r="3.7" fill="#FFFFFF" stroke="#8755A5" data-measurement="F04-0100" data-y-domain="0 12" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0099" data-x-domain="0 10500000" data-x-pixels="511 848"/>
+<circle cx="725.785313" cy="272.974630" r="3.7" fill="#FFFFFF" stroke="#8755A5" data-measurement="F04-0107" data-y-domain="0 12" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0106" data-x-domain="0 10500000" data-x-pixels="511 848"/>
+<circle cx="811.083512" cy="226.534697" r="3.7" fill="#FFFFFF" stroke="#8755A5" data-measurement="F04-0114" data-y-domain="0 12" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0113" data-x-domain="0 10500000" data-x-pixels="511 848"/>
+<circle cx="832.152110" cy="196.982013" r="3.7" fill="#FFFFFF" stroke="#8755A5" data-measurement="F04-0121" data-y-domain="0 12" data-y-pixels="331 131" data-role="point" data-x-measurement="F04-0120" data-x-domain="0 10500000" data-x-pixels="511 848"/>
+<circle cx="586.000000" cy="389.000000" r="3.7" fill="#FFFFFF" stroke="#8755A5"/>
+<text x="598.000000" y="394.000000" font-size="11" fill="#8755A5" text-anchor="start" font-weight="normal">D1-U8 (predeclared endpoint)</text>
+<rect x="36" y="427" width="828" height="43" fill="#F3F6F8" stroke="none"/>
+<text x="44.000000" y="443.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Cell</text>
+<text x="131.000000" y="443.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Actual canonical</text>
+<text x="131.000000" y="457.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">exposure</text>
+<text x="282.000000" y="443.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Optimizer</text>
+<text x="282.000000" y="457.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">updates</text>
+<text x="369.000000" y="443.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">WER %</text>
+<text x="479.000000" y="443.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Completed</text>
+<text x="479.000000" y="457.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">repair /1,413</text>
+<text x="591.000000" y="443.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Introduced</text>
+<text x="591.000000" y="457.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">/50,926</text>
+<text x="699.000000" y="443.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Invalid</text>
+<text x="699.000000" y="457.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">/2,696</text>
+<text x="773.000000" y="443.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Lexical identity</text>
+<text x="773.000000" y="457.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">/2,696</text>
+<line x1="36.000000" y1="470.000000" x2="864.000000" y2="470.000000" stroke="#D7DFE5" stroke-width="1"/>
+<text x="44.000000" y="488.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">D0-U8</text>
+<text x="266.000000" y="488.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0001" data-role="label">0</text>
+<text x="353.000000" y="488.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0003" data-role="label">0</text>
+<text x="463.000000" y="488.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0002" data-role="label">86.857401</text>
+<text x="575.000000" y="488.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0004" data-role="label">0</text>
+<text x="683.000000" y="488.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0005" data-role="label">42,935-42,939</text>
+<text x="757.000000" y="488.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0006" data-role="label">2,401</text>
+<text x="856.000000" y="488.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0007" data-role="label">295</text>
+<line x1="36.000000" y1="497.000000" x2="864.000000" y2="497.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="515.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">D0-U8</text>
+<text x="266.000000" y="515.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0008" data-role="label">1,017,149</text>
+<text x="353.000000" y="515.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0010" data-role="label">248</text>
+<text x="463.000000" y="515.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0009" data-role="label">2.792287</text>
+<text x="575.000000" y="515.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0011" data-role="label">0</text>
+<text x="683.000000" y="515.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0012" data-role="label">9</text>
+<text x="757.000000" y="515.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0013" data-role="label">0</text>
+<text x="856.000000" y="515.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0014" data-role="label">2,694</text>
+<line x1="36.000000" y1="524.000000" x2="864.000000" y2="524.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="542.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">D0-U8</text>
+<text x="266.000000" y="542.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0015" data-role="label">3,018,478</text>
+<text x="353.000000" y="542.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0017" data-role="label">736</text>
+<text x="463.000000" y="542.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0016" data-role="label">3.161450</text>
+<text x="575.000000" y="542.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0018" data-role="label">1</text>
+<text x="683.000000" y="542.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0019" data-role="label">198</text>
+<text x="757.000000" y="542.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0020" data-role="label">1</text>
+<text x="856.000000" y="542.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0021" data-role="label">2,585</text>
+<line x1="36.000000" y1="551.000000" x2="864.000000" y2="551.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="569.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">D0-U8</text>
+<text x="266.000000" y="569.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0022" data-role="label">6,693,230</text>
+<text x="353.000000" y="569.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0024" data-role="label">1,632</text>
+<text x="463.000000" y="569.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0023" data-role="label">4.318030</text>
+<text x="575.000000" y="569.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0025" data-role="label">6</text>
+<text x="683.000000" y="569.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0026" data-role="label">792</text>
+<text x="757.000000" y="569.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0027" data-role="label">0</text>
+<text x="856.000000" y="569.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0028" data-role="label">2,363</text>
+<line x1="36.000000" y1="578.000000" x2="864.000000" y2="578.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="596.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">D0-U8</text>
+<text x="266.000000" y="596.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0029" data-role="label">9,350,642</text>
+<text x="353.000000" y="596.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0031" data-role="label">2,280</text>
+<text x="463.000000" y="596.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0030" data-role="label">4.999411</text>
+<text x="575.000000" y="596.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0032" data-role="label">8</text>
+<text x="683.000000" y="596.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0033" data-role="label">1,141</text>
+<text x="757.000000" y="596.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0034" data-role="label">1</text>
+<text x="856.000000" y="596.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0035" data-role="label">2,312</text>
+<line x1="36.000000" y1="605.000000" x2="864.000000" y2="605.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="623.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">D0-U8</text>
+<text x="266.000000" y="623.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0036" data-role="label">10,007,223</text>
+<text x="353.000000" y="623.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0038" data-role="label">2,440</text>
+<text x="463.000000" y="623.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0037" data-role="label">6.230609</text>
+<text x="575.000000" y="623.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0039" data-role="label">9</text>
+<text x="683.000000" y="623.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0040" data-role="label">1,769</text>
+<text x="757.000000" y="623.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0041" data-role="label">0</text>
+<text x="856.000000" y="623.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0042" data-role="label">2,127</text>
+<line x1="36.000000" y1="632.000000" x2="864.000000" y2="632.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="650.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">D1-U1</text>
+<text x="266.000000" y="650.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0043" data-role="label">0</text>
+<text x="353.000000" y="650.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0045" data-role="label">0</text>
+<text x="463.000000" y="650.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0044" data-role="label">86.857401</text>
+<text x="575.000000" y="650.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0046" data-role="label">0</text>
+<text x="683.000000" y="650.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0047" data-role="label">42,935-42,939</text>
+<text x="757.000000" y="650.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0048" data-role="label">2,401</text>
+<text x="856.000000" y="650.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0049" data-role="label">295</text>
+<line x1="36.000000" y1="659.000000" x2="864.000000" y2="659.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="677.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">D1-U1</text>
+<text x="266.000000" y="677.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0050" data-role="label">1,016,836</text>
+<text x="353.000000" y="677.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0052" data-role="label">31</text>
+<text x="463.000000" y="677.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0051" data-role="label">2.774614</text>
+<text x="575.000000" y="677.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0053" data-role="label">0</text>
+<text x="683.000000" y="677.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0054" data-role="label">0</text>
+<text x="757.000000" y="677.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0055" data-role="label">0</text>
+<text x="856.000000" y="677.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0056" data-role="label">2,696</text>
+<line x1="36.000000" y1="686.000000" x2="864.000000" y2="686.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="704.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">D1-U1</text>
+<text x="266.000000" y="704.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0057" data-role="label">3,017,745</text>
+<text x="353.000000" y="704.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0059" data-role="label">92</text>
+<text x="463.000000" y="704.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0058" data-role="label">2.774614</text>
+<text x="575.000000" y="704.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0060" data-role="label">0</text>
+<text x="683.000000" y="704.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0061" data-role="label">0</text>
+<text x="757.000000" y="704.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0062" data-role="label">0</text>
+<text x="856.000000" y="704.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0063" data-role="label">2,696</text>
+<line x1="36.000000" y1="713.000000" x2="864.000000" y2="713.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="731.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">D1-U1</text>
+<text x="266.000000" y="731.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0064" data-role="label">6,692,124</text>
+<text x="353.000000" y="731.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0066" data-role="label">204</text>
+<text x="463.000000" y="731.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0065" data-role="label">2.774614</text>
+<text x="575.000000" y="731.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0067" data-role="label">0</text>
+<text x="683.000000" y="731.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0068" data-role="label">0</text>
+<text x="757.000000" y="731.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0069" data-role="label">0</text>
+<text x="856.000000" y="731.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0070" data-role="label">2,696</text>
+<line x1="36.000000" y1="740.000000" x2="864.000000" y2="740.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="758.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">D1-U1</text>
+<text x="266.000000" y="758.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0071" data-role="label">9,349,783</text>
+<text x="353.000000" y="758.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0073" data-role="label">285</text>
+<text x="463.000000" y="758.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0072" data-role="label">10.872639</text>
+<text x="575.000000" y="758.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0074" data-role="label">18</text>
+<text x="683.000000" y="758.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0075" data-role="label">4,152</text>
+<text x="757.000000" y="758.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0076" data-role="label">109</text>
+<text x="856.000000" y="758.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0077" data-role="label">2,059</text>
+<line x1="36.000000" y1="767.000000" x2="864.000000" y2="767.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="785.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">D1-U1</text>
+<text x="266.000000" y="785.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0078" data-role="label">10,006,223</text>
+<text x="353.000000" y="785.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0080" data-role="label">305</text>
+<text x="463.000000" y="785.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0079" data-role="label">10.768566</text>
+<text x="575.000000" y="785.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0081" data-role="label">14</text>
+<text x="683.000000" y="785.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0082" data-role="label">4,098</text>
+<text x="757.000000" y="785.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0083" data-role="label">110</text>
+<text x="856.000000" y="785.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0084" data-role="label">2,149</text>
+<line x1="36.000000" y1="794.000000" x2="864.000000" y2="794.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="812.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">D1-U8</text>
+<text x="266.000000" y="812.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0085" data-role="label">0</text>
+<text x="353.000000" y="812.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0087" data-role="label">0</text>
+<text x="463.000000" y="812.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0086" data-role="label">86.857401</text>
+<text x="575.000000" y="812.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0088" data-role="label">0</text>
+<text x="683.000000" y="812.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0089" data-role="label">42,935-42,939</text>
+<text x="757.000000" y="812.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0090" data-role="label">2,401</text>
+<text x="856.000000" y="812.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0091" data-role="label">295</text>
+<line x1="36.000000" y1="821.000000" x2="864.000000" y2="821.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="839.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">D1-U8</text>
+<text x="266.000000" y="839.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0092" data-role="label">1,016,836</text>
+<text x="353.000000" y="839.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0094" data-role="label">248</text>
+<text x="463.000000" y="839.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0093" data-role="label">2.774614</text>
+<text x="575.000000" y="839.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0095" data-role="label">0</text>
+<text x="683.000000" y="839.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0096" data-role="label">0</text>
+<text x="757.000000" y="839.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0097" data-role="label">0</text>
+<text x="856.000000" y="839.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0098" data-role="label">2,696</text>
+<line x1="36.000000" y1="848.000000" x2="864.000000" y2="848.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="866.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">D1-U8</text>
+<text x="266.000000" y="866.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0099" data-role="label">3,017,745</text>
+<text x="353.000000" y="866.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0101" data-role="label">736</text>
+<text x="463.000000" y="866.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0100" data-role="label">2.774614</text>
+<text x="575.000000" y="866.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0102" data-role="label">0</text>
+<text x="683.000000" y="866.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0103" data-role="label">0</text>
+<text x="757.000000" y="866.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0104" data-role="label">0</text>
+<text x="856.000000" y="866.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0105" data-role="label">2,696</text>
+<line x1="36.000000" y1="875.000000" x2="864.000000" y2="875.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="893.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">D1-U8</text>
+<text x="266.000000" y="893.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0106" data-role="label">6,692,124</text>
+<text x="353.000000" y="893.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0108" data-role="label">1,632</text>
+<text x="463.000000" y="893.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0107" data-role="label">3.481522</text>
+<text x="575.000000" y="893.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0109" data-role="label">2</text>
+<text x="683.000000" y="893.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0110" data-role="label">362</text>
+<text x="757.000000" y="893.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0111" data-role="label">1</text>
+<text x="856.000000" y="893.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0112" data-role="label">2,591</text>
+<line x1="36.000000" y1="902.000000" x2="864.000000" y2="902.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="920.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">D1-U8</text>
+<text x="266.000000" y="920.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0113" data-role="label">9,349,783</text>
+<text x="353.000000" y="920.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0115" data-role="label">2,280</text>
+<text x="463.000000" y="920.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0114" data-role="label">6.267918</text>
+<text x="575.000000" y="920.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0116" data-role="label">10</text>
+<text x="683.000000" y="920.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0117" data-role="label">1,790</text>
+<text x="757.000000" y="920.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0118" data-role="label">6</text>
+<text x="856.000000" y="920.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0119" data-role="label">2,283</text>
+<line x1="36.000000" y1="929.000000" x2="864.000000" y2="929.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="947.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">D1-U8</text>
+<text x="266.000000" y="947.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0120" data-role="label">10,006,223</text>
+<text x="353.000000" y="947.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0122" data-role="label">2,440</text>
+<text x="463.000000" y="947.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0121" data-role="label">8.041079</text>
+<text x="575.000000" y="947.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0123" data-role="label">18</text>
+<text x="683.000000" y="947.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0124" data-role="label">2,702</text>
+<text x="757.000000" y="947.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0125" data-role="label">26</text>
+<text x="856.000000" y="947.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F04-0126" data-role="label">2,193</text>
+<line x1="36.000000" y1="956.000000" x2="864.000000" y2="956.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="36.000000" y="992.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Straight segments only join recorded observations; no smoothing or interpolation claim.</text>
+<text x="36.000000" y="1009.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Alignment bounds appear as count ranges; group uncertainty is recorded in E06 but not drawn on these panels.</text>
+<text x="36.000000" y="1026.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Early RAW equality contains zero completed repairs and is descriptive. Endpoint-only candidate gates remain failed.</text>
+<text x="36.000000" y="1043.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Full initialization is retained above; the separate detail panel omits initialization explicitly.</text>
+<text x="36.000000" y="1060.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Historical independent reconstruction covers these observations; seed and domain uncertainty remain unmeasured.</text></g></svg>

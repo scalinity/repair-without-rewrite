@@ -1,0 +1,9 @@
+{
+  "schema": "manuscript_figure_render_attempt_v1",
+  "attempt": 1,
+  "status": "FAILED",
+  "diagnostic": "F06 row label D0 P0 appeared in two distinct public tables; extraction stopped.",
+  "original_render_log_sha256": "1927cbcce586ebf942e7ea5e56abe235e351dbeee2141fedda774bd54851363c",
+  "original_diagnostic_retained_outside_Git": true,
+  "scientific_sources_modified": false
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "manuscript_figure_visual_review_v1",
+  "figures_inspected": [
+    "F01",
+    "F02",
+    "F03",
+    "F04",
+    "F05",
+    "F06",
+    "F07",
+    "F08"
+  ],
+  "preview_method": "PNG rendered from actual vector PDF at 180 dpi",
+  "grayscale_series_review": [
+    "F02",
+    "F04"
+  ],
+  "legibility_clipping_label_alignment_denominators_baselines_and_disposition_review": "PASS",
+  "formal_color_vision_simulation": "NOT_RUN",
+  "screenshots_committed": false,
+  "ORCHESTRATION_modified": false,
+  "status": "PASS_VISUAL_FIGURE_REVIEW"
+}

@@ -1,0 +1,624 @@
+{
+  "schema": "manuscript_figure_public_data_v1",
+  "figure": "F05",
+  "preparation_checkpoint": "2550823ca8f4f3c3ceb15a0de775e43878291422",
+  "scientific_checkpoint": "609f97f31979d469ad8551d06b2c07c3513181ec",
+  "page_points": [
+    900,
+    820
+  ],
+  "source_sha256": {
+    "experiments/manifests/generation_2/byt5-execution-schedule.attempt01.json": "a83d8e1a10c51cbe06b21bd0b3e078d926e98e1d89292dfca65c3e2e7c3bc4f5",
+    "experiments/manifests/generation_2/scientific-results.attempt01.json": "510e0efceec1127f38d524f8ca71a224cbaea59cd8206f5dc138889d9be74edd"
+  },
+  "measurements": [
+    {
+      "id": "F05-0001",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update0",
+          "state",
+          "actual_presentations"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F05-0002",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update0",
+          "natural",
+          "wer"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "100.0",
+      "label": "100.000000"
+    },
+    {
+      "id": "F05-0003",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update0",
+          "natural",
+          "completed_repair"
+        ],
+        "scale": 1,
+        "format": "range"
+      },
+      "value": [
+        "0",
+        "0"
+      ],
+      "label": "0"
+    },
+    {
+      "id": "F05-0004",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update0",
+          "natural",
+          "introduced"
+        ],
+        "scale": 1,
+        "format": "range"
+      },
+      "value": [
+        "49648",
+        "49652"
+      ],
+      "label": "49,648-49,652"
+    },
+    {
+      "id": "F05-0005",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update0",
+          "natural",
+          "invalid_or_incomplete"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "2696",
+      "label": "2,696"
+    },
+    {
+      "id": "F05-0006",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update0",
+          "generated",
+          "decoder_invalid_or_incomplete"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "288",
+      "label": "288"
+    },
+    {
+      "id": "F05-0007",
+      "source": {
+        "path": "experiments/manifests/generation_2/byt5-execution-schedule.attempt01.json",
+        "pointer": [
+          "states",
+          0,
+          "nominal_presentations"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F05-0008",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update0",
+          "state",
+          "optimizer_update"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F05-0009",
+      "source": {
+        "path": "experiments/manifests/generation_2/byt5-execution-schedule.attempt01.json",
+        "pointer": [
+          "states",
+          0,
+          "presentation_offset"
+        ],
+        "scale": 1,
+        "format": "signed_int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F05-0010",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update7057",
+          "state",
+          "actual_presentations"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "28228",
+      "label": "28,228"
+    },
+    {
+      "id": "F05-0011",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update7057",
+          "natural",
+          "wer"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "3.012213800416290200",
+      "label": "3.012214"
+    },
+    {
+      "id": "F05-0012",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update7057",
+          "natural",
+          "completed_repair"
+        ],
+        "scale": 1,
+        "format": "range"
+      },
+      "value": [
+        "84",
+        "84"
+      ],
+      "label": "84"
+    },
+    {
+      "id": "F05-0013",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update7057",
+          "natural",
+          "introduced"
+        ],
+        "scale": 1,
+        "format": "range"
+      },
+      "value": [
+        "205",
+        "205"
+      ],
+      "label": "205"
+    },
+    {
+      "id": "F05-0014",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update7057",
+          "natural",
+          "invalid_or_incomplete"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "1",
+      "label": "1"
+    },
+    {
+      "id": "F05-0015",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update7057",
+          "generated",
+          "decoder_invalid_or_incomplete"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "69",
+      "label": "69"
+    },
+    {
+      "id": "F05-0016",
+      "source": {
+        "path": "experiments/manifests/generation_2/byt5-execution-schedule.attempt01.json",
+        "pointer": [
+          "states",
+          1,
+          "nominal_presentations"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "28226",
+      "label": "28,226"
+    },
+    {
+      "id": "F05-0017",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update7057",
+          "state",
+          "optimizer_update"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "7057",
+      "label": "7,057"
+    },
+    {
+      "id": "F05-0018",
+      "source": {
+        "path": "experiments/manifests/generation_2/byt5-execution-schedule.attempt01.json",
+        "pointer": [
+          "states",
+          1,
+          "presentation_offset"
+        ],
+        "scale": 1,
+        "format": "signed_int"
+      },
+      "value": "2",
+      "label": "+2"
+    },
+    {
+      "id": "F05-0019",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update17642",
+          "state",
+          "actual_presentations"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "70568",
+      "label": "70,568"
+    },
+    {
+      "id": "F05-0020",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update17642",
+          "natural",
+          "wer"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "3.073086439146997500",
+      "label": "3.073086"
+    },
+    {
+      "id": "F05-0021",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update17642",
+          "natural",
+          "completed_repair"
+        ],
+        "scale": 1,
+        "format": "range"
+      },
+      "value": [
+        "105",
+        "105"
+      ],
+      "label": "105"
+    },
+    {
+      "id": "F05-0022",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update17642",
+          "natural",
+          "introduced"
+        ],
+        "scale": 1,
+        "format": "range"
+      },
+      "value": [
+        "257",
+        "257"
+      ],
+      "label": "257"
+    },
+    {
+      "id": "F05-0023",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update17642",
+          "natural",
+          "invalid_or_incomplete"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "1",
+      "label": "1"
+    },
+    {
+      "id": "F05-0024",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update17642",
+          "generated",
+          "decoder_invalid_or_incomplete"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "171",
+      "label": "171"
+    },
+    {
+      "id": "F05-0025",
+      "source": {
+        "path": "experiments/manifests/generation_2/byt5-execution-schedule.attempt01.json",
+        "pointer": [
+          "states",
+          2,
+          "nominal_presentations"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "70565",
+      "label": "70,565"
+    },
+    {
+      "id": "F05-0026",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update17642",
+          "state",
+          "optimizer_update"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "17642",
+      "label": "17,642"
+    },
+    {
+      "id": "F05-0027",
+      "source": {
+        "path": "experiments/manifests/generation_2/byt5-execution-schedule.attempt01.json",
+        "pointer": [
+          "states",
+          2,
+          "presentation_offset"
+        ],
+        "scale": 1,
+        "format": "signed_int"
+      },
+      "value": "3",
+      "label": "+3"
+    },
+    {
+      "id": "F05-0028",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update35283",
+          "state",
+          "actual_presentations"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "141130",
+      "label": "141,130"
+    },
+    {
+      "id": "F05-0029",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update35283",
+          "natural",
+          "wer"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "3.239995287279582400",
+      "label": "3.239995"
+    },
+    {
+      "id": "F05-0030",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update35283",
+          "natural",
+          "completed_repair"
+        ],
+        "scale": 1,
+        "format": "range"
+      },
+      "value": [
+        "120",
+        "120"
+      ],
+      "label": "120"
+    },
+    {
+      "id": "F05-0031",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update35283",
+          "natural",
+          "introduced"
+        ],
+        "scale": 1,
+        "format": "range"
+      },
+      "value": [
+        "357",
+        "357"
+      ],
+      "label": "357"
+    },
+    {
+      "id": "F05-0032",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update35283",
+          "natural",
+          "invalid_or_incomplete"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F05-0033",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update35283",
+          "generated",
+          "decoder_invalid_or_incomplete"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "63",
+      "label": "63"
+    },
+    {
+      "id": "F05-0034",
+      "source": {
+        "path": "experiments/manifests/generation_2/byt5-execution-schedule.attempt01.json",
+        "pointer": [
+          "states",
+          3,
+          "nominal_presentations"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "141130",
+      "label": "141,130"
+    },
+    {
+      "id": "F05-0035",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-ByT5-D1-10pass-seed42-lr3e-4/update35283",
+          "state",
+          "optimizer_update"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "35283",
+      "label": "35,283"
+    },
+    {
+      "id": "F05-0036",
+      "source": {
+        "path": "experiments/manifests/generation_2/byt5-execution-schedule.attempt01.json",
+        "pointer": [
+          "states",
+          3,
+          "presentation_offset"
+        ],
+        "scale": 1,
+        "format": "signed_int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F05-0037",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-C101-D1-U8-seed42-lr3e-4/update2440",
+          "natural",
+          "RAW_WER"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "2.774614146015787600",
+      "label": "2.774614"
+    }
+  ]
+}

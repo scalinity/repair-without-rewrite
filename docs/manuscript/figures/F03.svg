@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900pt" height="650pt" viewBox="0 0 900 650" role="img" aria-labelledby="title desc"><title id="title">F03: Completed repairs versus introduced errors</title><desc id="desc">MEASURED RESULT/CALCULATION — Completion-qualified repairs, raw repairs, introductions, output errors and invalid/incomplete cases for the three prescribed G2 endpoints and RAW identity. All natural G2 observations retain 2,696 cases, 50,926 reference words, 1,413 RAW errors and 52 groups. Repair rates use source errors; introduction rates use reference words. Alignment ranges are not statistical intervals. C101 raw conservation uses 20 repairs, whereas completed repair is 18. Failures are retained without bare-model fallback credit. The separate lexical-zero stratum uses 1,818 cases, not the repair denominator; error totals are counts. Its recorded detailed retrospective decomposition retains limited independent reconstruction.</desc><g font-family="Bitstream Vera Sans, DejaVu Sans, Arial, sans-serif"><rect x="0" y="0" width="900" height="650" fill="#FFFFFF" stroke="none"/>
+<text x="36.000000" y="36.000000" font-size="19" fill="#202A33" text-anchor="start" font-weight="bold">F03  |  Completed repairs versus introduced errors</text>
+<text x="36.000000" y="59.000000" font-size="11" fill="#53616D" text-anchor="start" font-weight="normal">Repair Without Rewrite  /  DEVELOPMENT evidence  /  seed 42</text>
+<line x1="36.000000" y1="73.000000" x2="864.000000" y2="73.000000" stroke="#D7DFE5" stroke-width="1"/>
+<text x="36.000000" y="104.000000" font-size="13" fill="#202A33" text-anchor="start" font-weight="bold">Failure-inclusive natural counts; no stacking of rates with different denominators</text>
+<rect x="36" y="119" width="828" height="43" fill="#F3F6F8" stroke="none"/>
+<text x="44.000000" y="135.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Prescribed endpoint</text>
+<text x="219.000000" y="135.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Completed repair</text>
+<text x="219.000000" y="149.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">/ 1,413 errors</text>
+<text x="362.000000" y="135.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Raw repair</text>
+<text x="362.000000" y="149.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">/ 1,413 errors</text>
+<text x="483.000000" y="135.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Introduced</text>
+<text x="483.000000" y="149.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">/ 50,926 words</text>
+<text x="616.000000" y="135.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Output errors</text>
+<text x="616.000000" y="149.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">/ 50,926 words</text>
+<text x="747.000000" y="135.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Invalid/capped</text>
+<text x="747.000000" y="149.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">/ 2,696 cases</text>
+<line x1="36.000000" y1="162.000000" x2="864.000000" y2="162.000000" stroke="#D7DFE5" stroke-width="1"/>
+<text x="44.000000" y="180.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">RAW (identity)</text>
+<text x="346.000000" y="180.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal">0</text>
+<text x="467.000000" y="180.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal">0</text>
+<text x="600.000000" y="180.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal">0</text>
+<text x="731.000000" y="180.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0016" data-role="label">1,413</text>
+<text x="856.000000" y="180.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal">0</text>
+<line x1="36.000000" y1="189.000000" x2="864.000000" y2="189.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="207.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">B100 D1-U8</text>
+<text x="346.000000" y="207.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0001" data-role="label">44-45</text>
+<text x="467.000000" y="207.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0002" data-role="label">44-45</text>
+<text x="600.000000" y="207.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0003" data-role="label">15,628-15,629</text>
+<text x="731.000000" y="207.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0004" data-role="label">16,997</text>
+<text x="856.000000" y="207.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0005" data-role="label">0</text>
+<line x1="36.000000" y1="216.000000" x2="864.000000" y2="216.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="234.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">C101 D1-U8</text>
+<text x="346.000000" y="234.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0006" data-role="label">18</text>
+<text x="467.000000" y="234.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0007" data-role="label">20</text>
+<text x="600.000000" y="234.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0008" data-role="label">2,702</text>
+<text x="731.000000" y="234.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0009" data-role="label">4,095</text>
+<text x="856.000000" y="234.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0010" data-role="label">26</text>
+<line x1="36.000000" y1="243.000000" x2="864.000000" y2="243.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="261.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">ByT5 ten-pass</text>
+<text x="346.000000" y="261.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0011" data-role="label">120</text>
+<text x="467.000000" y="261.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0012" data-role="label">120</text>
+<text x="600.000000" y="261.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0013" data-role="label">357</text>
+<text x="731.000000" y="261.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0014" data-role="label">1,650</text>
+<text x="856.000000" y="261.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0015" data-role="label">0</text>
+<line x1="36.000000" y1="270.000000" x2="864.000000" y2="270.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="36.000000" y="291.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">RAW repair and introduction are zero by identity. Alignment ranges are identification bounds, not confidence intervals.</text>
+<text x="36.000000" y="308.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Raw conservation: output errors = RAW errors - raw repair + introduced errors.</text>
+<text x="36.000000" y="325.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">C101 conservation uses 20 raw repairs; its 18 completion-qualified repairs are a distinct utility measure.</text>
+<text x="36.000000" y="369.000000" font-size="13" fill="#202A33" text-anchor="start" font-weight="bold">Originally lexical-zero stratum (retrospective calculation; limited reconstruction)</text>
+<rect x="36" y="382" width="828" height="43" fill="#F3F6F8" stroke="none"/>
+<text x="44.000000" y="398.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Endpoint</text>
+<text x="284.000000" y="398.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Damaged cases / 1,818</text>
+<text x="558.000000" y="398.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Errors in that stratum (count)</text>
+<line x1="36.000000" y1="425.000000" x2="864.000000" y2="425.000000" stroke="#D7DFE5" stroke-width="1"/>
+<text x="44.000000" y="443.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">B100 D1-U8</text>
+<text x="542.000000" y="443.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0017" data-role="label">1,600</text>
+<text x="856.000000" y="443.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0018" data-role="label">10,151</text>
+<line x1="36.000000" y1="452.000000" x2="864.000000" y2="452.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="470.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">C101 D1-U8</text>
+<text x="542.000000" y="470.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0019" data-role="label">288</text>
+<text x="856.000000" y="470.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0020" data-role="label">1,614</text>
+<line x1="36.000000" y1="479.000000" x2="864.000000" y2="479.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="497.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">ByT5 ten-pass</text>
+<text x="542.000000" y="497.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0021" data-role="label">183</text>
+<text x="856.000000" y="497.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F03-0022" data-role="label">239</text>
+<line x1="36.000000" y1="506.000000" x2="864.000000" y2="506.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="36.000000" y="533.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Historical endpoint scores were independently reconstructed; detailed retrospective stratum decomposition was not</text>
+<text x="36.000000" y="550.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">fully requalified in frontier v3. No new subgroup extraction is performed.</text>
+<text x="36.000000" y="567.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Training-seed and domain/pretraining uncertainty remain unmeasured; all prescribed endpoints failed WER below RAW.</text></g></svg>

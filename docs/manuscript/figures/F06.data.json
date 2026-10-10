@@ -1,0 +1,813 @@
+{
+  "schema": "manuscript_figure_public_data_v1",
+  "figure": "F06",
+  "preparation_checkpoint": "2550823ca8f4f3c3ceb15a0de775e43878291422",
+  "scientific_checkpoint": "609f97f31979d469ad8551d06b2c07c3513181ec",
+  "page_points": [
+    900,
+    1020
+  ],
+  "source_sha256": {
+    "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md": "698bc4a54e07c09db8e0c63228836ffaec32ec664a5c68edb2e86a5c900976d0"
+  },
+  "measurements": [
+    {
+      "id": "F06-0001",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 97,
+        "column": 1,
+        "tokens": [
+          1
+        ],
+        "format": "int"
+      },
+      "value": "18",
+      "label": "18"
+    },
+    {
+      "id": "F06-0002",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 97,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "763",
+      "label": "763"
+    },
+    {
+      "id": "F06-0003",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 94,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "1024",
+      "label": "1,024"
+    },
+    {
+      "id": "F06-0004",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 97,
+        "column": 1,
+        "tokens": [
+          3
+        ],
+        "format": "int"
+      },
+      "value": "19",
+      "label": "19"
+    },
+    {
+      "id": "F06-0005",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 97,
+        "column": 1,
+        "tokens": [
+          2
+        ],
+        "format": "int"
+      },
+      "value": "261",
+      "label": "261"
+    },
+    {
+      "id": "F06-0006",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 94,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "1024",
+      "label": "1,024"
+    },
+    {
+      "id": "F06-0007",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 97,
+        "column": 2,
+        "tokens": [
+          1
+        ],
+        "format": "int"
+      },
+      "value": "1",
+      "label": "1"
+    },
+    {
+      "id": "F06-0008",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 97,
+        "column": 2,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "8688",
+      "label": "8,688"
+    },
+    {
+      "id": "F06-0009",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 94,
+        "column": 2,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "14113",
+      "label": "14,113"
+    },
+    {
+      "id": "F06-0010",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 97,
+        "column": 2,
+        "tokens": [
+          3
+        ],
+        "format": "int"
+      },
+      "value": "2",
+      "label": "2"
+    },
+    {
+      "id": "F06-0011",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 97,
+        "column": 2,
+        "tokens": [
+          2
+        ],
+        "format": "int"
+      },
+      "value": "5425",
+      "label": "5,425"
+    },
+    {
+      "id": "F06-0012",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 94,
+        "column": 2,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "14113",
+      "label": "14,113"
+    },
+    {
+      "id": "F06-0013",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 95,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F06-0014",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 95,
+        "column": 2,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F06-0015",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 94,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "1024",
+      "label": "1,024"
+    },
+    {
+      "id": "F06-0016",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 94,
+        "column": 2,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "14113",
+      "label": "14,113"
+    },
+    {
+      "id": "F06-0017",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 96,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "18693",
+      "label": "18,693"
+    },
+    {
+      "id": "F06-0018",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 96,
+        "column": 2,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "19538",
+      "label": "19,538"
+    },
+    {
+      "id": "F06-0019",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 98,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "dec"
+      },
+      "value": "18.254883",
+      "label": "18.254883"
+    },
+    {
+      "id": "F06-0020",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 98,
+        "column": 2,
+        "tokens": [
+          0
+        ],
+        "format": "dec"
+      },
+      "value": "1.384397",
+      "label": "1.384397"
+    },
+    {
+      "id": "F06-0021",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 99,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "1000665",
+      "label": "1,000,665"
+    },
+    {
+      "id": "F06-0022",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 99,
+        "column": 2,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "1000628",
+      "label": "1,000,628"
+    },
+    {
+      "id": "F06-0023",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 105,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "28040",
+      "label": "28,040"
+    },
+    {
+      "id": "F06-0024",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 105,
+        "column": 2,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "29365",
+      "label": "29,365"
+    },
+    {
+      "id": "F06-0025",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 106,
+        "column": 1,
+        "tokens": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "format": "frequency"
+      },
+      "value": [
+        "632",
+        "27",
+        "392",
+        "28"
+      ],
+      "label": "632 x 27; 392 x 28"
+    },
+    {
+      "id": "F06-0026",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 106,
+        "column": 2,
+        "tokens": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "format": "frequency"
+      },
+      "value": [
+        "12974",
+        "2",
+        "1139",
+        "3"
+      ],
+      "label": "12,974 x 2; 1,139 x 3"
+    },
+    {
+      "id": "F06-0027",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 107,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "1501032",
+      "label": "1,501,032"
+    },
+    {
+      "id": "F06-0028",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 107,
+        "column": 2,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "1501003",
+      "label": "1,501,003"
+    },
+    {
+      "id": "F06-0029",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 109,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "547635",
+      "label": "547,635"
+    },
+    {
+      "id": "F06-0030",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 109,
+        "column": 2,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "7218011",
+      "label": "7,218,011"
+    },
+    {
+      "id": "F06-0031",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 113,
+        "tokens": [
+          0
+        ],
+        "format": "dec"
+      },
+      "value": "18.256312",
+      "label": "18.256312"
+    },
+    {
+      "id": "F06-0032",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 113,
+        "tokens": [
+          1
+        ],
+        "format": "dec"
+      },
+      "value": "1.386247",
+      "label": "1.386247"
+    },
+    {
+      "id": "F06-0033",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 125,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "12456",
+      "label": "12,456"
+    },
+    {
+      "id": "F06-0034",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 125,
+        "column": 4,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "666666",
+      "label": "666,666"
+    },
+    {
+      "id": "F06-0035",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 125,
+        "column": 5,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "18681",
+      "label": "18,681"
+    },
+    {
+      "id": "F06-0036",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 125,
+        "column": 6,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "1000061",
+      "label": "1,000,061"
+    },
+    {
+      "id": "F06-0037",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 126,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "4979",
+      "label": "4,979"
+    },
+    {
+      "id": "F06-0038",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 126,
+        "column": 4,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "266669",
+      "label": "266,669"
+    },
+    {
+      "id": "F06-0039",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 126,
+        "column": 5,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "7481",
+      "label": "7,481"
+    },
+    {
+      "id": "F06-0040",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 126,
+        "column": 6,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "399991",
+      "label": "399,991"
+    },
+    {
+      "id": "F06-0041",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 127,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "1258",
+      "label": "1,258"
+    },
+    {
+      "id": "F06-0042",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 127,
+        "column": 4,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "67330",
+      "label": "67,330"
+    },
+    {
+      "id": "F06-0043",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 127,
+        "column": 5,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "1878",
+      "label": "1,878"
+    },
+    {
+      "id": "F06-0044",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 127,
+        "column": 6,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "100980",
+      "label": "100,980"
+    },
+    {
+      "id": "F06-0045",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 128,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "13026",
+      "label": "13,026"
+    },
+    {
+      "id": "F06-0046",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 128,
+        "column": 4,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "666666",
+      "label": "666,666"
+    },
+    {
+      "id": "F06-0047",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 128,
+        "column": 5,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "19526",
+      "label": "19,526"
+    },
+    {
+      "id": "F06-0048",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 128,
+        "column": 6,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "1000060",
+      "label": "1,000,060"
+    },
+    {
+      "id": "F06-0049",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 129,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "5221",
+      "label": "5,221"
+    },
+    {
+      "id": "F06-0050",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 129,
+        "column": 4,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "266651",
+      "label": "266,651"
+    },
+    {
+      "id": "F06-0051",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 129,
+        "column": 5,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "7853",
+      "label": "7,853"
+    },
+    {
+      "id": "F06-0052",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 129,
+        "column": 6,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "400043",
+      "label": "400,043"
+    },
+    {
+      "id": "F06-0053",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 130,
+        "column": 1,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "1291",
+      "label": "1,291"
+    },
+    {
+      "id": "F06-0054",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 130,
+        "column": 4,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "67311",
+      "label": "67,311"
+    },
+    {
+      "id": "F06-0055",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 130,
+        "column": 5,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "1986",
+      "label": "1,986"
+    },
+    {
+      "id": "F06-0056",
+      "source": {
+        "path": "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+        "line": 130,
+        "column": 6,
+        "tokens": [
+          0
+        ],
+        "format": "int"
+      },
+      "value": "100900",
+      "label": "100,900"
+    }
+  ]
+}

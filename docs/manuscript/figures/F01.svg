@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900pt" height="790pt" viewBox="0 0 900 790" role="img" aria-labelledby="title desc"><title id="title">F01: Generation-1 scratch outcomes</title><desc id="desc">MEASURED RESULT — Six fixed seed-42 scratch endpoints at nominal 10M (actual 10,007,223 canonical exposures; 305 updates). The natural panel contains 108 cases, 2,270 words and 64 RAW errors (2.819383% WER). All endpoints fail natural adequacy; neither arm has a selected LR. Generated conformance (/288), genuine repaired cases (/192), and repaired fields (/288) are separately qualified and cannot substitute for natural repair. Decoder and structural failures remain visible. Repair/introduction ranges are alignment bounds; no sampling intervals are available here.</desc><g font-family="Bitstream Vera Sans, DejaVu Sans, Arial, sans-serif"><rect x="0" y="0" width="900" height="790" fill="#FFFFFF" stroke="none"/>
+<text x="36.000000" y="36.000000" font-size="19" fill="#202A33" text-anchor="start" font-weight="bold">F01  |  Generation-1 scratch outcomes</text>
+<text x="36.000000" y="59.000000" font-size="11" fill="#53616D" text-anchor="start" font-weight="normal">Repair Without Rewrite  /  DEVELOPMENT evidence  /  seed 42</text>
+<line x1="36.000000" y1="73.000000" x2="864.000000" y2="73.000000" stroke="#D7DFE5" stroke-width="1"/>
+<text x="36.000000" y="99.000000" font-size="13" fill="#202A33" text-anchor="start" font-weight="bold">Natural DEVELOPMENT: all six endpoints are ineligible</text>
+<rect x="36" y="111" width="828" height="43" fill="#F3F6F8" stroke="none"/>
+<text x="44.000000" y="127.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Arm / peak LR</text>
+<text x="194.000000" y="127.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Errors</text>
+<text x="194.000000" y="141.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">/ 2,270 words</text>
+<text x="319.000000" y="127.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">WER %</text>
+<text x="427.000000" y="127.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Completed repair</text>
+<text x="427.000000" y="141.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">/ 64 source errors</text>
+<text x="592.000000" y="127.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Introduced errors</text>
+<text x="592.000000" y="141.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">/ 2,270 words</text>
+<text x="752.000000" y="127.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Invalid/capped</text>
+<text x="752.000000" y="141.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">/ 108 cases</text>
+<line x1="36.000000" y1="154.000000" x2="864.000000" y2="154.000000" stroke="#D7DFE5" stroke-width="1"/>
+<text x="44.000000" y="172.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">B100 / 1e-4</text>
+<text x="303.000000" y="172.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0001" data-role="label">2,208</text>
+<text x="411.000000" y="172.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0002" data-role="label">97.268722</text>
+<text x="576.000000" y="172.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0003" data-role="label">6</text>
+<text x="736.000000" y="172.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0004" data-role="label">2,150</text>
+<text x="856.000000" y="172.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0005" data-role="label">0</text>
+<line x1="36.000000" y1="181.000000" x2="864.000000" y2="181.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="199.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">B100 / 3e-4</text>
+<text x="303.000000" y="199.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0011" data-role="label">2,584</text>
+<text x="411.000000" y="199.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0012" data-role="label">113.832599</text>
+<text x="576.000000" y="199.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0013" data-role="label">2</text>
+<text x="736.000000" y="199.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0014" data-role="label">2,522</text>
+<text x="856.000000" y="199.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0015" data-role="label">0</text>
+<line x1="36.000000" y1="208.000000" x2="864.000000" y2="208.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="226.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">B100 / 6e-4</text>
+<text x="303.000000" y="226.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0021" data-role="label">2,664</text>
+<text x="411.000000" y="226.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0022" data-role="label">117.356828</text>
+<text x="576.000000" y="226.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0023" data-role="label">2</text>
+<text x="736.000000" y="226.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0024" data-role="label">2,602</text>
+<text x="856.000000" y="226.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0025" data-role="label">0</text>
+<line x1="36.000000" y1="235.000000" x2="864.000000" y2="235.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="253.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">C101 / 1e-4</text>
+<text x="303.000000" y="253.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0031" data-role="label">121</text>
+<text x="411.000000" y="253.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0032" data-role="label">5.330396</text>
+<text x="576.000000" y="253.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0033" data-role="label">0</text>
+<text x="736.000000" y="253.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0034" data-role="label">57</text>
+<text x="856.000000" y="253.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0035" data-role="label">0</text>
+<line x1="36.000000" y1="262.000000" x2="864.000000" y2="262.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="280.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">C101 / 3e-4</text>
+<text x="303.000000" y="280.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0041" data-role="label">128</text>
+<text x="411.000000" y="280.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0042" data-role="label">5.638767</text>
+<text x="576.000000" y="280.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0043" data-role="label">0</text>
+<text x="736.000000" y="280.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0044" data-role="label">64</text>
+<text x="856.000000" y="280.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0045" data-role="label">0</text>
+<line x1="36.000000" y1="289.000000" x2="864.000000" y2="289.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="307.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">C101 / 6e-4</text>
+<text x="303.000000" y="307.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0051" data-role="label">109</text>
+<text x="411.000000" y="307.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0052" data-role="label">4.801762</text>
+<text x="576.000000" y="307.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0053" data-role="label">0</text>
+<text x="736.000000" y="307.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0054" data-role="label">45</text>
+<text x="856.000000" y="307.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0055" data-role="label">0</text>
+<line x1="36.000000" y1="316.000000" x2="864.000000" y2="316.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="36.000000" y="343.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">RAW baseline: 64 / 2,270 reference words; WER % =</text>
+<text x="441.000000" y="343.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="bold" data-measurement="F01-0061" data-role="label">2.819383</text>
+<text x="36.000000" y="383.000000" font-size="13" fill="#202A33" text-anchor="start" font-weight="bold">Generated DEVELOPMENT: separate populations and structural qualification</text>
+<rect x="36" y="395" width="828" height="43" fill="#F3F6F8" stroke="none"/>
+<text x="44.000000" y="411.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Arm / peak LR</text>
+<text x="194.000000" y="411.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Conformance</text>
+<text x="194.000000" y="425.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">/ 288 cases</text>
+<text x="319.000000" y="411.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Genuine repairs</text>
+<text x="319.000000" y="425.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">/ 192 cases</text>
+<text x="464.000000" y="411.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Repaired fields</text>
+<text x="464.000000" y="425.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">/ 288 fields</text>
+<text x="609.000000" y="411.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Structure invalid</text>
+<text x="609.000000" y="425.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">/ 288 cases</text>
+<text x="744.000000" y="411.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Decoder failures</text>
+<text x="744.000000" y="425.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">/ 288 cases</text>
+<line x1="36.000000" y1="438.000000" x2="864.000000" y2="438.000000" stroke="#D7DFE5" stroke-width="1"/>
+<text x="44.000000" y="456.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">B100 / 1e-4</text>
+<text x="303.000000" y="456.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0006" data-role="label">0</text>
+<text x="448.000000" y="456.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0007" data-role="label">0</text>
+<text x="593.000000" y="456.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0008" data-role="label">0</text>
+<text x="728.000000" y="456.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0009" data-role="label">288</text>
+<text x="856.000000" y="456.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0010" data-role="label">0</text>
+<line x1="36.000000" y1="465.000000" x2="864.000000" y2="465.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="483.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">B100 / 3e-4</text>
+<text x="303.000000" y="483.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0016" data-role="label">0</text>
+<text x="448.000000" y="483.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0017" data-role="label">0</text>
+<text x="593.000000" y="483.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0018" data-role="label">0</text>
+<text x="728.000000" y="483.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0019" data-role="label">288</text>
+<text x="856.000000" y="483.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0020" data-role="label">3</text>
+<line x1="36.000000" y1="492.000000" x2="864.000000" y2="492.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="510.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">B100 / 6e-4</text>
+<text x="303.000000" y="510.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0026" data-role="label">0</text>
+<text x="448.000000" y="510.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0027" data-role="label">0</text>
+<text x="593.000000" y="510.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0028" data-role="label">0</text>
+<text x="728.000000" y="510.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0029" data-role="label">288</text>
+<text x="856.000000" y="510.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0030" data-role="label">0</text>
+<line x1="36.000000" y1="519.000000" x2="864.000000" y2="519.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="537.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">C101 / 1e-4</text>
+<text x="303.000000" y="537.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0036" data-role="label">131</text>
+<text x="448.000000" y="537.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0037" data-role="label">49</text>
+<text x="593.000000" y="537.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0038" data-role="label">55</text>
+<text x="728.000000" y="537.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0039" data-role="label">70</text>
+<text x="856.000000" y="537.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0040" data-role="label">0</text>
+<line x1="36.000000" y1="546.000000" x2="864.000000" y2="546.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="564.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">C101 / 3e-4</text>
+<text x="303.000000" y="564.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0046" data-role="label">149</text>
+<text x="448.000000" y="564.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0047" data-role="label">79</text>
+<text x="593.000000" y="564.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0048" data-role="label">90</text>
+<text x="728.000000" y="564.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0049" data-role="label">19</text>
+<text x="856.000000" y="564.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0050" data-role="label">0</text>
+<line x1="36.000000" y1="573.000000" x2="864.000000" y2="573.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="591.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">C101 / 6e-4</text>
+<text x="303.000000" y="591.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0056" data-role="label">132</text>
+<text x="448.000000" y="591.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0057" data-role="label">54</text>
+<text x="593.000000" y="591.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0058" data-role="label">60</text>
+<text x="728.000000" y="591.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0059" data-role="label">43</text>
+<text x="856.000000" y="591.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F01-0060" data-role="label">0</text>
+<line x1="36.000000" y1="600.000000" x2="864.000000" y2="600.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="36.000000" y="640.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Natural repairs and introductions are alignment bounds, not statistical confidence intervals.</text>
+<text x="36.000000" y="657.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Generated successes require complete structural qualification; generated learning is not natural repair.</text>
+<text x="36.000000" y="674.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Single seed 42; no sampling bars; training-seed variability and domain transfer are unmeasured.</text>
+<text x="36.000000" y="691.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Both eligible rankings are empty and both selected learning rates are null.</text></g></svg>

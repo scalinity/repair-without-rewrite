@@ -1,0 +1,1149 @@
+{
+  "schema": "manuscript_figure_public_data_v1",
+  "figure": "F01",
+  "preparation_checkpoint": "2550823ca8f4f3c3ceb15a0de775e43878291422",
+  "scientific_checkpoint": "609f97f31979d469ad8551d06b2c07c3513181ec",
+  "page_points": [
+    900,
+    790
+  ],
+  "source_sha256": {
+    "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json": "fd06cd8a86edbcc37cc3642363d28929efc380622bfe485422318071b6c766bf"
+  },
+  "measurements": [
+    {
+      "id": "F01-0001",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          0,
+          "learning_curve",
+          5,
+          "natural",
+          "output_errors"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "2208",
+      "label": "2,208"
+    },
+    {
+      "id": "F01-0002",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          0,
+          "learning_curve",
+          5,
+          "natural",
+          "wer"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "97.2687224669603600",
+      "label": "97.268722"
+    },
+    {
+      "id": "F01-0003",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          0,
+          "learning_curve",
+          5,
+          "natural",
+          "completed_repair"
+        ],
+        "scale": 1,
+        "format": "range"
+      },
+      "value": [
+        "6",
+        "6"
+      ],
+      "label": "6"
+    },
+    {
+      "id": "F01-0004",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          0,
+          "learning_curve",
+          5,
+          "natural",
+          "introduced"
+        ],
+        "scale": 1,
+        "format": "range"
+      },
+      "value": [
+        "2150",
+        "2150"
+      ],
+      "label": "2,150"
+    },
+    {
+      "id": "F01-0005",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          0,
+          "learning_curve",
+          5,
+          "natural",
+          "invalid_or_incomplete"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F01-0006",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          0,
+          "learning_curve",
+          5,
+          "generated",
+          "whole_case_conformance"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F01-0007",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          0,
+          "learning_curve",
+          5,
+          "generated",
+          "required_repair_cases_completed"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F01-0008",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          0,
+          "learning_curve",
+          5,
+          "generated",
+          "required_repair_fields_completed"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F01-0009",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          0,
+          "learning_curve",
+          5,
+          "generated",
+          "structure_invalid"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "288",
+      "label": "288"
+    },
+    {
+      "id": "F01-0010",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          0,
+          "learning_curve",
+          5,
+          "generated",
+          "decoder_invalid_or_incomplete"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F01-0011",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          2,
+          "learning_curve",
+          5,
+          "natural",
+          "output_errors"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "2584",
+      "label": "2,584"
+    },
+    {
+      "id": "F01-0012",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          2,
+          "learning_curve",
+          5,
+          "natural",
+          "wer"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "113.8325991189427200",
+      "label": "113.832599"
+    },
+    {
+      "id": "F01-0013",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          2,
+          "learning_curve",
+          5,
+          "natural",
+          "completed_repair"
+        ],
+        "scale": 1,
+        "format": "range"
+      },
+      "value": [
+        "2",
+        "2"
+      ],
+      "label": "2"
+    },
+    {
+      "id": "F01-0014",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          2,
+          "learning_curve",
+          5,
+          "natural",
+          "introduced"
+        ],
+        "scale": 1,
+        "format": "range"
+      },
+      "value": [
+        "2522",
+        "2522"
+      ],
+      "label": "2,522"
+    },
+    {
+      "id": "F01-0015",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          2,
+          "learning_curve",
+          5,
+          "natural",
+          "invalid_or_incomplete"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F01-0016",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          2,
+          "learning_curve",
+          5,
+          "generated",
+          "whole_case_conformance"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F01-0017",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          2,
+          "learning_curve",
+          5,
+          "generated",
+          "required_repair_cases_completed"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F01-0018",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          2,
+          "learning_curve",
+          5,
+          "generated",
+          "required_repair_fields_completed"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F01-0019",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          2,
+          "learning_curve",
+          5,
+          "generated",
+          "structure_invalid"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "288",
+      "label": "288"
+    },
+    {
+      "id": "F01-0020",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          2,
+          "learning_curve",
+          5,
+          "generated",
+          "decoder_invalid_or_incomplete"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "3",
+      "label": "3"
+    },
+    {
+      "id": "F01-0021",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          4,
+          "learning_curve",
+          5,
+          "natural",
+          "output_errors"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "2664",
+      "label": "2,664"
+    },
+    {
+      "id": "F01-0022",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          4,
+          "learning_curve",
+          5,
+          "natural",
+          "wer"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "117.356828193832600",
+      "label": "117.356828"
+    },
+    {
+      "id": "F01-0023",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          4,
+          "learning_curve",
+          5,
+          "natural",
+          "completed_repair"
+        ],
+        "scale": 1,
+        "format": "range"
+      },
+      "value": [
+        "2",
+        "2"
+      ],
+      "label": "2"
+    },
+    {
+      "id": "F01-0024",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          4,
+          "learning_curve",
+          5,
+          "natural",
+          "introduced"
+        ],
+        "scale": 1,
+        "format": "range"
+      },
+      "value": [
+        "2602",
+        "2602"
+      ],
+      "label": "2,602"
+    },
+    {
+      "id": "F01-0025",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          4,
+          "learning_curve",
+          5,
+          "natural",
+          "invalid_or_incomplete"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F01-0026",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          4,
+          "learning_curve",
+          5,
+          "generated",
+          "whole_case_conformance"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F01-0027",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          4,
+          "learning_curve",
+          5,
+          "generated",
+          "required_repair_cases_completed"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F01-0028",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          4,
+          "learning_curve",
+          5,
+          "generated",
+          "required_repair_fields_completed"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F01-0029",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          4,
+          "learning_curve",
+          5,
+          "generated",
+          "structure_invalid"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "288",
+      "label": "288"
+    },
+    {
+      "id": "F01-0030",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          4,
+          "learning_curve",
+          5,
+          "generated",
+          "decoder_invalid_or_incomplete"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F01-0031",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          1,
+          "learning_curve",
+          5,
+          "natural",
+          "output_errors"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "121",
+      "label": "121"
+    },
+    {
+      "id": "F01-0032",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          1,
+          "learning_curve",
+          5,
+          "natural",
+          "wer"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "5.33039647577092500",
+      "label": "5.330396"
+    },
+    {
+      "id": "F01-0033",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          1,
+          "learning_curve",
+          5,
+          "natural",
+          "completed_repair"
+        ],
+        "scale": 1,
+        "format": "range"
+      },
+      "value": [
+        "0",
+        "0"
+      ],
+      "label": "0"
+    },
+    {
+      "id": "F01-0034",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          1,
+          "learning_curve",
+          5,
+          "natural",
+          "introduced"
+        ],
+        "scale": 1,
+        "format": "range"
+      },
+      "value": [
+        "57",
+        "57"
+      ],
+      "label": "57"
+    },
+    {
+      "id": "F01-0035",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          1,
+          "learning_curve",
+          5,
+          "natural",
+          "invalid_or_incomplete"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F01-0036",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          1,
+          "learning_curve",
+          5,
+          "generated",
+          "whole_case_conformance"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "131",
+      "label": "131"
+    },
+    {
+      "id": "F01-0037",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          1,
+          "learning_curve",
+          5,
+          "generated",
+          "required_repair_cases_completed"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "49",
+      "label": "49"
+    },
+    {
+      "id": "F01-0038",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          1,
+          "learning_curve",
+          5,
+          "generated",
+          "required_repair_fields_completed"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "55",
+      "label": "55"
+    },
+    {
+      "id": "F01-0039",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          1,
+          "learning_curve",
+          5,
+          "generated",
+          "structure_invalid"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "70",
+      "label": "70"
+    },
+    {
+      "id": "F01-0040",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          1,
+          "learning_curve",
+          5,
+          "generated",
+          "decoder_invalid_or_incomplete"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F01-0041",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          3,
+          "learning_curve",
+          5,
+          "natural",
+          "output_errors"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "128",
+      "label": "128"
+    },
+    {
+      "id": "F01-0042",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          3,
+          "learning_curve",
+          5,
+          "natural",
+          "wer"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "5.63876651982378900",
+      "label": "5.638767"
+    },
+    {
+      "id": "F01-0043",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          3,
+          "learning_curve",
+          5,
+          "natural",
+          "completed_repair"
+        ],
+        "scale": 1,
+        "format": "range"
+      },
+      "value": [
+        "0",
+        "0"
+      ],
+      "label": "0"
+    },
+    {
+      "id": "F01-0044",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          3,
+          "learning_curve",
+          5,
+          "natural",
+          "introduced"
+        ],
+        "scale": 1,
+        "format": "range"
+      },
+      "value": [
+        "64",
+        "64"
+      ],
+      "label": "64"
+    },
+    {
+      "id": "F01-0045",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          3,
+          "learning_curve",
+          5,
+          "natural",
+          "invalid_or_incomplete"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F01-0046",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          3,
+          "learning_curve",
+          5,
+          "generated",
+          "whole_case_conformance"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "149",
+      "label": "149"
+    },
+    {
+      "id": "F01-0047",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          3,
+          "learning_curve",
+          5,
+          "generated",
+          "required_repair_cases_completed"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "79",
+      "label": "79"
+    },
+    {
+      "id": "F01-0048",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          3,
+          "learning_curve",
+          5,
+          "generated",
+          "required_repair_fields_completed"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "90",
+      "label": "90"
+    },
+    {
+      "id": "F01-0049",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          3,
+          "learning_curve",
+          5,
+          "generated",
+          "structure_invalid"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "19",
+      "label": "19"
+    },
+    {
+      "id": "F01-0050",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          3,
+          "learning_curve",
+          5,
+          "generated",
+          "decoder_invalid_or_incomplete"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F01-0051",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          5,
+          "learning_curve",
+          5,
+          "natural",
+          "output_errors"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "109",
+      "label": "109"
+    },
+    {
+      "id": "F01-0052",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          5,
+          "learning_curve",
+          5,
+          "natural",
+          "wer"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "4.80176211453744500",
+      "label": "4.801762"
+    },
+    {
+      "id": "F01-0053",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          5,
+          "learning_curve",
+          5,
+          "natural",
+          "completed_repair"
+        ],
+        "scale": 1,
+        "format": "range"
+      },
+      "value": [
+        "0",
+        "0"
+      ],
+      "label": "0"
+    },
+    {
+      "id": "F01-0054",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          5,
+          "learning_curve",
+          5,
+          "natural",
+          "introduced"
+        ],
+        "scale": 1,
+        "format": "range"
+      },
+      "value": [
+        "45",
+        "45"
+      ],
+      "label": "45"
+    },
+    {
+      "id": "F01-0055",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          5,
+          "learning_curve",
+          5,
+          "natural",
+          "invalid_or_incomplete"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F01-0056",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          5,
+          "learning_curve",
+          5,
+          "generated",
+          "whole_case_conformance"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "132",
+      "label": "132"
+    },
+    {
+      "id": "F01-0057",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          5,
+          "learning_curve",
+          5,
+          "generated",
+          "required_repair_cases_completed"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "54",
+      "label": "54"
+    },
+    {
+      "id": "F01-0058",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          5,
+          "learning_curve",
+          5,
+          "generated",
+          "required_repair_fields_completed"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "60",
+      "label": "60"
+    },
+    {
+      "id": "F01-0059",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          5,
+          "learning_curve",
+          5,
+          "generated",
+          "structure_invalid"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "43",
+      "label": "43"
+    },
+    {
+      "id": "F01-0060",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          5,
+          "learning_curve",
+          5,
+          "generated",
+          "decoder_invalid_or_incomplete"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "0",
+      "label": "0"
+    },
+    {
+      "id": "F01-0061",
+      "source": {
+        "path": "experiments/manifests/six_10m_probes/descriptive-tables.attempt01.json",
+        "pointer": [
+          "outcomes",
+          0,
+          "learning_curve",
+          5,
+          "natural",
+          "RAW_WER"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "2.819383259911894400",
+      "label": "2.819383"
+    }
+  ]
+}

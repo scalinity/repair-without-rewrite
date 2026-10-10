@@ -1,0 +1,14 @@
+{
+  "schema": "manuscript_figure_scope_boundaries_v1",
+  "existing_worktrees_verified_unchanged": 2,
+  "existing_branch_heads_status_and_ORCHESTRATION_unchanged": true,
+  "automation_settings_files_verified_unchanged": 3,
+  "automation_settings_combined_sha256": "58bdf560bd4b900928f593dee6eddb5d7148698304b9014b5aefb8272222448c",
+  "preparation_checkpoint": "2550823ca8f4f3c3ceb15a0de775e43878291422",
+  "scientific_execution": "NOT_RUN",
+  "protected_payload_access": "NOT_RUN",
+  "dependency_environment_and_lock_changes": "NONE",
+  "baseline_scientific_test_suite": "NOT_RUN_DOCUMENTATION_SCOPE",
+  "end_scientific_test_suite": "NOT_RUN_DOCUMENTATION_SCOPE",
+  "status": "PASS_DOCUMENTATION_BOUNDARIES"
+}

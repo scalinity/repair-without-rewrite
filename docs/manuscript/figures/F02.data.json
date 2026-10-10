@@ -1,0 +1,597 @@
+{
+  "schema": "manuscript_figure_public_data_v1",
+  "figure": "F02",
+  "preparation_checkpoint": "2550823ca8f4f3c3ceb15a0de775e43878291422",
+  "scientific_checkpoint": "609f97f31979d469ad8551d06b2c07c3513181ec",
+  "page_points": [
+    900,
+    985
+  ],
+  "source_sha256": {
+    "experiments/manifests/generation_2/scientific-results.attempt01.json": "510e0efceec1127f38d524f8ca71a224cbaea59cd8206f5dc138889d9be74edd"
+  },
+  "measurements": [
+    {
+      "id": "F02-0001",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-C101-D1-U8-seed42-lr3e-4/update2440",
+          "natural",
+          "RAW_WER"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "2.774614146015787600",
+      "label": "2.774614"
+    },
+    {
+      "id": "F02-0002",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "archived-B100-D0-U1",
+          "natural",
+          "wer"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "114.858814750814900",
+      "label": "114.858815"
+    },
+    {
+      "id": "F02-0003",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "paired_group_bootstrap",
+          "WER",
+          "intervals",
+          "archived-B100-D0-U1"
+        ],
+        "scale": 100,
+        "format": "interval"
+      },
+      "value": [
+        "112.9651253878148700",
+        "116.9403501708374600"
+      ],
+      "label": "[112.965125, 116.940350]"
+    },
+    {
+      "id": "F02-0004",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "archived-B100-D0-U1",
+          "natural",
+          "output_errors"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "58493",
+      "label": "58,493"
+    },
+    {
+      "id": "F02-0005",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-B100-D0-U8-seed42-lr3e-4/update2440",
+          "natural",
+          "wer"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "124.3844008954168700",
+      "label": "124.384401"
+    },
+    {
+      "id": "F02-0006",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "paired_group_bootstrap",
+          "WER",
+          "intervals",
+          "G2-B100-D0-U8-seed42-lr3e-4/update2440"
+        ],
+        "scale": 100,
+        "format": "interval"
+      },
+      "value": [
+        "120.5759999678923700",
+        "128.5391060134123400"
+      ],
+      "label": "[120.576000, 128.539106]"
+    },
+    {
+      "id": "F02-0007",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-B100-D0-U8-seed42-lr3e-4/update2440",
+          "natural",
+          "output_errors"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "63344",
+      "label": "63,344"
+    },
+    {
+      "id": "F02-0008",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-B100-D1-U1-seed42-lr3e-4/update305",
+          "natural",
+          "wer"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "111.086674783018500",
+      "label": "111.086675"
+    },
+    {
+      "id": "F02-0009",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "paired_group_bootstrap",
+          "WER",
+          "intervals",
+          "G2-B100-D1-U1-seed42-lr3e-4/update305"
+        ],
+        "scale": 100,
+        "format": "interval"
+      },
+      "value": [
+        "109.3128515493979200",
+        "112.930835919430200"
+      ],
+      "label": "[109.312852, 112.930836]"
+    },
+    {
+      "id": "F02-0010",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-B100-D1-U1-seed42-lr3e-4/update305",
+          "natural",
+          "output_errors"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "56572",
+      "label": "56,572"
+    },
+    {
+      "id": "F02-0011",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-B100-D1-U8-seed42-lr3e-4/update2440",
+          "natural",
+          "wer"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "33.3758787259945800",
+      "label": "33.375879"
+    },
+    {
+      "id": "F02-0012",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "paired_group_bootstrap",
+          "WER",
+          "intervals",
+          "G2-B100-D1-U8-seed42-lr3e-4/update2440"
+        ],
+        "scale": 100,
+        "format": "interval"
+      },
+      "value": [
+        "32.2792218986078700",
+        "34.3705710860529800"
+      ],
+      "label": "[32.279222, 34.370571]"
+    },
+    {
+      "id": "F02-0013",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-B100-D1-U8-seed42-lr3e-4/update2440",
+          "natural",
+          "output_errors"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "16997",
+      "label": "16,997"
+    },
+    {
+      "id": "F02-0014",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "archived-C101-D0-U1",
+          "natural",
+          "wer"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "4.83250206181518300",
+      "label": "4.832502"
+    },
+    {
+      "id": "F02-0015",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "paired_group_bootstrap",
+          "WER",
+          "intervals",
+          "archived-C101-D0-U1"
+        ],
+        "scale": 100,
+        "format": "interval"
+      },
+      "value": [
+        "4.34628942491318600",
+        "5.371955736339388600"
+      ],
+      "label": "[4.346289, 5.371956]"
+    },
+    {
+      "id": "F02-0016",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "archived-C101-D0-U1",
+          "natural",
+          "output_errors"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "2461",
+      "label": "2,461"
+    },
+    {
+      "id": "F02-0017",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-C101-D0-U8-seed42-lr3e-4/update2440",
+          "natural",
+          "wer"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "6.230609119114008400",
+      "label": "6.230609"
+    },
+    {
+      "id": "F02-0018",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "paired_group_bootstrap",
+          "WER",
+          "intervals",
+          "G2-C101-D0-U8-seed42-lr3e-4/update2440"
+        ],
+        "scale": 100,
+        "format": "interval"
+      },
+      "value": [
+        "5.59719472983641200",
+        "6.88623033653610200"
+      ],
+      "label": "[5.597195, 6.886230]"
+    },
+    {
+      "id": "F02-0019",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-C101-D0-U8-seed42-lr3e-4/update2440",
+          "natural",
+          "output_errors"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "3173",
+      "label": "3,173"
+    },
+    {
+      "id": "F02-0020",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-C101-D1-U1-seed42-lr3e-4/update305",
+          "natural",
+          "wer"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "10.76856615481286600",
+      "label": "10.768566"
+    },
+    {
+      "id": "F02-0021",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "paired_group_bootstrap",
+          "WER",
+          "intervals",
+          "G2-C101-D1-U1-seed42-lr3e-4/update305"
+        ],
+        "scale": 100,
+        "format": "interval"
+      },
+      "value": [
+        "9.20738653612058200",
+        "12.31330543350835200"
+      ],
+      "label": "[9.207387, 12.313305]"
+    },
+    {
+      "id": "F02-0022",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-C101-D1-U1-seed42-lr3e-4/update305",
+          "natural",
+          "output_errors"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "5484",
+      "label": "5,484"
+    },
+    {
+      "id": "F02-0023",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-C101-D1-U8-seed42-lr3e-4/update2440",
+          "natural",
+          "wer"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "8.04107921297569100",
+      "label": "8.041079"
+    },
+    {
+      "id": "F02-0024",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "paired_group_bootstrap",
+          "WER",
+          "intervals",
+          "G2-C101-D1-U8-seed42-lr3e-4/update2440"
+        ],
+        "scale": 100,
+        "format": "interval"
+      },
+      "value": [
+        "6.90668344880439500",
+        "9.17076883358613200"
+      ],
+      "label": "[6.906683, 9.170769]"
+    },
+    {
+      "id": "F02-0025",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "tables",
+          "G2-C101-D1-U8-seed42-lr3e-4/update2440",
+          "natural",
+          "output_errors"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "4095",
+      "label": "4,095"
+    },
+    {
+      "id": "F02-0026",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "factorial_analysis",
+          "B100",
+          "effects",
+          "WER",
+          "exact_effects",
+          "difference_in_differences",
+          "value"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "-87.2363822016258800",
+      "label": "-87.236382"
+    },
+    {
+      "id": "F02-0027",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "factorial_analysis",
+          "B100",
+          "effects",
+          "WER",
+          "exact_effects",
+          "difference_in_differences",
+          "numerator"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "-22213",
+      "label": "-22,213"
+    },
+    {
+      "id": "F02-0028",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "factorial_analysis",
+          "B100",
+          "effects",
+          "WER",
+          "exact_effects",
+          "difference_in_differences",
+          "denominator"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "25463",
+      "label": "25,463"
+    },
+    {
+      "id": "F02-0029",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "factorial_analysis",
+          "B100",
+          "effects",
+          "WER",
+          "paired_group_bootstrap",
+          "intervals",
+          "difference_in_differences"
+        ],
+        "scale": 100,
+        "format": "interval"
+      },
+      "value": [
+        "-90.3797339833073600",
+        "-84.2595541644921100"
+      ],
+      "label": "[-90.379734, -84.259554]"
+    },
+    {
+      "id": "F02-0030",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "factorial_analysis",
+          "C101",
+          "effects",
+          "WER",
+          "exact_effects",
+          "difference_in_differences",
+          "value"
+        ],
+        "scale": 100,
+        "format": "dec"
+      },
+      "value": "-4.12559399913600100",
+      "label": "-4.125594"
+    },
+    {
+      "id": "F02-0031",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "factorial_analysis",
+          "C101",
+          "effects",
+          "WER",
+          "exact_effects",
+          "difference_in_differences",
+          "numerator"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "-2101",
+      "label": "-2,101"
+    },
+    {
+      "id": "F02-0032",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "factorial_analysis",
+          "C101",
+          "effects",
+          "WER",
+          "exact_effects",
+          "difference_in_differences",
+          "denominator"
+        ],
+        "scale": 1,
+        "format": "int"
+      },
+      "value": "50926",
+      "label": "50,926"
+    },
+    {
+      "id": "F02-0033",
+      "source": {
+        "path": "experiments/manifests/generation_2/scientific-results.attempt01.json",
+        "pointer": [
+          "factorial_analysis",
+          "C101",
+          "effects",
+          "WER",
+          "paired_group_bootstrap",
+          "intervals",
+          "difference_in_differences"
+        ],
+        "scale": 100,
+        "format": "interval"
+      },
+      "value": [
+        "-5.05075176026411500",
+        "-3.20351123403975400"
+      ],
+      "label": "[-5.050752, -3.203511]"
+    }
+  ]
+}

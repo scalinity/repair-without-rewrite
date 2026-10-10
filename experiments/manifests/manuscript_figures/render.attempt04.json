@@ -1,0 +1,9 @@
+{
+  "schema": "manuscript_figure_render_attempt_v1",
+  "attempt": 4,
+  "status": "PASS_INTERMEDIATE_RENDER",
+  "diagnostic": "Separated plot units and panel titles; all eight exports completed.",
+  "original_render_log_sha256": "3e15f41f5e85e47d399a22ca7aa5f060c423f0db4432c6acf7a98fdf041b0375",
+  "original_diagnostic_retained_outside_Git": true,
+  "scientific_sources_modified": false
+}

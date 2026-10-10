@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900pt" height="830pt" viewBox="0 0 900 830" role="img" aria-labelledby="title desc"><title id="title">F07: Whole-output benefit and reference-aware oracle headroom</title><desc id="desc">CALCULATION — Better/equal/worse categories retain all 2,696 cases and the three prescribed fixed endpoint outputs. The reference-aware whole-output oracle is an unmistakably non-deployable ceiling: only RAW or a complete cached proposal may be selected, using the reference to compare errors; incomplete outputs choose RAW. RAW has 1,413 errors/50,926 words. Oracle errors 1,411/1,410/1,304 correspond to gains 2/3/109 across 2/3/36 of 52 groups. ByT5 headroom is 0.214036 WER pp, approximately 7.714% of RAW errors. Recorded descriptive 95% source-group gain intervals use 10,000 paired draws; point gains were independently reaggregated, but detailed oracle intervals were not fully requalified in v3. No source-only acceptance performance, new-population gain, edit mixing or checkpoint selection is shown.</desc><g font-family="Bitstream Vera Sans, DejaVu Sans, Arial, sans-serif"><rect x="0" y="0" width="900" height="830" fill="#FFFFFF" stroke="none"/>
+<text x="36.000000" y="36.000000" font-size="19" fill="#202A33" text-anchor="start" font-weight="bold">F07  |  Whole-output benefit and reference-aware oracle headroom</text>
+<text x="36.000000" y="59.000000" font-size="11" fill="#53616D" text-anchor="start" font-weight="normal">Repair Without Rewrite  /  DEVELOPMENT evidence  /  seed 42</text>
+<line x1="36.000000" y1="73.000000" x2="864.000000" y2="73.000000" stroke="#D7DFE5" stroke-width="1"/>
+<text x="36.000000" y="103.000000" font-size="13" fill="#202A33" text-anchor="start" font-weight="bold">Fixed complete proposals: outcome categories on all natural DEVELOPMENT cases</text>
+<rect x="36" y="116" width="828" height="43" fill="#F3F6F8" stroke="none"/>
+<text x="44.000000" y="132.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Fixed endpoint</text>
+<text x="284.000000" y="132.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Better /2,696</text>
+<text x="424.000000" y="132.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Equal /2,696</text>
+<text x="564.000000" y="132.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Worse /2,696</text>
+<text x="704.000000" y="132.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Actual errors</text>
+<text x="704.000000" y="146.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">/50,926 words</text>
+<line x1="36.000000" y1="159.000000" x2="864.000000" y2="159.000000" stroke="#D7DFE5" stroke-width="1"/>
+<text x="44.000000" y="177.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">B100 D1-U8</text>
+<text x="408.000000" y="177.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0001" data-role="label">2</text>
+<text x="548.000000" y="177.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0002" data-role="label">297</text>
+<text x="688.000000" y="177.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0003" data-role="label">2,397</text>
+<text x="856.000000" y="177.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0004" data-role="label">16,997</text>
+<line x1="36.000000" y1="186.000000" x2="864.000000" y2="186.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="204.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">C101 D1-U8</text>
+<text x="408.000000" y="204.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0005" data-role="label">3</text>
+<text x="548.000000" y="204.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0006" data-role="label">2,197</text>
+<text x="688.000000" y="204.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0007" data-role="label">496</text>
+<text x="856.000000" y="204.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0008" data-role="label">4,095</text>
+<line x1="36.000000" y1="213.000000" x2="864.000000" y2="213.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="231.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">ByT5 exact ten-pass</text>
+<text x="408.000000" y="231.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0009" data-role="label">67</text>
+<text x="548.000000" y="231.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0010" data-role="label">2,360</text>
+<text x="688.000000" y="231.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0011" data-role="label">269</text>
+<text x="856.000000" y="231.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0012" data-role="label">1,650</text>
+<line x1="36.000000" y1="240.000000" x2="864.000000" y2="240.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="36.000000" y="286.000000" font-size="13" fill="#202A33" text-anchor="start" font-weight="bold">Reference-aware oracle: NON-DEPLOYABLE ceiling (whole-output choice only)</text>
+<rect x="36" y="299" width="828" height="43" fill="#F3F6F8" stroke="none"/>
+<text x="44.000000" y="315.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Fixed endpoint</text>
+<text x="228.000000" y="315.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Beneficial complete</text>
+<text x="228.000000" y="329.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">cases /2,696</text>
+<text x="375.000000" y="315.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Beneficial</text>
+<text x="375.000000" y="329.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">groups /52</text>
+<text x="478.000000" y="315.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Removable</text>
+<text x="478.000000" y="329.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">errors /1,413</text>
+<text x="604.000000" y="315.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Oracle errors</text>
+<text x="604.000000" y="329.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">/50,926 words</text>
+<text x="739.000000" y="315.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Oracle WER %</text>
+<text x="739.000000" y="329.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">non-deployable</text>
+<line x1="36.000000" y1="342.000000" x2="864.000000" y2="342.000000" stroke="#D7DFE5" stroke-width="1"/>
+<text x="44.000000" y="360.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">B100 D1-U8</text>
+<text x="359.000000" y="360.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0013" data-role="label">2</text>
+<text x="462.000000" y="360.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0014" data-role="label">2</text>
+<text x="588.000000" y="360.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0015" data-role="label">2</text>
+<text x="723.000000" y="360.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0016" data-role="label">1,411</text>
+<text x="856.000000" y="360.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0017" data-role="label">2.770687</text>
+<line x1="36.000000" y1="369.000000" x2="864.000000" y2="369.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="387.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">C101 D1-U8</text>
+<text x="359.000000" y="387.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0018" data-role="label">3</text>
+<text x="462.000000" y="387.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0019" data-role="label">3</text>
+<text x="588.000000" y="387.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0020" data-role="label">3</text>
+<text x="723.000000" y="387.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0021" data-role="label">1,410</text>
+<text x="856.000000" y="387.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0022" data-role="label">2.768723</text>
+<line x1="36.000000" y1="396.000000" x2="864.000000" y2="396.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="414.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">ByT5 exact ten-pass</text>
+<text x="359.000000" y="414.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0023" data-role="label">67</text>
+<text x="462.000000" y="414.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0024" data-role="label">36</text>
+<text x="588.000000" y="414.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0025" data-role="label">109</text>
+<text x="723.000000" y="414.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0026" data-role="label">1,304</text>
+<text x="856.000000" y="414.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0027" data-role="label">2.560578</text>
+<line x1="36.000000" y1="423.000000" x2="864.000000" y2="423.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="36.000000" y="454.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">RAW baseline: 1,413 errors / 50,926 words; WER % =</text>
+<text x="447.000000" y="454.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="bold" data-measurement="F07-0028" data-role="label">2.774614</text>
+<text x="36.000000" y="502.000000" font-size="13" fill="#202A33" text-anchor="start" font-weight="bold">Recorded oracle-gain sampling intervals; partial independent reconstruction</text>
+<rect x="36" y="515" width="828" height="43" fill="#F3F6F8" stroke="none"/>
+<text x="44.000000" y="531.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Non-deployable ceiling</text>
+<text x="429.000000" y="531.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">95% descriptive group interval (WER pp)</text>
+<line x1="36.000000" y1="558.000000" x2="864.000000" y2="558.000000" stroke="#D7DFE5" stroke-width="1"/>
+<text x="44.000000" y="576.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">B100 reference-aware oracle</text>
+<text x="856.000000" y="576.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0029" data-role="label">[0.000000, 0.010418]</text>
+<line x1="36.000000" y1="585.000000" x2="864.000000" y2="585.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="603.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">C101 reference-aware oracle</text>
+<text x="856.000000" y="603.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0030" data-role="label">[0.000000, 0.013181]</text>
+<line x1="36.000000" y1="612.000000" x2="864.000000" y2="612.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="630.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">ByT5 reference-aware oracle</text>
+<text x="856.000000" y="630.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F07-0031" data-role="label">[0.154027, 0.288196]</text>
+<line x1="36.000000" y1="639.000000" x2="864.000000" y2="639.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="36.000000" y="674.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Oracle chooses RAW or one fixed complete proposal using reference errors; incomplete proposals choose RAW.</text>
+<text x="36.000000" y="691.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">No edit mixing, new text, checkpoint choice or source-only policy is demonstrated.</text>
+<text x="36.000000" y="708.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Point gains were independently reaggregated in frontier v3; detailed feasibility intervals were not fully repeated.</text>
+<text x="36.000000" y="725.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Group sampling is not training-seed uncertainty and does not predict selectable benefit or transfer.</text></g></svg>

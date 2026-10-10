@@ -1,0 +1,61 @@
+{
+  "schema": "manuscript_figure_mechanical_validation_v1",
+  "scope": "PUBLIC_AGGREGATES_AND_VECTOR_EXPORTS_ONLY",
+  "preparation_checkpoint": "2550823ca8f4f3c3ceb15a0de775e43878291422",
+  "checks_passed": 3299,
+  "figures": {
+    "F01": {
+      "source_measurements": 61,
+      "displayed_numeric_labels": 61,
+      "plotted_numeric_marks": 0,
+      "vector_PDF": true
+    },
+    "F02": {
+      "source_measurements": 33,
+      "displayed_numeric_labels": 33,
+      "plotted_numeric_marks": 18,
+      "vector_PDF": true
+    },
+    "F03": {
+      "source_measurements": 22,
+      "displayed_numeric_labels": 22,
+      "plotted_numeric_marks": 0,
+      "vector_PDF": true
+    },
+    "F04": {
+      "source_measurements": 127,
+      "displayed_numeric_labels": 126,
+      "plotted_numeric_marks": 35,
+      "vector_PDF": true
+    },
+    "F05": {
+      "source_measurements": 37,
+      "displayed_numeric_labels": 36,
+      "plotted_numeric_marks": 9,
+      "vector_PDF": true
+    },
+    "F06": {
+      "source_measurements": 56,
+      "displayed_numeric_labels": 56,
+      "plotted_numeric_marks": 0,
+      "vector_PDF": true
+    },
+    "F07": {
+      "source_measurements": 31,
+      "displayed_numeric_labels": 31,
+      "plotted_numeric_marks": 0,
+      "vector_PDF": true
+    },
+    "F08": {
+      "source_measurements": 74,
+      "displayed_numeric_labels": 74,
+      "plotted_numeric_marks": 0,
+      "vector_PDF": true
+    }
+  },
+  "historical_independent_status_not_upgraded": true,
+  "scientific_tests": "NOT_RUN",
+  "private_payload_reconstruction": "NOT_RUN",
+  "new_bootstrap": "NOT_RUN",
+  "status": "PASS_MECHANICAL_FIGURE_DATA_VALIDATION"
+}

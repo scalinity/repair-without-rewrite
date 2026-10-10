@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900pt" height="985pt" viewBox="0 0 900 985" role="img" aria-labelledby="title desc"><title id="title">F02: Generation-2 factorial WER</title><desc id="desc">MEASURED RESULT/CALCULATION — All eight prespecified DEVELOPMENT endpoints, with RAW 1,413/50,926 = 2.774614% WER. B100 values above 100% are retained. Panels have explicitly different WER ranges. U1/U8 are separate marker shapes; bars represent the recorded descriptive 95% paired source-group percentile intervals (52 groups, 10,000 draws). The table retains exact values and rational WER interactions, with fractions multiplied by 100 to obtain percentage points. D0-U1 controls are archived/rescored, not retrained. Only D1-U8 supplies prescribed scratch adequacy and both candidates fail. D changes composition and U bundles optimizer behavior; cross-D actual exposures differ (D0 10,007,223; D1 10,006,223). Neither intervals nor descriptive cells establish H1 or a winner.</desc><g font-family="Bitstream Vera Sans, DejaVu Sans, Arial, sans-serif"><rect x="0" y="0" width="900" height="985" fill="#FFFFFF" stroke="none"/>
+<text x="36.000000" y="36.000000" font-size="19" fill="#202A33" text-anchor="start" font-weight="bold">F02  |  Generation-2 factorial WER</text>
+<text x="36.000000" y="59.000000" font-size="11" fill="#53616D" text-anchor="start" font-weight="normal">Repair Without Rewrite  /  DEVELOPMENT evidence  /  seed 42</text>
+<line x1="36.000000" y1="73.000000" x2="864.000000" y2="73.000000" stroke="#D7DFE5" stroke-width="1"/>
+<text x="84.000000" y="99.000000" font-size="12" fill="#202A33" text-anchor="start" font-weight="bold">B100 (separate WER scale)</text>
+<line x1="84.000000" y1="357.000000" x2="424.000000" y2="357.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="74.000000" y="361.000000" font-size="10" fill="#202A33" text-anchor="end" font-weight="normal">0</text>
+<line x1="84.000000" y1="300.750000" x2="424.000000" y2="300.750000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="74.000000" y="304.750000" font-size="10" fill="#202A33" text-anchor="end" font-weight="normal">35</text>
+<line x1="84.000000" y1="244.500000" x2="424.000000" y2="244.500000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="74.000000" y="248.500000" font-size="10" fill="#202A33" text-anchor="end" font-weight="normal">70</text>
+<line x1="84.000000" y1="188.250000" x2="424.000000" y2="188.250000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="74.000000" y="192.250000" font-size="10" fill="#202A33" text-anchor="end" font-weight="normal">105</text>
+<line x1="84.000000" y1="132.000000" x2="424.000000" y2="132.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="74.000000" y="136.000000" font-size="10" fill="#202A33" text-anchor="end" font-weight="normal">140</text>
+<line x1="169.000000" y1="357.000000" x2="169.000000" y2="361.000000" stroke="#202A33" stroke-width="0.7"/>
+<text x="169.000000" y="376.000000" font-size="10" fill="#202A33" text-anchor="middle" font-weight="normal">D0</text>
+<line x1="339.000000" y1="357.000000" x2="339.000000" y2="361.000000" stroke="#202A33" stroke-width="0.7"/>
+<text x="339.000000" y="376.000000" font-size="10" fill="#202A33" text-anchor="middle" font-weight="normal">D1</text>
+<line x1="84.000000" y1="132.000000" x2="84.000000" y2="357.000000" stroke="#202A33" stroke-width="0.8"/>
+<line x1="84.000000" y1="357.000000" x2="424.000000" y2="357.000000" stroke="#202A33" stroke-width="0.8"/>
+<text x="254.000000" y="396.000000" font-size="11" fill="#202A33" text-anchor="middle" font-weight="normal">Data condition</text>
+<text x="46.000000" y="118.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="normal">WER %</text>
+<line x1="84.000000" y1="352.540799" x2="424.000000" y2="352.540799" stroke="#202A33" stroke-width="1" stroke-dasharray="4 3" data-measurement="F02-0001" data-y-domain="0 140" data-y-pixels="357 132" data-role="baseline"/>
+<text x="91.000000" y="345.540799" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">RAW</text>
+<line x1="146.900000" y1="175.448906" x2="146.900000" y2="169.060152" stroke="#0072B2" stroke-width="1.3" data-measurement="F02-0003" data-y-domain="0 140" data-y-pixels="357 132" data-role="interval"/>
+<line x1="142.900000" y1="175.448906" x2="150.900000" y2="175.448906" stroke="#0072B2" stroke-width="1"/>
+<line x1="142.900000" y1="169.060152" x2="150.900000" y2="169.060152" stroke="#0072B2" stroke-width="1"/>
+<circle cx="146.900000" cy="172.405476" r="3.7" fill="#0072B2" stroke="#0072B2" data-measurement="F02-0002" data-y-domain="0 140" data-y-pixels="357 132" data-role="point"/>
+<line x1="191.100000" y1="163.217143" x2="191.100000" y2="150.419294" stroke="#B65C00" stroke-width="1.3" data-measurement="F02-0006" data-y-domain="0 140" data-y-pixels="357 132" data-role="interval"/>
+<line x1="187.100000" y1="163.217143" x2="195.100000" y2="163.217143" stroke="#B65C00" stroke-width="1"/>
+<line x1="187.100000" y1="150.419294" x2="195.100000" y2="150.419294" stroke="#B65C00" stroke-width="1"/>
+<rect x="187.600000" y="153.596499" width="7" height="7" fill="#B65C00" data-measurement="F02-0005" data-y-domain="0 140" data-y-pixels="357 132" data-role="point"/>
+<line x1="316.900000" y1="181.318631" x2="316.900000" y2="175.504014" stroke="#0072B2" stroke-width="1.3" data-measurement="F02-0009" data-y-domain="0 140" data-y-pixels="357 132" data-role="interval"/>
+<line x1="312.900000" y1="181.318631" x2="320.900000" y2="181.318631" stroke="#0072B2" stroke-width="1"/>
+<line x1="312.900000" y1="175.504014" x2="320.900000" y2="175.504014" stroke="#0072B2" stroke-width="1"/>
+<circle cx="316.900000" cy="178.467844" r="3.7" fill="#0072B2" stroke="#0072B2" data-measurement="F02-0008" data-y-domain="0 140" data-y-pixels="357 132" data-role="point"/>
+<line x1="361.100000" y1="305.122679" x2="361.100000" y2="301.761582" stroke="#B65C00" stroke-width="1.3" data-measurement="F02-0012" data-y-domain="0 140" data-y-pixels="357 132" data-role="interval"/>
+<line x1="357.100000" y1="305.122679" x2="365.100000" y2="305.122679" stroke="#B65C00" stroke-width="1"/>
+<line x1="357.100000" y1="301.761582" x2="365.100000" y2="301.761582" stroke="#B65C00" stroke-width="1"/>
+<rect x="357.600000" y="299.860195" width="7" height="7" fill="#B65C00" data-measurement="F02-0011" data-y-domain="0 140" data-y-pixels="357 132" data-role="point"/>
+<text x="510.000000" y="99.000000" font-size="12" fill="#202A33" text-anchor="start" font-weight="bold">C101 (separate WER scale)</text>
+<line x1="510.000000" y1="357.000000" x2="850.000000" y2="357.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="500.000000" y="361.000000" font-size="10" fill="#202A33" text-anchor="end" font-weight="normal">0</text>
+<line x1="510.000000" y1="300.750000" x2="850.000000" y2="300.750000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="500.000000" y="304.750000" font-size="10" fill="#202A33" text-anchor="end" font-weight="normal">3.5</text>
+<line x1="510.000000" y1="244.500000" x2="850.000000" y2="244.500000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="500.000000" y="248.500000" font-size="10" fill="#202A33" text-anchor="end" font-weight="normal">7</text>
+<line x1="510.000000" y1="188.250000" x2="850.000000" y2="188.250000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="500.000000" y="192.250000" font-size="10" fill="#202A33" text-anchor="end" font-weight="normal">10.5</text>
+<line x1="510.000000" y1="132.000000" x2="850.000000" y2="132.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="500.000000" y="136.000000" font-size="10" fill="#202A33" text-anchor="end" font-weight="normal">14</text>
+<line x1="595.000000" y1="357.000000" x2="595.000000" y2="361.000000" stroke="#202A33" stroke-width="0.7"/>
+<text x="595.000000" y="376.000000" font-size="10" fill="#202A33" text-anchor="middle" font-weight="normal">D0</text>
+<line x1="765.000000" y1="357.000000" x2="765.000000" y2="361.000000" stroke="#202A33" stroke-width="0.7"/>
+<text x="765.000000" y="376.000000" font-size="10" fill="#202A33" text-anchor="middle" font-weight="normal">D1</text>
+<line x1="510.000000" y1="132.000000" x2="510.000000" y2="357.000000" stroke="#202A33" stroke-width="0.8"/>
+<line x1="510.000000" y1="357.000000" x2="850.000000" y2="357.000000" stroke="#202A33" stroke-width="0.8"/>
+<text x="680.000000" y="396.000000" font-size="11" fill="#202A33" text-anchor="middle" font-weight="normal">Data condition</text>
+<text x="472.000000" y="118.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="normal">WER %</text>
+<line x1="510.000000" y1="312.407987" x2="850.000000" y2="312.407987" stroke="#202A33" stroke-width="1" stroke-dasharray="4 3" data-measurement="F02-0001" data-y-domain="0 14" data-y-pixels="357 132" data-role="baseline"/>
+<text x="517.000000" y="305.407987" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">RAW</text>
+<line x1="572.900000" y1="287.148920" x2="572.900000" y2="270.664997" stroke="#0072B2" stroke-width="1.3" data-measurement="F02-0015" data-y-domain="0 14" data-y-pixels="357 132" data-role="interval"/>
+<line x1="568.900000" y1="287.148920" x2="576.900000" y2="287.148920" stroke="#0072B2" stroke-width="1"/>
+<line x1="568.900000" y1="270.664997" x2="576.900000" y2="270.664997" stroke="#0072B2" stroke-width="1"/>
+<circle cx="572.900000" cy="279.334788" r="3.7" fill="#0072B2" stroke="#0072B2" data-measurement="F02-0014" data-y-domain="0 14" data-y-pixels="357 132" data-role="point"/>
+<line x1="617.100000" y1="267.045085" x2="617.100000" y2="246.328441" stroke="#B65C00" stroke-width="1.3" data-measurement="F02-0018" data-y-domain="0 14" data-y-pixels="357 132" data-role="interval"/>
+<line x1="613.100000" y1="267.045085" x2="621.100000" y2="267.045085" stroke="#B65C00" stroke-width="1"/>
+<line x1="613.100000" y1="246.328441" x2="621.100000" y2="246.328441" stroke="#B65C00" stroke-width="1"/>
+<rect x="613.600000" y="253.365211" width="7" height="7" fill="#B65C00" data-measurement="F02-0017" data-y-domain="0 14" data-y-pixels="357 132" data-role="point"/>
+<line x1="742.900000" y1="209.024145" x2="742.900000" y2="159.107591" stroke="#0072B2" stroke-width="1.3" data-measurement="F02-0021" data-y-domain="0 14" data-y-pixels="357 132" data-role="interval"/>
+<line x1="738.900000" y1="209.024145" x2="746.900000" y2="209.024145" stroke="#0072B2" stroke-width="1"/>
+<line x1="738.900000" y1="159.107591" x2="746.900000" y2="159.107591" stroke="#0072B2" stroke-width="1"/>
+<circle cx="742.900000" cy="183.933758" r="3.7" fill="#0072B2" stroke="#0072B2" data-measurement="F02-0020" data-y-domain="0 14" data-y-pixels="357 132" data-role="point"/>
+<line x1="787.100000" y1="245.999730" x2="787.100000" y2="209.612644" stroke="#B65C00" stroke-width="1.3" data-measurement="F02-0024" data-y-domain="0 14" data-y-pixels="357 132" data-role="interval"/>
+<line x1="783.100000" y1="245.999730" x2="791.100000" y2="245.999730" stroke="#B65C00" stroke-width="1"/>
+<line x1="783.100000" y1="209.612644" x2="791.100000" y2="209.612644" stroke="#B65C00" stroke-width="1"/>
+<rect x="783.600000" y="224.268370" width="7" height="7" fill="#B65C00" data-measurement="F02-0023" data-y-domain="0 14" data-y-pixels="357 132" data-role="point"/>
+<circle cx="60.000000" cy="409.000000" r="3.7" fill="#0072B2" stroke="#0072B2"/>
+<text x="73.000000" y="414.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">U1: one update / master queue</text>
+<rect x="421.500000" y="405.500000" width="7" height="7" fill="#B65C00"/>
+<text x="438.000000" y="414.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">U8: eight complete subupdates / master queue</text>
+<rect x="36" y="436" width="828" height="43" fill="#F3F6F8" stroke="none"/>
+<text x="44.000000" y="452.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Fixed cell</text>
+<text x="272.000000" y="452.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Output errors</text>
+<text x="272.000000" y="466.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">/ 50,926 words</text>
+<text x="447.000000" y="452.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">WER %</text>
+<text x="577.000000" y="452.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">95% paired group interval %</text>
+<line x1="36.000000" y1="479.000000" x2="864.000000" y2="479.000000" stroke="#D7DFE5" stroke-width="1"/>
+<text x="44.000000" y="497.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">B100 D0-U1 *</text>
+<text x="431.000000" y="497.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0004" data-role="label">58,493</text>
+<text x="561.000000" y="497.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0002" data-role="label">114.858815</text>
+<text x="856.000000" y="497.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0003" data-role="label">[112.965125, 116.940350]</text>
+<line x1="36.000000" y1="506.000000" x2="864.000000" y2="506.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="524.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">B100 D0-U8</text>
+<text x="431.000000" y="524.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0007" data-role="label">63,344</text>
+<text x="561.000000" y="524.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0005" data-role="label">124.384401</text>
+<text x="856.000000" y="524.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0006" data-role="label">[120.576000, 128.539106]</text>
+<line x1="36.000000" y1="533.000000" x2="864.000000" y2="533.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="551.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">B100 D1-U1</text>
+<text x="431.000000" y="551.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0010" data-role="label">56,572</text>
+<text x="561.000000" y="551.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0008" data-role="label">111.086675</text>
+<text x="856.000000" y="551.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0009" data-role="label">[109.312852, 112.930836]</text>
+<line x1="36.000000" y1="560.000000" x2="864.000000" y2="560.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="578.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">B100 D1-U8 †</text>
+<text x="431.000000" y="578.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0013" data-role="label">16,997</text>
+<text x="561.000000" y="578.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0011" data-role="label">33.375879</text>
+<text x="856.000000" y="578.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0012" data-role="label">[32.279222, 34.370571]</text>
+<line x1="36.000000" y1="587.000000" x2="864.000000" y2="587.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="605.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">C101 D0-U1 *</text>
+<text x="431.000000" y="605.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0016" data-role="label">2,461</text>
+<text x="561.000000" y="605.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0014" data-role="label">4.832502</text>
+<text x="856.000000" y="605.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0015" data-role="label">[4.346289, 5.371956]</text>
+<line x1="36.000000" y1="614.000000" x2="864.000000" y2="614.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="632.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">C101 D0-U8</text>
+<text x="431.000000" y="632.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0019" data-role="label">3,173</text>
+<text x="561.000000" y="632.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0017" data-role="label">6.230609</text>
+<text x="856.000000" y="632.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0018" data-role="label">[5.597195, 6.886230]</text>
+<line x1="36.000000" y1="641.000000" x2="864.000000" y2="641.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="659.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">C101 D1-U1</text>
+<text x="431.000000" y="659.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0022" data-role="label">5,484</text>
+<text x="561.000000" y="659.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0020" data-role="label">10.768566</text>
+<text x="856.000000" y="659.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0021" data-role="label">[9.207387, 12.313305]</text>
+<line x1="36.000000" y1="668.000000" x2="864.000000" y2="668.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="686.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">C101 D1-U8 †</text>
+<text x="431.000000" y="686.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0025" data-role="label">4,095</text>
+<text x="561.000000" y="686.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0023" data-role="label">8.041079</text>
+<text x="856.000000" y="686.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0024" data-role="label">[6.906683, 9.170769]</text>
+<line x1="36.000000" y1="695.000000" x2="864.000000" y2="695.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="36.000000" y="713.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">RAW baseline WER %</text>
+<text x="211.000000" y="713.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="bold" data-measurement="F02-0001" data-role="label">2.774614</text>
+<text x="36.000000" y="748.000000" font-size="13" fill="#202A33" text-anchor="start" font-weight="bold">Prespecified WER contrasts (percentage points); exact fraction before ×100</text>
+<rect x="36" y="760" width="828" height="43" fill="#F3F6F8" stroke="none"/>
+<text x="44.000000" y="776.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Arm</text>
+<text x="149.000000" y="776.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Numerator</text>
+<text x="279.000000" y="776.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Denominator</text>
+<text x="429.000000" y="776.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">Interaction pp</text>
+<text x="589.000000" y="776.000000" font-size="10" fill="#202A33" text-anchor="start" font-weight="bold">95% group interval pp</text>
+<line x1="36.000000" y1="803.000000" x2="864.000000" y2="803.000000" stroke="#D7DFE5" stroke-width="1"/>
+<text x="44.000000" y="821.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">B100</text>
+<text x="263.000000" y="821.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0027" data-role="label">-22,213</text>
+<text x="413.000000" y="821.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0028" data-role="label">25,463</text>
+<text x="573.000000" y="821.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0026" data-role="label">-87.236382</text>
+<text x="856.000000" y="821.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0029" data-role="label">[-90.379734, -84.259554]</text>
+<line x1="36.000000" y1="830.000000" x2="864.000000" y2="830.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="44.000000" y="848.000000" font-size="11" fill="#202A33" text-anchor="start" font-weight="normal">C101</text>
+<text x="263.000000" y="848.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0031" data-role="label">-2,101</text>
+<text x="413.000000" y="848.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0032" data-role="label">50,926</text>
+<text x="573.000000" y="848.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0030" data-role="label">-4.125594</text>
+<text x="856.000000" y="848.000000" font-size="11" fill="#202A33" text-anchor="end" font-weight="normal" data-measurement="F02-0033" data-role="label">[-5.050752, -3.203511]</text>
+<line x1="36.000000" y1="857.000000" x2="864.000000" y2="857.000000" stroke="#D7DFE5" stroke-width="0.6"/>
+<text x="36.000000" y="889.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">* D0-U1 controls: archived and rescored on this panel; not retrained. † D1-U8: predeclared, failed adequacy.</text>
+<text x="36.000000" y="906.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Interaction = (D1U8 - D1U1) - (D0U8 - D0U1). D changes composition; U bundles optimizer effects.</text>
+<text x="36.000000" y="923.000000" font-size="10" fill="#53616D" text-anchor="start" font-weight="normal">Intervals: descriptive source-group sampling, 52 groups / 10,000 paired draws; not training-seed uncertainty.</text></g></svg>
