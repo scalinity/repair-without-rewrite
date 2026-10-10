@@ -1,0 +1,69 @@
+{
+  "schema": "manuscript_publication_safety_v1",
+  "attempt": 1,
+  "recorded_at_utc": "2026-10-10T07:30:56.678030+00:00",
+  "documentation_checkpoint": "abfd0d595e80b1cca544bb9e91e238b094e2a604",
+  "branch": "codex/manuscript-development-evidence",
+  "scope": "NEW_STAGED_FILES_AND_APPEND_ONLY_LOG_ADDITIONS_EXISTING_PUBLIC_HISTORY_NOT_REWRITTEN",
+  "staged_input_bindings": [
+    {
+      "path": "docs/LOG.md",
+      "staged_sha256": "bf71ee40b68c0ad9895394fac94116b572a177a0897e094687e1ea57ace72c7b",
+      "inspected_bytes_sha256": "3ab63efe8b42d93204649376018f9b80599900f60aced43dedae01fd08e1023b",
+      "inspected_bytes": 3214,
+      "scope": "APPENDED_BYTES_ONLY_HISTORICAL_BYTES_IMMUTABLE"
+    },
+    {
+      "path": "docs/manuscript/CLAIM_AND_FIGURE_REGISTRY_V1.md",
+      "staged_sha256": "9e2ad900953bf178bec869d1a38a9d7a9443f67829e4d913e022eb85b04ad1fb",
+      "inspected_bytes_sha256": "9e2ad900953bf178bec869d1a38a9d7a9443f67829e4d913e022eb85b04ad1fb",
+      "inspected_bytes": 40490,
+      "scope": "COMPLETE_NEW_STAGED_FILE"
+    },
+    {
+      "path": "docs/manuscript/DEVELOPMENT_EVIDENCE_DRAFT_V1.md",
+      "staged_sha256": "5affcb31f6b7894f3919f90c9a0087d0afb7c7448c41d2f55a1650b103716668",
+      "inspected_bytes_sha256": "5affcb31f6b7894f3919f90c9a0087d0afb7c7448c41d2f55a1650b103716668",
+      "inspected_bytes": 40279,
+      "scope": "COMPLETE_NEW_STAGED_FILE"
+    },
+    {
+      "path": "experiments/manifests/manuscript_development_evidence/baseline.attempt01.json",
+      "staged_sha256": "f800dce9e145565681d6be8c006ca931d2a5a6d5a216d596074fe104de9b3725",
+      "inspected_bytes_sha256": "f800dce9e145565681d6be8c006ca931d2a5a6d5a216d596074fe104de9b3725",
+      "inspected_bytes": 2332,
+      "scope": "COMPLETE_NEW_STAGED_FILE"
+    },
+    {
+      "path": "experiments/manifests/manuscript_development_evidence/documentation-integrity.attempt01.json",
+      "staged_sha256": "a7305246598fd36b919655106d56c888424171203c0a9ff9945da8e039ed00d9",
+      "inspected_bytes_sha256": "a7305246598fd36b919655106d56c888424171203c0a9ff9945da8e039ed00d9",
+      "inspected_bytes": 30502,
+      "scope": "COMPLETE_NEW_STAGED_FILE"
+    },
+    {
+      "path": "experiments/manifests/manuscript_development_evidence/evidence-inventory.attempt01.json",
+      "staged_sha256": "9170cc7bb5fefba4c9bab5ad292054193d0842b6d5b4657e1642507f47f492f9",
+      "inspected_bytes_sha256": "9170cc7bb5fefba4c9bab5ad292054193d0842b6d5b4657e1642507f47f492f9",
+      "inspected_bytes": 101474,
+      "scope": "COMPLETE_NEW_STAGED_FILE"
+    }
+  ],
+  "credential_scan": {
+    "tool": "gitleaks_default_directory_rules_ignore_allow_comments",
+    "version": "8.30.1",
+    "exit_code": 0,
+    "redacted": true,
+    "findings_count": 0
+  },
+  "nonfunctional_identifier_scan": {
+    "findings": [],
+    "classification": "NO_NEW_REAL_OR_SYNTHETIC_IDENTIFIER_HITS"
+  },
+  "staged_whitespace_check": {
+    "exit_code": 0
+  },
+  "payload_policy": "ONLY_DOCUMENTS_AGGREGATE_NUMBERS_PERMITTED_IDS_AND_HASHES_NO_TRANSCRIPTS_REFERENCES_AUDIO_WEIGHTS_CREDENTIALS",
+  "this_receipt_self_binding": "EXCLUDED_TO_AVOID_RECURSIVE_HASH_FINAL_INDEX_CHECK_SCANS_RECEIPT_AFTER_STAGING",
+  "disposition": "PASS_PUBLICATION_SAFETY"
+}

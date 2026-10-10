@@ -1,0 +1,1432 @@
+{
+  "schema": "manuscript_documentation_integrity_v1",
+  "attempt": 1,
+  "recorded_at_utc": "2026-10-10T07:29:59.237487+00:00",
+  "documentation_checkpoint": "abfd0d595e80b1cca544bb9e91e238b094e2a604",
+  "scope": "PUBLIC_DOCUMENT_TRANSCRIPTION_STRUCTURE_IDENTITIES_AND_NO_CHANGE_BOUNDARIES_NOT_NEW_SCIENTIFIC_RECONSTRUCTION",
+  "checker_sha256": "5dc0b18620e4c67db5ff8524865ff3b9ca5684608a6210383cc83e18f984a162",
+  "checks": [
+    {
+      "check": "draft_A_through_R",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "registry_25_claims_and_8_figures",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "claim_seven_required_fields",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "DEVELOPMENT_EVIDENCE_DRAFT_V1.md_single_terminal_disposition",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "public_external_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "public_external_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "public_external_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "public_external_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "public_external_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "public_external_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "public_external_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "public_external_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "public_external_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "CLAIM_AND_FIGURE_REGISTRY_V1.md_single_terminal_disposition",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "relative_evidence_link",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "four_claim_classifications",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "explicit_scientific_holds",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G1_table_six_rows",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G1_B100 / 1e-4",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G1_B100 / 3e-4",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G1_B100 / 6e-4",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G1_C101 / 1e-4",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G1_C101 / 3e-4",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G1_C101 / 6e-4",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G1_no_selected_model",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G2_table_eight_rows",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G2_archived-B100-D0-U1",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G2_G2-B100-D0-U8-seed42-lr3e-4/update2440",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G2_G2-B100-D1-U1-seed42-lr3e-4/update305",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G2_G2-B100-D1-U8-seed42-lr3e-4/update2440",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G2_archived-C101-D0-U1",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G2_G2-C101-D0-U8-seed42-lr3e-4/update2440",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G2_G2-C101-D1-U1-seed42-lr3e-4/update305",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G2_G2-C101-D1-U8-seed42-lr3e-4/update2440",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "factorial_exact_B100",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "factorial_interval_B100",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "factorial_exact_C101",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "factorial_interval_C101",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "ByT5_four_descriptive_states",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "ByT5_update0",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "ByT5_update7057",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "ByT5_update17642",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "ByT5_update35283",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "C_trajectory_vector_count",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "C_trajectory_D0-U8",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "C_trajectory_D1-U1",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "C_trajectory_D1-U8",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "runtime_13_attempts",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G1_runtime_B100-seed42-lr1e-04",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G1_runtime_C101-seed42-lr1e-04",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G1_runtime_B100-seed42-lr3e-04",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G1_runtime_C101-seed42-lr3e-04",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G1_runtime_B100-seed42-lr6e-04",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G1_runtime_C101-seed42-lr6e-04",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G2_runtime_G2-B100-D0-U8-seed42-lr3e-4",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G2_runtime_G2-C101-D0-U8-seed42-lr3e-4",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G2_runtime_G2-B100-D1-U1-seed42-lr3e-4",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G2_runtime_G2-C101-D1-U1-seed42-lr3e-4",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G2_runtime_G2-B100-D1-U8-seed42-lr3e-4",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G2_runtime_G2-C101-D1-U8-seed42-lr3e-4",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "G2_runtime_G2-ByT5-D1-10pass-seed42-lr3e-4",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "runtime_totals",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "TRAIN_fit_greedy_aggregate",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "retrospective_repetition_arithmetic",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "oracle_aggregate_arithmetic",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "raw_versus_completed_repair_conservation",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "all_original_scientific_and_other_files_unchanged",
+      "status": "PASS",
+      "details": {
+        "unchanged_original_files": 1381,
+        "sole_append_exception": "docs/LOG.md"
+      }
+    },
+    {
+      "check": "log_append_only_one_entry",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "protected_ref_refs/heads/codex/g2-execution",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "protected_ref_refs/heads/codex/g2-qualification",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "protected_ref_refs/heads/codex/post-feasibility-v3-record",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "protected_ref_refs/heads/codex/post-feasibility-v4-record",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "protected_ref_refs/heads/codex/post-g2-feasibility-record",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "protected_ref_refs/heads/main",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "protected_ref_refs/remotes/origin/HEAD",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "protected_ref_refs/remotes/origin/codex/g2-execution",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "protected_ref_refs/remotes/origin/codex/g2-qualification",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "protected_ref_refs/remotes/origin/codex/post-feasibility-v3-record",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "protected_ref_refs/remotes/origin/codex/post-feasibility-v4-record",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "protected_ref_refs/remotes/origin/codex/post-g2-feasibility-record",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "protected_ref_refs/remotes/origin/main",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "automation_configs_unchanged",
+      "status": "PASS",
+      "details": {
+        "file_count": 3
+      }
+    },
+    {
+      "check": "orchestration_unchanged_other_worktree",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "inventory_source_binding",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "documentation_only_changed_paths",
+      "status": "PASS",
+      "details": null
+    }
+  ],
+  "error": null,
+  "artifact_sha256": {
+    "docs/manuscript/DEVELOPMENT_EVIDENCE_DRAFT_V1.md": "5affcb31f6b7894f3919f90c9a0087d0afb7c7448c41d2f55a1650b103716668",
+    "docs/manuscript/CLAIM_AND_FIGURE_REGISTRY_V1.md": "9e2ad900953bf178bec869d1a38a9d7a9443f67829e4d913e022eb85b04ad1fb"
+  },
+  "baseline_and_end_model_test_suites": "NOT_RUN_DOCUMENTATION_ONLY_NO_MODEL_EXECUTION",
+  "historical_514_test_receipt_not_current_pass": true,
+  "new_model_executions": 0,
+  "protected_payload_accesses": 0,
+  "orchestration_visual_check": "NOT_RUN_PAGE_UNCHANGED_IN_OTHER_WORKTREE",
+  "retrospective_private_aggregate_and_bootstrap_reconstruction": "NOT_RERUN_SCOPE_LIMIT_PRESERVED_IN_DOCUMENTS",
+  "disposition": "PASS_DOCUMENTATION_INTEGRITY"
+}
