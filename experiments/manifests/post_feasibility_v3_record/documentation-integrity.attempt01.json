@@ -1,0 +1,29 @@
+{
+  "schema": "post_feasibility_v3_documentation_integrity_v1",
+  "disposition": "PASS",
+  "complete_original_documents_equal": true,
+  "second_extraction_path": "Regex extraction of privately archived originals compared to recorded UTF-8 bytes",
+  "study_appendices": [
+    1,
+    2,
+    3
+  ],
+  "exact_section_t_append": true,
+  "historical_log_and_amendment_prefixes_unchanged": true,
+  "protected_refs": {
+    "main": "871a01fac6ab8b7b10dde8f0c5c557d0114da84a",
+    "codex/g2-qualification": "2c27cff28a31ae64220df9b06094a914e94dd0f3",
+    "codex/g2-execution": "609f97f31979d469ad8551d06b2c07c3513181ec",
+    "codex/post-g2-feasibility-record": "f7dda7bbeddfcb21d9ac7c7441bf8158afbcd06a"
+  },
+  "protected_refs_unchanged": true,
+  "automation_hash_unchanged": true,
+  "source_model_data_frozen_manifest_diffs": [],
+  "css_unchanged": true,
+  "reports": 89,
+  "independent_reviews": 60,
+  "history_commits_at_decision": 105,
+  "scientific_tests": "NOT_RUN",
+  "scientific_calculations_reexecuted": "NO",
+  "private_artifact_full_rehash": "NOT_RUN_NO_PRIVATE_SCIENTIFIC_WRITES_PERFORMED"
+}

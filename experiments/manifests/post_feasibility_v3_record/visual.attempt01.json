@@ -1,0 +1,8 @@
+{
+  "schema": "documentation_visual_check_v1",
+  "disposition": "FAIL_HORIZONTAL_OVERFLOW",
+  "width": 1280,
+  "scroll_width": 1298,
+  "cause": "Fresh-data status-card label exceeds its existing column width",
+  "screenshots_persisted": false
+}

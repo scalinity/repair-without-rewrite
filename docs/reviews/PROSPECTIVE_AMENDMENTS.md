@@ -210,3 +210,119 @@ No result automatically authorizes implementation, Generation 3, final
 seeds 1729/2718/31415, final 150M training, sealed inference,
 paper_protocol_v2 freeze, publication, cloud spending, or production changes.
 ```
+
+
+## T. Prospective scientific amendment
+
+Post-Feasibility Frontier Scientific Decision v3  
+Date: 2026-10-10
+
+Reviewed scientific checkpoint:
+609f97f31979d469ad8551d06b2c07c3513181ec
+
+Recorded preceding authority checkpoint:
+f7dda7bbeddfcb21d9ac7c7441bf8158afbcd06a
+
+Disposition: AUTHORIZE_PROSPECTIVE_ACCEPTANCE_DESIGN
+
+Preserve all Generation-1 and Generation-2 treatments, results, failures,
+accounting, targets and adequacy dispositions. All Generation-2 scientific
+slots remain consumed. No historical checkpoint becomes a retrospectively
+selected successful model.
+
+Adopt one dominant development direction: whole-output acceptance around
+the fixed Generation-2 ByT5 exact ten-pass endpoint. The scientific
+hypothesis is that candidate-versus-identity conditional model scores add
+usable information beyond source/output edit features.
+
+This decision authorizes design only. It does not authorize repository
+writes, implementation, acquisition, source construction, inference,
+probability extraction, fitting, testing, benchmarking, spending or
+automation resumption.
+
+The completed POST_G2_READ_ONLY_FEASIBILITY_V1 remains a chat-delivered
+analytical study until separately authorized recording. Its calculations
+must remain distinguished from previously independently qualified G2
+evidence and from this decision's scientific inferences.
+
+No qualified fresh independent population has been established. The
+existing larger LS-PC metadata pool supplies no additional independent
+TRAIN, CAL or HPO groups beyond those represented in G2. Unused utterances
+from those groups do not satisfy the new independence contract. Existing
+CAL/HPO data remain consumed. D1 TRAIN cannot supply independent policy
+fitting under this design. Protected final populations remain sealed.
+
+Define POST_FEASIBILITY_FRESH_DATA_QUALIFICATION_V1 as the first prerequisite.
+Assess only TED-LIUM release 3 legacy-training availability and provenance,
+using the exact bounded procedure in Section O1 of this decision. Establish
+official release identity, access terms, reference conventions, source-family
+grouping, project-overlap exclusions, eligible counts and complete costs.
+Do not substitute a dataset, invent reference rules or infer execution
+permission. Return unresolved bindings for frontier review.
+
+The conditional main design is Sections O2–O10, P and Q of this decision.
+Those sections are normative and must accompany this amendment when
+recorded or handed off.
+
+Freeze the proposer to google/byt5-small revision
+68377bdc18a2ffec8a0533fef03b1c513a4dd49d at G2 update 35283,
+141130 presentations. Bind state.pt SHA-256
+d6b319df934d7be5c2c3f9d6b7294e8df4cc3e4d92120a09cec78b497f315373.
+
+Permit no model updates or checkpoint substitution. The conditional
+candidate is one complete greedy proposal under the inherited byte,
+capacity, precision and decoding contracts. A policy returns either RAW
+or the entire proposal. Invalid, incomplete, over-capacity, score-failed
+and lexically unchanged proposals return RAW.
+
+The inference input remains ASR 1-best text. References, audio, N-best,
+acoustic scores, error masks and source-family identities cannot enter
+correction inference. Any later authorized source construction is a
+separate data-preparation stage.
+
+Prospective primary utility is lexical correction and preservation.
+Surface-only restoration is deferred. Historical raw-reference targets
+remain unchanged, and normalization equivalence is never described as
+raw-reference correctness.
+
+The conditional study uses independent FIT, SELECT and untouched EVAL
+populations, with 4000, 2000 and 6000 cases respectively and the grouping,
+assignment and inclusion rules in Section O5. Qualification must establish
+the actual source and reference identities before any affected policy
+outcome is observed.
+
+Compare exactly two ridge policies: the eight-feature structural control
+and the primary policy adding the two specified conditional score
+contrasts. Use FIT-only standardization, conservative utility
+repair_lower minus four times introduced_upper, fixed regularization
+0.01 and the exact SELECT threshold rule. Do not conduct additional
+feature, model, regularization or threshold searches.
+
+Evaluate once using all frozen cases and RAW fallback for correction
+failures. Capability success requires every criterion in Section P,
+including at least 0.10 percentage-point and 3% relative WER improvement,
+positive paired group-bootstrap support, at least 50 repaired errors
+across 20 groups, introduced errors no greater than one quarter of
+repairs, and at least 99.5% lexical-zero preservation.
+
+The score-information mechanism requires incremental improvement over
+the structural control. Capability without that contrast does not
+establish the mechanism. Negative results apply only to this proposer,
+population, signal set and policy class.
+
+Keep scoring-alignment bounds, group-sampling intervals and unmeasured
+training-seed uncertainty distinct. New evaluation groups require their
+own shared 10000-draw PCG64 seed42 bootstrap identity.
+
+Respect all Section Q caps, including zero neural training, at most
+16000 model-wall seconds times 3.6 (16 model hours), two CPU policy fits,
+80 GiB incremental storage and no evidence deletion. Acquisition,
+temporary files and retained failed attempts count against storage.
+
+Stop at any unmet prerequisite, identity contradiction, protected-data
+requirement or exhausted bound. Do not retune on EVAL or relabel historical
+data as fresh. No result automatically authorizes a new proposer,
+scratch pilot, edit-level search, Generation 3, final seeds, final 150M
+training, sealed inference, protocol freeze, publication or production
+changes.
+

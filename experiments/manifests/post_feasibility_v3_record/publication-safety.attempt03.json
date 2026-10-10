@@ -1,0 +1,28 @@
+{
+  "schema": "post_feasibility_v3_documentation_publication_safety_v1",
+  "phase": "A",
+  "scanned_paths": [
+    "ORCHESTRATION.html",
+    "docs/LOG.md",
+    "docs/reports/POST_G2_READ_ONLY_TASK_FEASIBILITY_V1.md",
+    "docs/reviews/PROSPECTIVE_AMENDMENTS.md",
+    "experiments/manifests/post_feasibility_v3_record/documentation-integrity.attempt01.json",
+    "experiments/manifests/post_feasibility_v3_record/publication-safety.attempt01.json",
+    "experiments/manifests/post_feasibility_v3_record/publication-safety.attempt02.json",
+    "experiments/manifests/post_feasibility_v3_record/verbatim-record.attempt01.json",
+    "experiments/manifests/post_feasibility_v3_record/visual.attempt01.json",
+    "experiments/manifests/post_feasibility_v3_record/visual.attempt02.json"
+  ],
+  "default_credential_scan": "PASS_ZERO_FINDINGS",
+  "new_absolute_paths": 0,
+  "unclassified_personal_identifiers": 0,
+  "study_verbatim_full_content": "PASS",
+  "decision_commit": "bd63a17db1437c07e1cf1a98dd2de2c91411175b",
+  "attempt": 3,
+  "disposition": "FAIL_CLASSIFIED_VERBATIM_AMENDMENT_WHITESPACE",
+  "default_whitespace_check": "FAIL",
+  "findings": [
+    "Exact Section T Markdown hard break at amendment line 217",
+    "Exact Section T trailing blank lines at amendment EOF"
+  ]
+}

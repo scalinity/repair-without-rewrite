@@ -1,0 +1,18 @@
+{
+  "schema": "post_feasibility_v3_documentation_publication_safety_v1",
+  "phase": "A",
+  "base": "f7dda7bbeddfcb21d9ac7c7441bf8158afbcd06a",
+  "scanned_paths": [
+    "docs/reviews/FRONTIER_POST_FEASIBILITY_SCIENTIFIC_DECISION_V3.md"
+  ],
+  "default_credential_scan": "PASS_ZERO_FINDINGS",
+  "decision_sha256": "8f1670fe501c365573f3fc5fb194a48de2d80b43e0df4e4c381d7d38aecad7b9",
+  "real_functional_location_identifiers": 1,
+  "location_classification": "Original handoff repository path; retained under explicit verbatim publication authorization; original preserved outside Git. No nonfunctional personal identifiers found.",
+  "model_data_outputs_modified": false,
+  "attempt": 2,
+  "disposition": "PASS_VERBATIM_DOCUMENT_WITH_CLASSIFIED_ORIGINAL_HARD_BREAKS",
+  "default_whitespace_check": "FAIL_SIX_CLASSIFIED_ORIGINAL_HARD_BREAKS",
+  "scoped_whitespace_check": "PASS",
+  "decision_bytes_identical": true
+}

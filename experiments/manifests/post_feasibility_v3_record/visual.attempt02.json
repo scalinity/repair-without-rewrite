@@ -1,0 +1,33 @@
+{
+  "schema": "documentation_visual_check_v1",
+  "disposition": "PASS",
+  "checks": [
+    {
+      "width": 1280,
+      "scroll_width": 1280,
+      "appearance": "Light"
+    },
+    {
+      "width": 1280,
+      "scroll_width": 1280,
+      "appearance": "Dark"
+    },
+    {
+      "width": 390,
+      "scroll_width": 390,
+      "appearance": "Light"
+    },
+    {
+      "width": 390,
+      "scroll_width": 390,
+      "appearance": "Dark"
+    }
+  ],
+  "original_overflow_retained": "visual.attempt01.json",
+  "correction": "Existing card labels shortened and full source paths converted to descriptive links; no CSS/layout changes",
+  "appearance_restored": "Auto",
+  "viewport_override_reset": true,
+  "temporary_tabs_closed": true,
+  "temporary_server_stopped": true,
+  "screenshots_persisted": false
+}
