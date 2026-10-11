@@ -1,0 +1,371 @@
+{
+  "counts": {
+    "errors": 0,
+    "failed": 0,
+    "passed": 37,
+    "skipped": 0
+  },
+  "dependency_versions": {
+    "numpy": "2.2.6",
+    "pytest": "8.4.2",
+    "unicodedata2": "15.1.0"
+  },
+  "elapsed_runner_seconds": 0.6396968749977532,
+  "isolation": {
+    "acceptance_test_body_tripwires": "Exact accepted synthetic_isolation fixture retained",
+    "allowed_repository_reads_observed": [
+      "docs/design-inputs/unicode-15.1.0/CaseFolding.txt",
+      "docs/design-inputs/unicode-15.1.0/PropList.txt",
+      "pyproject.toml",
+      "src/acceptance/__init__.py",
+      "src/acceptance/allocation.py",
+      "src/acceptance/decision.py",
+      "src/acceptance/families.py",
+      "src/acceptance/features.py",
+      "src/acceptance/policy.py",
+      "src/acceptance/records.py",
+      "src/acceptance/scores.py",
+      "src/acceptance/selection.py",
+      "src/scoring/g2_bootstrap.py",
+      "src/scoring/oracle.py",
+      "src/scoring/records.py",
+      "src/scoring/text.py",
+      "src/scoring/triple.py",
+      "tests/acceptance/__init__.py",
+      "tests/acceptance/fixtures.py",
+      "tests/acceptance/independent_oracles.py",
+      "tests/acceptance/test_allocation.py",
+      "tests/acceptance/test_decision.py",
+      "tests/acceptance/test_families.py",
+      "tests/acceptance/test_features.py",
+      "tests/acceptance/test_independent.py",
+      "tests/acceptance/test_policy.py",
+      "tests/acceptance/test_records.py",
+      "tests/acceptance/test_scores.py",
+      "tests/acceptance/test_selection.py",
+      "tests/scoring/test_fixtures.py",
+      "tests/scoring/test_independent_review.py"
+    ],
+    "blocked_events": [],
+    "file_writes_blocked": true,
+    "loaded_neural_modules": [],
+    "network_and_subprocess_audit_hooks": true,
+    "neural_imports_blocked": true,
+    "numpy_array_loading_blocked": true,
+    "plugin_autoload_disabled": true,
+    "read_allowlist": [
+      "docs/design-inputs/unicode-15.1.0/CaseFolding.txt",
+      "docs/design-inputs/unicode-15.1.0/PropList.txt",
+      "pyproject.toml",
+      "src/acceptance/__init__.py",
+      "src/acceptance/allocation.py",
+      "src/acceptance/decision.py",
+      "src/acceptance/families.py",
+      "src/acceptance/features.py",
+      "src/acceptance/policy.py",
+      "src/acceptance/records.py",
+      "src/acceptance/scores.py",
+      "src/acceptance/selection.py",
+      "src/scoring/g2_bootstrap.py",
+      "src/scoring/oracle.py",
+      "src/scoring/records.py",
+      "src/scoring/text.py",
+      "src/scoring/triple.py",
+      "tests/acceptance/__init__.py",
+      "tests/acceptance/fixtures.py",
+      "tests/acceptance/independent_oracles.py",
+      "tests/acceptance/test_allocation.py",
+      "tests/acceptance/test_decision.py",
+      "tests/acceptance/test_families.py",
+      "tests/acceptance/test_features.py",
+      "tests/acceptance/test_independent.py",
+      "tests/acceptance/test_policy.py",
+      "tests/acceptance/test_records.py",
+      "tests/acceptance/test_scores.py",
+      "tests/acceptance/test_selection.py",
+      "tests/scoring/test_fixtures.py",
+      "tests/scoring/test_independent_review.py"
+    ],
+    "repository_bytecode_cache_reads_excluded": [
+      "src/scoring/oracle.py",
+      "src/scoring/records.py",
+      "src/scoring/text.py",
+      "src/scoring/triple.py",
+      "tests/scoring/test_fixtures.py",
+      "tests/scoring/test_independent_review.py"
+    ]
+  },
+  "label": "baseline-before.attempt03",
+  "node_outcomes": [
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[identity]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[repair]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[damage]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[wrong_different_wrong]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[collateral]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[repair_deletion]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[new_deletion]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[repair_insertion]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[new_insertion]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[repeated_identity]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[repeated_repair]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[leading_trailing]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[gap_tie]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[reorder]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[valid_empty]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[empty_reference]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[missing_raw]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[capped_raw]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[noncoexisting_optima]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[all_empty]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_fixtures.py::test_fixture[source_only]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_independent_review.py::test_independent_225_source_occurrence_and_gap_consensus_sets",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_independent_review.py::test_independent_343_conditional_source_events_and_fixed_subset_extrema",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_independent_review.py::test_closed_form_totals_survive_local_budget_failure[limits0-r0-s0-o0-repair0-introduced0]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_independent_review.py::test_closed_form_totals_survive_local_budget_failure[limits0-r1-s1-o1-repair1-introduced1]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_independent_review.py::test_closed_form_totals_survive_local_budget_failure[limits0-r2-s2-o2-repair2-introduced2]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_independent_review.py::test_closed_form_totals_survive_local_budget_failure[limits1-r0-s0-o0-repair0-introduced0]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_independent_review.py::test_closed_form_totals_survive_local_budget_failure[limits1-r1-s1-o1-repair1-introduced1]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_independent_review.py::test_closed_form_totals_survive_local_budget_failure[limits1-r2-s2-o2-repair2-introduced2]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_independent_review.py::test_closed_form_totals_survive_local_budget_failure[limits2-r0-s0-o0-repair0-introduced0]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_independent_review.py::test_closed_form_totals_survive_local_budget_failure[limits2-r1-s1-o1-repair1-introduced1]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_independent_review.py::test_closed_form_totals_survive_local_budget_failure[limits2-r2-s2-o2-repair2-introduced2]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_independent_review.py::test_failed_empty_reference_case_keeps_corpus_insertion_numerator",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_independent_review.py::test_equal_domain_primary_uses_fixed_weights_and_exact_rational_counts",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_independent_review.py::test_undefined_domain_is_retained_without_reweighting",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_independent_review.py::test_cached_preflight_provenance_tamper_blocks_before_candidate_score[offset]",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/scoring/test_independent_review.py::test_cached_preflight_provenance_tamper_blocks_before_candidate_score[lattice]",
+      "outcome": "passed"
+    }
+  ],
+  "nodes": [
+    "tests/scoring/test_fixtures.py::test_fixture[identity]",
+    "tests/scoring/test_fixtures.py::test_fixture[repair]",
+    "tests/scoring/test_fixtures.py::test_fixture[damage]",
+    "tests/scoring/test_fixtures.py::test_fixture[wrong_different_wrong]",
+    "tests/scoring/test_fixtures.py::test_fixture[collateral]",
+    "tests/scoring/test_fixtures.py::test_fixture[repair_deletion]",
+    "tests/scoring/test_fixtures.py::test_fixture[new_deletion]",
+    "tests/scoring/test_fixtures.py::test_fixture[repair_insertion]",
+    "tests/scoring/test_fixtures.py::test_fixture[new_insertion]",
+    "tests/scoring/test_fixtures.py::test_fixture[repeated_identity]",
+    "tests/scoring/test_fixtures.py::test_fixture[repeated_repair]",
+    "tests/scoring/test_fixtures.py::test_fixture[leading_trailing]",
+    "tests/scoring/test_fixtures.py::test_fixture[gap_tie]",
+    "tests/scoring/test_fixtures.py::test_fixture[reorder]",
+    "tests/scoring/test_fixtures.py::test_fixture[valid_empty]",
+    "tests/scoring/test_fixtures.py::test_fixture[empty_reference]",
+    "tests/scoring/test_fixtures.py::test_fixture[missing_raw]",
+    "tests/scoring/test_fixtures.py::test_fixture[capped_raw]",
+    "tests/scoring/test_fixtures.py::test_fixture[noncoexisting_optima]",
+    "tests/scoring/test_fixtures.py::test_fixture[all_empty]",
+    "tests/scoring/test_fixtures.py::test_fixture[source_only]",
+    "tests/scoring/test_independent_review.py::test_independent_225_source_occurrence_and_gap_consensus_sets",
+    "tests/scoring/test_independent_review.py::test_independent_343_conditional_source_events_and_fixed_subset_extrema",
+    "tests/scoring/test_independent_review.py::test_closed_form_totals_survive_local_budget_failure[limits0-r0-s0-o0-repair0-introduced0]",
+    "tests/scoring/test_independent_review.py::test_closed_form_totals_survive_local_budget_failure[limits0-r1-s1-o1-repair1-introduced1]",
+    "tests/scoring/test_independent_review.py::test_closed_form_totals_survive_local_budget_failure[limits0-r2-s2-o2-repair2-introduced2]",
+    "tests/scoring/test_independent_review.py::test_closed_form_totals_survive_local_budget_failure[limits1-r0-s0-o0-repair0-introduced0]",
+    "tests/scoring/test_independent_review.py::test_closed_form_totals_survive_local_budget_failure[limits1-r1-s1-o1-repair1-introduced1]",
+    "tests/scoring/test_independent_review.py::test_closed_form_totals_survive_local_budget_failure[limits1-r2-s2-o2-repair2-introduced2]",
+    "tests/scoring/test_independent_review.py::test_closed_form_totals_survive_local_budget_failure[limits2-r0-s0-o0-repair0-introduced0]",
+    "tests/scoring/test_independent_review.py::test_closed_form_totals_survive_local_budget_failure[limits2-r1-s1-o1-repair1-introduced1]",
+    "tests/scoring/test_independent_review.py::test_closed_form_totals_survive_local_budget_failure[limits2-r2-s2-o2-repair2-introduced2]",
+    "tests/scoring/test_independent_review.py::test_failed_empty_reference_case_keeps_corpus_insertion_numerator",
+    "tests/scoring/test_independent_review.py::test_equal_domain_primary_uses_fixed_weights_and_exact_rational_counts",
+    "tests/scoring/test_independent_review.py::test_undefined_domain_is_retained_without_reweighting",
+    "tests/scoring/test_independent_review.py::test_cached_preflight_provenance_tamper_blocks_before_candidate_score[offset]",
+    "tests/scoring/test_independent_review.py::test_cached_preflight_provenance_tamper_blocks_before_candidate_score[lattice]"
+  ],
+  "output": ".....................................                                    [100%]\n37 passed in 0.38s\n",
+  "provenance": "NONSCIENTIFIC",
+  "pytest_arguments": [
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "-p",
+    "no:logging",
+    "--assert=plain",
+    "--capture=sys",
+    "-c",
+    "pyproject.toml",
+    "tests/scoring/test_fixtures.py",
+    "tests/scoring/test_independent_review.py"
+  ],
+  "pytest_exit_status": 0,
+  "python_version": "3.12.15 (main, Sep 30 2026, 22:04:19) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "schema_version": "fixture_projection_test_result_v1",
+  "selected": [
+    "tests/scoring/test_fixtures.py",
+    "tests/scoring/test_independent_review.py"
+  ],
+  "source_sha256": {
+    "docs/design-inputs/unicode-15.1.0/CaseFolding.txt": "4e55acfdc32825a22e87670e9056a3bf94ad7c5400065778e9e10f8314372bcf",
+    "docs/design-inputs/unicode-15.1.0/PropList.txt": "05672956317b6296bc2ec3d6cef1f6452b57ff4f2efc6dc55b0a19277d5fcfd1",
+    "pyproject.toml": "c874d351acb3e0ff55fc3fe85be04ff594b23f8c135f24877a1e27e43487776a",
+    "src/acceptance/__init__.py": "34ed0ab04409082c889b0ee23ec86f7921ea4ff1a1e1d39a9f23c23af98c6689",
+    "src/acceptance/allocation.py": "abe3c4cf4261f40fa47fdd6a62dd1e2d61764984e89cb1c2e8ed706757b3eb3e",
+    "src/acceptance/decision.py": "b5700481b2d8c09f00f58dd09d7afb32f0dfa2cc163c5734c399626a223ef22c",
+    "src/acceptance/families.py": "24ea6443399df48a1c256eb03c1906c026df0cf746b4746e5043c7b3be41f3c1",
+    "src/acceptance/features.py": "3b03eb45023996651dbbd6cf8919973d7743709bf3d5f437933b4f3817130f61",
+    "src/acceptance/policy.py": "20f1b6e7c233d8d5e4ae7d38a73e13e2c14402d0e884cdb04eb275c002d8db04",
+    "src/acceptance/records.py": "06cb07efaec12480197b9766ca26151f7b157eb4a440b553c86777d53f1cd610",
+    "src/acceptance/scores.py": "70b91100de627823c95224e2c9e9726b104eb868091af7dc1dec19f4365e3a28",
+    "src/acceptance/selection.py": "f442efce9fc4450720852bdf53ccd9f3d7628fd4c40316dd677cb0ec1e60d910",
+    "src/scoring/g2_bootstrap.py": "a36b5358df661a249ff9952d7572a3b467917fe971cd75ae2a4790eb5ef1a7bd",
+    "src/scoring/oracle.py": "c8cc04e5c21ebfc20912c498f95887ca88fae32b79cafe96b493796dea3f7609",
+    "src/scoring/records.py": "7b031fa76c408b22ff2c1435236b6d38338bfddef5c83b2fd347c4660624108e",
+    "src/scoring/text.py": "4db62c3238c830ec25faf979beb656dcc7b882f0843b318d973934b4f340111d",
+    "src/scoring/triple.py": "1709603f910e46c85eb9b18dbb574cf988dd0d7aab701d3be1ff0e62144a00e1",
+    "tests/acceptance/__init__.py": "0704f8540b19d672a86c252d731ec44c93e415d0196ffae4ccb84af6a1d5c5dc",
+    "tests/acceptance/fixtures.py": "e21f6e4822b7bf3fb85dbf26a1e192ff86361c7ab247be929894371642825a0d",
+    "tests/acceptance/independent_oracles.py": "15dee97aedece38827fd84f44d696969e97fc1ef326a25cd04117a287d3eabd7",
+    "tests/acceptance/test_allocation.py": "1f181216b487d0ad59390713292ffae27c6d715d6278ad3664978a24cdd840e9",
+    "tests/acceptance/test_decision.py": "2d40a91723839d7984a4a944c3f9590a3df534401494623522d60a46943e28db",
+    "tests/acceptance/test_families.py": "f44e0e628e5502d6fa007d9111748e2f3b8ad82d12c593a3f72051627d93c465",
+    "tests/acceptance/test_features.py": "e8a84fa62403e0c23486966263273a4b297fc5494f35bfe2ae055243480dda27",
+    "tests/acceptance/test_independent.py": "e8f2a8c5ea8ac8854e088fd3e4413057f8021cef27d17424ca29b706fe657be4",
+    "tests/acceptance/test_policy.py": "7b03eb0c6fc9d9a856ee70dce5a49724f2361f08de4ad15a0749d89065793122",
+    "tests/acceptance/test_records.py": "59f7eba22fa14da2332972603d00de7df54c8c040668cdb5a6ea416e725b5a43",
+    "tests/acceptance/test_scores.py": "d388fa238a4fa1db3ab93c1ea6cdea306a0844bdd7c45df2a9f8365b81cc7a3a",
+    "tests/acceptance/test_selection.py": "366363bb4bd97b443efe969e2fc0a592dce6ccdaa5b172a5c48bc20f61f036ba",
+    "tests/scoring/test_fixtures.py": "e608be09466a74e0ad01df2d5e59888feaa8aaa2cb1649be886577f78c035450",
+    "tests/scoring/test_independent_review.py": "747e6b33780eba68029bde5ac53436dcd7e0e82a02fb2c0983fd9f5699844ae7"
+  },
+  "tested_code_commit": "5936fc1d1527b4a374588380137ea3bb27421157",
+  "captured_dirty_paths": [
+    "?? experiments/manifests/fixture_only_public_projection_v1/baseline-before.attempt01.json",
+    "?? experiments/manifests/fixture_only_public_projection_v1/baseline-before.attempt02.json"
+  ],
+  "start_utc": "2026-10-11T02:11:36.048494+00:00",
+  "elapsed_wrapper_seconds": 0.8009725409938255,
+  "process_exit_status": 0,
+  "command": [
+    "RWR_EXISTING_PYTHON",
+    "-",
+    "baseline-before.attempt03",
+    "tests/scoring/test_fixtures.py",
+    "tests/scoring/test_independent_review.py"
+  ],
+  "command_alias_limit": "Existing Python executable is a public alias; its exact private command/cwd binding is preserved outside Git, not presented as a literal invocation.",
+  "exact_private_binding_sha256": "9dfd87f637605351f3592118e59de0134061c3c8573dab7ad3fa794ab178902a",
+  "runtime_executable_sha256": "af2e87fe5d9aef8abf9002d215320c7eb127a2b90b7686ec365405991d571ef4",
+  "runner_stdin_sha256": "f91f64485bca2e11981779e4a5466ef2a2e50a6d2045ef83618467da18433416",
+  "runner_stdin_source": "\"\"\"NONSCIENTIFIC CPU-only runner supplied on stdin; no model/data adapters.\"\"\"\nimport sys\nimport os\nimport builtins\nimport time\nimport json\nimport hashlib\nimport io\nimport contextlib\nimport importlib.metadata\nfrom pathlib import Path\n\nroot = Path.cwd().resolve()\nselected = sys.argv[2:]\nlabel = sys.argv[1]\nallowed_relative = ['pyproject.toml', 'tests/scoring/test_fixtures.py',\n    'tests/scoring/test_independent_review.py',\n    'docs/design-inputs/unicode-15.1.0/CaseFolding.txt',\n    'docs/design-inputs/unicode-15.1.0/PropList.txt']\nfor directory in ['src/scoring', 'src/acceptance', 'tests/acceptance']:\n    allowed_relative += [p.as_posix() for p in Path(directory).glob('*.py')]\nallowed = {str(root / p) for p in allowed_relative}\nruntime_roots = {str(Path(p).resolve()) for p in [sys.prefix, sys.base_prefix]}\nfor p in sys.path:\n    if p and 'site-packages' in p:\n        runtime_roots.add(str(Path(p).resolve()))\ndenied_roots = {'torch', 'mlx', 'transformers', 'tensorflow', 'jax', 'parakeet'}\nblocks = []\nreads = set()\nsource_only_cache_attempts = set()\nstarted = time.perf_counter()\ndef forbidden(category):\n    blocks.append(category)\n    raise AssertionError('NONSCIENTIFIC runner blocked ' + category)\ndef audit(event, args):\n    if event.startswith('socket.') or event in {'subprocess.Popen', 'os.system', 'os.posix_spawn', 'os.fork', 'os.exec'}:\n        forbidden('network_or_subprocess')\n    if event == 'import':\n        name = args[0]\n        if name.split('.')[0] in denied_roots or name.startswith(('src.models', 'src.inference', 'benchmarks.')):\n            forbidden('neural_or_scientific_import')\n    if event == 'open':\n        target, mode, flags = args\n        if isinstance(target, int):\n            return\n        if flags & (os.O_WRONLY | os.O_RDWR | os.O_CREAT | os.O_TRUNC | os.O_APPEND):\n            forbidden('file_write')\n        path = str(Path(os.fsdecode(target)).resolve())\n        cached = Path(path)\n        if cached.suffix == '.pyc' and cached.parent.name == '__pycache__':\n            source = cached.parent.parent / (cached.name.split('.')[0] + '.py')\n            if str(source) in allowed:\n                source_only_cache_attempts.add(source.relative_to(root).as_posix())\n                raise FileNotFoundError('NONSCIENTIFIC repository bytecode cache excluded; use audited source')\n        if path not in allowed and not any(path == p or path.startswith(p + os.sep) for p in runtime_roots):\n            forbidden('non_allowlisted_file_read')\n        if path.startswith(str(root) + os.sep):\n            reads.add(Path(path).relative_to(root).as_posix())\nsys.addaudithook(audit)\noriginal_import = builtins.__import__\ndef guarded_import(name, *args, **kwargs):\n    if name.split('.')[0] in denied_roots or name.startswith(('src.models', 'src.inference', 'benchmarks.')):\n        forbidden('neural_or_scientific_import')\n    return original_import(name, *args, **kwargs)\nbuiltins.__import__ = guarded_import\nimport numpy as np\nimport pytest\ndef no_array_loading(*args, **kwargs):\n    forbidden('array_or_checkpoint_loading')\nnp.load = no_array_loading\n\nclass ReceiptPlugin:\n    def __init__(self):\n        self.nodes = []\n        self.counts = {'passed': 0, 'failed': 0, 'skipped': 0, 'errors': 0}\n        self.node_outcomes = []\n    def pytest_collection_finish(self, session):\n        self.nodes = [item.nodeid for item in session.items]\n    def pytest_runtest_logreport(self, report):\n        if report.when == 'call':\n            self.counts[report.outcome] += 1\n            self.node_outcomes.append({'node': report.nodeid, 'outcome': report.outcome})\n        elif report.failed:\n            self.counts['errors'] += 1\n        elif report.skipped:\n            self.counts['skipped'] += 1\n    def pytest_collectreport(self, report):\n        if report.failed:\n            self.counts['errors'] += 1\nplugin = ReceiptPlugin()\narguments = ['-q', '-p', 'no:cacheprovider', '-p', 'no:logging', '--assert=plain', '--capture=sys', '-c', 'pyproject.toml'] + selected\noutput = io.StringIO()\nwith contextlib.redirect_stdout(output), contextlib.redirect_stderr(output):\n    status = int(pytest.main(arguments, plugins=[plugin]))\nloaded_neural = sorted(m for m in sys.modules if m.split('.')[0] in denied_roots or m.startswith(('src.models', 'src.inference')))\nresult = {'schema_version': 'fixture_projection_test_result_v1', 'provenance': 'NONSCIENTIFIC',\n    'label': label, 'selected': selected, 'pytest_arguments': arguments,\n    'python_version': sys.version, 'dependency_versions': {n: importlib.metadata.version(n) for n in ['numpy', 'pytest', 'unicodedata2']},\n    'source_sha256': {p: hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in sorted(set(allowed_relative))},\n    'nodes': plugin.nodes, 'node_outcomes': plugin.node_outcomes,\n    'counts': plugin.counts, 'pytest_exit_status': status,\n    'elapsed_runner_seconds': time.perf_counter() - started,\n    'isolation': {'blocked_events': blocks, 'loaded_neural_modules': loaded_neural,\n        'repository_bytecode_cache_reads_excluded': sorted(source_only_cache_attempts),\n        'allowed_repository_reads_observed': sorted(reads),\n        'network_and_subprocess_audit_hooks': True, 'read_allowlist': sorted(allowed_relative),\n        'file_writes_blocked': True, 'neural_imports_blocked': True,\n        'numpy_array_loading_blocked': True, 'plugin_autoload_disabled': os.environ.get('PYTEST_DISABLE_PLUGIN_AUTOLOAD') == '1',\n        'acceptance_test_body_tripwires': 'Exact accepted synthetic_isolation fixture retained'},\n    'output': output.getvalue()}\nprint(json.dumps(result, sort_keys=True))\nsys.exit(status)\n",
+  "environment": {
+    "MLX_ENABLE_TF32": "0",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "historical_full_scientific_suite": "NOT RUN"
+}

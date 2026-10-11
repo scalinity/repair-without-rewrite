@@ -1,0 +1,25 @@
+{
+  "schema_version": "fixture_projection_preservation_v1",
+  "provenance": "NONSCIENTIFIC",
+  "base": "abfd0d595e80b1cca544bb9e91e238b094e2a604",
+  "source_projection_commit": "5936fc1d1527b4a374588380137ea3bb27421157",
+  "accepted_local_implementation": "309a164d9922c040fab75d451faba307ff49f88d",
+  "original_head_remote_tag_refs_unchanged": true,
+  "original_clean_worktrees_preserved": 5,
+  "all_original_base_blobs_except_append_only_log_unchanged": 1381,
+  "historical_log_prefix_sha256": "e690d9f6c902d419a5f0e79e1f91689fbe67ba2cac112f66b8fd7a47a6e2bb3c",
+  "log_prefix_exactly_preserved": true,
+  "canonical_spec_registry_v3_v4_amendments_scientific_sources_tests_manifests_lock_orchestration": "UNCHANGED",
+  "private_payloads": "NOT ACCESSED; integrity not reaudited",
+  "runtime_snapshot_refs": "App-managed runtime namespace may change independently; it is excluded from the publication branch and was not modified by preparation.",
+  "forbidden_actions": {
+    "model_loading_training_inference": 0,
+    "real_data_policy_or_evaluation": 0,
+    "dataset_acquisition_parsing_construction": 0,
+    "external_scientific_SSD_access": 0,
+    "network_or_dependency_installation": 0,
+    "push_PR_merge_release_history_rewrite": 0,
+    "automation_changes": 0
+  },
+  "recorded_utc": "2026-10-11T02:13:31.213533+00:00"
+}

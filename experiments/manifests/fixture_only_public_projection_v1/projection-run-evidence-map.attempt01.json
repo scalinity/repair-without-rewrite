@@ -1,0 +1,106 @@
+{
+  "schema_version": "fixture_projection_run_evidence_map_v1",
+  "provenance": "NONSCIENTIFIC",
+  "tested_code_commit": "5936fc1d1527b4a374588380137ea3bb27421157",
+  "source_test_byte_identity": 21,
+  "historical_baseline_inventory_identical": true,
+  "accepted_143_node_inventory_identical": true,
+  "before_after_hashes_identical": true,
+  "F1_nodes": [
+    {
+      "node": "tests/acceptance/test_independent.py::test_f1_exact_positive_variance_and_analytic_ridge_expectations",
+      "outcome": "passed"
+    },
+    {
+      "node": "tests/acceptance/test_policy.py::test_f1_nonconstant_primary_variance_underflow_fails_before_policy",
+      "outcome": "passed"
+    }
+  ],
+  "runner_diagnostics_retained": [
+    "Setup exit3 before collection: logging plugin write trap",
+    "Collection exit2, zero tests: excluded bytecode caches"
+  ],
+  "runs": [
+    {
+      "public_path": "experiments/manifests/fixture_only_public_projection_v1/baseline-before.attempt01.json",
+      "public_sha256": "55f5805ac10ea9d7f204d8e28110399f98db0184a0b50a6b5168a241efaf436a",
+      "local_run_label": "baseline-before.attempt01",
+      "original_private_run_sha256": "50d6bcd6e5ae38a079e3a7bd5d2b41b04fdef83c09de24e19b10aeb7eeeaccc0",
+      "is_public_derivative": true,
+      "omissions": "Private executable/cwd command binding; diagnostic runtime paths and full failed traceback where applicable. Exact stdin runner source and source/test hashes retained in successful receipts.",
+      "pytest_exit_status": 3,
+      "process_exit_status": 3,
+      "counts": {
+        "errors": 0,
+        "failed": 0,
+        "passed": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "public_path": "experiments/manifests/fixture_only_public_projection_v1/baseline-before.attempt02.public.json",
+      "public_sha256": "839bf178eabd728b23b8214e1ffb2dd66f5c56341d2dbb58412915d2fda661f7",
+      "local_run_label": "baseline-before.attempt02",
+      "original_private_run_sha256": "715728255a3afbed95b572341d2817f666790541a9423178396ab1042d788a5a",
+      "is_public_derivative": true,
+      "omissions": "Private executable/cwd command binding; diagnostic runtime paths and full failed traceback where applicable. Exact stdin runner source and source/test hashes retained in successful receipts.",
+      "pytest_exit_status": 2,
+      "process_exit_status": 2,
+      "counts": {
+        "errors": 2,
+        "failed": 0,
+        "passed": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "public_path": "experiments/manifests/fixture_only_public_projection_v1/baseline-before.attempt03.json",
+      "public_sha256": "a28e49607ca09ab36953dcf8a068ab6f9d4532a7f6f99c8b241276e4c400ea6d",
+      "local_run_label": "baseline-before.attempt03",
+      "original_private_run_sha256": "33703c2fb8f37ca35a8c1ed33c46c1c3f52876a212c911277a477d20ce4b70e6",
+      "is_public_derivative": true,
+      "omissions": "Private executable/cwd command binding; diagnostic runtime paths and full failed traceback where applicable. Exact stdin runner source and source/test hashes retained in successful receipts.",
+      "pytest_exit_status": 0,
+      "process_exit_status": 0,
+      "counts": {
+        "errors": 0,
+        "failed": 0,
+        "passed": 37,
+        "skipped": 0
+      }
+    },
+    {
+      "public_path": "experiments/manifests/fixture_only_public_projection_v1/synthetic-tests.attempt01.json",
+      "public_sha256": "540a9ecbc694c4bd41878836123f9d862b4d58901ded14f7ee495567bab0be85",
+      "local_run_label": "synthetic-tests.attempt01",
+      "original_private_run_sha256": "b6dbf50e0b48cd87910fa1e0f830fca44b7e031d1fbb467342b0a18c93ff91aa",
+      "is_public_derivative": true,
+      "omissions": "Private executable/cwd command binding; diagnostic runtime paths and full failed traceback where applicable. Exact stdin runner source and source/test hashes retained in successful receipts.",
+      "pytest_exit_status": 0,
+      "process_exit_status": 0,
+      "counts": {
+        "errors": 0,
+        "failed": 0,
+        "passed": 143,
+        "skipped": 0
+      }
+    },
+    {
+      "public_path": "experiments/manifests/fixture_only_public_projection_v1/baseline-after.attempt01.json",
+      "public_sha256": "a48d07f6023dd679ed8b8649174b46bcf2fb6bd46eb72f9d7dacd8e8214e30e8",
+      "local_run_label": "baseline-after.attempt01",
+      "original_private_run_sha256": "e8a74cb4b5156b68936c1d1f094f11d5e827ab6f5b5b56008205ee4d86931f8c",
+      "is_public_derivative": true,
+      "omissions": "Private executable/cwd command binding; diagnostic runtime paths and full failed traceback where applicable. Exact stdin runner source and source/test hashes retained in successful receipts.",
+      "pytest_exit_status": 0,
+      "process_exit_status": 0,
+      "counts": {
+        "errors": 0,
+        "failed": 0,
+        "passed": 37,
+        "skipped": 0
+      }
+    }
+  ],
+  "historical_full_scientific_suite": "NOT RUN"
+}

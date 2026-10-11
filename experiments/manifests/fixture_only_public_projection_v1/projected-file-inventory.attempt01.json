@@ -1,0 +1,199 @@
+{
+  "schema_version": "fixture_public_projection_inventory_v1",
+  "provenance": "NONSCIENTIFIC",
+  "base": "abfd0d595e80b1cca544bb9e91e238b094e2a604",
+  "tested_source_commit": "5936fc1d1527b4a374588380137ea3bb27421157",
+  "file_count": 38,
+  "paths": [
+    {
+      "path": "docs/LOG.md",
+      "change": "APPEND_ONLY",
+      "category": "PUBLIC_SAFE_PROJECTION_RECORD"
+    },
+    {
+      "path": "docs/reports/FIXTURE_ONLY_PUBLIC_PROJECTION_QUALIFICATION_V1.md",
+      "change": "ADDED",
+      "category": "PUBLIC_SAFE_PROJECTION_RECORD"
+    },
+    {
+      "path": "docs/reviews/FIXTURE_ONLY_PUBLIC_PROJECTION_PROVENANCE_V1.md",
+      "change": "ADDED",
+      "category": "PUBLIC_SAFE_PROJECTION_RECORD"
+    },
+    {
+      "path": "docs/reviews/PUBLIC_PROJECTION_LEGACY_EXPOSURE_EXCEPTION_V1.md",
+      "change": "ADDED",
+      "category": "PUBLIC_SAFE_PROJECTION_RECORD"
+    },
+    {
+      "path": "experiments/manifests/fixture_only_public_projection_v1/baseline-after.attempt01.json",
+      "change": "ADDED",
+      "category": "PUBLIC_SAFE_PROJECTION_RECORD"
+    },
+    {
+      "path": "experiments/manifests/fixture_only_public_projection_v1/baseline-before.attempt01.json",
+      "change": "ADDED",
+      "category": "PUBLIC_SAFE_PROJECTION_RECORD"
+    },
+    {
+      "path": "experiments/manifests/fixture_only_public_projection_v1/baseline-before.attempt02.public.json",
+      "change": "ADDED",
+      "category": "PUBLIC_SAFE_PROJECTION_RECORD"
+    },
+    {
+      "path": "experiments/manifests/fixture_only_public_projection_v1/baseline-before.attempt03.json",
+      "change": "ADDED",
+      "category": "PUBLIC_SAFE_PROJECTION_RECORD"
+    },
+    {
+      "path": "experiments/manifests/fixture_only_public_projection_v1/byte-equivalence.attempt01.json",
+      "change": "ADDED",
+      "category": "PUBLIC_SAFE_PROJECTION_RECORD"
+    },
+    {
+      "path": "experiments/manifests/fixture_only_public_projection_v1/evidence-correspondence.attempt01.json",
+      "change": "ADDED",
+      "category": "PUBLIC_SAFE_PROJECTION_RECORD"
+    },
+    {
+      "path": "experiments/manifests/fixture_only_public_projection_v1/historical-evidence.public-derivative.attempt01.json",
+      "change": "ADDED",
+      "category": "PUBLIC_SAFE_PROJECTION_RECORD"
+    },
+    {
+      "path": "experiments/manifests/fixture_only_public_projection_v1/preflight.attempt01.json",
+      "change": "ADDED",
+      "category": "PUBLIC_SAFE_PROJECTION_RECORD"
+    },
+    {
+      "path": "experiments/manifests/fixture_only_public_projection_v1/preservation.attempt01.json",
+      "change": "ADDED",
+      "category": "PUBLIC_SAFE_PROJECTION_RECORD"
+    },
+    {
+      "path": "experiments/manifests/fixture_only_public_projection_v1/projected-file-inventory.attempt01.json",
+      "change": "ADDED",
+      "category": "PUBLIC_SAFE_PROJECTION_RECORD"
+    },
+    {
+      "path": "experiments/manifests/fixture_only_public_projection_v1/projection-run-evidence-map.attempt01.json",
+      "change": "ADDED",
+      "category": "PUBLIC_SAFE_PROJECTION_RECORD"
+    },
+    {
+      "path": "experiments/manifests/fixture_only_public_projection_v1/publication-safety.attempt01.json",
+      "change": "ADDED",
+      "category": "PUBLIC_SAFE_PROJECTION_RECORD"
+    },
+    {
+      "path": "experiments/manifests/fixture_only_public_projection_v1/synthetic-tests.attempt01.json",
+      "change": "ADDED",
+      "category": "PUBLIC_SAFE_PROJECTION_RECORD"
+    },
+    {
+      "path": "src/acceptance/__init__.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    },
+    {
+      "path": "src/acceptance/allocation.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    },
+    {
+      "path": "src/acceptance/decision.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    },
+    {
+      "path": "src/acceptance/families.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    },
+    {
+      "path": "src/acceptance/features.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    },
+    {
+      "path": "src/acceptance/policy.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    },
+    {
+      "path": "src/acceptance/records.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    },
+    {
+      "path": "src/acceptance/scores.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    },
+    {
+      "path": "src/acceptance/selection.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    },
+    {
+      "path": "tests/acceptance/__init__.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    },
+    {
+      "path": "tests/acceptance/fixtures.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    },
+    {
+      "path": "tests/acceptance/independent_oracles.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    },
+    {
+      "path": "tests/acceptance/test_allocation.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    },
+    {
+      "path": "tests/acceptance/test_decision.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    },
+    {
+      "path": "tests/acceptance/test_families.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    },
+    {
+      "path": "tests/acceptance/test_features.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    },
+    {
+      "path": "tests/acceptance/test_independent.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    },
+    {
+      "path": "tests/acceptance/test_policy.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    },
+    {
+      "path": "tests/acceptance/test_records.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    },
+    {
+      "path": "tests/acceptance/test_scores.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    },
+    {
+      "path": "tests/acceptance/test_selection.py",
+      "change": "ADDED",
+      "category": "EXACT_ACCEPTED_SOURCE_TEST"
+    }
+  ]
+}
