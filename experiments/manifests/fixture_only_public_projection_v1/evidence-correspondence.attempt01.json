@@ -1,0 +1,101 @@
+{
+  "schema_version": "fixture_projection_derivative_correspondence_v1",
+  "provenance": "NONSCIENTIFIC",
+  "derivatives": [
+    {
+      "path": "experiments/manifests/fixture_only_public_projection_v1/historical-evidence.public-derivative.attempt01.json",
+      "derived_sha256": "5891256508c489ffdd8f13acc216ee35aac858cb8de696cad73481f07784c92f",
+      "originals": [
+        {
+          "original_path": "experiments/manifests/fixture_only_infrastructure/f1-baseline-before.attempt01.json",
+          "original_at_commit": "309a164d9922c040fab75d451faba307ff49f88d",
+          "original_git_blob": "cffd402f8fdc8206da8ac72521adbbb3590edb3b",
+          "original_sha256": "c6d589433223836236236c88c15328c79f135ff388ed1cb3f0b3f7a59065b990",
+          "derivative_path": "experiments/manifests/fixture_only_public_projection_v1/historical-evidence.public-derivative.attempt01.json",
+          "copied_byte_identically": false,
+          "omission_policy": "Aggregate projection-relevant results only; no original paths, contexts, command bindings, diagnostic output or detailed evidence inventory copied."
+        },
+        {
+          "original_path": "experiments/manifests/fixture_only_infrastructure/f1-acceptance-before.attempt01.json",
+          "original_at_commit": "309a164d9922c040fab75d451faba307ff49f88d",
+          "original_git_blob": "87d9ce813d1470097cbf8e26f13e20278dbbfdb9",
+          "original_sha256": "c92cb572c2312fc611ef3947a3727dfa9c4159a85df90806f619b5657ed2f1b5",
+          "derivative_path": "experiments/manifests/fixture_only_public_projection_v1/historical-evidence.public-derivative.attempt01.json",
+          "copied_byte_identically": false,
+          "omission_policy": "Aggregate projection-relevant results only; no original paths, contexts, command bindings, diagnostic output or detailed evidence inventory copied."
+        },
+        {
+          "original_path": "experiments/manifests/fixture_only_infrastructure/f1-targeted-red.attempt01.json",
+          "original_at_commit": "309a164d9922c040fab75d451faba307ff49f88d",
+          "original_git_blob": "7f0c611cde3998167a3819e77055bd411ade58a8",
+          "original_sha256": "4ee8e1c735a401ac86746dfb6719d61ea9c8d82c60aaca076900732951ae635c",
+          "derivative_path": "experiments/manifests/fixture_only_public_projection_v1/historical-evidence.public-derivative.attempt01.json",
+          "copied_byte_identically": false,
+          "omission_policy": "Aggregate projection-relevant results only; no original paths, contexts, command bindings, diagnostic output or detailed evidence inventory copied."
+        },
+        {
+          "original_path": "experiments/manifests/fixture_only_infrastructure/f1-targeted-green.attempt01.json",
+          "original_at_commit": "309a164d9922c040fab75d451faba307ff49f88d",
+          "original_git_blob": "746d038aa066c0a807dc22230051d8d713cc9505",
+          "original_sha256": "a61eaebdc01008131776e18833d06b1cbf78f8c349e3d1a564b593ea70d496e2",
+          "derivative_path": "experiments/manifests/fixture_only_public_projection_v1/historical-evidence.public-derivative.attempt01.json",
+          "copied_byte_identically": false,
+          "omission_policy": "Aggregate projection-relevant results only; no original paths, contexts, command bindings, diagnostic output or detailed evidence inventory copied."
+        },
+        {
+          "original_path": "experiments/manifests/fixture_only_infrastructure/f1-synthetic-tests.attempt01.json",
+          "original_at_commit": "309a164d9922c040fab75d451faba307ff49f88d",
+          "original_git_blob": "eb35dd64cd9d333529db168df047461956046f58",
+          "original_sha256": "7657f4fee385b76f33c44f97eb1e518219f1f3eddc7935370ad2d7e35ac54b1c",
+          "derivative_path": "experiments/manifests/fixture_only_public_projection_v1/historical-evidence.public-derivative.attempt01.json",
+          "copied_byte_identically": false,
+          "omission_policy": "Aggregate projection-relevant results only; no original paths, contexts, command bindings, diagnostic output or detailed evidence inventory copied."
+        },
+        {
+          "original_path": "experiments/manifests/fixture_only_infrastructure/f1-baseline-after.attempt01.json",
+          "original_at_commit": "309a164d9922c040fab75d451faba307ff49f88d",
+          "original_git_blob": "1512c497981343fde74423f2550187b2f53b7266",
+          "original_sha256": "9cf8de7cd206c2fa3c308ae20cc33f9ca5d2f1ca140800e71719e71e65385c30",
+          "derivative_path": "experiments/manifests/fixture_only_public_projection_v1/historical-evidence.public-derivative.attempt01.json",
+          "copied_byte_identically": false,
+          "omission_policy": "Aggregate projection-relevant results only; no original paths, contexts, command bindings, diagnostic output or detailed evidence inventory copied."
+        },
+        {
+          "original_path": "experiments/manifests/fixture_only_infrastructure/f1-independent-reconstruction.attempt01.json",
+          "original_at_commit": "309a164d9922c040fab75d451faba307ff49f88d",
+          "original_git_blob": "ad12f9bf16f6f008bf1f741e671cde61965d8c8b",
+          "original_sha256": "eaaf6314f4c32014c191ac0ccb757d28d9051d84251ccabe55857af6df2e76e0",
+          "derivative_path": "experiments/manifests/fixture_only_public_projection_v1/historical-evidence.public-derivative.attempt01.json",
+          "copied_byte_identically": false,
+          "omission_policy": "Aggregate projection-relevant results only; no original paths, contexts, command bindings, diagnostic output or detailed evidence inventory copied."
+        },
+        {
+          "original_path": "experiments/manifests/fixture_only_infrastructure/f1-qualification.attempt02.json",
+          "original_at_commit": "309a164d9922c040fab75d451faba307ff49f88d",
+          "original_git_blob": "5c3ed57d62f76a7844a7c19efb1afe3de490e484",
+          "original_sha256": "20a010b5e05414dafeed090c627a794c2ef0cf2bf691365f9a37382dc8300622",
+          "derivative_path": "experiments/manifests/fixture_only_public_projection_v1/historical-evidence.public-derivative.attempt01.json",
+          "copied_byte_identically": false,
+          "omission_policy": "Aggregate projection-relevant results only; no original paths, contexts, command bindings, diagnostic output or detailed evidence inventory copied."
+        },
+        {
+          "original_path": "experiments/manifests/fixture_only_infrastructure/f1-verification.attempt03.json",
+          "original_at_commit": "309a164d9922c040fab75d451faba307ff49f88d",
+          "original_git_blob": "48ae2f771d7b30e57418995a111f796d97c1ddf6",
+          "original_sha256": "45130f87d8f16051d0734f2286b3513e8fcdf3e7c73ebf0866837d09d28df0e1",
+          "derivative_path": "experiments/manifests/fixture_only_public_projection_v1/historical-evidence.public-derivative.attempt01.json",
+          "copied_byte_identically": false,
+          "omission_policy": "Aggregate projection-relevant results only; no original paths, contexts, command bindings, diagnostic output or detailed evidence inventory copied."
+        }
+      ],
+      "byte_identity_claim": false
+    },
+    {
+      "path": "experiments/manifests/fixture_only_public_projection_v1/preflight.attempt01.json",
+      "derived_sha256": "8e39a94e5e8addec1b659d1f27514d322e0c5517afacc3ddf4010c44fba4059f",
+      "original_discovery_sha256": "9ff08c2fff99bd9faddb06b9e6001c378ab7d334d946166ea0843de06cf1223c",
+      "original_classification_sha256": "ae5309a26c066339fdcd80120ee8e0171661919275b3099cb2fc2b60cd27bce3",
+      "byte_identity_claim": false
+    }
+  ]
+}

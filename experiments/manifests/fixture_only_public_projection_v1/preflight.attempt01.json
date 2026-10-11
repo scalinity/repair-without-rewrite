@@ -1,0 +1,36 @@
+{
+  "base": "abfd0d595e80b1cca544bb9e91e238b094e2a604",
+  "scanned_object_counts": {
+    "commit": 108,
+    "tree": 823,
+    "blob": 1588
+  },
+  "source_audit_sha256": "9ff08c2fff99bd9faddb06b9e6001c378ab7d334d946166ea0843de06cf1223c",
+  "classification_counts": {
+    "('email', 'FUNCTIONAL_GIT_METADATA')": 216,
+    "('sensitive_payload_path', 'NON_DISCLOSURE')": 39075,
+    "('local_location', 'NON_DISCLOSURE')": 16,
+    "('email', 'NON_DISCLOSURE')": 71,
+    "('local_location', 'CLASS L')": 7
+  },
+  "class_N_S_U_findings": 0,
+  "figures": "All six historical PNGs visually inspected: aggregate research plots, no private identifiers or protected payload. SVG sources scanned.",
+  "numeric_binary": "experiments/native-calibration-attempt01/native_token_manifest.npy is the source-bound random-token geometry fixture; only Git bytes/header inspected, not loaded.",
+  "pdf": "Seven compressed streams inspected together with supplied canonical extraction and raw PDF metadata.",
+  "public_safety_claim": "Scoped base preflight completed subject to the six explicit legacy exceptions; inherited history is not globally sanitized.",
+  "recorded_utc": "2026-10-11T02:07:36.161540+00:00",
+  "schema_version": "fixture_projection_public_preflight_v1",
+  "provenance": "NONSCIENTIFIC; public derivative of local comprehensive history scan/classification",
+  "approved_legacy_entries": 6,
+  "legacy_textual_matches": 7,
+  "original_discovery_sha256": "9ff08c2fff99bd9faddb06b9e6001c378ab7d334d946166ea0843de06cf1223c",
+  "original_classification_sha256": "ae5309a26c066339fdcd80120ee8e0171661919275b3099cb2fc2b60cd27bce3",
+  "omissions": [
+    "Actual legacy location values",
+    "Private contexts and author header copies",
+    "Absolute evidence file paths",
+    "Full scanner findings and local command paths"
+  ],
+  "new_projection_tests": "NOT YET RUN",
+  "decision": "PROCEED_WITH_EXACT_APPROVED_LEGACY_EXCEPTIONS"
+}
